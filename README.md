@@ -1,67 +1,33 @@
 # Soft Spaces
 
-**Exploring hidden structure in finite-dimensional Hilbert spaces**
+## Exploring Hidden Structures in Low-Qubit Hilbert Spaces
+
+This repository contains the research material for the **Soft Spaces** project.
+
+The project investigates whether finite-dimensional Hilbert spaces contain reproducible structural regions that emerge during the evolution of **open quantum systems**.
+
+The work combines numerical simulations based on the **Lindblad master equation** with statistical analysis to investigate whether stable geometric structures can be distinguished from suitable null models.
+
+Unlike conventional studies that focus on individual quantum states, this project investigates whether reproducible structures emerge within Hilbert space itself.
 
 ---
 
-## Overview
+# Scientific scope
 
-Soft Spaces is an independent research project investigating whether finite-dimensional Hilbert spaces contain reproducible structural regions that differ significantly from suitable null models.
+The project investigates
 
-The project introduces the concepts of **REAL** and **NULL** subspaces and studies whether statistically reproducible geometric structure emerges across increasing Hilbert-space dimensions.
-
-Rather than searching for individual quantum states, the project investigates whether **stable regions (Soft Spaces)** exist within Hilbert space itself.
-
----
-
-# Main publication
-
-**Soft Spaces in Low-Dimensional Hilbert Spaces:
-A Reproducible REAL–NULL Separation from 4 to 8 Qubits**
-
-Current review version:
-
-**v9.12**
-
-The paper presents
-
-- the complete theoretical framework
-- experimental methodology
-- statistical validation
-- independent reproduction
-- discussion of limitations
+- Open quantum systems
+- Lindblad dynamics
+- Hilbert-space geometry
+- REAL–NULL subspace separation
+- Statistical reproducibility
+- Dynamical stability of Soft Spaces
 
 ---
 
-# Repository contents
+# Phase 1 (Completed)
 
-```
-Soft_Spaces_article_work/
-    less important txt,py..
-
-paper/
-    Main paper (PDF)
-
-documentation
-output files (txt)
-
-code/
-    Python source code
-
-results/
-    Experimental output
-
-
-
-README.md
-LICENSE
-```
-
----
-
-# Main results
-
-The reviewed study demonstrates reproducible statistical separation between REAL and NULL subspaces for systems from
+The completed Phase 1 study investigates systems from
 
 - 4 qubits
 - 5 qubits
@@ -69,85 +35,82 @@ The reviewed study demonstrates reproducible statistical separation between REAL
 - 7 qubits
 - 8 qubits
 
-using independent pilot runs and multiple statistical measures, including
+The study includes
 
-- entropy
+- repeated independent simulations
+- entropy analysis
 - Cohen's d
 - Jaccard similarity
 - dominant-state statistics
 - stability analysis
 
+The corresponding publication is available on Zenodo.
+
+**DOI**
+
+https://doi.org/10.5281/zenodo.21819815
+
 ---
 
-# Current research (Phase 2)
+# Repository structure
 
-The repository also contains ongoing work extending the original study toward larger Hilbert spaces.
+```
+README.md
+LICENSE
 
-Current topics include
+paper/
+    Published paper (PDF)
 
-- 9-qubit systems
-- 10-qubit systems
-- continuation hypotheses
-- ridge structures
-- targeted interval analysis
-- open-system evolution
-- Lindblad dynamics
+documentation/
+    Supporting documentation
 
-These studies are experimental and are **not part of the reviewed paper**.
+code/
+    Python source code
+
+results/
+    Experimental output files
+```
+
+---
+
+# Phase 2 (Ongoing)
+
+Current research focuses on extending the framework beyond the original publication.
+
+Topics include
+
+- 9–12 qubit systems
+- scaling behaviour
+- evolution of Soft Spaces with increasing Hilbert-space dimension
+- continuation of REAL–NULL analysis
+- open-system dynamics
+- Lindblad evolution
+- comparison with quantum-computing implementations (Qiskit)
+
+Phase 2 is experimental and is **not part of the published Phase 1 paper**.
 
 ---
 
 # Reproducibility
 
-The repository contains
+The repository contains the material required to reproduce the published experiments, including
 
-- source code
-- configuration
-- parameter files
-- selected experimental results
-
-allowing independent verification of the published experiments.
+- Python source code
+- parameter settings
+- selected output files
+- supporting documentation
 
 ---
 
-# Citation
+# Related resources
 
-A permanent Zenodo DOI will be added after the first archived release.
-
-Until then, please cite the GitHub repository.
-
-GitHub repository:
-
-https://github.com/tomstevns/soft-spaces-github
-
-Zenodo
-
-DOI:
-10.5281/zenodo.21819815
+## Zenodo
 
 https://doi.org/10.5281/zenodo.21819815
 
-# Project philosophy
+## ORCID
 
-The project follows a simple principle:
-
-> Hypotheses should be challenged by independent repetition.
-
-Unexpected results are treated as opportunities to refine the underlying model rather than as failures.
-
----
-
-# Status
-
-| Phase | Status |
-|--------|--------|
-| Theory | ✓ |
-| q4–q8 validation | ✓ |
-| Independent q8 replication | ✓ |
-| Review paper | ✓ |
-| q9 investigation | Ongoing |
-| q10 investigation | Ongoing |
-| Open-system analysis | Ongoing |
+https://orcid.org/0009-0000-5306-7776
 
 ---
 
@@ -163,4 +126,4 @@ Denmark
 
 # License
 
-CC-BY 4.0
+Creative Commons Attribution 4.0 International (CC BY 4.0)
