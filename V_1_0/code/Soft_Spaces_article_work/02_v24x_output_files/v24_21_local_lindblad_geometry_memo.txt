@@ -1,0 +1,82 @@
+=== v24.21 local Lindblad-geometry memo ===
+
+Title
+v24.21 Explanatory Memo: Local Lindblad Geometry Around the Dominant 8Q Ridge
+
+Purpose
+This memo summarizes the current explanatory reading of the validated 8Q ridge structure and formulates the next analytical question in a more operator-oriented way. It is intended as an internal bridge between empirical hotspot evidence and a later semi-analytic interpretation.
+
+Current empirical status
+The present 8Q evidence supports a narrow local ridge centered on the anchor (157,158). The surrounding positions (155,156) and (153,154) remain relevant support points, but the anchor is clearly preferred overall. The key finding is that the anchor does not win through a single metric alone. Instead, it is favored by the joint profile of:
+- stronger repeat recurrence
+- positive median dynamic gain
+- positive retention/fidelity contribution
+- modest positive logical-purity contribution
+- lower structure drift than weaker neighbors
+
+Working interpretation
+The best current interpretation is that the dominant anchor is more compatible with the effective open-system dynamics than its nearest neighbors. In practical terms, the local Lindblad geometry around (157,158) appears to be more favorable in the following sense:
+
+1. Retention-compatible local dynamics
+The dominant anchor tends to preserve subspace retention and unconditional fidelity better than nearby alternatives. This suggests that the effective dynamics inside or near the selected local subspace is less dispersive.
+
+2. Reduced structural drift
+The anchor consistently shows lower structure drift than weaker comparison points. This indicates that even when the dynamics is not perfectly lossless, it deforms the relevant local structure less strongly.
+
+3. Purity is supportive, but not primary
+Logical purity remains mildly positive and contributes to the preference for the anchor, but it does not by itself explain the full dominance. Some weaker neighbors can show comparable or even locally stronger purity tendencies without matching the same recurrence or retention profile.
+
+4. Sparse local geometry rather than broad advantage
+The evidence does not support the view that the whole surrounding neighborhood is equally profitable. Instead, it supports a sparse local ridge with one dominant anchor and a few weaker support points.
+
+Operational explanatory hypothesis
+The current best hypothesis is therefore:
+
+The anchor (157,158) is favored because the effective local Lindblad geometry is more retention-compatible and drift-suppressing there than at nearby competing positions.
+
+This can be expressed informally as:
+- less effective outward leakage pressure
+- better local retention of the relevant subspace structure
+- less destructive structural reorganization over time
+
+Interpretive comparison set
+The most relevant comparison set is now:
+- dominant anchor: (157,158)
+- strong neighbor: (155,156)
+- weaker support point: (153,154)
+- weaker/mixed contrasts: (156,157), (158,159)
+
+This comparison set should be treated as the core local explanatory neighborhood for the current 8Q phase.
+
+What the evidence suggests right now
+At the present stage, the strongest explanatory reading is not:
+“(157,158) is simply the purest local point.”
+
+The stronger reading is:
+“(157,158) is the point where recurrence, retention/fidelity, and reduced structure drift align most favorably, with purity acting as a smaller supporting effect.”
+
+That is why the anchor remains preferred even in the presence of nearby support points.
+
+Recommended next analytical step
+The next step should not be another broad hotspot search. Instead, it should be a focused explanatory comparison asking:
+
+Which local contribution most clearly separates (157,158) from its nearest weaker neighbors?
+
+The most relevant comparison axes are:
+- recurrence strength
+- dynamic gain
+- fid_uncond contribution
+- subspace_ret contribution
+- logical_purity contribution
+- structure_drift contribution
+
+If later operator-level diagnostics are added, they should be framed as attempts to clarify whether the dominant anchor corresponds to:
+- weaker effective leakage coupling
+- more benign projected dissipative action
+- or a better balance between retention and structural deformation
+
+Short reusable paragraph
+The current 8Q evidence supports a narrow local ridge centered on the anchor (157,158). The dominant anchor is not best understood as a point that wins by purity alone, but as the point where repeat recurrence, dynamic gain, retention/fidelity contribution, and reduced structure drift align most favorably. Nearby positions such as (155,156) and (153,154) remain relevant support points, which supports a ridge-like rather than isolated-spike interpretation; however, the dominant anchor remains clearly preferred.
+
+Closing note
+The main scientific move now is explanatory consolidation, not further broad search. The 8Q phase has matured from hotspot discovery into local geometric interpretation, and that transition should guide the next stage of the project.

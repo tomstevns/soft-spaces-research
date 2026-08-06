@@ -1,0 +1,73 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260609175055
+Username: DESKTOP-5NJUVJ4\tomst
+RunAs User: DESKTOP-5NJUVJ4\tomst
+Configuration Name: 
+Machine: DESKTOP-5NJUVJ4 (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoExit -File C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\Scripts\activate.ps1
+Process ID: 21340
+PSVersion: 5.1.26100.8521
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8521
+BuildVersion: 10.0.26100.8521
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is v25_2_1_q10_SAFE_console_log.txt
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+PS>python -X utf8 -u v1_0_Soft_Space_v25_2_1_q10_continuation_safe.py `
+  --n_qubits 10 `
+  --n_terms 5 `
+  --seeds_per_batch 100 `
+  --batches 1 `
+  --base_seed 3001000 `
+  --stable_frac 0.67 `
+  --continuation_q8_intervals 157-158 153-158 160-169 `
+  --control_intervals 2 `
+  --eps_neighbor 0.05 `
+  --keep_mass 0.90 `
+  --q_bins 16 `
+  --q_bins_coarse 8 `
+  --open_system `
+  --os_include_baselines `
+  --os_pairs_per_batch 15 `
+  --os_noise_model both `
+  --os_gamma_phi 0.01 `
+  --os_gamma_1 0.02 `
+  --os_t_max 5 `
+  --os_t_steps 10 `
+  --os_dt_internal 0.05 `
+  --os_states_mode zx `
+  --logical_basis noise_diag `
+  --os_use_stable_pool `
+  --os_time_mode late `
+  --os_time_late_power 2.0 `
+  --contrast_focus `
+  --kernel_zoom `
+  --kernel_top_centers 8 `
+  --output v25_2_1_q10_SAFE_PILOT1.txt
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+PS>dir v1*
+
+
+    Directory: C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        08-06-2026     10:42         144742 v1_0_Soft_Space_v25_2_q10_q12_continuation_targeted.py
+
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>
+PS>Start-Transcript -Path v25_2_1_q10_SAFE_console_log.txt
+**********************
+Windows PowerShell transcript end
+End time: 20260609180242
+**********************

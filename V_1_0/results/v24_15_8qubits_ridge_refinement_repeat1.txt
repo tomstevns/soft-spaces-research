@@ -1,0 +1,479 @@
+=== v0_7: Convergence + Baseline Calibration + Perturbation Robustness + Gap/Isolation + Open-system (v24.9.2) ===
+Qubits: 8 (d=256) | terms=5
+Batches: 3 × 5000 seeds (base_seed=0, stride=1000000)
+Neighbor eps=0.050
+Dominant set: keep_mass=0.90 (mass-based; guarantees non-empty mask)
+Bins (SigAbs): ent_step=0.100 | leak_step=0.050
+Bins (SigQ_GLOBAL fine): q_bins=10 (pooled REAL+NULL per batch)
+Bins (SigQG_COARSE): q_bins_coarse=6 + dom_bin(dom/d) + leak_bin_coarse (pooled REAL+NULL per batch)
+Leakage proxy times=[0.5, 1.0, 1.5] (FAST analytic evolution in eigenpair)
+Stable selection: stable_frac=0.010 per model (optional leak constraint max=None, q=None)
+Perturbation robustness: eta=[] | reps=3 | seeds=0 | pairs/seed=5 | dH_terms=None
+Open-system (v23): enabled=True | include_baselines=False | pairs_per_cat=600 | noise=both(phi=0.01,g1=0.02) | t=5.0/25 | states=zx | basis=noise_diag | noise_qubits=subset:[3] | stable_pool=True | time_mode=late | late_power=2.0 | contrast_focus=True | kernel_zoom=True
+Interference test: enabled=False | pairs_per_cat=200 | stable_pool=False
+TopK=25 | min_overall=3 | min_stable=3 | alpha=0.5
+Optional family filter: p_tail_max=None
+Pauli ops: lazy on-demand cache (excluding all-I); 8-qubit-safe v24.9.2 sparse hotspot recurrence + stability scoring merge
+
+
+----------------------------------------------
+Batch 1/3 (seed_offset=0)
+Model: REAL | candidates=1245712 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.359/0.350/0.763
+  leakage(mean/median/min)=0.099/0.099/0.006
+  entropy(mean/median/max)=6.851/7.201/7.830
+  dom_count(mean/median/max)=131.59/139.0/202
+  gaps: ΔE_in(mean/med/p90)=0.0001922/2.776e-17/4.441e-16 | ΔE_out(mean/med/p90)=1.817e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.985/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2356 | ΔE_in(mean/med/p90)=0.02272/0.02215/0.0441
+  entropy effect (stable-overall)=+0.002 bits  CI95=(-0.002480524072792578, 0.005989725093230326)
+
+Top signature families (REAL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (162, 2, 9, 1) |     558 |     116 |      5.58 | 3.75e-112 |    111.43 |   1734.22x
+  (163, 2, 9, 1) |     468 |     106 |      4.68 | 6.58e-107 |    106.18 |   1889.91x
+  (164, 2, 9, 1) |     387 |      88 |      3.87 | 3.15e-89 |     88.50 |   1898.77x
+  (161, 2, 9, 1) |     595 |      96 |      5.95 | 4.78e-82 |     81.32 |   1347.25x
+  (160, 2, 9, 1) |     750 |     101 |      7.50 | 3.45e-78 |     77.46 |   1124.39x
+  (162, 3, 9, 1) |     437 |      80 |      4.37 | 3.12e-73 |     72.51 |   1529.75x
+  (164, 3, 9, 1) |     297 |      67 |      2.97 | 4.15e-68 |     67.38 |   1886.33x
+  (169, 2, 9, 1) |     118 |      50 |      1.18 | 3.18e-67 |     66.50 |   3543.03x
+  (161, 3, 9, 1) |     535 |      81 |      5.35 | 3.19e-67 |     66.50 |   1265.32x
+  (166, 2, 9, 1) |     251 |      61 |      2.51 | 2.52e-64 |     63.60 |   2033.01x
+  ... (25 total, showing 10)
+
+Top signature families (REAL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 5, 5, 1) |   24707 |    1126 |    247.07 | 1.00e-300 |    300.00 |    454.41x
+  (2, 1, 5, 1) |   82853 |    2159 |    828.52 | 1.00e-300 |    300.00 |    259.77x
+  (2, 2, 5, 1) |   44433 |    1279 |    444.33 | 9.79e-231 |    230.01 |    286.99x
+  (2, 4, 5, 1) |   23256 |     789 |    232.56 | 2.64e-182 |    181.58 |    338.34x
+  (2, 3, 5, 1) |   25285 |     764 |    252.85 | 1.40e-149 |    148.85 |    301.34x
+  (2, 2, 4, 1) |   24402 |     453 |    244.02 | 1.83e-33 |     32.74 |    185.22x
+  (2, 1, 5, 2) |      43 |      22 |      0.43 | 8.60e-33 |     32.07 |   5155.10x
+  (2, 3, 4, 1) |   13918 |     288 |    139.18 | 9.58e-29 |     28.02 |    206.58x
+  (2, 1, 4, 1) |   43891 |     665 |    438.91 | 3.89e-24 |     23.41 |    151.12x
+  (2, 2, 3, 1) |   27986 |     432 |    279.86 | 1.48e-17 |     16.83 |    154.02x
+  ... (25 total, showing 10)
+
+Model: NULL_HAAR_BASIS | candidates=1245712 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.364/0.364/0.365
+  leakage(mean/median/min)=0.099/0.099/0.096
+  entropy(mean/median/max)=7.376/7.385/7.584
+  dom_count(mean/median/max)=150.47/151.0/171
+  gaps: ΔE_in(mean/med/p90)=0.0001743/2.776e-17/4.441e-16 | ΔE_out(mean/med/p90)=2.078e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.919/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2594 | ΔE_in(mean/med/p90)=0.02288/0.02253/0.04442
+  entropy effect (stable-overall)=+0.000 bits  CI95=(-0.0005099876904674171, 0.0010507016432837579)
+
+Top signature families (NULL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (159, 7, 8, 1) |    1160 |     141 |     11.60 | 3.47e-102 |    101.46 |   1142.22x
+  (159, 8, 9, 1) |    1086 |     130 |     10.86 | 1.63e-93 |     92.79 |   1125.17x
+  (158, 7, 8, 1) |    1657 |     152 |     16.57 | 3.90e-92 |     91.41 |    861.89x
+  (161, 7, 8, 1) |     428 |      91 |      4.28 | 2.47e-89 |     88.61 |   2000.36x
+  (157, 8, 9, 1) |    2238 |     165 |     22.38 | 2.04e-85 |     84.69 |    692.59x
+  (159, 6, 8, 1) |    1000 |     118 |     10.00 | 2.46e-84 |     83.61 |   1109.53x
+  (157, 6, 7, 1) |    2029 |     152 |     20.29 | 8.58e-80 |     79.07 |    703.91x
+  (158, 7, 9, 1) |    1469 |     128 |     14.69 | 3.25e-75 |     74.49 |    819.17x
+  (158, 6, 8, 1) |    1488 |     128 |     14.88 | 1.50e-74 |     73.82 |    808.71x
+  (157, 7, 8, 1) |    2590 |     163 |     25.90 | 1.91e-74 |     73.72 |    591.25x
+  ... (25 total, showing 10)
+
+Top signature families (NULL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 4, 5, 1) |  145353 |    2260 |   1453.52 | 2.64e-86 |     85.58 |    155.30x
+  (2, 5, 5, 1) |   57513 |    1098 |    575.12 | 1.19e-84 |     83.93 |    190.74x
+  (2, 3, 5, 2) |      41 |      26 |      0.41 | 5.48e-42 |     41.26 |   6376.80x
+  (2, 4, 4, 2) |      30 |      20 |      0.30 | 2.73e-33 |     32.56 |   6712.11x
+  (2, 3, 5, 1) |  140136 |    1804 |   1401.35 | 2.25e-25 |     24.65 |    128.59x
+  (2, 4, 5, 2) |      27 |      15 |      0.27 | 1.55e-23 |     22.81 |   5628.64x
+  (2, 2, 5, 2) |      23 |      13 |      0.23 | 1.04e-20 |     19.98 |   5736.81x
+  (2, 3, 4, 2) |      35 |      14 |      0.35 | 1.91e-19 |     18.72 |   4078.91x
+  (2, 2, 4, 2) |      31 |      13 |      0.31 | 1.74e-18 |     17.76 |   4279.84x
+  (2, 2, 3, 2) |      22 |      11 |      0.22 | 6.37e-17 |     16.20 |   5104.11x
+  ... (25 total, showing 10)
+
+Open-system logical retention (Lindblad; v23):
+  settings: noise=both | gamma_phi=0.01 | gamma_1=0.02 | t_max=5.0 | t_steps=25 | states=zx | stable_pool=True | pairs_per_cat=600 | time_mode=late | late_power=2.0 | contrast_focus=True | kernel_zoom=True | kernel_rows=12 | radius_used=2 | min_neighbors_used=3
+  REAL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.807/0.900/1.336/1.038
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.047/0.048/0.049 | t=5=0.092/0.093/0.094
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.952 | t=5=0.905/0.906/0.907
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.999/1.000/1.000 | t=5=0.999/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.953 | t=5=0.906/0.907/0.908
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.249/0.250/0.250
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.049/0.052 | t=5=0.094/0.094/0.100
+    AUC medians: fid_uncond=4.761 | leak=0.239 | subspace_ret=4.761 | logical_coh=1.250
+    Reduced[late] q10/q50/q90: fid_uncond=0.926/0.927/0.928 | fid_cond=0.999/1.000/1.000 | leak=0.071/0.072/0.073
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.927/0.928/0.929 | logical_coh=0.249/0.250/0.250 | logical_purity=0.999/1.000/1.000 | structure_drift=0.072/0.073/0.077
+  NULL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.807/0.900/1.336/1.038
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.049/0.049 | t=5=0.093/0.096/0.096
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.950/0.951/0.952 | t=5=0.904/0.904/0.906
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=1.000/1.000/1.000 | t=5=0.999/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.951/0.952 | t=5=0.904/0.904/0.907
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.250/0.250/0.251
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.049/0.050/0.050 | t=5=0.095/0.098/0.098
+    AUC medians: fid_uncond=4.756 | leak=0.243 | subspace_ret=4.757 | logical_coh=1.251
+    Reduced[late] q10/q50/q90: fid_uncond=0.925/0.926/0.928 | fid_cond=0.999/1.000/1.000 | leak=0.072/0.074/0.074
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.926/0.926/0.928 | logical_coh=0.250/0.250/0.251 | logical_purity=0.999/0.999/1.000 | structure_drift=0.074/0.075/0.076
+  REAL_Q4 - NULL_Q4 deltas (reduced q50): fid_uncond=+0.0016 | fid_cond=+0.0000 | leak=-0.0015 | subspace_ret=+0.0015 | logical_coh=-0.0003 | logical_purity=+0.0004 | structure_drift=-0.0025 | t_fid90_med=+0 | t_leak10_med=+0
+  Hotspot evidence (sparse profitable singleton search):
+    hotspot(seed,i,j)=(2863,143,144) | pos=(143, 144) | contrast=1.3648 | hotspot_score=1.5668 | dynamic_gain=+0.0172 | favorable=True
+      deltas q50: fid_uncond=-0.0000 | logical_purity=+0.0005 | structure_drift=-0.0167 | subspace_ret=-0.0007
+    hotspot(seed,i,j)=(2345,102,103) | pos=(102, 103) | contrast=0.9470 | hotspot_score=1.0475 | dynamic_gain=+0.0091 | favorable=True
+      deltas q50: fid_uncond=+0.0067 | logical_purity=+0.0007 | structure_drift=-0.0084 | subspace_ret=+0.0064
+    hotspot(seed,i,j)=(4392,234,235) | pos=(234, 235) | contrast=0.8276 | hotspot_score=0.9061 | dynamic_gain=+0.0037 | favorable=True
+      deltas q50: fid_uncond=+0.0018 | logical_purity=+0.0007 | structure_drift=-0.0030 | subspace_ret=+0.0015
+    hotspot(seed,i,j)=(4451,216,217) | pos=(216, 217) | contrast=0.8833 | hotspot_score=0.9699 | dynamic_gain=+0.0033 | favorable=True
+      deltas q50: fid_uncond=+0.0014 | logical_purity=+0.0007 | structure_drift=-0.0026 | subspace_ret=+0.0011
+    hotspot(seed,i,j)=(4063,25,26) | pos=(25, 26) | contrast=2.0544 | hotspot_score=2.4396 | dynamic_gain=+0.0032 | favorable=True
+      deltas q50: fid_uncond=+0.0010 | logical_purity=+0.0008 | structure_drift=-0.0024 | subspace_ret=+0.0007
+    hotspot(seed,i,j)=(1075,210,211) | pos=(210, 211) | contrast=1.0646 | hotspot_score=1.2025 | dynamic_gain=+0.0029 | favorable=True
+      deltas q50: fid_uncond=+0.0026 | logical_purity=+0.0001 | structure_drift=-0.0029 | subspace_ret=+0.0026
+    hotspot(seed,i,j)=(3580,109,110) | pos=(109, 110) | contrast=1.0753 | hotspot_score=1.2128 | dynamic_gain=+0.0029 | favorable=False
+      deltas q50: fid_uncond=+0.0027 | logical_purity=-0.0000 | structure_drift=-0.0029 | subspace_ret=+0.0027
+    hotspot(seed,i,j)=(3604,120,121) | pos=(120, 121) | contrast=0.8423 | hotspot_score=0.9274 | dynamic_gain=+0.0023 | favorable=False
+      deltas q50: fid_uncond=+0.0026 | logical_purity=-0.0002 | structure_drift=-0.0025 | subspace_ret=+0.0027
+  Hotspot class summary (within-batch, coarse recurrence buckets):
+    by_pos:
+      pos=(143, 144) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.117 | label=single_batch | dyn_gain_med=+0.0172 | logical_purity_med=+0.0005 | structure_drift_med=-0.0167
+      pos=(102, 103) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.109 | label=single_batch | dyn_gain_med=+0.0091 | logical_purity_med=+0.0007 | structure_drift_med=-0.0084
+      pos=(234, 235) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0037 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+      pos=(216, 217) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0033 | logical_purity_med=+0.0007 | structure_drift_med=-0.0026
+    by_pos_realcoarse:
+      pos=(143, 144)|R=(2, 0, 2, 2) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.117 | label=single_batch | dyn_gain_med=+0.0172 | logical_purity_med=+0.0005 | structure_drift_med=-0.0167
+      pos=(102, 103)|R=(2, 0, 5, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.109 | label=single_batch | dyn_gain_med=+0.0091 | logical_purity_med=+0.0007 | structure_drift_med=-0.0084
+      pos=(234, 235)|R=(2, 0, 1, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0037 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+      pos=(216, 217)|R=(2, 0, 3, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0033 | logical_purity_med=+0.0007 | structure_drift_med=-0.0026
+
+Batch 1: Jaccard(Top-25) REAL vs NULL: fine=0.000 | coarse=0.515
+
+Baseline scoreboard (REAL - NULL):
+  delta median entropy (bits): -0.184
+  delta median leakage       : -0.000
+  delta median dom_count     : -12.000
+  entropy Cohen's d          : -0.849
+
+----------------------------------------------
+Batch 2/3 (seed_offset=1000000)
+Model: REAL | candidates=1245458 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.359/0.350/0.838
+  leakage(mean/median/min)=0.099/0.099/0.023
+  entropy(mean/median/max)=6.850/7.202/7.807
+  dom_count(mean/median/max)=131.66/139.0/199
+  gaps: ΔE_in(mean/med/p90)=0.0001905/2.776e-17/4.441e-16 | ΔE_out(mean/med/p90)=1.818e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.984/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2325 | ΔE_in(mean/med/p90)=0.02274/0.02218/0.044
+  entropy effect (stable-overall)=-0.004 bits  CI95=(-0.008650387421970374, 0.0012767414399526675)
+
+Top signature families (REAL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (164, 2, 9, 1) |     414 |      87 |      4.14 | 5.19e-85 |     84.28 |   1749.36x
+  (165, 2, 9, 1) |     329 |      80 |      3.29 | 7.83e-84 |     83.11 |   2024.59x
+  (166, 2, 9, 1) |     242 |      72 |      2.42 | 9.93e-83 |     82.00 |   2477.55x
+  (162, 2, 9, 1) |     553 |      89 |      5.53 | 4.27e-76 |     75.37 |   1339.99x
+  (163, 2, 9, 1) |     445 |      80 |      4.45 | 1.43e-72 |     71.84 |   1497.42x
+  (162, 9, 9, 1) |     374 |      74 |      3.74 | 1.65e-70 |     69.78 |   1648.55x
+  (161, 2, 9, 1) |     623 |      87 |      6.23 | 5.60e-69 |     68.25 |   1162.97x
+  (162, 3, 9, 1) |     436 |      76 |      4.36 | 5.72e-68 |     67.24 |   1452.36x
+  (168, 2, 9, 1) |     149 |      52 |      1.49 | 1.89e-64 |     63.72 |   2910.15x
+  (163, 3, 9, 1) |     331 |      64 |      3.31 | 1.54e-60 |     59.81 |   1612.40x
+  ... (25 total, showing 10)
+
+Top signature families (REAL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 5, 5, 1) |   24622 |    1112 |    246.23 | 1.00e-300 |    300.00 |    450.29x
+  (2, 1, 5, 1) |   82815 |    2155 |    828.18 | 1.00e-300 |    300.00 |    259.39x
+  (2, 2, 5, 1) |   44182 |    1287 |    441.83 | 1.36e-236 |    235.87 |    290.42x
+  (2, 4, 5, 1) |   23391 |     774 |    233.92 | 7.64e-173 |    172.12 |    329.98x
+  (2, 3, 5, 1) |   25500 |     790 |    255.01 | 1.74e-160 |    159.76 |    308.94x
+  (2, 2, 4, 1) |   24282 |     441 |    242.83 | 1.13e-30 |     29.95 |    181.20x
+  (2, 4, 4, 1) |    6198 |     168 |     61.98 | 3.79e-29 |     28.42 |    270.92x
+  (2, 3, 4, 1) |   13846 |     286 |    138.46 | 1.94e-28 |     27.71 |    206.21x
+  (2, 1, 5, 2) |      43 |      19 |      0.43 | 6.37e-27 |     26.20 |   4467.54x
+  (2, 1, 4, 1) |   43486 |     657 |    434.87 | 1.39e-23 |     22.86 |    150.68x
+  ... (25 total, showing 10)
+
+Model: NULL_HAAR_BASIS | candidates=1245458 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.364/0.364/0.365
+  leakage(mean/median/min)=0.099/0.099/0.096
+  entropy(mean/median/max)=7.377/7.386/7.598
+  dom_count(mean/median/max)=150.47/151.0/170
+  gaps: ΔE_in(mean/med/p90)=0.0001605/2.776e-17/4.441e-16 | ΔE_out(mean/med/p90)=2.089e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.914/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2428 | ΔE_in(mean/med/p90)=0.02245/0.02139/0.04363
+  entropy effect (stable-overall)=+0.000 bits  CI95=(-0.00047969970932919547, 0.0008130186024690511)
+
+Top signature families (NULL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (158, 6, 8, 1) |    1482 |     149 |     14.82 | 5.69e-96 |     95.24 |    944.76x
+  (158, 7, 8, 1) |    1765 |     158 |     17.65 | 4.03e-94 |     93.39 |    841.08x
+  (159, 7, 8, 1) |    1188 |     134 |     11.88 | 5.97e-93 |     92.22 |   1060.23x
+  (159, 8, 9, 1) |    1038 |     124 |     10.38 | 3.55e-89 |     88.45 |   1123.15x
+  (157, 6, 8, 1) |    2340 |     171 |     23.40 | 7.42e-88 |     87.13 |    686.49x
+  (158, 5, 8, 1) |    1317 |     134 |     13.17 | 3.63e-87 |     86.44 |    956.42x
+  (159, 6, 8, 1) |    1006 |     120 |     10.06 | 2.77e-86 |     85.56 |   1121.63x
+  (158, 6, 7, 1) |    1338 |     131 |     13.38 | 3.59e-83 |     82.45 |    920.42x
+  (157, 6, 7, 1) |    2105 |     158 |     21.05 | 5.52e-83 |     82.26 |    705.26x
+  (157, 7, 8, 1) |    2488 |     163 |     24.88 | 6.11e-77 |     76.21 |    615.54x
+  ... (25 total, showing 10)
+
+Top signature families (NULL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 5, 5, 1) |   57266 |    1080 |    572.68 | 1.57e-80 |     79.80 |    188.38x
+  (2, 4, 5, 1) |  145322 |    2137 |   1453.27 | 6.36e-64 |     63.20 |    146.85x
+  (2, 4, 5, 2) |      50 |      26 |      0.50 | 9.64e-39 |     38.02 |   5239.26x
+  (2, 3, 5, 1) |  140725 |    1888 |   1407.30 | 1.05e-34 |     33.98 |    133.99x
+  (2, 3, 5, 2) |      32 |      19 |      0.32 | 3.07e-30 |     29.51 |   5990.55x
+  (2, 3, 4, 2) |      34 |      18 |      0.34 | 1.89e-27 |     26.72 |   5353.87x
+  (2, 2, 5, 2) |      26 |      15 |      0.26 | 6.97e-24 |     23.16 |   5839.84x
+  (2, 5, 5, 2) |      17 |      12 |      0.17 | 5.91e-21 |     20.23 |   7131.61x
+  (2, 2, 4, 2) |      24 |      11 |      0.24 | 2.22e-16 |     15.65 |   4686.48x
+  (2, 4, 4, 1) |   91755 |    1142 |    917.58 | 3.96e-13 |     12.40 |    124.32x
+  ... (25 total, showing 10)
+
+Open-system logical retention (Lindblad; v23):
+  settings: noise=both | gamma_phi=0.01 | gamma_1=0.02 | t_max=5.0 | t_steps=25 | states=zx | stable_pool=True | pairs_per_cat=600 | time_mode=late | late_power=2.0 | contrast_focus=True | kernel_zoom=True | kernel_rows=12 | radius_used=2 | min_neighbors_used=3
+  REAL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.810/0.963/1.131/0.989
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.048/0.049 | t=5=0.093/0.093/0.096
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.950/0.952/0.952 | t=5=0.904/0.906/0.907
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=1.000/1.000/1.000 | t=5=1.000/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.952 | t=5=0.904/0.907/0.907
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.250/0.250/0.250
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.048/0.050 | t=5=0.094/0.094/0.096
+    AUC medians: fid_uncond=4.761 | leak=0.238 | subspace_ret=4.762 | logical_coh=1.250
+    Reduced[late] q10/q50/q90: fid_uncond=0.926/0.928/0.928 | fid_cond=1.000/1.000/1.000 | leak=0.072/0.072/0.074
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.926/0.928/0.928 | logical_coh=0.250/0.250/0.250 | logical_purity=1.000/1.000/1.000 | structure_drift=0.073/0.073/0.075
+  NULL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.810/0.963/1.131/0.989
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.046/0.048/0.049 | t=5=0.090/0.094/0.096
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.950/0.952/0.953 | t=5=0.903/0.906/0.909
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=1.000/1.000/1.000 | t=5=0.999/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.954 | t=5=0.904/0.906/0.910
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.250/0.250/0.250
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.049/0.050 | t=5=0.093/0.096/0.098
+    AUC medians: fid_uncond=4.760 | leak=0.239 | subspace_ret=4.761 | logical_coh=1.251
+    Reduced[late] q10/q50/q90: fid_uncond=0.925/0.927/0.930 | fid_cond=1.000/1.000/1.000 | leak=0.070/0.073/0.074
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.926/0.927/0.930 | logical_coh=0.250/0.250/0.250 | logical_purity=0.999/0.999/1.000 | structure_drift=0.072/0.074/0.076
+  REAL_Q4 - NULL_Q4 deltas (reduced q50): fid_uncond=+0.0005 | fid_cond=+0.0001 | leak=-0.0005 | subspace_ret=+0.0005 | logical_coh=-0.0003 | logical_purity=+0.0003 | structure_drift=-0.0015 | t_fid90_med=+0 | t_leak10_med=+0
+  Hotspot evidence (sparse profitable singleton search):
+    hotspot(seed,i,j)=(1000379,103,104) | pos=(103, 104) | contrast=0.7799 | hotspot_score=0.8476 | dynamic_gain=+0.0036 | favorable=True
+      deltas q50: fid_uncond=+0.0019 | logical_purity=+0.0007 | structure_drift=-0.0030 | subspace_ret=+0.0016
+    hotspot(seed,i,j)=(1004355,222,223) | pos=(222, 223) | contrast=0.9605 | hotspot_score=1.0723 | dynamic_gain=+0.0035 | favorable=True
+      deltas q50: fid_uncond=+0.0026 | logical_purity=+0.0003 | structure_drift=-0.0032 | subspace_ret=+0.0025
+    hotspot(seed,i,j)=(1001778,44,45) | pos=(44, 45) | contrast=1.4640 | hotspot_score=1.6978 | dynamic_gain=+0.0029 | favorable=True
+      deltas q50: fid_uncond=+0.0021 | logical_purity=+0.0003 | structure_drift=-0.0026 | subspace_ret=+0.0019
+    hotspot(seed,i,j)=(1001949,132,133) | pos=(132, 133) | contrast=0.8258 | hotspot_score=0.9068 | dynamic_gain=+0.0026 | favorable=True
+      deltas q50: fid_uncond=+0.0021 | logical_purity=+0.0001 | structure_drift=-0.0025 | subspace_ret=+0.0020
+    hotspot(seed,i,j)=(1003437,23,24) | pos=(23, 24) | contrast=0.9615 | hotspot_score=1.0666 | dynamic_gain=+0.0024 | favorable=True
+      deltas q50: fid_uncond=+0.0018 | logical_purity=+0.0001 | structure_drift=-0.0023 | subspace_ret=+0.0018
+    hotspot(seed,i,j)=(1002244,24,25) | pos=(24, 25) | contrast=1.0925 | hotspot_score=1.2323 | dynamic_gain=+0.0021 | favorable=True
+      deltas q50: fid_uncond=-0.0021 | logical_purity=+0.0016 | structure_drift=-0.0005 | subspace_ret=-0.0028
+    hotspot(seed,i,j)=(1004260,115,116) | pos=(115, 116) | contrast=1.1354 | hotspot_score=1.2712 | dynamic_gain=+0.0018 | favorable=True
+      deltas q50: fid_uncond=+0.0008 | logical_purity=+0.0004 | structure_drift=-0.0014 | subspace_ret=+0.0006
+    hotspot(seed,i,j)=(1004129,117,118) | pos=(117, 118) | contrast=0.9145 | hotspot_score=0.9852 | dynamic_gain=+0.0017 | favorable=True
+      deltas q50: fid_uncond=+0.0002 | logical_purity=+0.0004 | structure_drift=-0.0013 | subspace_ret=-0.0000
+  Hotspot class summary (within-batch, coarse recurrence buckets):
+    by_pos:
+      pos=(103, 104) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+      pos=(222, 223) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0035 | logical_purity_med=+0.0003 | structure_drift_med=-0.0032
+      pos=(44, 45) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0029 | logical_purity_med=+0.0003 | structure_drift_med=-0.0026
+      pos=(132, 133) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0026 | logical_purity_med=+0.0001 | structure_drift_med=-0.0025
+    by_pos_realcoarse:
+      pos=(103, 104)|R=(2, 1, 1, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+      pos=(222, 223)|R=(2, 0, 1, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0035 | logical_purity_med=+0.0003 | structure_drift_med=-0.0032
+      pos=(44, 45)|R=(2, 0, 4, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0029 | logical_purity_med=+0.0003 | structure_drift_med=-0.0026
+      pos=(132, 133)|R=(2, 0, 3, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0026 | logical_purity_med=+0.0001 | structure_drift_med=-0.0025
+
+Batch 2: Jaccard(Top-25) REAL vs NULL: fine=0.000 | coarse=0.515
+
+Baseline scoreboard (REAL - NULL):
+  delta median entropy (bits): -0.183
+  delta median leakage       : -0.000
+  delta median dom_count     : -12.000
+  entropy Cohen's d          : -0.849
+
+----------------------------------------------
+Batch 3/3 (seed_offset=2000000)
+Model: REAL | candidates=1245322 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.359/0.350/0.822
+  leakage(mean/median/min)=0.099/0.099/0.007
+  entropy(mean/median/max)=6.852/7.202/7.823
+  dom_count(mean/median/max)=131.69/139.0/220
+  gaps: ΔE_in(mean/med/p90)=0.0002066/2.776e-17/4.441e-16 | ΔE_out(mean/med/p90)=1.833e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.982/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2498 | ΔE_in(mean/med/p90)=0.02316/0.02232/0.04443
+  entropy effect (stable-overall)=+0.000 bits  CI95=(-0.005849085181187252, 0.005138883065049772)
+
+Top signature families (REAL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (162, 2, 9, 1) |     519 |      94 |      5.19 | 2.85e-85 |     84.55 |   1507.86x
+  (165, 2, 9, 1) |     315 |      79 |      3.15 | 5.56e-84 |     83.26 |   2088.73x
+  (164, 2, 9, 1) |     397 |      80 |      3.97 | 9.29e-77 |     76.03 |   1678.70x
+  (162, 3, 9, 1) |     430 |      82 |      4.30 | 1.51e-76 |     75.82 |   1588.53x
+  (168, 2, 9, 1) |     181 |      61 |      1.81 | 3.27e-74 |     73.49 |   2808.75x
+  (160, 2, 9, 1) |     753 |      95 |      7.53 | 5.62e-71 |     70.25 |   1050.59x
+  (161, 2, 9, 1) |     649 |      88 |      6.49 | 1.27e-68 |     67.90 |   1129.48x
+  (166, 2, 9, 1) |     252 |      61 |      2.52 | 3.29e-64 |     63.48 |   2018.96x
+  (167, 2, 9, 1) |     219 |      56 |      2.19 | 1.46e-60 |     59.84 |   2133.68x
+  (165, 9, 9, 1) |     234 |      56 |      2.34 | 8.82e-59 |     58.05 |   1997.20x
+  ... (25 total, showing 10)
+
+Top signature families (REAL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 5, 5, 1) |   25182 |    1137 |    251.82 | 1.00e-300 |    300.00 |    450.14x
+  (2, 1, 5, 1) |   83513 |    2118 |    835.12 | 1.00e-300 |    300.00 |    252.80x
+  (2, 2, 5, 1) |   44118 |    1250 |    441.17 | 7.29e-220 |    219.14 |    282.46x
+  (2, 4, 5, 1) |   23215 |     838 |    232.15 | 5.41e-210 |    209.27 |    359.93x
+  (2, 3, 5, 1) |   25593 |     810 |    255.93 | 9.86e-170 |    169.01 |    315.59x
+  (2, 2, 4, 1) |   24495 |     459 |    244.95 | 9.14e-35 |     34.04 |    186.94x
+  (2, 3, 4, 1) |   13972 |     287 |    139.72 | 3.60e-28 |     27.44 |    205.05x
+  (2, 1, 5, 2) |      53 |      20 |      0.53 | 1.48e-26 |     25.83 |   3818.55x
+  (2, 1, 4, 1) |   43421 |     657 |    434.20 | 9.75e-24 |     23.01 |    150.90x
+  (2, 2, 3, 1) |   27874 |     440 |    278.74 | 2.02e-19 |     18.69 |    157.48x
+  ... (25 total, showing 10)
+
+Model: NULL_HAAR_BASIS | candidates=1245322 | stable_rate=0.0100 (score-only ref=0.0100)
+  score(mean/median/max)=0.364/0.364/0.365
+  leakage(mean/median/min)=0.099/0.099/0.097
+  entropy(mean/median/max)=7.376/7.385/7.593
+  dom_count(mean/median/max)=150.48/151.0/172
+  gaps: ΔE_in(mean/med/p90)=0.0001771/3.469e-17/4.441e-16 | ΔE_out(mean/med/p90)=2.105e-16/1.11e-16/4.441e-16 | logR(mean/med/p90)=-7.912/-7.955/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=2614 | ΔE_in(mean/med/p90)=0.02318/0.02281/0.04447
+  entropy effect (stable-overall)=-0.000 bits  CI95=(-0.0009861735958048845, 0.0006245371094302233)
+
+Top signature families (NULL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (159, 7, 8, 1) |    1173 |     142 |     11.73 | 1.19e-102 |    101.92 |   1137.75x
+  (158, 8, 9, 1) |    1626 |     152 |     16.26 | 2.61e-93 |     92.58 |    878.48x
+  (159, 8, 9, 1) |    1144 |     129 |     11.44 | 1.53e-89 |     88.81 |   1060.16x
+  (160, 6, 8, 1) |     605 |      98 |      6.05 | 6.85e-84 |     83.16 |   1524.19x
+  (159, 6, 8, 1) |    1048 |     118 |     10.48 | 5.41e-82 |     81.27 |   1058.93x
+  (158, 7, 8, 1) |    1700 |     142 |     17.00 | 8.14e-81 |     80.09 |    785.15x
+  (158, 7, 9, 1) |    1458 |     130 |     14.58 | 1.42e-77 |     76.85 |    838.34x
+  (157, 6, 8, 1) |    2267 |     154 |     22.67 | 6.03e-75 |     74.22 |    638.41x
+  (158, 6, 7, 1) |    1351 |     123 |     13.51 | 1.52e-74 |     73.82 |    856.19x
+  (157, 8, 9, 1) |    2163 |     150 |     21.63 | 3.02e-74 |     73.52 |    651.77x
+  ... (25 total, showing 10)
+
+Top signature families (NULL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 5, 5, 1) |   57093 |    1085 |    570.92 | 1.24e-82 |     81.91 |    189.86x
+  (2, 4, 5, 1) |  145105 |    2224 |   1451.02 | 5.19e-80 |     79.28 |    153.09x
+  (2, 3, 4, 2) |      51 |      24 |      0.51 | 1.77e-34 |     33.75 |   4750.65x
+  (2, 2, 4, 2) |      40 |      20 |      0.40 | 1.14e-29 |     28.94 |   5054.67x
+  (2, 3, 5, 1) |  139239 |    1818 |   1392.37 | 3.66e-28 |     27.44 |    130.42x
+  (2, 3, 5, 2) |      33 |      18 |      0.33 | 8.99e-28 |     27.05 |   5514.69x
+  (2, 4, 5, 2) |      34 |      18 |      0.34 | 1.89e-27 |     26.72 |   5354.85x
+  (2, 5, 5, 2) |      16 |      12 |      0.16 | 1.75e-21 |     20.76 |   7565.20x
+  (2, 3, 3, 2) |      17 |      11 |      0.17 | 1.17e-18 |     17.93 |   6562.27x
+  (2, 2, 3, 2) |      26 |       9 |      0.26 | 2.68e-12 |     11.57 |   3579.91x
+  ... (25 total, showing 10)
+
+Open-system logical retention (Lindblad; v23):
+  settings: noise=both | gamma_phi=0.01 | gamma_1=0.02 | t_max=5.0 | t_steps=25 | states=zx | stable_pool=True | pairs_per_cat=600 | time_mode=late | late_power=2.0 | contrast_focus=True | kernel_zoom=True | kernel_rows=12 | radius_used=2 | min_neighbors_used=3
+  REAL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.840/0.925/1.123/0.959
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.048/0.048 | t=5=0.093/0.094/0.094
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.952/0.952/0.952 | t=5=0.906/0.906/0.907
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=1.000/1.000/1.000 | t=5=1.000/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.952/0.952/0.952 | t=5=0.906/0.906/0.907
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.250/0.250/0.250
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.048/0.049 | t=5=0.094/0.094/0.094
+    AUC medians: fid_uncond=4.761 | leak=0.239 | subspace_ret=4.761 | logical_coh=1.250
+    Reduced[late] q10/q50/q90: fid_uncond=0.927/0.927/0.928 | fid_cond=1.000/1.000/1.000 | leak=0.072/0.073/0.073
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.927/0.927/0.928 | logical_coh=0.250/0.250/0.250 | logical_purity=1.000/1.000/1.000 | structure_drift=0.073/0.073/0.073
+  NULL_Q4: n_pairs=12 | t_fid90_med=5 | t_leak10_med=5
+    contrast_score(q10/q50/q90/mean)=0.840/0.925/1.123/0.959
+    leak(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.047/0.048/0.049 | t=5=0.092/0.094/0.095
+    fid_uncond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.953 | t=5=0.904/0.906/0.908
+    fid_cond(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=1.000/1.000/1.000 | t=5=0.999/1.000/1.000
+    subspace_ret(q10/q50/q90): t=0=1.000/1.000/1.000 | t=2.5=0.951/0.952/0.953 | t=5=0.905/0.906/0.908
+    logical_coh(q10/q50/q90): t=0=0.250/0.250/0.250 | t=2.5=0.250/0.250/0.250 | t=5=0.250/0.250/0.251
+    structure_drift(q10/q50/q90): t=0=0.000/0.000/0.000 | t=2.5=0.048/0.049/0.050 | t=5=0.093/0.096/0.098
+    AUC medians: fid_uncond=4.760 | leak=0.239 | subspace_ret=4.761 | logical_coh=1.251
+    Reduced[late] q10/q50/q90: fid_uncond=0.926/0.927/0.929 | fid_cond=1.000/1.000/1.000 | leak=0.071/0.073/0.074
+    Reduced[late] structure q10/q50/q90: subspace_ret=0.926/0.927/0.929 | logical_coh=0.250/0.250/0.250 | logical_purity=0.999/1.000/1.000 | structure_drift=0.072/0.074/0.075
+  REAL_Q4 - NULL_Q4 deltas (reduced q50): fid_uncond=+0.0002 | fid_cond=+0.0002 | leak=-0.0000 | subspace_ret=+0.0000 | logical_coh=-0.0002 | logical_purity=+0.0005 | structure_drift=-0.0013 | t_fid90_med=+0 | t_leak10_med=+0
+  Hotspot evidence (sparse profitable singleton search):
+    hotspot(seed,i,j)=(2001802,148,149) | pos=(148, 149) | contrast=1.1370 | hotspot_score=1.2899 | dynamic_gain=+0.0036 | favorable=True
+      deltas q50: fid_uncond=+0.0019 | logical_purity=+0.0006 | structure_drift=-0.0029 | subspace_ret=+0.0016
+    hotspot(seed,i,j)=(2000354,111,112) | pos=(111, 112) | contrast=0.8304 | hotspot_score=0.9077 | dynamic_gain=+0.0029 | favorable=True
+      deltas q50: fid_uncond=+0.0010 | logical_purity=+0.0006 | structure_drift=-0.0024 | subspace_ret=+0.0007
+    hotspot(seed,i,j)=(2001071,161,162) | pos=(161, 162) | contrast=0.9127 | hotspot_score=1.0125 | dynamic_gain=+0.0027 | favorable=True
+      deltas q50: fid_uncond=+0.0000 | logical_purity=+0.0008 | structure_drift=-0.0019 | subspace_ret=-0.0003
+    hotspot(seed,i,j)=(2003771,12,13) | pos=(12, 13) | contrast=0.9367 | hotspot_score=1.0308 | dynamic_gain=+0.0016 | favorable=True
+      deltas q50: fid_uncond=+0.0003 | logical_purity=+0.0004 | structure_drift=-0.0012 | subspace_ret=+0.0002
+    hotspot(seed,i,j)=(2001609,111,112) | pos=(111, 112) | contrast=0.9940 | hotspot_score=1.1151 | dynamic_gain=+0.0015 | favorable=True
+      deltas q50: fid_uncond=+0.0008 | logical_purity=+0.0002 | structure_drift=-0.0013 | subspace_ret=+0.0007
+    hotspot(seed,i,j)=(2002167,165,166) | pos=(165, 166) | contrast=0.8455 | hotspot_score=0.9266 | dynamic_gain=+0.0013 | favorable=True
+      deltas q50: fid_uncond=+0.0006 | logical_purity=+0.0002 | structure_drift=-0.0011 | subspace_ret=+0.0006
+    hotspot(seed,i,j)=(2001895,115,116) | pos=(115, 116) | contrast=0.8399 | hotspot_score=0.9127 | dynamic_gain=+0.0006 | favorable=False
+      deltas q50: fid_uncond=-0.0014 | logical_purity=+0.0008 | structure_drift=+0.0002 | subspace_ret=-0.0018
+    hotspot(seed,i,j)=(2001488,70,71) | pos=(70, 71) | contrast=0.9634 | hotspot_score=1.0750 | dynamic_gain=+0.0006 | favorable=True
+      deltas q50: fid_uncond=-0.0010 | logical_purity=+0.0005 | structure_drift=-0.0001 | subspace_ret=-0.0013
+  Hotspot class summary (within-batch, coarse recurrence buckets):
+    by_pos:
+      pos=(148, 149) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0006 | structure_drift_med=-0.0029
+      pos=(161, 162) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0027 | logical_purity_med=+0.0008 | structure_drift_med=-0.0019
+      pos=(111, 112) | count=2 | favorable=2/2 | anti=0/2 | fav_rate=1.00 | stab=+1.102 | label=single_batch | dyn_gain_med=+0.0022 | logical_purity_med=+0.0004 | structure_drift_med=-0.0018
+      pos=(12, 13) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.102 | label=single_batch | dyn_gain_med=+0.0016 | logical_purity_med=+0.0004 | structure_drift_med=-0.0012
+    by_pos_realcoarse:
+      pos=(148, 149)|R=(2, 0, 5, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0006 | structure_drift_med=-0.0029
+      pos=(111, 112)|R=(2, 0, 2, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0029 | logical_purity_med=+0.0006 | structure_drift_med=-0.0024
+      pos=(161, 162)|R=(2, 0, 5, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0027 | logical_purity_med=+0.0008 | structure_drift_med=-0.0019
+      pos=(12, 13)|R=(2, 1, 1, 1) | count=1 | favorable=1/1 | anti=0/1 | fav_rate=1.00 | stab=+1.102 | label=single_batch | dyn_gain_med=+0.0016 | logical_purity_med=+0.0004 | structure_drift_med=-0.0012
+
+Batch 3: Jaccard(Top-25) REAL vs NULL: fine=0.000 | coarse=0.562
+
+Baseline scoreboard (REAL - NULL):
+  delta median entropy (bits): -0.184
+  delta median leakage       : -0.000
+  delta median dom_count     : -12.000
+  entropy Cohen's d          : -0.849
+
+----------------------------------------------
+=== Convergence diagnostics (REAL) ===
+REAL overlap fine:   Jaccard(Top-25) batch1 vs batch2 = 0.613
+REAL overlap coarse: Jaccard(Top-25) batch1 vs batch2 = 0.923
+REAL overlap fine:   Jaccard(Top-25) batch1 vs batch3 = 0.471
+REAL overlap coarse: Jaccard(Top-25) batch1 vs batch3 = 0.786
+REAL overlap fine:   Jaccard(Top-25) batch2 vs batch3 = 0.471
+REAL overlap coarse: Jaccard(Top-25) batch2 vs batch3 = 0.724
+
+=== Hotspot recurrence across batches (v24.9.2) ===
+by_pos:
+  pos=(143, 144) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.117 | label=single_batch | dyn_gain_med=+0.0172 | logical_purity_med=+0.0005 | structure_drift_med=-0.0167
+  pos=(102, 103) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.109 | label=single_batch | dyn_gain_med=+0.0091 | logical_purity_med=+0.0007 | structure_drift_med=-0.0084
+  pos=(234, 235) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0037 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+  pos=(216, 217) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0033 | logical_purity_med=+0.0007 | structure_drift_med=-0.0026
+  pos=(25, 26) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0032 | logical_purity_med=+0.0008 | structure_drift_med=-0.0024
+  pos=(210, 211) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0029 | logical_purity_med=+0.0001 | structure_drift_med=-0.0029
+  pos=(215, 216) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.102 | label=single_batch | dyn_gain_med=+0.0020 | logical_purity_med=+0.0002 | structure_drift_med=-0.0017
+  pos=(103, 104) | count=1 | batch_count=1 | batches=[2] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+0.602 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+by_pos_realcoarse:
+  pos=(143, 144)|R=(2, 0, 2, 2) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.117 | label=single_batch | dyn_gain_med=+0.0172 | logical_purity_med=+0.0005 | structure_drift_med=-0.0167
+  pos=(102, 103)|R=(2, 0, 5, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.109 | label=single_batch | dyn_gain_med=+0.0091 | logical_purity_med=+0.0007 | structure_drift_med=-0.0084
+  pos=(234, 235)|R=(2, 0, 1, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.104 | label=single_batch | dyn_gain_med=+0.0037 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+  pos=(216, 217)|R=(2, 0, 3, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0033 | logical_purity_med=+0.0007 | structure_drift_med=-0.0026
+  pos=(25, 26)|R=(2, 0, 5, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0032 | logical_purity_med=+0.0008 | structure_drift_med=-0.0024
+  pos=(210, 211)|R=(2, 0, 2, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.103 | label=single_batch | dyn_gain_med=+0.0029 | logical_purity_med=+0.0001 | structure_drift_med=-0.0029
+  pos=(215, 216)|R=(2, 1, 1, 1) | count=1 | batch_count=1 | batches=[1] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+1.102 | label=single_batch | dyn_gain_med=+0.0020 | logical_purity_med=+0.0002 | structure_drift_med=-0.0017
+  pos=(103, 104)|R=(2, 1, 1, 1) | count=1 | batch_count=1 | batches=[2] | favorable=1/1 | anti=0/1 | fav_rate=1.00 | anti_rate=0.00 | stab=+0.602 | label=single_batch | dyn_gain_med=+0.0036 | logical_purity_med=+0.0007 | structure_drift_med=-0.0030
+=== Hotspot stability panels (v24.9.2) ===
+mixed_recurrent:
+  pos=(115, 116) | batch_count=2 | fav_rate=0.50 | anti_rate=0.00 | stab=+0.434 | dyn_gain_med=+0.0012 | logical_purity_med=+0.0006 | structure_drift_med=-0.0006
+
+=== Notes (scientific reading) ===
+1) Compare REAL vs NULL primarily via deltas/effect sizes and batch stability, not raw entropy levels (d differs with n_qubits).
+2) Use fine families for within-model discovery; use coarse families for cross-model interpretability.
+3) If results at n=4 resemble n=3 (stable deltas + stable overlaps), that is strong qualitative evidence the effect is not a 3-qubit artifact.
+
+=== End of v24.9.2 ===
+
+=== v24.15 prior application summary ===
+v24.15 local ridge-refinement REAL-only summary
+apply_to=real | weight_power=1.000
+primary_region=(19, 19)/anchor=(157, 158)/region_bonus=0.260/anchor_bonus=0.110/support_bonus=0.070/outside_penalty=0.015
+support_points=[(153, 154), (155, 156)] | count=2
+region_priors=1 | candidates_seen=7472984 | adjusted=3736492
+model_counts={'REAL': 3736492, 'NULL_HAAR_BASIS': 3736492}
+Local ridge-refinement priors were applied before stable selection.

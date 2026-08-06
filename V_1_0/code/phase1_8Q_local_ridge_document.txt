@@ -1,0 +1,16 @@
+=== Phase 1 document: 8Q local ridge and preliminary explanatory frame ===
+
+Title
+Phase 1: 8Q Local Ridge and Preliminary Explanatory Frame
+
+Empirical finding
+The current 8Q analysis supports a narrow local ridge rather than a broadly distributed hotspot landscape. Within this ridge, the position (157,158) emerges as the dominant local anchor, while (155,156) and (153,154) appear as weaker but still genuine support points. This is supported both by the local ridge report, where (157,158) has repeat_count=3, n=65, and the strongest overall local ranking, and by the explanatory comparison, where the neighboring points remain relevant but clearly subordinate to the dominant anchor.
+
+Explanatory reading
+The dominant anchor (157,158) does not appear to win on purity alone. The stronger reading is instead that it is favored through a combined profile of stronger recurrence, positive retention/fidelity contribution, positive dynamic gain, and lower structure drift than its nearest weaker neighbors. The v24.18 comparison shows that (157,158) ranks highest on the total explanatory proxy, whereas positions such as (153,154) can still show positive logical purity but nevertheless lose on the total balance, especially because fid_uncond and subspace_ret are weaker.
+
+Next hypothesis
+The current working hypothesis is therefore that the local Lindblad geometry around (157,158) is more retention-compatible and less drift-destructive than at the nearest competing positions. In other words, the dominant anchor is not simply the “purest” local point, but the point where recurrence, retention/fidelity, and reduced structure drift align most favorably. This suggests that the next phase should be explanatory and locally comparative rather than another broad hotspot search.
+
+Short concluding note
+At the present stage, the 8Q track has matured from hotspot discovery into local geometric interpretation. The operative takeaway is that v24.14 remains the best current 8Q hotspot version, and that (157,158) should be treated as the leading local ridge anchor for the next explanatory phase.

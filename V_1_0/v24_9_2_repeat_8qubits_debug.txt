@@ -1,0 +1,40 @@
+=== v24.9.2 repeat debug wrapper ===
+Qubits: 8 | repeats=3 | batches/repeat=3
+repeat_seed_stride=10000000 | batch_stride=1000000
+process_mem_start: rss_mb=unknown
+
+--- Repeat 1/3 | base_seed=0 | rss_mb=unknown ---
+Repeat 1 Batch 1: delta_entropy=-0.184 | delta_leak=-0.000 | delta_dom=-12.000 | d=-0.849
+Repeat 1 Batch 2: delta_entropy=-0.183 | delta_leak=-0.000 | delta_dom=-12.000 | d=-0.849
+Repeat 1 Batch 3: delta_entropy=-0.184 | delta_leak=-0.000 | delta_dom=-12.000 | d=-0.849
+  Repeat mixed_recurrent:
+    pos=(115, 116) | batch_count=2 | fav_rate=0.50 | anti_rate=0.00 | stab=+0.434
+Repeat 1 done in 5763.0s | rss_mb=unknown
+post_gc_after_repeat_1: rss_mb=unknown
+
+--- Repeat 2/3 | base_seed=10000000 | rss_mb=unknown ---
+MEMORY_ERROR in repeat 2 | base_seed=10000000 | rss_mb=unknown
+Unable to allocate 1.00 MiB for an array with shape (256, 256) and data type complex128
+Traceback (most recent call last):
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\v1_0_Soft_Space_4_8_qubits_v24_9_2_repeat_debug.py", line 108, in main
+    real, null, scoreboards, perturb_summaries, open_system_summaries, interference_summaries = base.run_paired_batches(
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\v1_0_Soft_Space_4_8_qubits_v24_9_2.py", line 1222, in run_paired_batches
+    generate_candidates_for_seed(
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\v1_0_Soft_Space_4_8_qubits_v24_9_2.py", line 482, in generate_candidates_for_seed
+    H = null_haar_basis_hamiltonian(evals_real, seed=seed)
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\v1_0_Soft_Space_4_8_qubits_v24_9_2.py", line 273, in null_haar_basis_hamiltonian
+    U = haar_random_unitary(d, rng)
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\v1_0_Soft_Space_4_8_qubits_v24_9_2.py", line 263, in haar_random_unitary
+    Q, R = np.linalg.qr(Z)
+  File "<__array_function__ internals>", line 200, in qr
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\lib\site-packages\numpy\linalg\linalg.py", line 959, in qr
+    r = triu(a[..., :mc, :])
+  File "<__array_function__ internals>", line 200, in triu
+  File "C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\lib\site-packages\numpy\lib\twodim_base.py", line 538, in triu
+    return where(mask, zeros(1, m.dtype), m)
+  File "<__array_function__ internals>", line 200, in where
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 1.00 MiB for an array with shape (256, 256) and data type complex128
+
+post_gc_after_repeat_2: rss_mb=unknown
+
+=== End of v24.9.2 repeat debug ===

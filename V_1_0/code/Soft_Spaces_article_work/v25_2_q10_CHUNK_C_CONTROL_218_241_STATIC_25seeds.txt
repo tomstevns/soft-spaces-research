@@ -1,0 +1,97 @@
+=== v25.2: Targeted Continuation + Baseline Calibration + Open-system (based on v24.9.2) ===
+Qubits: 10 (d=1024) | terms=5
+Batches: 1 × 25 seeds (base_seed=3001000, stride=1000000)
+Neighbor eps=0.050
+Targeted continuation: q8_intervals=[] | explicit_target_zones=['218-241']
+Target intervals used: 218-241
+Off-target control intervals used: NONE
+Allowed pair intervals searched: 218-241
+Dominant set: keep_mass=0.90 (mass-based; guarantees non-empty mask)
+Bins (SigAbs): ent_step=0.100 | leak_step=0.050
+Bins (SigQ_GLOBAL fine): q_bins=16 (pooled REAL+NULL per batch)
+Bins (SigQG_COARSE): q_bins_coarse=8 + dom_bin(dom/d) + leak_bin_coarse (pooled REAL+NULL per batch)
+Leakage proxy times=[0.5, 1.0, 1.5] (FAST analytic evolution in eigenpair)
+Stable selection: stable_frac=0.670 per model (optional leak constraint max=None, q=None)
+Perturbation robustness: eta=[] | reps=3 | seeds=0 | pairs/seed=5 | dH_terms=None
+Open-system (v23): enabled=False | include_baselines=False | pairs_per_cat=400 | noise=dephasing(phi=0.01,g1=0.01) | t=5.0/25 | states=zx | basis=eigen | noise_qubits=all:None | stable_pool=False | time_mode=mean | late_power=2.0 | contrast_focus=False | kernel_zoom=False
+Interference test: enabled=False | pairs_per_cat=200 | stable_pool=False
+TopK=25 | min_overall=3 | min_stable=3 | alpha=0.5
+Optional family filter: p_tail_max=None
+Pauli ops: lazy on-demand cache (excluding all-I); v25.2 targeted continuation filter over eigenpair-index intervals
+
+
+----------------------------------------------
+Batch 1/1 (seed_offset=3001000)
+Model: REAL | candidates=575 | stable_rate=0.6696 (score-only ref=0.6696)
+  score(mean/median/max)=0.361/0.361/0.371
+  leakage(mean/median/min)=0.100/0.100/0.098
+  entropy(mean/median/max)=8.905/9.257/9.519
+  dom_count(mean/median/max)=530.87/569.0/652
+  gaps: ΔE_in(mean/med/p90)=0/0/0 | ΔE_out(mean/med/p90)=0/0/0 | logR(mean/med/p90)=0.000/0.000/0.000
+  gaps_cond(ΔE_in>iso_eps): n=0 | ΔE_in(mean/med/p90)=0/0/0
+  entropy effect (stable-overall)=+0.001 bits  CI95=(-0.016336666786858967, 0.01647881716130715)
+
+Top signature families (REAL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+
+Top signature families (REAL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 2, 7, 1) |      32 |      32 |     21.43 | 2.66e-06 |      5.57 |      2.19x
+  (2, 2, 2, 1) |      41 |      38 |     27.45 | 1.08e-04 |      3.97 |      2.03x
+  (2, 1, 2, 1) |      41 |      36 |     27.45 | 2.12e-03 |      2.67 |      1.93x
+  (2, 1, 7, 1) |      14 |      14 |      9.37 | 3.64e-03 |      2.44 |      2.19x
+  (2, 2, 3, 1) |      25 |      23 |     16.74 | 3.81e-03 |      2.42 |      2.02x
+  (2, 2, 4, 1) |      13 |      13 |      8.70 | 5.44e-03 |      2.26 |      2.19x
+  (2, 1, 3, 1) |      12 |      12 |      8.03 | 8.12e-03 |      2.09 |      2.19x
+  (2, 0, 7, 1) |      12 |      12 |      8.03 | 8.12e-03 |      2.09 |      2.19x
+  (2, 2, 5, 1) |       9 |       9 |      6.03 | 2.70e-02 |      1.57 |      2.19x
+  (2, 3, 7, 1) |       9 |       9 |      6.03 | 2.70e-02 |      1.57 |      2.19x
+  ... (25 total, showing 10)
+
+Model: NULL_HAAR_BASIS | candidates=575 | stable_rate=0.6696 (score-only ref=0.6696)
+  score(mean/median/max)=0.361/0.361/0.361
+  leakage(mean/median/min)=0.100/0.100/0.099
+  entropy(mean/median/max)=9.382/9.387/9.459
+  dom_count(mean/median/max)=601.24/601.0/631
+  gaps: ΔE_in(mean/med/p90)=7.401e-17/0/1.776e-16 | ΔE_out(mean/med/p90)=1.48e-16/1.11e-16/1.998e-16 | logR(mean/med/p90)=-7.854/-7.955/-7.714
+  gaps_cond(ΔE_in>iso_eps): n=0 | ΔE_in(mean/med/p90)=0/0/0
+  entropy effect (stable-overall)=-0.000 bits  CI95=(-0.0010825045563096047, 0.0010533190077204324)
+
+Top signature families (NULL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (600, 9, 14, 1) |       3 |       3 |      2.01 | 3.00e-01 |      0.52 |      1.95x
+  (603, 13, 14, 1) |       3 |       3 |      2.01 | 3.00e-01 |      0.52 |      1.95x
+  (605, 10, 13, 1) |       3 |       3 |      2.01 | 3.00e-01 |      0.52 |      1.95x
+  (604, 8, 14, 1) |       3 |       3 |      2.01 | 3.00e-01 |      0.52 |      1.95x
+
+Top signature families (NULL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 4, 4, 1) |      26 |      22 |     17.41 | 3.82e-02 |      1.42 |      1.87x
+  (2, 6, 7, 1) |      36 |      28 |     24.10 | 1.12e-01 |      0.95 |      1.72x
+  (2, 4, 7, 1) |      38 |      29 |     25.44 | 1.45e-01 |      0.84 |      1.69x
+  (2, 2, 4, 1) |      11 |       9 |      7.37 | 2.40e-01 |      0.62 |      1.82x
+  (2, 5, 5, 1) |      28 |      21 |     18.75 | 2.45e-01 |      0.61 |      1.66x
+  (2, 2, 5, 1) |      10 |       8 |      6.70 | 3.06e-01 |      0.51 |      1.78x
+  (2, 3, 3, 1) |      27 |      19 |     18.08 | 4.41e-01 |      0.36 |      1.56x
+  (2, 4, 6, 1) |      51 |      35 |     34.15 | 4.65e-01 |      0.33 |      1.52x
+  (2, 5, 6, 1) |      52 |      35 |     34.82 | 5.44e-01 |      0.26 |      1.49x
+  (2, 3, 4, 1) |      28 |      19 |     18.75 | 5.49e-01 |      0.26 |      1.51x
+  ... (20 total, showing 10)
+
+Batch 1: Jaccard(Top-25) REAL vs NULL: fine=0.000 | coarse=0.552
+
+Baseline scoreboard (REAL - NULL):
+  delta median entropy (bits): -0.130
+  delta median leakage       : +0.000
+  delta median dom_count     : -32.000
+  entropy Cohen's d          : -0.846
+
+----------------------------------------------
+=== Convergence diagnostics (REAL) ===
+
+=== Notes (scientific reading) ===
+1) Compare REAL vs NULL primarily via deltas/effect sizes and batch stability, not raw entropy levels (d differs with n_qubits).
+2) Use fine families for within-model discovery; use coarse families for cross-model interpretability.
+3) If results at n=4 resemble n=3 (stable deltas + stable overlaps), that is strong qualitative evidence the effect is not a 3-qubit artifact.
+
+=== End of v25.2 targeted continuation ===
