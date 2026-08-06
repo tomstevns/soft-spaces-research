@@ -163,4 +163,4 @@ Denmark
 
 # License
 
-MIT License
+CC-BY 4.0
