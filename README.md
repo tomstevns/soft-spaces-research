@@ -115,11 +115,12 @@ GitHub repository:
 
 https://github.com/tomstevns/soft-spaces-github
 
-Zenodo DOI:
+Zenodo
 
-*To be added after first release.*
+DOI:
+10.5281/zenodo.21819815
 
----
+https://doi.org/10.5281/zenodo.21819815
 
 # Project philosophy
 
