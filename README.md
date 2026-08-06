@@ -36,17 +36,22 @@ The paper presents
 # Repository contents
 
 ```
-docs/
+Soft_Spaces_article_work/
+    less important txt,py..
+
+paper/
     Main paper (PDF)
 
-src/
+documentation
+output files (txt)
+
+code/
     Python source code
 
 results/
     Experimental output
 
-figures/
-    Figures used in the paper
+
 
 README.md
 LICENSE
