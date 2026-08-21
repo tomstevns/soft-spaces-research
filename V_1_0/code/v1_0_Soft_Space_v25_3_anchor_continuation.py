@@ -1,22 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """\
-v1_0_Soft_Space_v25_2_q10_q12_continuation_targeted.py
+v1_0_Soft_Space_v25_3_anchor_continuation.py
 
 Purpose
 -------
-Targeted continuation version for q10/q11/q12 descendant-zone smoke tests.
+First pythonfile that should be changed by ChatGPT for our new Soft Space project
 _______
-This file is based on v24.9.2, but adds optional pair-position filtering so that
-the run can concentrate on pre-registered descendant zones derived from the q8 ridge.
-
-New in v25.2
------------
-- Optional exact pair-position zones via --target_zones, e.g. 612-679.
-- Optional q8-to-n continuation zones via --continuation_q8_intervals, e.g. 157-158 153-158 160-169.
-- Optional matched off-target control intervals via --control_intervals.
-- The candidate search can be restricted to selected (i,j) eigenpair-index intervals.
-
 Evidence step v19: add a physically meaningful, basis-invariant perturbation robustness test.
 
 This version keeps the fully reproducible, statistical–numerical protocol (no model training)
@@ -145,121 +135,6 @@ def safe_median(x: np.ndarray) -> float:
     if x.size == 0:
         return 0.0
     return float(np.median(x))
-
-
-# ----------------------------
-# v25.2 targeted continuation zones
-# ----------------------------
-
-def parse_interval_spec(spec: str) -> Tuple[int, int]:
-    """Parse 'lo-hi', 'lo:hi', 'lo,hi', or 'x' into an inclusive interval."""
-    s = str(spec).strip().replace(" ", "")
-    if not s:
-        raise ValueError("empty interval specification")
-    for sep in ("-", ":", ","):
-        if sep in s:
-            a, b = s.split(sep, 1)
-            lo, hi = int(a), int(b)
-            if hi < lo:
-                lo, hi = hi, lo
-            return lo, hi
-    x = int(s)
-    return x, x
-
-
-def merge_intervals(intervals: List[Tuple[int, int]], d: int) -> List[Tuple[int, int]]:
-    """Clamp and merge inclusive intervals to [0,d-1]."""
-    cleaned: List[Tuple[int, int]] = []
-    for lo, hi in intervals:
-        lo = clamp_int(int(lo), 0, int(d) - 1)
-        hi = clamp_int(int(hi), 0, int(d) - 1)
-        if hi < lo:
-            lo, hi = hi, lo
-        cleaned.append((lo, hi))
-    if not cleaned:
-        return []
-    cleaned.sort()
-    merged = [cleaned[0]]
-    for lo, hi in cleaned[1:]:
-        last_lo, last_hi = merged[-1]
-        if lo <= last_hi + 1:
-            merged[-1] = (last_lo, max(last_hi, hi))
-        else:
-            merged.append((lo, hi))
-    return merged
-
-
-def scale_q8_intervals_to_n(specs: List[str], n_qubits: int, d: int) -> List[Tuple[int, int]]:
-    """Map q8 inclusive intervals to n-qubit tensor-descendant intervals."""
-    n = int(n_qubits)
-    if n < 8:
-        raise ValueError("--continuation_q8_intervals requires --n_qubits >= 8")
-    factor = 2 ** (n - 8)
-    out: List[Tuple[int, int]] = []
-    for spec in specs:
-        lo8, hi8 = parse_interval_spec(spec)
-        lo = int(lo8) * factor
-        hi = (int(hi8) + 1) * factor - 1
-        out.append((lo, hi))
-    return merge_intervals(out, d)
-
-
-def pair_in_intervals(i: int, j: int, intervals: Optional[List[Tuple[int, int]]]) -> bool:
-    """Return True when the neighboring pair (i,j) is fully inside one allowed interval."""
-    if not intervals:
-        return True
-    ii, jj = int(i), int(j)
-    for lo, hi in intervals:
-        if ii >= lo and jj <= hi:
-            return True
-    return False
-
-
-def sample_control_intervals(
-    *,
-    d: int,
-    target_intervals: List[Tuple[int, int]],
-    n_controls: int,
-    rng_seed: int,
-    width: Optional[int] = None,
-    max_tries: int = 10000,
-) -> List[Tuple[int, int]]:
-    """Sample off-target inclusive control intervals, avoiding target intervals and each other."""
-    n_controls = int(max(0, n_controls))
-    if n_controls <= 0:
-        return []
-    occupied = merge_intervals(list(target_intervals), d)
-    if width is None or int(width) <= 0:
-        widths = [max(1, hi - lo + 1) for lo, hi in occupied] or [max(1, int(d) // 32)]
-    else:
-        widths = [int(width)]
-    rng = rng_from_seed(int(rng_seed))
-    controls: List[Tuple[int, int]] = []
-
-    def overlaps_any(interval: Tuple[int, int], intervals: List[Tuple[int, int]]) -> bool:
-        lo, hi = interval
-        for a, b in intervals:
-            if lo <= b and hi >= a:
-                return True
-        return False
-
-    tries = 0
-    while len(controls) < n_controls and tries < int(max_tries):
-        tries += 1
-        w = int(widths[len(controls) % len(widths)])
-        w = max(1, min(w, int(d)))
-        lo = int(rng.integers(0, max(1, int(d) - w + 1)))
-        cand = (lo, lo + w - 1)
-        if overlaps_any(cand, occupied) or overlaps_any(cand, controls):
-            continue
-        controls.append(cand)
-    return merge_intervals(controls, d)
-
-
-def format_intervals(intervals: Optional[List[Tuple[int, int]]]) -> str:
-    if not intervals:
-        return "ALL"
-    return ", ".join(f"{lo}-{hi}" if lo != hi else str(lo) for lo, hi in intervals)
 
 
 # ----------------------------
@@ -473,6 +348,195 @@ def leakage_proxy_fast(
     return float(np.mean(leaks)), dom
 
 
+
+# ----------------------------
+# Phase 2 targeted eigenpair zones (v25.2)
+# ----------------------------
+
+IndexInterval = Tuple[int, int]
+
+
+def parse_index_intervals(spec: Optional[str], d: int) -> List[IndexInterval]:
+    """
+    Parse a comma-separated inclusive index-range specification such as:
+        "0-511"
+        "0-127,384-511"
+
+    The interval refers to the *left* index i of a neighboring eigenpair (i, i+1).
+    Valid left indices are therefore 0..d-2.
+
+    A bare integer such as "200" is accepted as the singleton interval (200, 200).
+    """
+    if spec is None:
+        return []
+
+    raw = str(spec).strip()
+    if raw == "":
+        return []
+
+    hi_valid = max(0, int(d) - 2)
+    out: List[IndexInterval] = []
+
+    for token in raw.split(","):
+        token = token.strip()
+        if not token:
+            continue
+
+        if "-" in token:
+            a_s, b_s = token.split("-", 1)
+            a = int(a_s.strip())
+            b = int(b_s.strip())
+        else:
+            a = b = int(token)
+
+        if a > b:
+            a, b = b, a
+
+        # Clamp to legal neighboring-pair left indices.
+        a = max(0, min(hi_valid, a))
+        b = max(0, min(hi_valid, b))
+
+        if a <= b:
+            out.append((a, b))
+
+    # Merge overlapping/adjacent intervals.
+    out.sort()
+    merged: List[IndexInterval] = []
+    for a, b in out:
+        if not merged or a > merged[-1][1] + 1:
+            merged.append((a, b))
+        else:
+            pa, pb = merged[-1]
+            merged[-1] = (pa, max(pb, b))
+    return merged
+
+
+def left_index_in_intervals(i: int, intervals: List[IndexInterval]) -> bool:
+    """Return True when left eigenpair index i is inside at least one inclusive interval."""
+    if not intervals:
+        return True
+    ii = int(i)
+    return any(a <= ii <= b for a, b in intervals)
+
+
+def format_intervals(intervals: List[IndexInterval]) -> str:
+    if not intervals:
+        return "FULL"
+    return ",".join(f"{a}-{b}" if a != b else str(a) for a, b in intervals)
+
+
+def parse_anchor_pair(spec: str) -> Tuple[int, int]:
+    """
+    Parse an adjacent anchor pair such as "157-158".
+    The current continuation implementation is defined for neighbouring
+    eigenpair anchors only.
+    """
+    raw = str(spec).strip()
+    if "-" not in raw:
+        raise ValueError("--anchor must be an adjacent pair such as 157-158")
+    a_s, b_s = raw.split("-", 1)
+    a, b = int(a_s.strip()), int(b_s.strip())
+    if b < a:
+        a, b = b, a
+    if b != a + 1:
+        raise ValueError("--anchor currently requires adjacent indices, e.g. 157-158")
+    return a, b
+
+
+def anchor_descendant_centers(anchor_left: int, from_qubits: int, to_qubits: int) -> List[int]:
+    """
+    Predict the direct computational-basis descendants of an n-qubit
+    neighbouring-pair anchor after embedding into a larger Hilbert space.
+
+    For one extra qubit this yields two branches:
+        i
+        i + 2**from_qubits
+
+    For k extra qubits it yields 2**k branches separated by 2**from_qubits.
+    These are priors, not claims that the successor must lie exactly there.
+    """
+    if to_qubits < from_qubits:
+        raise ValueError("target n_qubits must be >= anchor_from_qubits")
+    base_dim = 2 ** int(from_qubits)
+    branches = 2 ** int(to_qubits - from_qubits)
+    return [int(anchor_left) + j * base_dim for j in range(branches)]
+
+
+def windows_around_centers(centers: List[int], radius: int, d: int) -> List[IndexInterval]:
+    hi_valid = max(0, int(d) - 2)
+    r = max(0, int(radius))
+    out: List[IndexInterval] = []
+    for c in centers:
+        cc = max(0, min(hi_valid, int(c)))
+        out.append((max(0, cc - r), min(hi_valid, cc + r)))
+    # Reuse parser-style merge logic.
+    out.sort()
+    merged: List[IndexInterval] = []
+    for a, b in out:
+        if not merged or a > merged[-1][1] + 1:
+            merged.append((a, b))
+        else:
+            pa, pb = merged[-1]
+            merged[-1] = (pa, max(pb, b))
+    return merged
+
+
+def intervals_overlap(x: IndexInterval, y: IndexInterval) -> bool:
+    return not (x[1] < y[0] or y[1] < x[0])
+
+
+def matched_control_intervals(
+    anchor_windows: List[IndexInterval],
+    n_controls: int,
+    radius: int,
+    d: int,
+) -> List[IndexInterval]:
+    """
+    Deterministically choose matched-width control windows away from predicted
+    anchor windows. Controls are spread across the legal left-index range.
+
+    This is intentionally deterministic so anchor and control runs are exactly
+    reproducible with the same seed set.
+    """
+    n = max(0, int(n_controls))
+    if n == 0:
+        return []
+
+    hi_valid = max(0, int(d) - 2)
+    r = max(0, int(radius))
+    width = 2 * r + 1
+
+    # Candidate centers on a dense, deterministic grid, ordered by even
+    # coverage of the spectrum.
+    raw_centers = []
+    for k in range(1, max(9, 8 * n) + 1):
+        frac = k / float(max(10, 8 * n + 2))
+        raw_centers.append(int(round(frac * hi_valid)))
+
+    controls: List[IndexInterval] = []
+    for c in raw_centers:
+        w = (max(0, c - r), min(hi_valid, c + r))
+
+        # Require approximately matched width except at unavoidable edges.
+        if (w[1] - w[0] + 1) < max(1, width - 1):
+            continue
+        if any(intervals_overlap(w, a) for a in anchor_windows):
+            continue
+        if any(intervals_overlap(w, q) for q in controls):
+            continue
+
+        controls.append(w)
+        if len(controls) >= n:
+            break
+
+    if len(controls) < n:
+        raise ValueError(
+            f"Could only construct {len(controls)} non-overlapping control intervals; "
+            f"requested {n}. Reduce --control_intervals or --anchor_radius."
+        )
+    return controls
+
+
 # ----------------------------
 # Signatures / Candidates
 # ----------------------------
@@ -592,7 +656,7 @@ def generate_candidates_for_seed(
     times: List[float],
     keep_mass: float,
     iso_eps: float,
-    allowed_pair_intervals: Optional[List[Tuple[int, int]]] = None,
+    target_intervals: Optional[List[IndexInterval]] = None,
 ) -> List[Candidate]:
     """
     Generate candidates for one seed under REAL or NULL_HAAR_BASIS (spectrum-matched).
@@ -611,8 +675,14 @@ def generate_candidates_for_seed(
         raise ValueError(f"Unknown model: {model}")
 
     pairs = find_neighbor_pairs(evals, eps_neighbor)
-    if allowed_pair_intervals:
-        pairs = [(i, j, de) for (i, j, de) in pairs if pair_in_intervals(i, j, allowed_pair_intervals)]
+
+    # Phase 2 v25.2 targeted mode:
+    # restrict analysis to neighboring eigenpairs whose left index i lies
+    # inside one of the requested target intervals.  The eigensystem itself
+    # is deliberately unchanged, preserving the v25.1 REAL/NULL physics.
+    if target_intervals:
+        pairs = [(i, j, de) for (i, j, de) in pairs if left_index_in_intervals(i, target_intervals)]
+
     if not pairs:
         return []
 
@@ -1313,7 +1383,7 @@ def run_paired_batches(
     interference_test: bool,
     if_pairs_per_batch: int,
     if_use_stable_pool: bool,
-    allowed_pair_intervals: Optional[List[Tuple[int, int]]] = None,
+    target_intervals: Optional[List[IndexInterval]],
 ) -> Tuple[List[BatchResult], List[BatchResult], List[Dict[str, float]], List[Dict[float, Dict[str, Dict[str, float]]]], List[Dict[str, Dict[str, object]]], List[Dict[str, Dict[str, object]]]]:
     real_results: List[BatchResult] = []
     null_results: List[BatchResult] = []
@@ -1345,7 +1415,7 @@ def run_paired_batches(
                     times=times,
                     keep_mass=keep_mass,
                     iso_eps=iso_eps,
-                    allowed_pair_intervals=allowed_pair_intervals,
+                    target_intervals=target_intervals,
                 )
             )
             null_cands.extend(
@@ -1360,7 +1430,7 @@ def run_paired_batches(
                     times=times,
                     keep_mass=keep_mass,
                     iso_eps=iso_eps,
-                    allowed_pair_intervals=allowed_pair_intervals,
+                    target_intervals=target_intervals,
                 )
             )
 
@@ -2790,7 +2860,7 @@ def format_top(rows: List[FamRow], label: str, show: int = 10) -> str:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="v25.2 targeted continuation harness (q8 descendant zones for q10/q11/q12 smoke tests).")
+    ap = argparse.ArgumentParser(description="Soft Spaces Phase 2 v25.3 anchor continuation (v25.2 physics + predicted anchor neighbourhoods and matched controls).")
     ap.add_argument("--n_qubits", type=int, default=4)
     ap.add_argument("--n_terms", type=int, default=5)
     ap.add_argument("--seeds_per_batch", type=int, default=5000)
@@ -2798,18 +2868,18 @@ def main() -> None:
     ap.add_argument("--base_seed", type=int, default=0)
     ap.add_argument("--batch_stride", type=int, default=1000000)
     ap.add_argument("--eps_neighbor", type=float, default=0.05)
-
-    # v25.2: targeted continuation controls
-    ap.add_argument("--target_zones", type=str, nargs="+", default=[],
-                    help="Inclusive n-qubit eigenpair-index intervals to search, e.g. 612-679 900-940. If omitted, all pairs are searched.")
-    ap.add_argument("--continuation_q8_intervals", type=str, nargs="+", default=[],
-                    help="Inclusive q8 intervals to tensor-scale to --n_qubits, e.g. 157-158 153-158 160-169.")
+    ap.add_argument("--target_zones", type=str, default=None,
+                    help="Direct inclusive left-eigenpair index intervals. Ignored when --anchor is supplied.")
+    ap.add_argument("--anchor", type=str, default=None,
+                    help="Phase-2 continuation prior as adjacent source anchor, e.g. 157-158.")
+    ap.add_argument("--anchor_from_qubits", type=int, default=None,
+                    help="Qubit count at which --anchor was identified, e.g. 8.")
+    ap.add_argument("--anchor_radius", type=int, default=16,
+                    help="Half-width in left-eigenpair indices around each predicted descendant.")
+    ap.add_argument("--anchor_mode", choices=["anchors", "controls", "combined"], default="anchors",
+                    help="Analyse predicted anchor windows, matched controls, or both. Use separate anchors/controls runs for an unbiased comparison.")
     ap.add_argument("--control_intervals", type=int, default=0,
-                    help="Number of matched random off-target control intervals to add to the search.")
-    ap.add_argument("--control_width", type=int, default=0,
-                    help="Optional fixed width for each off-target control interval. Default: match target interval widths.")
-    ap.add_argument("--control_seed", type=int, default=90210,
-                    help="RNG seed for off-target control interval selection.")
+                    help="Number of deterministic matched control windows generated when --anchor is supplied.")
 
     ap.add_argument("--keep_mass", type=float, default=0.90)
     ap.add_argument("--ent_step", type=float, default=0.1)
@@ -2872,36 +2942,68 @@ def main() -> None:
     ap.add_argument("--p_tail_max", type=float, default=None)
     ap.add_argument("--bootstrap", type=int, default=200)
 
-    ap.add_argument("--output", type=str, default="v25_2_q10_q12_continuation_targeted_output.txt")
+    ap.add_argument("--output", type=str, default="v24_9_2_output.txt")
     args = ap.parse_args()
 
     cache = PauliCache.build(args.n_qubits)
     d = cache.d
 
-    target_intervals_raw: List[Tuple[int, int]] = []
-    if args.continuation_q8_intervals:
-        target_intervals_raw.extend(scale_q8_intervals_to_n(list(args.continuation_q8_intervals), args.n_qubits, d))
-    if args.target_zones:
-        target_intervals_raw.extend(parse_interval_spec(z) for z in list(args.target_zones))
-    target_intervals = merge_intervals(target_intervals_raw, d)
-    control_intervals = sample_control_intervals(
-        d=d,
-        target_intervals=target_intervals,
-        n_controls=int(args.control_intervals),
-        rng_seed=int(args.control_seed),
-        width=(int(args.control_width) if int(args.control_width) > 0 else None),
-    )
-    allowed_pair_intervals = merge_intervals(target_intervals + control_intervals, d)
+    anchor_windows: List[IndexInterval] = []
+    control_windows: List[IndexInterval] = []
+    anchor_centers: List[int] = []
+
+    if args.anchor is not None:
+        if args.anchor_from_qubits is None:
+            raise ValueError("--anchor_from_qubits is required when --anchor is used")
+
+        a0, a1 = parse_anchor_pair(args.anchor)
+        anchor_centers = anchor_descendant_centers(
+            anchor_left=a0,
+            from_qubits=int(args.anchor_from_qubits),
+            to_qubits=int(args.n_qubits),
+        )
+        anchor_windows = windows_around_centers(
+            anchor_centers, int(args.anchor_radius), d
+        )
+        control_windows = matched_control_intervals(
+            anchor_windows=anchor_windows,
+            n_controls=int(args.control_intervals),
+            radius=int(args.anchor_radius),
+            d=d,
+        )
+
+        if args.anchor_mode == "anchors":
+            target_intervals = anchor_windows
+        elif args.anchor_mode == "controls":
+            if not control_windows:
+                raise ValueError("--anchor_mode controls requires --control_intervals > 0")
+            target_intervals = control_windows
+        else:
+            target_intervals = anchor_windows + control_windows
+            target_intervals.sort()
+    else:
+        target_intervals = parse_index_intervals(args.target_zones, d)
+        if int(args.control_intervals) != 0:
+            raise ValueError(
+                "--control_intervals is defined for anchor-continuation mode. "
+                "Supply --anchor and --anchor_from_qubits, or set --control_intervals 0."
+            )
 
     header = []
-    header.append("=== v25.2: Targeted Continuation + Baseline Calibration + Open-system (based on v24.9.2) ===")
+    header.append("=== Soft Spaces Phase 2 v25.3 ANCHOR CONTINUATION ===")
     header.append(f"Qubits: {args.n_qubits} (d={d}) | terms={args.n_terms}")
     header.append(f"Batches: {args.batches} × {args.seeds_per_batch} seeds (base_seed={args.base_seed}, stride={args.batch_stride})")
     header.append(f"Neighbor eps={args.eps_neighbor:.3f}")
-    header.append(f"Targeted continuation: q8_intervals={args.continuation_q8_intervals} | explicit_target_zones={args.target_zones}")
-    header.append(f"Target intervals used: {format_intervals(target_intervals)}")
-    header.append(f"Off-target control intervals used: {format_intervals(control_intervals) if control_intervals else 'NONE'}")
-    header.append(f"Allowed pair intervals searched: {format_intervals(allowed_pair_intervals)}")
+    if args.anchor is not None:
+        header.append(
+            f"Anchor prior: {args.anchor} from {args.anchor_from_qubits}Q -> {args.n_qubits}Q | "
+            f"predicted left-index centers={anchor_centers} | radius={args.anchor_radius}"
+        )
+        header.append(f"Predicted anchor windows: {format_intervals(anchor_windows)}")
+        header.append(f"Matched control windows: {format_intervals(control_windows) if control_windows else 'NONE'}")
+        header.append(f"Active analysis mode: {args.anchor_mode} | active intervals: {format_intervals(target_intervals)}")
+    else:
+        header.append(f"Direct target zones (left pair index i): {format_intervals(target_intervals)}")
     header.append(f"Dominant set: keep_mass={args.keep_mass:.2f} (mass-based; guarantees non-empty mask)")
     header.append(f"Bins (SigAbs): ent_step={args.ent_step:.3f} | leak_step={args.leak_step:.3f}")
     header.append(f"Bins (SigQ_GLOBAL fine): q_bins={args.q_bins} (pooled REAL+NULL per batch)")
@@ -2913,7 +3015,7 @@ def main() -> None:
     header.append(f"Interference test: enabled={bool(args.interference_test)} | pairs_per_cat={args.if_pairs_per_batch} | stable_pool={bool(args.if_use_stable_pool)}")
     header.append(f"TopK={args.topK} | min_overall={args.min_overall} | min_stable={args.min_stable} | alpha={args.alpha}")
     header.append(f"Optional family filter: p_tail_max={args.p_tail_max}")
-    header.append("Pauli ops: lazy on-demand cache (excluding all-I); v25.2 targeted continuation filter over eigenpair-index intervals")
+    header.append("Pauli ops: lazy on-demand cache; v25.3 anchor-prior layer only, baseline REAL/NULL physics preserved")
     header.append("")
     header_text = "\n".join(header)
 
@@ -2982,7 +3084,7 @@ def main() -> None:
             interference_test=bool(args.interference_test),
             if_pairs_per_batch=int(args.if_pairs_per_batch),
             if_use_stable_pool=bool(args.if_use_stable_pool),
-            allowed_pair_intervals=allowed_pair_intervals if allowed_pair_intervals else None,
+            target_intervals=target_intervals,
         )
 
         out("")
@@ -3238,11 +3340,14 @@ def main() -> None:
                         )
             out("")
         out("=== Notes (scientific reading) ===")
+        if args.anchor is not None:
+            out("0) Anchor-continuation protocol: compare a run with --anchor_mode anchors against a separate run")
+            out("   with --anchor_mode controls using identical seeds and all other parameters unchanged.")
         out("1) Compare REAL vs NULL primarily via deltas/effect sizes and batch stability, not raw entropy levels (d differs with n_qubits).")
         out("2) Use fine families for within-model discovery; use coarse families for cross-model interpretability.")
         out("3) If results at n=4 resemble n=3 (stable deltas + stable overlaps), that is strong qualitative evidence the effect is not a 3-qubit artifact.")
         out("")
-        out("=== End of v25.2 targeted continuation ===")
+        out("=== End of v25.3 anchor continuation ===")
 
 
 if __name__ == "__main__":
