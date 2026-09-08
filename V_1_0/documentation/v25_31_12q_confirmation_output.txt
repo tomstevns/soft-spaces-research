@@ -1,0 +1,15 @@
+=== Soft Spaces Phase 2 v25.31 CHUNKED PREDECLARED 12Q CONFIRMATION ===
+Frozen rule: k_next = 2*k + 1
+Frozen 12Q source coordinates: [511, 1535]
+Lifted target pairs: A=(511,512)/(2559,2560); B=(1535,1536)/(3583,3584)
+Independent batches: 8 x 5 seeds = 40
+Reps=3 | families=['dephasing', 'transverse'] | local radius=+/-10 | step=2
+Gate: prominence positive-rate >= 0.75
+Checkpoint records: 240/240
+Elapsed seconds (current invocation): 0.0
+
+source k | status | batches | prom pos | prom+ | med robust | med bg | med prom | min | max | dephase+ | transverse+
+     511 | DIMENSIONAL_RULE_CONFIRMED     |       8 |        6 | 0.750 |  +0.073706 | +0.021030 | +0.038702 | -0.103683 | +0.241859 |    1.000 |       0.875
+    1535 | DIMENSIONAL_RULE_CONFIRMED     |       8 |        6 | 0.750 |  +0.075264 | +0.029998 | +0.043595 | -0.097423 | +0.291344 |    1.000 |       0.750
+
+Decision summary: 2/2 frozen 12Q predictions confirmed.
