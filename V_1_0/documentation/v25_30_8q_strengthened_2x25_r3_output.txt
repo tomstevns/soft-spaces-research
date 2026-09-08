@@ -1,0 +1,23 @@
+=== Soft Spaces Phase 2 v25.30 HARMONIZED HIGH-Q DIMENSIONAL VALIDATION 7Q -> 9Q ===
+Frozen rule: k_next = 2*k + 1
+Geometry: (n-1)Q source -> nQ target, two lifted branches
+Purpose: harmonize the stable high-Q chain to the +/-10 local-control window used by later hotspot confirmations.
+Branch A: [31]
+Branch B: [95]
+Per target Q: 2 x 25 seeds | reps=3 | local radius=+/-10 | step=2
+
+Frozen physics:
+  DeltaC_f(k)=C_matrix_REAL,f(k)-C_matrix_NULL,f(k).
+  S(k)=min(DeltaC_dephasing, DeltaC_transverse).
+  prominence(k)=S(k)-median nearby S.
+Each source-space coordinate and each local control is lifted to two target-space branches.
+No landscape search, no coordinate relocation, no post-hoc rescue.
+Gate per target-Q x branch: prominence positive-rate >= 0.75.
+
+sourceQ->targetQ | branch | source k | status | units | prom pos | prom+ | med robust | med bg | med prom | min | max | dephase+ | transverse+
+7Q->8Q         |   A    |       31 | UPWARD_VALIDATED     |     2 |        2 |  1.000 |  +0.112808 | +0.038674 | +0.074134 | +0.071006 | +0.077262 |    1.000 |       1.000
+7Q->8Q         |   B    |       95 | UPWARD_VALIDATED     |     2 |        2 |  1.000 |  +0.107218 | +0.039763 | +0.067455 | +0.061989 | +0.072921 |    1.000 |       1.000
+
+Decision summary: 2/2 predeclared branch-points validated with corrected source->target branch lifting.
+
+=== End of v25.30 harmonized high-Q dimensional validation ===
