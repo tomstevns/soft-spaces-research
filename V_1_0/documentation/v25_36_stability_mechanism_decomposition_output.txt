@@ -1,0 +1,69 @@
+=== Soft Spaces Phase 2 v25.36 STABILITY-MECHANISM DECOMPOSITION ===
+Frozen target: 7; controls: [1, 3, 5, 9, 11, 13]
+Seeds: [2533001, 2533002, 2533003, 2533004, 2533005]; families: ['dephasing_like', 'transverse_like']
+rho grid: [0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0]; eta: 1.000e-03
+Same deterministic X_a tensor G_s direction as v25.34.
+No fitting, relocation, re-ranking, seed removal, or post-run grid change.
+Cancellation diagnostics overlap and must not be added as causal percentages.
+
+AGGREGATE BY RHO (all five seeds and both branches retained)
+rho | branch symmetry | REAL-NULL cancel | N/D normalize | target-control cancel | max branch split | min track fidelity | max sorted-track gap | sign disagreements
+0.0e+00 |            n/a  |             n/a  |          n/a  |                  n/a  |        2.037e-14 |           1.000000 |            0.000e+00 |                  0
+1.0e-04 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.853e-11 |           1.000000 |            0.000e+00 |                  0
+3.0e-04 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.668e-10 |           1.000000 |            0.000e+00 |                  0
+1.0e-03 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.853e-09 |           1.000000 |            0.000e+00 |                  0
+3.0e-03 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.668e-08 |           1.000000 |            0.000e+00 |                  0
+1.0e-02 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.853e-07 |           1.000000 |            0.000e+00 |                  0
+3.0e-02 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.668e-06 |           1.000000 |            0.000e+00 |                  0
+1.0e-01 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.853e-05 |           0.999999 |            0.000e+00 |                  0
+3.0e-01 |            0.0% |             0.0% |         40.8% |                  0.0% |        1.668e-04 |           0.999989 |            0.000e+00 |                  0
+1.0e+00 |            0.0% |             0.0% |         40.7% |                  0.0% |        1.853e-03 |           0.999875 |            0.000e+00 |                  0
+3.0e+00 |            0.0% |             0.0% |         40.5% |                  0.0% |        1.669e-02 |           0.998512 |            0.000e+00 |                  0
+1.0e+01 |            0.0% |             0.1% |         46.5% |                  0.0% |        1.856e-01 |           0.944400 |            0.000e+00 |                  0
+
+KEY-RHO DETAIL (negative source seeds included)
+seed | rho | base prom | prom b0/b1 | branch symmetry | RN cancel b0/b1 | N/D cancel b0/b1 | TC cancel b0/b1 | min fidelity | max track gap | track sign diff
+2533001 |  0.3 | +1.410e-01 | +1.410e-01/+1.410e-01 |            0.0% |   0.0%/  0.0% |  40.9%/ 40.6% |   0.0%/  0.0% |     0.999995 |     0.000e+00 | NO
+2533001 |  1.0 | +1.410e-01 | +1.408e-01/+1.411e-01 |            0.0% |   0.0%/  0.0% |  40.8%/ 40.7% |   0.0%/  0.0% |     0.999944 |     0.000e+00 | NO
+2533001 |  3.0 | +1.410e-01 | +1.393e-01/+1.422e-01 |            0.0% |   0.0%/  0.0% |  39.4%/ 41.5% |   0.0%/  0.0% |     0.999446 |     0.000e+00 | NO
+2533001 | 10.0 | +1.410e-01 | +1.279e-01/+1.597e-01 |            0.0% |   0.0%/  1.4% |  46.7%/ 59.0% |   0.0%/  0.0% |     0.988190 |     0.000e+00 | NO
+2533002 |  0.3 | -1.563e-01 | -1.562e-01/-1.564e-01 |            0.0% |   0.0%/  0.0% |  41.6%/ 55.4% |   0.0%/  0.0% |     0.999990 |     0.000e+00 | NO
+2533002 |  1.0 | -1.563e-01 | -1.553e-01/-1.572e-01 |            0.0% |   0.0%/  0.0% |  41.6%/ 55.1% |   0.0%/  0.0% |     0.999884 |     0.000e+00 | NO
+2533002 |  3.0 | -1.563e-01 | -1.474e-01/-1.641e-01 |            0.0% |   0.0%/  0.0% |  41.5%/ 53.7% |   0.0%/  0.0% |     0.998512 |     0.000e+00 | NO
+2533002 | 10.0 | -1.563e-01 | -5.271e-02/-2.383e-01 |            0.0% |   0.0%/  0.0% |  38.6%/ 51.7% |   1.6%/  0.0% |     0.944400 |     0.000e+00 | NO
+2533003 |  0.3 | +7.364e-02 | +7.364e-02/+7.364e-02 |           88.8% |   5.6%/  0.0% |  37.0%/ 37.5% |  96.5%/ 97.7% |     0.999989 |     0.000e+00 | NO
+2533003 |  1.0 | +7.364e-02 | +7.366e-02/+7.366e-02 |           89.0% |   5.6%/  0.0% |  37.2%/ 37.6% |  96.5%/ 97.6% |     0.999875 |     0.000e+00 | NO
+2533003 |  3.0 | +7.364e-02 | +7.387e-02/+7.382e-02 |           89.8% |   6.0%/  0.0% |  39.1%/ 38.8% |  95.9%/ 97.2% |     0.998653 |     0.000e+00 | NO
+2533003 | 10.0 | +7.364e-02 | +8.118e-02/+3.802e-02 |            0.0% |   7.3%/  0.2% |  46.4%/ 32.5% |  85.6%/  0.0% |     0.953059 |     0.000e+00 | NO
+2533004 |  0.3 | +2.353e-01 | +2.352e-01/+2.353e-01 |            0.0% |   2.9%/  0.0% |  49.6%/ 54.0% |   0.0%/  0.0% |     0.999998 |     0.000e+00 | NO
+2533004 |  1.0 | +2.353e-01 | +2.348e-01/+2.357e-01 |            0.0% |   2.8%/  0.0% |  49.6%/ 54.0% |   0.0%/  0.0% |     0.999980 |     0.000e+00 | NO
+2533004 |  3.0 | +2.353e-01 | +2.311e-01/+2.386e-01 |            0.0% |   2.6%/  0.0% |  49.2%/ 53.6% |   0.0%/  0.0% |     0.999814 |     0.000e+00 | NO
+2533004 | 10.0 | +2.353e-01 | +1.881e-01/+2.593e-01 |            0.0% |   0.0%/  0.0% |  49.4%/ 63.2% |   0.0%/  0.0% |     0.992652 |     0.000e+00 | NO
+2533005 |  0.3 | -1.537e-01 | -1.537e-01/-1.537e-01 |            0.0% |  21.0%/ 36.8% |  30.4%/ 13.2% |  24.1%/ 15.9% |     0.999998 |     0.000e+00 | NO
+2533005 |  1.0 | -1.537e-01 | -1.535e-01/-1.538e-01 |            0.0% |  21.0%/ 36.7% |  30.4%/ 13.3% |  24.1%/ 15.8% |     0.999978 |     0.000e+00 | NO
+2533005 |  3.0 | -1.537e-01 | -1.521e-01/-1.552e-01 |            0.0% |  20.9%/ 35.7% |  30.5%/ 13.5% |  24.5%/ 15.5% |     0.999791 |     0.000e+00 | NO
+2533005 | 10.0 | -1.537e-01 | -1.355e-01/-1.656e-01 |            0.0% |  34.0%/ 24.9% |  14.8%/ 23.4% |  28.3%/ 13.2% |     0.996194 |     0.000e+00 | NO
+
+LOW-COUPLING RESPONSE EXPONENT
+seed | exponent branch 0 | exponent branch 1
+2533001 |          1.999925 |          1.999691
+2533002 |          2.000018 |          1.999982
+2533003 |          2.001324 |          2.002899
+2533004 |          2.000111 |          2.000291
+2533005 |          2.000088 |          2.000218
+
+GLOBAL DIAGNOSTIC SUMMARY (all nonzero rho points)
+  Median low-coupling response exponent: 2.000099 (quadratic response predicts 2).
+  Maximum +rho versus -rho prominence residual: 0.000000e+00.
+  Median branch-symmetry cancellation:   0.0%.
+  Median REAL-NULL common-motion cancellation:   0.0%.
+  Median numerator/denominator log-cancellation:  40.8%.
+  Median target-control common-mode cancellation:   0.0%.
+  Minimum overlap-tracking fidelity: 0.944400.
+  Maximum sorted-versus-tracked prominence gap: 0.000000e+00.
+  Sorted/tracked sign disagreements: 0/110 branch-points.
+
+Interpretation rules:
+  100% cancellation means the two compared motions are equal and disappear in their difference; 0% means no common-mode cancellation.
+  Tracking fidelity is Tr(P_initial P_tracked)/2; values near 1 indicate the same two-dimensional subspace.
+  These diagnostics describe the frozen coupling path only. They are not an ensemble-wide proof and do not sum to 100%.
