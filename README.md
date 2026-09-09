@@ -4,126 +4,73 @@
 
 This repository contains the research material for the **Soft Spaces** project.
 
-The project investigates whether finite-dimensional Hilbert spaces contain reproducible structural regions that emerge during the evolution of **open quantum systems**.
+The project investigates whether finite-dimensional Hilbert spaces contain
+reproducible structural regions that emerge under perturbations and open-system
+quantum dynamics.
 
-The work combines numerical simulations based on the **Lindblad master equation** with statistical analysis to investigate whether stable geometric structures can be distinguished from suitable null models.
-
-Unlike conventional studies that focus on individual quantum states, this project investigates whether reproducible structures emerge within Hilbert space itself.
-
----
-
-# Scientific scope
-
-The project investigates
-
-- Open quantum systems
-- Lindblad dynamics
-- Hilbert-space geometry
-- REAL–NULL subspace separation
-- Statistical reproducibility
-- Dynamical stability of Soft Spaces
+The repository is organized by research phase.
 
 ---
 
-# Phase 1 (Completed)
+## Phase 1 — Discovery and Structural Exploration
 
-The completed Phase 1 study investigates systems from
+**Location:** [`Phase1/V_1_0`](Phase1/V_1_0)
 
-- 4 qubits
-- 5 qubits
-- 6 qubits
-- 7 qubits
-- 8 qubits
+Phase 1 contains the original exploratory work on low-qubit systems, primarily
+covering **4–8 qubits**.
 
-The study includes
+The work includes:
 
-- repeated independent simulations
-- entropy analysis
-- Cohen's d
-- Jaccard similarity
-- dominant-state statistics
-- stability analysis
+- numerical exploration of candidate soft regions
+- REAL versus NULL controls
+- hotspot recurrence and stability tests
+- local kernel and ridge analysis
+- open-system and Lindblad perturbations
+- repeated-seed validation
+- development of the original Soft Spaces methodology
 
-The corresponding publication is available on Zenodo.
-
-**DOI**
-
-https://doi.org/10.5281/zenodo.21819815
+Phase 1 established the empirical basis for the Soft Spaces hypothesis and
+identified reproducible candidate structures in low-dimensional Hilbert spaces.
 
 ---
 
-# Repository structure
+## Phase 2 — Dimensional Transfer and Physics Validation
 
-```
-README.md
-LICENSE
+**Location:** [`Phase2/V_1_0`](Phase2/V_1_0)
 
-paper/
-    Published paper (PDF)
+Phase 2 extends the investigation beyond the original 4–8 qubit regime and
+focuses on whether the structures discovered in Phase 1 survive increasingly
+strict physical and mathematical tests.
 
-documentation/
-    Supporting documentation
+The work includes:
 
-code/
-    Python source code
+- extension to 9, 10, 11 and 12 qubits
+- dimensional hotspot transfer
+- perturbative confirmation
+- REAL/NULL cancellation tests
+- anisotropy analysis
+- effective-subspace geometry
+- dimensional prediction rules
+- 12-qubit confirmation
+- Qiskit circuit design and hardware-oriented tests
+- analytic and numerical robustness audits
+- independent coupling and basis-invariance tests
 
-results/
-    Experimental output files
-```
-
----
-
-# Phase 2 (Ongoing)
-
-Current research focuses on extending the framework beyond the original publication.
-
-Topics include
-
-- 9–12 qubit systems
-- scaling behaviour
-- evolution of Soft Spaces with increasing Hilbert-space dimension
-- continuation of REAL–NULL analysis
-- open-system dynamics
-- Lindblad evolution
-- comparison with quantum-computing implementations (Qiskit)
-
-Phase 2 is experimental and is **not part of the published Phase 1 paper**.
+Phase 2 is intended to distinguish genuine structural effects from numerical,
+spectral, basis-dependent or implementation artifacts.
 
 ---
 
-# Reproducibility
+## Repository Structure
 
-The repository contains the material required to reproduce the published experiments, including
-
-- Python source code
-- parameter settings
-- selected output files
-- supporting documentation
-
----
-
-# Related resources
-
-## Zenodo
-
-https://doi.org/10.5281/zenodo.21819815
-
-## ORCID
-
-https://orcid.org/0009-0000-5306-7776
-
----
-
-# Author
-
-Tom Stevns
-
-Independent Researcher
-
-Denmark
-
----
-
-# License
-
-Creative Commons Attribution 4.0 International (CC BY 4.0)
+```text
+soft-spaces-research/
+│
+├── Phase1/
+│   └── V_1_0/
+│
+├── Phase2/
+│   └── V_1_0/
+│
+├── .gitignore
+└── README.md
