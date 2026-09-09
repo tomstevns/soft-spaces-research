@@ -1,0 +1,79 @@
+=== Soft Spaces Phase 2 v25.7 PREDECLARED PHYSICS FALSIFICATION + PAIRED CONTROLS ===
+Targets: [175, 183] | paired controls: [111, 119] | source-space offset=-64
+Geometry: 8Q source -> 9Q target | etas=[0.003, 0.005, 0.01, 0.02, 0.03]
+Unseen seed blocks: 2 x 25 = 50 seeds | base_seed=6301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | chi_regularizer=0.001
+
+Frozen hypothesis: target Soft-Space coordinates should show stronger REAL-specific physical protection than matched controls.
+No continuation score C is fitted and no weights are tuned in v25.7.
+Primary physical signal: Delta-chi = chi_NULL - chi_REAL > 0 (lower spectral susceptibility in REAL).
+Independent corroboration: Delta-Ov = Ov_REAL - Ov_NULL > 0 (better 2D projector retention in REAL).
+K_delta remains a diagnostic control only.
+
+Anti-pseudoreplication rule: candidate x batch is the recurrence unit. Eta values are collapsed by median before chi/K sign counting; overlap uses the same collapse for the paired primary comparison.
+
+Predeclared descriptive gates (not significance tests):
+  Primary CHI_SPECIFIC requires target Delta-chi positive-rate >= 0.80 and paired target-control chi-advantage positive-rate >= 0.75.
+  Secondary OV_SUPPORTS requires paired target-control overlap-advantage positive-rate >= 0.60.
+
+Overall falsification summary (candidate x batch collapsed units):
+  PRIMARY: NOT_SPECIFIC | target chi+=1.000 | control chi+=1.000 | chi specificity=0.500 | median target Delta-chi=+0.3479 | control=+0.3448 | target-control advantage=+0.0028
+  SECONDARY: OV_NOT_CONFIRMED | target Ov+=1.000 | control Ov+=1.000 | Ov specificity=0.500 | median target Delta-Ov=+0.0052 | control=+0.0042 | target-control advantage=+0.0010
+  CONTROL K_delta: specificity-rate=0.250 | median target-control advantage=-0.0000
+
+Paired coordinate summary:
+target | control | units | target chi+ | control chi+ | chi adv+ | med T dchi | med C dchi | med chi adv | target Ov+ | control Ov+ | Ov adv+ | med T dOv | med C dOv | med Ov adv | K adv+
+   175 |     111 |     2 |      1.000 |       1.000 |    0.500 |    +0.3498 |    +0.3433 |     +0.0065 |     1.000 |      1.000 |   0.500 |   +0.0052 |   +0.0042 |    +0.0010 |  0.000
+   183 |     119 |     2 |      1.000 |       1.000 |    0.500 |    +0.3459 |    +0.3466 |     -0.0007 |     1.000 |      1.000 |   0.500 |   +0.0044 |   +0.0027 |    +0.0017 |  0.500
+
+Detailed eta cells (for transparency; do not count repeated chi values as independent evidence):
+group | source_k | batch | eta | DeltaOv(R-N) | DeltaChi(N-R) | DeltaK(N-R)
+TARGET  |      175 |     1 |  3.0e-03 |       +0.0069 |        +0.2354 |      -0.0000
+TARGET  |      175 |     1 |  5.0e-03 |       +0.0062 |        +0.2354 |      -0.0000
+TARGET  |      175 |     1 |  1.0e-02 |       +0.0035 |        +0.2354 |      -0.0000
+TARGET  |      175 |     1 |  2.0e-02 |       +0.0073 |        +0.2354 |      -0.0000
+TARGET  |      175 |     1 |  3.0e-02 |       +0.0071 |        +0.2354 |      -0.0000
+TARGET  |      183 |     1 |  3.0e-03 |       +0.0038 |        +0.2314 |      -0.0002
+TARGET  |      183 |     1 |  5.0e-03 |       +0.0053 |        +0.2314 |      -0.0002
+TARGET  |      183 |     1 |  1.0e-02 |       +0.0074 |        +0.2314 |      -0.0002
+TARGET  |      183 |     1 |  2.0e-02 |       +0.0076 |        +0.2314 |      -0.0002
+TARGET  |      183 |     1 |  3.0e-02 |       +0.0094 |        +0.2314 |      -0.0002
+CONTROL |      111 |     1 |  3.0e-03 |       +0.0063 |        +0.2444 |      -0.0000
+CONTROL |      111 |     1 |  5.0e-03 |       +0.0013 |        +0.2444 |      -0.0000
+CONTROL |      111 |     1 |  1.0e-02 |       +0.0041 |        +0.2444 |      -0.0000
+CONTROL |      111 |     1 |  2.0e-02 |       +0.0016 |        +0.2444 |      -0.0000
+CONTROL |      111 |     1 |  3.0e-02 |       +0.0043 |        +0.2444 |      -0.0000
+CONTROL |      119 |     1 |  3.0e-03 |       +0.0004 |        +0.2474 |      -0.0001
+CONTROL |      119 |     1 |  5.0e-03 |       +0.0012 |        +0.2474 |      -0.0001
+CONTROL |      119 |     1 |  1.0e-02 |       +0.0011 |        +0.2474 |      -0.0001
+CONTROL |      119 |     1 |  2.0e-02 |       +0.0045 |        +0.2474 |      -0.0001
+CONTROL |      119 |     1 |  3.0e-02 |       +0.0051 |        +0.2474 |      -0.0001
+TARGET  |      175 |     2 |  3.0e-03 |       +0.0049 |        +0.4643 |      -0.0002
+TARGET  |      175 |     2 |  5.0e-03 |       +0.0035 |        +0.4643 |      -0.0002
+TARGET  |      175 |     2 |  1.0e-02 |       +0.0033 |        +0.4643 |      -0.0002
+TARGET  |      175 |     2 |  2.0e-02 |       +0.0033 |        +0.4643 |      -0.0002
+TARGET  |      175 |     2 |  3.0e-02 |       +0.0053 |        +0.4643 |      -0.0002
+TARGET  |      183 |     2 |  3.0e-03 |       +0.0012 |        +0.4604 |      -0.0000
+TARGET  |      183 |     2 |  5.0e-03 |       +0.0023 |        +0.4604 |      -0.0000
+TARGET  |      183 |     2 |  1.0e-02 |       +0.0006 |        +0.4604 |      -0.0000
+TARGET  |      183 |     2 |  2.0e-02 |       +0.0034 |        +0.4604 |      -0.0000
+TARGET  |      183 |     2 |  3.0e-02 |       +0.0014 |        +0.4604 |      -0.0000
+CONTROL |      111 |     2 |  3.0e-03 |       +0.0059 |        +0.4423 |      -0.0001
+CONTROL |      111 |     2 |  5.0e-03 |       +0.0014 |        +0.4423 |      -0.0001
+CONTROL |      111 |     2 |  1.0e-02 |       +0.0043 |        +0.4423 |      -0.0001
+CONTROL |      111 |     2 |  2.0e-02 |       +0.0016 |        +0.4423 |      -0.0001
+CONTROL |      111 |     2 |  3.0e-02 |       +0.0058 |        +0.4423 |      -0.0001
+CONTROL |      119 |     2 |  3.0e-03 |       +0.0043 |        +0.4458 |      -0.0001
+CONTROL |      119 |     2 |  5.0e-03 |       +0.0034 |        +0.4458 |      -0.0001
+CONTROL |      119 |     2 |  1.0e-02 |       +0.0018 |        +0.4458 |      -0.0001
+CONTROL |      119 |     2 |  2.0e-02 |       +0.0060 |        +0.4458 |      -0.0001
+CONTROL |      119 |     2 |  3.0e-02 |       +0.0061 |        +0.4458 |      -0.0001
+
+Scientific reading:
+  1) If PRIMARY=CHI_SPECIFIC, the v25.6 chi signal is not merely positive; it is stronger at the predeclared Soft-Space targets than at paired controls on unseen seeds.
+  2) OV_SUPPORTS is stronger evidence because an independent geometric quantity points in the same target-specific direction.
+  3) If controls perform equally well, the Soft-Space interpretation must be weakened or revised; that is an intended falsification outcome, not a software failure.
+  4) K_delta is still not promoted into the Soft-Space formula unless it independently becomes recurrent and target-specific.
+  5) Only after target specificity survives should chi/overlap be considered for a physically extended continuation expression.
+
+=== End of v25.7 physics falsification ===

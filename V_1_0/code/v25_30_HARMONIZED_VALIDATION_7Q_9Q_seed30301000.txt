@@ -1,0 +1,27 @@
+=== Soft Spaces Phase 2 v25.30 HARMONIZED HIGH-Q DIMENSIONAL VALIDATION 7Q -> 9Q ===
+Frozen rule: k_next = 2*k + 1
+Geometry: (n-1)Q source -> nQ target, two lifted branches
+Purpose: harmonize the stable high-Q chain to the +/-10 local-control window used by later hotspot confirmations.
+Branch A: [15, 31, 63]
+Branch B: [47, 95, 191]
+Per target Q: 8 x 25 seeds | reps=3 | local radius=+/-10 | step=2
+
+Frozen physics:
+  DeltaC_f(k)=C_matrix_REAL,f(k)-C_matrix_NULL,f(k).
+  S(k)=min(DeltaC_dephasing, DeltaC_transverse).
+  prominence(k)=S(k)-median nearby S.
+Each source-space coordinate and each local control is lifted to two target-space branches.
+No landscape search, no coordinate relocation, no post-hoc rescue.
+Gate per target-Q x branch: prominence positive-rate >= 0.75.
+
+sourceQ->targetQ | branch | source k | status | units | prom pos | prom+ | med robust | med bg | med prom | min | max | dephase+ | transverse+
+6Q->7Q         |   A    |       15 | UPWARD_NOT_VALIDATED |     8 |        4 |  0.500 |  +0.048067 | +0.042067 | +0.003156 | -0.052287 | +0.125325 |    1.000 |       1.000
+6Q->7Q         |   B    |       47 | UPWARD_NOT_VALIDATED |     8 |        5 |  0.625 |  +0.041755 | +0.043392 | +0.013175 | -0.047300 | +0.078986 |    1.000 |       1.000
+7Q->8Q         |   A    |       31 | UPWARD_NOT_VALIDATED |     8 |        5 |  0.625 |  +0.077713 | +0.039817 | +0.040467 | -0.022098 | +0.129490 |    1.000 |       1.000
+7Q->8Q         |   B    |       95 | UPWARD_NOT_VALIDATED |     8 |        5 |  0.625 |  +0.075018 | +0.038942 | +0.041364 | -0.013523 | +0.174367 |    1.000 |       1.000
+8Q->9Q         |   A    |       63 | UPWARD_VALIDATED     |     8 |        8 |  1.000 |  +0.083485 | +0.035906 | +0.037419 | +0.002629 | +0.125021 |    1.000 |       1.000
+8Q->9Q         |   B    |      191 | UPWARD_VALIDATED     |     8 |        8 |  1.000 |  +0.097074 | +0.035620 | +0.042721 | +0.003144 | +0.089457 |    1.000 |       1.000
+
+Decision summary: 2/6 predeclared branch-points validated with corrected source->target branch lifting.
+
+=== End of v25.30 harmonized high-Q dimensional validation ===

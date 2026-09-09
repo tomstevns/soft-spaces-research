@@ -1,0 +1,33 @@
+=== Soft Spaces Phase 2 v25.15 HIGH-CONFIDENCE TARGET-183 ANISOTROPY REPLICATION ===
+Frozen target: 183 | local controls=[175, 177, 179, 181, 185, 187, 189, 191] | radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Independent seed blocks: 8 x 25 = 200 | base_seed=15301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen primary hypothesis from v25.13/v25.14:
+  target X_P anisotropy > immediate local REAL-background anisotropy.
+Purpose: recurrence depth only. No new descriptor, score, weight, or post-hoc rescue.
+Predeclared gate: anisotropy positive-rate >= 0.80.
+
+High-confidence summary:
+target | units | positive | status | anis+ | med target anis | med bg anis | med anis advantage | min anis advantage | max anis advantage | med NULL-REAL anis
+   183 |     8 |        4 | HIGH_CONFIDENCE_NOT_REPLICATED |  0.500 |     +0.02817448 |  +0.02726461 |        +0.00028391 |        -0.00365039 |        +0.00273487 |        +0.09582770
+
+Batch-by-batch anisotropy recurrence:
+batch | target anis | bg anis | target-bg anis | sign | NULL-REAL anis
+    1 | +0.03058470 | +0.02977839 |    +0.00080631 | POS  |    +0.09420993
+    2 | +0.02909654 | +0.02844463 |    +0.00065191 | POS  |    +0.09744547
+    3 | +0.02881947 | +0.02608460 |    +0.00273487 | POS  |    +0.09359020
+    4 | +0.01746329 | +0.02111368 |    -0.00365039 | NEG  |    +0.10496599
+    5 | +0.03199490 | +0.03207899 |    -0.00008409 | NEG  |    +0.08791082
+    6 | +0.02069262 | +0.02264433 |    -0.00195171 | NEG  |    +0.10098163
+    7 | +0.02752949 | +0.02498899 |    +0.00254050 | POS  |    +0.11041151
+    8 | +0.02737401 | +0.03055351 |    -0.00317950 | NEG  |    +0.09136010
+
+Scientific decision rule:
+  1) HIGH_CONFIDENCE_REPLICATED means the frozen anisotropy sign recurs at or above the predeclared batch fraction.
+  2) HIGH_CONFIDENCE_NOT_REPLICATED weakens the target-183 anisotropy claim; do not rescue it with another metric.
+  3) A successful v25.15 supports 183 as a reproducible anisotropic Soft-Space subtype, not yet a universal Soft-Space law.
+  4) Only after successful deep replication should the same frozen descriptor be transferred to another qubit dimension.
+
+=== End of v25.15 high-confidence anisotropy replication ===

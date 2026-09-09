@@ -1,0 +1,34 @@
+=== Soft Spaces Phase 2 v25.24 UNSEEN-SEED HOTSPOT CONFIRMATION ===
+Frozen candidates from v25.23: [63, 191, 99, 161, 179, 133]
+Geometry: 8Q source -> 9Q target | branches=2
+Independent seed blocks: 8 x 50 = 400 | base_seed=24301000 | stride=1000000
+Perturb reps/seed=3 | families=['dephasing', 'transverse'] | local radius=+/-10 | step=2 | regularizer=0.001
+
+Frozen prediction rule:
+  DeltaC_f(k)=C_matrix_REAL,f(k)-C_matrix_NULL,f(k).
+  S(k)=min(DeltaC_dephasing, DeltaC_transverse).
+  prominence(k)=S(k)-median nearby S.
+A hotspot is confirmed only by recurrent POSITIVE prominence on unseen batches.
+No candidate substitution, score changes, new descriptors, or post-hoc rescue.
+Predeclared gate: prominence positive-rate >= 0.75.
+
+Candidate confirmation summary:
+rank | k | status | units | prom pos | prom+ | med robust dC | med local bg | med prominence | min prominence | max prominence | dephase+ | transverse+
+   1 |  191 | HOTSPOT_CONFIRMED      |     8 |        7 |  0.875 |     +0.080575 |    +0.043422 |      +0.039613 |      -0.037652 |      +0.132919 |    1.000 |       1.000
+   2 |   63 | HOTSPOT_CONFIRMED      |     8 |        7 |  0.875 |     +0.072511 |    +0.044899 |      +0.029992 |      -0.039498 |      +0.153697 |    1.000 |       1.000
+   3 |  161 | HOTSPOT_NOT_CONFIRMED  |     8 |        4 |  0.500 |     +0.065223 |    +0.063027 |      +0.001888 |      -0.003486 |      +0.011044 |    1.000 |       1.000
+   4 |  179 | HOTSPOT_NOT_CONFIRMED  |     8 |        4 |  0.500 |     +0.063227 |    +0.061760 |      +0.000502 |      -0.006958 |      +0.007169 |    1.000 |       1.000
+   5 |   99 | HOTSPOT_NOT_CONFIRMED  |     8 |        3 |  0.375 |     +0.062503 |    +0.061696 |      -0.001165 |      -0.009203 |      +0.008613 |    1.000 |       1.000
+   6 |  133 | HOTSPOT_NOT_CONFIRMED  |     8 |        2 |  0.250 |     +0.061285 |    +0.061693 |      -0.002211 |      -0.005902 |      +0.006927 |    1.000 |       1.000
+
+Decision summary:
+  Physics-predicted hotspots confirmed on unseen seeds: 2/6.
+
+Scientific reading:
+  1) HOTSPOT_CONFIRMED means the precomputed coordinate remains locally elevated under the SAME frozen cross-family pathway score.
+  2) This is stronger than merely showing REAL>NULL globally, because confirmation requires local prominence over neighbouring coordinates.
+  3) HOTSPOT_NOT_CONFIRMED is an intended falsification result and the coordinate must not be replaced post-hoc.
+  4) Multiple confirmations support physics-first hotspot prediction: mechanism -> prediction -> unseen-seed validation.
+  5) If confirmed, the next step is cross-dimensional prediction/transfer using the same frozen hotspot construction.
+
+=== End of v25.24 hotspot confirmation ===

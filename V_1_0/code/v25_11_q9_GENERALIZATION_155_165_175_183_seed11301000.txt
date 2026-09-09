@@ -1,0 +1,40 @@
+=== Soft Spaces Phase 2 v25.11 MULTI-TARGET PERTURBATIVE GENERALIZATION ===
+Predeclared targets: [155, 165, 175, 183] | local radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Unseen seed blocks: 2 x 25 = 50 | base_seed=11301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen from v25.10: Xtrace is PRIMARY; X-lambda_max and Sigma Frobenius are corroborations.
+All listed targets are excluded from each other's local REAL control sets.
+No new score, fitted weights, or descriptor search.
+Recurrence gates: Xtrace>=0.80, X-lmax>=0.80, SigmaF>=0.80.
+
+Target generalization summary:
+rank | target | label | units | Xtrace+ | med Xtrace protect | min Xtrace protect | X-lmax+ | med X-lmax protect | SigmaF+ | med SigmaF protect | med NULL-REAL Xtrace | controls
+   1 |    175 | NOT_GENERALIZED |     2 |   0.500 |          +3.033742 |          -8.741288 |    0.500 |          +4.137438 |   0.500 |     -4.807941e-06 |           +73.244535 | [167, 169, 171, 173, 177, 179, 181]
+   2 |    165 | NOT_GENERALIZED |     2 |   0.500 |          -1.589881 |         -11.688299 |    0.500 |          +0.561780 |   0.500 |     -7.666119e-07 |           +74.795377 | [157, 159, 161, 163, 167, 169, 171, 173]
+   3 |    155 | NOT_GENERALIZED |     2 |   0.500 |          -4.448243 |          -9.758680 |    0.500 |          +0.084859 |   1.000 |     +1.730437e-05 |           +75.489918 | [147, 149, 151, 153, 157, 159, 161, 163]
+   4 |    183 | NOT_GENERALIZED |     2 |   0.000 |          -0.385479 |          -0.621357 |    1.000 |          +2.318902 |   0.500 |     -1.113614e-06 |           +65.751729 | [177, 179, 181, 185, 187, 189, 191]
+
+Batch-by-batch predeclared advantages:
+target | batch | Xtrace protect | X-lmax protect | SigmaF protect | NULL-REAL Xtrace
+   155 |     1 |      +0.862193 |       +1.949320 |  +2.181936e-05 |       +55.980588
+   155 |     2 |      -9.758680 |       -1.779601 |  +1.278938e-05 |       +94.999248
+   165 |     1 |     -11.688299 |       -3.583792 |  -2.408281e-05 |       +31.945628
+   165 |     2 |      +8.508538 |       +4.707353 |  +2.254959e-05 |      +117.645125
+   175 |     1 |      -8.741288 |       -0.973517 |  -2.356825e-05 |       +29.688582
+   175 |     2 |     +14.808771 |       +9.248393 |  +1.395237e-05 |      +116.800489
+   183 |     1 |      -0.621357 |       +3.723626 |  -3.344132e-06 |       +27.962530
+   183 |     2 |      -0.149600 |       +0.914178 |  +1.116905e-06 |      +103.540929
+
+Cross-target decision summary:
+  Primary Xtrace generalized at 0/4 targets; primary + >=1 corroboration at 0/4; FULL at 0/4.
+
+Scientific reading:
+  1) FULL means the v25.10 mechanism reproduces at that target in Xtrace, X-lmax and SigmaF.
+  2) SUPPORTED means primary Xtrace reproduces plus at least one frozen corroboration.
+  3) PRIMARY_ONLY means Xtrace generalizes but the richer matrix signature is target-dependent.
+  4) NOT_GENERALIZED is an intended falsification result and must not be rescued by post-hoc descriptors.
+  5) If multiple predeclared targets generalize on unseen seeds, the next defensible step is dimensional transfer (e.g. 9Q -> 10Q) with the same frozen descriptors.
+
+=== End of v25.11 multi-target perturbative generalization ===

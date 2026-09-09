@@ -1,0 +1,30 @@
+=== Soft Spaces Phase 2 v25.12 ANISOTROPIC PROTECTED-DIRECTION ANALYSIS ===
+Predeclared targets: [183] | local radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Unseen seed blocks: 2 x 25 = 50 | base_seed=12301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen hypothesis: Soft-Space protection may reside in ONE perturbative principal direction of X_P.
+PRIMARY: local lambda_min(X_P) protection > 0.
+CORROBORATION: target X_P anisotropy exceeds its immediate local REAL background.
+Eigenvalue splitting is retained as a structure diagnostic.
+No new score, fitted weights, or post-hoc descriptor search.
+Recurrence gates: Xmin>=0.80, anisotropy>=0.80.
+
+Target summary:
+rank | target | Xmin status | units | Xmin+ | med Xmin protect | min Xmin protect | anis status | anis+ | med anis adv | split+ | med split adv | med Xmax protect | med Xtrace protect | med NULL-REAL Xmin | controls
+   1 |    183 | XMIN_NOT_CONFIRMED |     2 |  0.500 |        -1.444807 |        -3.240299 | ANIS_SUPPORTS      |  1.000 |    +0.004404 |  0.500 |     -0.330892 |        -0.867320 |         +1.028708 |         +74.860167 | [175, 177, 179, 181, 185, 187, 189, 191]
+
+Batch-by-batch direction diagnostics:
+target | batch | Xmin protect | Xmax protect | anis adv | split adv | Xtrace protect | NULL-REAL Xmin
+   183 |     1 |     -3.240299 |     +0.353474 | +0.003392 | +0.482595 |      -0.567717 |     +27.582573
+   183 |     2 |     +0.350684 |     -2.088115 | +0.005415 | -1.144379 |      +2.625132 |    +122.137761
+
+Scientific decision rule:
+  1) XMIN_CONFIRMED supports a genuinely protected perturbative direction inside P.
+  2) ANIS_SUPPORTS says that the protection is directionally uneven rather than uniform across P.
+  3) Xmax and Xtrace are retained only for comparison with v25.10/v25.11; they are not allowed to redefine the primary hypothesis.
+  4) If Xmin fails, do not rescue the hypothesis with another descriptor from the same matrix.
+  5) If Xmin and anisotropy recur on unseen seeds at one or more targets, the next defensible step is to track the corresponding protected eigenvector direction itself across seeds/dimensions.
+
+=== End of v25.12 anisotropic protected-direction analysis ===

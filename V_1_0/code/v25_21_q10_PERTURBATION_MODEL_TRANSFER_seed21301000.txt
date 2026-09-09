@@ -1,0 +1,35 @@
+=== Soft Spaces Phase 2 v25.21 PERTURBATION-MODEL TRANSFER ===
+Frozen source coordinates: [155, 165, 175, 183]
+Geometry: 9Q source -> 10Q target | branches=2
+New perturbation model: local_2local_chain_XYZ_XXYYZZ
+Independent seed blocks: 8 x 50 = 400 | base_seed=21301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen law from v25.19/v25.20:
+  C_matrix(REAL) > C_matrix(NULL).
+Only V changed: unrestricted random Pauli -> local/2-local chain perturbation.
+No descriptor changes, no fitted weights, no score, no post-hoc rescue.
+Predeclared gate: positive-rate >= 0.80.
+
+Transfer summary:
+units | positive | status | Cmat+ | med REAL | med NULL | med REAL-NULL | min | max
+    8 |        8 | PERTURBATION_TRANSFER_CONFIRMED    |  1.000 | 0.539174 | 0.392056 |     +0.157869 |  +0.073660 |  +0.183590
+
+Batch-by-batch recurrence:
+batch | REAL Cmat | NULL Cmat | REAL-NULL | sign
+    1 |   0.586776 |   0.403186 |  +0.183590 | POS
+    2 |   0.575197 |   0.402783 |  +0.172414 | POS
+    3 |   0.470632 |   0.396972 |  +0.073660 | POS
+    4 |   0.550213 |   0.402004 |  +0.148209 | POS
+    5 |   0.522072 |   0.385484 |  +0.136588 | POS
+    6 |   0.568472 |   0.387139 |  +0.181332 | POS
+    7 |   0.507850 |   0.373231 |  +0.134619 | POS
+    8 |   0.528136 |   0.360608 |  +0.167528 | POS
+
+Scientific decision rule:
+  1) PERTURBATION_TRANSFER_CONFIRMED means the frozen REAL>NULL cancellation law survives a physically different V model.
+  2) Success weakens the explanation that v25.19/v25.20 were artifacts of unrestricted random-Pauli perturbations.
+  3) Failure means the cancellation law is perturbation-model dependent; no metric substitution is allowed here.
+  4) Success would justify testing further physically motivated V families or hardware-specific Hamiltonians.
+
+=== End of v25.21 perturbation-model transfer ===

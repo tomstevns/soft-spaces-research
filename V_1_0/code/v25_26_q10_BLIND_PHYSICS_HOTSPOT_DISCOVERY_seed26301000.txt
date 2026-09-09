@@ -1,0 +1,30 @@
+=== Soft Spaces Phase 2 v25.26 PHYSICS-BASED HOTSPOT PREDICTOR ===
+Landscape: 9Q source -> 10Q target | branches=2
+Scan k=1..509 step=2 | scanned=255 | local radius=+/-10
+Discovery blocks: 2 x 10 = 20 | base_seed=26301000 | stride=1000000
+Perturb reps/seed=2 | dH_terms=5 | families=['dephasing', 'transverse'] | regularizer=0.001
+
+Frozen physics:
+  DeltaC_f(k)=C_matrix_REAL,f(k)-C_matrix_NULL,f(k).
+  S(k)=min(median DeltaC_dephasing, median DeltaC_transverse).
+  prominence=S(k)-median nearby S.
+v25.26 is blind 10Q prediction/discovery only; candidates must be frozen before v25.27 unseen-seed confirmation.
+
+Top 6 predicted hotspots:
+rank | k | units | dC dephase | dC transverse | robust dC | local bg | prominence | dephase+ | transverse+ | robust+
+   1 |  383 |     2 |   +0.115254 |     +0.189609 | +0.115254 | +0.042436 |  +0.072818 |    1.000 |       1.000 |   1.000
+   2 |  127 |     2 |   +0.109640 |     +0.206275 | +0.109640 | +0.042909 |  +0.066730 |    1.000 |       1.000 |   1.000
+   3 |  159 |     2 |   +0.068967 |     +0.091840 | +0.068967 | +0.056760 |  +0.012207 |    1.000 |       1.000 |   1.000
+   4 |  279 |     2 |   +0.069385 |     +0.097068 | +0.069385 | +0.057398 |  +0.011986 |    1.000 |       1.000 |   1.000
+   5 |  415 |     2 |   +0.032385 |     +0.035383 | +0.032385 | +0.021609 |  +0.010777 |    1.000 |       1.000 |   1.000
+   6 |   71 |     2 |   +0.030802 |     +0.030215 | +0.030215 | +0.020031 |  +0.010184 |    1.000 |       1.000 |   1.000
+
+FROZEN v25.24 candidate list: [383, 127, 159, 279, 415, 71]
+
+Scientific reading:
+  1) High robust dC means REAL>NULL pathway coherence is strong in BOTH validated perturbation families.
+  2) Positive prominence means this cross-family excess is locally elevated relative to neighbouring coordinates.
+  3) These are predictions, not confirmed Soft-Space hotspots.
+  4) v25.24 must test exactly this frozen list on unseen seeds with the same score.
+
+=== End of v25.26 hotspot predictor ===

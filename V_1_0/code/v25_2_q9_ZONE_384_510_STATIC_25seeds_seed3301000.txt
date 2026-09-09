@@ -1,0 +1,112 @@
+=== Soft Spaces Phase 2 v25.2 TARGETED: v25.1 baseline physics + eigenpair-zone targeting ===
+Qubits: 9 (d=512) | terms=5
+Batches: 1 × 25 seeds (base_seed=3301000, stride=1000000)
+Neighbor eps=0.050
+Phase 2 target zones (left pair index i): 384-510 | control_intervals=0
+Dominant set: keep_mass=0.90 (mass-based; guarantees non-empty mask)
+Bins (SigAbs): ent_step=0.100 | leak_step=0.050
+Bins (SigQ_GLOBAL fine): q_bins=16 (pooled REAL+NULL per batch)
+Bins (SigQG_COARSE): q_bins_coarse=8 + dom_bin(dom/d) + leak_bin_coarse (pooled REAL+NULL per batch)
+Leakage proxy times=[0.5, 1.0, 1.5] (FAST analytic evolution in eigenpair)
+Stable selection: stable_frac=0.670 per model (optional leak constraint max=None, q=None)
+Perturbation robustness: eta=[] | reps=3 | seeds=0 | pairs/seed=5 | dH_terms=None
+Open-system (v23): enabled=False | include_baselines=False | pairs_per_cat=400 | noise=dephasing(phi=0.01,g1=0.01) | t=5.0/25 | states=zx | basis=eigen | noise_qubits=all:None | stable_pool=False | time_mode=mean | late_power=2.0 | contrast_focus=False | kernel_zoom=False
+Interference test: enabled=False | pairs_per_cat=200 | stable_pool=False
+TopK=25 | min_overall=3 | min_stable=3 | alpha=0.5
+Optional family filter: p_tail_max=None
+Pauli ops: lazy on-demand cache (excluding all-I); v25.2 targeted continuation, baseline physics preserved
+
+
+----------------------------------------------
+Batch 1/1 (seed_offset=3301000)
+Model: REAL | candidates=3154 | stable_rate=0.6699 (score-only ref=0.6699)
+  score(mean/median/max)=0.363/0.362/0.392
+  leakage(mean/median/min)=0.099/0.099/0.095
+  entropy(mean/median/max)=7.778/8.156/8.606
+  dom_count(mean/median/max)=252.55/276.0/352
+  gaps: ΔE_in(mean/med/p90)=0.0002318/0/4.441e-16 | ΔE_out(mean/med/p90)=3.395e-16/2.22e-16/4.441e-16 | logR(mean/med/p90)=-7.571/-7.654/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=1 | ΔE_in(mean/med/p90)=0.03615/0.03615/0.03615
+  entropy effect (stable-overall)=+0.006 bits  CI95=(-0.005243956978423414, 0.01652632433550747)
+
+Top signature families (REAL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (289, 4, 5, 1) |       8 |       8 |      5.36 | 4.06e-02 |      1.39 |      1.97x
+  (280, 3, 4, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      1.97x
+  (287, 4, 5, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      1.97x
+  (267, 2, 3, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      1.97x
+  (291, 4, 5, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      1.97x
+  (289, 3, 4, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      1.97x
+  (291, 4, 4, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      1.97x
+  (291, 3, 5, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      1.97x
+  (276, 3, 4, 1) |       4 |       4 |      2.68 | 2.01e-01 |      0.70 |      1.97x
+  (289, 2, 3, 1) |       4 |       4 |      2.68 | 2.01e-01 |      0.70 |      1.97x
+  ... (25 total, showing 10)
+
+Top signature families (REAL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 2, 2, 1) |     202 |     198 |    135.33 | 2.99e-29 |     28.52 |      2.17x
+  (2, 1, 2, 1) |     258 |     242 |    172.85 | 2.09e-25 |     24.68 |      2.08x
+  (2, 2, 3, 1) |     150 |     148 |    100.49 | 2.24e-23 |     22.65 |      2.19x
+  (2, 2, 7, 1) |     130 |     128 |     87.09 | 5.10e-20 |     19.29 |      2.18x
+  (2, 1, 3, 1) |      90 |      88 |     60.29 | 2.24e-13 |     12.65 |      2.17x
+  (2, 2, 4, 1) |      78 |      77 |     52.26 | 1.06e-12 |     11.97 |      2.19x
+  (2, 2, 6, 1) |      75 |      74 |     50.25 | 3.40e-12 |     11.47 |      2.19x
+  (2, 1, 1, 1) |     125 |     116 |     83.74 | 5.55e-12 |     11.26 |      2.06x
+  (2, 2, 5, 1) |      72 |      71 |     48.24 | 1.09e-11 |     10.96 |      2.19x
+  (2, 3, 7, 1) |      63 |      63 |     42.21 | 1.10e-11 |     10.96 |      2.22x
+  ... (25 total, showing 10)
+
+Model: NULL_HAAR_BASIS | candidates=3154 | stable_rate=0.6699 (score-only ref=0.6699)
+  score(mean/median/max)=0.362/0.362/0.363
+  leakage(mean/median/min)=0.099/0.099/0.099
+  entropy(mean/median/max)=8.381/8.387/8.493
+  dom_count(mean/median/max)=300.86/301.0/321
+  gaps: ΔE_in(mean/med/p90)=0.0001159/0/6.661e-16 | ΔE_out(mean/med/p90)=3.598e-16/2.22e-16/4.441e-16 | logR(mean/med/p90)=-7.522/-7.654/-7.353
+  gaps_cond(ΔE_in>iso_eps): n=1 | ΔE_in(mean/med/p90)=0.03615/0.03615/0.03615
+  entropy effect (stable-overall)=-0.000 bits  CI95=(-0.001127192511721331, 0.000849039396478891)
+
+Top signature families (NULL, SigQ_GLOBAL (fine)):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (296, 6, 10, 1) |       7 |       7 |      4.69 | 6.06e-02 |      1.22 |      2.05x
+  (307, 9, 11, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (302, 8, 13, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (304, 6, 15, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (306, 6, 13, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (304, 9, 10, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (304, 10, 14, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (299, 8, 13, 1) |       6 |       6 |      4.02 | 9.04e-02 |      1.04 |      2.05x
+  (304, 11, 13, 1) |      10 |       9 |      6.70 | 1.08e-01 |      0.97 |      1.86x
+  (304, 9, 14, 1) |       5 |       5 |      3.35 | 1.35e-01 |      0.87 |      2.05x
+  ... (25 total, showing 10)
+
+Top signature families (NULL, SigQG_COARSE):
+Format: sig=(a,b,c,d) | overall | stable | expected | p_tail | -log10(p) | enrichment
+  (2, 2, 3, 1) |      23 |      19 |     15.41 | 8.05e-02 |      1.09 |      1.84x
+  (2, 1, 4, 1) |      15 |      13 |     10.05 | 8.33e-02 |      1.08 |      1.94x
+  (2, 3, 5, 1) |     214 |     152 |    143.37 | 1.18e-01 |      0.93 |      1.58x
+  (2, 5, 7, 1) |     240 |     168 |    160.79 | 1.79e-01 |      0.75 |      1.56x
+  (2, 2, 7, 1) |      28 |      21 |     18.76 | 2.46e-01 |      0.61 |      1.68x
+  (2, 4, 6, 1) |     283 |     195 |    189.59 | 2.69e-01 |      0.57 |      1.53x
+  (2, 4, 4, 1) |     122 |      85 |     81.73 | 3.00e-01 |      0.52 |      1.55x
+  (2, 1, 7, 1) |      16 |      12 |     10.72 | 3.49e-01 |      0.46 |      1.68x
+  (2, 4, 5, 1) |     267 |     182 |    178.87 | 3.69e-01 |      0.43 |      1.52x
+  (2, 3, 6, 1) |     226 |     153 |    151.41 | 4.42e-01 |      0.35 |      1.51x
+  ... (25 total, showing 10)
+
+Batch 1: Jaccard(Top-25) REAL vs NULL: fine=0.000 | coarse=0.667
+
+Baseline scoreboard (REAL - NULL):
+  delta median entropy (bits): -0.231
+  delta median leakage       : -0.000
+  delta median dom_count     : -25.000
+  entropy Cohen's d          : -0.931
+
+----------------------------------------------
+=== Convergence diagnostics (REAL) ===
+
+=== Notes (scientific reading) ===
+1) Compare REAL vs NULL primarily via deltas/effect sizes and batch stability, not raw entropy levels (d differs with n_qubits).
+2) Use fine families for within-model discovery; use coarse families for cross-model interpretability.
+3) If results at n=4 resemble n=3 (stable deltas + stable overlaps), that is strong qualitative evidence the effect is not a 3-qubit artifact.
+
+=== End of v25.2 targeted ===

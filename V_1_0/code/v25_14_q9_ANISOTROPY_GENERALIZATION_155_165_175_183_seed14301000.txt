@@ -1,0 +1,40 @@
+=== Soft Spaces Phase 2 v25.14 MULTI-TARGET X_P ANISOTROPY GENERALIZATION ===
+Predeclared targets: [155, 165, 175, 183] | local radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Unseen seed blocks: 2 x 25 = 50 | base_seed=14301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen from v25.13: target X_P anisotropy > immediate local REAL-background anisotropy.
+All listed targets are excluded from each other's local REAL control sets.
+No rescue by Xmin, Xmax, Xtrace, SigmaF, or any other descriptor.
+Predeclared recurrence gate: anisotropy positive-rate >= 0.80.
+
+Target generalization summary:
+rank | target | status | units | anis+ | med target anis | med bg anis | med anis advantage | min anis advantage | med NULL-REAL anis | controls
+   1 |    183 | ANISOTROPY_GENERALIZES   |     2 |  1.000 |     +0.02932905 |  +0.02734942 |        +0.00197963 |        +0.00129821 |        +0.10220378 | [177, 179, 181, 185, 187, 189, 191]
+   2 |    175 | ANISOTROPY_NOT_GENERAL   |     2 |  0.500 |     +0.02780502 |  +0.02673869 |        +0.00106632 |        -0.00145970 |        +0.10736248 | [167, 169, 171, 173, 177, 179, 181]
+   3 |    165 | ANISOTROPY_NOT_GENERAL   |     2 |  0.500 |     +0.02727584 |  +0.02682022 |        +0.00045562 |        -0.00285204 |        +0.11072907 | [157, 159, 161, 163, 167, 169, 171, 173]
+   4 |    155 | ANISOTROPY_NOT_GENERAL   |     2 |  0.000 |     +0.02425295 |  +0.02662258 |        -0.00236962 |        -0.00257657 |        +0.10652738 | [147, 149, 151, 153, 157, 159, 161, 163]
+
+Batch-by-batch anisotropy advantages:
+target | batch | target anis | bg anis | target-bg anis | NULL-REAL anis
+   155 |     1 | +0.02014037 | +0.02271694 |    -0.00257657 |    +0.11533909
+   155 |     2 | +0.02836553 | +0.03052821 |    -0.00216268 |    +0.09771566
+   165 |     1 | +0.02179934 | +0.02465138 |    -0.00285204 |    +0.12134571
+   165 |     2 | +0.03275234 | +0.02898905 |    +0.00376329 |    +0.10011244
+   175 |     1 | +0.02395264 | +0.02541234 |    -0.00145970 |    +0.12199275
+   175 |     2 | +0.03165740 | +0.02806505 |    +0.00359235 |    +0.09273221
+   183 |     1 | +0.02807340 | +0.02541234 |    +0.00266106 |    +0.11019762
+   183 |     2 | +0.03058470 | +0.02928649 |    +0.00129821 |    +0.09420993
+
+Cross-target decision summary:
+  Frozen anisotropy hypothesis generalized at 1/4 predeclared targets.
+
+Scientific reading:
+  1) ANISOTROPY_GENERALIZES means the v25.13 property recurs at that target on unseen seeds.
+  2) ANISOTROPY_NOT_GENERAL is an intended falsification result and must not be rescued post-hoc.
+  3) Multiple generalized targets support anisotropy as a shared Soft-Space property.
+  4) A single generalized target supports a target-specific or subtype interpretation instead of a universal law.
+  5) If the property generalizes beyond one target, the next defensible step is dimensional transfer using the same frozen anisotropy descriptor.
+
+=== End of v25.14 anisotropy generalization ===

@@ -1,0 +1,28 @@
+=== Soft Spaces Phase 2 v25.5 PHYSICS DIAGNOSTIC ===
+Fixed candidates: [67, 193, 180, 192, 131, 251, 157, 160, 165, 0, 114] | 8Q source geometry -> 9Q target (2 descendant branches)
+Seeds=25 | perturb reps/seed=3 | eta=0.01 | dH_terms=5 | chi_regularizer=0.001
+
+This is deliberately NOT a new continuation score. It tests three physically motivated diagnostics on a fixed candidate set.
+K_delta = ||P dH Q||_F / ||dH||_F. Lower REAL than NULL => stronger perturbative protection.
+chi = log10(1 + normalized spectral susceptibility). Lower REAL than NULL => weaker mixing susceptibility.
+R_P = 0.5 Tr(P P_eta). Higher REAL than NULL => stronger basis-invariant subspace retention.
+Retention = fraction whose energy-matched perturbed neighbor pair still has gap < eps_neighbor.
+
+source_k | target centers | hits R/N | K_R | K_N | ΔK(N-R) | chi_R | chi_N | Δchi(N-R) | Ov_R | Ov_N | ΔOv(R-N) | Ret_R | Ret_N | ΔRet
+      67 |        (67, 323) |  150/150  |  0.0624 |  0.0624 |   -0.0001 |  2.6582 |  2.6896 |     +0.0314 |  0.0230 |  0.0261 |    -0.0031 |  1.000 |  1.000 |  +0.000
+     193 |       (193, 449) |  150/150  |  0.0624 |  0.0625 |   +0.0000 |  2.7152 |  2.6883 |     -0.0270 |  0.0289 |  0.0227 |    +0.0061 |  1.000 |  1.000 |  +0.000
+     180 |       (180, 436) |  150/150  |  0.0624 |  0.0624 |   -0.0000 |  2.6529 |  2.6864 |     +0.0335 |  0.0256 |  0.0226 |    +0.0031 |  1.000 |  1.000 |  +0.000
+     192 |       (192, 448) |  150/150  |  0.0624 |  0.0625 |   +0.0000 |  2.7205 |  2.6848 |     -0.0357 |  0.0245 |  0.0241 |    +0.0004 |  1.000 |  1.000 |  +0.000
+     131 |       (131, 387) |  150/150  |  0.0624 |  0.0624 |   -0.0001 |  2.6589 |  2.6846 |     +0.0256 |  0.0244 |  0.0256 |    -0.0012 |  1.000 |  1.000 |  +0.000
+     251 |       (251, 507) |  150/150  |  0.0624 |  0.0624 |   -0.0001 |  2.6970 |  2.6886 |     -0.0085 |  0.0241 |  0.0241 |    -0.0000 |  1.000 |  1.000 |  +0.000
+     157 |       (157, 413) |  150/150  |  0.0624 |  0.0624 |   -0.0000 |  2.6551 |  2.6858 |     +0.0307 |  0.0257 |  0.0229 |    +0.0028 |  1.000 |  1.000 |  +0.000
+     160 |       (160, 416) |  150/150  |  0.0625 |  0.0623 |   -0.0001 |  2.6556 |  2.6905 |     +0.0349 |  0.0239 |  0.0263 |    -0.0023 |  1.000 |  1.000 |  +0.000
+     165 |       (165, 421) |  150/150  |  0.0624 |  0.0623 |   -0.0002 |  2.6594 |  2.6772 |     +0.0178 |  0.0227 |  0.0246 |    -0.0020 |  1.000 |  1.000 |  +0.000
+       0 |         (0, 256) |  150/150  |  0.0625 |  0.0624 |   -0.0001 |  2.7047 |  2.6839 |     -0.0208 |  0.0255 |  0.0261 |    -0.0006 |  1.000 |  1.000 |  +0.000
+     114 |       (114, 370) |  150/150  |  0.0624 |  0.0623 |   -0.0001 |  2.6438 |  2.6978 |     +0.0540 |  0.0219 |  0.0251 |    -0.0032 |  1.000 |  1.000 |  +0.000
+
+Reading rule:
+  Favorable REAL-specific protection points in the direction: ΔK > 0, Δchi > 0, ΔOv > 0, ΔRet > 0.
+  Do not combine these into a fitted score yet; first ask whether the old anchor neighbourhood and/or the static top candidates separate consistently from NULL.
+
+=== End of v25.5 physics diagnostic ===

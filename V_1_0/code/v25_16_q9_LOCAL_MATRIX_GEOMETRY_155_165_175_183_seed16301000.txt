@@ -1,0 +1,29 @@
+=== Soft Spaces Phase 2 v25.16 LOCAL DIFFERENTIAL GEOMETRY OF EFFECTIVE 2D MATRICES ===
+Predeclared targets: [155, 165, 175, 183] | local radius=+/-10 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Independent seed blocks: 4 x 25 = 100 | base_seed=16301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Method change:
+  v25.16 tests local SHAPE, not simple high/low scalar values.
+  Central finite differences estimate local gradient and curvature across source coordinate k.
+  Target |gradient| / |curvature| are compared with the median magnitudes of nearby REAL controls.
+  Retained frozen matrix descriptors: Xtrace, X eigenvalue split, X anisotropy, Sigma Frobenius norm.
+  No continuation score, fitted weights, or post-hoc descriptor search.
+Descriptive recurrence gate per curvature descriptor: positive-rate >= 0.75; GEOMETRY_SIGNAL requires at least two of four curvature descriptors to pass.
+
+Target summary:
+rank | target | status | units | Xtrace curv+ | Xsplit curv+ | anis curv+ | SigmaF curv+ | med |d2Xtr| adv | med |d2Xsplit| adv | med |d2anis| adv | med |d2SigmaF| adv | med |dXtr| adv | med |danis| adv | controls
+   1 |    175 | GEOMETRY_SIGNAL        |     4 |        0.750 |        0.750 |      0.250 |        0.500 |   +2.963666e+00 |      +1.711180e-01 |    -6.567106e-04 |      +5.877982e-07 |  -7.387262e-01 |  +3.529218e-04 | [167, 169, 171, 173, 177, 179, 181, 185]
+   2 |    155 | GEOMETRY_NOT_CONFIRMED |     4 |        0.500 |        0.500 |      0.500 |        0.000 |   -7.202356e-01 |      +2.251362e-02 |    -6.697125e-05 |      -3.549402e-06 |  +2.017921e+00 |  +7.689100e-04 | [145, 147, 149, 151, 153, 157, 159, 161, 163]
+   3 |    165 | GEOMETRY_NOT_CONFIRMED |     4 |        0.250 |        0.750 |      0.000 |        0.250 |   -1.243524e+00 |      +7.171858e-02 |    -8.044571e-04 |      -3.227058e-06 |  +6.727866e-01 |  +4.632555e-04 | [157, 159, 161, 163, 167, 169, 171, 173]
+   4 |    183 | GEOMETRY_NOT_CONFIRMED |     4 |        0.000 |        0.250 |      0.250 |        0.500 |   -2.580109e+00 |      -2.548454e-01 |    -1.333441e-03 |      -1.804763e-06 |  +5.265165e-01 |  +5.418851e-04 | [173, 177, 179, 181, 185, 187, 189, 191, 193]
+
+Scientific reading:
+  1) GEOMETRY_SIGNAL means the target is locally sharper/more structured than nearby REAL background in >=2 frozen matrix descriptors.
+  2) A curvature signal is compatible with a ridge, trough, cusp-like feature, or rapid local matrix reorganization.
+  3) Gradient diagnostics are secondary context only; curvature recurrence carries the main evidential weight.
+  4) GEOMETRY_NOT_CONFIRMED is an intended falsification outcome and must not be rescued by a newly invented scalar.
+  5) If a geometry signal recurs, the next step is to test the same frozen local-shape criteria on new seeds and then across qubit dimension.
+
+=== End of v25.16 local matrix geometry analysis ===

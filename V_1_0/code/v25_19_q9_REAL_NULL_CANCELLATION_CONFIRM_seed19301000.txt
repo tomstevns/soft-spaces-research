@@ -1,0 +1,35 @@
+=== Soft Spaces Phase 2 v25.19 PREDECLARED REAL-vs-NULL CANCELLATION CONFIRMATION ===
+Frozen source coordinates: [155, 165, 175, 183]
+Geometry: 8Q source -> 9Q target | branches=2
+Independent seed blocks: 8 x 50 = 400 | base_seed=19301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen primary hypothesis from v25.18:
+  C_matrix(REAL) > C_matrix(NULL).
+Higher C_matrix means less destructive cancellation / more coherent reinforcement of signed virtual paths.
+One source-collapsed REAL-minus-NULL value per independent batch is the recurrence unit.
+No rescue by PR, entropy, top-k mass, local target advantage, or post-hoc descriptors.
+Predeclared gate: positive-rate >= 0.80.
+
+Confirmation summary:
+units | positive | status | Cmat+ | med REAL | med NULL | med REAL-NULL | min | max
+    8 |        8 | CANCELLATION_CONFIRMED       |  1.000 | 0.553628 | 0.366263 |     +0.162720 |  +0.111167 |  +0.223141
+
+Batch-by-batch primary recurrence:
+batch | REAL Cmat | NULL Cmat | REAL-NULL | sign
+    1 |   0.559598 |   0.369835 |  +0.189764 | POS
+    2 |   0.551324 |   0.405027 |  +0.146296 | POS
+    3 |   0.515320 |   0.362692 |  +0.152628 | POS
+    4 |   0.564222 |   0.351089 |  +0.213134 | POS
+    5 |   0.529468 |   0.356656 |  +0.172812 | POS
+    6 |   0.555933 |   0.416912 |  +0.139021 | POS
+    7 |   0.510015 |   0.398849 |  +0.111167 | POS
+    8 |   0.576029 |   0.352888 |  +0.223141 | POS
+
+Scientific decision rule:
+  1) CANCELLATION_CONFIRMED means the REAL>NULL matrix-cancellation ordering recurs above threshold.
+  2) This is a global perturbative-organization property, not a local Soft-Space coordinate marker.
+  3) Failure falsifies this specific interpretation; do not switch primary metrics inside v25.19.
+  4) Success justifies cross-dimension transfer with the SAME frozen C_matrix law.
+
+=== End of v25.19 cancellation confirmation ===

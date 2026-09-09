@@ -1,0 +1,27 @@
+=== Soft Spaces Phase 2 v25.25 CROSS-DIMENSIONAL HOTSPOT TRANSFER ===
+Frozen v25.24-confirmed hotspots: [63, 191]
+Geometry transfer: 9Q source -> 10Q target | branches=2
+Independent seed blocks: 8 x 50 = 400 | base_seed=25301000 | stride=1000000
+Perturb reps/seed=3 | families=['dephasing', 'transverse'] | local radius=+/-10 | step=2 | regularizer=0.001
+
+Frozen hotspot law:
+  DeltaC_f(k)=C_matrix_REAL,f(k)-C_matrix_NULL,f(k).
+  S(k)=min(DeltaC_dephasing, DeltaC_transverse).
+  prominence(k)=S(k)-median nearby S.
+No re-ranking, candidate replacement, score change, or post-hoc rescue.
+Predeclared gate: prominence positive-rate >= 0.75.
+
+Transfer summary:
+rank | k | status | units | prom pos | prom+ | med robust dC | med local bg | med prominence | min | max | dephase+ | transverse+
+   1 |   63 | HOTSPOT_TRANSFER_NOT_CONFIRMED |     8 |        5 |  0.625 |     +0.035357 |    +0.033956 |      +0.002653 |  -0.006080 |  +0.006303 |    1.000 |       1.000
+   2 |  191 | HOTSPOT_TRANSFER_NOT_CONFIRMED |     8 |        3 |  0.375 |     +0.076147 |    +0.076245 |      -0.001050 |  -0.012912 |  +0.021564 |    1.000 |       1.000
+
+Decision summary: 0/2 frozen hotspots survive dimensional transfer.
+
+Scientific reading:
+  1) Confirmation means a 9Q predicted+confirmed hotspot remains locally prominent at 10Q under the same frozen physics.
+  2) This is coordinate-specific dimensional transfer, not merely the global REAL>NULL law.
+  3) Failure must not be rescued by moving the coordinate after inspecting 10Q.
+  4) Success supports physics-first hotspot predictability across dimension.
+
+=== End of v25.25 cross-dimensional hotspot transfer ===

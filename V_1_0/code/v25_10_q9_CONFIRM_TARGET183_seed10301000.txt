@@ -1,0 +1,29 @@
+=== Soft Spaces Phase 2 v25.10 PREDECLARED PERTURBATIVE CONFIRMATION ===
+Frozen target: 183 | local controls=[175, 177, 179, 181, 185, 187, 189, 191] | radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Unseen seed blocks: 2 x 25 = 50 | base_seed=10301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen v25.9 theory and descriptors; no new score, no fitted weights, no descriptor search.
+PRIMARY: local Xtrace protection = median(local REAL Xtrace) - target REAL Xtrace > 0.
+CORROBORATION A: local X-lambda_max protection > 0.
+CORROBORATION B: local Sigma Frobenius protection > 0.
+Predeclared recurrence gates: Xtrace>=0.80, X-lmax>=0.80, SigmaF>=0.80.
+
+Confirmation summary:
+target | units | PRIMARY | Xtrace+ | med Xtrace protect | min Xtrace protect | X-lmax status | X-lmax+ | med X-lmax protect | min X-lmax protect | SigmaF status | SigmaF+ | med SigmaF protect | min SigmaF protect | med NULL-REAL Xtrace
+   183 |     2 | XTRACE_CONFIRMED     |   1.000 |          +2.434595 |          +0.059727 | XLMAX_SUPPORTS      |    1.000 |          +3.692453 |          +3.581128 | SIGMAF_SUPPORTS      |   1.000 |     +2.592706e-05 |     +3.788758e-06 |          +155.253804
+
+Batch-by-batch predeclared advantages:
+batch | Xtrace protect | X-lmax protect | SigmaF protect | NULL-REAL Xtrace
+    1 |      +4.809464 |       +3.581128 |  +4.806536e-05 |      +282.545077
+    2 |      +0.059727 |       +3.803778 |  +3.788758e-06 |       +27.962530
+
+Scientific decision rule:
+  1) XTRACE_CONFIRMED is the primary success criterion.
+  2) XLMAX_SUPPORTS and SIGMAF_SUPPORTS are independent corroborations fixed from v25.9.
+  3) Failure of a corroboration does not redefine the primary hypothesis; it narrows the mechanism.
+  4) Failure of Xtrace recurrence weakens the target-183 local-protection claim and must not be rescued by post-hoc features.
+  5) If the primary and at least one corroboration survive unseen seeds, the next step may test generalization to additional targets/dimensions.
+
+=== End of v25.10 perturbative confirmation ===

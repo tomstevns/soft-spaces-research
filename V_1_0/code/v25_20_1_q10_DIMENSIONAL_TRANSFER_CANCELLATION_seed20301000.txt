@@ -1,0 +1,34 @@
+=== Soft Spaces Phase 2 v25.20.1 MEMORY-SAFE CROSS-DIMENSIONAL CANCELLATION TRANSFER ===
+Frozen source coordinates: [155, 165, 175, 183]
+Geometry transfer: 9Q source -> 10Q target | branches=2
+Independent seed blocks: 8 x 50 = 400 | base_seed=20301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen law transferred from v25.19:
+  C_matrix(REAL) > C_matrix(NULL).
+No descriptor changes, no new score, no fitted weights, no post-hoc rescue.
+Primary recurrence unit: one source-collapsed REAL-minus-NULL value per independent batch.
+Predeclared gate: positive-rate >= 0.80.
+
+Transfer summary:
+units | positive | status | Cmat+ | med REAL | med NULL | med REAL-NULL | min | max
+    8 |        8 | DIMENSIONAL_TRANSFER_CONFIRMED     |  1.000 | 0.554754 | 0.396146 |     +0.162484 |  +0.133913 |  +0.200661
+
+Batch-by-batch recurrence:
+batch | REAL Cmat | NULL Cmat | REAL-NULL | sign
+    1 |   0.547858 |   0.392628 |  +0.155230 | POS
+    2 |   0.579205 |   0.408807 |  +0.170398 | POS
+    3 |   0.549306 |   0.400717 |  +0.148589 | POS
+    4 |   0.565223 |   0.399663 |  +0.165560 | POS
+    5 |   0.606660 |   0.405999 |  +0.200661 | POS
+    6 |   0.542992 |   0.383585 |  +0.159407 | POS
+    7 |   0.560203 |   0.389443 |  +0.170760 | POS
+    8 |   0.510900 |   0.376987 |  +0.133913 | POS
+
+Scientific decision rule:
+  1) DIMENSIONAL_TRANSFER_CONFIRMED means the frozen v25.19 REAL>NULL cancellation law survives at the higher qubit dimension.
+  2) This is evidence for a cross-dimensional perturbative-organization property, not yet a universal hardware law.
+  3) Failure weakens dimensional generality; no metric substitution is allowed inside v25.20.
+  4) Success justifies either a second higher-dimension replication or transfer to a physically modified perturbation model.
+
+=== End of v25.20 cross-dimensional cancellation transfer ===

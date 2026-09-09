@@ -1,0 +1,38 @@
+=== Soft Spaces Phase 2 v25.22 PERTURBATION-FAMILY TRANSFER ===
+Frozen source coordinates: [155, 165, 175, 183]
+Geometry: 9Q source -> 10Q target | branches=2
+Families: ['dephasing', 'transverse']
+Independent seed blocks per family: 8 x 50 = 400
+
+Frozen law: C_matrix(REAL) > C_matrix(NULL).
+Predeclared gate per family: positive-rate >= 0.80.
+
+family | units | positive | status | Cmat+ | med REAL | med NULL | med REAL-NULL | min | max
+dephasing  |     8 |        8 | FAMILY_TRANSFER_CONFIRMED    |  1.000 | 0.536804 | 0.386272 |     +0.153108 |  +0.088732 |  +0.253637
+transverse |     8 |        8 | FAMILY_TRANSFER_CONFIRMED    |  1.000 | 0.527876 | 0.385263 |     +0.145114 |  +0.123040 |  +0.208739
+
+Batch recurrence: dephasing
+batch | REAL Cmat | NULL Cmat | REAL-NULL | sign
+    1 |   0.531716 |   0.400061 |  +0.131655 | POS
+    2 |   0.573616 |   0.399076 |  +0.174540 | POS
+    3 |   0.497949 |   0.409217 |  +0.088732 | POS
+    4 |   0.529462 |   0.384620 |  +0.144842 | POS
+    5 |   0.541892 |   0.387924 |  +0.153968 | POS
+    6 |   0.551812 |   0.371118 |  +0.180694 | POS
+    7 |   0.507578 |   0.355331 |  +0.152247 | POS
+    8 |   0.561198 |   0.307561 |  +0.253637 | POS
+
+Batch recurrence: transverse
+batch | REAL Cmat | NULL Cmat | REAL-NULL | sign
+    1 |   0.530358 |   0.400815 |  +0.129543 | POS
+    2 |   0.525393 |   0.401092 |  +0.124301 | POS
+    3 |   0.586851 |   0.403477 |  +0.183374 | POS
+    4 |   0.507686 |   0.382020 |  +0.125666 | POS
+    5 |   0.511546 |   0.388506 |  +0.123040 | POS
+    6 |   0.534531 |   0.373847 |  +0.160684 | POS
+    7 |   0.546466 |   0.357472 |  +0.188995 | POS
+    8 |   0.516480 |   0.307741 |  +0.208739 | POS
+
+Cross-family decision: confirmed in 2/2 families.
+
+=== End of v25.22 perturbation-family transfer ===

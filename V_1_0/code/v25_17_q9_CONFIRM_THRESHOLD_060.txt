@@ -1,0 +1,34 @@
+=== Soft Spaces Phase 2 v25.17 PREDECLARED TARGET-175 GEOMETRY CONFIRMATION ===
+Frozen target: 175 | local controls=[165, 167, 169, 171, 173, 177, 179, 181, 183, 185] | radius=+/-10 | step=2
+Geometry: 8Q source -> 9Q target | branches=2
+Independent seed blocks: 8 x 25 = 200 | base_seed=17301000 | stride=1000000
+Perturb reps/seed=3 | dH_terms=5 | resolvent regularizer=0.001
+
+Frozen v25.16 discovery hypothesis:
+  PRIMARY A: target |d2 Xtrace / dk2| exceeds local REAL-background curvature magnitude.
+  PRIMARY B: target |d2 Xsplit / dk2| exceeds local REAL-background curvature magnitude.
+No rescue by anisotropy, SigmaF, gradients, continuation score, weights, or new descriptors.
+Predeclared gate: BOTH primary recurrence rates must be >= 0.60.
+
+Confirmation summary:
+target | units | status | Xtrace pos | Xtrace+ | med Xtrace curv adv | min Xtrace curv adv | Xsplit pos | Xsplit+ | med Xsplit curv adv | min Xsplit curv adv | joint pos | joint+
+   175 |     8 | GEOMETRY_CONFIRMED     |          5 |   0.625 |        +2.136309e+00 |        -1.110993e+00 |          5 |   0.625 |        +5.185527e-02 |        -1.227895e-01 |         3 |  0.375
+
+Batch-by-batch frozen curvature advantages:
+batch | Xtrace curv adv | sign | Xsplit curv adv | sign | joint
+    1 |    +2.705640e+00 | POS |    -1.227895e-01 | NEG | NO
+    2 |    +4.508584e+00 | POS |    +2.272655e-01 | POS | YES
+    3 |    -1.110993e+00 | NEG |    +9.698463e-01 | POS | NO
+    4 |    +1.566978e+00 | POS |    +9.000258e-02 | POS | YES
+    5 |    +4.587782e+00 | POS |    -5.072023e-02 | NEG | NO
+    6 |    +2.831415e+00 | POS |    +1.713268e-01 | POS | YES
+    7 |    -8.494686e-01 | NEG |    +1.370796e-02 | POS | NO
+    8 |    -7.301720e-01 | NEG |    -8.613252e-02 | NEG | NO
+
+Scientific decision rule:
+  1) GEOMETRY_CONFIRMED requires BOTH frozen curvature descriptors to recur above threshold.
+  2) Joint same-batch recurrence is reported as extra structure context, not as a replacement gate.
+  3) GEOMETRY_NOT_CONFIRMED weakens the target-175 local-shape hypothesis; no post-hoc descriptor rescue is allowed.
+  4) Successful confirmation would justify testing the SAME frozen local-shape criteria across qubit dimension.
+
+=== End of v25.17 target-175 geometry confirmation ===

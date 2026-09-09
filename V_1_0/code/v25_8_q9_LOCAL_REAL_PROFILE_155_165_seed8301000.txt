@@ -1,0 +1,21 @@
+=== Soft Spaces Phase 2 v25.8 LOCAL REAL-BACKGROUND PROFILE ===
+Targets: [155, 165] | local radius=+/-8 | step=2
+Geometry: 8Q source -> 9Q target | etas=[0.003, 0.005, 0.01, 0.02, 0.03]
+Seed blocks: 2 x 25 = 50 seeds | base_seed=8301000 | stride=1000000
+
+Frozen v25.7/v25.6 physics: Delta-chi, Delta-Ov and K_delta are unchanged.
+New v25.8 operation only: compare each target with the median of nearby non-target REAL source coordinates.
+Anti-pseudoreplication: eta is collapsed within candidate x batch; local neighbors are then collapsed to one background median per target x batch.
+Positive target-background advantage means the target is more REAL-specific than its immediate local background.
+K_delta remains diagnostic only; no continuation score or weights are fitted.
+
+target | local controls | units | chi adv+ | med target dchi | med bg dchi | med chi adv | Ov adv+ | med target dOv | med bg dOv | med Ov adv | K adv+
+   155 | [147, 149, 151, 153, 157, 159, 161, 163] |     2 |    1.000 |         +0.3520 |     +0.3389 |     +0.0132 |   0.000 |        +0.0010 |    +0.0017 |    -0.0007 |  0.500
+   165 | [157, 159, 161, 163, 167, 169, 171, 173] |     2 |    0.500 |         +0.3385 |     +0.3399 |     -0.0014 |   1.000 |        +0.0020 |    +0.0015 |    +0.0004 |  0.500
+
+Scientific reading:
+  1) Recurrent positive chi advantage identifies a local dip in REAL spectral susceptibility relative to nearby coordinates.
+  2) Recurrent positive Ov advantage independently asks whether that local feature also retains its 2D subspace better under perturbation.
+  3) A target that is globally REAL-specific but not locally distinct should not be called a sharply localized Soft Space on this evidence alone.
+  4) Agreement of chi and overlap is stronger than either diagnostic alone; K_delta is still a control diagnostic.
+=== End of v25.8 local REAL-background profile ===
