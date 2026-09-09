@@ -1,0 +1,68 @@
+=== Soft Spaces Phase 2 v25.41 SPARSE-PAULI SPECTRAL ARTIFACT AUDIT ===
+Frozen inputs: v25.31 12Q generator, 40 seeds, five Pauli terms, existing 240-record checkpoint
+No coordinate, score, threshold, seed, or checkpoint value was changed.
+
+A. Exact normalized-position identity
+  (2*k+1+1)/2^(q+1) = (k+1)/2^q.
+  Chain A is exactly the 1/4 source-spectrum position; chain B is exactly 3/4.
+  After the two-branch lift, the four tested target pairs lie at 1/8, 3/8, 5/8, 7/8.
+
+B. Exact sparse-Pauli algebra audit
+  s=5, symplectic rank=2, forced eigenvalue multiplicity=256: 5/40 seeds
+  s=5, symplectic rank=4, forced eigenvalue multiplicity=512: 35/40 seeds
+  Common Pauli anticommuter (hence exact E <-> -E spectral symmetry): 40/40
+  Regular spectrum repeat factor 2^(12-5): 128
+  Independent dense-8Q implementation-check maximum spectral error: 1.154632e-14
+  Maximum gap among all frozen local-control pairs: 0.000000e+00
+  Maximum difference between A/B unordered branch-gap pairs: 5.440093e-15
+  Seeds with all four boundary gaps below 0.05: 17/40
+  Seeds with at least one eligible A branch: 23/40
+  Seeds with at least one eligible B branch: 23/40
+
+  Dimension geometry with the frozen +/-10 step-2 controls:
+  target Q | forced regular repeat | controls forced inside a repeated eigenvalue / 10
+        7Q |                     4 |  6/10
+        8Q |                     8 |  8/10
+        9Q |                    16 | 10/10
+       10Q |                    32 | 10/10
+       11Q |                    64 | 10/10
+       12Q |                   128 | 10/10
+
+C. Existing-checkpoint local-label audit
+  Frozen 511: local rank 1/11; positive batches 6/8; median prominence +0.038702104
+    best control: k=507, positive batches=5/8, median prominence=+0.003083021
+  Frozen 1535: local rank 1/11; positive batches 6/8; median prominence +0.043595165
+    best control: k=1541, positive batches=5/8, median prominence=+0.002660469
+  Correlation of the two frozen batch-prominence vectors: 0.989390733
+  Batches with identical A/B prominence sign: 8/8
+  Eligible seed counts per batch, k=511: [4, 3, 3, 3, 2, 5, 2, 1]
+  Eligible seed counts per batch, k=1535: [4, 3, 3, 3, 2, 5, 2, 1]
+  Exact same eligible seed sets for both candidates: True
+  One-candidate sign-test tail P[X>=6 | p=0.5]: 0.144531250
+  The two 6/8 confirmations must not be treated as independent: both succeed in the same six batches
+  and fail in the same two batches.
+
+D. Mathematical reading
+  1. k->2k+1 exactly preserves normalized spectral rank; it is not evidence of state transport.
+  2. Five Pauli generators leave an exponentially growing spectator multiplicity as q increases.
+  3. The frozen candidates are exactly sparse-algebra block boundaries, while every +/-10 step-2
+     control pair lies inside a repeated eigenvalue block and therefore has exactly zero gap.
+  4. The doubled multiplicity forces the same boundary coordinates to obey k->2k+1.
+  5. Exact spectral reflection makes the two candidate branch-gap multisets identical per seed,
+     explaining their strongly coupled batch behaviour.
+  6. With the fixed +/-10 window, the forced flat-control fraction rises from 6/10 at 7Q
+     to 8/10 at 8Q and 10/10 from 9Q onward.  This supplies a direct structural explanation
+     for the apparent strengthening of the recurrence in the high-Q regime.
+
+Conclusion
+  The high-Q coordinate recurrence is mathematically explained by fixed normalized spectral positions
+  plus the degeneracy structure of a five-term Pauli algebra.  In this protocol it is therefore a
+  structural consequence of the sparse ensemble and candidate/control geometry, not evidence that a
+  physical hotspot has been transported between independently generated Hilbert spaces.
+
+Remaining empirical content
+  The positive REAL-NULL prominence at those algebraic boundaries is a real recorded statistic, and
+  each frozen boundary ranks first among its 11 stored local labels.  Its 6/8 sign evidence is modest
+  on its own (one-candidate sign-test tail 0.1445), and the two candidates are highly dependent.
+  A genuinely physical Phase-2 claim now requires a redesigned ensemble whose number/locality of
+  Hamiltonian terms scales with q, and controls matched to the same algebraic boundary class.
