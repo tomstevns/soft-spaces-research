@@ -1,0 +1,53 @@
+=== Soft Spaces Phase 2 v25.42 DEGENERATE-EIGENBASIS INVARIANCE TEST ===
+8Q five-term random-Pauli Hamiltonians: 12 frozen seeds
+Frozen candidates: [31, 95]; rotations per degenerate basis: 8
+REAL and NULL rotated separately; H, spectrum, V, coordinates, controls and score unchanged.
+
+seed | k | groups | group size min:max | baseline | REAL-rot range | signs +:- | NULL-rot range | signs +:-
+25042000 | 31 |      4 |   64:64   |  +0.008740 | [+0.005431,+0.026380] | 8:0 | [-0.036861,+0.009417] | 2:6
+25042000 | 95 |      4 |   64:64   |  -0.011960 | [-0.005876,+0.004988] | 6:2 | [-0.016215,+0.015980] | 1:7
+25042001 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042001 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042002 | 31 |      4 |   64:64   |  -0.028789 | [-0.044306,-0.001357] | 0:8 | [-0.009001,+0.024055] | 4:4
+25042002 | 95 |      4 |   64:64   |  +0.042523 | [+0.011510,+0.029605] | 8:0 | [+0.009318,+0.040283] | 8:0
+25042003 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042003 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042004 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042004 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042005 | 31 |      8 |   32:32   |  +0.291945 | [+0.292273,+0.368759] | 8:0 | [+0.309201,+0.385442] | 8:0
+25042005 | 95 |      8 |   32:32   |  +0.449957 | [+0.361644,+0.401812] | 8:0 | [+0.421468,+0.462740] | 8:0
+25042006 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042006 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042007 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042007 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042008 | 31 |     16 |   16:16   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042008 | 95 |     16 |   16:16   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042009 | 31 |      4 |   64:64   |  -0.065735 | [-0.040631,-0.002440] | 0:8 | [-0.067372,-0.022638] | 0:8
+25042009 | 95 |      4 |   64:64   |  -0.015559 | [-0.029177,+0.011309] | 2:6 | [-0.027794,+0.003798] | 3:5
+25042010 | 31 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042010 | 95 |      8 |   32:32   | INELIGIBLE | [INELIGIBLE,INELIGIBLE] | 0:0 | [INELIGIBLE,INELIGIBLE] | 0:0
+25042011 | 31 |      8 |   32:32   |  +0.364830 | [+0.339116,+0.386418] | 8:0 | [+0.351578,+0.423258] | 8:0
+25042011 | 95 |      8 |   32:32   |  +0.369841 | [+0.350998,+0.374408] | 8:0 | [+0.323391,+0.417169] | 8:0
+
+Eligible seed-candidate instances: 10/24
+Maximum REAL ||U_rot diag(E) U_rot^dagger - H_REAL||_2: 1.434724e-14
+Maximum NULL ||U_rot diag(E) U_rot^dagger - H_NULL||_2: 9.209561e-15
+REAL-rotation ranges crossing zero: 2/10
+NULL-rotation ranges crossing zero: 4/10
+REAL rotations reversing the baseline sign at least once: 2/10
+NULL rotations reversing the baseline sign at least once: 4/10
+
+Decision rule:
+  Any non-zero prominence range proves numerical non-invariance; any sign reversal is a direct
+  counterexample to hotspot-sign invariance for an unchanged Hamiltonian and perturbation.
+
+Scope:
+  The exact logical counterexample applies to the score definition wherever a selected 2D pair is
+  only an arbitrary slice of a larger degenerate eigenspace.  The finite run instantiates that issue
+  in the same five-term Pauli ensemble at 8Q; it does not re-run the expensive frozen 12Q matrices.
+
+CONCLUSION: BASIS-INVARIANCE FALSIFIED.
+The hotspot sign can change under a legal eigenbasis rotation that leaves H and its spectrum
+unchanged.  The present pair score is therefore not a well-defined physical observable of the
+highly degenerate five-term Hamiltonian.  A valid replacement must score complete degenerate
+eigenspace projectors or otherwise specify and physically justify a basis-selection rule.
