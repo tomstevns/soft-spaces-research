@@ -1,0 +1,18 @@
+=== Soft Spaces Phase 2 v25.33 EXACT ANCILLA-LIFT VERIFICATION ===
+Source dimension: 16 (4Q); lifted dimension: 32 (5Q)
+Frozen target: 7; frozen controls: [1, 3, 5, 9, 11, 13]
+Families: ['dephasing_like', 'transverse_like']; seeds: [2533001, 2533002, 2533003, 2533004, 2533005]
+Regularizer: 1.000e-03; numerical tolerance: 2.000e-10
+
+seed | real branch err | null branch err | delta err | prominence err | unrelated delta err
+2533001 |    4.385381e-15 |    4.829470e-15 | 6.106227e-15 |   4.579670e-15 |        5.571482e-01
+2533002 |    3.885781e-15 |    4.107825e-15 | 4.551914e-15 |   5.356826e-15 |        5.011590e-01
+2533003 |    5.079270e-15 |    4.232725e-15 | 5.995204e-15 |   1.332268e-15 |        4.196371e-01
+2533004 |    9.103829e-15 |    7.271961e-15 | 1.273981e-14 |   1.146305e-14 |        5.055007e-01
+2533005 |    5.606626e-15 |    6.439294e-15 | 6.605827e-15 |   5.662137e-15 |        4.604773e-01
+
+Exact-lift maximum discrepancy: 1.273981e-14
+Exact-lift theorem check: PASS
+Smallest unrelated-control discrepancy: 4.196371e-01
+Falsification reading: unrelated upper-dimensional perturbations do not preserve the source deltas.
+Scope: implementation check of the conditional theorem; not evidence for the independent 8Q–12Q ensemble.
