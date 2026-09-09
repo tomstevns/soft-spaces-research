@@ -1,0 +1,28 @@
+=== v24.19 internal explanatory evidence note ===
+
+Headline conclusion
+The current 8Q explanatory picture identifies (157, 158) as the strongest local ridge anchor.
+It ranks first by explanatory proxy (9.626) and combines repeat recurrence, positive median dynamic gain, positive logical purity, positive retention/fidelity contribution, and negative structure drift.
+
+Global dynamic background
+Across the underlying v24.14 repeats, the reduced-q50 medians remain small but consistently favorable: fid_uncond=+0.0007, subspace_ret=+0.0005, logical_purity=+0.0002, structure_drift=-0.0014.
+
+Why the leading anchor looks better
+For (157, 158), the median explanatory profile is: dyn_gain=+0.0030, fid_uncond=+0.0014, logical_purity=+0.0004, structure_drift=-0.0026, subspace_ret=+0.0010.
+Its recurrence profile is also the strongest in the compared set: batch_count_best=3, recur_fav_rate_med=+0.5700, recur_anti_rate_med=+0.1000, recur_stab_med=+0.5580.
+This indicates that the anchor wins not by purity alone, but by a better overall balance between recurrence, retention/fidelity, and suppressed structure drift.
+
+Comparison to nearby ridge positions
+The nearest strong alternative is (153, 154) with proxy=8.595. It remains relevant, but it is weaker than (157, 158) on the total balance of recurrence and dynamic contribution.
+Its medians are: dyn_gain=+0.0014, fid_uncond=-0.0009, logical_purity=+0.0006, structure_drift=-0.0008, subspace_ret=-0.0012.
+A further support point is (155, 156) with proxy=7.966. This suggests that the local geometry is ridge-like rather than a single isolated spike, but still clearly dominated by (157, 158).
+
+Contrastive reading of weaker neighbors
+A weaker comparison point such as (158, 159) shows that not every nearby position shares the same explanatory signature. These weaker points tend to lose either recurrence, favorability, retention/fidelity contribution, or structure-drift advantage.
+
+Operational recommendation
+Treat v24.14 as the current best operative 8Q hotspot version. Do not prioritize further score-bias tuning as the main next step.
+Instead, move into an explanatory phase centered on the dominant ridge anchor and its nearest neighbors.
+
+Article-ready paragraph
+In the current 8-qubit ridge analysis, the position (157, 158) emerges as the dominant local anchor. It outperforms nearby candidates not merely through a single metric, but through a combined profile of stronger repeat recurrence, positive median dynamic gain, positive retention/fidelity contribution, modest positive logical purity, and more favorable (i.e. lower) structure drift. Neighboring positions such as (153, 154) remain relevant, which supports a ridge-like interpretation rather than a fully isolated spike; however, the dominant anchor remains clearly preferred.

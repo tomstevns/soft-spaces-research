@@ -1,0 +1,299 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260603153633
+Username: DESKTOP-5NJUVJ4\tomst
+RunAs User: DESKTOP-5NJUVJ4\tomst
+Configuration Name: 
+Machine: DESKTOP-5NJUVJ4 (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoExit -File C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\Scripts\activate.ps1
+Process ID: 17344
+PSVersion: 5.1.26100.8521
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8521
+BuildVersion: 10.0.26100.8521
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is v25_1_q8_PILOT2_console_log.txt
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>python -X utf8 -u v1_0_Soft_Space_4_8_qubits_v25_1_q8_strengthened_repeat.py `
+  --n_qubits 8 `
+  --n_terms 5 `
+  --seeds_per_batch 250 `
+  --batches 1 `
+  --base_seed 2701000 `
+  --batch_stride 1000000 `
+  --eps_neighbor 0.05 `
+  --keep_mass 0.90 `
+  --ent_step 0.1 `
+  --leak_step 0.05 `
+  --times 0.5 1.0 1.5 `
+  --stable_frac 0.67 `
+  --iso_eps 1e-8 `
+  --topK 25 `
+  --min_overall 0 `
+  --min_stable 0 `
+  --alpha 0.05 `
+  --q_bins 16 `
+  --q_bins_coarse 8 `
+  --bootstrap 100 `
+  --p_tail_max 0.05 `
+  --open_system `
+  --os_include_baselines `
+  --os_pairs_per_batch 50 `
+  --os_noise_model both `
+  --os_gamma_phi 0.01 `
+  --os_gamma_1 0.02 `
+  --os_t_max 5.0 `
+  --os_t_steps 15 `
+  --os_dt_internal 0.05 `
+  --os_states_mode zx `
+  --logical_basis noise_diag `
+  --os_noise_qubits all `
+  --os_use_stable_pool `
+  --os_report_quantiles 0.1 0.5 0.9 `
+  --os_time_mode late `
+  --os_time_late_power 2.0 `
+  --output v25_1_q8_PILOT2_utf8.txt
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>Start-Transcript -Path v25_1_q8_PILOT3_console_log.txt
+Transcript started, output file is v25_1_q8_PILOT3_console_log.txt
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>python -X utf8 -u v1_0_Soft_Space_4_8_qubits_v25_1_q8_strengthened_repeat.py `
+  --n_qubits 8 `
+  --n_terms 5 `
+  --seeds_per_batch 250 `
+  --batches 1 `
+  --base_seed 2801000 `
+  --batch_stride 1000000 `
+  --eps_neighbor 0.05 `
+  --keep_mass 0.90 `
+  --ent_step 0.1 `
+  --leak_step 0.05 `
+  --times 0.5 1.0 1.5 `
+  --stable_frac 0.67 `
+  --iso_eps 1e-8 `
+  --topK 25 `
+  --min_overall 0 `
+  --min_stable 0 `
+  --alpha 0.05 `
+  --q_bins 16 `
+  --q_bins_coarse 8 `
+  --bootstrap 100 `
+  --p_tail_max 0.05 `
+  --open_system `
+  --os_include_baselines `
+  --os_pairs_per_batch 50 `
+  --os_noise_model both `
+  --os_gamma_phi 0.01 `
+  --os_gamma_1 0.02 `
+  --os_t_max 5.0 `
+  --os_t_steps 15 `
+  --os_dt_internal 0.05 `
+  --os_states_mode zx `
+  --logical_basis noise_diag `
+  --os_noise_qubits all `
+  --os_use_stable_pool `
+  --os_report_quantiles 0.1 0.5 0.9 `
+  --os_time_mode late `
+  --os_time_late_power 2.0 `
+  --output v25_1_q8_PILOT3_utf8.txt
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>python -X utf8 -u v1_0_Soft_Space_v25_2_q10_q12_continuation_targeted.py `
+  --n_qubits 10 `
+  --n_terms 5 `
+  --seeds_per_batch 250 `
+  --batches 1 `
+  --base_seed 3001000 `
+  --stable_frac 0.67 `
+  --continuation_q8_intervals 157-158 153-158 160-169 `
+  --control_intervals 2 `
+  --eps_neighbor 0.05 `
+  --keep_mass 0.90 `
+  --q_bins 16 `
+  --q_bins_coarse 8 `
+  --open_system `
+  --os_include_baselines `
+  --os_pairs_per_batch 50 `
+  --os_noise_model both `
+  --os_gamma_phi 0.01 `
+  --os_gamma_1 0.02 `
+  --os_t_max 5 `
+  --os_t_steps 15 `
+  --os_states_mode zx `
+  --logical_basis noise_diag `
+  --os_use_stable_pool `
+  --os_time_mode late `
+  --os_time_late_power 2.0 `
+  --contrast_focus `
+  --kernel_zoom `
+  --kernel_top_centers 12 `
+  --output v25_2_q10_continuation_PILOT1.txt
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>dir
+
+
+    Directory: C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        08-06-2026     10:43                Soft_Spaces_article_work
+d-----        24-04-2026     12:37                __pycache__
+-a----        19-04-2026     13:16           6251 first_v24_1_run.txt
+-a----        07-05-2026     15:39           1614 kopi20.bat
+-a----        29-04-2026     18:57           2102 phase1_8Q_local_ridge_document.txt
+-a----        20-04-2026     23:27              0 v0_7_6qubits_open_system_dephasing_v24_3.txt
+-a----        21-04-2026     08:55          22727 v0_7_6qubits_open_system_dephasing_v24_3_utf8.txt
+-a----        21-04-2026     13:04          38144 v0_7_7qubits_console_log.txt
+-a----        21-04-2026     13:04          18907 v0_7_7qubits_full_output.txt
+-a----        20-04-2026     18:30           1537 v0_7_convergence_families_v23_output.txt
+-a----        19-04-2026     13:00          86478 v1_0_Soft_Space_4_8_qubits_v24.py
+-a----        19-04-2026     13:08          90826 v1_0_Soft_Space_4_8_qubits_v24_1.py
+-a----        25-04-2026     13:03          10171 v1_0_Soft_Space_4_8_qubits_v24_10.py
+-a----        25-04-2026     13:36          11191 v1_0_Soft_Space_4_8_qubits_v24_11.py
+-a----        26-04-2026     09:57           7640 v1_0_Soft_Space_4_8_qubits_v24_12.py
+-a----        27-04-2026     09:59           8608 v1_0_Soft_Space_4_8_qubits_v24_12_REALonly_merger.py
+-a----        27-04-2026     10:07          15761 v1_0_Soft_Space_4_8_qubits_v24_13.py
+-a----        28-04-2026     13:06           8245 v1_0_Soft_Space_4_8_qubits_v24_13_merger.py
+-a----        28-04-2026     13:12          16385 v1_0_Soft_Space_4_8_qubits_v24_14.py
+-a----        28-04-2026     23:13           8587 v1_0_Soft_Space_4_8_qubits_v24_14_merger.py
+-a----        29-04-2026     08:17          10605 v1_0_Soft_Space_4_8_qubits_v24_15.py
+-a----        29-04-2026     11:35          10567 v1_0_Soft_Space_4_8_qubits_v24_15_fixed.py
+-a----        29-04-2026     14:13          11559 v1_0_Soft_Space_4_8_qubits_v24_16.py
+-a----        29-04-2026     17:44          11186 v1_0_Soft_Space_4_8_qubits_v24_17.py
+-a----        29-04-2026     18:17          13702 v1_0_Soft_Space_4_8_qubits_v24_18.py
+-a----        29-04-2026     18:30           9433 v1_0_Soft_Space_4_8_qubits_v24_19.py
+-a----        19-04-2026     14:56          91055 v1_0_Soft_Space_4_8_qubits_v24_2.py
+-a----        20-04-2026     13:02          97298 v1_0_Soft_Space_4_8_qubits_v24_3.py
+-a----        21-04-2026     08:09          97798 v1_0_Soft_Space_4_8_qubits_v24_3_utf8.py
+-a----        21-04-2026     13:34          99949 v1_0_Soft_Space_4_8_qubits_v24_4.py
+-a----        21-04-2026     15:28         104581 v1_0_Soft_Space_4_8_qubits_v24_5.py
+-a----        22-04-2026     17:33         105543 v1_0_Soft_Space_4_8_qubits_v24_6.py
+-a----        23-04-2026     09:37         108951 v1_0_Soft_Space_4_8_qubits_v24_7.py
+-a----        23-04-2026     20:18         124020 v1_0_Soft_Space_4_8_qubits_v24_8_1.py
+-a----        24-04-2026     08:19         127782 v1_0_Soft_Space_4_8_qubits_v24_8_2.py
+-a----        24-04-2026     08:38         128033 v1_0_Soft_Space_4_8_qubits_v24_8_3.py
+-a----        23-04-2026     13:44         116290 v1_0_Soft_Space_4_8_qubits_v24_8_merge.py
+-a----        24-04-2026     08:58         130531 v1_0_Soft_Space_4_8_qubits_v24_9.py
+-a----        24-04-2026     09:18         133753 v1_0_Soft_Space_4_8_qubits_v24_9_1.py
+-a----        24-04-2026     09:33         137774 v1_0_Soft_Space_4_8_qubits_v24_9_2.py
+-a----        24-04-2026     12:25         137774 v1_0_Soft_Space_4_8_qubits_v24_9_2_repeat.py
+-a----        24-04-2026     15:25          11206 v1_0_Soft_Space_4_8_qubits_v24_9_2_repeat_debug.py
+-a----        24-04-2026     12:36          12360 v1_0_Soft_Space_4_8_qubits_v24_9_2_repeat_fixed.py
+-a----        24-04-2026     12:39          12398 v1_0_Soft_Space_4_8_qubits_v24_9_2_repeat_fixed2.py
+-a----        25-04-2026     07:52           9198 v1_0_Soft_Space_4_8_qubits_v24_9_3.py
+-a----        25-04-2026     12:45           9775 v1_0_Soft_Space_4_8_qubits_v24_9_4.py
+-a----        24-04-2026     12:25         137774 v1_0_Soft_Space_4_8_qubits_v25_1_q8_strengthened_repeat.py
+-a----        25-04-2026     13:04           4955 v24_10_8qubits_targeted_region_eval.txt
+-a----        25-04-2026     13:43           4738 v24_11_8qubits_targeting_prior_pack.json
+-a----        25-04-2026     13:43           2648 v24_11_8qubits_targeting_prior_pack.txt
+-a----        26-04-2026     12:08          39263 v24_12_8qubits_soft_region_prior.txt
+-a----        26-04-2026     12:08          79232 v24_12_8qubits_soft_region_prior_console_log.txt
+-a----        27-04-2026     09:17          40907 v24_12_8qubits_soft_region_prior_realonly_repeat1.txt
+-a----        27-04-2026     09:17          82472 v24_12_8qubits_soft_region_prior_REALonly_repeat1_console_log.txt
+-a----        26-04-2026     19:00          40945 v24_12_8qubits_soft_region_prior_realonly_repeat2.txt
+-a----        26-04-2026     19:00          82548 v24_12_8qubits_soft_region_prior_realonly_repeat2_console_log.txt
+-a----        26-04-2026     21:20          41757 v24_12_8qubits_soft_region_prior_realonly_repeat3.txt
+-a----        26-04-2026     21:20          84172 v24_12_8qubits_soft_region_prior_realonly_repeat3_console_log.txt
+-a----        27-04-2026     21:23           2764 v24_12_REALonly_repeat_merge.txt
+-a----        28-04-2026     00:56          41001 v24_13_8qubits_dual_region_realonly_repeat1.txt
+-a----        28-04-2026     00:56          87112 v24_13_8qubits_dual_region_realonly_repeat1_console_log.txt
+-a----        28-04-2026     09:26          41038 v24_13_8qubits_dual_region_realonly_repeat2.txt
+-a----        28-04-2026     09:26          87186 v24_13_8qubits_dual_region_realonly_repeat2_console_log.txt
+-a----        28-04-2026     12:15          41048 v24_13_8qubits_dual_region_realonly_repeat3.txt
+-a----        28-04-2026     12:15          87206 v24_13_8qubits_dual_region_realonly_repeat3_console_log.txt
+-a----        28-04-2026     13:08           2239 v24_13_repeat_merge.txt
+-a----        28-04-2026     16:49          40507 v24_14_8qubits_asym_dual_region_realonly_repeat1.txt
+-a----        28-04-2026     16:49          86262 v24_14_8qubits_asym_dual_region_realonly_repeat1_console_log.txt
+-a----        28-04-2026     18:56          42568 v24_14_8qubits_asym_dual_region_realonly_repeat2.txt
+-a----        28-04-2026     18:56          90384 v24_14_8qubits_asym_dual_region_realonly_repeat2_console_log.txt
+-a----        28-04-2026     20:53          41827 v24_14_8qubits_asym_dual_region_realonly_repeat3.txt
+-a----        28-04-2026     20:53          88902 v24_14_8qubits_asym_dual_region_realonly_repeat3_console_log.txt
+-a----        28-04-2026     23:14           3040 v24_14_repeat_merge.txt
+-a----        29-04-2026     13:17          43351 v24_15_8qubits_ridge_refinement_repeat1.txt
+-a----        29-04-2026     13:17          86062 v24_15_8qubits_ridge_refinement_repeat1_console_log.txt
+-a----        29-04-2026     15:58          43532 v24_16_8qubits_diag_conservative_repeat1.txt
+-a----        29-04-2026     15:58          86384 v24_16_8qubits_diag_conservative_repeat1_console_log.txt
+-a----        29-04-2026     18:06          20170 v24_17_v24_14_local_ridge_report.txt
+-a----        29-04-2026     18:17           3678 v24_18_explanatory_ridge_report.txt
+-a----        29-04-2026     18:31           2829 v24_19_internal_explanatory_note.txt
+-a----        19-04-2026     14:41          20618 v24_1_reference_late.txt
+-a----        19-04-2026     14:26          20618 v24_1_reference_mean.txt
+-a----        19-04-2026     14:49          20618 v24_1_reference_peak.txt
+-a----        29-04-2026     18:40           3028 v24_20_article_ready_mini_section.txt
+-a----        29-04-2026     18:46           5065 v24_21_local_lindblad_geometry_memo.txt
+-a----        19-04-2026     16:06          21974 v24_2_dummy_5_qubit.txt
+-a----        19-04-2026     17:02          22753 v24_2_dummy_6_qubit.txt
+-a----        19-04-2026     23:41          22749 v24_2_q6_ampdamping_nostablepool.txt
+-a----        19-04-2026     20:26          22745 v24_2_q6_ampdamping_stablepool.txt
+-a----        19-04-2026     15:00          20718 v24_2_reference_peak_post_init.txt
+-a----        20-04-2026     13:10          18917 v24_3_q6_interference.txt
+-a----        20-04-2026     18:30           3452 v24_3_run_7qubits_3x5000.txt
+-a----        21-04-2026     13:56          46468 v24_4_6qubits_open_system_targeted_console_log.txt
+-a----        21-04-2026     13:56          23069 v24_4_6qubits_open_system_targeted_output.txt
+-a----        21-04-2026     15:59          26543 v24_5_6qubits_structure_dynamics.txt
+-a----        21-04-2026     20:14          43732 v24_5_6qubits_structure_dynamics_boosted.txt
+-a----        21-04-2026     20:14          88024 v24_5_6qubits_structure_dynamics_boosted_console_log.txt
+-a----        21-04-2026     15:59          53416 v24_5_6qubits_structure_dynamics_console_log.txt
+-a----        22-04-2026     12:06          43722 v24_5_7qubits_structure_dynamics_boosted.txt
+-a----        22-04-2026     12:06          88004 v24_5_7qubits_structure_dynamics_boosted_console_log.txt
+-a----        22-04-2026     01:29          26532 v24_5_7qubits_structure_dynamics_probe.txt
+-a----        22-04-2026     01:29          53400 v24_5_7qubits_structure_dynamics_probe_console_log.txt
+-a----        22-04-2026     12:42           2520 v24_5_8qubits_structure_dynamics_probe_console_log.txt
+-a----        21-04-2026     15:29          15740 v24_5_sanity_check_console_log.txt
+-a----        21-04-2026     15:29           7823 v24_5_sanity_check_output.txt
+-a----        23-04-2026     02:48          26669 v24_6_8qubits_structure_dynamics_probe.txt
+-a----        23-04-2026     02:48          53692 v24_6_8qubits_structure_dynamics_probe_console_log.txt
+-a----        23-04-2026     12:31          27129 v24_7_8qubits_contrast_focus_probe.txt
+-a----        23-04-2026     12:31          54606 v24_7_8qubits_contrast_focus_probe_console_log.txt
+-a----        24-04-2026     08:07          41290 v24_8_1_4qubits_kernel_zoom_boosted.txt
+-a----        24-04-2026     08:07          83100 v24_8_1_4qubits_kernel_zoom_boosted_console_log.txt
+-a----        24-04-2026     07:50          25236 v24_8_1_4qubits_kernel_zoom_evidence.txt
+-a----        24-04-2026     07:50          50784 v24_8_1_4qubits_kernel_zoom_evidence_console_log.txt
+-a----        23-04-2026     23:18          27226 v24_8_1_8qubits_kernel_zoom_evidence.txt
+-a----        23-04-2026     23:18          54800 v24_8_1_8qubits_kernel_zoom_evidence_console_log.txt
+-a----        24-04-2026     08:29          47165 v24_8_2_4qubits_kernel_zoom_boosted.txt
+-a----        24-04-2026     08:29          94850 v24_8_2_4qubits_kernel_zoom_boosted_console_log.txt
+-a----        24-04-2026     08:41          41582 v24_8_3_4qubits_multipoint_kernel.txt
+-a----        24-04-2026     08:41          83684 v24_8_3_4qubits_multipoint_kernel_console_log.txt
+-a----        23-04-2026     18:45          27211 v24_8_merge_8qubits_kernel_zoom.txt
+-a----        23-04-2026     18:45          54770 v24_8_merge_8qubits_kernel_zoom_console_log.txt
+-a----        24-04-2026     09:21          53689 v24_9_1_4qubits_hotspot_recurrence.txt
+-a----        24-04-2026     09:21         107898 v24_9_1_4qubits_hotspot_recurrence_console_log.txt
+-a----        24-04-2026     09:36          56887 v24_9_2_4qubits_hotspot_stability.txt
+-a----        24-04-2026     09:36         114294 v24_9_2_4qubits_hotspot_stability_console_log.txt
+-a----        24-04-2026     11:21          42857 v24_9_2_8qubits_hotspot_stability.txt
+-a----        24-04-2026     11:21          86062 v24_9_2_8qubits_hotspot_stability_console_log.txt
+-a----        25-04-2026     10:27          42857 v24_9_2_8qubits_repeat1.txt
+-a----        25-04-2026     10:27          86062 v24_9_2_8qubits_repeat1_console_log.txt
+-a----        24-04-2026     19:39          43281 v24_9_2_8qubits_repeat2.txt
+-a----        24-04-2026     19:39          86910 v24_9_2_8qubits_repeat2_console_log.txt
+-a----        25-04-2026     00:27          42905 v24_9_2_8qubits_repeat3.txt
+-a----        25-04-2026     00:27          86158 v24_9_2_8qubits_repeat3_console_log.txt
+-a----        24-04-2026     17:13           2748 v24_9_2_repeat_8qubits_debug.txt
+-a----        24-04-2026     17:14           6616 v24_9_2_repeat_8qubits_debug_console_log.txt
+-a----        24-04-2026     14:27            596 v24_9_2_repeat_8qubits_hotspot_stability.txt
+-a----        24-04-2026     14:27           4830 v24_9_2_repeat_8qubits_hotspot_stability_console_log.txt
+-a----        25-04-2026     12:29           7762 v24_9_3_8qubits_repeat_merge.txt
+-a----        24-04-2026     09:10          49196 v24_9_4qubits_hotspots.txt
+-a----        24-04-2026     09:10          98912 v24_9_4qubits_hotspots_console_log.txt
+-a----        25-04-2026     12:46           7861 v24_9_4_8qubits_priority_report.txt
+-a----        04-06-2026     17:36           2085 v25_1_q8_PILOT2_console_log.txt
+-a----        04-06-2026     15:51          10763 v25_1_q8_PILOT2_utf8.txt
+-a----        04-06-2026     17:36            833 v25_1_q8_PILOT3_console_log.txt
+-a----        06-06-2026     21:32          10854 v25_1_q8_PILOT3_utf8.txt
+-a----        06-06-2026     21:32           4460 v25_1_q8_PILOT_console_log.txt
+-a----        03-06-2026     15:13          10940 v25_1_q8_PILOT_utf8.txt
+-a----        16-05-2026     10:22              0 v25_1_q8_TEST_strengthened_repeat_utf8.txt
+-a----        02-06-2026     15:11           1327 v25_1_q8_TINY_SMOKE_utf8.txt
+
+
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0>
+PS>cd .\Soft_Spaces_article_work\
+(venv) PS C:\Users\tomst\PycharmProjects\Soft Spaces with 4 to 8 qubits\venv\V_1_0\Soft_Spaces_article_work>

@@ -1,0 +1,201 @@
+{
+  "version": "v24.11",
+  "region_width": 8,
+  "global_dynamic_summary": {
+    "logical_purity_med": 0.0004,
+    "structure_drift_med": -0.0029
+  },
+  "targeted_vs_untargeted_delta": {
+    "dyn_gain": 0.0002,
+    "logical_purity": 0.0001,
+    "structure_drift": -0.0003,
+    "fav_rate": 0.16
+  },
+  "selection_policy": {
+    "mode": "soft_region_prior",
+    "base_score": "existing_score",
+    "bonus_formula": "base_score + region_bonus + anchor_bonus",
+    "region_bonus_scale": 0.206,
+    "anchor_bonus_scale": 0.104,
+    "exploration_fraction": 0.25,
+    "hard_constraints": false,
+    "notes": [
+      "Use target regions as priors, not hard filters.",
+      "Keep an exploration tail outside target regions to avoid collapse.",
+      "Prefer anchors inside top repeat-stable regions when ties occur."
+    ]
+  },
+  "region_priors": [
+    {
+      "region": [
+        12,
+        12
+      ],
+      "window": [
+        96,
+        103,
+        96,
+        103
+      ],
+      "label": "robust_favorable",
+      "priority": 3.737,
+      "repeat_rate": 1.0,
+      "fav_rate": 1.0,
+      "stab": 1.0,
+      "dyn_gain_med": 0.0044,
+      "logical_purity_med": 0.001,
+      "structure_drift_med": -0.0034,
+      "contrast_med": 0.0,
+      "target_weight_raw": 3.737,
+      "best_anchor": [
+        102,
+        103
+      ],
+      "best_anchor_priority": 2.034,
+      "best_anchor_repeats": 2,
+      "target_weight": 0.19960474308300394
+    },
+    {
+      "region": [
+        19,
+        19
+      ],
+      "window": [
+        152,
+        159,
+        152,
+        159
+      ],
+      "label": "robust_favorable",
+      "priority": 3.43,
+      "repeat_rate": 1.0,
+      "fav_rate": 1.0,
+      "stab": 1.0,
+      "dyn_gain_med": 0.0025,
+      "logical_purity_med": 0.0006,
+      "structure_drift_med": -0.0019,
+      "contrast_med": 0.0,
+      "target_weight_raw": 3.43,
+      "best_anchor": [
+        157,
+        158
+      ],
+      "best_anchor_priority": 1.224,
+      "best_anchor_repeats": 1,
+      "target_weight": 0.1832069223373571
+    },
+    {
+      "region": [
+        18,
+        18
+      ],
+      "window": [
+        144,
+        151,
+        144,
+        151
+      ],
+      "label": "robust_favorable",
+      "priority": 2.979,
+      "repeat_rate": 0.6666666666666666,
+      "fav_rate": 1.0,
+      "stab": 0.6666666666666666,
+      "dyn_gain_med": 0.0034,
+      "logical_purity_med": 0.0007,
+      "structure_drift_med": -0.0027,
+      "contrast_med": 0.0,
+      "target_weight_raw": 2.979,
+      "best_anchor": [
+        146,
+        147
+      ],
+      "best_anchor_priority": 1.062,
+      "best_anchor_repeats": 1,
+      "target_weight": 0.15911761563935475
+    },
+    {
+      "region": [
+        5,
+        5
+      ],
+      "window": [
+        40,
+        47,
+        40,
+        47
+      ],
+      "label": "robust_favorable",
+      "priority": 2.889,
+      "repeat_rate": 0.6666666666666666,
+      "fav_rate": 1.0,
+      "stab": 0.6666666666666666,
+      "dyn_gain_med": 0.0029,
+      "logical_purity_med": 0.0005,
+      "structure_drift_med": -0.0026,
+      "contrast_med": 0.0,
+      "target_weight_raw": 2.889,
+      "best_anchor": [
+        45,
+        46
+      ],
+      "best_anchor_priority": 1.164,
+      "best_anchor_repeats": 1,
+      "target_weight": 0.15431043691913254
+    },
+    {
+      "region": [
+        23,
+        23
+      ],
+      "window": [
+        184,
+        191,
+        184,
+        191
+      ],
+      "label": "robust_favorable",
+      "priority": 2.889,
+      "repeat_rate": 0.6666666666666666,
+      "fav_rate": 1.0,
+      "stab": 0.6666666666666666,
+      "dyn_gain_med": 0.0029,
+      "logical_purity_med": 0.0006,
+      "structure_drift_med": -0.0024,
+      "contrast_med": 0.0,
+      "target_weight_raw": 2.889,
+      "best_anchor": [
+        190,
+        191
+      ],
+      "best_anchor_priority": 1.132,
+      "best_anchor_repeats": 1,
+      "target_weight": 0.15431043691913254
+    },
+    {
+      "region": [
+        26,
+        26
+      ],
+      "window": [
+        208,
+        215,
+        208,
+        215
+      ],
+      "label": "robust_favorable",
+      "priority": 2.798,
+      "repeat_rate": 0.6666666666666666,
+      "fav_rate": 1.0,
+      "stab": 0.6666666666666666,
+      "dyn_gain_med": 0.0026,
+      "logical_purity_med": 0.0003,
+      "structure_drift_med": -0.0024,
+      "contrast_med": 0.0,
+      "target_weight_raw": 2.798,
+      "best_anchor": null,
+      "best_anchor_priority": null,
+      "best_anchor_repeats": null,
+      "target_weight": 0.149449845102019
+    }
+  ]
+}

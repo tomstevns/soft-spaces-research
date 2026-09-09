@@ -1,0 +1,21 @@
+=== v24.13 dual-region REAL-only hotspot merger ===
+inputs=3 | region_width=8
+repeat 1: file=v24_13_8qubits_dual_region_realonly_repeat1.txt | base_seed=0 | hotspots=6 | logical_purity_med=+0.0005 | structure_drift_med=-0.0019
+repeat 2: file=v24_13_8qubits_dual_region_realonly_repeat2.txt | base_seed=10000000 | hotspots=6 | logical_purity_med=+0.0003 | structure_drift_med=-0.0019
+repeat 3: file=v24_13_8qubits_dual_region_realonly_repeat3.txt | base_seed=20000000 | hotspots=6 | logical_purity_med=+0.0003 | structure_drift_med=-0.0020
+
+=== Global dynamic summary across inputs ===
+logical_purity_med=+0.0003 | structure_drift_med=-0.0019
+
+=== Cross-repeat hotspot recurrence by exact position (v24.13 merger) ===
+pos=(157, 158) | repeats=3/3 | repeat_rate=1.00 | count=9 | favored=8/9 | anti=0/9 | fav_rate=0.89 | anti_rate=0.00 | stab=+0.8889 | label=robust_favorable | dyn_gain_med=+0.0019 | logical_purity_med=+0.0004 | structure_drift_med=-0.0016 | repeat_ids=[1, 2, 3]
+pos=(102, 103) | repeats=3/3 | repeat_rate=1.00 | count=9 | favored=6/9 | anti=1/9 | fav_rate=0.67 | anti_rate=0.11 | stab=+0.5556 | label=mixed_recurrent | dyn_gain_med=+0.0018 | logical_purity_med=+0.0003 | structure_drift_med=-0.0016 | repeat_ids=[1, 2, 3]
+
+=== Cross-repeat hotspot recurrence by region (v24.13 merger) ===
+region=(19, 19) | repeats=3/3 | repeat_rate=1.00 | count=9 | favored=8/9 | anti=0/9 | fav_rate=0.89 | anti_rate=0.00 | stab=+0.8889 | label=robust_favorable | dyn_gain_med=+0.0019 | logical_purity_med=+0.0004 | structure_drift_med=-0.0016 | repeat_ids=[1, 2, 3]
+region=(12, 12) | repeats=3/3 | repeat_rate=1.00 | count=9 | favored=6/9 | anti=1/9 | fav_rate=0.67 | anti_rate=0.11 | stab=+0.5556 | label=mixed_recurrent | dyn_gain_med=+0.0018 | logical_purity_med=+0.0003 | structure_drift_med=-0.0016 | repeat_ids=[1, 2, 3]
+
+=== v24.13 reading ===
+1) Test whether the dual-region REAL-only prior stabilizes both recurrent anchors across independent repeats.
+2) Compare exact-position recurrence and region recurrence to see whether dual targeting reduces fragmentation.
+3) If one anchor dominates while the other weakens, keep the dual-region setup but rebalance region vs anchor bonus scales in the next version.

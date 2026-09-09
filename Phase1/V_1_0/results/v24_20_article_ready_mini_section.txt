@@ -1,0 +1,22 @@
+=== v24.20 article-ready mini section ===
+
+Title
+8Q Local Ridge Interpretation: Dominant Anchor at (157,158)
+
+Mini section
+Within the current 8-qubit analysis, the local hotspot structure is best interpreted as a narrow ridge rather than as a completely isolated spike. Across the validated v24.14 repeat set, the position (157,158) emerges as the dominant local anchor, while nearby positions such as (153,154) and (155,156) remain relevant but weaker support points. This gives the 8Q landscape a locally structured geometry in which one anchor is clearly preferred, yet not entirely detached from its nearest neighbors.
+
+The key point is that (157,158) does not dominate by a single metric alone. Instead, it is preferred through a combined explanatory profile: stronger repeat recurrence, positive median dynamic gain, positive retention/fidelity contribution, modest positive logical-purity contribution, and lower structure drift than its weaker local alternatives. In other words, the dominant 8Q anchor is not simply the “purest” local point; it is the point with the best overall balance between stability and dynamical usefulness.
+
+This distinction matters for the interpretation of the 8Q regime. The local ridge picture suggests that the observed dynamical advantage is sparse and structured rather than broadly distributed across the full search landscape. At the same time, the existence of nearby but weaker support points argues against reading the result as a single accidental outlier. The current evidence therefore supports a ridge-like interpretation in which (157,158) serves as the operative local anchor, with nearby positions contributing secondary support but not displacing the primary role of the anchor.
+
+Operationally, this means that v24.14 should be treated as the current best operative 8Q hotspot version. The next phase should not prioritize further score-bias tuning as the main line of work. Instead, the natural next step is explanatory analysis: clarify why the dominant anchor outperforms its nearest neighbors, and determine which part of the dynamical profile — recurrence, retention/fidelity, logical purity, or structure drift — is most responsible for the local advantage.
+
+Short article paragraph
+In the present 8-qubit ridge analysis, the position (157,158) emerges as the dominant local anchor. It outperforms nearby candidates not through a single metric, but through a combined profile of stronger repeat recurrence, positive median dynamic gain, positive retention/fidelity contribution, modest positive logical purity, and more favorable structure drift. Neighboring positions such as (153,154) and (155,156) remain relevant, which supports a ridge-like interpretation rather than a fully isolated spike; however, the dominant anchor remains clearly preferred.
+
+Suggested section heading options
+1. Local Ridge Structure at 8 Qubits
+2. Dominant 8Q Anchor and Neighbor Support
+3. Explanatory Interpretation of the 8Q Ridge
+4. Why the (157,158) Anchor Dominates Locally

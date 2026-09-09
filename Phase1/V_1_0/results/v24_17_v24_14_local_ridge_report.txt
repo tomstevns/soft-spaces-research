@@ -1,0 +1,108 @@
+=== v24.17 diagnostic ridge report ===
+inputs=3 | anchor=(157, 158) | radius=8 | top_k=20
+
+=== Input files ===
+repeat 1: file=v24_14_8qubits_asym_dual_region_realonly_repeat1.txt | base_seed=0 | hotspots=24 | recurrence_rows=2
+repeat 2: file=v24_14_8qubits_asym_dual_region_realonly_repeat2.txt | base_seed=10000000 | hotspots=24 | recurrence_rows=5
+repeat 3: file=v24_14_8qubits_asym_dual_region_realonly_repeat3.txt | base_seed=20000000 | hotspots=24 | recurrence_rows=5
+
+=== Global reduced-q50 medians across inputs ===
+fid_uncond=+0.0007 | fid_cond=+0.0001 | leak=-0.0005 | subspace_ret=+0.0005 | logical_coh=-0.0003 | logical_purity=+0.0002 | structure_drift=-0.0014
+
+=== Local hotspot evidence within radius ===
+repeat=1 | seed=4732 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0640 | contrast=+3.7109 | hotspot_score=+4.4023 | fid_uncond=+0.0621 | logical_purity=+0.0006 | structure_drift=-0.0635 | subspace_ret=+0.0618
+repeat=1 | seed=2001552 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0445 | contrast=+3.0922 | hotspot_score=+3.6588 | fid_uncond=+0.0477 | logical_purity=-0.0015 | structure_drift=-0.0460 | subspace_ret=+0.0485
+repeat=1 | seed=1002270 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0226 | contrast=+2.9246 | hotspot_score=+3.4807 | fid_uncond=+0.0352 | logical_purity=-0.0051 | structure_drift=-0.0277 | subspace_ret=+0.0378
+repeat=1 | seed=1001287 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0112 | contrast=+2.1173 | hotspot_score=+2.4892 | fid_uncond=+0.0158 | logical_purity=-0.0019 | structure_drift=-0.0131 | subspace_ret=+0.0167
+repeat=1 | seed=4833 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0073 | contrast=+2.3519 | hotspot_score=+2.7746 | fid_uncond=+0.0029 | logical_purity=+0.0016 | structure_drift=-0.0057 | subspace_ret=+0.0021
+repeat=1 | seed=1004656 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0073 | contrast=+1.9370 | hotspot_score=+2.2381 | fid_uncond=+0.0052 | logical_purity=+0.0006 | structure_drift=-0.0067 | subspace_ret=+0.0050
+repeat=1 | seed=2002341 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0054 | contrast=+2.3865 | hotspot_score=+2.7670 | fid_uncond=+0.0008 | logical_purity=+0.0014 | structure_drift=-0.0040 | subspace_ret=+0.0002
+repeat=1 | seed=1001713 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0037 | contrast=+2.3958 | hotspot_score=+2.8235 | fid_uncond=+0.0022 | logical_purity=+0.0004 | structure_drift=-0.0032 | subspace_ret=+0.0020
+repeat=1 | seed=2000035 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0036 | contrast=+2.0858 | hotspot_score=+2.4283 | fid_uncond=+0.0018 | logical_purity=+0.0005 | structure_drift=-0.0031 | subspace_ret=+0.0016
+repeat=1 | seed=1001869 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0034 | contrast=+2.1282 | hotspot_score=+2.4510 | fid_uncond=+0.0011 | logical_purity=+0.0007 | structure_drift=-0.0028 | subspace_ret=+0.0008
+repeat=1 | seed=2002171 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0034 | contrast=+1.9032 | hotspot_score=+2.2079 | fid_uncond=+0.0050 | logical_purity=-0.0007 | structure_drift=-0.0040 | subspace_ret=+0.0053
+repeat=1 | seed=4702 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0030 | contrast=+2.2046 | hotspot_score=+2.5641 | fid_uncond=+0.0027 | logical_purity=+0.0001 | structure_drift=-0.0029 | subspace_ret=+0.0027
+repeat=1 | seed=1850 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0030 | contrast=+2.2988 | hotspot_score=+2.7020 | fid_uncond=+0.0021 | logical_purity=+0.0004 | structure_drift=-0.0026 | subspace_ret=+0.0019
+repeat=1 | seed=2870 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0025 | contrast=+2.4451 | hotspot_score=+2.8783 | fid_uncond=+0.0012 | logical_purity=+0.0004 | structure_drift=-0.0020 | subspace_ret=+0.0010
+repeat=1 | seed=2494 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0022 | contrast=+2.2501 | hotspot_score=+2.6677 | fid_uncond=+0.0008 | logical_purity=+0.0005 | structure_drift=-0.0017 | subspace_ret=+0.0006
+repeat=1 | seed=1003683 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0020 | contrast=+1.9941 | hotspot_score=+2.3203 | fid_uncond=+0.0004 | logical_purity=+0.0005 | structure_drift=-0.0015 | subspace_ret=+0.0002
+repeat=1 | seed=1003871 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0020 | contrast=+2.3125 | hotspot_score=+2.7046 | fid_uncond=+0.0020 | logical_purity=-0.0002 | structure_drift=-0.0021 | subspace_ret=+0.0021
+repeat=1 | seed=2132 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0019 | contrast=+3.8054 | hotspot_score=+4.5131 | fid_uncond=+0.0005 | logical_purity=+0.0005 | structure_drift=-0.0014 | subspace_ret=+0.0003
+repeat=1 | seed=2000897 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0019 | contrast=+2.6802 | hotspot_score=+3.1146 | fid_uncond=+0.0007 | logical_purity=+0.0003 | structure_drift=-0.0016 | subspace_ret=+0.0006
+repeat=1 | seed=2777 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0014 | contrast=+3.6811 | hotspot_score=+4.3776 | fid_uncond=-0.0005 | logical_purity=+0.0006 | structure_drift=-0.0008 | subspace_ret=-0.0008
+repeat=1 | seed=2001397 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0013 | contrast=+2.7512 | hotspot_score=+3.2667 | fid_uncond=-0.0002 | logical_purity=+0.0006 | structure_drift=-0.0007 | subspace_ret=-0.0005
+repeat=1 | seed=2002770 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0010 | contrast=+4.3129 | hotspot_score=+5.1468 | fid_uncond=-0.0016 | logical_purity=+0.0009 | structure_drift=-0.0001 | subspace_ret=-0.0020
+repeat=1 | seed=2004691 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0008 | contrast=+1.8890 | hotspot_score=+2.1968 | fid_uncond=+0.0002 | logical_purity=+0.0001 | structure_drift=-0.0008 | subspace_ret=+0.0001
+repeat=1 | seed=1003521 | pos=(153, 154) | dist=8 | fav=True | dyn_gain=+0.0010 | contrast=+2.2326 | hotspot_score=+2.6391 | fid_uncond=-0.0007 | logical_purity=+0.0005 | structure_drift=-0.0005 | subspace_ret=-0.0010
+repeat=2 | seed=10000070 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0103 | contrast=+3.5054 | hotspot_score=+4.1704 | fid_uncond=+0.0116 | logical_purity=-0.0006 | structure_drift=-0.0109 | subspace_ret=+0.0119
+repeat=2 | seed=11000129 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0089 | contrast=+1.7544 | hotspot_score=+2.0314 | fid_uncond=+0.0181 | logical_purity=-0.0038 | structure_drift=-0.0127 | subspace_ret=+0.0199
+repeat=2 | seed=11000940 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0077 | contrast=+1.9030 | hotspot_score=+2.2301 | fid_uncond=+0.0049 | logical_purity=+0.0008 | structure_drift=-0.0069 | subspace_ret=+0.0046
+repeat=2 | seed=11002635 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0060 | contrast=+2.8598 | hotspot_score=+3.4044 | fid_uncond=+0.0061 | logical_purity=+0.0000 | structure_drift=-0.0059 | subspace_ret=+0.0061
+repeat=2 | seed=10000285 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0055 | contrast=+2.9507 | hotspot_score=+3.5122 | fid_uncond=+0.0011 | logical_purity=+0.0016 | structure_drift=-0.0038 | subspace_ret=+0.0003
+repeat=2 | seed=11000656 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0045 | contrast=+2.7570 | hotspot_score=+3.2575 | fid_uncond=+0.0040 | logical_purity=+0.0002 | structure_drift=-0.0043 | subspace_ret=+0.0039
+repeat=2 | seed=10002779 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0041 | contrast=+2.7163 | hotspot_score=+3.2331 | fid_uncond=+0.0037 | logical_purity=+0.0002 | structure_drift=-0.0039 | subspace_ret=+0.0036
+repeat=2 | seed=12000052 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0040 | contrast=+2.7514 | hotspot_score=+3.2710 | fid_uncond=+0.0023 | logical_purity=+0.0006 | structure_drift=-0.0034 | subspace_ret=+0.0020
+repeat=2 | seed=11003306 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0030 | contrast=+3.1255 | hotspot_score=+3.7023 | fid_uncond=+0.0020 | logical_purity=+0.0003 | structure_drift=-0.0027 | subspace_ret=+0.0018
+repeat=2 | seed=12004104 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0026 | contrast=+3.1796 | hotspot_score=+3.7916 | fid_uncond=-0.0005 | logical_purity=+0.0010 | structure_drift=-0.0016 | subspace_ret=-0.0010
+repeat=2 | seed=12000771 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0021 | contrast=+2.6665 | hotspot_score=+3.1277 | fid_uncond=+0.0009 | logical_purity=+0.0004 | structure_drift=-0.0017 | subspace_ret=+0.0008
+repeat=2 | seed=10004079 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0020 | contrast=+2.4960 | hotspot_score=+2.9381 | fid_uncond=+0.0005 | logical_purity=+0.0005 | structure_drift=-0.0015 | subspace_ret=+0.0002
+repeat=2 | seed=10003122 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0018 | contrast=+2.3548 | hotspot_score=+2.7822 | fid_uncond=+0.0053 | logical_purity=-0.0014 | structure_drift=-0.0032 | subspace_ret=+0.0059
+repeat=2 | seed=10004108 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0017 | contrast=+2.9061 | hotspot_score=+3.4564 | fid_uncond=+0.0011 | logical_purity=-0.0001 | structure_drift=-0.0017 | subspace_ret=+0.0011
+repeat=2 | seed=12000320 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0017 | contrast=+2.2245 | hotspot_score=+2.5670 | fid_uncond=+0.0009 | logical_purity=+0.0003 | structure_drift=-0.0013 | subspace_ret=+0.0008
+repeat=2 | seed=12000709 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0016 | contrast=+1.6433 | hotspot_score=+1.9170 | fid_uncond=-0.0010 | logical_purity=+0.0007 | structure_drift=-0.0009 | subspace_ret=-0.0013
+repeat=2 | seed=10000919 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0012 | contrast=+2.6971 | hotspot_score=+3.1475 | fid_uncond=+0.0003 | logical_purity=+0.0003 | structure_drift=-0.0009 | subspace_ret=+0.0001
+repeat=2 | seed=11000053 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0011 | contrast=+1.7261 | hotspot_score=+1.9845 | fid_uncond=+0.0010 | logical_purity=+0.0000 | structure_drift=-0.0011 | subspace_ret=+0.0010
+repeat=2 | seed=12003054 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0009 | contrast=+3.3634 | hotspot_score=+3.9921 | fid_uncond=+0.0022 | logical_purity=-0.0006 | structure_drift=-0.0015 | subspace_ret=+0.0024
+repeat=2 | seed=12002252 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=-0.0016 | contrast=+3.5695 | hotspot_score=+4.2371 | fid_uncond=+0.0059 | logical_purity=-0.0030 | structure_drift=-0.0013 | subspace_ret=+0.0073
+repeat=2 | seed=11000203 | pos=(158, 159) | dist=2 | fav=True | dyn_gain=+0.0023 | contrast=+2.0981 | hotspot_score=+2.4844 | fid_uncond=-0.0005 | logical_purity=+0.0010 | structure_drift=-0.0013 | subspace_ret=-0.0010
+repeat=2 | seed=11004218 | pos=(155, 156) | dist=4 | fav=True | dyn_gain=+0.0024 | contrast=+1.7389 | hotspot_score=+2.0258 | fid_uncond=+0.0013 | logical_purity=+0.0004 | structure_drift=-0.0020 | subspace_ret=+0.0011
+repeat=2 | seed=10001035 | pos=(153, 154) | dist=8 | fav=True | dyn_gain=+0.0018 | contrast=+1.9582 | hotspot_score=+2.2979 | fid_uncond=-0.0010 | logical_purity=+0.0009 | structure_drift=-0.0010 | subspace_ret=-0.0014
+repeat=2 | seed=12001125 | pos=(153, 154) | dist=8 | fav=False | dyn_gain=-0.0019 | contrast=+1.6592 | hotspot_score=+1.9281 | fid_uncond=-0.0030 | logical_purity=+0.0003 | structure_drift=+0.0022 | subspace_ret=-0.0031
+repeat=3 | seed=21000453 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0057 | contrast=+2.0481 | hotspot_score=+2.3578 | fid_uncond=+0.0016 | logical_purity=+0.0013 | structure_drift=-0.0045 | subspace_ret=+0.0010
+repeat=3 | seed=20003242 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0051 | contrast=+2.8138 | hotspot_score=+3.2769 | fid_uncond=+0.0014 | logical_purity=+0.0015 | structure_drift=-0.0037 | subspace_ret=+0.0008
+repeat=3 | seed=21002423 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0051 | contrast=+3.3283 | hotspot_score=+3.9629 | fid_uncond=+0.0029 | logical_purity=+0.0006 | structure_drift=-0.0045 | subspace_ret=+0.0026
+repeat=3 | seed=22003082 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0049 | contrast=+1.9921 | hotspot_score=+2.2730 | fid_uncond=+0.0020 | logical_purity=+0.0011 | structure_drift=-0.0038 | subspace_ret=+0.0015
+repeat=3 | seed=20001380 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0048 | contrast=+2.1707 | hotspot_score=+2.5410 | fid_uncond=+0.0016 | logical_purity=+0.0012 | structure_drift=-0.0037 | subspace_ret=+0.0011
+repeat=3 | seed=21002231 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0047 | contrast=+2.1958 | hotspot_score=+2.5531 | fid_uncond=+0.0017 | logical_purity=+0.0010 | structure_drift=-0.0038 | subspace_ret=+0.0012
+repeat=3 | seed=22000531 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0037 | contrast=+2.4859 | hotspot_score=+2.9313 | fid_uncond=+0.0014 | logical_purity=+0.0009 | structure_drift=-0.0028 | subspace_ret=+0.0010
+repeat=3 | seed=22000076 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0037 | contrast=+1.4437 | hotspot_score=+1.6343 | fid_uncond=+0.0013 | logical_purity=+0.0007 | structure_drift=-0.0030 | subspace_ret=+0.0010
+repeat=3 | seed=21003418 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0032 | contrast=+1.7336 | hotspot_score=+1.9984 | fid_uncond=+0.0026 | logical_purity=+0.0002 | structure_drift=-0.0030 | subspace_ret=+0.0025
+repeat=3 | seed=20003721 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0031 | contrast=+3.7007 | hotspot_score=+4.3921 | fid_uncond=+0.0021 | logical_purity=+0.0003 | structure_drift=-0.0028 | subspace_ret=+0.0019
+repeat=3 | seed=21004028 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0030 | contrast=+1.8159 | hotspot_score=+2.1101 | fid_uncond=+0.0013 | logical_purity=+0.0006 | structure_drift=-0.0024 | subspace_ret=+0.0010
+repeat=3 | seed=22004485 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0026 | contrast=+1.8159 | hotspot_score=+2.1134 | fid_uncond=+0.0002 | logical_purity=+0.0008 | structure_drift=-0.0018 | subspace_ret=-0.0002
+repeat=3 | seed=22004451 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0024 | contrast=+2.2923 | hotspot_score=+2.6852 | fid_uncond=+0.0007 | logical_purity=+0.0005 | structure_drift=-0.0019 | subspace_ret=+0.0005
+repeat=3 | seed=20001101 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0023 | contrast=+1.8477 | hotspot_score=+2.1568 | fid_uncond=+0.0005 | logical_purity=+0.0007 | structure_drift=-0.0016 | subspace_ret=+0.0002
+repeat=3 | seed=21002820 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0023 | contrast=+2.6160 | hotspot_score=+3.0772 | fid_uncond=+0.0012 | logical_purity=+0.0003 | structure_drift=-0.0020 | subspace_ret=+0.0010
+repeat=3 | seed=20003787 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0022 | contrast=+1.7717 | hotspot_score=+2.0734 | fid_uncond=+0.0002 | logical_purity=+0.0007 | structure_drift=-0.0016 | subspace_ret=-0.0001
+repeat=3 | seed=21002917 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=+0.0021 | contrast=+1.9625 | hotspot_score=+2.2583 | fid_uncond=+0.0022 | logical_purity=-0.0002 | structure_drift=-0.0023 | subspace_ret=+0.0023
+repeat=3 | seed=22000230 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0018 | contrast=+1.6209 | hotspot_score=+1.8674 | fid_uncond=+0.0008 | logical_purity=+0.0003 | structure_drift=-0.0015 | subspace_ret=+0.0007
+repeat=3 | seed=20001269 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0015 | contrast=+1.7723 | hotspot_score=+2.0547 | fid_uncond=+0.0009 | logical_purity=+0.0001 | structure_drift=-0.0014 | subspace_ret=+0.0009
+repeat=3 | seed=22001317 | pos=(157, 158) | dist=0 | fav=True | dyn_gain=+0.0012 | contrast=+1.4605 | hotspot_score=+1.6194 | fid_uncond=-0.0002 | logical_purity=+0.0004 | structure_drift=-0.0009 | subspace_ret=-0.0004
+repeat=3 | seed=20002109 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=-0.0003 | contrast=+3.0703 | hotspot_score=+3.6209 | fid_uncond=-0.0011 | logical_purity=+0.0002 | structure_drift=+0.0006 | subspace_ret=-0.0012
+repeat=3 | seed=20001048 | pos=(157, 158) | dist=0 | fav=False | dyn_gain=-0.0007 | contrast=+3.0189 | hotspot_score=+3.5896 | fid_uncond=-0.0019 | logical_purity=+0.0004 | structure_drift=+0.0011 | subspace_ret=-0.0021
+repeat=3 | seed=22000980 | pos=(155, 156) | dist=4 | fav=True | dyn_gain=+0.0020 | contrast=+1.5254 | hotspot_score=+1.7724 | fid_uncond=+0.0008 | logical_purity=+0.0004 | structure_drift=-0.0016 | subspace_ret=+0.0006
+repeat=3 | seed=21000609 | pos=(153, 154) | dist=8 | fav=True | dyn_gain=+0.0049 | contrast=+1.7478 | hotspot_score=+2.0349 | fid_uncond=+0.0028 | logical_purity=+0.0007 | structure_drift=-0.0041 | subspace_ret=+0.0025
+
+=== Local recurrence rows within radius ===
+repeat=1 | pos=(157, 158) | dist=0 | batch_count=3 | fav_rate=+0.5700 | anti_rate=+0.1100 | stab=+0.5580 | dyn_gain_med=+0.0019 | logical_purity_med=+0.0004 | structure_drift_med=-0.0015 | label=mixed_recurrent
+repeat=1 | pos=(153, 154) | dist=8 | batch_count=1 | fav_rate=+1.0000 | anti_rate=+0.0000 | stab=+0.6010 | dyn_gain_med=+0.0010 | logical_purity_med=+0.0005 | structure_drift_med=-0.0005 | label=single_batch
+repeat=2 | pos=(157, 158) | dist=0 | batch_count=3 | fav_rate=+0.5000 | anti_rate=+0.1000 | stab=+0.5010 | dyn_gain_med=+0.0016 | logical_purity_med=+0.0002 | structure_drift_med=-0.0015 | label=mixed_recurrent
+repeat=2 | pos=(156, 157) | dist=2 | batch_count=1 | fav_rate=+0.0000 | anti_rate=+1.0000 | stab=-1.1000 | dyn_gain_med=-0.0022 | logical_purity_med=-0.0018 | structure_drift_med=+0.0004 | label=single_batch
+repeat=2 | pos=(158, 159) | dist=2 | batch_count=2 | fav_rate=+0.5000 | anti_rate=+0.5000 | stab=-0.1000 | dyn_gain_med=-0.0009 | logical_purity_med=-0.0003 | structure_drift_med=+0.0006 | label=mixed_recurrent
+repeat=2 | pos=(155, 156) | dist=4 | batch_count=1 | fav_rate=+1.0000 | anti_rate=+0.0000 | stab=+0.6010 | dyn_gain_med=+0.0024 | logical_purity_med=+0.0004 | structure_drift_med=-0.0020 | label=single_batch
+repeat=2 | pos=(153, 154) | dist=8 | batch_count=2 | fav_rate=+0.5000 | anti_rate=+0.0000 | stab=+0.3330 | dyn_gain_med=-0.0000 | logical_purity_med=+0.0006 | structure_drift_med=+0.0006 | label=mixed_recurrent
+repeat=3 | pos=(157, 158) | dist=0 | batch_count=3 | fav_rate=+0.6200 | anti_rate=+0.0000 | stab=+0.7260 | dyn_gain_med=+0.0022 | logical_purity_med=+0.0004 | structure_drift_med=-0.0017 | label=mixed_recurrent
+repeat=3 | pos=(156, 157) | dist=2 | batch_count=1 | fav_rate=+1.0000 | anti_rate=+0.0000 | stab=+0.6010 | dyn_gain_med=+0.0017 | logical_purity_med=+0.0006 | structure_drift_med=-0.0011 | label=single_batch
+repeat=3 | pos=(155, 156) | dist=4 | batch_count=1 | fav_rate=+1.0000 | anti_rate=+0.0000 | stab=+0.4340 | dyn_gain_med=+0.0020 | logical_purity_med=+0.0004 | structure_drift_med=-0.0016 | label=single_batch
+repeat=3 | pos=(153, 154) | dist=8 | batch_count=1 | fav_rate=+1.0000 | anti_rate=+0.0000 | stab=+0.6020 | dyn_gain_med=+0.0049 | logical_purity_med=+0.0007 | structure_drift_med=-0.0041 | label=single_batch
+
+=== Ranked positions near anchor (from hotspot evidence) ===
+pos=(157, 158) | dist=0 | repeat_count=3 | n=65 | fav_rate=+0.7846 | dyn_gain_med=+0.0030 | logical_purity_med=+0.0004 | structure_drift_med=-0.0026 | contrast_med=+2.3548 | hotspot_score_med=+2.7746
+pos=(153, 154) | dist=8 | repeat_count=3 | n=4 | fav_rate=+0.7500 | dyn_gain_med=+0.0014 | logical_purity_med=+0.0006 | structure_drift_med=-0.0008 | contrast_med=+1.8530 | hotspot_score_med=+2.1664
+pos=(155, 156) | dist=4 | repeat_count=2 | n=2 | fav_rate=+1.0000 | dyn_gain_med=+0.0022 | logical_purity_med=+0.0004 | structure_drift_med=-0.0018 | contrast_med=+1.6321 | hotspot_score_med=+1.8991
+pos=(158, 159) | dist=2 | repeat_count=1 | n=1 | fav_rate=+1.0000 | dyn_gain_med=+0.0023 | logical_purity_med=+0.0010 | structure_drift_med=-0.0013 | contrast_med=+2.0981 | hotspot_score_med=+2.4844
+
+=== v24.17 reading ===
+1) Use this report to test whether the v24.14 ridge around the dominant anchor is genuinely local and coherent.
+2) If the neighborhood around the chosen anchor is sparse or unstable, treat that as evidence against further score-bias tuning.
+3) If nearby positions repeatedly show better structure_drift and logical_purity, promote them into the next explanatory analysis stage.

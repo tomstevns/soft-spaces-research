@@ -1,0 +1,23 @@
+=== v24.11 simulator targeting prior pack ===
+region_width=8 | priors=6
+global_dynamic: logical_purity_med=+0.0004 | structure_drift_med=-0.0029
+targeted_delta: dyn_gain=+0.0002 | logical_purity=+0.0001 | structure_drift=-0.0003 | fav_rate=+0.16
+
+=== Suggested soft-prior selection policy ===
+mode=soft_region_prior | region_bonus_scale=0.206 | anchor_bonus_scale=0.104 | exploration_fraction=0.25 | hard_constraints=False
+- Use target regions as priors, not hard filters.
+- Keep an exploration tail outside target regions to avoid collapse.
+- Prefer anchors inside top repeat-stable regions when ties occur.
+
+=== Region priors for simulator-side targeting ===
+target_region=(12, 12) | pos_window=[96-103]x[96-103] | target_weight=0.200 | priority=3.737 | label=robust_favorable | repeat_rate=1.00 | fav_rate=1.00 | stab=+1.000 | dyn_gain_med=+0.0044 | logical_purity_med=+0.0010 | structure_drift_med=-0.0034 | best_anchor=(102, 103)
+target_region=(19, 19) | pos_window=[152-159]x[152-159] | target_weight=0.183 | priority=3.430 | label=robust_favorable | repeat_rate=1.00 | fav_rate=1.00 | stab=+1.000 | dyn_gain_med=+0.0025 | logical_purity_med=+0.0006 | structure_drift_med=-0.0019 | best_anchor=(157, 158)
+target_region=(18, 18) | pos_window=[144-151]x[144-151] | target_weight=0.159 | priority=2.979 | label=robust_favorable | repeat_rate=0.67 | fav_rate=1.00 | stab=+0.667 | dyn_gain_med=+0.0034 | logical_purity_med=+0.0007 | structure_drift_med=-0.0027 | best_anchor=(146, 147)
+target_region=(5, 5) | pos_window=[40-47]x[40-47] | target_weight=0.154 | priority=2.889 | label=robust_favorable | repeat_rate=0.67 | fav_rate=1.00 | stab=+0.667 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0005 | structure_drift_med=-0.0026 | best_anchor=(45, 46)
+target_region=(23, 23) | pos_window=[184-191]x[184-191] | target_weight=0.154 | priority=2.889 | label=robust_favorable | repeat_rate=0.67 | fav_rate=1.00 | stab=+0.667 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0006 | structure_drift_med=-0.0024 | best_anchor=(190, 191)
+target_region=(26, 26) | pos_window=[208-215]x[208-215] | target_weight=0.149 | priority=2.798 | label=robust_favorable | repeat_rate=0.67 | fav_rate=1.00 | stab=+0.667 | dyn_gain_med=+0.0026 | logical_purity_med=+0.0003 | structure_drift_med=-0.0024 | best_anchor=None
+
+=== Operational reading (v24.11) ===
+1) Feed the region prior list into simulator-side candidate ranking as a soft bonus, not a hard filter.
+2) Use the best_anchor inside each target region as a tie-break or seed preference.
+3) Compare targeted selection vs baseline on logical_purity, structure_drift, and favorable rate.

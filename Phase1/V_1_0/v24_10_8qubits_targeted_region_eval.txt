@@ -1,0 +1,42 @@
+=== v24.10 targeted region evaluator ===
+inputs=3 | priority_report=v24_9_4_8qubits_priority_report.txt | region_width=8 | top_k_regions=6
+repeat 1: file=v24_9_2_8qubits_repeat1.txt | base_seed=0 | hotspots=24 | logical_purity_med=+0.0004 | structure_drift_med=-0.0015
+repeat 2: file=v24_9_2_8qubits_repeat2.txt | base_seed=10000000 | hotspots=24 | logical_purity_med=+0.0005 | structure_drift_med=-0.0020
+repeat 3: file=v24_9_2_8qubits_repeat3.txt | base_seed=20000000 | hotspots=24 | logical_purity_med=+0.0005 | structure_drift_med=-0.0022
+
+=== Target regions imported from v24.9.4 ===
+target_region=(12, 12) | pos_window=[96-103]x[96-103] | priority=3.737 | source_label=robust_favorable
+target_region=(19, 19) | pos_window=[152-159]x[152-159] | priority=3.430 | source_label=robust_favorable
+target_region=(18, 18) | pos_window=[144-151]x[144-151] | priority=2.979 | source_label=robust_favorable
+target_region=(5, 5) | pos_window=[40-47]x[40-47] | priority=2.889 | source_label=robust_favorable
+target_region=(23, 23) | pos_window=[184-191]x[184-191] | priority=2.889 | source_label=robust_favorable
+target_region=(26, 26) | pos_window=[208-215]x[208-215] | priority=2.798 | source_label=robust_favorable
+
+=== Targeted vs untargeted hotspot quality ===
+all_hotspots: count=72 | fav_rate=0.89 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0006 | structure_drift_med=-0.0023 | contrast_med=+0.9550
+targeted_hotspots: count=21 | fav_rate=1.00 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0006 | structure_drift_med=-0.0026 | contrast_med=+1.0215
+untargeted_hotspots: count=51 | fav_rate=0.84 | dyn_gain_med=+0.0027 | logical_purity_med=+0.0005 | structure_drift_med=-0.0023 | contrast_med=+0.9530
+targeted_minus_untargeted: dyn_gain=+0.0002 | logical_purity=+0.0001 | structure_drift=-0.0003 | fav_rate=+0.16
+
+=== Region-level targeted panel diagnostics (v24.10) ===
+region=(12, 12) | repeats=3/3 | count=5 | favored=5/5 | anti=0/5 | dyn_gain_med=+0.0044 | logical_purity_med=+0.0010 | structure_drift_med=-0.0034 | repeat_ids=[1, 2, 3]
+region=(19, 19) | repeats=3/3 | count=5 | favored=5/5 | anti=0/5 | dyn_gain_med=+0.0025 | logical_purity_med=+0.0006 | structure_drift_med=-0.0019 | repeat_ids=[1, 2, 3]
+region=(18, 18) | repeats=2/3 | count=2 | favored=2/2 | anti=0/2 | dyn_gain_med=+0.0034 | logical_purity_med=+0.0007 | structure_drift_med=-0.0027 | repeat_ids=[1, 3]
+region=(5, 5) | repeats=2/3 | count=3 | favored=3/3 | anti=0/3 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0005 | structure_drift_med=-0.0026 | repeat_ids=[1, 2]
+region=(23, 23) | repeats=2/3 | count=4 | favored=4/4 | anti=0/4 | dyn_gain_med=+0.0029 | logical_purity_med=+0.0006 | structure_drift_med=-0.0024 | repeat_ids=[2, 3]
+region=(26, 26) | repeats=2/3 | count=2 | favored=2/2 | anti=0/2 | dyn_gain_med=+0.0026 | logical_purity_med=+0.0003 | structure_drift_med=-0.0024 | repeat_ids=[1, 3]
+
+=== Exact anchors inside targeted regions (v24.10) ===
+anchor_pos=(102, 103) | region=(12, 12) | anchor_priority=2.034 | repeats=2/3 | favored=2/2 | dyn_gain_med=+0.0068 | logical_purity_med=+0.0009 | structure_drift_med=-0.0059 | repeat_ids=[1, 2]
+anchor_pos=(100, 101) | region=(12, 12) | anchor_priority=1.250 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0045 | logical_purity_med=+0.0010 | structure_drift_med=-0.0036 | repeat_ids=[2]
+anchor_pos=(157, 158) | region=(19, 19) | anchor_priority=1.224 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0045 | logical_purity_med=+0.0009 | structure_drift_med=-0.0036 | repeat_ids=[2]
+anchor_pos=(45, 46) | region=(5, 5) | anchor_priority=1.164 | repeats=1/3 | favored=2/2 | dyn_gain_med=+0.0040 | logical_purity_med=+0.0010 | structure_drift_med=-0.0030 | repeat_ids=[2]
+anchor_pos=(190, 191) | region=(23, 23) | anchor_priority=1.132 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0040 | logical_purity_med=+0.0008 | structure_drift_med=-0.0031 | repeat_ids=[2]
+anchor_pos=(146, 147) | region=(18, 18) | anchor_priority=1.062 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0033 | logical_purity_med=+0.0008 | structure_drift_med=-0.0026 | repeat_ids=[3]
+anchor_pos=(148, 149) | region=(18, 18) | anchor_priority=1.052 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0036 | logical_purity_med=+0.0006 | structure_drift_med=-0.0029 | repeat_ids=[1]
+anchor_pos=(188, 189) | region=(23, 23) | anchor_priority=0.997 | repeats=1/3 | favored=1/1 | dyn_gain_med=+0.0033 | logical_purity_med=+0.0004 | structure_drift_med=-0.0029 | repeat_ids=[2]
+
+=== Operational reading for next simulator-side step (v24.10) ===
+1) Use the imported target regions as priors for candidate preference rather than hard constraints at first.
+2) Measure whether targeted-region selection increases logical_purity and makes structure_drift more negative relative to untargeted hotspots.
+3) Use the strongest exact anchors inside the best regions as seed positions for the first simulator-side targeting implementation.

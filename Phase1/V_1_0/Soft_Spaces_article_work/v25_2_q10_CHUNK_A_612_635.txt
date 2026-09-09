@@ -1,0 +1,21 @@
+=== v25.2: Targeted Continuation + Baseline Calibration + Open-system (based on v24.9.2) ===
+Qubits: 10 (d=1024) | terms=5
+Batches: 1 × 25 seeds (base_seed=3001000, stride=1000000)
+Neighbor eps=0.050
+Targeted continuation: q8_intervals=[] | explicit_target_zones=['612-635']
+Target intervals used: 612-635
+Off-target control intervals used: NONE
+Allowed pair intervals searched: 612-635
+Dominant set: keep_mass=0.90 (mass-based; guarantees non-empty mask)
+Bins (SigAbs): ent_step=0.100 | leak_step=0.050
+Bins (SigQ_GLOBAL fine): q_bins=16 (pooled REAL+NULL per batch)
+Bins (SigQG_COARSE): q_bins_coarse=8 + dom_bin(dom/d) + leak_bin_coarse (pooled REAL+NULL per batch)
+Leakage proxy times=[0.5, 1.0, 1.5] (FAST analytic evolution in eigenpair)
+Stable selection: stable_frac=0.670 per model (optional leak constraint max=None, q=None)
+Perturbation robustness: eta=[] | reps=3 | seeds=0 | pairs/seed=5 | dH_terms=None
+Open-system (v23): enabled=True | include_baselines=True | pairs_per_cat=5 | noise=both(phi=0.01,g1=0.02) | t=5.0/6 | states=zx | basis=noise_diag | noise_qubits=all:None | stable_pool=True | time_mode=late | late_power=2.0 | contrast_focus=True | kernel_zoom=True
+Interference test: enabled=False | pairs_per_cat=200 | stable_pool=False
+TopK=25 | min_overall=3 | min_stable=3 | alpha=0.5
+Optional family filter: p_tail_max=None
+Pauli ops: lazy on-demand cache (excluding all-I); v25.2 targeted continuation filter over eigenpair-index intervals
+

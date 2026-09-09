@@ -1,0 +1,29 @@
+=== v24.18 explanatory ridge diagnostics ===
+inputs=3 | positions=[(157, 158), (155, 156), (153, 154), (156, 157), (158, 159)]
+
+=== Input files ===
+repeat 1: file=v24_14_8qubits_asym_dual_region_realonly_repeat1.txt | base_seed=0 | hotspots=24 | recurrence_rows=2
+repeat 2: file=v24_14_8qubits_asym_dual_region_realonly_repeat2.txt | base_seed=10000000 | hotspots=24 | recurrence_rows=5
+repeat 3: file=v24_14_8qubits_asym_dual_region_realonly_repeat3.txt | base_seed=20000000 | hotspots=24 | recurrence_rows=5
+
+=== Global reduced-q50 medians across inputs ===
+fid_uncond=+0.0007 | fid_cond=+0.0001 | leak=-0.0005 | subspace_ret=+0.0005 | logical_coh=-0.0003 | logical_purity=+0.0002 | structure_drift=-0.0014
+
+=== Position comparison table ===
+pos=(157, 158) | proxy=9.626 | repeat_count=3 | hits_n=65 | fav_rate=+0.7846 | dyn_gain_med=+0.0030 | fid_uncond_med=+0.0014 | logical_purity_med=+0.0004 | structure_drift_med=-0.0026 | subspace_ret_med=+0.0010 | contrast_med=+2.3548 | hotspot_score_med=+2.7746
+pos=(153, 154) | proxy=8.595 | repeat_count=3 | hits_n=4 | fav_rate=+0.7500 | dyn_gain_med=+0.0014 | fid_uncond_med=-0.0009 | logical_purity_med=+0.0006 | structure_drift_med=-0.0008 | subspace_ret_med=-0.0012 | contrast_med=+1.8530 | hotspot_score_med=+2.1664
+pos=(155, 156) | proxy=7.966 | repeat_count=2 | hits_n=2 | fav_rate=+1.0000 | dyn_gain_med=+0.0022 | fid_uncond_med=+0.0010 | logical_purity_med=+0.0004 | structure_drift_med=-0.0018 | subspace_ret_med=+0.0009 | contrast_med=+1.6321 | hotspot_score_med=+1.8991
+pos=(158, 159) | proxy=5.766 | repeat_count=1 | hits_n=1 | fav_rate=+1.0000 | dyn_gain_med=+0.0023 | fid_uncond_med=-0.0005 | logical_purity_med=+0.0010 | structure_drift_med=-0.0013 | subspace_ret_med=-0.0010 | contrast_med=+2.0981 | hotspot_score_med=+2.4844
+pos=(156, 157) | proxy=0.000 | repeat_count=0 | hits_n=0 | fav_rate=NA | dyn_gain_med=NA | fid_uncond_med=NA | logical_purity_med=NA | structure_drift_med=NA | subspace_ret_med=NA | contrast_med=NA | hotspot_score_med=NA
+
+=== Recurrence diagnostics by chosen position ===
+pos=(157, 158) | batch_count_best=3 | recur_fav_rate_med=+0.5700 | recur_anti_rate_med=+0.1000 | recur_stab_med=+0.5580 | recur_dyn_med=+0.0019 | recur_lp_med=+0.0004 | recur_sd_med=-0.0015 | labels=['mixed_recurrent']
+pos=(153, 154) | batch_count_best=2 | recur_fav_rate_med=+1.0000 | recur_anti_rate_med=+0.0000 | recur_stab_med=+0.6010 | recur_dyn_med=+0.0010 | recur_lp_med=+0.0006 | recur_sd_med=-0.0005 | labels=['mixed_recurrent', 'single_batch']
+pos=(155, 156) | batch_count_best=1 | recur_fav_rate_med=+1.0000 | recur_anti_rate_med=+0.0000 | recur_stab_med=+0.5175 | recur_dyn_med=+0.0022 | recur_lp_med=+0.0004 | recur_sd_med=-0.0018 | labels=['single_batch']
+pos=(158, 159) | batch_count_best=2 | recur_fav_rate_med=+0.5000 | recur_anti_rate_med=+0.5000 | recur_stab_med=-0.1000 | recur_dyn_med=-0.0009 | recur_lp_med=-0.0003 | recur_sd_med=+0.0006 | labels=['mixed_recurrent']
+pos=(156, 157) | batch_count_best=1 | recur_fav_rate_med=+0.5000 | recur_anti_rate_med=+0.5000 | recur_stab_med=-0.2495 | recur_dyn_med=-0.0003 | recur_lp_med=-0.0006 | recur_sd_med=-0.0004 | labels=['single_batch']
+
+=== v24.18 reading ===
+Best explanatory candidate among the chosen positions is (157, 158) with proxy=9.626.
+Read the proxy as a practical summary of: repeat recurrence, favorability, dynamic gain, positive fid/subspace retention, positive logical purity, and negative structure drift.
+The next explanatory step should compare the strongest position against the nearest weaker neighbors and ask which term differs most: fid_uncond, logical_purity, structure_drift, or subspace_ret.
