@@ -1,0 +1,29 @@
+=== Soft Spaces Phase 2 v25.35 UNIFORM ANALYTIC PROMINENCE BOUND ===
+Scope: every Hermitian delta-H direction with fixed perturbation operators V
+Frozen target: 7; controls: [1, 3, 5, 9, 11, 13]
+Seeds: [2533001, 2533002, 2533003, 2533004, 2533005] (negative source prominence retained)
+Regularizer eta: 1.000e-03
+Definition: ||delta H||_2 <= rho * g_star; structural domain rho < 0.5
+No fitted score, coordinate relocation, seed removal, or numerical direction sampling.
+
+seed | base prom | g_star | D_floor | candidate rho | candidate ||dH|| | prom bound
+2533001 | +1.410e-01 | 6.084e-02 | 6.908e-01 |  1.09239e-15 |      6.64582e-17 |  1.33507e-01
+2533002 | -1.563e-01 | 9.441e-02 | 6.342e-01 |          n/a |              n/a |          n/a
+2533003 | +7.364e-02 | 9.284e-02 | 7.285e-01 |  4.24309e-16 |      3.93926e-17 |  6.97940e-02
+2533004 | +2.353e-01 | 3.537e-02 | 5.784e-01 |  1.32046e-15 |      4.67094e-17 |  2.22541e-01
+2533005 | -1.537e-01 | 3.905e-02 | 8.285e-01 |          n/a |              n/a |          n/a
+
+Certificate details for positive source instances:
+seed | ||V|| | spectral radius | P drift bound | A change bound | D change bound | one-model C bound
+2533001 | 1.000e+00 |    3.789859e+00 |  5.46778e-15 |  1.24466e-13 |  2.23128e-02 |  3.33767e-02
+2533003 | 1.000e+00 |    3.728143e+00 |  1.74064e-15 |  3.90148e-14 |  1.24924e-02 |  1.74485e-02
+2533004 | 1.000e+00 |    3.685530e+00 |  1.05012e-14 |  2.32308e-13 |  3.04833e-02 |  5.56352e-02
+
+Decision and interpretation:
+  Positive source-prominence instances: 3/5.
+  Common conservative all-directions candidate: rho <= 4.24309e-16.
+  The analytic inequalities imply strict positivity inside each stated radius if the displayed constants are exact.
+  The constants here were evaluated in double precision; interval or higher-precision validation is still required before calling the numerical radii rigorous certificates.
+  The bound is sufficient and deliberately conservative; it is not an observed failure threshold.
+  The very small radius is expected from worst-case 1/eta^2 and 1/eta^(3/2) factors at eta=0.001.
+  Scope remains the coupled ancilla baseline, not the independently redrawn 8Q–12Q ensemble.
