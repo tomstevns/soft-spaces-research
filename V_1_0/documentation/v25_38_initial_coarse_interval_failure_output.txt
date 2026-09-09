@@ -1,0 +1,22 @@
+=== Soft Spaces Phase 2 v25.38 CONTINUUM SCORE-CURVATURE BOUND ===
+Frozen target: 7; controls: [1, 3, 5, 9, 11, 13]
+Seeds: [2533001, 2533002, 2533003, 2533004, 2533005]; families: ['dephasing_like', 'transverse_like']
+eta: 1.000e-03; interval fractions: [1e-08, 3e-08, 1e-07, 3e-07, 1e-06, 3e-06, 1e-05, 3e-05, 0.0001, 0.0003, 0.001, 0.003, 0.01]
+Same deterministic X_a tensor G_s path; all negative seeds retained.
+No fitting, coordinate relocation, re-ranking, seed removal, or post-run interval insertion.
+
+seed | base prom | chosen interval rho | K_prom | D floor | N floor | candidate rho
+2533001 | +1.410e-01 |                 n/a |          n/a |          n/a |          n/a |           n/a
+2533002 | -1.563e-01 |                 n/a |          n/a |          n/a |          n/a |           n/a
+2533003 | +7.364e-02 |                 n/a |          n/a |          n/a |          n/a |           n/a
+2533004 | +2.353e-01 |                 n/a |          n/a |          n/a |          n/a |           n/a
+2533005 | -1.537e-01 |                 n/a |          n/a |          n/a |          n/a |           n/a
+
+DECISION AND STATUS
+  Positive source-prominence seeds: 0/5.
+  No positive candidate radius was obtained.
+  Symbolic bound includes first/second Riesz-projector derivatives, first/second regularized-resolvent derivatives, numerator Frobenius curvature, denominator spectral-term curvature, and the ratio rule.
+  Ancilla parity makes each complete score even, so Taylor's theorem converts the uniform second-derivative bound into a quadratic error bound.
+  The analytic inequalities hold throughout each stated interval if their constants are exact.
+  Constants were evaluated in ordinary double precision; outward-rounded interval validation is required before the numerical radii are called computer-assisted rigorous certificates.
+  Scope remains the controlled ancilla path, not the independently redrawn 8Q-12Q ensemble.
