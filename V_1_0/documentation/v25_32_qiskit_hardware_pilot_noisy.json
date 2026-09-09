@@ -1,0 +1,136 @@
+{
+  "accepted_bitstrings": [
+    "0000",
+    "0001"
+  ],
+  "backend": "aer_simulator",
+  "base_seed": 25032000,
+  "environment": {
+    "numpy": "2.5.2",
+    "python": "3.12.13",
+    "qiskit": "2.5.2"
+  },
+  "eta": 0.45,
+  "job_id": null,
+  "mode": "noisy",
+  "null_seeds": [
+    25032101,
+    25032102,
+    25032103
+  ],
+  "results": [
+    {
+      "exact_identity": 0.9999999999999996,
+      "exact_normalized": 0.9999999999999998,
+      "exact_perturbed": 0.9999999999999993,
+      "family": "dephasing_Z0",
+      "identity_survival": 0.9306640625,
+      "model": "REAL",
+      "normalized_survival": 0.9933105981112277,
+      "null_seed": null,
+      "perturbed_survival": 0.9244384765625
+    },
+    {
+      "exact_identity": 0.9999999999999996,
+      "exact_normalized": 0.9999999999999999,
+      "exact_perturbed": 0.9999999999999994,
+      "family": "transverse_XXXX",
+      "identity_survival": 0.92919921875,
+      "model": "REAL",
+      "normalized_survival": 0.9488964792433,
+      "null_seed": null,
+      "perturbed_survival": 0.8817138671875
+    },
+    {
+      "exact_identity": 0.9999999999999993,
+      "exact_normalized": 0.9939695002830291,
+      "exact_perturbed": 0.9939695002830284,
+      "family": "dephasing_Z0",
+      "identity_survival": 0.9178466796875,
+      "model": "NULL",
+      "normalized_survival": 0.9962761005452853,
+      "null_seed": 25032101,
+      "perturbed_survival": 0.9144287109375
+    },
+    {
+      "exact_identity": 0.9999999999999993,
+      "exact_normalized": 0.9574096581101104,
+      "exact_perturbed": 0.9574096581101097,
+      "family": "transverse_XXXX",
+      "identity_survival": 0.914794921875,
+      "model": "NULL",
+      "normalized_survival": 0.9084601014144649,
+      "null_seed": 25032101,
+      "perturbed_survival": 0.8310546875
+    },
+    {
+      "exact_identity": 0.9999999999999999,
+      "exact_normalized": 0.9535266951379944,
+      "exact_perturbed": 0.9535266951379943,
+      "family": "dephasing_Z0",
+      "identity_survival": 0.9176025390625,
+      "model": "NULL",
+      "normalized_survival": 0.9507782359984036,
+      "null_seed": 25032102,
+      "perturbed_survival": 0.8724365234375
+    },
+    {
+      "exact_identity": 0.9999999999999999,
+      "exact_normalized": 0.9502741095204873,
+      "exact_perturbed": 0.9502741095204872,
+      "family": "transverse_XXXX",
+      "identity_survival": 0.920654296875,
+      "model": "NULL",
+      "normalized_survival": 0.8932643861044816,
+      "null_seed": 25032102,
+      "perturbed_survival": 0.8223876953125
+    },
+    {
+      "exact_identity": 1.0,
+      "exact_normalized": 0.9615613889503478,
+      "exact_perturbed": 0.9615613889503478,
+      "family": "dephasing_Z0",
+      "identity_survival": 0.9195556640625,
+      "model": "NULL",
+      "normalized_survival": 0.9621664675428117,
+      "null_seed": 25032103,
+      "perturbed_survival": 0.884765625
+    },
+    {
+      "exact_identity": 1.0,
+      "exact_normalized": 0.9505725762259212,
+      "exact_perturbed": 0.9505725762259212,
+      "family": "transverse_XXXX",
+      "identity_survival": 0.915771484375,
+      "model": "NULL",
+      "normalized_survival": 0.9065582511330312,
+      "null_seed": 25032103,
+      "perturbed_survival": 0.8302001953125
+    }
+  ],
+  "scope": "reduced_4q_gate_level_hardware_witness",
+  "shots_per_circuit": 4096,
+  "summary": [
+    {
+      "delta": 0.03114413056841603,
+      "exact_delta": 0.03843861104965196,
+      "exact_null_median_normalized": 0.9615613889503478,
+      "exact_real_normalized": 0.9999999999999998,
+      "family": "dephasing_Z0",
+      "null_median_normalized": 0.9621664675428117,
+      "passes_frozen_gate": true,
+      "real_normalized": 0.9933105981112277
+    },
+    {
+      "delta": 0.04233822811026877,
+      "exact_delta": 0.049427423774078716,
+      "exact_null_median_normalized": 0.9505725762259212,
+      "exact_real_normalized": 0.9999999999999999,
+      "family": "transverse_XXXX",
+      "null_median_normalized": 0.9065582511330312,
+      "passes_frozen_gate": true,
+      "real_normalized": 0.9488964792433
+    }
+  ],
+  "version": "v25.32"
+}

@@ -1,0 +1,11 @@
+=== Soft Spaces Phase 2A v25.32 — 4Q HARDWARE PILOT ===
+Scope: reduced gate-level witness; not the full 12Q classical calculation
+Mode: noisy | backend: aer_simulator | shots/circuit: 4096
+Qubits: 4 | eta: 0.45 | NULL seeds: [25032101, 25032102, 25032103]
+Frozen gate: normalized REAL - median(normalized NULL) > 0 for both families
+
+family               REAL norm    NULL median    DELTA       gate    exact DELTA
+dephasing_Z0           0.993311     0.962166  +0.031144    PASS    +0.038439
+transverse_XXXX        0.948896     0.906558  +0.042338    PASS    +0.049427
+
+Decision: 2/2 perturbation families pass.
