@@ -1,0 +1,10 @@
+=== Soft Spaces Phase 2 v25.39 PRECISION STABILITY AUDIT ===
+Same frozen matrices, intervals, scores, coordinates, families, and seeds.
+Only Arb working precision changes.
+
+bits | common certified rho lower | negative seed 2533002 prominence upper | negative seed 2533005 prominence upper
+ 192 | 8.900000000000000e-11      | -1.563239983671948e-01             | -1.536730119167410e-01
+ 256 | 8.900000000000000e-11      | -1.563239983671948e-01             | -1.536730119167410e-01
+ 384 | 8.900000000000000e-11      | -1.563239983671948e-01             | -1.536730119167410e-01
+
+Decision: all displayed certified quantities are stable across 192, 256, and 384-bit Arb precision.
