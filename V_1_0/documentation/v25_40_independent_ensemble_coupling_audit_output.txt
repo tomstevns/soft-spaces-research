@@ -1,0 +1,28 @@
+=== Soft Spaces Phase 2 v25.40 INDEPENDENT-ENSEMBLE COUPLING AUDIT ===
+Frozen audit: favourable same-seed comparison of the v25.31 generator at 11Q and 12Q
+Seeds: 8 x 5 = 40; terms per Hamiltonian: 5
+No hotspot coordinates, scores, thresholds, or checkpoint records were changed.
+
+Coefficient sequences identical under same-seed coupling: 40/40
+Exact H_12 = I_ancilla tensor H_11 copies: 0/40
+Seeds containing at least one exactly copied Pauli term: 0/40
+Exactly copied Pauli terms: 0/200
+Hamiltonians preserving both leading-ancilla computational sectors: 0/40
+Leading non-leaking (I/Z) terms per five-term 12Q Hamiltonian:
+  0 terms: 1 seeds, 1 terms: 11 seeds, 2 terms: 10 seeds, 3 terms: 13 seeds, 4 terms: 5 seeds, 5 terms: 0 seeds
+
+Exact reading:
+1. The random-number stream preserves the five coefficients in this favourable same-seed comparison.
+2. The dimension-dependent Pauli labels are newly sampled; none of the 40 Hamiltonians is a copied ancilla lift.
+3. Every tested 12Q Hamiltonian contains an X or Y on the leading qubit, so the elementary ancilla sectors leak.
+4. The v25.31 coordinates are sorted spectral ordinals, not computational-basis state labels.
+
+Conclusion: the direct block-ancilla intertwiner required by v25.33--v25.39 is refuted for this
+frozen favourable coupling audit.  This does not refute the empirical 8Q--12Q recurrence; it shows
+that the recurrence and the controlled-ancilla theorem are presently two distinct results.
+
+Proof status:
+- Exact from code semantics: v25.31 builds a fresh 12Q random-Pauli Hamiltonian and scores sorted eigenpairs.
+- Exact finite audit: 0/40 same-seed instances satisfy the elementary copied-ancilla conditions.
+- Not proved: absence of every conceivable nonlinear or distributional coupling.
+- Still empirical: general hotspot-strength preservation in the independent 8Q--12Q ensemble.
