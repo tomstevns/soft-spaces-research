@@ -1,0 +1,45 @@
+=== Soft Spaces Phase 2 v25.37 PARITY-AWARE SECOND-ORDER BOUND ===
+Frozen target: 7; controls: [1, 3, 5, 9, 11, 13]
+Seeds: [2533001, 2533002, 2533003, 2533004, 2533005]; families: ['dephasing_like', 'transverse_like']
+Curvature grid: [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3]; eta: 1.000e-03
+Same deterministic X_a tensor G_s direction as v25.34-v25.36.
+No fitting, relocation, re-ranking, seed removal, or post-run grid change.
+
+EXACT ANALYTIC BLOCK BOUND
+For H_epsilon=[[A,epsilon G],[epsilon G,D]], elimination of the opposite branch gives
+  [A-E-epsilon^2 G(D-E)^(-1)G] psi_A = 0.
+If the uncoupled branch separation is Gamma and |epsilon|<Gamma, then
+  ||Sigma(E)|| <= epsilon^2 ||G||^2/(Gamma-|epsilon|).
+Here ||G||=1. This is a continuum, all-system-vector second-order bound for the branch self-energy.
+It is not by itself a bound on the complete normalized prominence functional.
+
+seed | base prom | g_star | branch Gamma | epsilon(rho=10) | Schur bound(rho=10)
+2533001 | +1.410e-01 | 6.084e-02 | 3.859906e+00 |    6.083768e-01 |        1.138302e-01
+2533002 | -1.563e-01 | 9.441e-02 | 3.852837e+00 |    9.440673e-01 |        3.064054e-01
+2533003 | +7.364e-02 | 9.284e-02 | 3.818762e+00 |    9.283952e-01 |        2.982036e-01
+2533004 | +2.353e-01 | 3.537e-02 | 3.790353e+00 |    3.537369e-01 |        3.641075e-02
+2533005 | -1.537e-01 | 3.905e-02 | 3.977583e+00 |    3.905078e-01 |        4.251272e-02
+
+FROZEN SAFE-GRID CURVATURE AUDIT
+Definitions on rho<=0.3:
+  K_prom = max |Pi(rho)-Pi(0)|/rho^2 over both branches.
+  K_err  = max (target delta error + max control delta error)/rho^2 over both branches.
+  rho_margin = sqrt(Pi(0)/K_err) for positive source prominence.
+rho_margin is a data-derived candidate scale, not a continuum certificate.
+
+seed | exponent b0/b1 | K_prom | K_err | rho_margin candidate | max parity residual
+2533001 |  1.9999/ 1.9997 | 1.865e-04 | 5.657e-04 |         1.578717e+01 |        0.000000e+00
+2533002 |  2.0000/ 2.0000 | 9.810e-04 | 2.328e-03 |                  n/a |        0.000000e+00
+2533003 |  2.0013/ 2.0029 | 2.143e-05 | 2.257e-03 |         5.712469e+00 |        0.000000e+00
+2533004 |  2.0001/ 2.0003 | 4.638e-04 | 6.976e-04 |         1.836531e+01 |        0.000000e+00
+2533005 |  2.0001/ 2.0002 | 1.784e-04 | 5.196e-04 |                  n/a |        0.000000e+00
+
+DECISION
+  Median low-rho exponent: 2.000099.
+  Largest +rho/-rho residual: 0.000000e+00.
+  Common positive-seed rho_margin candidate: 5.712469e+00.
+  All rho<=0.3 points remain covered by the already proved finite-grid target-plus-control inequality.
+  The Schur complement proves quadratic Hamiltonian self-energy on a continuum interval.
+  The full prominence is exactly even, and its measured low-rho response is quadratic.
+  A rigorous continuum prominence radius still requires an analytic or interval-validated upper bound on its second derivative.
+  Scope: controlled ancilla path only, not the independently redrawn 8Q-12Q ensemble.
