@@ -1,0 +1,2513 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================
+% Soft Spaces Phase 2 -- comprehensive research manuscript
+% Generated as a long-form technical draft
+% ============================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{braket}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{placeins}
+
+\geometry{margin=2.35cm}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black,
+    pdftitle={Soft Spaces Phase 2},
+    pdfauthor={Tom Stevns}
+}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Soft Spaces -- Phase 2}
+\fancyhead[R]{Tom Stevns}
+\fancyfoot[C]{\thepage}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible
+}
+
+% ------------------------------------------------------------
+% Notation
+% ------------------------------------------------------------
+\newcommand{\Real}{\mathrm{REAL}}
+\newcommand{\Null}{\mathrm{NULL}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\Id}{\mathbb I}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Prom}{\Pi}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\med}{\operatorname{median}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\fro}{\mathrm F}
+
+\title{
+\textbf{Soft Spaces in Low-Qubit Hilbert Spaces -- Phase 2}\\[0.4em]
+\large Dimensional Continuation, Perturbative Effective-Subspace Geometry,\\
+Controlled-Lift Theorems, 12-Qubit Confirmation, and a Falsification-Driven\\
+Audit of Sparse-Pauli High-Dimensional Recurrence
+}
+
+\author[1]{Tom Stevns}
+\affil[1]{Independent Researcher}
+\date{Revised comprehensive technical manuscript -- September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Phase 2 of the Soft Spaces project was designed to test whether recurrent
+low-qubit structures identified in Phase 1 persist, transform, or fail when
+the Hilbert-space dimension is enlarged and the numerical evidence is exposed
+to progressively stronger physical and mathematical falsification tests.
+The work developed from targeted 8Q-to-9Q continuation and perturbative
+subspace diagnostics through 10Q, 11Q, and a predeclared checkpointed 12Q
+confirmation.  The central high-Q score was formulated in terms of a
+regularized Feshbach-type effective operator on an adjacent two-eigenvector
+subspace,
+\[
+\Sigma_i^{(\eta)}
+=
+P_i VQ_i\,g_\eta(E_i-Q_iHQ_i)\,Q_iVP_i,
+\qquad
+g_\eta(x)=\frac{x}{x^2+\eta^2},
+\]
+followed by a normalized coherence ratio, a spectrum-matched
+\(\Real\)-versus-\(\Null\) contrast, a minimum over dephasing-like and
+transverse perturbation families, and a local-control prominence statistic.
+
+The empirical Phase-2 track produced multiple positive results.  Independent
+9Q perturbation tests showed recurrent advantages in spectral susceptibility
+and projector retention for several frozen candidate coordinates.  Later
+dimensional-transfer experiments produced a simple arithmetic continuation
+rule
+\[
+k_{q+1}=2k_q+1,
+\]
+which was frozen before the final 12Q run.  The checkpointed 12Q test used
+40 seeds in eight independent five-seed batches, three perturbation
+repetitions, two perturbation families, fixed local controls, and a
+predeclared positive-prominence gate of \(0.75\).  Both frozen 12Q predictions
+passed exactly at \(6/8=0.75\).
+
+A second part of Phase 2 then asked a stricter question: what, precisely, had
+been demonstrated?  An exact non-circular ancilla-lift theorem was proved for
+a controlled coupled model, showing preservation of the complete prominence
+functional under a decoupled branch lift.  Perturbative stability estimates,
+an ancilla-parity theorem eliminating the linear response, Schur-complement
+bounds, second-order score-curvature estimates, and outward-rounded Arb/Acb
+interval arithmetic produced a computer-assisted certified radius
+\[
+\rho_{\mathrm{cert}}=8.9\times 10^{-11}
+\]
+for the frozen positive controlled-model instances.  These results are
+mathematically substantive, but their scope is the controlled lift, not the
+independently redrawn high-Q ensemble.
+
+The final audit materially changed the physical interpretation of the
+high-Q recurrence.  A same-seed coupling audit showed that the original
+dimension-dependent random-Pauli Hamiltonians are not copied ancilla lifts.
+A sparse-Pauli algebra audit then showed that the fixed five-term ensemble
+develops exponentially growing spectator multiplicity, while
+\(k\mapsto2k+1\) exactly preserves normalized spectral rank.  Finally, a
+predeclared degenerate-basis rotation test produced sign reversals in the
+\(\Real-\Null\) hotspot prominence while leaving the Hamiltonians invariant
+to approximately \(10^{-14}\).  Therefore the original selected ordinal
+two-vector high-Q hotspots are not basis-independent observables of the
+Hamiltonian and perturbation alone.
+
+The scientific conclusion of Phase 2 is consequently twofold.  First, the
+project produced a rigorous effective-subspace formalism, an exact controlled
+dimensional-lift theorem, and a validated computer-assisted perturbative
+certificate.  Second, the original five-term high-Q recurrence was
+successfully falsified as evidence for an intrinsic transported physical
+hotspot: its ordinal progression is structurally explained by normalized
+spectral-rank preservation, sparse-Pauli degeneracy, and control geometry,
+and the residual score is basis dependent.  This negative endpoint is not a
+failure of the programme; it is the result of carrying the original claim
+through a complete falsification chain.  A new physical Phase-3 model must
+therefore use basis-invariant subspace observables or a sufficiently rich
+Hamiltonian ensemble, matched boundary controls, and a new predeclared
+holdout protocol.
+\end{abstract}
+
+\textbf{Keywords:}
+Hilbert space; low-qubit quantum systems; effective Hamiltonians; Feshbach
+projection; Nakajima--Zwanzig projection; random Pauli Hamiltonians;
+spectrum-matched controls; spectral degeneracy; perturbation theory;
+computer-assisted proof; Qiskit; falsification; basis invariance.
+
+\tableofcontents
+\newpage
+
+
+% ============================================================
+\section{Claims, scope, and falsification hierarchy}
+% ============================================================
+
+A central requirement of this manuscript is that different levels of
+evidence are not conflated.  Phase 2 contains four logically distinct
+classes of result:
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Observed numerical result.}
+      A finite computation under a specified protocol produced a reproducible
+      value or sign pattern.
+\item \textbf{Exact mathematical result.}
+      A theorem follows from stated assumptions without numerical
+      approximation.
+\item \textbf{Computer-assisted certified result.}
+      A finite stored matrix instance satisfies a theorem under outward-rounded
+      interval arithmetic.
+\item \textbf{Falsified interpretation.}
+      A stronger physical interpretation is rejected by an explicit
+      counterexample or structural audit.
+\end{enumerate}
+
+These categories are intentionally kept separate throughout the paper.
+
+\begin{table}[H]
+\centering
+\caption{Claim hierarchy used in Phase 2.}
+\begin{tabular}{@{}p{0.21\textwidth}p{0.33\textwidth}p{0.37\textwidth}@{}}
+\toprule
+Category & Typical evidence & Example from this work\\
+\midrule
+Observed &
+Frozen numerical output under specified seeds and controls &
+The two frozen 12Q candidates each produced positive prominence in 6 of 8 batches.\\
+
+Exact theorem &
+Closed-form derivation under stated assumptions &
+The decoupled ancilla lift preserves the effective operator, coherence ratio,
+and full prominence functional.\\
+
+Computer-assisted certificate &
+Outward-rounded interval arithmetic on stored finite matrices &
+The common controlled-model certified radius
+\(\rho_{\mathrm{cert}}=8.9\times10^{-11}\).\\
+
+Falsification &
+Counterexample or structural mechanism incompatible with the stronger claim &
+Degenerate-basis rotations reverse the prominence sign while reconstructing
+the same Hamiltonian to approximately \(10^{-14}\).\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The strongest admissible final statement is therefore not that a universal
+Soft-Space transport law has been proved.  The admissible statement is that
+Phase 2 established a rigorous controlled effective-subspace theory while the
+original sparse-Pauli ordinal high-Q interpretation failed a necessary
+basis-invariance test.
+
+% ============================================================
+\section{Scientific aim and the role of Phase 2}
+% ============================================================
+
+The Soft Spaces programme began with an operational question rather than a
+theorem: can a finite-dimensional Hilbert space contain recurrent regions
+whose local structure responds differently to perturbation or open-system
+evolution than a carefully matched null model?  Phase 1 established an
+empirical 4Q--8Q evidence base and identified candidate coordinates, local
+ridges, anchor regions, and recurrent \(\Real-\Null\) contrasts.
+
+Phase 2 deliberately changed the standard of evidence.  The objective was no
+longer merely to find more high-scoring regions.  The objectives became:
+
+\begin{enumerate}[label=\arabic*.]
+\item determine whether low-Q candidate structure continues into 9Q--12Q;
+\item separate static recurrence from perturbative or dynamical protection;
+\item freeze coordinates and thresholds before confirmation runs;
+\item use independent seed blocks and local falsification controls;
+\item translate the numerical score into operator mathematics;
+\item construct an exact dimensional-lift baseline that does not encode
+      hotspot labels by hand;
+\item derive stability bounds away from that baseline;
+\item test whether the original high-Q ensemble actually satisfies the
+      hypotheses of the controlled theorem;
+\item search explicitly for spectral, algebraic, indexing, and basis
+      artefacts;
+\item stop the original model if a physically decisive falsification is found.
+\end{enumerate}
+
+This distinction is essential.  Phase 2 should not be read as one monotonically
+strengthening ``discovery''.  It is a sequence of increasingly restrictive
+questions.  Some were confirmed; some were only conditionally proved; and the
+strongest original physical interpretation was ultimately rejected.
+
+% ============================================================
+\section{Hilbert-space scaling and experimental objects}
+% ============================================================
+
+For \(q\) qubits,
+\[
+\cH_q \cong (\mathbb C^2)^{\otimes q},
+\qquad
+d_q=\dim\cH_q=2^q.
+\]
+The Phase-2 target dimensions therefore include
+\[
+d_8=256,\quad
+d_9=512,\quad
+d_{10}=1024,\quad
+d_{11}=2048,\quad
+d_{12}=4096.
+\]
+
+The high-Q numerical model used a sparse Hermitian random-Pauli Hamiltonian
+of the form
+\[
+H_q=\sum_{\ell=1}^{s} a_\ell P_\ell,
+\qquad s=5,
+\]
+where the \(P_\ell\) are \(q\)-qubit Pauli strings and the coefficients and
+Pauli labels are seed generated.  The ordered spectral decomposition is
+\[
+H_q=\sum_{n=0}^{d_q-1}\lambda_n\ket{u_n}\bra{u_n},
+\qquad
+\lambda_0\le\lambda_1\le\cdots\le\lambda_{d_q-1}.
+\]
+
+A candidate adjacent spectral pair beginning at ordinal \(i\) is represented
+by
+\[
+P_i=\ket{u_i}\bra{u_i}+\ket{u_{i+1}}\bra{u_{i+1}},
+\qquad
+Q_i=\Id-P_i,
+\]
+with pair energy
+\[
+E_i=\frac{\lambda_i+\lambda_{i+1}}{2}.
+\]
+
+The pair is admitted by the frozen neighbouring-gap gate when
+\[
+|\lambda_{i+1}-\lambda_i|<\eps_{\mathrm{neighbor}},
+\qquad
+\eps_{\mathrm{neighbor}}=0.05
+\]
+in the later high-Q confirmation protocol.
+
+% ============================================================
+\section{REAL--NULL design}
+% ============================================================
+
+The \(\Real\)-versus-\(\Null\) construction is central because it attempts to
+separate spectral effects from eigenbasis structure.
+
+For each \(\Real\) Hamiltonian,
+\[
+H_{\Real}=U_{\Real}\Lambda U_{\Real}^\dagger,
+\]
+the \(\Null\) model retains the same ordered eigenvalue multiset
+\(\Lambda\) but replaces the eigenbasis by a seeded Haar-random basis,
+\[
+H_{\Null}=U_{\Null}\Lambda U_{\Null}^\dagger.
+\]
+
+Thus
+\[
+\spec(H_{\Null})=\spec(H_{\Real}),
+\]
+while the basis geometry is randomized.  The same perturbation family is then
+applied to both models.  A positive \(\Real-\Null\) contrast is therefore
+not, by construction, attributable merely to a different one-dimensional
+spectrum.
+
+This design was scientifically useful, but the later basis-invariance audit
+shows an important limitation: if the \(\Real\) Hamiltonian itself has
+degenerate eigenspaces and the score selects particular eigenvectors inside
+those degenerate spaces, the diagonalization convention can become part of
+the measured quantity.  Spectrum matching alone does not cure that issue.
+
+% ============================================================
+\section{Perturbation families and effective-subspace operator}
+% ============================================================
+
+The later frozen protocol used two physically distinct perturbation families:
+
+\begin{itemize}
+\item dephasing-like perturbations built from local \(Z\) and nearest-neighbour
+      \(ZZ\) terms;
+\item transverse perturbations built from local \(X\) and nearest-neighbour
+      \(XX\) terms.
+\end{itemize}
+
+For a perturbation \(V\), define the regularized scalar resolvent
+\[
+g_\eta(x)=\frac{x}{x^2+\eta^2}.
+\]
+The corresponding operator-valued function is
+\[
+g_\eta(A)=A(A^2+\eta^2\Id)^{-1}.
+\]
+
+The second-order effective operator acting on the selected pair is
+\[
+\boxed{
+\Sigma_i^{(\eta)}(H,V)
+=
+P_iVQ_i\,
+g_\eta(E_i-Q_iHQ_i)\,
+Q_iVP_i
+}
+\]
+which is a regularized Feshbach-type self-energy.  Writing
+\[
+w_n=
+\begin{pmatrix}
+\bra{u_n}V\ket{u_i} &
+\bra{u_n}V\ket{u_{i+1}}
+\end{pmatrix},
+\]
+one obtains the explicit \(2\times2\) representation
+\[
+\Sigma_i^{(\eta)}
+=
+\sum_{n\notin\{i,i+1\}}
+g_\eta(E_i-\lambda_n)\,w_n^\dagger w_n.
+\]
+
+This formula is one of the main mathematical objects produced by Phase 2.
+It makes the relation between local spectral geometry, perturbative coupling,
+and the external Hilbert-space complement explicit.
+
+
+\subsection{Why the regularizer has the form \(g_\eta(x)=x/(x^2+\eta^2)\)}
+
+The regularization is not inserted merely as a numerical convenience.  It is
+the Hermitian part of a standard complex-shifted resolvent:
+\[
+\boxed{
+g_\eta(x)
+=
+\frac12
+\left[
+\frac{1}{x-i\eta}
++
+\frac{1}{x+i\eta}
+\right].
+}
+\]
+Consequently, for a self-adjoint operator \(A\),
+\[
+g_\eta(A)
+=
+\frac12
+\left[
+(A-i\eta\Id)^{-1}
++
+(A+i\eta\Id)^{-1}
+\right].
+\]
+
+This choice has three useful properties.
+
+First, it removes the pole of the unregularized Feshbach resolvent when
+\(E_i\) approaches \(\spec(Q_iHQ_i)\).  Second, it preserves Hermiticity,
+because \(g_\eta(x)\) is real for real \(x\).  Third, it retains the sign of
+the detuning:
+\[
+\operatorname{sgn} g_\eta(x)=\operatorname{sgn}x,
+\]
+so levels below and above the selected pair contribute with opposite signs.
+This signed structure is precisely what makes the normalized coherence ratio
+sensitive to constructive retention versus cancellation.
+
+The maximal scalar magnitude is
+\[
+\max_x |g_\eta(x)|=\frac{1}{2\eta},
+\]
+attained at \(|x|=\eta\).  Therefore
+\[
+\|g_\eta(A)\|_{\op}\le \frac{1}{2\eta},
+\]
+which is also the starting point for the later perturbation bounds.
+
+A different regularization, for example the full complex resolvent
+\((x+i\eta)^{-1}\), would retain both dispersive and absorptive parts.
+The present Phase-2 score deliberately uses only the Hermitian/dispersive
+part because the implemented matrix functional is real-valued and designed
+as a structural comparison rather than a decay-rate observable.
+
+% ============================================================
+\section{Normalized coherence ratio}
+% ============================================================
+
+The implemented score normalizes the norm of the signed sum by the sum of the
+individual contribution norms:
+\[
+\boxed{
+C_i(H,V)
+=
+\frac{
+\left\|
+\sum_{n\notin\{i,i+1\}}
+g_\eta(E_i-\lambda_n)w_n^\dagger w_n
+\right\|_{\fro}
+}{
+\sum_{n\notin\{i,i+1\}}
+|g_\eta(E_i-\lambda_n)|\,\|w_n^\dagger w_n\|_{\fro}
+}
+}
+\]
+whenever the denominator is non-zero.
+
+Because
+\[
+\|w_n^\dagger w_n\|_{\fro}=\|w_n\|_2^2,
+\]
+the triangle inequality immediately yields
+\[
+0\le C_i(H,V)\le1.
+\]
+
+The original implementation used terminology suggestive of
+``cancellation''.  The mathematically correct interpretation is more precise:
+large \(C_i\) means the signed effective contributions retain a larger coherent
+resultant relative to the sum of their magnitudes; small \(C_i\) means stronger
+mutual cancellation.
+
+For one family \(f\),
+\[
+\Delta C_{f,i}
+=
+C_{f,i}^{\Real}-C_{f,i}^{\Null}.
+\]
+A positive value therefore means that the \(\Real\) model retains a larger
+normalized effective resultant than the spectrum-matched \(\Null\) model.
+
+\subsection{Exact invariance inside the selected pair}
+
+For a unitary \(U\in U(2)\) acting only inside the selected pair,
+\[
+w_n\mapsto w_nU.
+\]
+Then
+\[
+\Sigma_i\mapsto U^\dagger\Sigma_iU,
+\]
+so
+\[
+\|\Sigma_i\|_{\fro}
+\]
+is unchanged, and the denominator is also unchanged because
+\(\|w_nU\|_2=\|w_n\|_2\).  Hence \(C_i\) is invariant under basis rotations
+\emph{within the already selected two-dimensional subspace}.
+
+This result must not be confused with invariance under rotations in a larger
+degenerate eigenspace.  The distinction becomes decisive in the final audit.
+
+% ============================================================
+\section{From branch scores to hotspot prominence}
+% ============================================================
+
+The later Phase-2 protocol used multiple robustification layers.
+
+Let \(f\in\{Z,X\}\) label the two perturbation families, \(r\) the perturbation
+repetition, \(b\) the independent batch, and \(k\) the frozen candidate
+coordinate.
+
+First,
+\[
+\Delta C_{f,k,b,r}
+=
+C^{\Real}_{f,k,b,r}
+-
+C^{\Null}_{f,k,b,r}.
+\]
+The repetition median is
+\[
+D_{f,k,b}
+=
+\med_r \Delta C_{f,k,b,r}.
+\]
+The robust two-family score is
+\[
+R_{k,b}
+=
+\min\{D_{Z,k,b},D_{X,k,b}\}.
+\]
+
+For the frozen local-control neighbourhood \(N_q(k)\), formed from offsets
+within \(\pm10\) in steps of \(2\), the background is
+\[
+B_{k,b}
+=
+\med_{c\in N_q(k)} R_{c,b}.
+\]
+The batch prominence is then
+\[
+\boxed{
+\Prom_{k,b}
+=
+R_{k,b}-B_{k,b}
+}
+\]
+and the empirical positive-prominence rate is
+\[
+\widehat p_k
+=
+\frac1B
+\sum_{b=1}^{B}
+\mathbf 1\{\Prom_{k,b}>0\}.
+\]
+
+For the final 12Q confirmation,
+\[
+B=8,
+\qquad
+\widehat p_k\ge0.75
+\]
+was frozen as the decision gate.
+
+% ============================================================
+\section{Early Phase-2 continuation: 8Q to 9Q}
+% ============================================================
+
+The early Phase-2 track developed through a sequence of increasingly physical
+diagnostics rather than one final score.
+
+\subsection{Targeted continuation and local ranking}
+
+The baseline first extended the Phase-1 candidate geometry into 9Q and later
+10Q--12Q target zones.  Candidate selection was deliberately separated from
+later confirmation.  Local ranking combined structural recurrence,
+candidate/anchor proximity, static separation, perturbative behaviour, and
+branch consistency, with the explicit intention that the scoring formula
+should not be refitted after seeing the confirmation output.
+
+\subsection{Projector-overlap tracking}
+
+A key methodological correction was to track the perturbed two-dimensional
+subspace by maximum projector overlap instead of merely choosing the closest
+energy pair after perturbation.
+
+If \(P_0\) is the original rank-two projector and \(P_\eta\) a candidate
+perturbed projector, the overlap statistic can be written as
+\[
+\mathcal O(P_0,P_\eta)
+=
+\frac{1}{2}\Tr(P_0P_\eta),
+\qquad
+0\le\mathcal O\le1.
+\]
+The favourable contrast was
+\[
+\Delta\mathcal O
+=
+\mathcal O_{\Real}-\mathcal O_{\Null}>0.
+\]
+
+In parallel, a spectral-susceptibility quantity \(\chi\) was used with the
+favourable convention
+\[
+\Delta\chi
+=
+\chi_{\Null}-\chi_{\Real}>0,
+\]
+meaning that the \(\Real\) pair is less susceptible to the perturbation than
+its matched \(\Null\) counterpart.
+
+\subsection{Independent 9Q confirmation}
+
+One frozen 9Q confirmation used two independent seed blocks of 25 seeds each,
+five perturbation strengths,
+\[
+\eta\in\{10^{-4},3\times10^{-4},10^{-3},3\times10^{-3},10^{-2}\},
+\]
+three perturbation repetitions per seed, and five perturbation terms.
+
+The tested source coordinates included
+\[
+192,\;0,\;157,\;160,\;165,\;67,\;251.
+\]
+The predeclared descriptive threshold classified a candidate as STRONG when
+both projector-overlap and susceptibility sign recurrence reached at least
+\(0.80\).
+
+Four candidates were STRONG:
+\[
+192,\quad165,\quad160,\quad157.
+\]
+For example, candidate \(192\) gave overlap-positive and
+susceptibility-positive rates of \(1.0\) and \(1.0\), respectively, with
+median
+\[
+\Delta\mathcal O\approx+0.0028,
+\qquad
+\Delta\chi\approx+0.3273.
+\]
+Candidate \(157\) gave
+\[
+\text{Ov+}=0.8,
+\qquad
+\chi+=1.0,
+\]
+with median
+\[
+\Delta\mathcal O\approx+0.0020,
+\qquad
+\Delta\chi\approx+0.2764.
+\]
+
+These results established a real empirical perturbative signal on independent
+seeds.  They did not yet prove that the signal identified a unique intrinsic
+Hilbert-space object.
+
+% ============================================================
+\section{Falsification controls, anisotropy, and local geometry}
+% ============================================================
+
+The next sequence of versions tested whether the positive perturbative effect
+was candidate-specific or merely common in nearby spectral regions.
+
+The workflow included:
+
+\begin{itemize}
+\item matched local controls;
+\item local \(\Real\)-profile measurements;
+\item effective-subspace perturbation analysis;
+\item target confirmation on new seed blocks;
+\item multi-target generalization;
+\item anisotropic-direction analysis;
+\item high-confidence replication;
+\item local matrix-geometry diagnostics;
+\item confirmation of selected target geometry;
+\item path organization across the candidate neighbourhood.
+\end{itemize}
+
+The methodological principle was explicit: a candidate was scientifically
+stronger only if its favourable sign recurrence exceeded the behaviour of
+predeclared matched controls.  A control performing equally well was to weaken
+the Soft-Space interpretation, not to be hidden.
+
+The anisotropy work was especially important because it rejected the idea that
+only a scalar perturbation ``strength'' matters.  The effective operator
+contains
+\[
+PVQ\,g_\eta(E-QHQ)\,QVP,
+\]
+so the orientation of \(V\) relative to the selected subspace and its
+complement is structurally relevant.  Distinct perturbation families can
+therefore probe different matrix geometry even at comparable operator norm.
+
+% ============================================================
+\section{REAL--NULL cancellation, model transfer, and hotspot prediction}
+% ============================================================
+
+Later Phase-2 versions progressively simplified and stress-tested the
+mechanism.
+
+The sequence included:
+
+\begin{enumerate}[label=\arabic*.]
+\item confirmation of a \(\Real-\Null\) difference in the matrix-level
+      effective contribution;
+\item dimensional transfer of the same cancellation/coherence law;
+\item replacement of the original perturbation generator by a local/2-local
+      chain model;
+\item transfer across a second perturbation family;
+\item a physics-based hotspot predictor;
+\item frozen hotspot confirmation;
+\item dimensional hotspot transfer;
+\item blind 10Q hotspot discovery;
+\item 10Q confirmation;
+\item an 11Q dimensional-rule test;
+\item upward-validation tests over lower dimensions;
+\item harmonized 7Q--9Q validation.
+\end{enumerate}
+
+The important methodological development was the move from broad descriptive
+features to a small, frozen perturbative mechanism.  By the time of the
+harmonized validation, the primary statistic was no longer a large composite
+feature score.  It was the branch-based matrix coherence contrast and local
+prominence defined above.
+
+% ============================================================
+\section{The dimensional rule and frozen geometry}
+% ============================================================
+
+The arithmetic continuation rule that emerged and was later frozen is
+\[
+\boxed{k_{q+1}=2k_q+1.}
+\]
+
+For the harmonized lower-dimensional tests, representative branch coordinates
+were
+\[
+\begin{array}{c|c|c}
+\text{source}\to\text{target} & \text{branch A} & \text{branch B}\\
+\hline
+6Q\to7Q & 15 & 47\\
+7Q\to8Q & 31 & 95\\
+8Q\to9Q & 63 & 191
+\end{array}
+\]
+with the two target-space lifts of each source coordinate implemented by
+\[
+i=k,\qquad i=k+2^{q_{\mathrm{source}}}.
+\]
+
+It is essential to distinguish three maps:
+
+\begin{enumerate}[label=(\alph*)]
+\item the arithmetic source-coordinate map \(k\mapsto2k+1\);
+\item the branch injections \(i\mapsto i\) and
+      \(i\mapsto i+2^q\);
+\item a physical isometry \(J:\cH_q\to\cH_{q+1}\).
+\end{enumerate}
+
+Only the first two are automatically defined by indices.  A physical
+intertwiner requires operator relations that do not follow from integer
+arithmetic.
+
+
+% ============================================================
+\section{Predeclared 12Q confirmation protocol}
+% ============================================================
+
+The final 12Q run was treated as a frozen confirmation experiment rather than
+an exploratory search.  The scientific value of the result depends on
+separating decisions made before execution from observations made afterward.
+
+The following items were fixed before the confirmation run:
+
+\begin{table}[H]
+\centering
+\caption{Frozen 12Q protocol.}
+\begin{tabular}{@{}p{0.29\textwidth}p{0.61\textwidth}@{}}
+\toprule
+Protocol element & Frozen value\\
+\midrule
+Source coordinates &
+\(k=511\) and \(k=1535\).\\
+
+Target-space lifts &
+\((511,512)\), \((2559,2560)\), \((1535,1536)\), and
+\((3583,3584)\).\\
+
+Dimensional rule &
+\(k_{q+1}=2k_q+1\).\\
+
+Local controls &
+Source coordinate offsets within \(\pm10\), step \(2\).\\
+
+Hamiltonian ensemble &
+Five-term random-Pauli Hamiltonian used in the high-Q protocol.\\
+
+Perturbation families &
+Dephasing-like \(Z/ZZ\) and transverse \(X/XX\).\\
+
+Perturbation repetitions &
+Three repetitions per branch/seed/family instance.\\
+
+Batching &
+Eight independent batches of five seeds each, 40 seeds total.\\
+
+Neighbour-gap eligibility &
+\(|\lambda_{i+1}-\lambda_i|<0.05\).\\
+
+Branch aggregation &
+Median across repetitions within each perturbation family.\\
+
+Two-family aggregation &
+Minimum of dephasing and transverse \(\Real-\Null\) contrasts.\\
+
+Local background &
+Median robust score over the frozen local controls.\\
+
+Primary statistic &
+Prominence
+\(\Prom_{k,b}=R_{k,b}-B_{k,b}\).\\
+
+Decision rule &
+Positive-prominence rate
+\(\widehat p_k\ge0.75\), i.e.\ at least 6 of 8 batches.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The key point is methodological: the candidate coordinates, control geometry,
+aggregation rule, and threshold were not selected after inspection of the
+12Q batch signs.  The later sparse-Pauli and basis-invariance audits were
+separate falsification experiments and did not retroactively alter the
+frozen 12Q decision rule.
+
+% ============================================================
+\section{Checkpointed 12Q confirmation}
+% ============================================================
+
+The final predeclared high-Q confirmation used the source coordinates
+\[
+k\in\{511,1535\}.
+\]
+The lifted target pairs were
+\[
+\begin{aligned}
+k=511:\quad
+&(511,512),\;(2559,2560),\\
+k=1535:\quad
+&(1535,1536),\;(3583,3584).
+\end{aligned}
+\]
+
+The run used:
+
+\begin{itemize}
+\item eight independent batches;
+\item five seeds per batch, hence 40 seeds;
+\item three perturbation repetitions;
+\item dephasing and transverse families;
+\item fixed local radius \(\pm10\);
+\item control step \(2\);
+\item 240 checkpoint records;
+\item predeclared decision gate
+      \(\widehat p_k\ge0.75\).
+\end{itemize}
+
+The result was:
+
+\begin{table}[H]
+\centering
+\caption{Frozen 12Q confirmation summary.}
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+\(k\) & positive batches & rate & med.\ robust & med.\ background &
+med.\ prominence & status\\
+\midrule
+511  & 6/8 & 0.750 & 0.073706 & 0.021030 & 0.038702 & confirmed\\
+1535 & 6/8 & 0.750 & 0.075264 & 0.029998 & 0.043595 & confirmed\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The dephasing-positive rates were \(1.000\) for both candidates.  The
+transverse-positive rates were \(0.875\) and \(0.750\), respectively.
+
+At this point the empirical statement ``2/2 frozen 12Q predictions pass the
+predeclared gate'' was correct.  The remainder of Phase 2 was devoted to
+deciding how much physical meaning that statement could bear.
+
+% ============================================================
+\section{Qiskit translation and a gate-level witness}
+% ============================================================
+
+A Qiskit layer was added to demonstrate a route from the exact matrix
+calculation toward circuit-level measurement.
+
+For eigenstates \(\ket{p},\ket{q}\), a perturbative transition amplitude is
+\[
+B_{qp}
+=
+\bra{q}\Delta H\ket{p}.
+\]
+The design cross-checked selected complex amplitudes obtained by Qiskit
+statevector methods against the classical matrix calculation and constructed
+Hadamard-test circuits for the real and imaginary parts of representative
+Pauli matrix elements.
+
+A reduced four-qubit hardware-oriented pilot was then evaluated with
+4096 shots per circuit.  It was explicitly not presented as the full 12Q
+algorithm.  In ideal simulation, the normalized \(\Real-\Null\) deltas were
+approximately
+\[
++0.037231
+\quad\text{(dephasing)},
+\qquad
++0.048340
+\quad\text{(transverse)},
+\]
+and both passed the frozen positive-delta gate.  Under the selected noisy
+simulation they remained positive,
+\[
++0.031144,\qquad +0.042338.
+\]
+
+This result supports the measurability of a reduced witness.  It does not
+convert the complete high-Q classical statistic into a presently economical
+hardware experiment.
+
+% ============================================================
+\section{Projection-operator bridge}
+% ============================================================
+
+The effective-subspace formalism has a natural connection to both Feshbach
+projection and open-system projection techniques.
+
+Given \(P\) and \(Q=\Id-P\), the unregularized Feshbach self-energy is
+\[
+\Sigma_P(E)
+=
+PVQ(E-QHQ)^{-1}QVP.
+\]
+The Phase-2 quantity replaces the singular resolvent by the regularized
+function \(g_\eta\).
+
+On operator space, define
+\[
+\cP(A)=PAP,
+\qquad
+\cQ=\mathcal I-\cP.
+\]
+Then
+\[
+\cP^2=\cP,
+\qquad
+\cQ^2=\cQ,
+\qquad
+\cP\cQ=\cQ\cP=0.
+\]
+
+For a Liouvillian \(\cL(t)\), the exact Nakajima--Zwanzig memory kernel has the
+structural form
+\[
+\cK(t,s)
+=
+\alpha^2
+\cP\cL(t)\mathcal G(t,s)\cQ\cL(s)\cP,
+\]
+which explicitly contains the sequence
+\[
+\cP\longrightarrow\cQ\longrightarrow\cP.
+\]
+For a time-independent generator, the Laplace transform introduces the
+resolvent
+\[
+\int_0^\infty e^{-zt}e^{t\cQ\cL\cQ}\,dt
+=
+(z-\cQ\cL\cQ)^{-1},
+\]
+when convergent.  Thus the Hilbert-space effective operator and the
+operator-space memory kernel share a genuine projection--complement--
+projection architecture, while remaining mathematically different objects.
+
+% ============================================================
+\section{A deterministic prominence-stability theorem}
+% ============================================================
+
+The minimum and median operators are 1-Lipschitz in the sup norm.  This gives
+a useful theorem that separates the mathematical target from the empirical
+sample.
+
+Suppose a source target \(k\) and lifted target \(k'\) have paired control
+sets, and for a fixed batch
+\[
+|D'_{f,k'}-D_{f,k}|\le\eps_T
+\]
+for both perturbation families, while
+\[
+|D'_{f,c'}-D_{f,c}|\le\eps_C
+\]
+for all paired controls.  Then
+\[
+\boxed{
+|\Prom'_{k'}-\Prom_k|
+\le
+\eps_T+\eps_C.
+}
+\]
+Hence
+\[
+\Prom_k>\eps_T+\eps_C
+\quad\Longrightarrow\quad
+\Prom'_{k'}>0.
+\]
+
+If a common bound \(\eps\) applies to target and controls,
+\[
+\Prom_k>2\eps
+\]
+is sufficient.
+
+For eight batches, if at least six source batches satisfy the corresponding
+margin condition, the \(0.75\) positive-prominence gate is preserved.
+
+This theorem identifies the real proof obligation: it is not enough to
+control the target pair.  The \(\Null\) construction, both perturbation
+families, and the local-control background must be controlled as well.
+
+% ============================================================
+\section{Exact controlled ancilla lift}
+% ============================================================
+
+A non-circular dimensional-lift baseline can be constructed exactly.
+
+Let
+\[
+\cH_{q+1}=\mathbb C^2\otimes\cH_q,
+\qquad
+J_b\ket{\psi}
+=
+\ket{b}\otimes\ket{\psi},
+\quad b\in\{0,1\}.
+\]
+Choose \(\Delta>0\) and define
+\[
+H^\uparrow
+=
+\ket0\bra0\otimes(H-\Delta\Id)
++
+\ket1\bra1\otimes(H+\Delta\Id),
+\]
+with
+\[
+V_f^\uparrow=\Id_2\otimes V_f.
+\]
+If
+\[
+2\Delta>
+\lambda_{\max}(H)-\lambda_{\min}(H),
+\]
+the two branches do not interleave.
+
+For
+\[
+P_{i,b}^\uparrow=J_bP_iJ_b^\dagger,
+\]
+one obtains exactly
+\[
+\boxed{
+\Sigma_{i,b}^{(\eta),\uparrow}
+=
+J_b\Sigma_i^{(\eta)}J_b^\dagger
+}
+\]
+and therefore
+\[
+\boxed{
+C_{i,b}(H^\uparrow,V_f^\uparrow)
+=
+C_i(H,V_f).
+}
+\]
+
+If the \(\Real\) and \(\Null\) systems, perturbation repetitions, target, and
+all controls are lifted consistently, every layer of the prominence
+functional is preserved:
+\[
+\boxed{
+\Prom_{k,b}^{\uparrow}
+=
+\Prom_{k,b}.
+}
+\]
+
+This is an exact theorem.  It does not insert \(511\), \(1535\), or any other
+hotspot label into the model; all adjacent pairs are preserved by the same
+construction.  It is therefore non-circular.
+
+Its limitation is equally exact: the original high-Q experiment did not
+construct \(H_{q+1}\) by copying \(H_q\) into a decoupled ancilla branch.
+The theorem proves a mechanism that \emph{can} preserve prominence, not that
+the independently generated ensemble \emph{does} use that mechanism.
+
+% ============================================================
+\section{Perturbation bounds away from the exact lift}
+% ============================================================
+
+The identity
+\[
+g_\eta(A)
+=
+\frac12
+\left[
+(A-i\eta\Id)^{-1}
++
+(A+i\eta\Id)^{-1}
+\right]
+\]
+gives the resolvent bound
+\[
+\boxed{
+\|g_\eta(A')-g_\eta(A)\|
+\le
+\frac{\|A'-A\|}{\eta^2}
+}
+\]
+for self-adjoint \(A,A'\), together with
+\[
+\|g_\eta(A)\|\le\frac{1}{2\eta}.
+\]
+
+For aligned \(P,Q\), let
+\[
+\Sigma=PVQg_\eta(A)QVP,
+\qquad
+\Sigma'=PV'Qg_\eta(A')QV'P.
+\]
+If
+\[
+M=\max\{\|V\|,\|V'\|\},
+\quad
+\delta_V=\|V'-V\|,
+\quad
+\delta_A=\|A'-A\|,
+\]
+then
+\[
+\boxed{
+\|\Sigma'-\Sigma\|
+\le
+\frac{M\delta_V}{\eta}
++
+\frac{M^2\delta_A}{\eta^2}.
+}
+\]
+
+For the normalized ratio \(C=N/D\), if
+\[
+D,D'\ge d_0>0,
+\qquad
+|N'-N|\le\delta_N,
+\qquad
+|D'-D|\le\delta_D,
+\]
+then
+\[
+\boxed{
+|C'-C|
+\le
+\frac{\delta_N+\delta_D}{d_0}.
+}
+\]
+
+Projector motion requires a separate cluster-gap control.  If \(g_*\) is the
+minimum separation of the selected rank-two cluster from the remainder of the
+spectrum, then a sufficient isolation condition is
+\[
+\|\delta H\|<\frac{g_*}{2}.
+\]
+With
+\[
+\rho=\frac{\|\delta H\|}{g_*},
+\]
+this is simply
+\[
+\rho<\frac12.
+\]
+
+% ============================================================
+\section{Controlled-coupling stress test}
+% ============================================================
+
+A fixed structured perturbation of the exact ancilla lift was introduced as
+\[
+H(\eps)
+=
+H^\uparrow+\eps(X_a\otimes G),
+\]
+with a frozen target, frozen controls, five fixed seeds, two fixed perturbation
+families, and a predeclared grid in the dimensionless coupling
+\[
+\rho=\frac{\|\delta H\|}{g_*}.
+\]
+
+Three of the five source seeds had positive baseline prominence; the two
+negative seeds were retained.  Along the structurally safe grid
+\[
+\rho\le0.3<0.5,
+\]
+all three positive source instances satisfied the target-plus-control
+prominence inequality in both branches.
+
+Directly computed prominence remained positive even through the much larger
+tested value \(\rho=10\), although beyond \(\rho=0.5\) pair identity is no
+longer guaranteed by the simple isolation theorem.  This separation between
+a conservative sufficient theorem and a much more stable observed path became
+the motivation for the parity analysis.
+
+% ============================================================
+\section{Ancilla parity and the absence of linear response}
+% ============================================================
+
+Define
+\[
+\Gamma=Z_a\otimes\Id.
+\]
+For
+\[
+H(\eps)=H^\uparrow+\eps(X_a\otimes G),
+\qquad
+V^\uparrow=\Id_a\otimes V,
+\]
+one has
+\[
+\Gamma H(\eps)\Gamma=H(-\eps),
+\qquad
+\Gamma V^\uparrow\Gamma=V^\uparrow.
+\]
+
+Because the complete pair score is invariant under simultaneous unitary
+conjugation of \(H\), \(V\), and the consistently tracked projector,
+\[
+C(\eps)=C(-\eps).
+\]
+The same symmetry passes through \(\Real-\Null\) subtraction, the family
+minimum, the control median, and prominence:
+\[
+\boxed{
+\Prom(\eps)=\Prom(-\eps).
+}
+\]
+Hence, while the relevant branches remain isolated,
+\[
+\boxed{
+\Prom(\eps)=\Prom(0)+O(\eps^2).
+}
+\]
+
+This exact selection rule explains why a first-order worst-case perturbation
+bound can be extremely pessimistic for the controlled path.
+
+A numerical decomposition confirmed this structure: over the frozen
+low-coupling grid, fitted response exponents ranged from approximately
+\(1.999691\) to \(2.002899\), with median \(2.000099\).  The directly computed
+\(+\rho\) and \(-\rho\) prominences agreed at printed numerical precision.
+
+% ============================================================
+\section{Schur-complement mechanism}
+% ============================================================
+
+Write the controlled Hamiltonian in block form,
+\[
+H(\eps)
+=
+\begin{pmatrix}
+A & \eps G\\
+\eps G & D
+\end{pmatrix}.
+\]
+For an eigenvector \((\psi_A,\psi_D)^T\) with eigenvalue \(E\),
+\[
+\psi_D
+=
+-\eps(D-E)^{-1}G\psi_A,
+\]
+whenever the inverse exists.  Substitution gives
+\[
+\left[
+A-E-\eps^2G(D-E)^{-1}G
+\right]\psi_A=0.
+\]
+The induced branch self-energy is therefore
+\[
+\boxed{
+\Sigma_A(E,\eps)
+=
+\eps^2G(D-E)^{-1}G.
+}
+\]
+
+If \(\Gamma_{\mathrm{br}}\) is the uncoupled separation of the two branch
+spectral intervals, then
+\[
+\dist(E,\spec(D))
+\ge
+\Gamma_{\mathrm{br}}-|\eps|
+\]
+and
+\[
+\boxed{
+\|\Sigma_A(E,\eps)\|_2
+\le
+\frac{\eps^2\|G\|_2^2}{
+\Gamma_{\mathrm{br}}-|\eps|
+}.
+}
+\]
+This is a continuum second-order statement and gives an operator-level reason
+for the observed quadratic response.
+
+% ============================================================
+\section{Uniform analytic and curvature certificates}
+% ============================================================
+
+A first all-directions bound produced a very small common candidate coupling
+radius of order
+\[
+\rho\sim4.24\times10^{-16}
+\]
+for the three positive source instances.  This was recognized as deliberately
+conservative, dominated by large inverse powers of the regularizer
+\(\eta=10^{-3}\), and not as an observed failure scale.
+
+The parity-aware second-order programme then bounded first and second
+derivatives of:
+
+\begin{itemize}
+\item Riesz spectral projectors;
+\item regularized resolvents;
+\item the effective-operator numerator;
+\item the normalization denominator;
+\item the full ratio \(C\);
+\item target and control \(\Real-\Null\) contrasts;
+\item the final prominence.
+\end{itemize}
+
+For a source prominence \(m=\Prom(0)>0\) and a uniform curvature bound
+\[
+|\Prom''(\eps)|\le K_{\Prom},
+\]
+evenness of \(\Prom\) gives
+\[
+\Prom(\eps)
+\ge
+m-\frac12K_{\Prom}\eps^2.
+\]
+Thus a sufficient positive-sign condition is
+\[
+|\eps|
+<
+\sqrt{\frac{2m}{K_{\Prom}}}.
+\]
+
+The double-precision continuum evaluation produced a common candidate radius
+of approximately
+\[
+9.0\times10^{-11},
+\]
+subject at that stage to the need for validated outward rounding.
+
+% ============================================================
+\section{Computer-assisted Arb/Acb validation}
+% ============================================================
+
+The interval-validation stage re-evaluated the frozen constant chain with
+Arb/Acb ball arithmetic at 256-bit working precision.  The validation
+explicitly enclosed:
+
+\begin{enumerate}[label=\arabic*.]
+\item eigenvalues and eigenvectors of the frozen matrices;
+\item rank-one and rank-two spectral gaps;
+\item coupling and perturbation operator norms;
+\item numerator and denominator lower bounds;
+\item first- and second-derivative constants;
+\item source-prominence intervals;
+\item conversion from the certified \(\eps\)-radius to \(\rho\).
+\end{enumerate}
+
+
+\subsection{Implementation and reproducibility of the interval certificate}
+
+The validated stage used Arb/Acb-style ball arithmetic with outward rounding
+at 256-bit working precision.  The certification path was deliberately
+separated from the Qiskit circuit layer: the interval proof concerns the
+stored finite matrices entering the controlled effective-subspace theorem,
+not shot-noise data from quantum hardware.
+
+The validation pipeline recomputed or enclosed the quantities needed for the
+deterministic bound rather than trusting double-precision point estimates.
+The chain included:
+\[
+\text{spectral gaps}
+\to
+\text{projector/resolvent bounds}
+\to
+\text{numerator/denominator bounds}
+\to
+\text{score curvature}
+\to
+\text{prominence lower bound}
+\to
+\text{certified radius}.
+\]
+
+The common certified radius is defined as the minimum lower bound over the
+positive frozen controlled instances:
+\[
+\rho_{\mathrm{cert}}
+=
+\min_j \underline{\rho}_j.
+\]
+This is why the reported common radius is
+\(8.9\times10^{-11}\), even though one individual positive case admits a
+larger lower bound.
+
+For the three positive frozen source seeds, the validated results were:
+
+\begin{table}[H]
+\centering
+\caption{Outward-rounded controlled-model certificates.}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+seed & validated interval \(\rho\) & prominence lower &
+curvature upper & certified \(\rho\) lower\\
+\midrule
+2533001 & \(1.0\times10^{-10}\) & 0.140983066 &
+\(2.19972891\times10^{21}\) & \(8.9\times10^{-11}\)\\
+2533003 & \(3.0\times10^{-10}\) & 0.0736388287 &
+\(5.81115634\times10^{20}\) & \(1.07914365\times10^{-10}\)\\
+2533004 & \(1.0\times10^{-10}\) & 0.235286838 &
+\(6.64435839\times10^{21}\) & \(8.9\times10^{-11}\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Hence
+\[
+\boxed{
+\rho_{\mathrm{cert}}
+=
+8.9\times10^{-11}.
+}
+\]
+
+A precision-stability audit at 192, 256, and 384 bits reproduced the same
+displayed common certified lower bound.  The two negative source seeds
+remained strictly negative and were retained.
+
+The scope statement is crucial: this is a computer-assisted theorem for the
+stored finite matrices of the controlled ancilla construction.  It is not a
+proof for an unspecified pre-rounding random distribution, nor for the
+independently redrawn 8Q--12Q ensemble.
+
+% ============================================================
+\section{Audit of the link to the independent high-Q ensemble}
+% ============================================================
+
+Having proved a rigorous controlled model, Phase 2 returned to the original
+high-Q experiment and asked whether the independent random-Pauli ensemble was
+actually coupled to that theorem.
+
+A favourable same-seed 11Q--12Q audit found:
+
+\begin{itemize}
+\item the coefficient sequences were identical for all 40 same-seed
+      comparisons;
+\item exact copied-ancilla Hamiltonians:
+      \(0/40\);
+\item exactly copied Pauli terms:
+      \(0/200\);
+\item Hamiltonians preserving both elementary leading-ancilla computational
+      sectors:
+      \(0/40\);
+\item every 12Q Hamiltonian contained at least one \(X\) or \(Y\) on the
+      leading qubit.
+\end{itemize}
+
+Thus the direct block-ancilla intertwiner required to identify the original
+ensemble with the controlled theorem is absent in this frozen audit.
+
+The correct logical separation is therefore:
+\[
+\boxed{
+\text{controlled ancilla theorem}
+\neq
+\text{original independent high-Q recurrence}.
+}
+\]
+
+% ============================================================
+\section{Sparse-Pauli algebra and the spectral-artifact audit}
+% ============================================================
+
+The next audit identified a deeper structural mechanism.
+
+\subsection{Normalized spectral-rank identity}
+
+The arithmetic rule
+\[
+k' = 2k+1
+\]
+obeys
+\[
+\boxed{
+\frac{k'+1}{2^{q+1}}
+=
+\frac{k+1}{2^q}.
+}
+\]
+Thus it exactly preserves the normalized cumulative spectral rank represented
+by the ordinal \(k+1\).
+
+The two recurrent chains lie at normalized source positions \(1/4\) and
+\(3/4\).  After the two-branch lift, the four tested target pairs occur at
+\[
+\frac18,\quad\frac38,\quad\frac58,\quad\frac78.
+\]
+
+This identity is arithmetic, not dynamical.  Nevertheless, once spectral
+multiplicity is present it can create a highly regular apparent
+``continuation'' of spectral boundaries.
+
+\subsection{Five-term Pauli algebra}
+
+For a fixed number \(s=5\) of Pauli generators, increasing \(q\) increases the
+number of spectator degrees of freedom.  The 12Q audit found:
+
+\begin{itemize}
+\item symplectic rank \(2\) with forced multiplicity \(256\): \(5/40\) seeds;
+\item symplectic rank \(4\) with forced multiplicity \(512\): \(35/40\) seeds;
+\item a common Pauli anticommuter, implying exact \(E\leftrightarrow -E\)
+      spectral symmetry: \(40/40\);
+\item regular repeat factor
+      \[
+      2^{12-5}=128.
+      \]
+\end{itemize}
+
+The dimension dependence of the frozen local controls was especially
+revealing:
+
+\begin{table}[H]
+\centering
+\caption{Controls forced inside repeated spectral blocks by dimension.}
+\begin{tabular}{@{}rrr@{}}
+\toprule
+target & regular repeat factor & controls inside repeated block / 10\\
+\midrule
+7Q  & 4   & 6/10\\
+8Q  & 8   & 8/10\\
+9Q  & 16  & 10/10\\
+10Q & 32  & 10/10\\
+11Q & 64  & 10/10\\
+12Q & 128 & 10/10\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At high \(q\), the candidates lie at algebraic spectral boundaries while the
+fixed \(\pm10\), step-2 controls increasingly lie inside exactly flat repeated
+blocks.  Candidate and control are therefore not asymptotically of the same
+spectral-boundary class.
+
+\subsection{Dependence of the two frozen 12Q candidates}
+
+The local-label audit found both frozen 12Q boundaries ranked first among their
+11-point local candidate/control sets.  However, the two batch-prominence
+vectors had correlation
+\[
+0.989390733,
+\]
+and the candidates succeeded in the same six batches and failed in the same
+two batches.  The eligible seed sets were identical.
+
+Therefore the two \(6/8\) successes must not be treated as independent
+replications.  For one candidate, under a simple \(p=1/2\) sign null,
+\[
+\Pr[X\ge6],\quad X\sim\mathrm{Binomial}(8,1/2),
+\]
+equals
+\[
+0.14453125.
+\]
+That calculation is not a complete statistical model of the experiment, but
+it shows why ``2/2 confirmed'' cannot legitimately be read as two independent
+small-\(p\) events.
+
+% ============================================================
+\section{Degenerate-basis invariance as a necessary physical condition}
+% ============================================================
+
+Let \(E\) be a degenerate eigenvalue with eigenspace
+\(\mathcal E_E\) of dimension \(m>1\).  The Hamiltonian determines the full
+spectral projector
+\[
+P_E
+=
+\sum_{j=1}^{m}\ket{e_j}\bra{e_j},
+\]
+but it does not determine a preferred basis
+\(\{\ket{e_j}\}_{j=1}^m\).
+
+For every \(U_E\in U(m)\),
+\[
+\ket{e_j'}
+=
+\sum_{\ell=1}^m
+\ket{e_\ell}(U_E)_{\ell j}
+\]
+gives the same Hamiltonian and the same \(P_E\).
+
+
+\subsection{Necessary invariance condition}
+
+Let \(\mathcal F(H,V)\) denote any proposed intrinsic hotspot observable.
+If \(H\) has a degenerate eigenspace \(\mathcal E_E\), and \(U_E\) acts
+unitarily only inside that eigenspace, then
+\[
+U_EHU_E^\dagger=H.
+\]
+Therefore a necessary condition for intrinsic basis independence is
+\[
+\boxed{
+\mathcal F(H,V)
+=
+\mathcal F(U_EHU_E^\dagger,\;U_EV U_E^\dagger)
+}
+\]
+for physically equivalent representations, or, when \(V\) is held fixed as an
+independently defined physical operator and only the eigendecomposition basis
+is changed,
+\[
+\boxed{
+\mathcal F(H,V)
+\text{ must not depend on the arbitrary eigenvector coordinates used inside }
+\mathcal E_E.
+}
+\]
+
+Failure of this condition does not mean that the numerical implementation is
+incorrect.  It means that the proposed scalar is not an intrinsic observable
+of the Hamiltonian-plus-perturbation pair unless an additional physical
+basis-selecting observable is specified.
+
+If a score selects only the ordinal pair
+\[
+\Span\{\ket{u_i},\ket{u_{i+1}}\}
+\]
+inside a larger degenerate eigenspace, then the selected rank-two projector is
+not determined by \(H\) alone.  A physically intrinsic observable must
+therefore be invariant under all such block rotations, or it must specify an
+independent physical observable that selects a basis.
+
+This is the decisive distinction between:
+
+\begin{itemize}
+\item invariance under \(U(2)\) rotations \emph{inside an already selected
+      two-dimensional subspace}, which \(C_i\) has; and
+\item invariance under rotations in the \emph{larger degenerate eigenspace}
+      that alter which two-dimensional slice is selected, which the original
+      ordinal protocol does not have in general.
+\end{itemize}
+
+% ============================================================
+\section{Frozen basis-invariance falsification}
+% ============================================================
+
+The final test instantiated that issue at 8Q, where complete calculations are
+tractable.
+
+Before execution it fixed:
+
+\begin{itemize}
+\item 12 Hamiltonian seeds;
+\item source coordinates \(31\) and \(95\);
+\item both target branches;
+\item local radius \(\pm10\), step \(2\);
+\item dephasing \(Z/ZZ\) and transverse \(X/XX\) perturbations;
+\item the same coherence ratio and prominence definitions;
+\item eight deterministic Haar rotations inside every degenerate eigenspace.
+\end{itemize}
+
+The \(\Real\) and \(\Null\) degenerate eigenbases were rotated separately.
+Hamiltonians, eigenvalues, perturbations, candidate coordinates, local
+controls, gap gate, and regularizer were held fixed.
+
+The largest Hamiltonian reconstruction discrepancies were approximately
+\[
+\|H'_{\Real}-H_{\Real}\|_2
+=
+1.434724\times10^{-14},
+\]
+and
+\[
+\|H'_{\Null}-H_{\Null}\|_2
+=
+9.209561\times10^{-15}.
+\]
+
+Among ten eligible seed-candidate cases:
+
+\begin{table}[H]
+\centering
+\caption{Degenerate-basis falsification result.}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+rotation & sampled range crossed zero & baseline sign reversed\\
+\midrule
+\(\Real\) degenerate basis & 2/10 & 2/10\\
+\(\Null\) degenerate basis & 4/10 & 4/10\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A single sign reversal is already a counterexample to basis-invariant hotspot
+sign.  Multiple frozen counterexamples therefore establish that the original
+ordinal two-vector prominence is not a well-defined observable of the
+degenerate Hamiltonian and perturbation alone.
+
+
+This should be stated in its strongest precise form:
+\[
+\boxed{
+\text{basis dependence}
+\quad\Longrightarrow\quad
+\text{the original ordinal-pair score is not intrinsic to }(H,V).
+}
+\]
+The appropriate conclusion is not that the Hamiltonian hotspot
+``disappears'' under rotation.  Rather, the selected ordinal two-vector slice
+is not uniquely defined by the degenerate Hamiltonian, and the prominence sign
+can change when that arbitrary slice changes while the Hamiltonian itself
+remains physically the same.
+
+% ============================================================
+\section{Final logical status of the original high-Q recurrence}
+% ============================================================
+
+The final Phase-2 interpretation is not that the numerical outputs were
+``wrong''.  The outputs accurately record the implemented algorithm and its
+diagonalization convention.
+
+What changed is the evidential interpretation.
+
+The high-Q coordinate recurrence is explained by the conjunction of:
+
+\begin{enumerate}[label=\arabic*.]
+\item exact normalized spectral-rank preservation under
+      \(k\mapsto2k+1\);
+\item exponentially growing spectator multiplicity in the fixed five-term
+      Pauli algebra;
+\item candidates lying on repeated-algebra boundaries while the frozen local
+      controls move increasingly deep inside repeated blocks;
+\item a residual \(\Real-\Null\) pair score that is not invariant under
+      physically equivalent rotations in the full degenerate eigenspaces.
+\end{enumerate}
+
+Therefore the original five-term high-Q protocol does \emph{not} establish
+transport of an intrinsic physical Soft-Space hotspot between independently
+generated Hilbert spaces.
+
+This conclusion is stronger, not weaker, than merely saying that a proof is
+missing.  The original interpretation has an explicit mathematical mechanism
+that explains the recurrence and an explicit predeclared counterexample to the
+required basis invariance.
+
+% ============================================================
+\section{What Phase 2 did establish}
+% ============================================================
+
+A fair scientific summary must preserve both the positive and negative
+results.
+
+\subsection{Empirically established within the implemented protocols}
+
+\begin{itemize}
+\item Independent 9Q perturbation tests produced reproducible positive
+      susceptibility and projector-overlap contrasts for several frozen
+      candidates.
+\item The harmonized high-Q statistic produced locally prominent recurrent
+      ordinal spectral boundaries.
+\item Both frozen 12Q candidate coordinates passed the predeclared
+      \(6/8=0.75\) prominence gate.
+\item A reduced Qiskit gate-level witness preserved positive
+      \(\Real-\Null\) contrast in ideal and selected noisy simulation.
+\end{itemize}
+
+\subsection{Proved mathematically}
+
+\begin{itemize}
+\item \(0\le C_i\le1\).
+\item \(C_i\) is invariant under basis rotations inside the already selected
+      rank-two subspace.
+\item The target/control prominence functional satisfies a deterministic
+      Lipschitz stability theorem.
+\item A decoupled ancilla branch lift preserves the effective operator,
+      coherence ratio, and complete prominence functional exactly.
+\item Regularized-resolvent and effective-operator perturbation bounds hold
+      under their stated assumptions.
+\item The controlled off-diagonal ancilla coupling has exact parity, forcing
+      an even prominence response and eliminating the linear term.
+\item The Schur complement produces an explicit quadratic branch self-energy.
+\item The controlled frozen positive instances admit an outward-rounded
+      computer-assisted positive-prominence radius of
+      \(8.9\times10^{-11}\).
+\end{itemize}
+
+\subsection{Falsified or not established}
+
+\begin{itemize}
+\item The arithmetic rule \(k\mapsto2k+1\) is not itself a physical
+      Hilbert-space intertwiner.
+\item The original independently generated 11Q--12Q Hamiltonians are not
+      exact copied ancilla lifts in the audited same-seed coupling.
+\item The two 12Q candidate confirmations are not independent replications.
+\item The fixed local controls are not boundary-matched at high dimension.
+\item The original ordinal two-vector score is not invariant under rotations
+      in larger degenerate eigenspaces.
+\item The original five-term high-Q recurrence therefore does not establish
+      an intrinsic basis-independent transported hotspot.
+\end{itemize}
+
+% ============================================================
+\section{Why the negative endpoint is scientifically valuable}
+% ============================================================
+
+The strongest outcome of Phase 2 is methodological.
+
+A weak research workflow could have stopped after the visually attractive
+12Q confirmation.  Instead, the project proceeded through:
+
+\[
+\begin{aligned}
+\text{empirical recurrence}
+&\to \text{operator definition}
+\to \text{exact baseline theorem}
+\to \text{perturbation bounds}\\
+&\to \text{validated certificate}
+\to \text{ensemble-coupling audit}\\
+&\to \text{sparse-algebra audit}
+\to \text{basis-invariance falsification}.
+\end{aligned}
+\]
+
+This chain separates a genuine mathematical theorem from an invalid
+generalization of that theorem.  It also identifies the precise mechanism by
+which a sparse high-dimensional Hamiltonian model can generate apparently
+stable ordinal spectral structure without providing a basis-independent
+physical subspace observable.
+
+From a research-integrity perspective, this is preferable to increasing the
+number of seeds in a protocol whose physical observable has already failed a
+necessary invariance condition.
+
+% ============================================================
+\section{Requirements for a renewed physical model}
+% ============================================================
+
+A new experiment should not merely rerun the same five-term ensemble.
+It must change the scientific model.
+
+Two principled routes are available.
+
+\subsection{Route A: complete degenerate-eigenspace projectors}
+
+Instead of selecting an arbitrary two-vector slice, use the full spectral
+projector
+\[
+P_E
+=
+\mathbf 1_{\{E\}}(H)
+\]
+or a physically defined cluster projector
+\[
+P_{\mathcal I}
+=
+\mathbf 1_{\mathcal I}(H)
+\]
+for a spectral interval \(\mathcal I\).
+
+The effective operator becomes
+\[
+\Sigma_{P}^{(\eta)}
+=
+PVQ\,g_\eta(E_P-QHQ)\,QVP,
+\]
+with \(P\) now invariant under any basis rotation inside the degenerate
+eigenspace.
+
+Controls must be matched by the same algebraic class: boundary projectors
+should be compared with boundary projectors, not with interior slices in flat
+repeated blocks.
+
+\subsection{Route B: physically richer Hamiltonian ensembles}
+
+A second route is to remove the growing spectator degeneracy by allowing the
+number and locality structure of Hamiltonian terms to scale with \(q\).  A
+generic local model could take the form
+\[
+H_q
+=
+\sum_{j=1}^{q}
+\bm h_j\cdot\bm\sigma_j
++
+\sum_{\langle j,k\rangle}
+\sum_{\alpha,\beta}
+J^{\alpha\beta}_{jk}
+\sigma_j^\alpha\sigma_k^\beta
++\cdots
+\]
+with a number of independent coefficients that grows with system size.
+
+The design requirements should include:
+
+\begin{enumerate}[label=\arabic*.]
+\item predeclared ensemble family;
+\item predeclared candidate observable;
+\item basis invariance by construction;
+\item boundary-matched control geometry;
+\item independent discovery and holdout seeds;
+\item effective sample size and eligibility reporting;
+\item dependence-aware statistics for multiple candidate chains;
+\item frozen thresholds before holdout execution.
+\end{enumerate}
+
+% ============================================================
+\section{Statistical considerations}
+% ============================================================
+
+The Phase-2 decision gate was deliberately simple:
+\[
+\widehat p\ge0.75.
+\]
+For \(B=8\), this means at least six positive batches.  Such a gate is useful
+as a predeclared operational rule, but it should not be confused with a full
+hypothesis test.
+
+For independent Bernoulli signs under \(p=1/2\),
+\[
+\Pr[X\ge6]
+=
+\sum_{j=6}^{8}
+\binom{8}{j}2^{-8}
+=
+0.14453125.
+\]
+In the actual 12Q data, the two candidate chains were highly correlated, so
+treating them as independent would exaggerate evidence.
+
+A future protocol should therefore use either:
+
+\begin{itemize}
+\item a hierarchical model that explicitly represents candidate dependence;
+\item permutation or randomization tests respecting the seed structure;
+\item a predeclared family-wise error control;
+\item or a primary single-candidate holdout with secondary descriptive
+      candidates.
+\end{itemize}
+
+Eligibility induced by the neighbouring-gap gate must also be reported.
+A batch with two eligible seeds is not statistically equivalent to one with
+five independent eligible seeds.
+
+% ============================================================
+\section{Reproducibility and versioned evidence}
+% ============================================================
+
+The project was developed as a versioned computational audit trail.  The
+important scientific advantage of the long v25.x sequence is not the version
+number itself, but the preservation of failed and superseded experiments.
+
+The reproducibility package should retain, at minimum:
+
+\begin{itemize}
+\item every script used for a reported result;
+\item exact command-line arguments;
+\item frozen seeds and batch strides;
+\item output files;
+\item checkpoint records;
+\item initial failed coarse interval runs;
+\item the final Arb/Acb validation output;
+\item the same-seed coupling audit;
+\item the sparse-Pauli spectral-artifact audit;
+\item the degenerate-basis invariance output.
+\end{itemize}
+
+A publication repository should distinguish:
+
+\[
+\texttt{code/},\quad
+\texttt{results/},\quad
+\texttt{documentation/},\quad
+\texttt{paper/}.
+\]
+
+The manuscript should not ask a reader to trust a verbal claim when a frozen
+machine-readable output exists.
+
+% ============================================================
+\section{Suggested evidence map}
+% ============================================================
+
+\begin{longtable}{@{}p{0.18\textwidth}p{0.34\textwidth}p{0.40\textwidth}@{}}
+\caption{Phase-2 evidence map.}\\
+\toprule
+Stage & Scientific question & Status\\
+\midrule
+\endfirsthead
+\toprule
+Stage & Scientific question & Status\\
+\midrule
+\endhead
+
+v25.2--v25.5 &
+Can 8Q structure guide targeted 9Q search, and can candidate subspaces be
+tracked under perturbation? &
+Exploratory-to-confirmatory numerical development.\\
+
+v25.5.1--v25.7 &
+Do frozen candidates retain more projector overlap or lower susceptibility
+than spectrum-matched controls on independent seeds? &
+Several positive candidate-specific numerical results; controls retained.\\
+
+v25.10--v25.19 &
+Does a small perturbative effective-subspace mechanism recur across targets,
+families, and local geometry? &
+Positive numerical evidence; matrix-level mechanism increasingly isolated.\\
+
+v25.20--v25.30 &
+Does the mechanism transfer across perturbation models and dimensions, and can
+a frozen rule predict higher-Q coordinates? &
+Empirical dimensional rule and harmonized frozen validation.\\
+
+v25.31 &
+Do the two frozen 12Q predictions pass the predeclared local-prominence gate? &
+Yes: both 6/8 = 0.75.\\
+
+v25.32 &
+Can a reduced perturbative witness be expressed and checked at circuit level? &
+Yes in ideal and selected noisy simulation; not the full 12Q calculation.\\
+
+v25.33--v25.39 &
+Can dimensional preservation be proved in a controlled non-circular model and
+certified away from zero coupling? &
+Yes. Exact lift theorem plus outward-rounded certified positive radius.\\
+
+v25.40 &
+Is the original independent 11Q--12Q ensemble the controlled ancilla lift? &
+No in the frozen favourable same-seed audit.\\
+
+v25.41 &
+Can the coordinate recurrence be explained by the sparse Pauli algebra and
+spectral-rank geometry? &
+Yes for the implemented protocol: normalized rank preservation plus growing
+spectator multiplicity and unmatched controls.\\
+
+v25.42 &
+Is the residual ordinal two-vector hotspot sign basis invariant inside
+degenerate eigenspaces? &
+No. Frozen sign-reversal counterexamples while \(H\) is unchanged to
+\(\sim10^{-14}\).\\
+\bottomrule
+\end{longtable}
+
+
+% ============================================================
+\section{Limitations and non-claims}
+% ============================================================
+
+For clarity, this manuscript does \emph{not} claim any of the following:
+
+\begin{enumerate}[label=\arabic*.]
+\item that the original five-term random-Pauli ordinal recurrence is a
+      universal law of finite-dimensional Hilbert spaces;
+\item that the 12Q confirmation constitutes two independent replications;
+\item that the controlled ancilla theorem proves the independently redrawn
+      9Q--12Q ensemble;
+\item that the Qiskit reduced witness is equivalent to the complete 12Q
+      classical prominence computation;
+\item that the computer-assisted radius is a confidence interval for a random
+      distribution of Hamiltonians;
+\item that an ordinal rank-two eigenspace slice inside a larger degeneracy is
+      physically meaningful without an additional basis-selecting observable.
+\end{enumerate}
+
+These non-claims are not editorial qualifications added after the fact.  They
+are the logical consequences of the final audit and are part of the scientific
+result.
+
+% ============================================================
+\section{Discussion}
+% ============================================================
+
+Three conceptual lessons emerge.
+
+\subsection{A recurring coordinate need not be a transported state}
+
+The identity
+\[
+\frac{2k+2}{2^{q+1}}=\frac{k+1}{2^q}
+\]
+shows how an integer recurrence can simply preserve normalized spectral
+position.  Without an operator intertwiner,
+\[
+H_{q+1}J=JH_q,
+\]
+there is no reason to interpret that recurrence as transport of an eigenstate
+or eigensubspace.
+
+\subsection{A good local score still needs a physical domain}
+
+The normalized coherence ratio is mathematically nontrivial and useful.  Its
+effective operator has a clean Feshbach structure, a bounded range, and exact
+internal \(U(2)\) invariance.  None of those properties guarantees that an
+ordinal pair is a physically well-defined object when embedded inside a
+larger degenerate eigenspace.
+
+This is a general lesson in computational spectral physics: invariance of a
+formula with respect to coordinates inside a chosen subspace does not imply
+invariance of the \emph{subspace-selection rule} itself.
+
+\subsection{A falsification can preserve the valuable mathematics}
+
+The basis-invariance failure does not invalidate:
+
+\begin{itemize}
+\item the projection-operator derivations;
+\item the exact decoupled-ancilla theorem;
+\item the parity theorem;
+\item the Schur-complement mechanism;
+\item the interval-arithmetic certificate.
+\end{itemize}
+
+It invalidates a proposed identification between those results and the
+original independently generated sparse high-Q ensemble.
+
+This separation is exactly why the proof ledger is useful.
+
+% ============================================================
+\section{Conclusion}
+% ============================================================
+
+Phase 2 began by asking whether Soft-Space candidates discovered in low-qubit
+Hilbert spaces could be continued into 9Q--12Q and whether their apparent
+stability could be given a physical and mathematical interpretation.
+
+The empirical programme succeeded in constructing a reproducible continuation
+protocol and culminated in a frozen 12Q result in which both predicted
+candidate coordinates passed the predeclared \(0.75\) local-prominence gate.
+A perturbative matrix mechanism was isolated, expressed as a regularized
+Feshbach-type effective operator, and translated into a robust
+\(\Real-\Null\) prominence statistic.
+
+The mathematical programme then went significantly further.  It proved an
+exact non-circular dimensional-lift theorem for a controlled ancilla model,
+derived perturbation and prominence bounds, identified an exact parity
+selection rule, reduced the controlled coupling by a Schur complement, and
+produced an outward-rounded computer-assisted certificate for the frozen
+positive instances.
+
+The final falsification programme established the boundary of those positive
+results.  The independently generated high-Q Hamiltonians do not satisfy the
+elementary copied-ancilla intertwiner.  The fixed five-term Pauli ensemble
+develops large exact degeneracies as \(q\) grows.  The arithmetic recurrence
+\(k\mapsto2k+1\) preserves normalized spectral rank, and the chosen local
+controls become trapped inside repeated blocks.  Most decisively, the
+remaining ordinal two-vector hotspot sign can be reversed by basis rotations
+inside degenerate eigenspaces while the physical Hamiltonian is unchanged.
+
+Accordingly, the original five-term high-Q recurrence is mathematically
+exhausted as evidence for an intrinsic transported physical hotspot.  The
+proper Phase-2 endpoint is:
+
+\begin{quote}
+\textbf{The project has established a substantive perturbative
+effective-subspace theory and a rigorous controlled dimensional-lift result,
+while simultaneously falsifying the stronger interpretation that the
+original sparse-Pauli ordinal high-Q recurrence is a basis-independent
+physical Soft-Space transport law.}
+\end{quote}
+
+That endpoint defines the next research problem cleanly.  A new phase should
+replace arbitrary ordinal slices by basis-invariant spectral projectors or use
+a physically richer Hamiltonian ensemble that removes the spectator
+degeneracy, together with boundary-matched controls, independent holdout data,
+and a fully predeclared inference protocol.
+
+% ============================================================
+\appendix
+\section{Proof-status ledger}
+% ============================================================
+
+\begin{longtable}{@{}p{0.62\textwidth}p{0.30\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+\endfirsthead
+\toprule
+Statement & Status\\
+\midrule
+\endhead
+
+\(k\mapsto2k+1\) is an exact label map &
+Proved exactly.\\
+
+The two branch injections are distinct from the arithmetic source-label map &
+Proved from the frozen protocol.\\
+
+\(0\le C_i\le1\) &
+Proved exactly.\\
+
+\(C_i\) is invariant under \(U(2)\) rotations inside the already selected
+rank-two subspace &
+Proved exactly.\\
+
+Uniform target/control score bounds imply an explicit prominence bound &
+Proved under stated assumptions.\\
+
+Exact decoupled-ancilla lift preserves \(\Sigma_i\), \(C_i\), and full
+prominence &
+Proved exactly for the controlled lift.\\
+
+\(\rho<1/2\) is sufficient to preserve cluster isolation under the stated
+gap normalization &
+Proved as a sufficient condition.\\
+
+Controlled \(X_a\otimes G\) coupling makes prominence even in \(\eps\) &
+Proved exactly for the controlled path.\\
+
+Schur complement gives a quadratic branch self-energy &
+Proved exactly under the invertibility condition.\\
+
+Frozen controlled positive instances have common
+\(\rho_{\mathrm{cert}}=8.9\times10^{-11}\) &
+Computer-assisted, outward-rounded certificate for the stored matrices.\\
+
+Original independent 11Q--12Q Hamiltonians are exact copied ancilla lifts &
+Refuted for all 40 frozen same-seed audit cases.\\
+
+High-Q ordinal recurrence can be explained by normalized-rank preservation,
+sparse-Pauli multiplicity, and control geometry &
+Established for the implemented five-term protocol.\\
+
+The two frozen 12Q candidate chains are independent &
+Refuted in the frozen data; batch-prominence correlation \(\approx0.9894\).\\
+
+Ordinal two-vector hotspot sign is invariant under basis rotations in larger
+degenerate eigenspaces &
+Falsified by frozen finite counterexamples.\\
+
+Original five-term high-Q protocol demonstrates an intrinsic transported
+basis-independent hotspot &
+Not established; the required interpretation is rejected by the final audit.\\
+\bottomrule
+\end{longtable}
+
+% ============================================================
+\section{Key equations in compact form}
+% ============================================================
+
+\begin{align}
+P_i
+&=
+\ket{u_i}\bra{u_i}
++
+\ket{u_{i+1}}\bra{u_{i+1}},
+\\
+Q_i&=\Id-P_i,
+\\
+E_i&=\frac{\lambda_i+\lambda_{i+1}}{2},
+\\
+g_\eta(x)&=\frac{x}{x^2+\eta^2},
+\\
+\Sigma_i^{(\eta)}
+&=
+P_iVQ_i\,g_\eta(E_i-Q_iHQ_i)\,Q_iVP_i,
+\\
+C_i
+&=
+\frac{\|\Sigma_i^{(\eta)}\|_{\fro}}
+{\sum_{n\notin\{i,i+1\}}
+ |g_\eta(E_i-\lambda_n)|\,\|w_n^\dagger w_n\|_{\fro}},
+\\
+D_{f,k,b}
+&=
+\med_r
+\left(
+C^{\Real}_{f,k,b,r}
+-
+C^{\Null}_{f,k,b,r}
+\right),
+\\
+R_{k,b}
+&=
+\min\{D_{Z,k,b},D_{X,k,b}\},
+\\
+B_{k,b}
+&=
+\med_{c\in N_q(k)}R_{c,b},
+\\
+\Prom_{k,b}
+&=
+R_{k,b}-B_{k,b},
+\\
+\widehat p_k
+&=
+\frac1B
+\sum_{b=1}^{B}\mathbf1\{\Prom_{k,b}>0\}.
+\end{align}
+
+The arithmetic identity behind the observed source-coordinate recurrence is
+\[
+k_{q+1}=2k_q+1
+\quad\Longrightarrow\quad
+\frac{k_{q+1}+1}{2^{q+1}}
+=
+\frac{k_q+1}{2^q}.
+\]
+
+The exact controlled lift is
+\[
+H^\uparrow
+=
+\ket0\bra0\otimes(H-\Delta\Id)
++
+\ket1\bra1\otimes(H+\Delta\Id),
+\qquad
+V^\uparrow=\Id_2\otimes V,
+\]
+with
+\[
+\Sigma_{i,b}^{\uparrow}
+=
+J_b\Sigma_iJ_b^\dagger,
+\qquad
+C_{i,b}^{\uparrow}=C_i,
+\qquad
+\Prom_{i,b}^{\uparrow}=\Prom_{i,b}.
+\]
+
+For the structured coupling,
+\[
+H(\eps)=
+\begin{pmatrix}
+A&\eps G\\
+\eps G&D
+\end{pmatrix},
+\]
+and
+\[
+\Sigma_A(E,\eps)
+=
+\eps^2G(D-E)^{-1}G.
+\]
+
+% ============================================================
+\section{Recommended figures for the publication version}
+% ============================================================
+
+The long-form manuscript should eventually be supplemented with the following
+figures generated directly from frozen outputs:
+
+\begin{enumerate}[label=\arabic*.]
+\item Phase-2 pipeline: discovery, perturbative confirmation, dimensional
+      transfer, 12Q confirmation, theorem track, falsification track.
+\item Hilbert-space scaling \(8Q\to12Q\).
+\item 9Q projector-overlap and susceptibility confirmation by candidate.
+\item Dimensional source-coordinate chains under \(k\mapsto2k+1\).
+\item 12Q target versus local-control prominence across eight batches.
+\item Qiskit ideal/noisy reduced witness.
+\item Controlled-ancilla prominence versus \(\rho\) with the
+      \(\rho<1/2\) isolation region marked.
+\item Log--log quadratic-response plot demonstrating parity exponent
+      \(\approx2\).
+\item Interval-certified curvature/radius table.
+\item Sparse-Pauli repeated-spectrum geometry versus qubit number.
+\item Local control locations relative to repeated spectral blocks.
+\item Degenerate-basis rotation sign ranges for the v25.42 falsification.
+\end{enumerate}
+
+% ============================================================
+\section{Reproducibility checklist}
+% ============================================================
+
+For each numerical result included in a final archival release, record:
+
+\begin{enumerate}[label=\arabic*.]
+\item script filename and version;
+\item full command line;
+\item Git commit hash;
+\item qubit number;
+\item Hamiltonian term count;
+\item seed list, base seed, and batch stride;
+\item number of batches and seeds per batch;
+\item perturbation family and repetition count;
+\item regularizer and gap threshold;
+\item target coordinates and all controls;
+\item output filename;
+\item checkpoint filename if applicable;
+\item predeclared decision rule;
+\item whether the run is discovery, confirmation, theorem validation,
+      diagnostic audit, or falsification.
+\end{enumerate}
+
+% ============================================================
+\section{Terminology note}
+% ============================================================
+
+The term \emph{Soft Space} is used operationally in this project.  It should
+not be understood as asserting a new fundamental mathematical object merely
+because a numerical candidate has a high score.  In Phase 2 the term denotes
+a hypothesized subspace or spectral region whose behaviour is tested against
+matched controls under specified perturbations.
+
+After the final high-Q audit, the phrase \emph{transported Soft-Space hotspot}
+must not be used for the original five-term ordinal recurrence without an
+explicit qualifier that the physical basis-independent interpretation was
+not established and was contradicted by the degenerate-basis falsification.
+
+% ============================================================
+\begin{thebibliography}{99}
+
+\bibitem{BreuerPetruccione}
+H.-P. Breuer and F. Petruccione,
+\textit{The Theory of Open Quantum Systems},
+Oxford University Press, 2002.
+
+\bibitem{Feshbach}
+H. Feshbach,
+A unified theory of nuclear reactions. II,
+\textit{Annals of Physics} \textbf{19}, 287--313 (1962).
+
+\bibitem{Nakajima}
+S. Nakajima,
+On quantum theory of transport phenomena,
+\textit{Progress of Theoretical Physics} \textbf{20}, 948--959 (1958).
+
+\bibitem{Zwanzig}
+R. Zwanzig,
+Ensemble method in the theory of irreversibility,
+\textit{Journal of Chemical Physics} \textbf{33}, 1338--1341 (1960).
+
+\bibitem{DavisKahan}
+C. Davis and W. M. Kahan,
+The rotation of eigenvectors by a perturbation. III,
+\textit{SIAM Journal on Numerical Analysis} \textbf{7}, 1--46 (1970).
+
+\bibitem{Kato}
+T. Kato,
+\textit{Perturbation Theory for Linear Operators},
+Springer, 2nd ed., 1976.
+
+\bibitem{NielsenChuang}
+M. A. Nielsen and I. L. Chuang,
+\textit{Quantum Computation and Quantum Information},
+Cambridge University Press, 10th anniversary ed., 2010.
+
+\end{thebibliography}
+
+\end{document}
