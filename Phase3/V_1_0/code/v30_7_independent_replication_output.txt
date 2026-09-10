@@ -1,0 +1,71 @@
+=== Soft Spaces Phase 3.1 v30.7 INDEPENDENT FROZEN REPLICATION ===
+Independent Hamiltonian seeds: 25043000 ... 25043011
+Frozen physical model namespace: v30.2
+Bootstrap replicates: 200000
+
+PREDECLARED PRIMARY ENDPOINT:
+  delta_corr = corr_REAL - corr_NULL
+
+PREDECLARED CONFIRMATION CRITERIA:
+  C1 median(delta_corr) > 0
+  C2 at least 9/12 seeds have delta_corr > 0
+  C3 one-sided exact sign-test p < 0.05
+  C4 one-sided Wilcoxon signed-rank p < 0.05
+  C5 95% bootstrap CI for median(delta_corr) lies entirely above 0
+
+seed | groups | size min:max | ±E pairs | corr_REAL | corr_NULL | delta_corr
+25043000 |     64 |    4:4    |       32 | +1.000000 | +0.946986 | +0.053014
+25043001 |     64 |    4:4    |       32 | +1.000000 | +0.940687 | +0.059313
+25043002 |     16 |   16:16   |        8 | +0.999873 | +0.998628 | +0.001244
+25043003 |     32 |    8:8    |       16 | +1.000000 | +0.945683 | +0.054317
+25043004 |     32 |    8:8    |       16 | +1.000000 | +0.956943 | +0.043057
+25043005 |     64 |    4:4    |       32 | +1.000000 | +0.962245 | +0.037755
+25043006 |     64 |    4:4    |       32 | +1.000000 | +0.846156 | +0.153844
+25043007 |     32 |    8:8    |       16 | +1.000000 | +0.976152 | +0.023848
+25043008 |     32 |    8:8    |       16 | +0.976862 | +0.989791 | -0.012928
+25043009 |     64 |    4:4    |       32 | +1.000000 | +0.975464 | +0.024536
+25043010 |     64 |    4:4    |       32 | +1.000000 | +0.970961 | +0.029039
+25043011 |     64 |    4:4    |       32 | +1.000000 | +0.889753 | +0.110247
+
+=== PRIMARY AGGREGATE RESULTS ===
+Positive delta_corr seeds: 11/12
+Mean delta_corr: +0.048107
+Median delta_corr: +0.040406
+Exact sign test, one-sided p: 0.00317383
+Exact sign test, two-sided p: 0.00634766
+Wilcoxon W+: 76.000000
+Wilcoxon one-sided p: 0.00097632
+Wilcoxon two-sided p: 0.00170857
+Bootstrap 95% CI mean: [+0.025479, +0.074397]
+Bootstrap 95% CI median: [+0.024192, +0.056815]
+Cohen dz: +1.056863
+
+=== PREDECLARED GATE ===
+C1 median > 0: PASS
+C2 >= 9/12 positive seeds: PASS
+C3 sign-test one-sided p < 0.05: PASS
+C4 Wilcoxon one-sided p < 0.05: PASS
+C5 bootstrap median CI > 0: PASS
+
+FINAL PREDECLARED DECISION: CONFIRMED
+
+=== SECONDARY DESCRIPTIVE OUTPUTS ===
+Mean corr_REAL: +0.998061
+Mean corr_NULL: +0.949954
+Median corr_REAL: +1.000000
+Median corr_NULL: +0.959594
+Mean Fisher-z difference: +10.333686
+Median Fisher-z difference: +12.220262
+
+Interpretation:
+  CONFIRMED means the independently predeclared seed ensemble reproduces
+  the small REAL-specific enhancement of ±E correlation under all five
+  frozen acceptance criteria.
+
+  NOT CONFIRMED means the original v30.6 effect should not be promoted as
+  a replicated Phase 3 result, regardless of any attractive individual
+  seeds or secondary statistics.
+
+Scope:
+  v30.7 is an out-of-sample replication.  No post-hoc tuning of seeds,
+  thresholds or acceptance criteria is permitted.

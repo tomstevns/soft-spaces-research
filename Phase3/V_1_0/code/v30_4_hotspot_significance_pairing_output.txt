@@ -1,0 +1,48 @@
+=== Soft Spaces Phase 3.1 v30.4 FROZEN HOTSPOT SIGNIFICANCE / ±E PAIRING TEST ===
+8Q; 11-term Hamiltonian; seeds = 12
+Frozen physical model seed namespace = v30.2
+Shuffle replicates per seed = 2000
+Strong-hotspot threshold = seedwise top 25%
+
+seed | groups | group min:max | top prominence | p_top | ±E pairs | corr | p_corr | paired-strong | p_pair
+25042000 |     64 |    4:4    | +0.632689923 | 0.428786 |       32 | +0.968494 | 0.000500 | 0.187500 | 0.001000
+25042001 |     32 |    8:8    | +0.293291777 | 0.690155 |       16 | +0.971732 | 0.000500 | 0.187500 | 0.020490
+25042002 |     64 |    4:4    | +0.317501801 | 0.986507 |       32 | +0.951482 | 0.000500 | 0.187500 | 0.001499
+25042003 |     64 |    4:4    | +0.435642291 | 0.583708 |       32 | +0.886092 | 0.000500 | 0.187500 | 0.001000
+25042004 |     64 |    4:4    | +0.413099271 | 0.993003 |       32 | +0.945288 | 0.000500 | 0.187500 | 0.001000
+25042005 |     32 |    8:8    | +0.345170174 | 0.570215 |       16 | +0.953639 | 0.000500 | 0.187500 | 0.014493
+25042006 |     64 |    4:4    | +0.468964227 | 0.777111 |       32 | +0.957378 | 0.000500 | 0.218750 | 0.000500
+25042007 |     32 |    8:8    | +0.280337799 | 0.877561 |       16 | +0.981858 | 0.000500 | 0.250000 | 0.000500
+25042008 |     64 |    4:4    | +0.518936595 | 0.272864 |       32 | +0.946891 | 0.000500 | 0.218750 | 0.000500
+25042009 |     32 |    8:8    | +0.497550798 | 0.064968 |       16 | +0.982105 | 0.000500 | 0.250000 | 0.001499
+25042010 |     32 |    8:8    | +0.397637724 | 0.875062 |       16 | +0.973545 | 0.000500 | 0.250000 | 0.000500
+25042011 |     32 |    8:8    | +0.409481225 | 0.555722 |       16 | +0.980525 | 0.000500 | 0.187500 | 0.015992
+
+=== ACROSS-SEED SUMMARY ===
+Median top-hotspot p-value: 0.636932
+Seeds with p_top < 0.05: 0/12
+Median ±E prominence correlation: +0.962936
+Median ±E correlation p-value: 0.000500
+Seeds with p_corr < 0.05: 12/12
+Median paired-strong fraction: 0.187500
+Median paired-strong p-value: 0.001000
+Seeds with p_pair < 0.05: 12/12
+
+Interpretation:
+  p_top  : empirical upper-tail probability for observing a maximum
+           prominence at least this large after shuffling robust values.
+  corr   : Pearson correlation of prominence across exact ±E partners.
+  p_corr : empirical upper-tail shuffle p-value for that correlation.
+  paired-strong:
+           fraction of exact ±E pairs where BOTH members lie in the
+           seedwise top quartile of prominence.
+  p_pair : empirical upper-tail shuffle p-value for paired-strong fraction.
+
+Decision principle:
+  Strong evidence requires repeated low p-values across independent frozen
+  Hamiltonian seeds.  A single low p-value is not sufficient.
+
+Important:
+  These are seedwise permutation p-values.  v30.3 does not yet perform a
+  formal combined-p test or multiple-testing correction; those belong in
+  the next confirmation/statistical-summary step if the signal survives.

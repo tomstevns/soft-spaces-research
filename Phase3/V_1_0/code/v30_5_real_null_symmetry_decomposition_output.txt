@@ -1,0 +1,45 @@
+=== Soft Spaces Phase 3.1 v30.5 REAL/NULL ±E SYMMETRY DECOMPOSITION ===
+8Q; 11-term Hamiltonian; seeds = 12
+Frozen physical model seed namespace = v30.2
+Permutation replicates per seed = 2000
+
+seed | groups | size min:max | ±E pairs | corr_REAL | corr_NULL | corr_DIFF | delta_corr | p_delta
+25042000 |     64 |    4:4    |       32 | +1.000000 | +0.848158 | +0.968494 | +0.151842 | 0.115942
+25042001 |     32 |    8:8    |       16 | +1.000000 | +0.990203 | +0.971732 | +0.009797 | 0.344328
+25042002 |     64 |    4:4    |       32 | +1.000000 | +0.963691 | +0.951482 | +0.036309 | 0.262369
+25042003 |     64 |    4:4    |       32 | +1.000000 | +0.826947 | +0.886092 | +0.173053 | 0.041979
+25042004 |     64 |    4:4    |       32 | +1.000000 | +0.946301 | +0.945288 | +0.053699 | 0.212894
+25042005 |     32 |    8:8    |       16 | +0.981015 | +0.991837 | +0.953639 | -0.010821 | 0.624688
+25042006 |     64 |    4:4    |       32 | +1.000000 | +0.925965 | +0.957378 | +0.074034 | 0.314843
+25042007 |     32 |    8:8    |       16 | +1.000000 | +0.972101 | +0.981858 | +0.027899 | 0.325837
+25042008 |     64 |    4:4    |       32 | +1.000000 | +0.948696 | +0.946891 | +0.051304 | 0.312844
+25042009 |     32 |    8:8    |       16 | +1.000000 | +0.984471 | +0.982105 | +0.015529 | 0.419790
+25042010 |     32 |    8:8    |       16 | +1.000000 | +0.982882 | +0.973545 | +0.017118 | 0.446777
+25042011 |     32 |    8:8    |       16 | +0.994540 | +0.988715 | +0.980525 | +0.005825 | 0.498251
+
+=== ACROSS-SEED SUMMARY ===
+Median corr_REAL: +1.000000
+Median corr_NULL: +0.967896
+Median corr_DIFF: +0.962936
+Median delta_corr = REAL-NULL: +0.032104
+Median p_delta: 0.320340
+Seeds with delta_corr > 0: 11/12
+Seeds with p_delta < 0.05: 1/12
+
+Interpretation:
+  corr_REAL : ±E correlation of REAL prominence alone.
+  corr_NULL : ±E correlation of NULL prominence alone.
+  corr_DIFF : ±E correlation of REAL-minus-NULL prominence.
+  delta_corr: corr_REAL - corr_NULL.
+  p_delta   : upper-tail permutation p-value for delta_corr under
+              independent REAL/NULL label swaps within eigenspaces.
+
+Decision logic:
+  If REAL and NULL correlations are similarly high, the ±E structure is
+  likely largely inherited from Hamiltonian/spectral symmetry.
+  If REAL consistently exceeds NULL with low p_delta across seeds, the
+  ±E organization contains a REAL-specific component.
+
+Important:
+  This test freezes the v30.2 physical model.  Only the statistical
+  decomposition/permutation layer is new in v30.5.

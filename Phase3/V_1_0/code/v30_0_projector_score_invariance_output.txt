@@ -1,0 +1,36 @@
+=== Soft Spaces Phase 3.1 v30.0 PROJECTOR-SCORE INVARIANCE TEST ===
+8Q five-term random-Pauli Hamiltonians: 1 executed frozen seed(s)
+Frozen candidates: [31, 95]; rotations per degenerate basis: 8
+REAL and NULL rotated separately; H, spectrum, V, coordinates, controls and score definition otherwise frozen.
+
+Replacement under test:
+  selected neighbouring pair -> complete degeneracy-closed P subspace
+  score uses exact-eigenspace blocks A_G = P V P_G V P
+  normalised Frobenius cancellation score is basis invariant by construction
+
+seed | k | groups | group size | baseline | REAL range | max|d| | gate | NULL range | max|d| | gate
+25042000 | 31 |      4 |   64:64   |  -0.000000000 | [-0.000000000,+0.000000000] |  5.551e-17 | PASS | [-0.000000000,+0.000000000] |  5.551e-17 | PASS
+25042000 | 95 |      4 |   64:64   |  -0.000000000 | [-0.000000000,+0.000000000] |  1.665e-16 | PASS | [-0.000000000,+0.000000000] |  1.110e-16 | PASS
+
+Eligible seed-candidate instances: 2/2
+REAL invariance gate: 2 PASS, 0 FAIL
+NULL invariance gate: 2 PASS, 0 FAIL
+Maximum REAL prominence |delta|: 1.665335e-16
+Maximum NULL prominence |delta|: 1.110223e-16
+Maximum REAL ||U_rot diag(E) U_rot^dagger-H_REAL||_2: 8.665782e-15
+Maximum NULL ||U_rot diag(E) U_rot^dagger-H_NULL||_2: 5.706733e-15
+
+Decision rule:
+  PASS requires every eligible REAL-only and NULL-only degenerate-basis
+  rotation to preserve prominence within
+  atol=1.0e-10 + rtol=1.0e-09*|baseline|.
+
+Interpretation:
+  If all eligible cases PASS, the specific basis-dependence exposed by
+  v25.42 has been removed for this finite regression suite.
+  This does NOT yet prove that the projector score is the final physical
+  Soft Spaces observable; that is a separate Phase 3 model question.
+
+CONCLUSION: PROJECTOR-SCORE BASIS-INVARIANCE TEST PASSED.
+The v25.42 degenerate-eigenbasis counterexample is not reproduced
+by the v30.0 degeneracy-closed projector score in this frozen suite.

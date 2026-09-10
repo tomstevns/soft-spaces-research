@@ -1,0 +1,36 @@
+=== Soft Spaces Phase 3.1 v30.3 HOTSPOT SIGNIFICANCE / ±E PAIRING TEST ===
+8Q; 11-term Hamiltonian; seeds = 1
+Shuffle replicates per seed = 500
+Strong-hotspot threshold = seedwise top 25%
+
+seed | groups | group min:max | top prominence | p_top | ±E pairs | corr | p_corr | paired-strong | p_pair
+25042000 |     64 |    4:4    | +0.471220872 | 0.994012 |       32 | +0.934180 | 0.001996 | 0.187500 | 0.001996
+
+=== ACROSS-SEED SUMMARY ===
+Median top-hotspot p-value: 0.994012
+Seeds with p_top < 0.05: 0/1
+Median ±E prominence correlation: +0.934180
+Median ±E correlation p-value: 0.001996
+Seeds with p_corr < 0.05: 1/1
+Median paired-strong fraction: 0.187500
+Median paired-strong p-value: 0.001996
+Seeds with p_pair < 0.05: 1/1
+
+Interpretation:
+  p_top  : empirical upper-tail probability for observing a maximum
+           prominence at least this large after shuffling robust values.
+  corr   : Pearson correlation of prominence across exact ±E partners.
+  p_corr : empirical upper-tail shuffle p-value for that correlation.
+  paired-strong:
+           fraction of exact ±E pairs where BOTH members lie in the
+           seedwise top quartile of prominence.
+  p_pair : empirical upper-tail shuffle p-value for paired-strong fraction.
+
+Decision principle:
+  Strong evidence requires repeated low p-values across independent frozen
+  Hamiltonian seeds.  A single low p-value is not sufficient.
+
+Important:
+  These are seedwise permutation p-values.  v30.3 does not yet perform a
+  formal combined-p test or multiple-testing correction; those belong in
+  the next confirmation/statistical-summary step if the signal survives.

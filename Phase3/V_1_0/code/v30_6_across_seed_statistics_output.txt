@@ -1,0 +1,65 @@
+=== Soft Spaces Phase 3.1 v30.6 ACROSS-SEED REAL-vs-NULL STATISTICS ===
+Frozen seeds: 12
+Bootstrap replicates: 200000
+
+seed | corr_REAL | corr_NULL | delta_corr
+25042000 | +1.000000 | +0.848158 | +0.151842
+25042001 | +1.000000 | +0.990203 | +0.009797
+25042002 | +1.000000 | +0.963691 | +0.036309
+25042003 | +1.000000 | +0.826947 | +0.173053
+25042004 | +1.000000 | +0.946301 | +0.053699
+25042005 | +0.981015 | +0.991837 | -0.010822
+25042006 | +1.000000 | +0.925965 | +0.074035
+25042007 | +1.000000 | +0.972101 | +0.027899
+25042008 | +1.000000 | +0.948696 | +0.051304
+25042009 | +1.000000 | +0.984471 | +0.015529
+25042010 | +1.000000 | +0.982882 | +0.017118
+25042011 | +0.994540 | +0.988715 | +0.005825
+
+=== DESCRIPTIVE SUMMARY ===
+Mean corr_REAL: +0.997963
+Mean corr_NULL: +0.947497
+Median corr_REAL: +1.000000
+Median corr_NULL: +0.967896
+Mean delta_corr: +0.050466
+Median delta_corr: +0.032104
+Min delta_corr: -0.010822
+Max delta_corr: +0.173053
+Positive delta_corr seeds: 11/12
+Cohen dz on raw delta_corr: +0.878293
+
+=== EXACT SIGN TEST ===
+One-sided H1: median(delta_corr) > 0 : p = 0.00317383
+Two-sided H1: median(delta_corr) != 0: p = 0.00634766
+
+=== WILCOXON SIGNED-RANK ===
+W+ = 75.000000
+One-sided H1: delta_corr > 0 : p = 0.00146449
+Two-sided H1: delta_corr != 0: p = 0.00268489
+
+=== BOOTSTRAP 95% CONFIDENCE INTERVALS ===
+Mean delta_corr: +0.050466 [+0.022297, +0.084095]
+Median delta_corr: +0.032104 [+0.012663, +0.063867]
+
+=== FISHER-z PAIRED COMPARISON ===
+Mean Fisher-z(REAL) - Fisher-z(NULL): +10.192255
+Median Fisher-z difference: +12.099900
+Descriptive paired z-difference statistic: +7.358093
+Normal-approx two-sided p: 0.00000000
+
+Decision guidance:
+  Primary aggregate evidence comes from the exact sign test, Wilcoxon
+  signed-rank test and bootstrap intervals.
+  Fisher-z is secondary because corr_REAL is numerically saturated near 1
+  for many seeds and therefore produces very large transformed values.
+
+Interpretation rule:
+  If sign/Wilcoxon support delta_corr > 0 and the bootstrap intervals
+  exclude zero, then the frozen seed ensemble supports a small but
+  reproducible REAL-specific enhancement of ±E correlation.
+  If those criteria fail, the ±E structure should be attributed mainly
+  to shared Hamiltonian/spectral symmetry rather than Soft Spaces.
+
+Scope:
+  v30.6 performs no new physics simulation.  It summarizes the 12 frozen
+  v30.5 seed results only.

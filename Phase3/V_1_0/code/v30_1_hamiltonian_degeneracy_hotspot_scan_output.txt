@@ -1,0 +1,32 @@
+=== Soft Spaces Phase 3.1 v30.1 HAMILTONIAN DEGENERACY / HOTSPOT SCAN ===
+8Q, term counts = [5, 7, 9, 11]
+Frozen candidates = [31, 95]
+
+seed | terms | groups | group min:max | nondeg.frac | prominence k=31 | prominence k=95
+25042000 |     5 |      4 |   64:64   |    0.000000 |    +0.000000000 |    +0.000000000
+25042000 |     7 |     16 |   16:16   |    0.000000 |      INELIGIBLE |      INELIGIBLE
+25042000 |     9 |     16 |   16:16   |    0.000000 |      INELIGIBLE |      INELIGIBLE
+25042000 |    11 |     64 |    4:4    |    0.000000 |      INELIGIBLE |      INELIGIBLE
+
+=== SUMMARY BY TERM COUNT ===
+terms | median groups | median max-group | median nondeg.frac | eligible | median |P31| | median |P95|
+    5 |           4.0 |             64.0 |           0.000000 |        1/1  | 0.000000e+00 | 1.110223e-16
+    7 |          16.0 |             16.0 |           0.000000 |        0/1  |          nan |          nan
+    9 |          16.0 |             16.0 |           0.000000 |        0/1  |          nan |          nan
+   11 |          64.0 |              4.0 |           0.000000 |        0/1  |          nan |          nan
+
+Reading guide:
+  groups          : number of exact eigenspaces.
+  group min:max   : smallest/largest exact-degeneracy block.
+  nondeg.frac     : fraction of all 256 eigenvalues that are singleton groups.
+  prominence      : projector-score target minus local-control median.
+
+What we are looking for:
+  1. groups rising strongly above the 5-term baseline;
+  2. max-group size falling strongly below 64;
+  3. nondeg.frac increasing;
+  4. non-zero, reproducible prominence returning at k=31 and/or k=95.
+
+Important:
+  v30.1 is a diagnostic scan.  Do not choose the Phase 3 Hamiltonian
+  from one seed alone.  The full 12-seed run is the intended comparison.
