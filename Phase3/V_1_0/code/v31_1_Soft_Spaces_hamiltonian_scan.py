@@ -662,7 +662,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_1_hamiltonian_degeneracy_hotspot_scan_output.txt"
+            "v31_1_hamiltonian_degeneracy_hotspot_scan_output.txt"
         ),
     )
 

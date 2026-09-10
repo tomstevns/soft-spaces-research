@@ -888,7 +888,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_0_projector_score_invariance_output.txt"
+            "v31_0_projector_score_invariance_output.txt"
         ),
     )
     parser.add_argument(

@@ -660,7 +660,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_2_complete_eigenspace_hotspot_scan_output.txt"
+            "v31_2_complete_eigenspace_hotspot_scan_output.txt"
         ),
     )
 

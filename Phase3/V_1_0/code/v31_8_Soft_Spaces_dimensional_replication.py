@@ -36,7 +36,7 @@ import argparse
 from pathlib import Path
 import numpy as np
 
-import v30_7_Soft_Spaces_independent_replication as base
+import v31_7_Soft_Spaces_independent_replication as base
 
 VERSION = "v30.8"
 QUBIT_COUNTS = (7, 9)
@@ -197,7 +197,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("v30_8_dimensional_replication_output.txt"),
+        default=Path("v31_8_dimensional_replication_output.txt"),
     )
     parser.add_argument(
         "--bootstraps",

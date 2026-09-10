@@ -358,7 +358,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_6_across_seed_statistics_output.txt"
+            "v31_6_across_seed_statistics_output.txt"
         ),
     )
 

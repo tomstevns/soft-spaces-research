@@ -841,7 +841,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_5_real_null_symmetry_decomposition_output.txt"
+            "v31_5_real_null_symmetry_decomposition_output.txt"
         ),
     )
 

@@ -909,7 +909,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_7_independent_replication_output.txt"
+            "v31_7_independent_replication_output.txt"
         ),
     )
 

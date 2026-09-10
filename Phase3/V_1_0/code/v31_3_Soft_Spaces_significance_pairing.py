@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Soft Spaces Phase 3.1 v30.4 — frozen hotspot significance and ±E pairing test.
+"""Soft Spaces Phase 3.1 v30.3 — hotspot significance and ±E pairing test.
 
 Purpose
 -------
 v30.2 showed robust local projector-score hotspots across 12 frozen 11-term
-Hamiltonian seeds.  v30.4 asks whether those observations exceed what can be
+Hamiltonian seeds.  v30.3 asks whether those observations exceed what can be
 explained by NULL/shuffled controls.
 
 Frozen model
@@ -18,7 +18,6 @@ Frozen model
 * energy_reg = 1e-3.
 * exact-degeneracy tolerance = 1e-10.
 * local prominence radius = 5 eigenspaces.
-* NULL-basis and perturbation RNG namespaces are frozen exactly to v30.2.
 
 Tests
 -----
@@ -53,8 +52,7 @@ from typing import Iterable
 import numpy as np
 
 
-VERSION = "v30.4"
-FROZEN_MODEL_VERSION = "v30.2"
+VERSION = "v30.3"
 
 N_QUBITS = 8
 DIM = 1 << N_QUBITS
@@ -498,14 +496,14 @@ def run_seed(
     null_vectors = haar_unitary(
         DIM,
         stable_hash_int(
-            f"{FROZEN_MODEL_VERSION}|NULL|{seed}|terms{N_TERMS}"
+            f"{VERSION}|NULL|{seed}"
         ),
     )
 
     perturbations = {
         family: family_terms(
             stable_hash_int(
-                f"{FROZEN_MODEL_VERSION}|{family}|PERT|{seed}"
+                f"{VERSION}|{family}|PERT|{seed}"
             ),
             family,
         )
@@ -693,9 +691,8 @@ def render(
     shuffles: int,
 ) -> str:
     lines = [
-        "=== Soft Spaces Phase 3.1 v30.4 FROZEN HOTSPOT SIGNIFICANCE / ±E PAIRING TEST ===",
+        "=== Soft Spaces Phase 3.1 v30.3 HOTSPOT SIGNIFICANCE / ±E PAIRING TEST ===",
         f"8Q; 11-term Hamiltonian; seeds = {len(results)}",
-        f"Frozen physical model seed namespace = {FROZEN_MODEL_VERSION}",
         f"Shuffle replicates per seed = {shuffles}",
         f"Strong-hotspot threshold = seedwise top {int((1.0 - STRONG_QUANTILE) * 100)}%",
         "",
@@ -772,7 +769,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(
-            "v30_4_hotspot_significance_pairing_output.txt"
+            "v31_3_hotspot_significance_pairing_output.txt"
         ),
     )
 
