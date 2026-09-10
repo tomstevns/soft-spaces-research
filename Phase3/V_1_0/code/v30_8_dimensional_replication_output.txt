@@ -1,0 +1,98 @@
+=== Soft Spaces Phase 3.1 v30.8 PREDECLARED DIMENSIONAL REPLICATION ===
+Dimensions: [7, 9]
+Independent seeds per dimension: 12
+Seeds: 25044000 ... 25044011
+Frozen kernel: v30.7 / physical namespace v30.2
+Bootstrap replicates: 200000
+
+PREDECLARED PRIMARY ENDPOINT:
+  delta_corr = corr_REAL - corr_NULL
+
+PREDECLARED GATE PER DIMENSION:
+  C1 median(delta_corr) > 0
+  C2 at least 9/12 seeds have delta_corr > 0
+  C3 one-sided exact sign-test p < 0.05
+  C4 one-sided Wilcoxon signed-rank p < 0.05
+  C5 95% bootstrap CI for median(delta_corr) entirely above 0
+
+seed | Q | groups | size min:max | ±E pairs | corr_REAL | corr_NULL | delta_corr
+25044000 | 7Q |     64 |    2:2    |       32 | +0.999774 | +0.769337 | +0.230436
+25044001 | 7Q |     32 |    4:4    |       16 | +0.999327 | +0.939222 | +0.060105
+25044002 | 7Q |     64 |    2:2    |       32 | +0.991326 | +0.804446 | +0.186880
+25044003 | 7Q |     32 |    4:4    |       16 | +1.000000 | +0.948584 | +0.051416
+25044004 | 7Q |    128 |    1:1    |       64 | +0.985464 | +0.473394 | +0.512070
+25044005 | 7Q |     32 |    4:4    |       16 | +1.000000 | +0.975172 | +0.024828
+25044006 | 7Q |     64 |    2:2    |       32 | +1.000000 | +0.817181 | +0.182819
+25044007 | 7Q |     64 |    2:2    |       32 | +1.000000 | +0.612145 | +0.387855
+25044008 | 7Q |     64 |    2:2    |       32 | +0.993596 | +0.735791 | +0.257806
+25044009 | 7Q |     32 |    4:4    |       16 | +0.889317 | +0.765054 | +0.124263
+25044010 | 7Q |     64 |    2:2    |       32 | +1.000000 | +0.814942 | +0.185058
+25044011 | 7Q |     64 |    2:2    |       32 | +0.956257 | +0.856123 | +0.100134
+25044000 | 9Q |     32 |   16:16   |       16 | +1.000000 | +0.997331 | +0.002669
+25044001 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.980484 | +0.019516
+25044002 | 9Q |     32 |   16:16   |       16 | +1.000000 | +0.997556 | +0.002444
+25044003 | 9Q |     32 |   16:16   |       16 | +1.000000 | +0.996143 | +0.003857
+25044004 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.986803 | +0.013197
+25044005 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.973018 | +0.026982
+25044006 | 9Q |     32 |   16:16   |       16 | +1.000000 | +0.987554 | +0.012446
+25044007 | 9Q |     32 |   16:16   |       16 | +0.997544 | +0.996994 | +0.000551
+25044008 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.991502 | +0.008498
+25044009 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.928076 | +0.071924
+25044010 | 9Q |     64 |    8:8    |       32 | +1.000000 | +0.980583 | +0.019417
+25044011 | 9Q |     32 |   16:16   |       16 | +1.000000 | +0.994571 | +0.005429
+
+=== 7Q AGGREGATE ===
+Positive delta_corr seeds: 12/12
+Mean corr_REAL: +0.984588
+Mean corr_NULL: +0.792616
+Median corr_REAL: +0.999550
+Median corr_NULL: +0.809694
+Mean delta_corr: +0.191973
+Median delta_corr: +0.183939
+Exact sign test one-sided p: 0.00024414
+Wilcoxon one-sided p: 0.00048816
+Bootstrap 95% CI mean: [+0.120380, +0.274200]
+Bootstrap 95% CI median: [+0.080120, +0.244121]
+Cohen dz: +1.342567
+
+7Q PREDECLARED GATE:
+C1 median > 0: PASS
+C2 >= 9/12 positive: PASS
+C3 sign p < 0.05: PASS
+C4 Wilcoxon p < 0.05: PASS
+C5 bootstrap median CI > 0: PASS
+7Q DECISION: CONFIRMED
+
+=== 9Q AGGREGATE ===
+Positive delta_corr seeds: 12/12
+Mean corr_REAL: +0.999795
+Mean corr_NULL: +0.984218
+Median corr_REAL: +1.000000
+Median corr_NULL: +0.989528
+Mean delta_corr: +0.015577
+Median delta_corr: +0.010472
+Exact sign test one-sided p: 0.00024414
+Wilcoxon one-sided p: 0.00048816
+Bootstrap 95% CI mean: [+0.007038, +0.027620]
+Bootstrap 95% CI median: [+0.003263, +0.019466]
+Cohen dz: +0.796624
+
+9Q PREDECLARED GATE:
+C1 median > 0: PASS
+C2 >= 9/12 positive: PASS
+C3 sign p < 0.05: PASS
+C4 Wilcoxon p < 0.05: PASS
+C5 bootstrap median CI > 0: PASS
+9Q DECISION: CONFIRMED
+
+=== FINAL PREDECLARED DIMENSIONAL DECISION ===
+CONFIRMED ACROSS DIMENSIONS
+
+Interpretation:
+  CONFIRMED ACROSS DIMENSIONS means the independently replicated 8Q
+  REAL-specific ±E enhancement also survives the same frozen gate at
+  both 7Q and 9Q.
+
+  NOT CONFIRMED ACROSS DIMENSIONS means the broad dimensional claim
+  fails under the predeclared gate, regardless of suggestive secondary
+  values in either dimension.
