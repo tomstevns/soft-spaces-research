@@ -1,0 +1,55 @@
+Soft Spaces Phase 3.2 v32.23
+Analytic Hotspot Response Law
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+lambdas=0.01,0.003,0.001,0.0003
+
+ANALYTIC LAW
+------------
+Sigma_E = sum_G T_G
+L1_E    = sum_G ||T_G||_F
+C_E     = ||Sigma_E||_F / L1_E
+
+Therefore exactly:
+||Sigma_E||_F = C_E * L1_E
+
+For scaled perturbation lambda V:
+Delta H_eff^(2)(lambda) = lambda^2 Sigma_E
+||Delta H_eff^(2)(lambda)||_F = lambda^2 C_E L1_E
+
+Finite-lambda regularized Feshbach expansion:
+F_exact(lambda) = lambda^2 Sigma_E + O(lambda^3)
+
+VALIDATION
+----------
+[dephasing]
+  max grouped-vs-resolvent Sigma residual = 5.783940e-13
+  max C^2-(S+A) residual                  = 2.220446e-16
+  max ||Sigma||-C*L1 residual             = 4.440892e-16
+  median absolute-error slope             = +3.5000 (target ~3)
+  median relative-error slope             = +1.5000 (target ~1)
+  median relative error @ smallest lambda  = 2.381278e-05
+
+[transverse]
+  max grouped-vs-resolvent Sigma residual = 6.819925e-12
+  max C^2-(S+A) residual                  = 2.220446e-16
+  max ||Sigma||-C*L1 residual             = 8.881784e-16
+  median absolute-error slope             = +4.0009 (target ~3)
+  median relative-error slope             = +2.0009 (target ~1)
+  median relative error @ smallest lambda  = 5.694582e-06
+
+INTERPRETATION
+--------------
+At fixed virtual-pathway budget L1_E, C_E is the exact multiplicative
+coherence factor controlling the norm of the leading second-order
+effective P-space response.
+
+This supplies the analytic mechanism:
+coherent virtual pathways -> larger ||Sigma_E|| -> larger effective
+second-order local response.
+
+It does not by itself prove an exact proportionality between hotspot
+prominence and C_E; that remains an empirical/statistical relation.

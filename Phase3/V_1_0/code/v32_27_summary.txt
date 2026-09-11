@@ -1,0 +1,51 @@
+Soft Spaces Phase 3.2 v32.27
+Same-Target Symmetry Search
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+search_space=65536
+tolerance=1.000e-10
+
+SEARCH CONDITION
+----------------
+Find Pauli strings S such that
+
+  S H0 S^dagger = +H0
+  S V_T S^dagger = -V_T
+
+This would provide a direct same-target lambda -> -lambda symmetry.
+
+RESULTS
+-------
+exact termwise candidates found = 2
+dense-validated candidates      = 2
+same-target response passes     = 2
+
+STRONG CANDIDATES
+-----------------
+candidate=YYIIYXZY
+  H residual                  = 3.704465e-15
+  transverse -V residual      = 0.000000e+00
+  dephasing +V residual       = 1.250658e+00
+  dephasing -V residual       = 1.560722e+00
+  max projector residual      = 4.468058e-12
+  max response covariance resid = 1.302126e-12
+
+candidate=ZXZZYXZI
+  H residual                  = 3.676596e-15
+  transverse -V residual      = 0.000000e+00
+  dephasing +V residual       = 1.813514e+00
+  dephasing -V residual       = 8.433063e-01
+  max projector residual      = 3.436681e-12
+  max response covariance resid = 1.305851e-12
+
+DECISION LOGIC
+--------------
+A candidate that passes both dense operator tests and finite-lambda
+same-target response covariance supplies the missing symmetry mechanism
+for F_E(lambda)=F_E(-lambda).
+
+If no such Pauli candidate exists, the next step should not be more
+feature fitting; it should be an algebraic search beyond the Pauli group.

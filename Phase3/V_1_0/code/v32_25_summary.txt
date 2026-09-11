@@ -1,0 +1,84 @@
+Soft Spaces Phase 3.2 v32.25
+Symmetry and Even-Order Response
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+Gamma=XIXXIIXX
+lambdas=0.01,0.003,0.001,0.0003
+
+GLOBAL GAMMA CHECK
+------------------
+||Gamma^dag Gamma-I||_F = 0.000000e+00
+||Gamma^2-I||_F         = 0.000000e+00
+relres(Gamma H Gamma,-H)= 3.727471e-15
+
+PAIRED RESPONSE IDENTITY
+------------------------
+For Gamma V Gamma = s V:
+
+Gamma_P^dag F_-E(lambda) Gamma_P = -F_E(-s lambda)
+
+and therefore
+
+Gamma_P^dag K_m(-E) Gamma_P = -(-s)^m K_m(E).
+
+RESULTS
+-------
+[dephasing]
+  expected Gamma-V parity s                 = -1
+  relres(Gamma V Gamma, s V)               = 0.000000e+00
+  max projector-map residual               = 3.200769e-12
+  max Gamma-P map unitarity residual       = 4.419744e-15
+
+  max K2 paired-symmetry residual          = 6.065689e-13
+  max K3 paired-symmetry residual          = 4.776720e-10
+  max K4 paired-symmetry residual          = 9.171266e-12
+  max K5 paired-symmetry residual          = 9.917372e-10
+  max K6 paired-symmetry residual          = 8.399253e-12
+
+  median ||K3||/||K2||                     = 7.737457e-02
+  max    ||K3||/||K2||                     = 3.931530e-01
+  median ||K5||/||K2||                     = 1.115827e+01
+  max    ||K5||/||K2||                     = 8.096873e+01
+
+  max paired finite-lambda symmetry resid  = 6.129910e-13
+  median same-target evenness residual     = 2.214903e-04
+  max same-target evenness residual        = 7.927387e-03
+
+[transverse]
+  expected Gamma-V parity s                 = +1
+  relres(Gamma V Gamma, s V)               = 0.000000e+00
+  max projector-map residual               = 3.200769e-12
+  max Gamma-P map unitarity residual       = 4.419744e-15
+
+  max K2 paired-symmetry residual          = 1.455463e-12
+  max K3 paired-symmetry residual          = 1.552589e+00
+  max K4 paired-symmetry residual          = 8.318515e-12
+  max K5 paired-symmetry residual          = 1.511334e+00
+  max K6 paired-symmetry residual          = 5.435069e-12
+
+  median ||K3||/||K2||                     = 2.017590e-12
+  max    ||K3||/||K2||                     = 4.424031e-11
+  median ||K5||/||K2||                     = 5.156091e-10
+  max    ||K5||/||K2||                     = 2.127166e-08
+
+  max paired finite-lambda symmetry resid  = 1.447225e-12
+  median same-target evenness residual     = 7.463865e-15
+  max same-target evenness residual        = 9.691370e-13
+
+DECISION LOGIC
+--------------
+1. Machine-precision paired residuals establish the Gamma-based
+   +/-E response identity.
+
+2. That paired identity alone does NOT prove K3(E)=0.
+
+3. A stronger transverse even-order law is numerically supported only
+   if K3 and K5 are both near zero AND F_E(lambda)=F_E(-lambda)
+   holds at each individual target.
+
+4. If those same-target tests pass at numerical precision, the next
+   task is an analytic derivation of the additional symmetry/cancellation
+   that eliminates the odd orders.

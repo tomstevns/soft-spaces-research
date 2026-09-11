@@ -1,0 +1,3 @@
+version,label,H_parity,V_transverse_parity,V_dephasing_parity,candidate_same_target_transverse,H_residual,VT_minus_residual,VD_plus_residual,VD_minus_residual,max_projector_residual,max_subspace_unitarity_residual,max_response_covariance_residual,passes_dense_operator_test,passes_same_target_response_test
+v32.27,YYIIYXZY,1,-1,0,1,3.704464651985835e-15,0.0,1.2506583799030102,1.560722145924244,4.468058490184889e-12,6.421083691450049e-15,1.3021260986881022e-12,1,1
+v32.27,ZXZZYXZI,1,-1,0,1,3.676596305882026e-15,0.0,1.8135144048130136,0.8433062928353495,3.436681147000511e-12,6.155335714444152e-15,1.3058513730089824e-12,1,1

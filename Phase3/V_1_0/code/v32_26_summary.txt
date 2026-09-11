@@ -1,0 +1,49 @@
+Soft Spaces Phase 3.2 v32.26
+Odd-Order Cancellation Mechanism
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+Gamma=XIXXIIXX
+k5_samples_per_target=200
+
+QUESTION
+--------
+Do odd-order virtual-path contributions cancel pairwise under the
+Gamma-related +/-E mapping, or only collectively after summation?
+
+RESULTS
+-------
+[dephasing]
+  median ||K3||                        = 1.212974e-01
+  median K3 reconstruction residual    = 0.000000e+00
+  median K3 anti-pair residual         = 5.786696e-03
+  median K3 same-pair residual         = 1.999992e+00
+  median K3 pair-sum norm              = 1.025469e-08
+  median sampled K5 anti-pair residual = 7.749455e-03
+  median sampled K5 same-pair residual = 1.999985e+00
+  median sampled K5 pair-sum norm      = 9.597093e-12
+
+[transverse]
+  median ||K3||                        = 1.354727e-11
+  median K3 reconstruction residual    = 0.000000e+00
+  median K3 anti-pair residual         = 1.260931e-09
+  median K3 same-pair residual         = 2.000000e+00
+  median K3 pair-sum norm              = 2.110897e-16
+  median sampled K5 anti-pair residual = 1.235415e-09
+  median sampled K5 same-pair residual = 2.000000e+00
+  median sampled K5 pair-sum norm      = 1.893840e-18
+
+INTERPRETATION GUIDE
+--------------------
+If transverse anti-pair residuals are near machine precision while
+same-pair residuals are O(1), then odd-order cancellation is pairwise
+under Gamma-related virtual paths.
+
+If both anti-pair and same-pair residuals are O(1) while the final
+K3 norm is near zero, the cancellation is collective rather than
+simple pairwise cancellation.
+
+A clean pairwise result would provide the missing microscopic
+mechanism for the even-order transverse response observed in v32.25.

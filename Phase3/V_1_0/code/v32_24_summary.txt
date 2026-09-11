@@ -1,0 +1,80 @@
+Soft Spaces Phase 3.2 v32.24
+Resolvent Order Selection
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+lambdas=0.01,0.003,0.001,0.0003
+
+EXPANSION
+---------
+F(lambda) = lambda^2 K2 + lambda^3 K3 + lambda^4 K4 + O(lambda^5)
+
+K2 = Herm[B^dagger R0 B]
+K3 = Herm[B^dagger R0 W R0 B]
+K4 = Herm[B^dagger R0 W R0 W R0 B]
+
+PRIMARY QUESTION
+----------------
+Is K3 structurally suppressed, especially for transverse perturbations?
+
+RESULTS
+-------
+[dephasing]
+  n_groups=64
+  n_pairs=32
+  median ||K2||             = 2.316608e+00
+  median ||K3||             = 1.212974e-01
+  median ||K4||             = 1.290910e+02
+  median ||K3||/||K2||      = 7.737457e-02
+  max    ||K3||/||K2||      = 3.931530e-01
+  median ||K4||/||K2||      = 5.312008e+01
+
+  median abs-error slope K2       = +3.5000
+  median abs-error slope K2+K3    = +4.0000
+  median abs-error slope K2+K3+K4 = +5.3668
+
+  median rel-error slope K2       = +1.4977
+  median rel-error slope K2+K3    = +2.0004
+  median rel-error slope K2+K3+K4 = +3.3669
+
+  rho(prominence, ||K3||/||K2||) = -0.4150
+  rho(prominence, ||K4||/||K2||) = -0.3911
+
+[transverse]
+  n_groups=64
+  n_pairs=32
+  median ||K2||             = 4.766757e+00
+  median ||K3||             = 1.008573e-11
+  median ||K4||             = 7.797863e+02
+  median ||K3||/||K2||      = 2.017590e-12
+  max    ||K3||/||K2||      = 4.424031e-11
+  median ||K4||/||K2||      = 6.327226e+01
+
+  median abs-error slope K2       = +4.0009
+  median abs-error slope K2+K3    = +4.0009
+  median abs-error slope K2+K3+K4 = +6.0006
+
+  median rel-error slope K2       = +2.0008
+  median rel-error slope K2+K3    = +2.0008
+  median rel-error slope K2+K3+K4 = +4.0001
+
+  rho(prominence, ||K3||/||K2||) = +0.1789
+  rho(prominence, ||K4||/||K2||) = +0.1884
+
+DECISION RULE
+-------------
+A genuine transverse order-selection rule is supported if:
+
+  1. transverse ||K3||/||K2|| is near numerical zero or is
+     parametrically much smaller than the dephasing value;
+
+  2. transverse K2-only truncation shows ~lambda^4 absolute error;
+
+  3. adding K4 removes that leading error and raises the convergence
+     order again.
+
+If K3 is merely small but not structurally suppressed, the v32.23
+lambda^4 behavior should be interpreted as a numerical/crossover
+effect rather than an exact selection rule.
