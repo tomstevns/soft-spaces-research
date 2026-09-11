@@ -1,0 +1,52 @@
+=== Soft Spaces Phase 3.2 v32.10 CAUSAL TERM-RANDOMIZATION TEST ===
+Seeds=12
+Random sign-flips per eigenspace=100
+
+Mechanistic intervention:
+  Randomize independent signs of T_q contributions.
+  Each individual ||T_q||_F is preserved exactly.
+  Only constructive/destructive alignment between contributions is destroyed.
+
+Primary test:
+  Does observed coherence exceed randomized coherence, and does the
+  excess above that norm-preserving null track hotspot prominence?
+
+FAMILY: dephasing
+  coherence_obs            median seed rho=+0.3088; mean=+0.3087; positive=11/12; range=[-0.0294,+0.6765]
+  coherence_excess         median seed rho=+0.3217; mean=+0.3371; positive=11/12; range=[-0.0084,+0.7882]
+  coherence_z              median seed rho=+0.3347; mean=+0.2762; positive=10/12; range=[-0.0353,+0.5748]
+  coherence_rand_mean      median seed rho=+0.1231; mean=+0.0938; positive=9/12; range=[-0.2794,+0.2749]
+  pooled coherence_obs     Pearson=+0.2618; Spearman=+0.2757
+  pooled coherence_excess  Pearson=+0.2936; Spearman=+0.3049
+  pooled coherence_z       Pearson=+0.2674; Spearman=+0.2714
+  pooled coherence_rand_mean Pearson=+0.0574; Spearman=+0.0906
+  median observed C_E       = 0.281721
+  median randomized C_E     = 0.237065
+  median coherence excess   = +0.016207
+  fraction pair rows C_obs>C_null_mean = 0.590
+  fraction pair rows p<=0.05 = 0.472
+
+FAMILY: transverse
+  coherence_obs            median seed rho=+0.5423; mean=+0.4417; positive=11/12; range=[-0.0554,+0.7618]
+  coherence_excess         median seed rho=+0.3970; mean=+0.3678; positive=10/12; range=[-0.0853,+0.8588]
+  coherence_z              median seed rho=+0.3162; mean=+0.3011; positive=10/12; range=[-0.1735,+0.8676]
+  coherence_rand_mean      median seed rho=+0.1505; mean=+0.1780; positive=10/12; range=[-0.3156,+0.5882]
+  pooled coherence_obs     Pearson=+0.3676; Spearman=+0.3945
+  pooled coherence_excess  Pearson=+0.3105; Spearman=+0.3113
+  pooled coherence_z       Pearson=+0.2886; Spearman=+0.2907
+  pooled coherence_rand_mean Pearson=+0.1371; Spearman=+0.1262
+  median observed C_E       = 0.249134
+  median randomized C_E     = 0.185365
+  median coherence excess   = +0.019974
+  fraction pair rows C_obs>C_null_mean = 0.569
+  fraction pair rows p<=0.05 = 0.458
+
+=== DECISION GUIDE ===
+Support for a mechanistic coherence role requires BOTH:
+  A) observed C_E systematically differs from the norm-preserving randomized null,
+  B) coherence excess/z retains a positive cross-seed association with prominence.
+
+If A and B hold, the hotspot signal depends on alignment/cancellation
+between virtual Q pathways, not merely on their individual magnitudes.
+This is stronger than correlation, but still a computational intervention
+rather than a complete analytic derivation.

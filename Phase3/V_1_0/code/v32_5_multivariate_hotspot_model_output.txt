@@ -1,0 +1,51 @@
+=== Soft Spaces Phase 3.2 v32.5 MULTIVARIATE CROSS-SEED HOTSPOT MODEL ===
+Seeds=12
+Ridge alpha=1.0
+
+Goal:
+  Test whether a SMALL combination of physical descriptors generalizes
+  better than any single scalar hotspot descriptor.
+
+Features:
+  - real_sigma
+  - delta_sigma
+  - real_gap
+  - real_pvq2
+  - local_real_sigma
+
+Validation:
+  Leave-one-seed-out (LOSO). Each held-out seed is never seen during fit.
+  Separate models are fit for dephasing and transverse.
+
+FAMILY: dephasing
+  LOSO pooled: Spearman rho=+0.1290; R2=-0.1815; RMSE=2.511027e-01; top-third overlap=0.385
+  Fold Spearman: median=+0.1696; positive=10/12; range=[-0.1706,+0.6382]
+  Fold R2: median=+0.0035; range=[-2.3881,+0.1284]
+  Standardized full-fit coefficients:
+    real_gap               +3.671699e-02
+    delta_sigma            +3.345250e-02
+    real_sigma             -2.108356e-02
+    real_pvq2              +1.011865e-02
+    local_real_sigma       +4.338099e-03
+
+FAMILY: transverse
+  LOSO pooled: Spearman rho=+0.2991; R2=+0.0693; RMSE=2.228578e-01; top-third overlap=0.469
+  Fold Spearman: median=+0.4011; positive=12/12; range=[+0.0088,+0.7441]
+  Fold R2: median=+0.0412; range=[-0.3014,+0.3136]
+  Standardized full-fit coefficients:
+    real_gap               +4.888655e-02
+    local_real_sigma       +4.357951e-02
+    real_sigma             +2.137623e-02
+    delta_sigma            +1.713037e-02
+    real_pvq2              -5.738978e-03
+
+=== DECISION GUIDE ===
+A useful cross-seed local law should ideally show:
+  1) positive pooled LOSO Spearman correlation,
+  2) positive rank correlation in most held-out seeds,
+  3) non-catastrophic held-out R2,
+  4) coefficients with interpretable physical structure.
+
+Interpretation discipline:
+  This is a low-dimensional phenomenological test, not black-box ML.
+  Even a successful result is a candidate local law, not yet a derivation.

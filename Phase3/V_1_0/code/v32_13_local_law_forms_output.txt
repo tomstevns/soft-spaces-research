@@ -1,0 +1,31 @@
+=== Soft Spaces Phase 3.2 v32.13 LOCAL LAW-FORM COMPARISON ===
+Seeds=12
+
+Candidate law forms:
+  L1 = H_E
+  L2 = H_E * ||Sigma_E||_F
+  L3 = H_E * ||PVQ||_F^2 / Delta_PQ
+  L4 = C_E * ||Sigma_E||_F
+
+Goal:
+  Compare a small set of physically motivated local-law forms.
+  No broad feature search is performed.
+
+FAMILY: dephasing
+  #1 H_local                  LOSO rho=+0.2991; R2=+0.0730; seed median rho=+0.3294; positive=12/12; seed p<=0.05=7/12; pooled rho=+0.3029
+  #2 H_times_sigma            LOSO rho=+0.1665; R2=+0.0074; seed median rho=+0.2469; positive=10/12; seed p<=0.05=3/12; pooled rho=+0.1811
+  #3 C_times_sigma            LOSO rho=+0.0383; R2=-0.0349; seed median rho=+0.3039; positive=11/12; seed p<=0.05=5/12; pooled rho=+0.2208
+  #4 H_times_pvq2_over_gap    LOSO rho=-0.0410; R2=-2878.5224; seed median rho=+0.2916; positive=10/12; seed p<=0.05=6/12; pooled rho=+0.2368
+
+FAMILY: transverse
+  #1 H_local                  LOSO rho=+0.2949; R2=+0.0758; seed median rho=+0.3630; positive=10/12; seed p<=0.05=6/12; pooled rho=+0.3054
+  #2 C_times_sigma            LOSO rho=+0.1333; R2=-0.0092; seed median rho=+0.4875; positive=11/12; seed p<=0.05=7/12; pooled rho=+0.3737
+  #3 H_times_pvq2_over_gap    LOSO rho=-0.0466; R2=-94.0249; seed median rho=+0.2956; positive=9/12; seed p<=0.05=5/12; pooled rho=+0.2165
+  #4 H_times_sigma            LOSO rho=-0.2564; R2=-0.0456; seed median rho=+0.1878; positive=8/12; seed p<=0.05=4/12; pooled rho=+0.2120
+
+=== DECISION ===
+Prefer a law form only if it improves over H_E alone in a reproducible
+cross-seed manner, especially LOSO Spearman and sign consistency.
+
+If no candidate clearly improves on H_E, retain H_E as the compact local
+mechanism parameter and move to analytic derivation rather than further fitting.

@@ -1,0 +1,54 @@
+=== Soft Spaces Phase 3.2 v32.4 ACROSS-SEED HOTSPOT MECHANISM CONFIRMATION ===
+Seeds=12 (25042000..25042011)
+Total pair/family rows=576
+
+Primary question:
+  Does the Sigma-based hotspot signal from v32.3 recur across the
+  frozen Hamiltonian seeds, and is transverse consistently stronger
+  than dephasing?
+
+Frozen response: Phase-3.1 prominence for each exact +/-E pair.
+
+FAMILY: dephasing
+  delta_sigma              median rho=+0.3156  mean=+0.2969  Fisher=+0.3097  sign=12/12 (1.00)  range=[+0.0147,+0.6412]
+  real_sigma               median rho=+0.2619  mean=+0.2756  Fisher=+0.2866  sign=11/12 (0.92)  range=[-0.0689,+0.5941]
+  real_gap                 median rho=+0.1964  mean=+0.1264  Fisher=+0.1339  sign=9/12 (0.75)  range=[-0.3162,+0.5866]
+  real_pvq2_over_gap       median rho=-0.1779  mean=-0.1203  Fisher=-0.1280  sign=9/12 (0.75)  range=[-0.5854,+0.3059]
+  real_sigma_over_gap      median rho=+0.1609  mean=+0.1440  Fisher=+0.1552  sign=8/12 (0.67)  range=[-0.2441,+0.5794]
+  delta_sigma_over_gap     median rho=+0.1606  mean=+0.1348  Fisher=+0.1386  sign=10/12 (0.83)  range=[-0.4337,+0.4743]
+  real_pvq2                median rho=+0.1237  mean=+0.0838  Fisher=+0.0859  sign=8/11 (0.73)  range=[-0.2147,+0.3882]
+  local_delta_sigma        median rho=+0.1223  mean=+0.1441  Fisher=+0.1505  sign=10/12 (0.83)  range=[-0.2588,+0.4794]
+  local_real_sigma         median rho=+0.0343  mean=+0.1187  Fisher=+0.1282  sign=6/12 (0.50)  range=[-0.1853,+0.5412]
+
+FAMILY: transverse
+  real_sigma               median rho=+0.4222  mean=+0.4095  Fisher=+0.4482  sign=11/12 (0.92)  range=[-0.1228,+0.8059]
+  local_real_sigma         median rho=+0.2809  mean=+0.3439  Fisher=+0.3742  sign=11/12 (0.92)  range=[-0.2221,+0.7794]
+  delta_sigma              median rho=+0.2247  mean=+0.2454  Fisher=+0.2581  sign=10/12 (0.83)  range=[-0.0938,+0.5853]
+  real_pvq2_over_gap       median rho=-0.2012  mean=-0.1335  Fisher=-0.1419  sign=9/12 (0.75)  range=[-0.5891,+0.3059]
+  real_gap                 median rho=+0.1964  mean=+0.1264  Fisher=+0.1339  sign=9/12 (0.75)  range=[-0.3162,+0.5866]
+  real_sigma_over_gap      median rho=+0.1882  mean=+0.2167  Fisher=+0.2476  sign=9/12 (0.75)  range=[-0.4230,+0.7287]
+  local_delta_sigma        median rho=+0.1617  mean=+0.1471  Fisher=+0.1541  sign=8/12 (0.67)  range=[-0.3059,+0.4529]
+  delta_sigma_over_gap     median rho=+0.1464  mean=+0.1127  Fisher=+0.1158  sign=10/12 (0.83)  range=[-0.3963,+0.4476]
+  real_pvq2                median rho=+0.0118  mean=+0.0326  Fisher=+0.0353  sign=6/12 (0.50)  range=[-0.3593,+0.4762]
+
+TRANSVERSE vs DEPHASING:
+  real_sigma               median[rho_T-rho_D]=+0.1681; T>D in 8/12 seeds; range=[-0.6041,+0.5882]
+  real_sigma_over_gap      median[rho_T-rho_D]=-0.0308; T>D in 5/12 seeds; range=[-0.4059,+0.5502]
+
+POOLED TERTILE DIRECTION CHECK:
+  dephasing  real_sigma           normalized TOP/MID/BOT=1.194/0.975/0.660; TOP>MID>BOTTOM in 6/12 seeds
+  dephasing  real_sigma_over_gap  normalized TOP/MID/BOT=1.355/1.046/0.843; TOP>MID>BOTTOM in 4/12 seeds
+  transverse real_sigma           normalized TOP/MID/BOT=1.534/0.985/0.748; TOP>MID>BOTTOM in 6/12 seeds
+  transverse real_sigma_over_gap  normalized TOP/MID/BOT=1.431/1.082/0.870; TOP>MID>BOTTOM in 4/12 seeds
+
+=== DECISION GUIDE ===
+  transverse real_sigma:          median rho=+0.4222, sign consistency=0.92
+  transverse real_sigma_over_gap: median rho=+0.1882, sign consistency=0.75
+  dephasing  real_sigma:          median rho=+0.2619, sign consistency=0.92
+  dephasing  real_sigma_over_gap: median rho=+0.1609, sign consistency=0.67
+
+RESULT: TRANSVERSE SIGMA SIGNAL NOT YET STABLE ACROSS SEEDS.
+The v32.3 association does not generalize cleanly enough.
+Dephasing remains weaker/different, supporting family dependence.
+
+This is a confirmation/discrimination test, not a universal hotspot law.

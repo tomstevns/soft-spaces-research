@@ -1,0 +1,39 @@
+=== Soft Spaces Phase 3.2 v32.11 STRICT COHERENCE-EXCESS CONFIRMATION ===
+Seeds=12
+Norm-preserving sign randomizations per pair=1000
+Seed-level Spearman permutations=2000
+
+Primary endpoint:
+  coherence_excess = C_observed - mean(C_sign-randomized)
+
+Confirmation criteria:
+  C1: median seedwise rho > 0
+  C2: positive rho in >= 9/12 seeds
+  C3: one-sided sign-test p <= 0.05
+  C4: pooled Spearman rho > 0
+  C5: family-level median coherence excess > 0
+
+FAMILY: dephasing
+  coherence_obs        median rho=+0.3088; positive=11/12; sign-p=0.00317; seed perm p<=0.05: 5/12; pooled rho=+0.2746
+  coherence_excess     median rho=+0.3292; positive=11/12; sign-p=0.00317; seed perm p<=0.05: 7/12; pooled rho=+0.3039
+  coherence_z          median rho=+0.3228; positive=10/12; sign-p=0.01929; seed perm p<=0.05: 6/12; pooled rho=+0.2686
+  median coherence excess=+0.017179
+  pair fraction excess>0=0.594
+  pair fraction randomization p<=0.05=0.479
+  GATE: C1=True C2=True C3=True C4=True C5=True => 5/5
+  RESULT: STRONG CONFIRMATION
+
+FAMILY: transverse
+  coherence_obs        median rho=+0.5423; positive=11/12; sign-p=0.00317; seed perm p<=0.05: 7/12; pooled rho=+0.3935
+  coherence_excess     median rho=+0.3713; positive=10/12; sign-p=0.01929; seed perm p<=0.05: 6/12; pooled rho=+0.3068
+  coherence_z          median rho=+0.2905; positive=10/12; sign-p=0.01929; seed perm p<=0.05: 6/12; pooled rho=+0.2893
+  median coherence excess=+0.020222
+  pair fraction excess>0=0.569
+  pair fraction randomization p<=0.05=0.465
+  GATE: C1=True C2=True C3=True C4=True C5=True => 5/5
+  RESULT: STRONG CONFIRMATION
+
+=== INTERPRETATION ===
+Passing all five gates supports a cross-seed mechanistic role for
+coherent/cancelling alignment among the virtual Q pathways.
+It still does not by itself constitute an analytic derivation of prominence.

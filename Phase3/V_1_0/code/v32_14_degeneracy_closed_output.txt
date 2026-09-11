@@ -1,0 +1,33 @@
+=== Soft Spaces Phase 3.2 v32.14 DEGENERACY-CLOSED INTERFERENCE LAW ===
+Seeds=12
+
+Basis-invariant Q-group decomposition:
+  T_G = g_eta(E-E_G) P V P_G V P
+  Sigma_E = sum_G T_G
+
+Primary analytic interference parameter:
+  A_E^(G) = [||Sigma_E||_F^2 - sum_G ||T_G||_F^2] / (sum_G ||T_G||_F)^2
+
+Equivalent cross-term form:
+  A_E^(G) = 2 sum_{G<K} Re Tr(T_G^dagger T_K) / (sum_G ||T_G||_F)^2
+
+Question:
+  Does the hotspot association survive when all Q contributions are
+  defined by complete degeneracy-closed projectors?
+
+FAMILY: dephasing
+  A_group    median seed rho=+0.2605; positive=10/12; sign-p=0.01929; seed p<=0.05=4/12; pooled rho=+0.2651
+  C_group    median seed rho=+0.2500; positive=12/12; sign-p=0.00024; seed p<=0.05=5/12; pooled rho=+0.2668
+  cross_sum  median seed rho=+0.2072; positive=11/12; sign-p=0.00317; seed p<=0.05=3/12; pooled rho=+0.1780
+  A_group normalized TOP/MID/BOT=+0.529/+0.165/-0.364; strict TOP>MID>BOTTOM in 7/12 seeds
+
+FAMILY: transverse
+  A_group    median seed rho=+0.2843; positive=10/12; sign-p=0.01929; seed p<=0.05=5/12; pooled rho=+0.2915
+  C_group    median seed rho=+0.5194; positive=12/12; sign-p=0.00024; seed p<=0.05=7/12; pooled rho=+0.4080
+  cross_sum  median seed rho=+0.2293; positive=9/12; sign-p=0.07300; seed p<=0.05=4/12; pooled rho=+0.2371
+  A_group normalized TOP/MID/BOT=+0.704/+0.735/-0.385; strict TOP>MID>BOTTOM in 3/12 seeds
+
+=== DECISION ===
+If A_group remains positively associated with prominence in both families,
+the interference mechanism survives the degeneracy-closure correction.
+That would make A_E^(G) the preferred basis-invariant local-law candidate.

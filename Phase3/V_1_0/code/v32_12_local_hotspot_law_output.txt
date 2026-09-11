@@ -1,0 +1,43 @@
+=== Soft Spaces Phase 3.2 v32.12 PROVISIONAL LOCAL HOTSPOT LAW TEST ===
+Seeds=12
+Null randomizations per pair=1000
+Seed-level permutations=2000
+
+Provisional local law:
+  H_E = C_E - <C_E>_null
+  C_E = ||sum_q T_q||_F / sum_q ||T_q||_F
+
+Physical reading:
+  H_E measures the excess constructive operator-coherence of the actual
+  virtual Q pathways above a norm-preserving sign-randomized reference.
+
+Hypothesis:
+  hotspot prominence is a monotone increasing function of H_E.
+
+FAMILY: dephasing
+  H_local  median seed rho=+0.3294; positive=12/12; sign-p=0.00024; seed p<=0.05=7/12; pooled rho=+0.3029
+  H_z      median seed rho=+0.3224; positive=10/12; sign-p=0.01929; seed p<=0.05=6/12; pooled rho=+0.2689
+  C_E      median seed rho=+0.3088; positive=11/12; sign-p=0.00317; seed p<=0.05=5/12; pooled rho=+0.2746
+  median H_local=+0.017100
+  fraction H_local>0=0.594
+  normalized H TOP/MID/BOT=+0.815/+0.322/-0.300
+  strict TOP>MID>BOTTOM in 5/12 seeds
+
+FAMILY: transverse
+  H_local  median seed rho=+0.3630; positive=10/12; sign-p=0.01929; seed p<=0.05=6/12; pooled rho=+0.3054
+  H_z      median seed rho=+0.2819; positive=10/12; sign-p=0.01929; seed p<=0.05=6/12; pooled rho=+0.2864
+  C_E      median seed rho=+0.5423; positive=11/12; sign-p=0.00317; seed p<=0.05=7/12; pooled rho=+0.3935
+  median H_local=+0.019737
+  fraction H_local>0=0.573
+  normalized H TOP/MID/BOT=+0.513/+0.827/-0.434
+  strict TOP>MID>BOTTOM in 4/12 seeds
+
+=== DECISION ===
+The provisional law is retained if H_local:
+  1) has positive median seedwise rho in both families,
+  2) is positive in at least 9/12 seedwise correlations in both families,
+  3) passes the one-sided sign test at p<=0.05 in both families,
+  4) has positive pooled rho in both families.
+
+Passing these gates supports H_E as a compact empirical local-law parameter.
+It does not yet prove a closed analytic formula for prominence amplitude.

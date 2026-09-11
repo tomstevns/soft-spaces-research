@@ -1,0 +1,39 @@
+=== Soft Spaces Phase 3.2 v32.9 FOCUSED COHERENCE-FACTOR CONFIRMATION ===
+Seeds=12
+
+Primary candidate:
+  C_E = ||sum_q T_q||_F / sum_q ||T_q||_F
+  implemented as sigma_coherence_l1.
+
+Question:
+  Does C_E alone provide a reproducible cross-seed ranking signal for
+  hotspot prominence, without a multivariate feature model?
+
+FAMILY: dephasing
+  sigma_coherence_l1           median rho=+0.3088; mean=+0.3087; positive=11/12; negative=1/12; range=[-0.0294,+0.6765]
+  sigma_coherence_l2           median rho=+0.3187; mean=+0.3448; positive=11/12; negative=1/12; range=[-0.0004,+0.8000]
+  sigma_cancellation_l1        median rho=-0.3088; mean=-0.3087; positive=1/12; negative=11/12; range=[-0.6765,+0.0294]
+  sigma_scalar_cancellation    median rho=-0.2631; mean=-0.2744; positive=0/12; negative=11/12; range=[-0.6353,+0.0000]
+  sigma_pn_balance             median rho=+0.2631; mean=+0.2744; positive=11/12; negative=0/12; range=[+0.0000,+0.6353]
+  pooled sigma_coherence_l1    Pearson=+0.2618; Spearman=+0.2757
+  pooled sigma_coherence_l2    Pearson=+0.2613; Spearman=+0.3081
+  C_E normalized TOP/MID/BOT medians=1.060/0.984/0.634; strict TOP>MID>BOTTOM in 3/12 seeds
+
+FAMILY: transverse
+  sigma_coherence_l1           median rho=+0.5423; mean=+0.4417; positive=11/12; negative=1/12; range=[-0.0554,+0.7618]
+  sigma_coherence_l2           median rho=+0.4274; mean=+0.3776; positive=10/12; negative=2/12; range=[-0.1063,+0.8088]
+  sigma_cancellation_l1        median rho=-0.5423; mean=-0.4417; positive=1/12; negative=11/12; range=[-0.7618,+0.0554]
+  sigma_scalar_cancellation    median rho=-0.4987; mean=-0.4360; positive=0/12; negative=12/12; range=[-0.7618,-0.0851]
+  sigma_pn_balance             median rho=+0.4987; mean=+0.4360; positive=12/12; negative=0/12; range=[+0.0851,+0.7618]
+  pooled sigma_coherence_l1    Pearson=+0.3676; Spearman=+0.3945
+  pooled sigma_coherence_l2    Pearson=+0.2964; Spearman=+0.3244
+  C_E normalized TOP/MID/BOT medians=1.241/1.011/0.793; strict TOP>MID>BOTTOM in 5/12 seeds
+
+=== DECISION GUIDE ===
+The coherence factor is supported as a serious local-law candidate if:
+  1) its seedwise Spearman sign is consistently positive,
+  2) median seedwise rho is materially above zero,
+  3) TOP/MID/BOTTOM ordering is recurrent,
+  4) transverse and dephasing show the same physical direction.
+
+This test intentionally avoids multivariate fitting.

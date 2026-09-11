@@ -1,0 +1,70 @@
+=== Soft Spaces Phase 3.2 v32.7 SIGMA MATRIX-STRUCTURE HOTSPOT MECHANISM ===
+Seeds=12
+Ridge alpha=1.0
+
+Question:
+  Is hotspot prominence encoded in the INTERNAL MATRIX SHAPE of Sigma,
+  rather than in ||Sigma||_F or scalar Q-spectrum descriptors alone?
+
+New matrix descriptors:
+  - sigma_trace_ratio
+  - sigma_traceless_fro
+  - sigma_anisotropy
+  - sigma_eval_std
+  - sigma_eval_range
+  - sigma_max_abs_eval
+  - sigma_effective_rank
+  - sigma_sign_cancellation
+  - sigma_dominance
+
+FAMILY: dephasing
+  LOSO pooled: Spearman rho=+0.1358; R2=-0.1997; RMSE=2.530268e-01; top-third overlap=0.375
+  Fold Spearman median=+0.1578; positive=10/12; range=[-0.2147,+0.6419]
+  Strongest standardized coefficients:
+    sigma_traceless_fro      -1.590935e-01
+    real_sigma               -1.099341e-01
+    sigma_eval_range         +1.034599e-01
+    sigma_dominance          -9.640023e-02
+    sigma_trace_ratio        -8.092620e-02
+    sigma_sign_cancellation  +7.937434e-02
+    sigma_max_abs_eval       +7.817219e-02
+    sigma_eval_std           +4.615576e-02
+  Pooled univariate Sigma-structure correlations:
+    sigma_max_abs_eval       Pearson=+0.0186  Spearman=+0.1796
+    sigma_trace_ratio        Pearson=+0.0488  Spearman=+0.0909
+    sigma_anisotropy         Pearson=-0.0670  Spearman=-0.0907
+    sigma_effective_rank     Pearson=+0.0113  Spearman=+0.0549
+    sigma_sign_cancellation  Pearson=+0.0569  Spearman=+0.0514
+    sigma_dominance          Pearson=-0.0900  Spearman=-0.0442
+    sigma_eval_std           Pearson=+0.0144  Spearman=+0.0200
+
+FAMILY: transverse
+  LOSO pooled: Spearman rho=+0.2846; R2=-0.2352; RMSE=2.567389e-01; top-third overlap=0.458
+  Fold Spearman median=+0.4507; positive=12/12; range=[+0.0165,+0.8294]
+  Strongest standardized coefficients:
+    sigma_eval_std           -2.104456e-01
+    sigma_eval_range         +1.224440e-01
+    sigma_anisotropy         -1.002150e-01
+    sigma_trace_ratio        -9.864845e-02
+    sigma_sign_cancellation  +6.757915e-02
+    sigma_effective_rank     +6.459394e-02
+    sigma_traceless_fro      +5.803540e-02
+    delta_sigma              +4.813772e-02
+  Pooled univariate Sigma-structure correlations:
+    sigma_anisotropy         Pearson=-0.2791  Spearman=-0.2874
+    sigma_trace_ratio        Pearson=+0.2529  Spearman=+0.2871
+    sigma_max_abs_eval       Pearson=+0.1423  Spearman=+0.2747
+    sigma_sign_cancellation  Pearson=+0.2026  Spearman=+0.2114
+    sigma_dominance          Pearson=-0.1598  Spearman=-0.1816
+    sigma_effective_rank     Pearson=+0.0955  Spearman=+0.1430
+    sigma_eval_std           Pearson=-0.1391  Spearman=-0.0278
+
+=== INTERPRETATION GATE ===
+Reference results:
+  v32.5 transverse pooled LOSO Spearman = +0.2991; R2=+0.0693
+  v32.6 transverse pooled LOSO Spearman = +0.2571; R2=-0.0578
+
+A material v32.7 improvement would support the hypothesis that hotspot
+strength depends on matrix anisotropy/eigenmode organization inside Sigma.
+If it does not improve, the next step should move from static descriptors
+to interference/cancellation contributions term-by-term.

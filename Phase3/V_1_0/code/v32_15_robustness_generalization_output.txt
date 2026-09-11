@@ -1,0 +1,63 @@
+=== Soft Spaces Phase 3.2 v32.15 ROBUSTNESS / GENERALIZATION ===
+
+Question:
+  Does the degeneracy-closed interference/coherence signal survive
+  moderate changes in Hamiltonian term count?
+
+Hamiltonian term counts tested: 7, 9, 11
+11 terms = frozen reference from v32.14
+
+N_TERMS = 7
+  FAMILY: dephasing
+    A_group    median seed rho=+0.3452; positive=10/12; sign-p=0.01929; pooled rho=+0.3859
+    C_group    median seed rho=+0.5119; positive=11/12; sign-p=0.00317; pooled rho=+0.3335
+    cross_sum  median seed rho=+0.4881; positive=10/12; sign-p=0.01929; pooled rho=+0.2820
+  FAMILY: transverse
+    A_group    median seed rho=+0.8048; positive=11/12; sign-p=0.00317; pooled rho=+0.6615
+    C_group    median seed rho=+0.7333; positive=11/12; sign-p=0.00317; pooled rho=+0.5471
+    cross_sum  median seed rho=+0.5833; positive=10/12; sign-p=0.01929; pooled rho=+0.4911
+
+N_TERMS = 9
+  FAMILY: dephasing
+    A_group    median seed rho=+0.4722; positive=10/12; sign-p=0.01929; pooled rho=+0.2996
+    C_group    median seed rho=+0.6471; positive=11/12; sign-p=0.00317; pooled rho=+0.4179
+    cross_sum  median seed rho=+0.3941; positive=10/12; sign-p=0.01929; pooled rho=+0.1517
+  FAMILY: transverse
+    A_group    median seed rho=+0.4353; positive=10/12; sign-p=0.01929; pooled rho=+0.3544
+    C_group    median seed rho=+0.3415; positive=8/12; sign-p=0.19385; pooled rho=+0.3015
+    cross_sum  median seed rho=+0.2956; positive=10/12; sign-p=0.01929; pooled rho=+0.2335
+
+N_TERMS = 11
+  FAMILY: dephasing
+    A_group    median seed rho=+0.2605; positive=10/12; sign-p=0.01929; pooled rho=+0.2651
+    C_group    median seed rho=+0.2500; positive=12/12; sign-p=0.00024; pooled rho=+0.2668
+    cross_sum  median seed rho=+0.2072; positive=11/12; sign-p=0.00317; pooled rho=+0.1780
+  FAMILY: transverse
+    A_group    median seed rho=+0.2843; positive=10/12; sign-p=0.01929; pooled rho=+0.2915
+    C_group    median seed rho=+0.5194; positive=12/12; sign-p=0.00024; pooled rho=+0.4080
+    cross_sum  median seed rho=+0.2293; positive=9/12; sign-p=0.07300; pooled rho=+0.2371
+
+=== CROSS-TERM-COUNT VIEW ===
+FAMILY: dephasing
+  A_group: 7 terms: median rho=+0.3452, sign=10/12 | 9 terms: median rho=+0.4722, sign=10/12 | 11 terms: median rho=+0.2605, sign=10/12
+  C_group: 7 terms: median rho=+0.5119, sign=11/12 | 9 terms: median rho=+0.6471, sign=11/12 | 11 terms: median rho=+0.2500, sign=12/12
+
+FAMILY: transverse
+  A_group: 7 terms: median rho=+0.8048, sign=11/12 | 9 terms: median rho=+0.4353, sign=10/12 | 11 terms: median rho=+0.2843, sign=10/12
+  C_group: 7 terms: median rho=+0.7333, sign=11/12 | 9 terms: median rho=+0.3415, sign=8/12 | 11 terms: median rho=+0.5194, sign=12/12
+
+=== DECISION ===
+The positive interference/coherence direction survives all three term counts.
+C_group is especially robust: positive seedwise correlation in
+  7 terms: dephasing 11/12, transverse 11/12
+  9 terms: dephasing 11/12, transverse 8/12
+ 11 terms: dephasing 12/12, transverse 12/12
+
+A_group also retains a positive median seedwise correlation for every
+tested term count and both perturbation families.
+
+Conclusion:
+  The degeneracy-closed interference/coherence mechanism is not confined
+  to the frozen 11-term Hamiltonian. It survives moderate model variation.
+  The 9-term transverse case is the weakest robustness point and should be
+  treated as a useful stress case rather than hidden.

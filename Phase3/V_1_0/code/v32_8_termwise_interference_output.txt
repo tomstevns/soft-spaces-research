@@ -1,0 +1,69 @@
+=== Soft Spaces Phase 3.2 v32.8 TERMWISE SIGMA INTERFERENCE/CANCELLATION ===
+Seeds=12
+Ridge alpha=1.0
+
+Question:
+  Are hotspots controlled by constructive/destructive interference among
+  the individual Q-state contributions T_q that sum to Sigma_E?
+
+New descriptors:
+  - sigma_coherence_l1
+  - sigma_coherence_l2
+  - sigma_cancellation_l1
+  - sigma_scalar_cancellation
+  - sigma_pn_balance
+  - sigma_effective_terms
+  - sigma_max_term_share
+
+FAMILY: dephasing
+  LOSO pooled: Spearman rho=+0.3218; R2=+0.0805; RMSE=2.215190e-01; top-third overlap=0.417
+  Fold Spearman median=+0.3721; positive=12/12; range=[+0.0396,+0.6935]
+  Strongest standardized coefficients:
+    real_gap                   +5.598285e-02
+    sigma_coherence_l1         +5.102199e-02
+    sigma_cancellation_l1      -5.102199e-02
+    sigma_max_term_share       -4.945413e-02
+    sigma_coherence_l2         -1.816416e-02
+    sigma_effective_terms      -1.725090e-02
+    real_sigma                 -1.660759e-02
+    delta_sigma                +1.251761e-02
+  Pooled univariate termwise correlations:
+    sigma_coherence_l2         Pearson=+0.2613  Spearman=+0.3081
+    sigma_coherence_l1         Pearson=+0.2618  Spearman=+0.2757
+    sigma_cancellation_l1      Pearson=-0.2618  Spearman=-0.2757
+    sigma_scalar_cancellation  Pearson=-0.2507  Spearman=-0.2583
+    sigma_pn_balance           Pearson=+0.2507  Spearman=+0.2583
+    sigma_max_term_share       Pearson=+0.0577  Spearman=+0.1028
+    sigma_effective_terms      Pearson=-0.0529  Spearman=-0.0912
+
+FAMILY: transverse
+  LOSO pooled: Spearman rho=+0.3891; R2=+0.0887; RMSE=2.205283e-01; top-third overlap=0.458
+  Fold Spearman median=+0.5569; positive=12/12; range=[+0.0634,+0.8500]
+  Strongest standardized coefficients:
+    sigma_pn_balance           +8.344946e-02
+    sigma_scalar_cancellation  -8.344946e-02
+    sigma_coherence_l1         -6.166379e-02
+    sigma_cancellation_l1      +6.166379e-02
+    real_gap                   +5.047118e-02
+    sigma_max_term_share       +4.162064e-02
+    sigma_coherence_l2         +3.836991e-02
+    delta_sigma                +3.157509e-02
+  Pooled univariate termwise correlations:
+    sigma_scalar_cancellation  Pearson=-0.4033  Spearman=-0.3973
+    sigma_pn_balance           Pearson=+0.4033  Spearman=+0.3973
+    sigma_coherence_l1         Pearson=+0.3676  Spearman=+0.3945
+    sigma_cancellation_l1      Pearson=-0.3676  Spearman=-0.3945
+    sigma_coherence_l2         Pearson=+0.2964  Spearman=+0.3244
+    sigma_max_term_share       Pearson=+0.1327  Spearman=+0.1431
+    sigma_effective_terms      Pearson=-0.1140  Spearman=-0.1253
+
+=== INTERPRETATION GATE ===
+Reference transverse results:
+  v32.5 pooled LOSO Spearman = +0.2991; R2=+0.0693
+  v32.6 pooled LOSO Spearman = +0.2571; R2=-0.0578
+  v32.7 pooled LOSO Spearman = +0.2846; R2=-0.2352
+
+A clear v32.8 improvement would support interference/cancellation as the
+missing local hotspot mechanism. If not, the next step should move toward
+operator-direction alignment between neighboring eigenspaces rather than
+more scalar summaries.

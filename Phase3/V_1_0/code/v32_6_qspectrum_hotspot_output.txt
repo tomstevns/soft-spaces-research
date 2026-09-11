@@ -1,0 +1,67 @@
+=== Soft Spaces Phase 3.2 v32.6 Q-SPECTRUM WEIGHTED HOTSPOT MECHANISM ===
+Seeds=12
+Ridge alpha=1.0
+
+Question:
+  Does the missing cross-seed hotspot information reside in the local
+  Q-spectrum and in how V-weighted Q levels enter the regularized resolvent?
+
+New descriptors:
+  - q_gap3_mean
+  - q_gap5_mean
+  - q_density_eta
+  - q_weight_near
+  - q_weighted_abs_g
+  - q_weighted_g2
+  - q_weighted_invabs
+  - q_effective_n
+
+FAMILY: dephasing
+  LOSO pooled: Spearman rho=+0.1704; R2=-0.1296; RMSE=2.455293e-01; top-third overlap=0.385
+  Fold Spearman median=+0.1890; positive=12/12; range=[+0.0477,+0.5671]
+  Strongest standardized coefficients:
+    real_sigma               +1.694593e-01
+    q_weighted_abs_g         -1.254225e-01
+    q_gap5_mean              -6.027876e-02
+    q_gap3_mean              +5.090669e-02
+    real_gap                 +5.090669e-02
+    q_weighted_invabs        -4.875901e-02
+    q_weighted_g2            -3.120529e-02
+    delta_sigma              +3.018432e-02
+  Pooled univariate Q-descriptor correlations:
+    q_gap3_mean              Pearson=+0.1702  Spearman=+0.1454
+    q_density_eta            Pearson=-0.0173  Spearman=-0.1375
+    q_gap5_mean              Pearson=+0.1513  Spearman=+0.1059
+    q_weight_near            Pearson=+0.0739  Spearman=+0.0580
+    q_weighted_g2            Pearson=-0.0023  Spearman=-0.0546
+    q_weighted_abs_g         Pearson=+0.0036  Spearman=+0.0357
+
+FAMILY: transverse
+  LOSO pooled: Spearman rho=+0.2571; R2=-0.0578; RMSE=2.375981e-01; top-third overlap=0.458
+  Fold Spearman median=+0.3525; positive=12/12; range=[+0.0125,+0.8059]
+  Strongest standardized coefficients:
+    q_gap5_mean              -8.030272e-02
+    real_sigma               +7.423354e-02
+    q_gap3_mean              +6.140835e-02
+    real_gap                 +6.140835e-02
+    q_weighted_g2            -4.628097e-02
+    q_weighted_abs_g         -3.893770e-02
+    local_real_sigma         +3.633493e-02
+    q_weighted_invabs        +2.858569e-02
+  Pooled univariate Q-descriptor correlations:
+    q_weight_near            Pearson=+0.1744  Spearman=+0.1474
+    q_gap3_mean              Pearson=+0.1702  Spearman=+0.1454
+    q_density_eta            Pearson=-0.0173  Spearman=-0.1375
+    q_gap5_mean              Pearson=+0.1513  Spearman=+0.1059
+    q_weighted_abs_g         Pearson=+0.1399  Spearman=+0.0516
+    q_weighted_invabs        Pearson=+0.1346  Spearman=+0.0436
+
+=== INTERPRETATION GATE ===
+Compare v32.6 against v32.5, especially transverse:
+  v32.5 pooled LOSO Spearman = +0.2991
+  v32.5 pooled LOSO R2       = +0.0693
+  v32.5 fold Spearman median = +0.4011
+
+A material improvement would indicate that the missing hotspot variable
+is not just a minimum gap, but the weighted local Q-spectrum entering Sigma.
+No universal closed-form law is claimed by this diagnostic alone.
