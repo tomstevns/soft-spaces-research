@@ -1,0 +1,7 @@
+seed,family,metric,spearman,n_pairs,n_qubits
+25042002,dephasing,A_group,0.4761904761904762,8,12
+25042002,dephasing,C_group,0.4523809523809524,8,12
+25042002,dephasing,cross_sum,0.6190476190476191,8,12
+25042002,transverse,A_group,0.5714285714285715,8,12
+25042002,transverse,C_group,0.5952380952380953,8,12
+25042002,transverse,cross_sum,0.523809523809524,8,12

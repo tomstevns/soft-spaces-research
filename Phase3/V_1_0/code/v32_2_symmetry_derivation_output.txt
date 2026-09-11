@@ -1,0 +1,53 @@
+=== Soft Spaces Phase 3.2 v32.2 SYMMETRY DERIVATION TEST ===
+Seed=25042000
+Gamma=XIXXIIXX
+eta=1.000e-03
+
+Analytic identities under test:
+  (1) Gamma H Gamma† = -H
+  (2) P_-E = Gamma P_E Gamma†
+  (3) Q_-E = Gamma Q_E Gamma†
+  (4) Gamma V Gamma† = s V, s in {+1,-1}
+  (5) (P V Q)_-E = s Gamma (P V Q)_E Gamma†
+  (6) Sigma_-E = - Gamma Sigma_E Gamma†
+
+Reason for the fixed minus sign in (6):
+  Gamma(E-QHQ)Gamma† = -[-E-Q_- H Q_-],
+  and g_eta(x)=x/(x^2+eta^2) is odd.
+
+H anticommutation residual=0.000000e+00; allclose=True
+
+Perturbation signs:
+  dephasing : s=-1; residual=0.000000e+00; allclose=True
+  transverse: s=+1; residual=0.000000e+00; allclose=True
+
+Exact ±E pairs tested=32
+
+Per-family summary:
+  dephasing  P-map               : median=2.910992e-13; max=1.600384e-12
+  dephasing  Q-map               : median=3.667499e-14; max=2.016290e-13
+  dephasing  PVQ-map             : median=2.890509e-13; max=1.600397e-12
+  dephasing  Sigma(- sign)       : median=3.806857e-13; max=1.602439e-12
+  dephasing  Sigma(+ wrong sign) : median=2.000000e+00; max=2.000000e+00
+  dephasing  all operator assertions passed=True
+
+  transverse P-map               : median=2.910992e-13; max=1.600384e-12
+  transverse Q-map               : median=3.667499e-14; max=2.016290e-13
+  transverse PVQ-map             : median=2.910375e-13; max=1.599281e-12
+  transverse Sigma(- sign)       : median=3.920093e-13; max=1.610248e-12
+  transverse Sigma(+ wrong sign) : median=2.000000e+00; max=2.000000e+00
+  transverse all operator assertions passed=True
+
+=== DECISION ===
+Global max residual over required identities=1.610248e-12
+All np.allclose assertions passed=True
+RESULT: STRONG.
+The full operator chain is verified to numerical precision:
+  Gamma H Gamma† = -H
+  P_-E = Gamma P_E Gamma†
+  Q_-E = Gamma Q_E Gamma†
+  (PVQ)_-E = s Gamma(PVQ)_E Gamma†
+  Sigma_-E = -Gamma Sigma_E Gamma†
+
+Therefore the previously observed equality of Frobenius norms at ±E
+is a consequence of the algebraic symmetry, not an empirical coincidence.

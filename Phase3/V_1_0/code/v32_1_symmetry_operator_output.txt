@@ -1,0 +1,109 @@
+=== Soft Spaces Phase 3.2 v32.1 SYMMETRY-OPERATOR PROBE ===
+Seed=25042000
+8Q; Hamiltonian terms=11
+Eigenspaces=64
+Exact ±E pairs=32
+
+Primary question:
+  Is there a concrete Pauli-string Gamma satisfying
+      Gamma H Gamma† = -H ?
+
+Hamiltonian terms:
+  +0.592328304  ZXIXIYZZ
+  -0.010374871  YXYIXZZX
+  -0.029526119  XZYIXIZZ
+  -0.494658051  XZXZZIIX
+  -0.139519908  IXZIYYXX
+  -0.416495549  XIZIYZII
+  -0.221550475  YIYZYIZY
+  -0.531202288  XIYXZIZY
+  -0.640286668  YIYXZIZX
+  -0.255010931  ZYXXXZXI
+  -0.857099285  IXZIIIZZ
+
+Pauli candidates that anticommute term-by-term with H: 32
+
+Candidate diagnostics:
+ 1. Gamma=YIZXXXIY  H-anticomm residual=0.000e+00  projector-map median=5.681e-13 max=2.738e-12
+      dephasing : rule=mixed; res(+V)=1.910e+00; res(-V)=5.927e-01
+      transverse: rule=mixed; res(+V)=1.407e+00; res(-V)=1.421e+00
+ 2. Gamma=IIYXYZZI  H-anticomm residual=0.000e+00  projector-map median=5.682e-13 max=2.738e-12
+      dephasing : rule=+V   ; res(+V)=0.000e+00; res(-V)=2.000e+00
+      transverse: rule=mixed; res(+V)=3.731e-01; res(-V)=1.965e+00
+ 3. Gamma=IXYIXXII  H-anticomm residual=0.000e+00  projector-map median=6.283e-13 max=2.840e-12
+      dephasing : rule=mixed; res(+V)=1.814e+00; res(-V)=8.433e-01
+      transverse: rule=mixed; res(+V)=3.719e-01; res(-V)=1.965e+00
+ 4. Gamma=YXZIYZZY  H-anticomm residual=0.000e+00  projector-map median=6.282e-13 max=2.840e-12
+      dephasing : rule=mixed; res(+V)=1.031e+00; res(-V)=1.714e+00
+      transverse: rule=mixed; res(+V)=1.408e+00; res(-V)=1.421e+00
+ 5. Gamma=XXIYZIZY  H-anticomm residual=0.000e+00  projector-map median=5.653e-13 max=3.054e-12
+      dephasing : rule=mixed; res(+V)=1.031e+00; res(-V)=1.714e+00
+      transverse: rule=mixed; res(+V)=1.421e+00; res(-V)=1.407e+00
+ 6. Gamma=ZXXYIYII  H-anticomm residual=0.000e+00  projector-map median=5.652e-13 max=3.054e-12
+      dephasing : rule=mixed; res(+V)=1.814e+00; res(-V)=8.433e-01
+      transverse: rule=mixed; res(+V)=1.965e+00; res(-V)=3.731e-01
+ 7. Gamma=YZYIZIZY  H-anticomm residual=0.000e+00  projector-map median=6.226e-13 max=3.058e-12
+      dephasing : rule=mixed; res(+V)=1.774e+00; res(-V)=9.236e-01
+      transverse: rule=mixed; res(+V)=1.965e+00; res(-V)=3.719e-01
+ 8. Gamma=IZZIIYII  H-anticomm residual=0.000e+00  projector-map median=6.227e-13 max=3.058e-12
+      dephasing : rule=mixed; res(+V)=7.083e-01; res(-V)=1.870e+00
+      transverse: rule=mixed; res(+V)=1.421e+00; res(-V)=1.408e+00
+ 9. Gamma=XXXIZYYX  H-anticomm residual=0.000e+00  projector-map median=5.792e-13 max=3.147e-12
+      dephasing : rule=mixed; res(+V)=8.433e-01; res(-V)=1.814e+00
+      transverse: rule=mixed; res(+V)=2.982e-02; res(-V)=2.000e+00
+10. Gamma=ZXIIIIXZ  H-anticomm residual=0.000e+00  projector-map median=5.793e-13 max=3.147e-12
+      dephasing : rule=mixed; res(+V)=1.714e+00; res(-V)=1.031e+00
+      transverse: rule=mixed; res(+V)=1.357e+00; res(-V)=1.469e+00
+11. Gamma=YYYXIYIY  H-anticomm residual=0.000e+00  projector-map median=5.714e-13 max=3.161e-12
+      dephasing : rule=mixed; res(+V)=1.251e+00; res(-V)=1.561e+00
+      transverse: rule=mixed; res(+V)=1.965e+00; res(-V)=3.731e-01
+12. Gamma=IYZXZIZI  H-anticomm residual=0.000e+00  projector-map median=5.716e-13 max=3.161e-12
+      dephasing : rule=mixed; res(+V)=1.669e+00; res(-V)=1.101e+00
+      transverse: rule=mixed; res(+V)=1.421e+00; res(-V)=1.407e+00
+13. Gamma=XIXXIIXX  H-anticomm residual=0.000e+00  projector-map median=5.822e-13 max=3.201e-12
+      dephasing : rule=-V   ; res(+V)=2.000e+00; res(-V)=0.000e+00
+      transverse: rule=+V   ; res(+V)=0.000e+00; res(-V)=2.000e+00
+14. Gamma=ZIIXZYYZ  H-anticomm residual=0.000e+00  projector-map median=5.822e-13 max=3.201e-12
+      dephasing : rule=mixed; res(+V)=5.927e-01; res(-V)=1.910e+00
+      transverse: rule=mixed; res(+V)=1.358e+00; res(-V)=1.469e+00
+15. Gamma=ZYIZYZZI  H-anticomm residual=0.000e+00  projector-map median=5.843e-13 max=3.222e-12
+      dephasing : rule=mixed; res(+V)=1.669e+00; res(-V)=1.101e+00
+      transverse: rule=mixed; res(+V)=1.408e+00; res(-V)=1.421e+00
+16. Gamma=XYXZXXIY  H-anticomm residual=0.000e+00  projector-map median=5.843e-13 max=3.222e-12
+      dephasing : rule=mixed; res(+V)=1.251e+00; res(-V)=1.561e+00
+      transverse: rule=mixed; res(+V)=3.719e-01; res(-V)=1.965e+00
+17. Gamma=YXYYYXYX  H-anticomm residual=0.000e+00  projector-map median=6.029e-13 max=3.225e-12
+      dephasing : rule=mixed; res(+V)=8.433e-01; res(-V)=1.814e+00
+      transverse: rule=-V   ; res(+V)=2.000e+00; res(-V)=0.000e+00
+18. Gamma=IXZYXZXZ  H-anticomm residual=0.000e+00  projector-map median=6.029e-13 max=3.225e-12
+      dephasing : rule=mixed; res(+V)=1.714e+00; res(-V)=1.031e+00
+      transverse: rule=mixed; res(+V)=1.469e+00; res(-V)=1.358e+00
+19. Gamma=YIYZXZXX  H-anticomm residual=0.000e+00  projector-map median=6.282e-13 max=3.292e-12
+      dephasing : rule=-V   ; res(+V)=2.000e+00; res(-V)=0.000e+00
+      transverse: rule=mixed; res(+V)=2.000e+00; res(-V)=2.982e-02
+20. Gamma=IIZZYXYZ  H-anticomm residual=0.000e+00  projector-map median=6.283e-13 max=3.292e-12
+      dephasing : rule=mixed; res(+V)=5.927e-01; res(-V)=1.910e+00
+      transverse: rule=mixed; res(+V)=1.469e+00; res(-V)=1.357e+00
+
+=== BEST CANDIDATE ===
+Gamma = YIZXXXIY
+Relative ||Gamma H Gamma† + H||_F / ||H||_F = 0.000000e+00
+±E projector-map residual: median=5.680744e-13, max=2.737588e-12
+
+Perturbation transformation:
+  dephasing: algebraic rule=mixed, res(+V)=1.910168e+00, res(-V)=5.926707e-01
+  transverse: algebraic rule=mixed, res(+V)=1.407310e+00, res(-V)=1.421083e+00
+
+INTERPRETATION:
+  STRONG: a concrete Pauli-string symmetry generator has been found.
+  It anticommutes with H to numerical precision and maps E eigenspaces
+  onto their -E partners.
+
+Next theoretical relation to test if STRONG:
+  P_-E = Gamma P_E Gamma†
+  Q_-E = Gamma Q_E Gamma†
+  Gamma V Gamma† = ±V  (or family-specific rule)
+
+These imply equality of unitary-invariant norms such as
+  ||P_E V Q_E||_F = ||P_-E V Q_-E||_F,
+and strongly constrain the second-order effective operator Sigma_P(E).

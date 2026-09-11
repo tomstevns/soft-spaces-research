@@ -1,0 +1,1170 @@
+=== Soft Spaces Phase 3.2 v32.0 P/Q MECHANISM PROBE ===
+8Q; 11-term Hamiltonian; seeds=12
+Frozen physical-model namespace=v30.2
+Families=dephasing,transverse; perturbation terms/family=5
+Degeneracy tolerance=1.0e-10
+±E pairing tolerance=1.0e-08
+Regularized resolvent eta=1.000e-03
+Top exact ±E pairs per seed=5
+
+Primary hypothesis:
+  REAL-specific ±E organization may be associated with structured
+  coupling between the degeneracy-closed P subspace and Q.
+
+Measured per REAL/NULL, family and sign:
+  ||PVP||_F, ||PVQ||_F, ||PVQ||_F^2, gap_PQ,
+  ||PVQ g_eta(E-QHQ) QVP||_F.
+
+Important:
+  This is a diagnostic mechanism probe. It does not establish causality
+  and does not introduce a new hotspot-discovery statistic.
+
+SEED 25042000
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 22 / 41; E=-0.635388301 / +0.635388301; selection prominence=+0.632689923
+  dephasing:
+    -E REAL PVP=1.461468e-14  PVQ²=3.177699e+00  gap=6.052680e-03  Sigma=2.970742e+00
+       NULL PVP=3.156653e-01  PVQ²=3.443558e+00  gap=6.052680e-03  Sigma=1.808429e+01
+       Δ(R-N) PVP=-3.156653e-01  PVQ²=-2.658592e-01  Sigma=-1.511355e+01
+    +E REAL PVP=1.556364e-14  PVQ²=3.177699e+00  gap=6.052680e-03  Sigma=2.970742e+00
+       NULL PVP=3.119669e-01  PVQ²=3.596237e+00  gap=6.052680e-03  Sigma=1.131879e+01
+       Δ(R-N) PVP=-3.119669e-01  PVQ²=-4.185381e-01  Sigma=-8.348051e+00
+    ±E asymmetry: |ΔSigma| REAL=4.130030e-14, NULL=6.765501e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=1.526789e-01
+  transverse:
+    -E REAL PVP=4.452251e-14  PVQ²=7.284456e+00  gap=6.052680e-03  Sigma=3.759858e+01
+       NULL PVP=4.190532e-01  PVQ²=7.254240e+00  gap=6.052680e-03  Sigma=2.449087e+01
+       Δ(R-N) PVP=-4.190532e-01  PVQ²=+3.021662e-02  Sigma=+1.310771e+01
+    +E REAL PVP=4.029333e-14  PVQ²=7.284456e+00  gap=6.052680e-03  Sigma=3.759858e+01
+       NULL PVP=4.089179e-01  PVQ²=7.227209e+00  gap=6.052680e-03  Sigma=3.194964e+01
+       Δ(R-N) PVP=-4.089179e-01  PVQ²=+5.724725e-02  Sigma=+5.648945e+00
+    ±E asymmetry: |ΔSigma| REAL=8.810730e-13, NULL=7.458766e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=2.703063e-02
+
+PAIR 2: groups 6 / 57; E=-1.966744402 / +1.966744402; selection prominence=+0.463658909
+  dephasing:
+    -E REAL PVP=3.350791e-14  PVQ²=3.392383e+00  gap=2.313411e-03  Sigma=2.172680e+00
+       NULL PVP=2.236660e-01  PVQ²=3.384270e+00  gap=2.313411e-03  Sigma=1.890050e+01
+       Δ(R-N) PVP=-2.236660e-01  PVQ²=+8.113481e-03  Sigma=-1.672782e+01
+    +E REAL PVP=6.312140e-14  PVQ²=3.392383e+00  gap=2.313411e-03  Sigma=2.172680e+00
+       NULL PVP=2.246832e-01  PVQ²=3.405881e+00  gap=2.313411e-03  Sigma=1.404238e+01
+       Δ(R-N) PVP=-2.246832e-01  PVQ²=-1.349773e-02  Sigma=-1.186970e+01
+    ±E asymmetry: |ΔSigma| REAL=6.075140e-13, NULL=4.858123e+00; |ΔPVQ²| REAL=8.082424e-14, NULL=2.161121e-02
+  transverse:
+    -E REAL PVP=5.890470e-14  PVQ²=7.278635e+00  gap=2.313411e-03  Sigma=5.755802e+00
+       NULL PVP=3.652745e-01  PVQ²=6.788703e+00  gap=2.313411e-03  Sigma=2.900774e+01
+       Δ(R-N) PVP=-3.652745e-01  PVQ²=+4.899318e-01  Sigma=-2.325194e+01
+    +E REAL PVP=7.804958e-14  PVQ²=7.278635e+00  gap=2.313411e-03  Sigma=5.755802e+00
+       NULL PVP=3.635637e-01  PVQ²=7.435473e+00  gap=2.313411e-03  Sigma=3.194366e+01
+       Δ(R-N) PVP=-3.635637e-01  PVQ²=-1.568389e-01  Sigma=-2.618785e+01
+    ±E asymmetry: |ΔSigma| REAL=1.037392e-12, NULL=2.935916e+00; |ΔPVQ²| REAL=2.930989e-14, NULL=6.467707e-01
+
+PAIR 3: groups 10 / 53; E=-1.676442004 / +1.676442004; selection prominence=+0.463432448
+  dephasing:
+    -E REAL PVP=1.059219e-14  PVQ²=3.656324e+00  gap=4.382423e-03  Sigma=3.175273e+00
+       NULL PVP=1.899282e-01  PVQ²=3.361659e+00  gap=4.382423e-03  Sigma=1.401862e+01
+       Δ(R-N) PVP=-1.899282e-01  PVQ²=+2.946653e-01  Sigma=-1.084335e+01
+    +E REAL PVP=2.994470e-14  PVQ²=3.656324e+00  gap=4.382423e-03  Sigma=3.175273e+00
+       NULL PVP=2.149987e-01  PVQ²=3.203785e+00  gap=4.382423e-03  Sigma=1.082733e+01
+       Δ(R-N) PVP=-2.149987e-01  PVQ²=+4.525388e-01  Sigma=-7.652056e+00
+    ±E asymmetry: |ΔSigma| REAL=6.927792e-14, NULL=3.191289e+00; |ΔPVQ²| REAL=1.687539e-14, NULL=1.578735e-01
+  transverse:
+    -E REAL PVP=1.670964e-14  PVQ²=7.277090e+00  gap=4.382423e-03  Sigma=7.936160e+00
+       NULL PVP=3.233200e-01  PVQ²=7.754322e+00  gap=4.382423e-03  Sigma=2.974823e+01
+       Δ(R-N) PVP=-3.233200e-01  PVQ²=-4.772323e-01  Sigma=-2.181207e+01
+    +E REAL PVP=3.284564e-14  PVQ²=7.277090e+00  gap=4.382423e-03  Sigma=7.936160e+00
+       NULL PVP=2.750984e-01  PVQ²=7.052514e+00  gap=4.382423e-03  Sigma=1.640122e+01
+       Δ(R-N) PVP=-2.750984e-01  PVQ²=+2.245757e-01  Sigma=-8.465057e+00
+    ±E asymmetry: |ΔSigma| REAL=1.243450e-13, NULL=1.334702e+01; |ΔPVQ²| REAL=1.687539e-14, NULL=7.018079e-01
+
+PAIR 4: groups 21 / 42; E=-0.652364120 / +0.652364120; selection prominence=+0.344734247
+  dephasing:
+    -E REAL PVP=1.457228e-14  PVQ²=3.181904e+00  gap=6.398472e-03  Sigma=1.963470e+00
+       NULL PVP=2.135696e-01  PVQ²=3.391568e+00  gap=6.398472e-03  Sigma=9.420636e+00
+       Δ(R-N) PVP=-2.135696e-01  PVQ²=-2.096635e-01  Sigma=-7.457166e+00
+    +E REAL PVP=1.606760e-14  PVQ²=3.181904e+00  gap=6.398472e-03  Sigma=1.963470e+00
+       NULL PVP=2.136547e-01  PVQ²=3.250159e+00  gap=6.398472e-03  Sigma=1.342449e+01
+       Δ(R-N) PVP=-2.136547e-01  PVQ²=-6.825479e-02  Sigma=-1.146102e+01
+    ±E asymmetry: |ΔSigma| REAL=4.884981e-14, NULL=4.003849e+00; |ΔPVQ²| REAL=1.110223e-14, NULL=1.414087e-01
+  transverse:
+    -E REAL PVP=4.174138e-14  PVQ²=7.273326e+00  gap=6.398472e-03  Sigma=3.333557e+01
+       NULL PVP=3.165183e-01  PVQ²=7.156817e+00  gap=6.398472e-03  Sigma=2.016995e+01
+       Δ(R-N) PVP=-3.165183e-01  PVQ²=+1.165091e-01  Sigma=+1.316562e+01
+    +E REAL PVP=4.693577e-14  PVQ²=7.273326e+00  gap=6.398472e-03  Sigma=3.333557e+01
+       NULL PVP=3.159770e-01  PVQ²=7.061631e+00  gap=6.398472e-03  Sigma=3.337206e+01
+       Δ(R-N) PVP=-3.159770e-01  PVQ²=+2.116957e-01  Sigma=-3.649291e-02
+    ±E asymmetry: |ΔSigma| REAL=5.755396e-13, NULL=1.320211e+01; |ΔPVQ²| REAL=1.776357e-15, NULL=9.518661e-02
+
+PAIR 5: groups 2 / 61; E=-2.843949411 / +2.843949411; selection prominence=+0.304901898
+  dephasing:
+    -E REAL PVP=2.518668e-14  PVQ²=3.857381e+00  gap=1.134667e-03  Sigma=8.797504e-01
+       NULL PVP=2.243191e-01  PVQ²=3.393171e+00  gap=1.134667e-03  Sigma=1.251924e+01
+       Δ(R-N) PVP=-2.243191e-01  PVQ²=+4.642107e-01  Sigma=-1.163949e+01
+    +E REAL PVP=3.248075e-14  PVQ²=3.857381e+00  gap=1.134667e-03  Sigma=8.797504e-01
+       NULL PVP=2.447830e-01  PVQ²=3.654640e+00  gap=1.134667e-03  Sigma=9.768930e+00
+       Δ(R-N) PVP=-2.447830e-01  PVQ²=+2.027417e-01  Sigma=-8.889179e+00
+    ±E asymmetry: |ΔSigma| REAL=2.886580e-15, NULL=2.750306e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=2.614690e-01
+  transverse:
+    -E REAL PVP=2.336802e-14  PVQ²=7.277227e+00  gap=1.134667e-03  Sigma=1.565323e+00
+       NULL PVP=3.349011e-01  PVQ²=6.901876e+00  gap=1.134667e-03  Sigma=2.867880e+01
+       Δ(R-N) PVP=-3.349011e-01  PVQ²=+3.753502e-01  Sigma=-2.711347e+01
+    +E REAL PVP=2.852177e-14  PVQ²=7.277227e+00  gap=1.134667e-03  Sigma=1.565323e+00
+       NULL PVP=3.248142e-01  PVQ²=7.031233e+00  gap=1.134667e-03  Sigma=1.913596e+01
+       Δ(R-N) PVP=-3.248142e-01  PVQ²=+2.459932e-01  Sigma=-1.757064e+01
+    ±E asymmetry: |ΔSigma| REAL=5.995204e-15, NULL=9.542834e+00; |ΔPVQ²| REAL=7.105427e-15, NULL=1.293569e-01
+
+SEED 25042001
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 12 / 19; E=-0.520032371 / +0.520032371; selection prominence=+0.293291777
+  dephasing:
+    -E REAL PVP=2.353637e-01  PVQ²=1.996725e+01  gap=7.991867e-02  Sigma=4.435691e+00
+       NULL PVP=8.301427e-01  PVQ²=1.838205e+01  gap=7.991867e-02  Sigma=3.680887e+01
+       Δ(R-N) PVP=-5.947791e-01  PVQ²=+1.585192e+00  Sigma=-3.237318e+01
+    +E REAL PVP=2.353637e-01  PVQ²=1.996725e+01  gap=7.991867e-02  Sigma=4.435691e+00
+       NULL PVP=8.790356e-01  PVQ²=1.819355e+01  gap=7.991867e-02  Sigma=2.181708e+01
+       Δ(R-N) PVP=-6.436720e-01  PVQ²=+1.773692e+00  Sigma=-1.738139e+01
+    ±E asymmetry: |ΔSigma| REAL=4.440892e-15, NULL=1.499179e+01; |ΔPVQ²| REAL=2.131628e-14, NULL=1.885003e-01
+  transverse:
+    -E REAL PVP=6.559382e-01  PVQ²=2.069986e+01  gap=7.991867e-02  Sigma=2.694412e+00
+       NULL PVP=8.907367e-01  PVQ²=2.093282e+01  gap=7.991867e-02  Sigma=6.378438e+01
+       Δ(R-N) PVP=-2.347985e-01  PVQ²=-2.329630e-01  Sigma=-6.108997e+01
+    +E REAL PVP=6.559382e-01  PVQ²=2.069986e+01  gap=7.991867e-02  Sigma=2.694412e+00
+       NULL PVP=7.634076e-01  PVQ²=2.069597e+01  gap=7.991867e-02  Sigma=2.822227e+01
+       Δ(R-N) PVP=-1.074694e-01  PVQ²=+3.887542e-03  Sigma=-2.552786e+01
+    ±E asymmetry: |ΔSigma| REAL=1.687539e-14, NULL=3.556210e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=2.368505e-01
+
+PAIR 2: groups 4 / 27; E=-2.758292510 / +2.758292510; selection prominence=+0.186702241
+  dephasing:
+    -E REAL PVP=2.787002e-01  PVQ²=1.994497e+01  gap=1.366445e-01  Sigma=6.075624e+00
+       NULL PVP=7.934930e-01  PVQ²=1.932789e+01  gap=1.366445e-01  Sigma=2.547389e+01
+       Δ(R-N) PVP=-5.147928e-01  PVQ²=+6.170766e-01  Sigma=-1.939826e+01
+    +E REAL PVP=2.787002e-01  PVQ²=1.994497e+01  gap=1.366445e-01  Sigma=6.075624e+00
+       NULL PVP=7.268273e-01  PVQ²=1.826108e+01  gap=1.366445e-01  Sigma=1.453568e+01
+       Δ(R-N) PVP=-4.481270e-01  PVQ²=+1.683890e+00  Sigma=-8.460055e+00
+    ±E asymmetry: |ΔSigma| REAL=1.119105e-13, NULL=1.093821e+01; |ΔPVQ²| REAL=1.421085e-14, NULL=1.066814e+00
+  transverse:
+    -E REAL PVP=6.595328e-01  PVQ²=2.069513e+01  gap=1.366445e-01  Sigma=3.611781e+00
+       NULL PVP=8.122197e-01  PVQ²=2.188771e+01  gap=1.366445e-01  Sigma=2.677656e+01
+       Δ(R-N) PVP=-1.526870e-01  PVQ²=-1.192580e+00  Sigma=-2.316478e+01
+    +E REAL PVP=6.595328e-01  PVQ²=2.069513e+01  gap=1.366445e-01  Sigma=3.611781e+00
+       NULL PVP=7.929562e-01  PVQ²=1.962028e+01  gap=1.366445e-01  Sigma=1.826300e+01
+       Δ(R-N) PVP=-1.334235e-01  PVQ²=+1.074849e+00  Sigma=-1.465122e+01
+    ±E asymmetry: |ΔSigma| REAL=5.551115e-14, NULL=8.513556e+00; |ΔPVQ²| REAL=0.000000e+00, NULL=2.267429e+00
+
+PAIR 3: groups 13 / 18; E=-0.440113700 / +0.440113700; selection prominence=+0.183967909
+  dephasing:
+    -E REAL PVP=3.548568e-01  PVQ²=1.989672e+01  gap=7.991867e-02  Sigma=3.539606e+00
+       NULL PVP=7.394167e-01  PVQ²=1.956942e+01  gap=7.991867e-02  Sigma=6.740352e+01
+       Δ(R-N) PVP=-3.845599e-01  PVQ²=+3.272992e-01  Sigma=-6.386392e+01
+    +E REAL PVP=3.548568e-01  PVQ²=1.989672e+01  gap=7.991867e-02  Sigma=3.539606e+00
+       NULL PVP=7.864130e-01  PVQ²=1.962192e+01  gap=7.991867e-02  Sigma=3.782706e+01
+       Δ(R-N) PVP=-4.315561e-01  PVQ²=+2.747948e-01  Sigma=-3.428746e+01
+    ±E asymmetry: |ΔSigma| REAL=6.217249e-15, NULL=2.957646e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=5.250437e-02
+  transverse:
+    -E REAL PVP=9.401993e-01  PVQ²=2.024614e+01  gap=7.991867e-02  Sigma=1.756800e+00
+       NULL PVP=8.196747e-01  PVQ²=2.111929e+01  gap=7.991867e-02  Sigma=4.352823e+01
+       Δ(R-N) PVP=+1.205246e-01  PVQ²=-8.731574e-01  Sigma=-4.177143e+01
+    +E REAL PVP=9.401993e-01  PVQ²=2.024614e+01  gap=7.991867e-02  Sigma=1.756800e+00
+       NULL PVP=8.363478e-01  PVQ²=1.972632e+01  gap=7.991867e-02  Sigma=5.938958e+01
+       Δ(R-N) PVP=+1.038515e-01  PVQ²=+5.198150e-01  Sigma=-5.763278e+01
+    ±E asymmetry: |ΔSigma| REAL=9.769963e-15, NULL=1.586134e+01; |ΔPVQ²| REAL=1.065814e-14, NULL=1.392972e+00
+
+PAIR 4: groups 1 / 30; E=-3.384229800 / +3.384229800; selection prominence=+0.171027022
+  dephasing:
+    -E REAL PVP=1.187045e-01  PVQ²=2.000855e+01  gap=1.516561e-02  Sigma=6.186825e+01
+       NULL PVP=8.400617e-01  PVQ²=1.967444e+01  gap=1.516561e-02  Sigma=6.294805e+01
+       Δ(R-N) PVP=-7.213572e-01  PVQ²=+3.341122e-01  Sigma=-1.079803e+00
+    +E REAL PVP=1.187045e-01  PVQ²=2.000855e+01  gap=1.516561e-02  Sigma=6.186825e+01
+       NULL PVP=7.152554e-01  PVQ²=1.964130e+01  gap=1.516561e-02  Sigma=5.153459e+01
+       Δ(R-N) PVP=-5.965509e-01  PVQ²=+3.672540e-01  Sigma=+1.033365e+01
+    ±E asymmetry: |ΔSigma| REAL=2.920331e-12, NULL=1.141346e+01; |ΔPVQ²| REAL=6.394885e-14, NULL=3.314184e-02
+  transverse:
+    -E REAL PVP=5.876888e-01  PVQ²=2.078473e+01  gap=1.516561e-02  Sigma=3.094126e+01
+       NULL PVP=7.467530e-01  PVQ²=1.955615e+01  gap=1.516561e-02  Sigma=7.601112e+01
+       Δ(R-N) PVP=-1.590642e-01  PVQ²=+1.228583e+00  Sigma=-4.506985e+01
+    +E REAL PVP=5.876888e-01  PVQ²=2.078473e+01  gap=1.516561e-02  Sigma=3.094126e+01
+       NULL PVP=6.856256e-01  PVQ²=2.041858e+01  gap=1.516561e-02  Sigma=6.066692e+01
+       Δ(R-N) PVP=-9.793678e-02  PVQ²=+3.661516e-01  Sigma=-2.972565e+01
+    ±E asymmetry: |ΔSigma| REAL=1.506351e-12, NULL=1.534420e+01; |ΔPVQ²| REAL=9.592327e-14, NULL=8.624317e-01
+
+PAIR 5: groups 2 / 29; E=-3.217664523 / +3.217664523; selection prominence=+0.139602688
+  dephasing:
+    -E REAL PVP=1.246458e-01  PVQ²=2.000711e+01  gap=1.107171e-01  Sigma=4.490434e+00
+       NULL PVP=7.869131e-01  PVQ²=1.917993e+01  gap=1.107171e-01  Sigma=4.200248e+01
+       Δ(R-N) PVP=-6.622672e-01  PVQ²=+8.271763e-01  Sigma=-3.751205e+01
+    +E REAL PVP=1.246458e-01  PVQ²=2.000711e+01  gap=1.107171e-01  Sigma=4.490434e+00
+       NULL PVP=9.504266e-01  PVQ²=2.029581e+01  gap=1.107171e-01  Sigma=3.598495e+01
+       Δ(R-N) PVP=-8.257807e-01  PVQ²=-2.887014e-01  Sigma=-3.149452e+01
+    ±E asymmetry: |ΔSigma| REAL=4.352074e-14, NULL=6.017527e+00; |ΔPVQ²| REAL=1.065814e-14, NULL=1.115878e+00
+  transverse:
+    -E REAL PVP=7.126198e-01  PVQ²=2.062228e+01  gap=1.107171e-01  Sigma=3.825631e+00
+       NULL PVP=8.704758e-01  PVQ²=2.080763e+01  gap=1.107171e-01  Sigma=4.363098e+01
+       Δ(R-N) PVP=-1.578560e-01  PVQ²=-1.853515e-01  Sigma=-3.980535e+01
+    +E REAL PVP=7.126198e-01  PVQ²=2.062228e+01  gap=1.107171e-01  Sigma=3.825631e+00
+       NULL PVP=7.650369e-01  PVQ²=2.021477e+01  gap=1.107171e-01  Sigma=3.143619e+01
+       Δ(R-N) PVP=-5.241707e-02  PVQ²=+4.075098e-01  Sigma=-2.761056e+01
+    ±E asymmetry: |ΔSigma| REAL=7.416290e-14, NULL=1.219479e+01; |ΔPVQ²| REAL=2.486900e-14, NULL=5.928613e-01
+
+SEED 25042002
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 26 / 37; E=-1.320022905 / +1.320022905; selection prominence=+0.317501801
+  dephasing:
+    -E REAL PVP=1.440364e-01  PVQ²=1.014633e+01  gap=2.143986e-04  Sigma=1.050019e+01
+       NULL PVP=4.360505e-01  PVQ²=1.053960e+01  gap=2.143986e-04  Sigma=9.467270e+00
+       Δ(R-N) PVP=-2.920141e-01  PVQ²=-3.932687e-01  Sigma=+1.032921e+00
+    +E REAL PVP=1.440364e-01  PVQ²=1.014633e+01  gap=2.143986e-04  Sigma=1.050019e+01
+       NULL PVP=3.954268e-01  PVQ²=9.674738e+00  gap=2.143986e-04  Sigma=1.214680e+01
+       Δ(R-N) PVP=-2.513904e-01  PVQ²=+4.715941e-01  Sigma=-1.646610e+00
+    ±E asymmetry: |ΔSigma| REAL=7.938539e-12, NULL=2.679532e+00; |ΔPVQ²| REAL=4.796163e-14, NULL=8.648627e-01
+  transverse:
+    -E REAL PVP=6.424720e-01  PVQ²=4.006031e+00  gap=2.143986e-04  Sigma=7.069090e+00
+       NULL PVP=1.960094e-01  PVQ²=4.166401e+00  gap=2.143986e-04  Sigma=5.518390e+00
+       Δ(R-N) PVP=+4.464626e-01  PVQ²=-1.603705e-01  Sigma=+1.550700e+00
+    +E REAL PVP=6.424720e-01  PVQ²=4.006031e+00  gap=2.143986e-04  Sigma=7.069090e+00
+       NULL PVP=3.392972e-01  PVQ²=4.312586e+00  gap=2.143986e-04  Sigma=4.374678e+00
+       Δ(R-N) PVP=+3.031748e-01  PVQ²=-3.065556e-01  Sigma=+2.694413e+00
+    ±E asymmetry: |ΔSigma| REAL=2.156586e-11, NULL=1.143712e+00; |ΔPVQ²| REAL=2.273737e-13, NULL=1.461850e-01
+
+PAIR 2: groups 15 / 48; E=-1.900631732 / +1.900631732; selection prominence=+0.260804776
+  dephasing:
+    -E REAL PVP=1.479146e-01  PVQ²=1.014520e+01  gap=1.241734e-04  Sigma=1.778293e+01
+       NULL PVP=3.740626e-01  PVQ²=1.053493e+01  gap=1.241734e-04  Sigma=1.379662e+01
+       Δ(R-N) PVP=-2.261480e-01  PVQ²=-3.897269e-01  Sigma=+3.986313e+00
+    +E REAL PVP=1.479146e-01  PVQ²=1.014520e+01  gap=1.241734e-04  Sigma=1.778293e+01
+       NULL PVP=5.404062e-01  PVQ²=1.074689e+01  gap=1.241734e-04  Sigma=4.232934e+01
+       Δ(R-N) PVP=-3.924916e-01  PVQ²=-6.016890e-01  Sigma=-2.454641e+01
+    ±E asymmetry: |ΔSigma| REAL=2.532552e-10, NULL=2.853272e+01; |ΔPVQ²| REAL=2.503597e-11, NULL=2.119622e-01
+  transverse:
+    -E REAL PVP=5.114069e-01  PVQ²=4.161554e+00  gap=1.241734e-04  Sigma=3.271122e+00
+       NULL PVP=1.950942e-01  PVQ²=4.416852e+00  gap=1.241734e-04  Sigma=1.047108e+01
+       Δ(R-N) PVP=+3.163128e-01  PVQ²=-2.552983e-01  Sigma=-7.199962e+00
+    +E REAL PVP=5.114069e-01  PVQ²=4.161554e+00  gap=1.241734e-04  Sigma=3.271122e+00
+       NULL PVP=2.504110e-01  PVQ²=4.319049e+00  gap=1.241734e-04  Sigma=5.273554e+00
+       Δ(R-N) PVP=+2.609959e-01  PVQ²=-1.574951e-01  Sigma=-2.002432e+00
+    ±E asymmetry: |ΔSigma| REAL=4.835732e-11, NULL=5.197530e+00; |ΔPVQ²| REAL=2.851941e-12, NULL=9.780319e-02
+
+PAIR 3: groups 30 / 33; E=-1.010686757 / +1.010686757; selection prominence=+0.180375751
+  dephasing:
+    -E REAL PVP=2.509184e-01  PVQ²=1.010412e+01  gap=4.927046e-05  Sigma=4.084915e+00
+       NULL PVP=3.280866e-01  PVQ²=9.954707e+00  gap=4.927046e-05  Sigma=7.324563e+00
+       Δ(R-N) PVP=-7.716818e-02  PVQ²=+1.494119e-01  Sigma=-3.239648e+00
+    +E REAL PVP=2.509184e-01  PVQ²=1.010412e+01  gap=4.927046e-05  Sigma=4.084915e+00
+       NULL PVP=4.643347e-01  PVQ²=9.863909e+00  gap=4.927046e-05  Sigma=1.655387e+01
+       Δ(R-N) PVP=-2.134162e-01  PVQ²=+2.402102e-01  Sigma=-1.246895e+01
+    ±E asymmetry: |ΔSigma| REAL=5.015188e-11, NULL=9.229306e+00; |ΔPVQ²| REAL=2.179767e-11, NULL=9.079829e-02
+  transverse:
+    -E REAL PVP=6.034865e-01  PVQ²=4.059432e+00  gap=4.927046e-05  Sigma=2.762798e-01
+       NULL PVP=2.359488e-01  PVQ²=4.131924e+00  gap=4.927046e-05  Sigma=5.870527e+00
+       Δ(R-N) PVP=+3.675378e-01  PVQ²=-7.249208e-02  Sigma=-5.594247e+00
+    +E REAL PVP=6.034865e-01  PVQ²=4.059432e+00  gap=4.927046e-05  Sigma=2.762798e-01
+       NULL PVP=3.676309e-01  PVQ²=4.510630e+00  gap=4.927046e-05  Sigma=7.652533e+00
+       Δ(R-N) PVP=+2.358556e-01  PVQ²=-4.511988e-01  Sigma=-7.376253e+00
+    ±E asymmetry: |ΔSigma| REAL=1.505651e-11, NULL=1.782006e+00; |ΔPVQ²| REAL=5.497824e-13, NULL=3.787067e-01
+
+PAIR 4: groups 6 / 57; E=-2.552457966 / +2.552457966; selection prominence=+0.179063843
+  dephasing:
+    -E REAL PVP=2.239523e-01  PVQ²=1.011692e+01  gap=1.443350e-05  Sigma=9.205823e+00
+       NULL PVP=3.091023e-01  PVQ²=9.748648e+00  gap=1.443350e-05  Sigma=4.770490e+00
+       Δ(R-N) PVP=-8.515001e-02  PVQ²=+3.682758e-01  Sigma=+4.435333e+00
+    +E REAL PVP=2.239523e-01  PVQ²=1.011692e+01  gap=1.443350e-05  Sigma=9.205823e+00
+       NULL PVP=3.202392e-01  PVQ²=9.696549e+00  gap=1.443350e-05  Sigma=3.982887e+00
+       Δ(R-N) PVP=-9.628689e-02  PVQ²=+4.203749e-01  Sigma=+5.222936e+00
+    ±E asymmetry: |ΔSigma| REAL=9.602985e-11, NULL=7.876029e-01; |ΔPVQ²| REAL=4.874146e-11, NULL=5.209910e-02
+  transverse:
+    -E REAL PVP=3.473925e-01  PVQ²=4.301529e+00  gap=1.443350e-05  Sigma=8.453357e-01
+       NULL PVP=2.989417e-01  PVQ²=4.201078e+00  gap=1.443350e-05  Sigma=1.708354e+00
+       Δ(R-N) PVP=+4.845084e-02  PVQ²=+1.004516e-01  Sigma=-8.630180e-01
+    +E REAL PVP=3.473925e-01  PVQ²=4.301529e+00  gap=1.443350e-05  Sigma=8.453357e-01
+       NULL PVP=1.809318e-01  PVQ²=4.472687e+00  gap=1.443350e-05  Sigma=1.755867e+00
+       Δ(R-N) PVP=+1.664607e-01  PVQ²=-1.711580e-01  Sigma=-9.105309e-01
+    ±E asymmetry: |ΔSigma| REAL=8.613332e-12, NULL=4.751294e-02; |ΔPVQ²| REAL=5.470469e-11, NULL=2.716096e-01
+
+PAIR 5: groups 16 / 47; E=-1.881661992 / +1.881661992; selection prominence=+0.170412534
+  dephasing:
+    -E REAL PVP=2.929057e-01  PVQ²=1.008129e+01  gap=1.598634e-06  Sigma=1.274124e+01
+       NULL PVP=4.042102e-01  PVQ²=9.673147e+00  gap=1.598634e-06  Sigma=1.476039e+01
+       Δ(R-N) PVP=-1.113046e-01  PVQ²=+4.081385e-01  Sigma=-2.019149e+00
+    +E REAL PVP=2.929057e-01  PVQ²=1.008129e+01  gap=1.598634e-06  Sigma=1.274124e+01
+       NULL PVP=2.563804e-01  PVQ²=9.785410e+00  gap=1.598634e-06  Sigma=1.967861e+01
+       Δ(R-N) PVP=+3.652522e-02  PVQ²=+2.958754e-01  Sigma=-6.937369e+00
+    ±E asymmetry: |ΔSigma| REAL=9.025527e-10, NULL=4.918220e+00; |ΔPVQ²| REAL=3.031140e-10, NULL=1.122631e-01
+  transverse:
+    -E REAL PVP=3.397330e-01  PVQ²=4.303064e+00  gap=1.598634e-06  Sigma=1.535992e+00
+       NULL PVP=3.429895e-01  PVQ²=4.727675e+00  gap=1.598634e-06  Sigma=7.631221e+00
+       Δ(R-N) PVP=-3.256493e-03  PVQ²=-4.246111e-01  Sigma=-6.095229e+00
+    +E REAL PVP=3.397330e-01  PVQ²=4.303064e+00  gap=1.598634e-06  Sigma=1.535992e+00
+       NULL PVP=2.532773e-01  PVQ²=4.668937e+00  gap=1.598634e-06  Sigma=6.823199e+00
+       Δ(R-N) PVP=+8.645563e-02  PVQ²=-3.658730e-01  Sigma=-5.287208e+00
+    ±E asymmetry: |ΔSigma| REAL=1.429032e-10, NULL=8.080217e-01; |ΔPVQ²| REAL=2.157190e-10, NULL=5.873815e-02
+
+SEED 25042003
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 10 / 53; E=-2.625743239 / +2.625743239; selection prominence=+0.435642291
+  dephasing:
+    -E REAL PVP=1.157973e-01  PVQ²=6.533157e+00  gap=3.811262e-02  Sigma=5.212704e+00
+       NULL PVP=1.835886e-01  PVQ²=6.806501e+00  gap=3.811262e-02  Sigma=1.793747e+01
+       Δ(R-N) PVP=-6.779127e-02  PVQ²=-2.733436e-01  Sigma=-1.272477e+01
+    +E REAL PVP=1.157973e-01  PVQ²=6.533157e+00  gap=3.811262e-02  Sigma=5.212704e+00
+       NULL PVP=3.532395e-01  PVQ²=6.286062e+00  gap=3.811262e-02  Sigma=6.397058e+00
+       Δ(R-N) PVP=-2.374421e-01  PVQ²=+2.470957e-01  Sigma=-1.184354e+00
+    ±E asymmetry: |ΔSigma| REAL=1.305622e-13, NULL=1.154041e+01; |ΔPVQ²| REAL=2.664535e-15, NULL=5.204393e-01
+  transverse:
+    -E REAL PVP=2.146580e-01  PVQ²=9.497289e+00  gap=3.811262e-02  Sigma=1.445311e+01
+       NULL PVP=4.003601e-01  PVQ²=9.410794e+00  gap=3.811262e-02  Sigma=1.097184e+01
+       Δ(R-N) PVP=-1.857021e-01  PVQ²=+8.649485e-02  Sigma=+3.481270e+00
+    +E REAL PVP=2.146580e-01  PVQ²=9.497289e+00  gap=3.811262e-02  Sigma=1.445311e+01
+       NULL PVP=2.901602e-01  PVQ²=8.862321e+00  gap=3.811262e-02  Sigma=4.562237e+00
+       Δ(R-N) PVP=-7.550222e-02  PVQ²=+6.349677e-01  Sigma=+9.890874e+00
+    ±E asymmetry: |ΔSigma| REAL=5.844214e-13, NULL=6.409605e+00; |ΔPVQ²| REAL=3.552714e-15, NULL=5.484728e-01
+
+PAIR 2: groups 2 / 61; E=-4.483076472 / +4.483076472; selection prominence=+0.232486625
+  dephasing:
+    -E REAL PVP=6.250956e-02  PVQ²=6.542659e+00  gap=5.107570e-02  Sigma=1.226785e+00
+       NULL PVP=4.766346e-01  PVQ²=5.811720e+00  gap=5.107570e-02  Sigma=4.560078e+00
+       Δ(R-N) PVP=-4.141250e-01  PVQ²=+7.309395e-01  Sigma=-3.333293e+00
+    +E REAL PVP=6.250956e-02  PVQ²=6.542659e+00  gap=5.107570e-02  Sigma=1.226785e+00
+       NULL PVP=3.200713e-01  PVQ²=6.654381e+00  gap=5.107570e-02  Sigma=6.262351e+00
+       Δ(R-N) PVP=-2.575618e-01  PVQ²=-1.117221e-01  Sigma=-5.035566e+00
+    ±E asymmetry: |ΔSigma| REAL=1.554312e-15, NULL=1.702273e+00; |ΔPVQ²| REAL=8.881784e-15, NULL=8.426616e-01
+  transverse:
+    -E REAL PVP=2.716577e-01  PVQ²=9.469569e+00  gap=5.107570e-02  Sigma=1.488053e+00
+       NULL PVP=3.674820e-01  PVQ²=9.112450e+00  gap=5.107570e-02  Sigma=1.137598e+01
+       Δ(R-N) PVP=-9.582426e-02  PVQ²=+3.571189e-01  Sigma=-9.887927e+00
+    +E REAL PVP=2.716577e-01  PVQ²=9.469569e+00  gap=5.107570e-02  Sigma=1.488053e+00
+       NULL PVP=4.395680e-01  PVQ²=8.911805e+00  gap=5.107570e-02  Sigma=4.502515e+00
+       Δ(R-N) PVP=-1.679103e-01  PVQ²=+5.577640e-01  Sigma=-3.014461e+00
+    ±E asymmetry: |ΔSigma| REAL=9.325873e-15, NULL=6.873466e+00; |ΔPVQ²| REAL=1.065814e-14, NULL=2.006451e-01
+
+PAIR 3: groups 23 / 40; E=-0.814503592 / +0.814503592; selection prominence=+0.225416803
+  dephasing:
+    -E REAL PVP=1.370001e-02  PVQ²=6.546379e+00  gap=2.205326e-02  Sigma=3.023030e+00
+       NULL PVP=3.022009e-01  PVQ²=6.458450e+00  gap=2.205326e-02  Sigma=7.664378e+00
+       Δ(R-N) PVP=-2.885009e-01  PVQ²=+8.792858e-02  Sigma=-4.641348e+00
+    +E REAL PVP=1.370001e-02  PVQ²=6.546379e+00  gap=2.205326e-02  Sigma=3.023030e+00
+       NULL PVP=3.330635e-01  PVQ²=6.696722e+00  gap=2.205326e-02  Sigma=1.881911e+01
+       Δ(R-N) PVP=-3.193635e-01  PVQ²=-1.503429e-01  Sigma=-1.579608e+01
+    ±E asymmetry: |ΔSigma| REAL=1.554312e-14, NULL=1.115473e+01; |ΔPVQ²| REAL=9.769963e-15, NULL=2.382715e-01
+  transverse:
+    -E REAL PVP=4.219132e-01  PVQ²=9.365356e+00  gap=2.205326e-02  Sigma=5.227779e+00
+       NULL PVP=3.951082e-01  PVQ²=9.642714e+00  gap=2.205326e-02  Sigma=7.704859e+00
+       Δ(R-N) PVP=+2.680502e-02  PVQ²=-2.773579e-01  Sigma=-2.477080e+00
+    +E REAL PVP=4.219132e-01  PVQ²=9.365356e+00  gap=2.205326e-02  Sigma=5.227779e+00
+       NULL PVP=4.194502e-01  PVQ²=9.686848e+00  gap=2.205326e-02  Sigma=2.994224e+01
+       Δ(R-N) PVP=+2.462988e-03  PVQ²=-3.214922e-01  Sigma=-2.471446e+01
+    ±E asymmetry: |ΔSigma| REAL=7.460699e-14, NULL=2.223738e+01; |ΔPVQ²| REAL=2.842171e-14, NULL=4.413434e-02
+
+PAIR 4: groups 26 / 37; E=-0.628229577 / +0.628229577; selection prominence=+0.203030414
+  dephasing:
+    -E REAL PVP=1.124514e-01  PVQ²=6.533921e+00  gap=9.963724e-02  Sigma=1.024962e+00
+       NULL PVP=2.527617e-01  PVQ²=6.730334e+00  gap=9.963724e-02  Sigma=4.620585e+00
+       Δ(R-N) PVP=-1.403102e-01  PVQ²=-1.964124e-01  Sigma=-3.595623e+00
+    +E REAL PVP=1.124514e-01  PVQ²=6.533921e+00  gap=9.963724e-02  Sigma=1.024962e+00
+       NULL PVP=3.431971e-01  PVQ²=6.033927e+00  gap=9.963724e-02  Sigma=2.633860e+00
+       Δ(R-N) PVP=-2.307457e-01  PVQ²=+4.999945e-01  Sigma=-1.608898e+00
+    ±E asymmetry: |ΔSigma| REAL=1.110223e-15, NULL=1.986726e+00; |ΔPVQ²| REAL=1.776357e-15, NULL=6.964069e-01
+  transverse:
+    -E REAL PVP=1.267448e-01  PVQ²=9.527303e+00  gap=9.963724e-02  Sigma=2.156834e+00
+       NULL PVP=4.062630e-01  PVQ²=9.574949e+00  gap=9.963724e-02  Sigma=1.279993e+01
+       Δ(R-N) PVP=-2.795182e-01  PVQ²=-4.764671e-02  Sigma=-1.064309e+01
+    +E REAL PVP=1.267448e-01  PVQ²=9.527303e+00  gap=9.963724e-02  Sigma=2.156834e+00
+       NULL PVP=3.672405e-01  PVQ²=9.196084e+00  gap=9.963724e-02  Sigma=2.892394e+00
+       Δ(R-N) PVP=-2.404957e-01  PVQ²=+3.312188e-01  Sigma=-7.355599e-01
+    ±E asymmetry: |ΔSigma| REAL=9.769963e-15, NULL=9.907535e+00; |ΔPVQ²| REAL=1.065814e-14, NULL=3.788655e-01
+
+PAIR 5: groups 16 / 47; E=-1.768181366 / +1.768181366; selection prominence=+0.195494491
+  dephasing:
+    -E REAL PVP=3.593423e-02  PVQ²=6.545275e+00  gap=4.010024e-02  Sigma=1.232112e+00
+       NULL PVP=3.148009e-01  PVQ²=6.177608e+00  gap=4.010024e-02  Sigma=1.151589e+01
+       Δ(R-N) PVP=-2.788666e-01  PVQ²=+3.676668e-01  Sigma=-1.028378e+01
+    +E REAL PVP=3.593423e-02  PVQ²=6.545275e+00  gap=4.010024e-02  Sigma=1.232112e+00
+       NULL PVP=2.705618e-01  PVQ²=6.621691e+00  gap=4.010024e-02  Sigma=8.165239e+00
+       Δ(R-N) PVP=-2.346276e-01  PVQ²=-7.641609e-02  Sigma=-6.933127e+00
+    ±E asymmetry: |ΔSigma| REAL=3.974598e-14, NULL=3.350651e+00; |ΔPVQ²| REAL=1.776357e-15, NULL=4.440829e-01
+  transverse:
+    -E REAL PVP=3.415229e-01  PVQ²=9.426729e+00  gap=4.010024e-02  Sigma=3.620080e+00
+       NULL PVP=3.122948e-01  PVQ²=1.005853e+01  gap=4.010024e-02  Sigma=2.896571e+01
+       Δ(R-N) PVP=+2.922803e-02  PVQ²=-6.317981e-01  Sigma=-2.534563e+01
+    +E REAL PVP=3.415229e-01  PVQ²=9.426729e+00  gap=4.010024e-02  Sigma=3.620080e+00
+       NULL PVP=4.067496e-01  PVQ²=9.295704e+00  gap=4.010024e-02  Sigma=2.820269e+01
+       Δ(R-N) PVP=-6.522677e-02  PVQ²=+1.310248e-01  Sigma=-2.458261e+01
+    ±E asymmetry: |ΔSigma| REAL=5.639933e-14, NULL=7.630180e-01; |ΔPVQ²| REAL=0.000000e+00, NULL=7.628229e-01
+
+SEED 25042004
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 27 / 36; E=-0.128927532 / +0.128927532; selection prominence=+0.413099271
+  dephasing:
+    -E REAL PVP=5.947140e-02  PVQ²=1.012511e+01  gap=1.317026e-02  Sigma=3.479092e+01
+       NULL PVP=5.023054e-01  PVQ²=9.918606e+00  gap=1.317026e-02  Sigma=3.344717e+01
+       Δ(R-N) PVP=-4.428340e-01  PVQ²=+2.065035e-01  Sigma=+1.343753e+00
+    +E REAL PVP=5.947140e-02  PVQ²=1.012511e+01  gap=1.317026e-02  Sigma=3.479092e+01
+       NULL PVP=4.552496e-01  PVQ²=1.029167e+01  gap=1.317026e-02  Sigma=3.121688e+01
+       Δ(R-N) PVP=-3.957782e-01  PVQ²=-1.665619e-01  Sigma=+3.574039e+00
+    ±E asymmetry: |ΔSigma| REAL=8.881784e-13, NULL=2.230287e+00; |ΔPVQ²| REAL=5.329071e-14, NULL=3.730655e-01
+  transverse:
+    -E REAL PVP=5.995371e-01  PVQ²=8.958714e+00  gap=1.317026e-02  Sigma=2.924026e+01
+       NULL PVP=2.938938e-01  PVQ²=8.980340e+00  gap=1.317026e-02  Sigma=3.146308e+01
+       Δ(R-N) PVP=+3.056433e-01  PVQ²=-2.162596e-02  Sigma=-2.222818e+00
+    +E REAL PVP=5.995371e-01  PVQ²=8.958714e+00  gap=1.317026e-02  Sigma=2.924026e+01
+       NULL PVP=3.143539e-01  PVQ²=9.056636e+00  gap=1.317026e-02  Sigma=4.260277e+01
+       Δ(R-N) PVP=+2.851832e-01  PVQ²=-9.792145e-02  Sigma=-1.336251e+01
+    ±E asymmetry: |ΔSigma| REAL=4.831691e-13, NULL=1.113969e+01; |ΔPVQ²| REAL=8.881784e-15, NULL=7.629549e-02
+
+PAIR 2: groups 17 / 46; E=-0.972438859 / +0.972438859; selection prominence=+0.384005314
+  dephasing:
+    -E REAL PVP=6.471194e-03  PVQ²=1.012860e+01  gap=1.126969e-01  Sigma=1.970627e+00
+       NULL PVP=3.217356e-01  PVQ²=1.013287e+01  gap=1.126969e-01  Sigma=5.545272e+00
+       Δ(R-N) PVP=-3.152644e-01  PVQ²=-4.262387e-03  Sigma=-3.574645e+00
+    +E REAL PVP=6.471194e-03  PVQ²=1.012860e+01  gap=1.126969e-01  Sigma=1.970627e+00
+       NULL PVP=4.697477e-01  PVQ²=1.053978e+01  gap=1.126969e-01  Sigma=3.257192e+01
+       Δ(R-N) PVP=-4.632765e-01  PVQ²=-4.111770e-01  Sigma=-3.060130e+01
+    ±E asymmetry: |ΔSigma| REAL=4.218847e-15, NULL=2.702665e+01; |ΔPVQ²| REAL=0.000000e+00, NULL=4.069146e-01
+  transverse:
+    -E REAL PVP=1.716787e-01  PVQ²=9.288685e+00  gap=1.126969e-01  Sigma=3.898970e+00
+       NULL PVP=3.565734e-01  PVQ²=9.554365e+00  gap=1.126969e-01  Sigma=9.322363e+00
+       Δ(R-N) PVP=-1.848947e-01  PVQ²=-2.656800e-01  Sigma=-5.423393e+00
+    +E REAL PVP=1.716787e-01  PVQ²=9.288685e+00  gap=1.126969e-01  Sigma=3.898970e+00
+       NULL PVP=3.688349e-01  PVQ²=9.079666e+00  gap=1.126969e-01  Sigma=7.124809e+00
+       Δ(R-N) PVP=-1.971562e-01  PVQ²=+2.090198e-01  Sigma=-3.225839e+00
+    ±E asymmetry: |ΔSigma| REAL=3.108624e-15, NULL=2.197554e+00; |ΔPVQ²| REAL=1.065814e-14, NULL=4.746998e-01
+
+PAIR 3: groups 2 / 61; E=-2.603895411 / +2.603895411; selection prominence=+0.358910643
+  dephasing:
+    -E REAL PVP=2.769678e-02  PVQ²=1.012788e+01  gap=2.378806e-02  Sigma=2.911342e+00
+       NULL PVP=3.281347e-01  PVQ²=1.039333e+01  gap=2.378806e-02  Sigma=1.298494e+01
+       Δ(R-N) PVP=-3.004379e-01  PVQ²=-2.654553e-01  Sigma=-1.007360e+01
+    +E REAL PVP=2.769678e-02  PVQ²=1.012788e+01  gap=2.378806e-02  Sigma=2.911342e+00
+       NULL PVP=3.434100e-01  PVQ²=1.028346e+01  gap=2.378806e-02  Sigma=8.488542e+00
+       Δ(R-N) PVP=-3.157132e-01  PVQ²=-1.555761e-01  Sigma=-5.577199e+00
+    ±E asymmetry: |ΔSigma| REAL=4.440892e-15, NULL=4.496401e+00; |ΔPVQ²| REAL=2.131628e-14, NULL=1.098793e-01
+  transverse:
+    -E REAL PVP=7.415897e-01  PVQ²=8.768204e+00  gap=2.378806e-02  Sigma=3.233316e+00
+       NULL PVP=4.698890e-01  PVQ²=9.003842e+00  gap=2.378806e-02  Sigma=8.773999e+00
+       Δ(R-N) PVP=+2.717006e-01  PVQ²=-2.356381e-01  Sigma=-5.540683e+00
+    +E REAL PVP=7.415897e-01  PVQ²=8.768204e+00  gap=2.378806e-02  Sigma=3.233316e+00
+       NULL PVP=3.816511e-01  PVQ²=9.238203e+00  gap=2.378806e-02  Sigma=1.443938e+01
+       Δ(R-N) PVP=+3.599385e-01  PVQ²=-4.699995e-01  Sigma=-1.120606e+01
+    ±E asymmetry: |ΔSigma| REAL=1.865175e-14, NULL=5.665380e+00; |ΔPVQ²| REAL=1.421085e-14, NULL=2.343615e-01
+
+PAIR 4: groups 22 / 41; E=-0.517058206 / +0.517058206; selection prominence=+0.286020849
+  dephasing:
+    -E REAL PVP=3.039646e-01  PVQ²=1.003625e+01  gap=7.490172e-02  Sigma=4.614470e+00
+       NULL PVP=3.053679e-01  PVQ²=9.457798e+00  gap=7.490172e-02  Sigma=6.915735e+00
+       Δ(R-N) PVP=-1.403336e-03  PVQ²=+5.784543e-01  Sigma=-2.301266e+00
+    +E REAL PVP=3.039646e-01  PVQ²=1.003625e+01  gap=7.490172e-02  Sigma=4.614470e+00
+       NULL PVP=3.486895e-01  PVQ²=9.168136e+00  gap=7.490172e-02  Sigma=5.850728e+00
+       Δ(R-N) PVP=-4.472493e-02  PVQ²=+8.681167e-01  Sigma=-1.236258e+00
+    ±E asymmetry: |ΔSigma| REAL=1.065814e-14, NULL=1.065007e+00; |ΔPVQ²| REAL=0.000000e+00, NULL=2.896624e-01
+  transverse:
+    -E REAL PVP=2.317082e-01  PVQ²=9.264470e+00  gap=7.490172e-02  Sigma=2.899396e+00
+       NULL PVP=5.022238e-01  PVQ²=9.384544e+00  gap=7.490172e-02  Sigma=3.981543e+00
+       Δ(R-N) PVP=-2.705156e-01  PVQ²=-1.200741e-01  Sigma=-1.082147e+00
+    +E REAL PVP=2.317082e-01  PVQ²=9.264470e+00  gap=7.490172e-02  Sigma=2.899396e+00
+       NULL PVP=3.305314e-01  PVQ²=9.014467e+00  gap=7.490172e-02  Sigma=1.929959e+01
+       Δ(R-N) PVP=-9.882316e-02  PVQ²=+2.500033e-01  Sigma=-1.640019e+01
+    ±E asymmetry: |ΔSigma| REAL=7.993606e-15, NULL=1.531805e+01; |ΔPVQ²| REAL=1.776357e-15, NULL=3.700774e-01
+
+PAIR 5: groups 26 / 37; E=-0.153429971 / +0.153429971; selection prominence=+0.266193716
+  dephasing:
+    -E REAL PVP=5.534591e-02  PVQ²=1.012558e+01  gap=2.450244e-02  Sigma=1.250785e+01
+       NULL PVP=4.374487e-01  PVQ²=9.908926e+00  gap=2.450244e-02  Sigma=3.334678e+01
+       Δ(R-N) PVP=-3.821027e-01  PVQ²=+2.166576e-01  Sigma=-2.083894e+01
+    +E REAL PVP=5.534591e-02  PVQ²=1.012558e+01  gap=2.450244e-02  Sigma=1.250785e+01
+       NULL PVP=2.188857e-01  PVQ²=1.036155e+01  gap=2.450244e-02  Sigma=4.623578e+01
+       Δ(R-N) PVP=-1.635398e-01  PVQ²=-2.359661e-01  Sigma=-3.372794e+01
+    ±E asymmetry: |ΔSigma| REAL=5.684342e-14, NULL=1.288900e+01; |ΔPVQ²| REAL=3.552714e-15, NULL=4.526237e-01
+  transverse:
+    -E REAL PVP=1.067428e+00  PVQ²=8.178756e+00  gap=2.450244e-02  Sigma=6.557161e+00
+       NULL PVP=3.516215e-01  PVQ²=9.442011e+00  gap=2.450244e-02  Sigma=1.748473e+01
+       Δ(R-N) PVP=+7.158068e-01  PVQ²=-1.263255e+00  Sigma=-1.092757e+01
+    +E REAL PVP=1.067428e+00  PVQ²=8.178756e+00  gap=2.450244e-02  Sigma=6.557161e+00
+       NULL PVP=4.097379e-01  PVQ²=8.569780e+00  gap=2.450244e-02  Sigma=3.779082e+01
+       Δ(R-N) PVP=+6.576904e-01  PVQ²=-3.910242e-01  Sigma=-3.123366e+01
+    ±E asymmetry: |ΔSigma| REAL=5.595524e-14, NULL=2.030609e+01; |ΔPVQ²| REAL=3.552714e-15, NULL=8.722312e-01
+
+SEED 25042005
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 6 / 25; E=-2.272101750 / +2.272101750; selection prominence=+0.345170174
+  dephasing:
+    -E REAL PVP=1.730468e-01  PVQ²=8.030309e+00  gap=1.789722e-04  Sigma=4.631352e+01
+       NULL PVP=4.795413e-01  PVQ²=7.661819e+00  gap=1.789722e-04  Sigma=3.947139e+01
+       Δ(R-N) PVP=-3.064945e-01  PVQ²=+3.684903e-01  Sigma=+6.842123e+00
+    +E REAL PVP=1.730468e-01  PVQ²=8.030309e+00  gap=1.789722e-04  Sigma=4.631352e+01
+       NULL PVP=4.778731e-01  PVQ²=7.980418e+00  gap=1.789722e-04  Sigma=2.240629e+01
+       Δ(R-N) PVP=-3.048263e-01  PVQ²=+4.989098e-02  Sigma=+2.390722e+01
+    ±E asymmetry: |ΔSigma| REAL=1.527667e-11, NULL=1.706510e+01; |ΔPVQ²| REAL=1.687539e-12, NULL=3.185993e-01
+  transverse:
+    -E REAL PVP=1.607470e-01  PVQ²=1.121487e+01  gap=1.789722e-04  Sigma=2.994547e+01
+       NULL PVP=5.493395e-01  PVQ²=1.086047e+01  gap=1.789722e-04  Sigma=3.377411e+01
+       Δ(R-N) PVP=-3.885925e-01  PVQ²=+3.543999e-01  Sigma=-3.828643e+00
+    +E REAL PVP=1.612442e-01  PVQ²=1.178297e+01  gap=1.789722e-04  Sigma=3.012683e+01
+       NULL PVP=7.420748e-01  PVQ²=1.085086e+01  gap=1.789722e-04  Sigma=3.958725e+01
+       Δ(R-N) PVP=-5.808307e-01  PVQ²=+9.321020e-01  Sigma=-9.460425e+00
+    ±E asymmetry: |ΔSigma| REAL=1.813602e-01, NULL=5.813142e+00; |ΔPVQ²| REAL=5.680959e-01, NULL=9.606239e-03
+
+PAIR 2: groups 5 / 26; E=-2.284082180 / +2.284082180; selection prominence=+0.332916705
+  dephasing:
+    -E REAL PVP=1.427859e-01  PVQ²=8.039866e+00  gap=6.309907e-03  Sigma=7.122255e+01
+       NULL PVP=5.090752e-01  PVQ²=7.816732e+00  gap=6.309907e-03  Sigma=2.253093e+01
+       Δ(R-N) PVP=-3.662894e-01  PVQ²=+2.231340e-01  Sigma=+4.869162e+01
+    +E REAL PVP=1.427859e-01  PVQ²=8.039866e+00  gap=6.309907e-03  Sigma=7.122255e+01
+       NULL PVP=5.658224e-01  PVQ²=7.573580e+00  gap=6.309907e-03  Sigma=3.932071e+01
+       Δ(R-N) PVP=-4.230366e-01  PVQ²=+4.662864e-01  Sigma=+3.190184e+01
+    ±E asymmetry: |ΔSigma| REAL=3.751666e-12, NULL=1.678978e+01; |ΔPVQ²| REAL=3.375078e-14, NULL=2.431523e-01
+  transverse:
+    -E REAL PVP=7.994340e-02  PVQ²=1.124043e+01  gap=6.309907e-03  Sigma=3.214996e+01
+       NULL PVP=5.424828e-01  PVQ²=1.097286e+01  gap=6.309907e-03  Sigma=4.840962e+01
+       Δ(R-N) PVP=-4.625394e-01  PVQ²=+2.675731e-01  Sigma=-1.625966e+01
+    +E REAL PVP=7.895818e-02  PVQ²=1.179662e+01  gap=6.309907e-03  Sigma=3.208190e+01
+       NULL PVP=5.045023e-01  PVQ²=1.100498e+01  gap=6.309907e-03  Sigma=4.833334e+01
+       Δ(R-N) PVP=-4.255441e-01  PVQ²=+7.916315e-01  Sigma=-1.625145e+01
+    ±E asymmetry: |ΔSigma| REAL=6.806005e-02, NULL=7.627829e-02; |ΔPVQ²| REAL=5.561819e-01, NULL=3.212352e-02
+
+PAIR 3: groups 0 / 31; E=-2.641531706 / +2.641531706; selection prominence=+0.200758102
+  dephasing:
+    -E REAL PVP=3.184078e-01  PVQ²=7.958870e+00  gap=1.218585e-02  Sigma=4.204792e+01
+       NULL PVP=5.008780e-01  PVQ²=7.821361e+00  gap=1.218585e-02  Sigma=4.031222e+01
+       Δ(R-N) PVP=-1.824702e-01  PVQ²=+1.375097e-01  Sigma=+1.735693e+00
+    +E REAL PVP=3.184078e-01  PVQ²=7.958870e+00  gap=1.218585e-02  Sigma=4.204792e+01
+       NULL PVP=4.788037e-01  PVQ²=7.736417e+00  gap=1.218585e-02  Sigma=4.408908e+01
+       Δ(R-N) PVP=-1.603960e-01  PVQ²=+2.224530e-01  Sigma=-2.041168e+00
+    ±E asymmetry: |ΔSigma| REAL=1.712408e-12, NULL=3.776860e+00; |ΔPVQ²| REAL=3.019807e-14, NULL=8.494329e-02
+  transverse:
+    -E REAL PVP=2.731240e-02  PVQ²=1.166891e+01  gap=1.218585e-02  Sigma=1.472398e+01
+       NULL PVP=4.755067e-01  PVQ²=1.120968e+01  gap=1.218585e-02  Sigma=7.409371e+01
+       Δ(R-N) PVP=-4.481943e-01  PVQ²=+4.592359e-01  Sigma=-5.936973e+01
+    +E REAL PVP=3.077864e-02  PVQ²=1.137907e+01  gap=1.218585e-02  Sigma=1.465989e+01
+       NULL PVP=5.667833e-01  PVQ²=1.119813e+01  gap=1.218585e-02  Sigma=5.423000e+01
+       Δ(R-N) PVP=-5.360047e-01  PVQ²=+1.809387e-01  Sigma=-3.957011e+01
+    ±E asymmetry: |ΔSigma| REAL=6.409318e-02, NULL=1.986370e+01; |ΔPVQ²| REAL=2.898473e-01, NULL=1.155013e-02
+
+PAIR 4: groups 7 / 24; E=-2.271922778 / +2.271922778; selection prominence=+0.176546569
+  dephasing:
+    -E REAL PVP=1.486712e-01  PVQ²=8.038151e+00  gap=1.789722e-04  Sigma=6.996329e+01
+       NULL PVP=5.370935e-01  PVQ²=7.716432e+00  gap=1.789722e-04  Sigma=3.882111e+01
+       Δ(R-N) PVP=-3.884222e-01  PVQ²=+3.217189e-01  Sigma=+3.114217e+01
+    +E REAL PVP=1.486712e-01  PVQ²=8.038151e+00  gap=1.789722e-04  Sigma=6.996329e+01
+       NULL PVP=5.385228e-01  PVQ²=7.934885e+00  gap=1.789722e-04  Sigma=4.212381e+01
+       Δ(R-N) PVP=-3.898515e-01  PVQ²=+1.032658e-01  Sigma=+2.783948e+01
+    ±E asymmetry: |ΔSigma| REAL=2.629008e-12, NULL=3.302693e+00; |ΔPVQ²| REAL=1.618261e-12, NULL=2.184531e-01
+  transverse:
+    -E REAL PVP=1.794680e-01  PVQ²=1.120054e+01  gap=1.789722e-04  Sigma=4.035940e+01
+       NULL PVP=6.487699e-01  PVQ²=1.168494e+01  gap=1.789722e-04  Sigma=5.892114e+01
+       Δ(R-N) PVP=-4.693019e-01  PVQ²=-4.843948e-01  Sigma=-1.856174e+01
+    +E REAL PVP=1.798238e-01  PVQ²=1.178459e+01  gap=1.789722e-04  Sigma=4.041170e+01
+       NULL PVP=6.842589e-01  PVQ²=1.155799e+01  gap=1.789722e-04  Sigma=5.512087e+01
+       Δ(R-N) PVP=-5.044351e-01  PVQ²=+2.265998e-01  Sigma=-1.470916e+01
+    ±E asymmetry: |ΔSigma| REAL=5.230518e-02, NULL=3.800275e+00; |ΔPVQ²| REAL=5.840425e-01, NULL=1.269520e-01
+
+PAIR 5: groups 4 / 27; E=-2.290392087 / +2.290392087; selection prominence=+0.166475364
+  dephasing:
+    -E REAL PVP=1.716835e-01  PVQ²=8.030779e+00  gap=6.309907e-03  Sigma=4.841058e+01
+       NULL PVP=4.511227e-01  PVQ²=7.756168e+00  gap=6.309907e-03  Sigma=4.969303e+01
+       Δ(R-N) PVP=-2.794392e-01  PVQ²=+2.746106e-01  Sigma=-1.282449e+00
+    +E REAL PVP=1.716835e-01  PVQ²=8.030779e+00  gap=6.309907e-03  Sigma=4.841058e+01
+       NULL PVP=5.704319e-01  PVQ²=8.000950e+00  gap=6.309907e-03  Sigma=4.835704e+01
+       Δ(R-N) PVP=-3.987484e-01  PVQ²=+2.982904e-02  Sigma=+5.354770e-02
+    ±E asymmetry: |ΔSigma| REAL=1.847411e-13, NULL=1.335997e+00; |ΔPVQ²| REAL=3.907985e-14, NULL=2.447816e-01
+  transverse:
+    -E REAL PVP=7.913140e-02  PVQ²=1.125255e+01  gap=6.309907e-03  Sigma=3.810184e+01
+       NULL PVP=5.801735e-01  PVQ²=1.142259e+01  gap=6.309907e-03  Sigma=6.450709e+01
+       Δ(R-N) PVP=-5.010421e-01  PVQ²=-1.700462e-01  Sigma=-2.640525e+01
+    +E REAL PVP=7.840988e-02  PVQ²=1.178472e+01  gap=6.309907e-03  Sigma=3.804221e+01
+       NULL PVP=5.385471e-01  PVQ²=1.106165e+01  gap=6.309907e-03  Sigma=8.490570e+01
+       Δ(R-N) PVP=-4.601372e-01  PVQ²=+7.230744e-01  Sigma=-4.686349e+01
+    ±E asymmetry: |ΔSigma| REAL=5.963610e-02, NULL=2.039861e+01; |ΔPVQ²| REAL=5.321751e-01, NULL=3.609455e-01
+
+SEED 25042006
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 1 / 62; E=-3.256285641 / +3.256285641; selection prominence=+0.468964227
+  dephasing:
+    -E REAL PVP=2.253564e-15  PVQ²=5.337526e+00  gap=1.253975e-01  Sigma=2.277983e+00
+       NULL PVP=2.662140e-01  PVQ²=4.968255e+00  gap=1.253975e-01  Sigma=7.014561e+00
+       Δ(R-N) PVP=-2.662140e-01  PVQ²=+3.692709e-01  Sigma=-4.736578e+00
+    +E REAL PVP=3.097372e-15  PVQ²=5.337529e+00  gap=1.253975e-01  Sigma=2.277982e+00
+       NULL PVP=4.358326e-01  PVQ²=5.270695e+00  gap=1.253975e-01  Sigma=7.229404e+00
+       Δ(R-N) PVP=-4.358326e-01  PVQ²=+6.683402e-02  Sigma=-4.951421e+00
+    ±E asymmetry: |ΔSigma| REAL=5.881489e-07, NULL=2.148423e-01; |ΔPVQ²| REAL=2.729783e-06, NULL=3.024396e-01
+  transverse:
+    -E REAL PVP=3.588346e-03  PVQ²=6.566709e+00  gap=1.253975e-01  Sigma=1.211912e+00
+       NULL PVP=3.903528e-01  PVQ²=6.569941e+00  gap=1.253975e-01  Sigma=1.603877e+01
+       Δ(R-N) PVP=-3.867645e-01  PVQ²=-3.231632e-03  Sigma=-1.482686e+01
+    +E REAL PVP=3.588346e-03  PVQ²=6.566709e+00  gap=1.253975e-01  Sigma=1.211912e+00
+       NULL PVP=3.370775e-01  PVQ²=6.259222e+00  gap=1.253975e-01  Sigma=1.244069e+01
+       Δ(R-N) PVP=-3.334891e-01  PVQ²=+3.074874e-01  Sigma=-1.122878e+01
+    ±E asymmetry: |ΔSigma| REAL=8.881784e-16, NULL=3.598084e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=3.107191e-01
+
+PAIR 2: groups 29 / 34; E=-0.533861454 / +0.533861454; selection prominence=+0.449571556
+  dephasing:
+    -E REAL PVP=5.143522e-15  PVQ²=5.337502e+00  gap=7.390868e-02  Sigma=4.270948e+00
+       NULL PVP=3.471123e-01  PVQ²=5.294417e+00  gap=7.390868e-02  Sigma=7.373294e+00
+       Δ(R-N) PVP=-3.471123e-01  PVQ²=+4.308499e-02  Sigma=-3.102346e+00
+    +E REAL PVP=3.864062e-15  PVQ²=5.337554e+00  gap=7.390868e-02  Sigma=4.270850e+00
+       NULL PVP=3.031521e-01  PVQ²=5.017324e+00  gap=7.390868e-02  Sigma=9.962232e+00
+       Δ(R-N) PVP=-3.031521e-01  PVQ²=+3.202291e-01  Sigma=-5.691382e+00
+    ±E asymmetry: |ΔSigma| REAL=9.851331e-05, NULL=2.588938e+00; |ΔPVQ²| REAL=5.171003e-05, NULL=2.770924e-01
+  transverse:
+    -E REAL PVP=9.414382e-04  PVQ²=6.566721e+00  gap=7.390868e-02  Sigma=3.035954e+00
+       NULL PVP=2.937069e-01  PVQ²=6.280602e+00  gap=7.390868e-02  Sigma=1.224471e+01
+       Δ(R-N) PVP=-2.927655e-01  PVQ²=+2.861197e-01  Sigma=-9.208758e+00
+    +E REAL PVP=9.414382e-04  PVQ²=6.566721e+00  gap=7.390868e-02  Sigma=3.035954e+00
+       NULL PVP=3.907643e-01  PVQ²=6.786517e+00  gap=7.390868e-02  Sigma=4.138640e+00
+       Δ(R-N) PVP=-3.898228e-01  PVQ²=-2.197960e-01  Sigma=-1.102686e+00
+    ±E asymmetry: |ΔSigma| REAL=3.330669e-14, NULL=8.106072e+00; |ΔPVQ²| REAL=7.105427e-15, NULL=5.059157e-01
+
+PAIR 3: groups 12 / 51; E=-2.056269305 / +2.056269305; selection prominence=+0.415424815
+  dephasing:
+    -E REAL PVP=1.476223e-15  PVQ²=5.337587e+00  gap=9.840851e-02  Sigma=9.184032e-01
+       NULL PVP=2.934045e-01  PVQ²=5.065950e+00  gap=9.840851e-02  Sigma=7.398744e+00
+       Δ(R-N) PVP=-2.934045e-01  PVQ²=+2.716376e-01  Sigma=-6.480341e+00
+    +E REAL PVP=2.464608e-15  PVQ²=5.337468e+00  gap=9.840851e-02  Sigma=9.183425e-01
+       NULL PVP=2.793092e-01  PVQ²=5.053001e+00  gap=9.840851e-02  Sigma=1.942955e+00
+       Δ(R-N) PVP=-2.793092e-01  PVQ²=+2.844675e-01  Sigma=-1.024612e+00
+    ±E asymmetry: |ΔSigma| REAL=6.066042e-05, NULL=5.455790e+00; |ΔPVQ²| REAL=1.193636e-04, NULL=1.294922e-02
+  transverse:
+    -E REAL PVP=5.542724e-04  PVQ²=6.566722e+00  gap=9.840851e-02  Sigma=1.617294e+00
+       NULL PVP=3.017893e-01  PVQ²=6.216370e+00  gap=9.840851e-02  Sigma=6.815631e+00
+       Δ(R-N) PVP=-3.012350e-01  PVQ²=+3.503518e-01  Sigma=-5.198337e+00
+    +E REAL PVP=5.542724e-04  PVQ²=6.566722e+00  gap=9.840851e-02  Sigma=1.617294e+00
+       NULL PVP=3.275588e-01  PVQ²=6.350849e+00  gap=9.840851e-02  Sigma=2.716613e+00
+       Δ(R-N) PVP=-3.270046e-01  PVQ²=+2.158727e-01  Sigma=-1.099319e+00
+    ±E asymmetry: |ΔSigma| REAL=2.220446e-15, NULL=4.099018e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=1.344791e-01
+
+PAIR 4: groups 11 / 52; E=-2.154677816 / +2.154677816; selection prominence=+0.363303869
+  dephasing:
+    -E REAL PVP=2.716541e-15  PVQ²=5.337479e+00  gap=7.941459e-02  Sigma=2.571972e+00
+       NULL PVP=3.238937e-01  PVQ²=5.252223e+00  gap=7.941459e-02  Sigma=1.990818e+00
+       Δ(R-N) PVP=-3.238937e-01  PVQ²=+8.525656e-02  Sigma=+5.811535e-01
+    +E REAL PVP=3.755487e-15  PVQ²=5.337576e+00  gap=7.941459e-02  Sigma=2.572009e+00
+       NULL PVP=3.048638e-01  PVQ²=5.510706e+00  gap=7.941459e-02  Sigma=1.115244e+01
+       Δ(R-N) PVP=-3.048638e-01  PVQ²=-1.731305e-01  Sigma=-8.580431e+00
+    ±E asymmetry: |ΔSigma| REAL=3.774941e-05, NULL=9.161622e+00; |ΔPVQ²| REAL=9.669579e-05, NULL=2.584837e-01
+  transverse:
+    -E REAL PVP=5.737119e-03  PVQ²=6.566689e+00  gap=7.941459e-02  Sigma=8.773088e-01
+       NULL PVP=2.543670e-01  PVQ²=6.832880e+00  gap=7.941459e-02  Sigma=3.284033e+00
+       Δ(R-N) PVP=-2.486299e-01  PVQ²=-2.661906e-01  Sigma=-2.406724e+00
+    +E REAL PVP=5.737119e-03  PVQ²=6.566689e+00  gap=7.941459e-02  Sigma=8.773088e-01
+       NULL PVP=3.440502e-01  PVQ²=6.236494e+00  gap=7.941459e-02  Sigma=2.517052e+01
+       Δ(R-N) PVP=-3.383131e-01  PVQ²=+3.301955e-01  Sigma=-2.429322e+01
+    ±E asymmetry: |ΔSigma| REAL=6.439294e-15, NULL=2.188649e+01; |ΔPVQ²| REAL=6.217249e-15, NULL=5.963861e-01
+
+PAIR 5: groups 13 / 50; E=-1.698279204 / +1.698279204; selection prominence=+0.354869934
+  dephasing:
+    -E REAL PVP=1.298883e-14  PVQ²=5.337616e+00  gap=2.028170e-02  Sigma=7.970031e+00
+       NULL PVP=2.312447e-01  PVQ²=5.146129e+00  gap=2.028170e-02  Sigma=1.354821e+01
+       Δ(R-N) PVP=-2.312447e-01  PVQ²=+1.914865e-01  Sigma=-5.578183e+00
+    +E REAL PVP=8.492170e-15  PVQ²=5.337440e+00  gap=2.028170e-02  Sigma=7.970330e+00
+       NULL PVP=3.000157e-01  PVQ²=5.158968e+00  gap=2.028170e-02  Sigma=2.583323e+01
+       Δ(R-N) PVP=-3.000157e-01  PVQ²=+1.784721e-01  Sigma=-1.786290e+01
+    ±E asymmetry: |ΔSigma| REAL=2.987203e-04, NULL=1.228502e+01; |ΔPVQ²| REAL=1.760458e-04, NULL=1.283838e-02
+  transverse:
+    -E REAL PVP=1.319371e-02  PVQ²=6.566548e+00  gap=2.028170e-02  Sigma=4.801570e+00
+       NULL PVP=3.789700e-01  PVQ²=5.880972e+00  gap=2.028170e-02  Sigma=1.751684e+01
+       Δ(R-N) PVP=-3.657763e-01  PVQ²=+6.855761e-01  Sigma=-1.271527e+01
+    +E REAL PVP=1.319371e-02  PVQ²=6.566548e+00  gap=2.028170e-02  Sigma=4.801570e+00
+       NULL PVP=2.375415e-01  PVQ²=6.224928e+00  gap=2.028170e-02  Sigma=2.087732e+01
+       Δ(R-N) PVP=-2.243478e-01  PVQ²=+3.416201e-01  Sigma=-1.607575e+01
+    ±E asymmetry: |ΔSigma| REAL=3.286260e-14, NULL=3.360481e+00; |ΔPVQ²| REAL=1.598721e-14, NULL=3.439560e-01
+
+SEED 25042007
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 13 / 18; E=-0.326343271 / +0.326343271; selection prominence=+0.280337799
+  dephasing:
+    -E REAL PVP=3.643151e-01  PVQ²=1.576327e+01  gap=1.843620e-01  Sigma=2.803288e+00
+       NULL PVP=7.120531e-01  PVQ²=1.539229e+01  gap=1.843620e-01  Sigma=1.139644e+01
+       Δ(R-N) PVP=-3.477380e-01  PVQ²=+3.709780e-01  Sigma=-8.593154e+00
+    +E REAL PVP=3.643151e-01  PVQ²=1.576327e+01  gap=1.843620e-01  Sigma=2.803288e+00
+       NULL PVP=6.451895e-01  PVQ²=1.493709e+01  gap=1.843620e-01  Sigma=4.735795e+01
+       Δ(R-N) PVP=-2.808744e-01  PVQ²=+8.261741e-01  Sigma=-4.455466e+01
+    ±E asymmetry: |ΔSigma| REAL=8.881784e-16, NULL=3.596150e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=4.551961e-01
+  transverse:
+    -E REAL PVP=3.889193e-01  PVQ²=1.848421e+01  gap=1.843620e-01  Sigma=7.261818e+00
+       NULL PVP=6.595351e-01  PVQ²=1.814193e+01  gap=1.843620e-01  Sigma=1.904396e+01
+       Δ(R-N) PVP=-2.706157e-01  PVQ²=+3.422737e-01  Sigma=-1.178214e+01
+    +E REAL PVP=3.889193e-01  PVQ²=1.848421e+01  gap=1.843620e-01  Sigma=7.261818e+00
+       NULL PVP=7.486563e-01  PVQ²=1.725574e+01  gap=1.843620e-01  Sigma=2.967326e+01
+       Δ(R-N) PVP=-3.597369e-01  PVQ²=+1.228466e+00  Sigma=-2.241144e+01
+    ±E asymmetry: |ΔSigma| REAL=3.641532e-14, NULL=1.062930e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=8.861920e-01
+
+PAIR 2: groups 8 / 23; E=-1.518032401 / +1.518032401; selection prominence=+0.246722894
+  dephasing:
+    -E REAL PVP=4.697706e-01  PVQ²=1.567531e+01  gap=1.168750e-01  Sigma=5.564901e+00
+       NULL PVP=7.173470e-01  PVQ²=1.472438e+01  gap=1.168750e-01  Sigma=1.722618e+01
+       Δ(R-N) PVP=-2.475764e-01  PVQ²=+9.509311e-01  Sigma=-1.166128e+01
+    +E REAL PVP=4.697706e-01  PVQ²=1.567531e+01  gap=1.168750e-01  Sigma=5.564901e+00
+       NULL PVP=6.232564e-01  PVQ²=1.492802e+01  gap=1.168750e-01  Sigma=4.097692e+01
+       Δ(R-N) PVP=-1.534858e-01  PVQ²=+7.472905e-01  Sigma=-3.541202e+01
+    ±E asymmetry: |ΔSigma| REAL=2.042810e-14, NULL=2.375075e+01; |ΔPVQ²| REAL=2.131628e-14, NULL=2.036406e-01
+  transverse:
+    -E REAL PVP=2.990486e-01  PVQ²=1.854604e+01  gap=1.168750e-01  Sigma=2.922446e+00
+       NULL PVP=7.013805e-01  PVQ²=1.787351e+01  gap=1.168750e-01  Sigma=2.315152e+01
+       Δ(R-N) PVP=-4.023320e-01  PVQ²=+6.725252e-01  Sigma=-2.022907e+01
+    +E REAL PVP=2.990486e-01  PVQ²=1.854604e+01  gap=1.168750e-01  Sigma=2.922446e+00
+       NULL PVP=6.430827e-01  PVQ²=1.747666e+01  gap=1.168750e-01  Sigma=5.768770e+01
+       Δ(R-N) PVP=-3.440342e-01  PVQ²=+1.069371e+00  Sigma=-5.476526e+01
+    ±E asymmetry: |ΔSigma| REAL=5.773160e-15, NULL=3.453618e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=3.968459e-01
+
+PAIR 3: groups 6 / 25; E=-2.126134144 / +2.126134144; selection prominence=+0.223302868
+  dephasing:
+    -E REAL PVP=3.842515e-01  PVQ²=1.574834e+01  gap=9.388046e-02  Sigma=2.214405e+00
+       NULL PVP=6.702351e-01  PVQ²=1.522888e+01  gap=9.388046e-02  Sigma=2.447790e+01
+       Δ(R-N) PVP=-2.859835e-01  PVQ²=+5.194575e-01  Sigma=-2.226349e+01
+    +E REAL PVP=3.842515e-01  PVQ²=1.574834e+01  gap=9.388046e-02  Sigma=2.214405e+00
+       NULL PVP=7.190671e-01  PVQ²=1.567549e+01  gap=9.388046e-02  Sigma=9.339631e+00
+       Δ(R-N) PVP=-3.348156e-01  PVQ²=+7.285257e-02  Sigma=-7.125226e+00
+    ±E asymmetry: |ΔSigma| REAL=2.220446e-15, NULL=1.513827e+01; |ΔPVQ²| REAL=0.000000e+00, NULL=4.466049e-01
+  transverse:
+    -E REAL PVP=5.249927e-01  PVQ²=1.835985e+01  gap=9.388046e-02  Sigma=2.949406e+00
+       NULL PVP=7.435642e-01  PVQ²=1.801927e+01  gap=9.388046e-02  Sigma=3.199885e+01
+       Δ(R-N) PVP=-2.185714e-01  PVQ²=+3.405776e-01  Sigma=-2.904945e+01
+    +E REAL PVP=5.249927e-01  PVQ²=1.835985e+01  gap=9.388046e-02  Sigma=2.949406e+00
+       NULL PVP=6.631206e-01  PVQ²=1.816348e+01  gap=9.388046e-02  Sigma=1.755944e+01
+       Δ(R-N) PVP=-1.381278e-01  PVQ²=+1.963663e-01  Sigma=-1.461004e+01
+    ±E asymmetry: |ΔSigma| REAL=1.776357e-15, NULL=1.443941e+01; |ΔPVQ²| REAL=2.131628e-14, NULL=1.442112e-01
+
+PAIR 4: groups 15 / 16; E=-0.072393223 / +0.072393223; selection prominence=+0.208221824
+  dephasing:
+    -E REAL PVP=5.296725e-01  PVQ²=1.561544e+01  gap=6.958804e-02  Sigma=3.121694e+00
+       NULL PVP=6.956827e-01  PVQ²=1.554240e+01  gap=6.958804e-02  Sigma=3.254176e+01
+       Δ(R-N) PVP=-1.660102e-01  PVQ²=+7.303784e-02  Sigma=-2.942007e+01
+    +E REAL PVP=5.296725e-01  PVQ²=1.561544e+01  gap=6.958804e-02  Sigma=3.121694e+00
+       NULL PVP=7.787872e-01  PVQ²=1.528417e+01  gap=6.958804e-02  Sigma=2.731421e+01
+       Δ(R-N) PVP=-2.491147e-01  PVQ²=+3.312649e-01  Sigma=-2.419252e+01
+    ±E asymmetry: |ΔSigma| REAL=7.993606e-15, NULL=5.227552e+00; |ΔPVQ²| REAL=3.019807e-14, NULL=2.582270e-01
+  transverse:
+    -E REAL PVP=3.600112e-01  PVQ²=1.850586e+01  gap=6.958804e-02  Sigma=4.147739e+00
+       NULL PVP=6.363322e-01  PVQ²=1.814714e+01  gap=6.958804e-02  Sigma=3.182389e+01
+       Δ(R-N) PVP=-2.763210e-01  PVQ²=+3.587193e-01  Sigma=-2.767615e+01
+    +E REAL PVP=3.600112e-01  PVQ²=1.850586e+01  gap=6.958804e-02  Sigma=4.147739e+00
+       NULL PVP=7.320718e-01  PVQ²=1.773550e+01  gap=6.958804e-02  Sigma=3.926098e+01
+       Δ(R-N) PVP=-3.720607e-01  PVQ²=+7.703550e-01  Sigma=-3.511324e+01
+    ±E asymmetry: |ΔSigma| REAL=3.286260e-14, NULL=7.437086e+00; |ΔPVQ²| REAL=3.197442e-14, NULL=4.116357e-01
+
+PAIR 5: groups 5 / 26; E=-2.260287320 / +2.260287320; selection prominence=+0.069640019
+  dephasing:
+    -E REAL PVP=1.555992e-01  PVQ²=1.587178e+01  gap=9.115118e-02  Sigma=1.300933e+00
+       NULL PVP=6.750881e-01  PVQ²=1.601482e+01  gap=9.115118e-02  Sigma=2.255087e+01
+       Δ(R-N) PVP=-5.194890e-01  PVQ²=-1.430454e-01  Sigma=-2.124994e+01
+    +E REAL PVP=1.555992e-01  PVQ²=1.587178e+01  gap=9.115118e-02  Sigma=1.300933e+00
+       NULL PVP=8.403656e-01  PVQ²=1.518027e+01  gap=9.115118e-02  Sigma=3.255001e+01
+       Δ(R-N) PVP=-6.847664e-01  PVQ²=+6.915144e-01  Sigma=-3.124907e+01
+    ±E asymmetry: |ΔSigma| REAL=6.661338e-16, NULL=9.999133e+00; |ΔPVQ²| REAL=7.105427e-15, NULL=8.345598e-01
+  transverse:
+    -E REAL PVP=5.434070e-01  PVQ²=1.834017e+01  gap=9.115118e-02  Sigma=3.113526e+00
+       NULL PVP=6.358635e-01  PVQ²=1.812872e+01  gap=9.115118e-02  Sigma=3.688187e+01
+       Δ(R-N) PVP=-9.245648e-02  PVQ²=+2.114573e-01  Sigma=-3.376835e+01
+    +E REAL PVP=5.434070e-01  PVQ²=1.834017e+01  gap=9.115118e-02  Sigma=3.113526e+00
+       NULL PVP=8.477875e-01  PVQ²=1.785264e+01  gap=9.115118e-02  Sigma=1.179993e+01
+       Δ(R-N) PVP=-3.043805e-01  PVQ²=+4.875317e-01  Sigma=-8.686409e+00
+    ±E asymmetry: |ΔSigma| REAL=6.217249e-15, NULL=2.508194e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=2.760744e-01
+
+SEED 25042008
+  eigenspaces=64; size=4:4
+  exact ±E pairs=32
+  selected diagnostic pairs=5
+
+PAIR 1: groups 9 / 54; E=-2.430499464 / +2.430499464; selection prominence=+0.518936595
+  dephasing:
+    -E REAL PVP=2.223313e-01  PVQ²=8.987435e+00  gap=1.030185e-02  Sigma=9.122467e+00
+       NULL PVP=3.660658e-01  PVQ²=9.126232e+00  gap=1.030185e-02  Sigma=3.054730e+01
+       Δ(R-N) PVP=-1.437345e-01  PVQ²=-1.387970e-01  Sigma=-2.142483e+01
+    +E REAL PVP=2.223313e-01  PVQ²=8.987435e+00  gap=1.030185e-02  Sigma=9.122467e+00
+       NULL PVP=3.303197e-01  PVQ²=8.540311e+00  gap=1.030185e-02  Sigma=1.953637e+01
+       Δ(R-N) PVP=-1.079884e-01  PVQ²=+4.471244e-01  Sigma=-1.041390e+01
+    ±E asymmetry: |ΔSigma| REAL=2.682299e-13, NULL=1.101093e+01; |ΔPVQ²| REAL=2.842171e-14, NULL=5.859214e-01
+  transverse:
+    -E REAL PVP=1.988466e-15  PVQ²=2.401550e+00  gap=1.030185e-02  Sigma=5.857778e-01
+       NULL PVP=1.681610e-01  PVQ²=2.307292e+00  gap=1.030185e-02  Sigma=4.849484e+00
+       Δ(R-N) PVP=-1.681610e-01  PVQ²=+9.425847e-02  Sigma=-4.263706e+00
+    +E REAL PVP=1.592632e-15  PVQ²=2.401550e+00  gap=1.030185e-02  Sigma=5.857778e-01
+       NULL PVP=1.706902e-01  PVQ²=2.395790e+00  gap=1.030185e-02  Sigma=3.264125e+00
+       Δ(R-N) PVP=-1.706902e-01  PVQ²=+5.759724e-03  Sigma=-2.678347e+00
+    ±E asymmetry: |ΔSigma| REAL=2.442491e-15, NULL=1.585359e+00; |ΔPVQ²| REAL=1.332268e-15, NULL=8.849874e-02
+
+PAIR 2: groups 17 / 46; E=-1.479821699 / +1.479821699; selection prominence=+0.485157191
+  dephasing:
+    -E REAL PVP=7.633396e-02  PVQ²=9.031040e+00  gap=3.909947e-02  Sigma=3.842169e+00
+       NULL PVP=4.063543e-01  PVQ²=8.620652e+00  gap=3.909947e-02  Sigma=1.223723e+01
+       Δ(R-N) PVP=-3.300203e-01  PVQ²=+4.103872e-01  Sigma=-8.395061e+00
+    +E REAL PVP=7.633396e-02  PVQ²=9.031040e+00  gap=3.909947e-02  Sigma=3.842169e+00
+       NULL PVP=3.701286e-01  PVQ²=9.097700e+00  gap=3.909947e-02  Sigma=1.738702e+01
+       Δ(R-N) PVP=-2.937947e-01  PVQ²=-6.666020e-02  Sigma=-1.354485e+01
+    ±E asymmetry: |ΔSigma| REAL=4.440892e-16, NULL=5.149791e+00; |ΔPVQ²| REAL=0.000000e+00, NULL=4.770474e-01
+  transverse:
+    -E REAL PVP=2.466681e-15  PVQ²=2.401550e+00  gap=3.909947e-02  Sigma=9.383861e-01
+       NULL PVP=1.649024e-01  PVQ²=2.287228e+00  gap=3.909947e-02  Sigma=2.519427e+00
+       Δ(R-N) PVP=-1.649024e-01  PVQ²=+1.143220e-01  Sigma=-1.581041e+00
+    +E REAL PVP=2.020534e-15  PVQ²=2.401550e+00  gap=3.909947e-02  Sigma=9.383861e-01
+       NULL PVP=1.716075e-01  PVQ²=2.251360e+00  gap=3.909947e-02  Sigma=7.715150e-01
+       Δ(R-N) PVP=-1.716075e-01  PVQ²=+1.501900e-01  Sigma=+1.668712e-01
+    ±E asymmetry: |ΔSigma| REAL=1.032507e-14, NULL=1.747912e+00; |ΔPVQ²| REAL=8.881784e-16, NULL=3.586798e-02
+
+PAIR 3: groups 29 / 34; E=-0.513901562 / +0.513901562; selection prominence=+0.357014842
+  dephasing:
+    -E REAL PVP=3.019875e-02  PVQ²=9.035955e+00  gap=1.166866e-02  Sigma=5.363406e+00
+       NULL PVP=3.542980e-01  PVQ²=8.928109e+00  gap=1.166866e-02  Sigma=8.968490e+00
+       Δ(R-N) PVP=-3.240992e-01  PVQ²=+1.078459e-01  Sigma=-3.605084e+00
+    +E REAL PVP=3.019875e-02  PVQ²=9.035955e+00  gap=1.166866e-02  Sigma=5.363406e+00
+       NULL PVP=3.295660e-01  PVQ²=8.533157e+00  gap=1.166866e-02  Sigma=1.730123e+01
+       Δ(R-N) PVP=-2.993672e-01  PVQ²=+5.027978e-01  Sigma=-1.193783e+01
+    ±E asymmetry: |ΔSigma| REAL=2.930989e-14, NULL=8.332742e+00; |ΔPVQ²| REAL=7.638334e-14, NULL=3.949519e-01
+  transverse:
+    -E REAL PVP=6.678403e-14  PVQ²=2.401550e+00  gap=1.166866e-02  Sigma=9.592807e+00
+       NULL PVP=2.145259e-01  PVQ²=2.369381e+00  gap=1.166866e-02  Sigma=6.140772e+00
+       Δ(R-N) PVP=-2.145259e-01  PVQ²=+3.216947e-02  Sigma=+3.452035e+00
+    +E REAL PVP=4.573826e-14  PVQ²=2.401550e+00  gap=1.166866e-02  Sigma=9.592807e+00
+       NULL PVP=2.080538e-01  PVQ²=2.296296e+00  gap=1.166866e-02  Sigma=4.134467e+00
+       Δ(R-N) PVP=-2.080538e-01  PVQ²=+1.052537e-01  Sigma=+5.458340e+00
+    ±E asymmetry: |ΔSigma| REAL=3.570477e-13, NULL=2.006305e+00; |ΔPVQ²| REAL=1.776357e-15, NULL=7.308426e-02
+
+PAIR 4: groups 3 / 60; E=-3.411702675 / +3.411702675; selection prominence=+0.346375498
+  dephasing:
+    -E REAL PVP=1.282927e-01  PVQ²=9.020407e+00  gap=7.814604e-03  Sigma=1.472284e+01
+       NULL PVP=3.664052e-01  PVQ²=8.903701e+00  gap=7.814604e-03  Sigma=2.413534e+01
+       Δ(R-N) PVP=-2.381125e-01  PVQ²=+1.167069e-01  Sigma=-9.412498e+00
+    +E REAL PVP=1.282927e-01  PVQ²=9.020407e+00  gap=7.814604e-03  Sigma=1.472284e+01
+       NULL PVP=3.791316e-01  PVQ²=8.758175e+00  gap=7.814604e-03  Sigma=1.623856e+01
+       Δ(R-N) PVP=-2.508389e-01  PVQ²=+2.622323e-01  Sigma=-1.515719e+00
+    ±E asymmetry: |ΔSigma| REAL=8.881784e-14, NULL=7.896779e+00; |ΔPVQ²| REAL=2.842171e-14, NULL=1.455254e-01
+  transverse:
+    -E REAL PVP=5.873987e-15  PVQ²=2.401550e+00  gap=7.814604e-03  Sigma=1.412190e+00
+       NULL PVP=2.533025e-01  PVQ²=2.317465e+00  gap=7.814604e-03  Sigma=2.908033e+00
+       Δ(R-N) PVP=-2.533025e-01  PVQ²=+8.408550e-02  Sigma=-1.495843e+00
+    +E REAL PVP=5.004511e-15  PVQ²=2.401550e+00  gap=7.814604e-03  Sigma=1.412190e+00
+       NULL PVP=1.867309e-01  PVQ²=2.424453e+00  gap=7.814604e-03  Sigma=6.797400e+00
+       Δ(R-N) PVP=-1.867309e-01  PVQ²=-2.290250e-02  Sigma=-5.385211e+00
+    ±E asymmetry: |ΔSigma| REAL=2.509104e-14, NULL=3.889367e+00; |ΔPVQ²| REAL=2.664535e-15, NULL=1.069880e-01
+
+PAIR 5: groups 6 / 57; E=-3.311589746 / +3.311589746; selection prominence=+0.303353347
+  dephasing:
+    -E REAL PVP=9.009375e-02  PVQ²=9.028750e+00  gap=9.866551e-03  Sigma=3.460061e+01
+       NULL PVP=3.091398e-01  PVQ²=8.736011e+00  gap=9.866551e-03  Sigma=2.776996e+01
+       Δ(R-N) PVP=-2.190461e-01  PVQ²=+2.927383e-01  Sigma=+6.830650e+00
+    +E REAL PVP=9.009375e-02  PVQ²=9.028750e+00  gap=9.866551e-03  Sigma=3.460061e+01
+       NULL PVP=3.117157e-01  PVQ²=9.444144e+00  gap=9.866551e-03  Sigma=2.732012e+01
+       Δ(R-N) PVP=-2.216220e-01  PVQ²=-4.153940e-01  Sigma=+7.280492e+00
+    ±E asymmetry: |ΔSigma| REAL=4.405365e-13, NULL=4.498419e-01; |ΔPVQ²| REAL=1.065814e-14, NULL=7.081324e-01
+  transverse:
+    -E REAL PVP=5.524160e-15  PVQ²=2.401550e+00  gap=9.866551e-03  Sigma=1.272821e+00
+       NULL PVP=2.408810e-01  PVQ²=2.497851e+00  gap=9.866551e-03  Sigma=4.799816e+00
+       Δ(R-N) PVP=-2.408810e-01  PVQ²=-9.630044e-02  Sigma=-3.526994e+00
+    +E REAL PVP=5.072494e-15  PVQ²=2.401550e+00  gap=9.866551e-03  Sigma=1.272821e+00
+       NULL PVP=1.438649e-01  PVQ²=2.381575e+00  gap=9.866551e-03  Sigma=4.044775e+00
+       Δ(R-N) PVP=-1.438649e-01  PVQ²=+1.997474e-02  Sigma=-2.771954e+00
+    ±E asymmetry: |ΔSigma| REAL=3.330669e-14, NULL=7.550409e-01; |ΔPVQ²| REAL=4.440892e-16, NULL=1.162752e-01
+
+SEED 25042009
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 13 / 18; E=-0.676365892 / +0.676365892; selection prominence=+0.497550798
+  dephasing:
+    -E REAL PVP=6.425185e-01  PVQ²=1.537242e+01  gap=5.984328e-03  Sigma=4.003772e+00
+       NULL PVP=8.259247e-01  PVQ²=1.490283e+01  gap=5.984328e-03  Sigma=6.143171e+01
+       Δ(R-N) PVP=-1.834063e-01  PVQ²=+4.695884e-01  Sigma=-5.742794e+01
+    +E REAL PVP=6.425185e-01  PVQ²=1.537242e+01  gap=5.984328e-03  Sigma=4.003772e+00
+       NULL PVP=7.656553e-01  PVQ²=1.568511e+01  gap=5.984328e-03  Sigma=7.307046e+01
+       Δ(R-N) PVP=-1.231369e-01  PVQ²=-3.126942e-01  Sigma=-6.906668e+01
+    ±E asymmetry: |ΔSigma| REAL=2.620126e-13, NULL=1.163874e+01; |ΔPVQ²| REAL=8.704149e-14, NULL=7.822826e-01
+  transverse:
+    -E REAL PVP=8.537837e-02  PVQ²=5.216048e+00  gap=5.984328e-03  Sigma=2.784562e+01
+       NULL PVP=4.061562e-01  PVQ²=5.113021e+00  gap=5.984328e-03  Sigma=1.637268e+01
+       Δ(R-N) PVP=-3.207779e-01  PVQ²=+1.030272e-01  Sigma=+1.147294e+01
+    +E REAL PVP=8.537837e-02  PVQ²=5.216048e+00  gap=5.984328e-03  Sigma=2.784562e+01
+       NULL PVP=3.598350e-01  PVQ²=4.871757e+00  gap=5.984328e-03  Sigma=2.429366e+01
+       Δ(R-N) PVP=-2.744566e-01  PVQ²=+3.442914e-01  Sigma=+3.551954e+00
+    ±E asymmetry: |ΔSigma| REAL=7.567280e-13, NULL=7.920987e+00; |ΔPVQ²| REAL=4.440892e-15, NULL=2.412642e-01
+
+PAIR 2: groups 12 / 19; E=-0.687951777 / +0.687951777; selection prominence=+0.250845545
+  dephasing:
+    -E REAL PVP=7.189877e-01  PVQ²=1.491046e+01  gap=1.158588e-02  Sigma=2.487231e+00
+       NULL PVP=6.935225e-01  PVQ²=1.541557e+01  gap=1.158588e-02  Sigma=9.031518e+01
+       Δ(R-N) PVP=+2.546526e-02  PVQ²=-5.051162e-01  Sigma=-8.782795e+01
+    +E REAL PVP=7.189877e-01  PVQ²=1.491046e+01  gap=1.158588e-02  Sigma=2.487231e+00
+       NULL PVP=6.779139e-01  PVQ²=1.455853e+01  gap=1.158588e-02  Sigma=8.070448e+01
+       Δ(R-N) PVP=+4.107384e-02  PVQ²=+3.519323e-01  Sigma=-7.821724e+01
+    ±E asymmetry: |ΔSigma| REAL=2.975398e-14, NULL=9.610709e+00; |ΔPVQ²| REAL=3.197442e-14, NULL=8.570485e-01
+  transverse:
+    -E REAL PVP=4.476076e-02  PVQ²=5.221334e+00  gap=1.158588e-02  Sigma=6.400025e+00
+       NULL PVP=4.241918e-01  PVQ²=5.055137e+00  gap=1.158588e-02  Sigma=2.763333e+01
+       Δ(R-N) PVP=-3.794310e-01  PVQ²=+1.661970e-01  Sigma=-2.123330e+01
+    +E REAL PVP=4.476076e-02  PVQ²=5.221334e+00  gap=1.158588e-02  Sigma=6.400025e+00
+       NULL PVP=3.810052e-01  PVQ²=4.997710e+00  gap=1.158588e-02  Sigma=2.714382e+01
+       Δ(R-N) PVP=-3.362444e-01  PVQ²=+2.236238e-01  Sigma=-2.074379e+01
+    ±E asymmetry: |ΔSigma| REAL=6.927792e-14, NULL=4.895119e-01; |ΔPVQ²| REAL=2.664535e-15, NULL=5.742680e-02
+
+PAIR 3: groups 10 / 21; E=-1.010730590 / +1.010730590; selection prominence=+0.241952208
+  dephasing:
+    -E REAL PVP=8.691283e-01  PVQ²=1.514465e+01  gap=1.008496e-02  Sigma=3.719892e+00
+       NULL PVP=7.972613e-01  PVQ²=1.635613e+01  gap=1.008496e-02  Sigma=6.537932e+01
+       Δ(R-N) PVP=+7.186696e-02  PVQ²=-1.211473e+00  Sigma=-6.165943e+01
+    +E REAL PVP=8.691283e-01  PVQ²=1.514465e+01  gap=1.008496e-02  Sigma=3.719892e+00
+       NULL PVP=7.151720e-01  PVQ²=1.520074e+01  gap=1.008496e-02  Sigma=6.410882e+01
+       Δ(R-N) PVP=+1.539563e-01  PVQ²=-5.608373e-02  Sigma=-6.038893e+01
+    ±E asymmetry: |ΔSigma| REAL=2.153833e-13, NULL=1.270502e+00; |ΔPVQ²| REAL=1.065814e-14, NULL=1.155390e+00
+  transverse:
+    -E REAL PVP=8.371008e-02  PVQ²=5.216330e+00  gap=1.008496e-02  Sigma=2.194590e+01
+       NULL PVP=4.224892e-01  PVQ²=5.057189e+00  gap=1.008496e-02  Sigma=2.820139e+01
+       Δ(R-N) PVP=-3.387792e-01  PVQ²=+1.591418e-01  Sigma=-6.255481e+00
+    +E REAL PVP=8.371008e-02  PVQ²=5.216330e+00  gap=1.008496e-02  Sigma=2.194590e+01
+       NULL PVP=3.746732e-01  PVQ²=5.178187e+00  gap=1.008496e-02  Sigma=2.781954e+01
+       Δ(R-N) PVP=-2.909631e-01  PVQ²=+3.814345e-02  Sigma=-5.873635e+00
+    ±E asymmetry: |ΔSigma| REAL=7.922552e-13, NULL=3.818463e-01; |ΔPVQ²| REAL=2.664535e-15, NULL=1.209983e-01
+
+PAIR 4: groups 0 / 31; E=-1.984451690 / +1.984451690; selection prominence=+0.220531424
+  dephasing:
+    -E REAL PVP=1.614198e+00  PVQ²=1.310328e+01  gap=6.695628e-03  Sigma=3.802680e+00
+       NULL PVP=7.106140e-01  PVQ²=1.551917e+01  gap=6.695628e-03  Sigma=9.778619e+01
+       Δ(R-N) PVP=+9.035836e-01  PVQ²=-2.415886e+00  Sigma=-9.398351e+01
+    +E REAL PVP=1.614198e+00  PVQ²=1.310328e+01  gap=6.695628e-03  Sigma=3.802680e+00
+       NULL PVP=6.027731e-01  PVQ²=1.590089e+01  gap=6.695628e-03  Sigma=9.420347e+01
+       Δ(R-N) PVP=+1.011425e+00  PVQ²=-2.797603e+00  Sigma=-9.040080e+01
+    ±E asymmetry: |ΔSigma| REAL=2.033929e-13, NULL=3.582717e+00; |ΔPVQ²| REAL=1.243450e-14, NULL=3.817170e-01
+  transverse:
+    -E REAL PVP=1.171845e-02  PVQ²=5.223200e+00  gap=6.695628e-03  Sigma=2.962080e+00
+       NULL PVP=4.029330e-01  PVQ²=5.123300e+00  gap=6.695628e-03  Sigma=2.949461e+01
+       Δ(R-N) PVP=-3.912146e-01  PVQ²=+9.990073e-02  Sigma=-2.653253e+01
+    +E REAL PVP=1.171845e-02  PVQ²=5.223200e+00  gap=6.695628e-03  Sigma=2.962080e+00
+       NULL PVP=3.708161e-01  PVQ²=5.125393e+00  gap=6.695628e-03  Sigma=3.501485e+01
+       Δ(R-N) PVP=-3.590977e-01  PVQ²=+9.780784e-02  Sigma=-3.205277e+01
+    ±E asymmetry: |ΔSigma| REAL=1.554312e-14, NULL=5.520245e+00; |ΔPVQ²| REAL=3.552714e-15, NULL=2.092894e-03
+
+PAIR 5: groups 1 / 30; E=-1.977756062 / +1.977756062; selection prominence=+0.193904838
+  dephasing:
+    -E REAL PVP=1.628737e+00  PVQ²=1.297102e+01  gap=6.695628e-03  Sigma=3.821094e+00
+       NULL PVP=6.397499e-01  PVQ²=1.525121e+01  gap=6.695628e-03  Sigma=6.759504e+01
+       Δ(R-N) PVP=+9.889868e-01  PVQ²=-2.280191e+00  Sigma=-6.377395e+01
+    +E REAL PVP=1.628737e+00  PVQ²=1.297102e+01  gap=6.695628e-03  Sigma=3.821094e+00
+       NULL PVP=6.956851e-01  PVQ²=1.487942e+01  gap=6.695628e-03  Sigma=4.691958e+01
+       Δ(R-N) PVP=+9.330517e-01  PVQ²=-1.908396e+00  Sigma=-4.309849e+01
+    ±E asymmetry: |ΔSigma| REAL=2.646772e-13, NULL=2.067546e+01; |ΔPVQ²| REAL=5.329071e-15, NULL=3.717942e-01
+  transverse:
+    -E REAL PVP=8.843931e-03  PVQ²=5.223260e+00  gap=6.695628e-03  Sigma=3.470934e+00
+       NULL PVP=3.953938e-01  PVQ²=5.065228e+00  gap=6.695628e-03  Sigma=3.042524e+01
+       Δ(R-N) PVP=-3.865498e-01  PVQ²=+1.580311e-01  Sigma=-2.695431e+01
+    +E REAL PVP=8.843931e-03  PVQ²=5.223260e+00  gap=6.695628e-03  Sigma=3.470934e+00
+       NULL PVP=3.842933e-01  PVQ²=4.949193e+00  gap=6.695628e-03  Sigma=1.739495e+01
+       Δ(R-N) PVP=-3.754494e-01  PVQ²=+2.740662e-01  Sigma=-1.392401e+01
+    ±E asymmetry: |ΔSigma| REAL=3.197442e-14, NULL=1.303029e+01; |ΔPVQ²| REAL=2.664535e-15, NULL=1.160352e-01
+
+SEED 25042010
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 0 / 31; E=-3.236826374 / +3.236826374; selection prominence=+0.397637724
+  dephasing:
+    -E REAL PVP=6.200321e-01  PVQ²=1.844286e+01  gap=6.580198e-03  Sigma=4.593193e+01
+       NULL PVP=7.352468e-01  PVQ²=1.811885e+01  gap=6.580198e-03  Sigma=7.089309e+01
+       Δ(R-N) PVP=-1.152148e-01  PVQ²=+3.240149e-01  Sigma=-2.496116e+01
+    +E REAL PVP=6.200321e-01  PVQ²=1.844286e+01  gap=6.580198e-03  Sigma=4.593193e+01
+       NULL PVP=8.741338e-01  PVQ²=1.831279e+01  gap=6.580198e-03  Sigma=7.838149e+01
+       Δ(R-N) PVP=-2.541018e-01  PVQ²=+1.300732e-01  Sigma=-3.244955e+01
+    ±E asymmetry: |ΔSigma| REAL=7.560175e-12, NULL=7.488391e+00; |ΔPVQ²| REAL=3.339551e-13, NULL=1.939416e-01
+  transverse:
+    -E REAL PVP=2.364353e-01  PVQ²=1.172889e+01  gap=6.580198e-03  Sigma=3.959455e+00
+       NULL PVP=6.253636e-01  PVQ²=1.118716e+01  gap=6.580198e-03  Sigma=6.028176e+01
+       Δ(R-N) PVP=-3.889283e-01  PVQ²=+5.417287e-01  Sigma=-5.632231e+01
+    +E REAL PVP=2.364353e-01  PVQ²=1.172889e+01  gap=6.580198e-03  Sigma=3.959455e+00
+       NULL PVP=5.124145e-01  PVQ²=1.160510e+01  gap=6.580198e-03  Sigma=6.602405e+01
+       Δ(R-N) PVP=-2.759792e-01  PVQ²=+1.237946e-01  Sigma=-6.206460e+01
+    ±E asymmetry: |ΔSigma| REAL=4.916068e-13, NULL=5.742292e+00; |ΔPVQ²| REAL=1.048051e-13, NULL=4.179341e-01
+
+PAIR 2: groups 2 / 29; E=-3.031249289 / +3.031249289; selection prominence=+0.322555237
+  dephasing:
+    -E REAL PVP=2.335195e-01  PVQ²=1.877277e+01  gap=1.307852e-02  Sigma=2.334905e+01
+       NULL PVP=6.761108e-01  PVQ²=1.777852e+01  gap=1.307852e-02  Sigma=7.213313e+01
+       Δ(R-N) PVP=-4.425913e-01  PVQ²=+9.942547e-01  Sigma=-4.878408e+01
+    +E REAL PVP=2.335195e-01  PVQ²=1.877277e+01  gap=1.307852e-02  Sigma=2.334905e+01
+       NULL PVP=6.580125e-01  PVQ²=1.858083e+01  gap=1.307852e-02  Sigma=5.679990e+01
+       Δ(R-N) PVP=-4.244930e-01  PVQ²=+1.919453e-01  Sigma=-3.345085e+01
+    ±E asymmetry: |ΔSigma| REAL=5.115908e-13, NULL=1.533324e+01; |ΔPVQ²| REAL=2.522427e-13, NULL=8.023094e-01
+  transverse:
+    -E REAL PVP=2.381798e-01  PVQ²=1.172806e+01  gap=1.307852e-02  Sigma=2.844209e+00
+       NULL PVP=5.738064e-01  PVQ²=1.156743e+01  gap=1.307852e-02  Sigma=3.465986e+01
+       Δ(R-N) PVP=-3.356266e-01  PVQ²=+1.606348e-01  Sigma=-3.181565e+01
+    +E REAL PVP=2.381798e-01  PVQ²=1.172806e+01  gap=1.307852e-02  Sigma=2.844209e+00
+       NULL PVP=6.186975e-01  PVQ²=1.128792e+01  gap=1.307852e-02  Sigma=3.717171e+01
+       Δ(R-N) PVP=-3.805178e-01  PVQ²=+4.401457e-01  Sigma=-3.432750e+01
+    ±E asymmetry: |ΔSigma| REAL=1.154632e-14, NULL=2.511844e+00; |ΔPVQ²| REAL=2.007283e-13, NULL=2.795109e-01
+
+PAIR 3: groups 4 / 27; E=-2.523454274 / +2.523454274; selection prominence=+0.301002234
+  dephasing:
+    -E REAL PVP=4.103510e-01  PVQ²=1.865892e+01  gap=1.908694e-02  Sigma=1.043308e+01
+       NULL PVP=7.669492e-01  PVQ²=1.864348e+01  gap=1.908694e-02  Sigma=6.796809e+01
+       Δ(R-N) PVP=-3.565981e-01  PVQ²=+1.543608e-02  Sigma=-5.753500e+01
+    +E REAL PVP=4.103510e-01  PVQ²=1.865892e+01  gap=1.908694e-02  Sigma=1.043308e+01
+       NULL PVP=7.932902e-01  PVQ²=1.921621e+01  gap=1.908694e-02  Sigma=8.069447e+01
+       Δ(R-N) PVP=-3.829391e-01  PVQ²=-5.572976e-01  Sigma=-7.026139e+01
+    ±E asymmetry: |ΔSigma| REAL=1.509903e-13, NULL=1.272639e+01; |ΔPVQ²| REAL=1.421085e-14, NULL=5.727337e-01
+  transverse:
+    -E REAL PVP=2.492461e-01  PVQ²=1.172267e+01  gap=1.908694e-02  Sigma=2.308785e+00
+       NULL PVP=6.526173e-01  PVQ²=1.096354e+01  gap=1.908694e-02  Sigma=4.064017e+01
+       Δ(R-N) PVP=-4.033712e-01  PVQ²=+7.591265e-01  Sigma=-3.833139e+01
+    +E REAL PVP=2.492461e-01  PVQ²=1.172267e+01  gap=1.908694e-02  Sigma=2.308785e+00
+       NULL PVP=6.053419e-01  PVQ²=1.153861e+01  gap=1.908694e-02  Sigma=4.630644e+01
+       Δ(R-N) PVP=-3.560957e-01  PVQ²=+1.840560e-01  Sigma=-4.399766e+01
+    ±E asymmetry: |ΔSigma| REAL=1.154632e-14, NULL=5.666267e+00; |ΔPVQ²| REAL=6.394885e-14, NULL=5.750705e-01
+
+PAIR 4: groups 12 / 19; E=-0.614200660 / +0.614200660; selection prominence=+0.241910496
+  dephasing:
+    -E REAL PVP=4.077267e-01  PVQ²=1.866106e+01  gap=2.097055e-02  Sigma=1.831847e+01
+       NULL PVP=6.766596e-01  PVQ²=1.861971e+01  gap=2.097055e-02  Sigma=2.933246e+01
+       Δ(R-N) PVP=-2.689329e-01  PVQ²=+4.135487e-02  Sigma=-1.101398e+01
+    +E REAL PVP=4.077267e-01  PVQ²=1.866106e+01  gap=2.097055e-02  Sigma=1.831847e+01
+       NULL PVP=7.877420e-01  PVQ²=1.831204e+01  gap=2.097055e-02  Sigma=5.602788e+01
+       Δ(R-N) PVP=-3.800153e-01  PVQ²=+3.490179e-01  Sigma=-3.770940e+01
+    ±E asymmetry: |ΔSigma| REAL=2.842171e-14, NULL=2.669542e+01; |ΔPVQ²| REAL=7.105427e-15, NULL=3.076630e-01
+  transverse:
+    -E REAL PVP=9.332255e-01  PVQ²=1.091388e+01  gap=2.097055e-02  Sigma=1.295058e+00
+       NULL PVP=5.980956e-01  PVQ²=1.149278e+01  gap=2.097055e-02  Sigma=2.916631e+01
+       Δ(R-N) PVP=+3.351299e-01  PVQ²=-5.788936e-01  Sigma=-2.787125e+01
+    +E REAL PVP=9.332255e-01  PVQ²=1.091388e+01  gap=2.097055e-02  Sigma=1.295058e+00
+       NULL PVP=5.867938e-01  PVQ²=1.136197e+01  gap=2.097055e-02  Sigma=4.420825e+01
+       Δ(R-N) PVP=+3.464317e-01  PVQ²=-4.480842e-01  Sigma=-4.291319e+01
+    ±E asymmetry: |ΔSigma| REAL=1.088019e-14, NULL=1.504194e+01; |ΔPVQ²| REAL=8.881784e-15, NULL=1.308094e-01
+
+PAIR 5: groups 14 / 17; E=-0.365614048 / +0.365614048; selection prominence=+0.195426216
+  dephasing:
+    -E REAL PVP=3.036544e-01  PVQ²=1.873510e+01  gap=1.187246e-02  Sigma=2.980990e+01
+       NULL PVP=7.365873e-01  PVQ²=1.813432e+01  gap=1.187246e-02  Sigma=4.596281e+01
+       Δ(R-N) PVP=-4.329329e-01  PVQ²=+6.007818e-01  Sigma=-1.615291e+01
+    +E REAL PVP=3.036544e-01  PVQ²=1.873510e+01  gap=1.187246e-02  Sigma=2.980990e+01
+       NULL PVP=6.722689e-01  PVQ²=1.897408e+01  gap=1.187246e-02  Sigma=7.013175e+01
+       Δ(R-N) PVP=-3.686145e-01  PVQ²=-2.389819e-01  Sigma=-4.032185e+01
+    ±E asymmetry: |ΔSigma| REAL=1.101341e-13, NULL=2.416894e+01; |ΔPVQ²| REAL=3.907985e-14, NULL=8.397637e-01
+  transverse:
+    -E REAL PVP=1.067924e+00  PVQ²=1.064433e+01  gap=1.187246e-02  Sigma=2.253583e+00
+       NULL PVP=5.662775e-01  PVQ²=1.126648e+01  gap=1.187246e-02  Sigma=5.027853e+01
+       Δ(R-N) PVP=+5.016466e-01  PVQ²=-6.221526e-01  Sigma=-4.802495e+01
+    +E REAL PVP=1.067924e+00  PVQ²=1.064433e+01  gap=1.187246e-02  Sigma=2.253583e+00
+       NULL PVP=5.690444e-01  PVQ²=1.177493e+01  gap=1.187246e-02  Sigma=4.794386e+01
+       Δ(R-N) PVP=+4.988797e-01  PVQ²=-1.130601e+00  Sigma=-4.569028e+01
+    ±E asymmetry: |ΔSigma| REAL=6.350476e-14, NULL=2.334667e+00; |ΔPVQ²| REAL=1.421085e-14, NULL=5.084482e-01
+
+SEED 25042011
+  eigenspaces=32; size=8:8
+  exact ±E pairs=16
+  selected diagnostic pairs=5
+
+PAIR 1: groups 0 / 31; E=-3.509334563 / +3.509334563; selection prominence=+0.409481225
+  dephasing:
+    -E REAL PVP=6.402490e-02  PVQ²=1.328629e+01  gap=1.994505e-03  Sigma=3.552808e+02
+       NULL PVP=6.397791e-01  PVQ²=1.257994e+01  gap=1.994505e-03  Sigma=8.539754e+01
+       Δ(R-N) PVP=-5.757542e-01  PVQ²=+7.063515e-01  Sigma=+2.698832e+02
+    +E REAL PVP=6.402490e-02  PVQ²=1.334899e+01  gap=1.994505e-03  Sigma=3.552765e+02
+       NULL PVP=6.776346e-01  PVQ²=1.267324e+01  gap=1.994505e-03  Sigma=7.644206e+01
+       Δ(R-N) PVP=-6.136097e-01  PVQ²=+6.757461e-01  Sigma=+2.788344e+02
+    ±E asymmetry: |ΔSigma| REAL=4.305195e-03, NULL=8.955484e+00; |ΔPVQ²| REAL=6.269877e-02, NULL=9.330417e-02
+  transverse:
+    -E REAL PVP=5.754291e-02  PVQ²=7.860638e+00  gap=1.994505e-03  Sigma=1.172797e+00
+       NULL PVP=4.250858e-01  PVQ²=7.662628e+00  gap=1.994505e-03  Sigma=5.273654e+01
+       Δ(R-N) PVP=-3.675429e-01  PVQ²=+1.980099e-01  Sigma=-5.156375e+01
+    +E REAL PVP=5.754291e-02  PVQ²=7.860638e+00  gap=1.994505e-03  Sigma=1.172797e+00
+       NULL PVP=5.101176e-01  PVQ²=7.438047e+00  gap=1.994505e-03  Sigma=4.040381e+01
+       Δ(R-N) PVP=-4.525747e-01  PVQ²=+4.225907e-01  Sigma=-3.923102e+01
+    ±E asymmetry: |ΔSigma| REAL=6.661338e-16, NULL=1.233273e+01; |ΔPVQ²| REAL=9.769963e-15, NULL=2.245808e-01
+
+PAIR 2: groups 1 / 30; E=-3.507340058 / +3.507340058; selection prominence=+0.343311753
+  dephasing:
+    -E REAL PVP=6.412838e-02  PVQ²=1.328914e+01  gap=1.994505e-03  Sigma=3.532745e+02
+       NULL PVP=6.630418e-01  PVQ²=1.304448e+01  gap=1.994505e-03  Sigma=8.028788e+01
+       Δ(R-N) PVP=-5.989134e-01  PVQ²=+2.446667e-01  Sigma=+2.729866e+02
+    +E REAL PVP=6.412838e-02  PVQ²=1.334611e+01  gap=1.994505e-03  Sigma=3.532713e+02
+       NULL PVP=7.434243e-01  PVQ²=1.255892e+01  gap=1.994505e-03  Sigma=6.764578e+01
+       Δ(R-N) PVP=-6.792960e-01  PVQ²=+7.871908e-01  Sigma=+2.856255e+02
+    ±E asymmetry: |ΔSigma| REAL=3.236579e-03, NULL=1.264209e+01; |ΔPVQ²| REAL=5.696417e-02, NULL=4.855599e-01
+  transverse:
+    -E REAL PVP=5.815023e-02  PVQ²=7.860568e+00  gap=1.994505e-03  Sigma=1.125202e+00
+       NULL PVP=4.850445e-01  PVQ²=7.655659e+00  gap=1.994505e-03  Sigma=5.187226e+01
+       Δ(R-N) PVP=-4.268943e-01  PVQ²=+2.049082e-01  Sigma=-5.074706e+01
+    +E REAL PVP=5.815023e-02  PVQ²=7.860568e+00  gap=1.994505e-03  Sigma=1.125202e+00
+       NULL PVP=5.398319e-01  PVQ²=7.953224e+00  gap=1.994505e-03  Sigma=3.509941e+01
+       Δ(R-N) PVP=-4.816817e-01  PVQ²=-9.265634e-02  Sigma=-3.397421e+01
+    ±E asymmetry: |ΔSigma| REAL=2.220446e-16, NULL=1.677285e+01; |ΔPVQ²| REAL=1.776357e-15, NULL=2.975645e-01
+
+PAIR 3: groups 8 / 23; E=-1.399971890 / +1.399971890; selection prominence=+0.312439862
+  dephasing:
+    -E REAL PVP=5.209322e-01  PVQ²=1.418682e+01  gap=4.069887e-02  Sigma=1.801115e+01
+       NULL PVP=7.233204e-01  PVQ²=1.328296e+01  gap=4.069887e-02  Sigma=3.287635e+01
+       Δ(R-N) PVP=-2.023882e-01  PVQ²=+9.038578e-01  Sigma=-1.486520e+01
+    +E REAL PVP=5.209322e-01  PVQ²=1.191392e+01  gap=4.069887e-02  Sigma=1.778071e+01
+       NULL PVP=5.900635e-01  PVQ²=1.305835e+01  gap=4.069887e-02  Sigma=6.326657e+01
+       Δ(R-N) PVP=-6.913130e-02  PVQ²=-1.144434e+00  Sigma=-4.548587e+01
+    ±E asymmetry: |ΔSigma| REAL=2.304423e-01, NULL=3.039022e+01; |ΔPVQ²| REAL=2.272895e+00, NULL=2.246033e-01
+  transverse:
+    -E REAL PVP=3.545447e-01  PVQ²=7.738247e+00  gap=4.069887e-02  Sigma=3.095421e+00
+       NULL PVP=5.473547e-01  PVQ²=7.713583e+00  gap=4.069887e-02  Sigma=2.104489e+01
+       Δ(R-N) PVP=-1.928100e-01  PVQ²=+2.466375e-02  Sigma=-1.794947e+01
+    +E REAL PVP=3.545447e-01  PVQ²=7.738247e+00  gap=4.069887e-02  Sigma=3.095421e+00
+       NULL PVP=5.206853e-01  PVQ²=7.989643e+00  gap=4.069887e-02  Sigma=2.051863e+01
+       Δ(R-N) PVP=-1.661405e-01  PVQ²=-2.513962e-01  Sigma=-1.742321e+01
+    ±E asymmetry: |ΔSigma| REAL=6.661338e-15, NULL=5.262616e-01; |ΔPVQ²| REAL=1.509903e-14, NULL=2.760599e-01
+
+PAIR 4: groups 6 / 25; E=-1.685246392 / +1.685246392; selection prominence=+0.300263701
+  dephasing:
+    -E REAL PVP=8.463875e-01  PVQ²=1.011616e+01  gap=3.813929e-02  Sigma=1.533732e+01
+       NULL PVP=6.675060e-01  PVQ²=1.237470e+01  gap=3.813929e-02  Sigma=2.648652e+01
+       Δ(R-N) PVP=+1.788815e-01  PVQ²=-2.258543e+00  Sigma=-1.114920e+01
+    +E REAL PVP=8.463875e-01  PVQ²=1.509457e+01  gap=3.813929e-02  Sigma=1.581943e+01
+       NULL PVP=6.749804e-01  PVQ²=1.262141e+01  gap=3.813929e-02  Sigma=4.612144e+01
+       Δ(R-N) PVP=+1.714071e-01  PVQ²=+2.473159e+00  Sigma=-3.030201e+01
+    ±E asymmetry: |ΔSigma| REAL=4.821099e-01, NULL=1.963491e+01; |ΔPVQ²| REAL=4.978413e+00, NULL=2.467114e-01
+  transverse:
+    -E REAL PVP=2.422060e-01  PVQ²=7.805285e+00  gap=3.813929e-02  Sigma=2.031964e+00
+       NULL PVP=4.334427e-01  PVQ²=7.490266e+00  gap=3.813929e-02  Sigma=2.111786e+01
+       Δ(R-N) PVP=-1.912367e-01  PVQ²=+3.150196e-01  Sigma=-1.908590e+01
+    +E REAL PVP=2.422060e-01  PVQ²=7.805285e+00  gap=3.813929e-02  Sigma=2.031964e+00
+       NULL PVP=5.051706e-01  PVQ²=7.880357e+00  gap=3.813929e-02  Sigma=2.027379e+01
+       Δ(R-N) PVP=-2.629645e-01  PVQ²=-7.507149e-02  Sigma=-1.824182e+01
+    ±E asymmetry: |ΔSigma| REAL=9.325873e-15, NULL=8.440737e-01; |ΔPVQ²| REAL=1.243450e-14, NULL=3.900911e-01
+
+PAIR 5: groups 7 / 24; E=-1.647107103 / +1.647107103; selection prominence=+0.268306795
+  dephasing:
+    -E REAL PVP=9.551916e-01  PVQ²=9.855100e+00  gap=3.813929e-02  Sigma=1.336375e+01
+       NULL PVP=7.017548e-01  PVQ²=1.340056e+01  gap=3.813929e-02  Sigma=1.863020e+01
+       Δ(R-N) PVP=+2.534368e-01  PVQ²=-3.545458e+00  Sigma=-5.266451e+00
+    +E REAL PVP=9.551916e-01  PVQ²=1.496359e+01  gap=3.813929e-02  Sigma=1.302603e+01
+       NULL PVP=6.985369e-01  PVQ²=1.260732e+01  gap=3.813929e-02  Sigma=2.572481e+01
+       Δ(R-N) PVP=+2.566547e-01  PVQ²=+2.356279e+00  Sigma=-1.269878e+01
+    ±E asymmetry: |ΔSigma| REAL=3.377190e-01, NULL=7.094605e+00; |ΔPVQ²| REAL=5.108495e+00, NULL=7.932414e-01
+  transverse:
+    -E REAL PVP=1.888775e-01  PVQ²=7.828274e+00  gap=3.813929e-02  Sigma=1.211348e+00
+       NULL PVP=4.676673e-01  PVQ²=7.654413e+00  gap=3.813929e-02  Sigma=1.762666e+01
+       Δ(R-N) PVP=-2.787898e-01  PVQ²=+1.738610e-01  Sigma=-1.641531e+01
+    +E REAL PVP=1.888775e-01  PVQ²=7.828274e+00  gap=3.813929e-02  Sigma=1.211348e+00
+       NULL PVP=4.950896e-01  PVQ²=7.499617e+00  gap=3.813929e-02  Sigma=1.641908e+01
+       Δ(R-N) PVP=-3.062121e-01  PVQ²=+3.286573e-01  Sigma=-1.520773e+01
+    ±E asymmetry: |ΔSigma| REAL=1.021405e-14, NULL=1.207576e+00; |ΔPVQ²| REAL=1.421085e-14, NULL=1.547962e-01
+
+=== COMPACT INTERPRETATION GUIDE ===
+Look first for three linked patterns:
+  1) REAL-NULL separation in PVQ² and/or Sigma at hotspot pairs.
+  2) smaller ±E asymmetry in REAL than NULL for the same quantity.
+  3) recurrence of that pattern across both perturbation families.
+
+A positive result here is mechanistic evidence, not yet a causal proof.
+The natural follow-up would be v32.1: controlled attenuation or
+scrambling of P<->Q coupling while holding the rest of the model fixed.

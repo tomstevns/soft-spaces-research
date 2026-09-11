@@ -1,0 +1,53 @@
+=== Soft Spaces Phase 3.2 v32.3 LOCAL HOTSPOT MECHANISM ===
+Pairs/family=32; total rows=64
+Statistical unit: one exact +/-E pair per perturbation family.
+Prominence is frozen from Phase 3.1; no new hotspot score is defined.
+
+FAMILY: dephasing
+  local_real_sigma         Pearson=+0.4017  Spearman=+0.3061
+  delta_sigma              Pearson=+0.2974  Spearman=+0.2969
+  local_real_gap           Pearson=+0.3319  Spearman=+0.2812
+  real_sigma               Pearson=+0.2520  Spearman=+0.2709
+  delta_sigma_over_gap     Pearson=+0.1876  Spearman=+0.2405
+  delta_pvq2_over_gap      Pearson=+0.1850  Spearman=+0.2269
+  real_gap                 Pearson=+0.2578  Spearman=+0.1993
+  real_pvq2_over_gap       Pearson=-0.0968  Spearman=-0.1957
+  real_sigma_over_gap      Pearson=+0.1768  Spearman=+0.1785
+  local_delta_pvq2         Pearson=-0.1678  Spearman=-0.1767
+  delta_pvq2               Pearson=-0.1146  Spearman=-0.1452
+  real_pvq2                Pearson=-0.1038  Spearman=-0.1217
+  delta_gap                Pearson=+0.2226  Spearman=+0.1162
+  local_delta_sigma        Pearson=+0.1678  Spearman=+0.1078
+  local_delta_gap          Pearson=+0.1035  Spearman=+0.0480
+  local_real_pvq2          Pearson=-0.1270  Spearman=-0.0293
+  Tertile medians:
+    TOP    prominence=+0.2906; real_sigma=2.9707e+00; real_pvq2=3.3924e+00; real_gap=4.3824e-03; delta_sigma=-9.4591e+00
+    MIDDLE prominence=+0.0157; real_sigma=2.4211e+00; real_pvq2=3.6151e+00; real_gap=3.5358e-03; delta_sigma=-1.0349e+01
+    BOTTOM prominence=-0.4184; real_sigma=1.6741e+00; real_pvq2=3.3640e+00; real_gap=3.0002e-03; delta_sigma=-1.2666e+01
+
+FAMILY: transverse
+  real_sigma_over_gap      Pearson=+0.2641  Spearman=+0.7287
+  real_sigma               Pearson=+0.4080  Spearman=+0.7181
+  delta_sigma              Pearson=+0.4650  Spearman=+0.5385
+  local_real_sigma         Pearson=+0.5139  Spearman=+0.5103
+  local_delta_sigma        Pearson=+0.5053  Spearman=+0.4018
+  delta_sigma_over_gap     Pearson=+0.1996  Spearman=+0.2925
+  local_real_gap           Pearson=+0.3319  Spearman=+0.2812
+  delta_pvq2_over_gap      Pearson=+0.1940  Spearman=+0.2328
+  real_pvq2_over_gap       Pearson=-0.1103  Spearman=-0.2067
+  real_gap                 Pearson=+0.2578  Spearman=+0.1993
+  delta_gap                Pearson=+0.2226  Spearman=+0.1162
+  delta_pvq2               Pearson=+0.0901  Spearman=+0.1034
+  local_delta_pvq2         Pearson=+0.0728  Spearman=+0.0850
+  local_delta_gap          Pearson=+0.1035  Spearman=+0.0480
+  local_real_pvq2          Pearson=+0.0316  Spearman=+0.0411
+  real_pvq2                Pearson=-0.0689  Spearman=-0.0308
+  Tertile medians:
+    TOP    prominence=+0.2906; real_sigma=7.9362e+00; real_pvq2=7.2772e+00; real_gap=4.3824e-03; delta_sigma=-1.0787e+01
+    MIDDLE prominence=+0.0157; real_sigma=6.5936e+00; real_pvq2=7.2791e+00; real_gap=3.5358e-03; delta_sigma=-2.1552e+01
+    BOTTOM prominence=-0.4184; real_sigma=8.5131e-01; real_pvq2=7.2791e+00; real_gap=3.0002e-03; delta_sigma=-2.5748e+01
+
+INTERPRETATION RULE:
+  Look for the same physically interpretable candidate ranking highly in both families.
+  A one-seed correlation is diagnostic evidence only, not a universal hotspot law.
+  If no scalar is stable across both families, the next model should combine descriptors.
