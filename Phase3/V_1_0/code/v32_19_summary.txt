@@ -1,0 +1,58 @@
+Soft Spaces Phase 3.2 v32.19
+Cross-seed symmetry-selected perturbative-order test
+
+qubits=8
+dimension=256
+hamiltonian_terms=11
+seeds=25042000,25042001,25042002,25042003,25042004,25042005,25042006,25042007,25042008,25042009,25042010,25042011
+transverse_h2=0.001
+
+FROZEN HYPOTHESIS
+-----------------
+dephasing  : first-order local response
+transverse : second-order local response
+
+ACROSS-SEED RESULTS
+-------------------
+
+[dephasing]
+  A_group  median_rho=+0.2605  positive=10/12  sign_p=0.019287
+  C_group  median_rho=+0.2500  positive=12/12  sign_p=0.000244
+  R1_E     median_rho=+0.0419  positive=7/12  sign_p=0.387207
+  D1_E     median_rho=+0.0308  positive=6/12  sign_p=0.612793
+
+[transverse]
+  A_group  median_rho=+0.2946  positive=10/12  sign_p=0.019287
+  C_group  median_rho=+0.5194  positive=12/12  sign_p=0.000244
+  R2_E     median_rho=-0.0313  positive=5/12  sign_p=0.806152
+  D2_E     median_rho=+0.1529  positive=10/12  sign_p=0.019287
+
+DECISION RULE
+-------------
+The perturbative-order hypothesis is supported if:
+  * dephasing first-order R1_E/D1_E is systematically positive
+    across seeds, and
+  * transverse second-order R2_E/D2_E is systematically positive
+    across seeds,
+while numerical validation from v32.17.1/v32.18 remains satisfied.
+
+Static A_group and C_group are retained as baselines, not fitted
+ingredients of the response law.
+
+This test does not claim asymptotic scaling and does not yet include
+full spectral/projector motion.
+
+RUN META
+--------
+seed=25042000 groups=64 usable_pairs=32
+seed=25042001 groups=32 usable_pairs=16
+seed=25042002 groups=64 usable_pairs=32
+seed=25042003 groups=64 usable_pairs=32
+seed=25042004 groups=64 usable_pairs=32
+seed=25042005 groups=32 usable_pairs=16
+seed=25042006 groups=64 usable_pairs=32
+seed=25042007 groups=32 usable_pairs=16
+seed=25042008 groups=64 usable_pairs=32
+seed=25042009 groups=32 usable_pairs=16
+seed=25042010 groups=32 usable_pairs=16
+seed=25042011 groups=32 usable_pairs=16

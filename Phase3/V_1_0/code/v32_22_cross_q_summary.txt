@@ -1,0 +1,53 @@
+Soft Spaces Phase 3.2 v32.22
+Cross-Q coherence decomposition robustness
+
+EXACT IDENTITY
+--------------
+C_group^2 = S_group + A_group
+
+QUBITS
+------
+12
+
+PER-Q RESULTS
+-------------
+
+[12Q]
+  dephasing
+    S_group  median_rho=+0.1917 positive=11/12 sign_p=0.003174
+    A_group  median_rho=+0.4690 positive=9/12 sign_p=0.072998
+    C2_group median_rho=+0.3821 positive=11/12 sign_p=0.003174
+    C_group  median_rho=+0.3821 positive=11/12 sign_p=0.003174
+  transverse
+    S_group  median_rho=+0.1294 positive=8/12 sign_p=0.193848
+    A_group  median_rho=+0.3882 positive=12/12 sign_p=0.000244
+    C2_group median_rho=+0.4249 positive=10/12 sign_p=0.019287
+    C_group  median_rho=+0.4249 positive=10/12 sign_p=0.019287
+
+CROSS-Q OVERVIEW
+----------------
+
+[dephasing]
+  S_group  median_of_Q_medians=+0.1917 positive_Q=1/1 range=[+0.1917,+0.1917]
+  A_group  median_of_Q_medians=+0.4690 positive_Q=1/1 range=[+0.4690,+0.4690]
+  C2_group median_of_Q_medians=+0.3821 positive_Q=1/1 range=[+0.3821,+0.3821]
+  C_group  median_of_Q_medians=+0.3821 positive_Q=1/1 range=[+0.3821,+0.3821]
+
+[transverse]
+  S_group  median_of_Q_medians=+0.1294 positive_Q=1/1 range=[+0.1294,+0.1294]
+  A_group  median_of_Q_medians=+0.3882 positive_Q=1/1 range=[+0.3882,+0.3882]
+  C2_group median_of_Q_medians=+0.4249 positive_Q=1/1 range=[+0.4249,+0.4249]
+  C_group  median_of_Q_medians=+0.4249 positive_Q=1/1 range=[+0.4249,+0.4249]
+
+ALGEBRAIC CONSISTENCY
+---------------------
+max |C2-(S+A)| across invocation = 1.110223e-16
+
+DECISION RULE
+-------------
+The mechanism is considered finite-size robust if C_group/C2_group
+retain positive median seedwise association throughout the tested
+7Q-12Q range, while S_group and A_group reveal how concentration
+and interference share the contribution.
+
+No asymptotic theorem is claimed.

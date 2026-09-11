@@ -1,0 +1,97 @@
+Soft Spaces Phase 3.2 v32.18
+Second-order frozen-P/Q response pilot
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+groups=64
+group_size_range=4:4
+exact_pmE_pairs=32
+usable_pairs=32
+eta=0.001
+families=transverse,dephasing
+deltas=0.01,0.003,0.001,0.0003
+
+PRIMARY HYPOTHESIS
+------------------
+If transverse first-order susceptibility is symmetry-suppressed,
+the leading non-vanishing local response may occur at second order:
+
+  R2_E = || d2 Sigma_E / d lambda2 ||_F
+  D2_E = | d2 ||Sigma_E||_F^2 / d lambda2 |
+
+RESULTS BY DELTA
+----------------
+
+[transverse]
+  delta=0.01
+    A_group    rho=+0.2746
+    C_group    rho=+0.7166
+    R2_E       rho=+0.5040
+    D2_E       rho=+0.6408
+    median 3v5 rel diff R2=1.766e-02
+    median 3v5 rel diff D2=2.594e-02
+  delta=0.003
+    A_group    rho=+0.2746
+    C_group    rho=+0.7166
+    R2_E       rho=+0.4978
+    D2_E       rho=+0.6408
+    median 3v5 rel diff R2=1.603e-03
+    median 3v5 rel diff D2=2.807e-03
+  delta=0.001
+    A_group    rho=+0.2746
+    C_group    rho=+0.7166
+    R2_E       rho=+0.4978
+    D2_E       rho=+0.6408
+    median 3v5 rel diff R2=1.761e-04
+    median 3v5 rel diff D2=3.132e-04
+  delta=0.0003
+    A_group    rho=+0.2746
+    C_group    rho=+0.7166
+    R2_E       rho=+0.4978
+    D2_E       rho=+0.6408
+    median 3v5 rel diff R2=1.583e-05
+    median 3v5 rel diff D2=2.820e-05
+
+[dephasing]
+  delta=0.01
+    A_group    rho=+0.3559
+    C_group    rho=+0.4509
+    R2_E       rho=-0.2133
+    D2_E       rho=+0.0861
+    median 3v5 rel diff R2=5.992e-03
+    median 3v5 rel diff D2=9.642e-03
+  delta=0.003
+    A_group    rho=+0.3559
+    C_group    rho=+0.4509
+    R2_E       rho=-0.2119
+    D2_E       rho=+0.0671
+    median 3v5 rel diff R2=5.414e-04
+    median 3v5 rel diff D2=8.939e-04
+  delta=0.001
+    A_group    rho=+0.3559
+    C_group    rho=+0.4509
+    R2_E       rho=-0.2119
+    D2_E       rho=+0.0671
+    median 3v5 rel diff R2=6.030e-05
+    median 3v5 rel diff D2=9.729e-05
+  delta=0.0003
+    A_group    rho=+0.3559
+    C_group    rho=+0.4509
+    R2_E       rho=-0.2119
+    D2_E       rho=+0.0671
+    median 3v5 rel diff R2=5.428e-06
+    median 3v5 rel diff D2=8.755e-06
+
+DECISION RULE
+-------------
+Do not select the delta that maximizes rho.
+A credible second-order law should show:
+  1) stable R2/D2 rankings across a finite delta window;
+  2) reasonable 3-point/5-point agreement before roundoff;
+  3) a systematic positive relation to hotspot prominence;
+  4) preferably stronger/more stable transverse behavior than the
+     numerically suppressed first-order response.
+
+No cross-seed or full-spectral claim is made by this pilot.

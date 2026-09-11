@@ -1,0 +1,63 @@
+Soft Spaces Phase 3.2 v32.17
+Perturbative Response Law — analytic frozen-P/Q pilot
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+groups=64
+group_size_range=4:4
+exact_pmE_pairs=32
+usable_pairs=32
+eta=0.001
+
+MODEL
+-----
+H(lambda)=H0+lambda V
+P and Q frozen at lambda=0
+B=QVP frozen
+QH(lambda)Q = QH0Q + lambda QVQ
+dSigma/dlambda computed analytically by the Frechet derivative
+of g_eta(E_P I - QHQ).
+
+PRIMARY RESULTS
+---------------
+
+[dephasing]
+  A_group         rho=+0.3559
+  C_group         rho=+0.4509
+  cross_sum       rho=+0.1998
+  R_E             rho=-0.2416
+  D_E             rho=+0.1646
+  D_Q_within      rho=+0.1631
+  D_Q_crossmix    rho=-0.0400
+
+[transverse]
+  A_group         rho=+0.2746
+  C_group         rho=+0.7166
+  cross_sum       rho=+0.2573
+  R_E             rho=+0.4534
+  D_E             rho=+0.6477
+  D_Q_within      rho=+0.6507
+  D_Q_crossmix    rho=+0.5828
+
+EXACT FIRST-ORDER SPLIT CHECK
+-----------------------------
+max |D_signed - (D_Q_within_signed + D_Q_crossmix_signed)| = 6.911521e-13
+
+FINITE-DIFFERENCE VALIDATION
+----------------------------
+Representative +/-E pairs checked: 3
+deltas=0.0001,0.0003,0.001,0.003
+The delta scan validates the analytic derivative only.
+It is not used to choose a scientific result.
+
+INTERPRETATION
+--------------
+Compare R_E and D_E directly with the frozen static A_group/C_group
+baseline.  If D_Q_crossmix carries the signal, Q-space mixing between
+different degeneracy-closed virtual sectors is implicated.  If
+D_Q_within dominates, the response is primarily internal to the
+individual frozen Q sectors.
+
+No full spectral response and no cross-seed claim is made here.

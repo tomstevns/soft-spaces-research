@@ -1,0 +1,71 @@
+Soft Spaces Phase 3.2 v32.20
+Degeneracy-closed operator-geometry law
+
+qubits=8
+dimension=256
+hamiltonian_terms=11
+seeds=25042000,25042001,25042002,25042003,25042004,25042005,25042006,25042007,25042008,25042009,25042010,25042011
+
+PREDECLARED GEOMETRY
+--------------------
+M_GK = Re Tr(T_G^dagger T_K) / (||T_G||_F ||T_K||_F)
+
+mean_cosine            : mean off-diagonal M_GK
+positive_fraction      : fraction of off-diagonal M_GK > 0
+mode_excess            : (lambda_max(M)-1)/(n_channels-1)
+weighted_mode_fraction : lambda_max(K)/Tr(K),
+                         K_GK=Re Tr(T_G^dagger T_K)
+
+ACROSS-SEED RESULTS
+-------------------
+
+[dephasing]
+  A_group                median_rho=+0.2605  positive=10/12  sign_p=0.019287
+  C_group                median_rho=+0.2500  positive=12/12  sign_p=0.000244
+  mean_cosine            median_rho=+0.0414  positive=10/12  sign_p=0.019287
+  positive_fraction      median_rho=+0.0453  positive=10/12  sign_p=0.019287
+  mode_excess            median_rho=+0.0622  positive=7/12  sign_p=0.387207
+  weighted_mode_fraction median_rho=+0.0956  positive=10/12  sign_p=0.019287
+
+[transverse]
+  A_group                median_rho=+0.2946  positive=10/12  sign_p=0.019287
+  C_group                median_rho=+0.5194  positive=12/12  sign_p=0.000244
+  mean_cosine            median_rho=+0.0304  positive=11/12  sign_p=0.003174
+  positive_fraction      median_rho=+0.0332  positive=11/12  sign_p=0.003174
+  mode_excess            median_rho=-0.0581  positive=4/12  sign_p=0.927002
+  weighted_mode_fraction median_rho=+0.1228  positive=10/12  sign_p=0.019287
+
+DECISION RULE
+-------------
+The operator-geometry hypothesis is supported if one or more
+predeclared geometric descriptors show a systematic positive
+cross-seed association with hotspot prominence and remain
+competitive with the established A_group/C_group baselines.
+
+No descriptor combination, regression, or seed-specific tuning is
+performed in this test.
+
+INTERPRETATION
+--------------
+A positive mode_excess or weighted_mode_fraction result would support
+the idea that hotspots correspond to a dominant collective alignment
+mode among degeneracy-closed virtual Q-space pathways.
+
+A positive mean_cosine result would support net constructive pathway
+alignment directly.  positive_fraction tests whether the sign pattern
+alone carries useful organization.
+
+RUN META
+--------
+seed=25042000 groups=64 usable_pairs=32
+seed=25042001 groups=32 usable_pairs=16
+seed=25042002 groups=64 usable_pairs=32
+seed=25042003 groups=64 usable_pairs=32
+seed=25042004 groups=64 usable_pairs=32
+seed=25042005 groups=32 usable_pairs=16
+seed=25042006 groups=64 usable_pairs=32
+seed=25042007 groups=32 usable_pairs=16
+seed=25042008 groups=64 usable_pairs=32
+seed=25042009 groups=32 usable_pairs=16
+seed=25042010 groups=32 usable_pairs=16
+seed=25042011 groups=32 usable_pairs=16

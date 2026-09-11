@@ -1,0 +1,62 @@
+Soft Spaces Phase 3.2 v32.21
+Exact coherence decomposition law
+
+qubits=8
+dimension=256
+hamiltonian_terms=11
+seeds=25042000,25042001,25042002,25042003,25042004,25042005,25042006,25042007,25042008,25042009,25042010,25042011
+
+EXACT IDENTITY
+--------------
+C_group^2 = S_group + A_group
+
+S_group = sum_G ||T_G||_F^2 / (sum_G ||T_G||_F)^2
+A_group = 2 sum_{G<K} Re Tr(T_G^dagger T_K)
+          / (sum_G ||T_G||_F)^2
+
+ACROSS-SEED RESULTS
+-------------------
+
+[dephasing]
+  S_group   median_rho=+0.1176  positive=10/12  sign_p=0.019287
+  A_group   median_rho=+0.2605  positive=10/12  sign_p=0.019287
+  C2_group  median_rho=+0.2500  positive=12/12  sign_p=0.000244
+  C_group   median_rho=+0.2500  positive=12/12  sign_p=0.000244
+
+[transverse]
+  S_group   median_rho=+0.1632  positive=10/12  sign_p=0.019287
+  A_group   median_rho=+0.2946  positive=10/12  sign_p=0.019287
+  C2_group  median_rho=+0.5194  positive=12/12  sign_p=0.000244
+  C_group   median_rho=+0.5194  positive=12/12  sign_p=0.000244
+
+ALGEBRAIC CONSISTENCY
+---------------------
+max |C2-(S+A)|              = 1.110223e-16
+max |A_direct-A_base|       = 1.221245e-15
+max |C_direct-C_base|       = 6.661338e-16
+
+DECISION RULE
+-------------
+If S_group is systematically positive and competitive with A_group,
+then the robustness of C_group is naturally explained by a combination
+of pathway concentration and constructive interference.
+
+If S_group is weak while C_group remains strong, the exact nonlinear
+combination S_group + A_group is itself the important object.
+
+No regression, feature combination, or parameter tuning is used.
+
+RUN META
+--------
+seed=25042000 groups=64 usable_pairs=32
+seed=25042001 groups=32 usable_pairs=16
+seed=25042002 groups=64 usable_pairs=32
+seed=25042003 groups=64 usable_pairs=32
+seed=25042004 groups=64 usable_pairs=32
+seed=25042005 groups=32 usable_pairs=16
+seed=25042006 groups=64 usable_pairs=32
+seed=25042007 groups=32 usable_pairs=16
+seed=25042008 groups=64 usable_pairs=32
+seed=25042009 groups=32 usable_pairs=16
+seed=25042010 groups=32 usable_pairs=16
+seed=25042011 groups=32 usable_pairs=16

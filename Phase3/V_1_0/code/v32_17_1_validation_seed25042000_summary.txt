@@ -1,0 +1,59 @@
+Soft Spaces Phase 3.2 v32.17.1
+Numerical validation of analytic frozen-P/Q derivative
+
+seed=25042000
+qubits=8
+dimension=256
+hamiltonian_terms=11
+groups=64
+exact_pmE_pairs=32
+validation_pairs=3
+eta=0.001
+deltas=0.01,0.003,0.001,0.0003,0.0001
+
+METHOD
+------
+Sigma(lambda) evaluated directly with
+  g_eta(A) = A (A^2 + eta^2 I)^(-1)
+using a linear solve; no eigendecomposition is used in the
+finite-difference validation.
+
+VALIDATION PAIRS
+----------------
+1: groups (27,36), |E|=0.26198647, prominence=-0.7513042
+2: groups (8,55), |E|=1.6921459, prominence=+0.023834044
+3: groups (22,41), |E|=0.6353883, prominence=+0.63268992
+
+CONVERGENCE SLOPES
+------------------
+Central difference ideally gives slope about +2 before roundoff.
+dephasing  pair=1 minus group= 27 slope=+1.9908
+dephasing  pair=1 plus  group= 36 slope=+1.9908
+dephasing  pair=2 minus group=  8 slope=+2.0027
+dephasing  pair=2 plus  group= 55 slope=+2.0025
+dephasing  pair=3 minus group= 22 slope=+2.0016
+dephasing  pair=3 plus  group= 41 slope=+2.0020
+transverse pair=1 minus group= 27 slope=-1.5410
+transverse pair=1 plus  group= 36 slope=-1.5167
+transverse pair=2 minus group=  8 slope=-1.1109
+transverse pair=2 plus  group= 55 slope=-0.9179
+transverse pair=3 minus group= 22 slope=-0.4274
+transverse pair=3 plus  group= 41 slope=-1.3085
+
+SMALLEST-DELTA SUMMARY
+----------------------
+delta=0.0001
+median relative Frobenius error=1.445368e+00
+max relative Frobenius error=1.358931e+03
+median absolute Frobenius error=4.837291e-08
+max absolute Frobenius error=1.163703e-06
+
+DECISION RULE
+-------------
+Accept the analytic v32.17 derivative if the absolute error decreases
+systematically over a stable delta range and the observed convergence
+is consistent with second-order central differencing before roundoff.
+
+Do not reject the derivative solely because a relative error becomes
+large when the true analytic derivative is itself near machine zero;
+in that regime inspect absolute error and convergence slope instead.
