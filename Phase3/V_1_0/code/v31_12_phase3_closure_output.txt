@@ -1,0 +1,15 @@
+=== Soft Spaces Phase 3 Closure v31.12 — FINAL GATE ===
+Hamiltonian robustness: PASS
+NULL sensitivity: PASS
+Perturbation robustness: PASS
+
+FINAL PHASE 3 CLOSURE DECISION: PASS
+
+Phase 3 is CLOSED. The invariant SoftSpace structure is robust across the predeclared Hamiltonian, NULL and perturbation variations tested here.
+
+Interpretation lock:
+  The projector score quantifies perturbative coupling/cancellation associated with
+  complete exact eigenspaces. The observed ±E organization is treated as a spectral
+  organization of that score. REAL-vs-NULL differences establish structure relative
+  to the tested controls; they do not establish universality, experimental realization,
+  or practical quantum advantage.

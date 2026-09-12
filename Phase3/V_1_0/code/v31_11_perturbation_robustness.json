@@ -1,0 +1,28 @@
+{
+  "version": "v31.11",
+  "test": "perturbation_robustness",
+  "summary": {
+    "dephasing": {
+      "positive_seeds": 12,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.06490564367835042,
+      "median_delta_corr": 0.04370893373217172,
+      "passes_directional_gate": true
+    },
+    "transverse": {
+      "positive_seeds": 12,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.05822107585411331,
+      "median_delta_corr": 0.052434116505687356,
+      "passes_directional_gate": true
+    },
+    "robust_min": {
+      "positive_seeds": 11,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.0481073622464487,
+      "median_delta_corr": 0.04040613498680562,
+      "passes_directional_gate": true
+    }
+  },
+  "decision": "PASS"
+}

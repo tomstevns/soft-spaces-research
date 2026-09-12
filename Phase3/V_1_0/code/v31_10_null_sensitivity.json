@@ -1,0 +1,28 @@
+{
+  "version": "v31.10",
+  "test": "null_sensitivity",
+  "summary": {
+    "global_haar": {
+      "positive_seeds": 11,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.0481073622464487,
+      "median_delta_corr": 0.04040613498680562,
+      "passes_directional_gate": true
+    },
+    "product_haar": {
+      "positive_seeds": 9,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.11512568439475672,
+      "median_delta_corr": 0.0005511522343417119,
+      "passes_directional_gate": true
+    },
+    "permuted_real": {
+      "positive_seeds": 11,
+      "n_seeds": 12,
+      "mean_delta_corr": 0.2650783364036459,
+      "median_delta_corr": 0.14809800284115437,
+      "passes_directional_gate": true
+    }
+  },
+  "decision": "PASS"
+}

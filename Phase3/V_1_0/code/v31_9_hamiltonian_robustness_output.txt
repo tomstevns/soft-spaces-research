@@ -1,0 +1,71 @@
+=== Soft Spaces Phase 3 Closure v31.9 — HAMILTONIAN ROBUSTNESS ===
+Frozen reference: v31.7 / v30.7 physical model
+Hamiltonian term-count variants: (9, 11, 13)
+Directional gate: median(delta_corr)>0 and >= 9/12 positive seeds
+
+--- 9-TERM HAMILTONIAN ---
+seed | corr_REAL | corr_NULL | delta_corr
+25043000 | +1.000000 | +0.995264 | +0.004736
+25043001 | +1.000000 | +0.996275 | +0.003725
+25043002 | +0.999992 | +0.999109 | +0.000883
+25043003 | +1.000000 | +0.997386 | +0.002614
+25043004 | +1.000000 | +0.995601 | +0.004399
+25043005 | +1.000000 | +0.999448 | +0.000552
+25043006 | +1.000000 | +0.976267 | +0.023733
+25043007 | +1.000000 | +0.990053 | +0.009947
+25043008 | +1.000000 | +0.995852 | +0.004148
+25043009 | +1.000000 | +0.953843 | +0.046157
+25043010 | +1.000000 | +0.988184 | +0.011816
+25043011 | +1.000000 | +0.974848 | +0.025152
+Positive seeds: 12/12
+Mean delta_corr: +0.011488
+Median delta_corr: +0.004568
+Directional gate: PASS
+
+--- 11-TERM HAMILTONIAN ---
+seed | corr_REAL | corr_NULL | delta_corr
+25043000 | +1.000000 | +0.946986 | +0.053014
+25043001 | +1.000000 | +0.940687 | +0.059313
+25043002 | +0.999873 | +0.998628 | +0.001244
+25043003 | +1.000000 | +0.945683 | +0.054317
+25043004 | +1.000000 | +0.956943 | +0.043057
+25043005 | +1.000000 | +0.962245 | +0.037755
+25043006 | +1.000000 | +0.846156 | +0.153844
+25043007 | +1.000000 | +0.976152 | +0.023848
+25043008 | +0.976862 | +0.989791 | -0.012928
+25043009 | +1.000000 | +0.975464 | +0.024536
+25043010 | +1.000000 | +0.970961 | +0.029039
+25043011 | +1.000000 | +0.889753 | +0.110247
+Positive seeds: 11/12
+Mean delta_corr: +0.048107
+Median delta_corr: +0.040406
+Directional gate: PASS
+
+--- 13-TERM HAMILTONIAN ---
+seed | corr_REAL | corr_NULL | delta_corr
+25043000 | +1.000000 | +0.467031 | +0.532969
+25043001 | +1.000000 | +0.767881 | +0.232119
+25043002 | +0.998227 | +0.938994 | +0.059233
+25043003 | +0.993786 | +0.944133 | +0.049653
+25043004 | +0.987977 | +0.825445 | +0.162531
+25043005 | +0.992537 | +0.797468 | +0.195070
+25043006 | +0.526575 | +0.799569 | -0.272994
+25043007 | +1.000000 | +0.764032 | +0.235968
+25043008 | +0.990091 | +0.930481 | +0.059610
+25043009 | +1.000000 | +0.865106 | +0.134894
+25043010 | +0.917469 | +0.781406 | +0.136062
+25043011 | +0.999911 | +0.928051 | +0.071860
+Positive seeds: 11/12
+Mean delta_corr: +0.133081
+Median delta_corr: +0.135478
+Directional gate: PASS
+
+=== v31.9 CLOSURE DECISION ===
+PASS
+
+Interpretation:
+  PASS means the REAL-specific ±E enhancement survives both nearby
+  Hamiltonian term-count variations without tuning.
+  PASS WITH SCOPE means the reference survives and robustness is
+  supported on only one side of the neighbouring term-count range.
+  FAIL means Hamiltonian robustness is not established by this test.
