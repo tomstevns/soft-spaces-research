@@ -1,0 +1,180 @@
+SOFT SPACES PHASE 4 v40.4 — IBM HERON HARDWARE PROTOCOL
+Status: pre-registered preparation draft
+Date: 15 September 2026
+
+PRIMARY BACKEND
+---------------
+ibm_aachen
+
+Reason:
+- IBM currently identifies ibm_aachen as a 156-programmable-qubit Heron r3.
+- It is in the eu-de region.
+- It is therefore the preferred primary Heron device for the first Phase-4
+  hardware validation.
+
+IMPORTANT:
+The backend is fixed now, but the exact physical 8-qubit subgraph is frozen
+from the CURRENT calibration immediately before the run. It must not be chosen
+after seeing Soft-Spaces outcomes.
+
+SUBGRAPH FREEZE RULE
+--------------------
+Run v40_4_ibm_heron_prepare.py.
+
+The script:
+1. reads current ibm_aachen calibration data;
+2. considers calibrated native 2Q connectivity;
+3. selects a low-error connected 8Q subgraph;
+4. gives logical q0 the best central physical qubit in that subgraph;
+5. writes v40_4_ibm_heron_frozen_manifest.json.
+
+After acceptance of the manifest, the physical qubits and layout are frozen.
+
+PRIMARY HARDWARE EXPERIMENT
+---------------------------
+Maintain the v40.3b scientific comparison as closely as possible:
+
+Models:
+- REAL
+- matched NULL
+
+Frozen Phase-3 seeds:
+25043000 ... 25043011
+
+Application:
+-E prominence
+    -> source-side quantum measurement channel
+    -> measured ranking
+    -> +E target evaluation
+
+Primary checkpoint:
+20 logical CX gates per candidate circuit.
+
+Shots:
+4096 shots per circuit.
+
+Primary metric:
+Precision@8.
+
+Secondary metrics:
+- number of target evaluations required to recover true Top-8
+- NDCG@8
+
+PRIMARY DECISION RULES
+----------------------
+Use the same four Precision@8 gates as v40.3b:
+
+C1. mean delta Precision@8 > 0
+C2. 95% bootstrap CI lower bound > 0
+C3. one-sided exact sign-test p < 0.05
+C4. one-sided Wilcoxon p < 0.05
+
+The hardware test passes the primary checkpoint only if all four pass.
+
+MATCHING TO v40.3b
+------------------
+Keep identical where possible:
+- 8 logical qubits
+- same Phase-3 kernel
+- same seed ensemble
+- same REAL/NULL source scores
+- same score-to-RY encoding
+- same logical paired-CX stress construction
+- same 4096 shots
+- same target-ranking metrics
+- same statistical decision gates
+
+Hardware-specific unavoidable differences:
+- IBM Heron uses native hardware instructions (currently CZ-based on Heron).
+- logical CX operations are transpiled to the backend target.
+- routing may add physical entangling operations.
+- real calibration, decoherence and readout noise replace the synthetic Aer
+  noise model.
+
+For this reason, record BOTH:
+1. logical requested CX count;
+2. transpiled native 2Q gate count and circuit depth.
+
+TRANSPILATION
+-------------
+Primary run:
+- optimization_level = 0
+- use the frozen initial_layout from the manifest
+- do not allow outcome-driven remapping
+- save transpiled circuits or their QPY representation
+- record native 2Q gate counts and depth
+
+Why optimization level 0:
+The Phase-4 experiment is a hardware-characterization comparison. Aggressive
+optimization could partially remove or rewrite deliberate identity-pair stress
+operations and make comparison with v40.3b less transparent.
+
+ERROR MITIGATION
+----------------
+Primary endpoint:
+RAW hardware data.
+
+Do not enable:
+- ZNE
+- PEC
+- dynamical decoupling
+- twirling
+- post-selection based on the desired result
+
+A separate secondary mitigated analysis may be added later, but must not replace
+the preregistered raw endpoint.
+
+CALIBRATION RECORD
+------------------
+Save at run time:
+- backend name
+- processor family/revision
+- calibration timestamp / calibration id if available
+- selected physical qubits
+- readout error for each selected qubit
+- native 2Q error for each selected internal edge
+- T1/T2 if available
+- transpiled native 2Q counts
+- circuit depths
+- IBM job IDs
+
+MINIMAL FIRST HARDWARE RUN
+--------------------------
+Do NOT start with the high-CX breakdown scan.
+
+First real-hardware test:
+- CX = 20 only
+- all 12 frozen seeds
+- REAL and NULL
+- 4096 shots
+
+Reason:
+CX=20 is the predeclared v40.3b checkpoint and is the cleanest direct
+Aer-to-hardware comparison.
+
+Only if CX=20 behaves sensibly should later hardware tests consider:
+- CX=0 baseline
+- CX=100 or 400 robustness
+- high-CX breakdown exploration
+
+INTERPRETATION
+--------------
+A hardware PASS would mean:
+
+The REAL-specific Soft-Spaces ranked-search advantage survives execution of the
+same operational measurement-channel protocol on a physical IBM Heron QPU.
+
+It would NOT yet mean:
+- the complete Soft-Spaces Hamiltonian/projector model has been executed
+  natively on hardware;
+- Soft Spaces gives universal quantum advantage;
+- the result generalizes to all Hamiltonians or algorithms.
+
+REPLICATION
+-----------
+After a successful ibm_aachen run, the preferred next replication backend is a
+second Heron r3 (for example ibm_boston or ibm_pittsburgh if account access
+permits), using the same freeze-and-select rule rather than reusing Aachen's
+physical qubit numbers.
+
+END OF PROTOCOL
