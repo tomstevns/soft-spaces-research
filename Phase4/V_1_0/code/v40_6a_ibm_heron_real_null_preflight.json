@@ -1,0 +1,153 @@
+{
+  "version": "v40.6a-heron-real-null-runtime-preflight-1",
+  "created_utc": "2026-09-15T17:18:50.339765+00:00",
+  "scientific_scope": "Real IBM Heron measurement-channel ranked-search test; not full Hamiltonian/projector-native quantum execution.",
+  "backend": "ibm_kingston",
+  "processor_type": {
+    "family": "Heron",
+    "revision": "2"
+  },
+  "frozen_layout_logical_q0_to_q7": [
+    47,
+    48,
+    46,
+    49,
+    45,
+    50,
+    44,
+    38
+  ],
+  "frozen_physical_qubits": [
+    38,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "protocol": {
+    "logical_qubits": 8,
+    "primary_cx_checkpoint": 20,
+    "shots": 4096,
+    "seed_ensemble": "25043000..25043011",
+    "models": [
+      "REAL",
+      "NULL"
+    ],
+    "application": "-E prominence -> measured source ranking -> +E ranked search",
+    "primary_metric": "Precision@8",
+    "secondary_metrics": [
+      "target evaluations",
+      "NDCG@8"
+    ],
+    "transpiler_optimization_level": 0,
+    "fixed_initial_layout": true,
+    "error_mitigation": "none for primary raw comparison",
+    "twirling": "disabled unless explicitly added in a separate secondary analysis",
+    "dynamical_decoupling": "disabled for primary comparison",
+    "zne": "disabled for primary comparison",
+    "submission": "NOT performed by this preparation script"
+  },
+  "hardware_adaptation": {
+    "rule": "Paired logical CX identity blocks cycle only over frozen logical spectators directly connected to logical q0, avoiding SWAP routing outside the frozen 8Q subgraph.",
+    "spectator_schedule_logical": [
+      1,
+      2
+    ],
+    "spectator_schedule_physical": [
+      48,
+      46
+    ]
+  },
+  "candidate_counts": [
+    {
+      "seed": 25043000,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043001,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043002,
+      "real_candidates": 8,
+      "null_candidates": 8
+    },
+    {
+      "seed": 25043003,
+      "real_candidates": 16,
+      "null_candidates": 16
+    },
+    {
+      "seed": 25043004,
+      "real_candidates": 16,
+      "null_candidates": 16
+    },
+    {
+      "seed": 25043005,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043006,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043007,
+      "real_candidates": 16,
+      "null_candidates": 16
+    },
+    {
+      "seed": 25043008,
+      "real_candidates": 16,
+      "null_candidates": 16
+    },
+    {
+      "seed": 25043009,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043010,
+      "real_candidates": 32,
+      "null_candidates": 32
+    },
+    {
+      "seed": 25043011,
+      "real_candidates": 32,
+      "null_candidates": 32
+    }
+  ],
+  "total_circuits": 592,
+  "shots_per_circuit": 4096,
+  "total_executions": 2424832,
+  "transpiled_depth_min": 88,
+  "transpiled_depth_max": 88,
+  "native_2q_gates_min": 20,
+  "native_2q_gates_max": 20,
+  "submitted": false,
+  "runtime_estimate": {
+    "method": "IBM documented local scheduled-circuit baseline",
+    "rep_delay_seconds": 0.00025,
+    "rep_delay_source": "backend.default_rep_delay",
+    "init_duration_seconds": 2.212e-06,
+    "circuit_duration_seconds_min": 4.244000000000001e-06,
+    "circuit_duration_seconds_mean": 4.244000000000001e-06,
+    "circuit_duration_seconds_max": 4.244000000000001e-06,
+    "circuit_shot_time_seconds_min": 0.000256456,
+    "circuit_shot_time_seconds_mean": 0.000256456,
+    "circuit_shot_time_seconds_max": 0.000256456,
+    "total_executions": 2424832,
+    "estimated_qpu_seconds_detailed_one_subjob": 623.862715392,
+    "estimated_qpu_minutes_detailed_one_subjob": 10.397711923200001,
+    "estimated_qpu_seconds_quick_formula": 850.6912,
+    "estimated_qpu_minutes_quick_formula": 14.178186666666667,
+    "overhead_note": "Detailed estimate assumes one ~2 s sub-job overhead. IBM Runtime may split a large primitive job into multiple sub-jobs, adding approximately 2 s per additional sub-job."
+  },
+  "max_estimated_qpu_seconds_guard": 540.0
+}

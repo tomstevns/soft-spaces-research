@@ -1,0 +1,113 @@
+{
+  "protocol_version": "v40.4-heron-prep-1",
+  "created_utc": "2026-09-15T15:20:57.953120+00:00",
+  "backend": "ibm_kingston",
+  "processor_type": {
+    "family": "Heron",
+    "revision": "2"
+  },
+  "backend_num_qubits": 156,
+  "backend_operational_at_freeze": true,
+  "pending_jobs_at_freeze": 19,
+  "calibration_timestamp": "2026-09-15T16:59:35+02:00",
+  "native_2q_gate_used_for_selection": "cz",
+  "selected_physical_qubits_sorted": [
+    38,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "frozen_initial_layout_logical_q0_to_q7": [
+    47,
+    48,
+    46,
+    49,
+    45,
+    50,
+    44,
+    38
+  ],
+  "selection_score": 0.0028723112433450136,
+  "readout_error_by_physical_qubit": {
+    "47": 0.002685546875,
+    "48": 0.005859375,
+    "46": 0.009033203125,
+    "49": 0.007568359375,
+    "45": 0.0087890625,
+    "50": 0.00341796875,
+    "44": 0.003662109375,
+    "38": 0.00390625
+  },
+  "internal_2q_edges": [
+    {
+      "q0": 38,
+      "q1": 49,
+      "error": 0.0013565281907636506,
+      "gate": "cz"
+    },
+    {
+      "q0": 44,
+      "q1": 45,
+      "error": 0.0019306786887037242,
+      "gate": "cz"
+    },
+    {
+      "q0": 45,
+      "q1": 46,
+      "error": 0.001523096675740132,
+      "gate": "cz"
+    },
+    {
+      "q0": 46,
+      "q1": 47,
+      "error": 0.0016287181867903622,
+      "gate": "cz"
+    },
+    {
+      "q0": 47,
+      "q1": 48,
+      "error": 0.0024319031761587673,
+      "gate": "cz"
+    },
+    {
+      "q0": 48,
+      "q1": 49,
+      "error": 0.0018865201476234716,
+      "gate": "cz"
+    },
+    {
+      "q0": 49,
+      "q1": 50,
+      "error": 0.0014874055126349872,
+      "gate": "cz"
+    }
+  ],
+  "hardware_protocol": {
+    "logical_qubits": 8,
+    "primary_cx_checkpoint": 20,
+    "shots": 4096,
+    "seed_ensemble": "25043000..25043011",
+    "models": [
+      "REAL",
+      "NULL"
+    ],
+    "application": "-E prominence -> measured source ranking -> +E ranked search",
+    "primary_metric": "Precision@8",
+    "secondary_metrics": [
+      "target evaluations",
+      "NDCG@8"
+    ],
+    "transpiler_optimization_level": 0,
+    "fixed_initial_layout": true,
+    "error_mitigation": "none for primary raw comparison",
+    "twirling": "disabled unless explicitly added in a separate secondary analysis",
+    "dynamical_decoupling": "disabled for primary comparison",
+    "zne": "disabled for primary comparison",
+    "submission": "NOT performed by this preparation script"
+  },
+  "freeze_rule": "Once this manifest is accepted for the hardware run, do not change the backend, physical qubits, initial layout, shots, seed ensemble, or REAL/NULL analysis rules based on observed outcomes."
+}
