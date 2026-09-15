@@ -1,0 +1,380 @@
+SOFT SPACES PHASE 4 — SCRIPT INVENTORY
+Status: 15 September 2026
+
+Purpose
+-------
+This file records the Python scripts used during Soft Spaces Phase 4 up to the
+current interim checkpoint.
+
+The list is intended as a repository/navigation aid. It distinguishes:
+- frozen dependencies inherited from Phase 3,
+- principal Phase-4 scripts,
+- exploratory/temporary scripts,
+- superseded scripts,
+- the current scientific role of each script.
+
+===============================================================================
+A. FROZEN PHASE-3 DEPENDENCY
+===============================================================================
+
+1. v31_7_Soft_Spaces_independent_replication.py
+
+Role:
+Frozen Phase-3 computational kernel used by the Phase-4 studies.
+
+Phase-4 use:
+Provides the frozen 8-qubit Hamiltonian/projector framework, independent seed
+ensemble, REAL/NULL construction, ±E pairing and prominence information used
+by the Phase-4 application scripts.
+
+Scientific status:
+FROZEN DEPENDENCY.
+It should not be modified while reproducing the present Phase-4 results.
+
+
+===============================================================================
+B. CORE PHASE-4 APPLICATION SCRIPTS
+===============================================================================
+
+2. v40_0_application_screening.py
+
+Role:
+First Phase-4 application test.
+
+Application:
+Uses -E prominence as a ranked-search prior for discovering targets on the +E
+side.
+
+Primary metrics:
+- Precision@8
+- evaluations required to recover the true Top-8
+- NDCG@8
+
+Main result:
+REAL outperformed matched NULL across the frozen seed ensemble.
+
+Scientific status:
+CORE / PASS.
+This establishes the first operational application advantage.
+
+
+-------------------------------------------------------------------------------
+
+3. v40_1_ranked_search_noise.py
+
+Role:
+Tests robustness of the v40.0 ranked-search advantage against controlled noise
+added to the source-side ranking scores.
+
+Noise model:
+source_noisy = source + eta * std(source) * Normal(0,1)
+
+Important:
+eta is a dimensionless score-noise parameter.
+It is NOT a physical gate-error probability.
+
+Main result:
+The primary checkpoint passed and the REAL advantage remained robust through
+substantial score corruption.
+
+Scientific status:
+CORE / PASS.
+
+
+-------------------------------------------------------------------------------
+
+4. v40_2_hardware_proxy.py
+
+Role:
+Introduces a hardware-oriented proxy for finite-shot and noisy-circuit effects.
+
+Main ingredients:
+- finite shots
+- symmetric readout error
+- one-qubit depolarizing error
+- two-qubit depolarizing error
+- increasing effective two-qubit circuit depth
+
+Typical parameters:
+- shots = 4096
+- p2q = 0.00117
+- p1q = 0.000117
+- readout error = 0.01
+
+Important:
+This is a classical hardware proxy.
+It is NOT an explicit Qiskit/Aer circuit simulation.
+
+Main result:
+REAL advantage remained positive through the largest tested proxy depth.
+
+Scientific status:
+CORE / PASS.
+
+
+===============================================================================
+C. EXPLICIT QISKIT/AER CIRCUIT TESTS
+===============================================================================
+
+5. v40_3_qiskit_aer_circuit.py
+
+Role:
+First explicit Qiskit/Aer circuit-level implementation.
+
+Circuit idea:
+- encode source prominence into a qubit through RY(theta)
+- insert deliberate CX identity pairs
+- measure through an Aer noise model
+- use finite shots
+
+Important:
+CX identity pairs are logically neutral in the noiseless circuit but accumulate
+two-qubit noise in the simulator.
+
+Practical issue:
+The original implementation submitted too many individual Aer jobs and became
+very slow.
+
+Scientific status:
+SUPERSEDED IMPLEMENTATION.
+Retained for development history, but v40.3b is the preferred implementation.
+
+
+-------------------------------------------------------------------------------
+
+6. v40_3b_qiskit_aer_circuit.py
+
+Role:
+Optimized/batched explicit Qiskit/Aer circuit-level test.
+
+Improvements over v40.3:
+- batches circuits/repetitions into fewer Aer jobs
+- removes unnecessary simulator overhead
+- prints progress per CX level and seed
+- preserves the same scientific circuit concept
+
+Full test:
+- 12 independent seeds
+- 200 repetitions
+- 4096 shots
+- CX = 0, 10, 20, 50, 100, 200, 400
+- p2q = 0.00117
+- p1q = 0.000117
+- readout error = 0.01
+
+Main result:
+All tested CX levels passed.
+No operational breakdown was observed through CX=400.
+
+Scientific status:
+CORE / PASS.
+This is the principal explicit Aer result for the present Phase-4 checkpoint.
+
+
+===============================================================================
+D. HIGH-CX BREAKPOINT SEARCH
+===============================================================================
+
+7. v40_3c_breakpoint_scan.py
+
+Role:
+First reduced explicit-Aer attempt to locate the high-CX breakdown region.
+
+Planned setup:
+- first 4 seeds
+- 50 repetitions
+- 1024 shots
+- CX = 800, 1200, 2000, 4000
+
+Practical result:
+Still computationally too slow because the high-CX circuits were explicitly
+simulated in Aer.
+
+Scientific status:
+EXPLORATORY / ABORTED FOR PERFORMANCE REASONS.
+Not used as final scientific evidence.
+
+
+-------------------------------------------------------------------------------
+
+8. v40_3c_fast_proxy_breakpoint.py
+
+Role:
+Fast exploratory high-CX breakpoint locator.
+
+Reason:
+Used after the explicit v40.3c scan proved too computationally expensive.
+
+Setup:
+- first 4 frozen seeds
+- 200 repetitions
+- 1024 shots
+- CX = 800, 1200, 2000, 3000, 4000, 6000
+- same general finite-shot/readout/depolarizing logic as the hardware proxy
+
+Important:
+This is NOT an explicit Aer confirmation.
+It is only a fast locator for the likely breakdown region.
+
+Main observed trend:
+- CX=800: weakened but positive REAL advantage
+- CX=1200: near-breakdown
+- CX>=2000: no useful Precision@8 advantage
+
+Scientific status:
+EXPLORATORY LOCATOR.
+Used to choose a small number of expensive explicit-Aer confirmation points.
+
+
+-------------------------------------------------------------------------------
+
+9. v40_3d_fast_aer_confirmation.py
+
+Role:
+Reduced explicit Qiskit/Aer confirmation around the breakpoint region.
+
+Default setup:
+- CX = 800, 1000, 1200
+- first 4 seeds
+- 25 repetitions
+- 1024 shots
+
+Practical result:
+Still slower than desirable for a quick confirmation.
+
+Scientific status:
+EXPLORATORY / NOT REQUIRED FOR CURRENT CHECKPOINT.
+It can be retained as an intermediate-resolution option if more evidence is
+needed later.
+
+
+-------------------------------------------------------------------------------
+
+10. v40_3e_ultrafast_aer_spotcheck.py
+
+Role:
+Minimal explicit Qiskit/Aer spot-check of the breakpoint trend.
+
+Setup:
+- CX = 800 and 1200
+- first 2 frozen seeds
+- 10 repetitions
+- 512 shots
+- p2q = 0.00117
+- p1q = 0.000117
+- readout error = 0.01
+
+Purpose:
+Only to determine whether the explicit Aer circuit reproduces the qualitative
+trend predicted by the fast breakpoint locator.
+
+Observed result:
+CX=800:
+- REAL Precision@8 = 0.818750
+- NULL Precision@8 = 0.731250
+- delta Precision@8 = +0.087500
+- REAL search effort remained better than NULL
+
+CX=1200:
+- REAL Precision@8 = 0.768750
+- NULL Precision@8 = 0.762500
+- delta Precision@8 = +0.006250
+- Precision/search-efficiency advantage was approximately lost
+- NDCG remained clearly higher for REAL
+
+Scientific status:
+EXPLORATORY EXPLICIT-AER CONFIRMATION.
+The result qualitatively agrees with v40.3c-fast and is sufficient for the
+current interim Phase-4 checkpoint.
+
+
+===============================================================================
+E. CURRENT PHASE-4 EVIDENCE CHAIN
+===============================================================================
+
+Frozen Phase-3 kernel
+    |
+    v
+v40_0_application_screening.py
+    Application advantage
+    PASS
+    |
+    v
+v40_1_ranked_search_noise.py
+    Controlled source-score robustness
+    PASS
+    |
+    v
+v40_2_hardware_proxy.py
+    Hardware-oriented proxy
+    PASS
+    |
+    v
+v40_3b_qiskit_aer_circuit.py
+    Explicit noisy Qiskit/Aer circuit
+    PASS through CX=400
+    |
+    v
+v40_3c_fast_proxy_breakpoint.py
+    Fast high-CX locator
+    Approximate transition: CX 800–1200
+    |
+    v
+v40_3e_ultrafast_aer_spotcheck.py
+    Explicit Aer qualitative confirmation
+    CX=800 still useful; CX=1200 near operational breakdown
+
+
+===============================================================================
+F. RECOMMENDED FILE STATUS IN THE REPOSITORY
+===============================================================================
+
+KEEP AS CORE:
+- v31_7_Soft_Spaces_independent_replication.py
+- v40_0_application_screening.py
+- v40_1_ranked_search_noise.py
+- v40_2_hardware_proxy.py
+- v40_3b_qiskit_aer_circuit.py
+
+KEEP AS BREAKPOINT / EXPLORATORY EVIDENCE:
+- v40_3c_fast_proxy_breakpoint.py
+- v40_3e_ultrafast_aer_spotcheck.py
+
+KEEP FOR DEVELOPMENT HISTORY OR MOVE TO archive/:
+- v40_3_qiskit_aer_circuit.py
+- v40_3c_breakpoint_scan.py
+- v40_3d_fast_aer_confirmation.py
+
+Do not delete superseded scripts until the Phase-4 repository has been fully
+committed and backed up.
+
+
+===============================================================================
+G. CURRENT SCIENTIFIC CHECKPOINT
+===============================================================================
+
+The current Phase-4 result is:
+
+1. A REAL-specific Soft-Space ranked-search advantage exists in the frozen 8Q
+   model.
+
+2. The advantage survives controlled source-score noise.
+
+3. The advantage survives a finite-shot/readout/depolarizing hardware proxy.
+
+4. The advantage survives an explicit noisy Qiskit/Aer circuit through at least
+   CX=400.
+
+5. Exploratory high-CX evidence indicates that Precision@8/search-efficiency
+   remains useful around CX=800 but approaches operational breakdown around
+   CX=1200 under the present circuit encoding and noise model.
+
+6. Real IBM hardware execution has NOT yet been performed.
+
+7. The full Soft-Spaces Hamiltonian/projector response has NOT yet been
+   implemented natively as a quantum algorithm.
+
+
+===============================================================================
+END OF PHASE-4 SCRIPT INVENTORY
+===============================================================================
