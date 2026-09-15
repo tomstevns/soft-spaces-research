@@ -1,0 +1,76 @@
+=== Soft Spaces Phase 4 v40.1 RANKED-SEARCH NOISE ROBUSTNESS ===
+Frozen Phase-3 kernel: v30.7 / namespace v30.2
+Qubits: 8
+Hamiltonian terms: 11
+Independent seeds: 25043000 ... 25043011
+Application: -E prominence -> ranked search on +E
+K: 8
+Noise repetitions per seed/model/eta: 500
+Bootstrap replicates: 200000
+
+Noise definition:
+  source_noisy = source + eta * std(source) * Normal(0,1)
+  Noise is applied ONLY to the -E source information used for ranking.
+  +E target prominence remains untouched and is used only after ranking.
+
+Important:
+  eta is relative score noise, NOT a physical gate-error probability.
+
+=== NOISE-SWEEP SUMMARY ===
+eta | REAL P@K | NULL P@K | deltaP | 95% CI deltaP | sign p | Wilcoxon p | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | decision
+     0 | 1.000000 | 0.822917 | +0.177083 | [+0.125000,+0.229167] | 0.00048828 | 0.00097609 | 8.000000 | 10.916667 | +2.916667 | 0.999940 | 0.897977 | PASS
+ 1e-04 | 1.000000 | 0.822917 | +0.177083 | [+0.125000,+0.229167] | 0.00048828 | 0.00097609 | 8.000000 | 10.916667 | +2.916667 | 0.999940 | 0.897977 | PASS
+ 3e-04 | 1.000000 | 0.822917 | +0.177083 | [+0.125000,+0.229167] | 0.00048828 | 0.00097609 | 8.000000 | 10.916667 | +2.916667 | 0.999940 | 0.897977 | PASS
+ 1e-03 | 0.998292 | 0.822917 | +0.175375 | [+0.123292,+0.229167] | 0.00048828 | 0.00097609 | 8.016333 | 10.918500 | +2.902167 | 0.999928 | 0.898061 | PASS
+ 3e-03 | 0.994542 | 0.822917 | +0.171625 | [+0.114583,+0.229167] | 0.00048828 | 0.00097609 | 8.059167 | 10.934000 | +2.874833 | 0.999800 | 0.898129 | PASS
+  0.01 | 0.992521 | 0.824479 | +0.168042 | [+0.113583,+0.225542] | 0.00048828 | 0.00097609 | 8.082000 | 10.953000 | +2.871000 | 0.998994 | 0.894744 | PASS
+  0.03 | 0.980354 | 0.825521 | +0.154833 | [+0.103729,+0.209708] | 0.00048828 | 0.00097609 | 8.218333 | 10.954500 | +2.736167 | 0.992362 | 0.893888 | PASS
+   0.1 | 0.947292 | 0.824375 | +0.122917 | [+0.080438,+0.172917] | 0.00048828 | 0.00097609 | 8.667167 | 11.037167 | +2.370000 | 0.974615 | 0.891493 | PASS
+   0.2 | 0.913500 | 0.815313 | +0.098187 | [+0.056792,+0.150083] | 0.00048828 | 0.00097609 | 9.282000 | 11.324833 | +2.042833 | 0.950852 | 0.869898 | PASS
+   0.4 | 0.848021 | 0.781458 | +0.066563 | [+0.024187,+0.114625] | 0.03271484 | 0.01268912 | 10.905667 | 12.360167 | +1.454500 | 0.905714 | 0.803023 | PASS
+   0.8 | 0.737125 | 0.697500 | +0.039625 | [+0.005146,+0.075687] | 0.11328125 | 0.02733041 | 14.607500 | 15.190500 | +0.583000 | 0.800767 | 0.676780 | FAIL
+
+=== PRIMARY PREDECLARED CHECKPOINT ===
+eta = 1e-03
+Mean Precision@8 REAL: 0.998292
+Mean Precision@8 NULL: 0.822917
+Mean delta Precision@8: +0.175375
+95% bootstrap CI: [+0.123292, +0.229167]
+One-sided sign-test p: 0.00048828
+One-sided Wilcoxon p: 0.00097609
+
+C1 mean delta Precision@8 > 0: PASS
+C2 95% bootstrap CI lower bound > 0: PASS
+C3 exact sign-test p < 0.05: PASS
+C4 Wilcoxon p < 0.05: PASS
+
+FINAL v40.1 PRIMARY CHECKPOINT DECISION: PASS
+
+=== ROBUSTNESS ENVELOPE ===
+Largest tested eta satisfying all four Precision@8 gates: 0.4
+
+Interpretation:
+  PASS at the primary checkpoint means the REAL-specific ranked-search
+  advantage survives controlled corruption of the source-side score.
+
+  This experiment does NOT establish robustness to physical quantum-hardware
+  gate noise, decoherence, readout error or finite-shot circuit sampling.
+
+Scope:
+  v40.1 is a classical score-noise robustness experiment on the frozen
+  8Q application model. Hardware-level noise belongs to a later phase.
+
+=== SEED-LEVEL RESULTS AT eta=1e-03 ===
+seed | REAL P@K | NULL P@K | deltaP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | deltaNDCG
+25043000 | 1.000000 | 0.750000 | +0.250000 | 8.000000 | 12.000000 | +4.000000 | 1.000000 | 0.980456 | +0.019544
+25043001 | 1.000000 | 0.750000 | +0.250000 | 8.000000 | 12.000000 | +4.000000 | 1.000000 | 0.690019 | +0.309981
+25043002 | 1.000000 | 1.000000 | +0.000000 | 8.000000 | 8.000000 | +0.000000 | 1.000000 | 0.979418 | +0.020582
+25043003 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 9.000000 | +1.000000 | 1.000000 | 0.960462 | +0.039538
+25043004 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 10.000000 | +2.000000 | 1.000000 | 0.980043 | +0.019957
+25043005 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 9.000000 | +1.000000 | 0.999998 | 0.864639 | +0.135359
+25043006 | 1.000000 | 0.625000 | +0.375000 | 8.000000 | 13.000000 | +5.000000 | 1.000000 | 0.760924 | +0.239076
+25043007 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 11.000000 | +3.000000 | 1.000000 | 0.945568 | +0.054432
+25043008 | 1.000000 | 0.750000 | +0.250000 | 8.000000 | 13.000000 | +5.000000 | 0.999279 | 0.996623 | +0.002656
+25043009 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 11.000000 | +3.000000 | 0.999989 | 0.975744 | +0.024245
+25043010 | 0.979500 | 0.875000 | +0.104500 | 8.196000 | 9.022000 | +0.826000 | 0.999867 | 0.877200 | +0.122667
+25043011 | 1.000000 | 0.750000 | +0.250000 | 8.000000 | 14.000000 | +6.000000 | 1.000000 | 0.765639 | +0.234361

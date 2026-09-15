@@ -1,0 +1,82 @@
+=== Soft Spaces Phase 4 v40.2 HARDWARE-PROXY ROBUSTNESS ===
+Frozen Phase-3 kernel: v30.7 / namespace v30.2
+Qubits: 8
+Hamiltonian terms: 11
+Independent seeds: 25043000 ... 25043011
+Application: -E prominence -> ranked search on +E
+K: 8
+Proxy repetitions per seed/model/depth: 500
+Bootstrap replicates: 200000
+
+Proxy parameters:
+  shots = 4096
+  symmetric readout error = 0.01
+  two-qubit error proxy p2q = 0.00117
+  one-qubit error proxy p1q = 0.000117
+  oneq_per_twoq = 2
+
+Proxy model:
+  source prominence -> monotone probability in [0.05,0.95]
+  accumulated contrast lambda = (1-p2q)^N2q * (1-p1q)^N1q
+  depolarizing contraction toward 0.5
+  symmetric readout error
+  finite-shot binomial sampling
+
+Important:
+  This is NOT a Qiskit/Aer gate-level simulation and NOT a hardware run.
+
+=== DEPTH-SWEEP SUMMARY ===
+N2q | REAL P@K | NULL P@K | deltaP | 95% CI deltaP | sign p | Wilcoxon p | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | decision
+  0 | 0.978688 | 0.825729 | +0.152958 | [+0.103208,+0.207667] | 0.00048828 | 0.00097609 | 8.236167 | 10.955000 | +2.718833 | 0.996787 | 0.892977 | PASS
+ 10 | 0.978917 | 0.825188 | +0.153729 | [+0.103563,+0.208667] | 0.00048828 | 0.00097609 | 8.235500 | 10.954000 | +2.718500 | 0.996705 | 0.893359 | PASS
+ 20 | 0.978021 | 0.825438 | +0.152583 | [+0.102458,+0.207500] | 0.00048828 | 0.00097609 | 8.249167 | 10.960000 | +2.710833 | 0.996382 | 0.893687 | PASS
+ 50 | 0.977646 | 0.825563 | +0.152083 | [+0.102063,+0.207187] | 0.00048828 | 0.00097609 | 8.260000 | 10.959667 | +2.699667 | 0.995764 | 0.893170 | PASS
+100 | 0.976250 | 0.825479 | +0.150771 | [+0.101208,+0.205437] | 0.00048828 | 0.00097609 | 8.280667 | 10.958333 | +2.677667 | 0.994948 | 0.893501 | PASS
+200 | 0.972896 | 0.826437 | +0.146458 | [+0.097958,+0.200687] | 0.00048828 | 0.00097609 | 8.314333 | 10.961833 | +2.647500 | 0.992418 | 0.893411 | PASS
+400 | 0.963146 | 0.826187 | +0.136958 | [+0.090292,+0.190271] | 0.00048828 | 0.00097609 | 8.433833 | 10.977333 | +2.543500 | 0.987598 | 0.895122 | PASS
+
+=== PRIMARY PREDECLARED CHECKPOINT ===
+Equivalent two-qubit depth N2q = 20
+Accumulated contrast lambda = 0.97229699
+Mean Precision@8 REAL: 0.978021
+Mean Precision@8 NULL: 0.825438
+Mean delta Precision@8: +0.152583
+95% bootstrap CI: [+0.102458, +0.207500]
+One-sided sign-test p: 0.00048828
+One-sided Wilcoxon p: 0.00097609
+
+C1 mean delta Precision@8 > 0: PASS
+C2 95% bootstrap CI lower bound > 0: PASS
+C3 exact sign-test p < 0.05: PASS
+C4 Wilcoxon p < 0.05: PASS
+
+FINAL v40.2 PRIMARY CHECKPOINT DECISION: PASS
+
+=== HARDWARE-PROXY ROBUSTNESS ENVELOPE ===
+Largest tested N2q depth satisfying all four Precision@8 gates: 400
+
+Interpretation:
+  PASS means the REAL-specific ranked-search advantage survives this
+  finite-shot/readout/depolarizing hardware proxy at the checkpoint.
+
+  PASS does NOT mean that the application has been demonstrated on
+  IBM Heron or on any real quantum processor.
+
+Scope:
+  v40.2 is a classical hardware-oriented proxy.
+  The next scientific step is an explicit circuit-level Qiskit/Aer model.
+
+=== SEED-LEVEL RESULTS AT N2q=20 ===
+seed | REAL P@K | NULL P@K | deltaP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | deltaNDCG
+25043000 | 0.982500 | 0.771750 | +0.210750 | 8.152000 | 11.998000 | +3.846000 | 0.976436 | 0.957922 | +0.018514
+25043001 | 0.932750 | 0.757750 | +0.175000 | 8.798000 | 12.182000 | +3.384000 | 0.998518 | 0.676016 | +0.322502
+25043002 | 1.000000 | 1.000000 | +0.000000 | 8.000000 | 8.000000 | +0.000000 | 0.999998 | 0.989062 | +0.010936
+25043003 | 0.972250 | 0.875000 | +0.097250 | 8.222000 | 9.000000 | +0.778000 | 0.998137 | 0.960875 | +0.037262
+25043004 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 10.000000 | +2.000000 | 0.995848 | 0.980982 | +0.014866
+25043005 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 9.006000 | +1.006000 | 0.999298 | 0.868274 | +0.131024
+25043006 | 0.997750 | 0.625000 | +0.372750 | 8.018000 | 13.174000 | +5.156000 | 0.991713 | 0.761069 | +0.230644
+25043007 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 10.984000 | +2.984000 | 0.999977 | 0.947900 | +0.052077
+25043008 | 0.969250 | 0.751000 | +0.218250 | 8.260000 | 12.890000 | +4.630000 | 0.998545 | 0.969769 | +0.028776
+25043009 | 0.997500 | 0.874750 | +0.122750 | 8.022000 | 10.988000 | +2.966000 | 0.999715 | 0.975756 | +0.023959
+25043010 | 0.914000 | 0.875000 | +0.039000 | 9.276000 | 9.546000 | +0.270000 | 0.999360 | 0.859591 | +0.139769
+25043011 | 0.970250 | 0.750000 | +0.220250 | 8.242000 | 13.752000 | +5.510000 | 0.999045 | 0.777033 | +0.222013

@@ -1,0 +1,66 @@
+=== Soft Spaces Phase 4 v40.0 APPLICATION SCREENING ===
+Frozen Phase-3 kernel: v30.7 / namespace v30.2
+Qubits: 8
+Hamiltonian terms: 11
+Independent seeds: 25043000 ... 25043011
+Application: -E prominence -> ranked search on +E
+K: 8
+Bootstrap replicates: 200000
+
+Leakage rule:
+  +E target prominence is never used to construct the search order.
+  It is used only after ranking to score Precision@K, recovery effort and NDCG@K.
+
+seed | pairs | REAL P@K | NULL P@K | ΔP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | ΔNDCG
+25043000 |    32 | 1.000 | 0.750 | +0.250 |         8 |        12 |    +4 | 1.000000 | 0.980602 | +0.019398
+25043001 |    32 | 1.000 | 0.750 | +0.250 |         8 |        12 |    +4 | 1.000000 | 0.690019 | +0.309981
+25043002 |     8 | 1.000 | 1.000 | +0.000 |         8 |         8 |    +0 | 1.000000 | 0.978257 | +0.021743
+25043003 |    16 | 1.000 | 0.875 | +0.125 |         8 |         9 |    +1 | 1.000000 | 0.960462 | +0.039538
+25043004 |    16 | 1.000 | 0.875 | +0.125 |         8 |        10 |    +2 | 1.000000 | 0.980043 | +0.019957
+25043005 |    32 | 1.000 | 0.875 | +0.125 |         8 |         9 |    +1 | 1.000000 | 0.864639 | +0.135361
+25043006 |    32 | 1.000 | 0.625 | +0.375 |         8 |        13 |    +5 | 1.000000 | 0.760924 | +0.239076
+25043007 |    16 | 1.000 | 0.875 | +0.125 |         8 |        11 |    +3 | 1.000000 | 0.945568 | +0.054432
+25043008 |    16 | 1.000 | 0.750 | +0.250 |         8 |        13 |    +5 | 0.999279 | 0.996623 | +0.002656
+25043009 |    32 | 1.000 | 0.875 | +0.125 |         8 |        11 |    +3 | 1.000000 | 0.975744 | +0.024256
+25043010 |    32 | 1.000 | 0.875 | +0.125 |         8 |         9 |    +1 | 1.000000 | 0.877200 | +0.122800
+25043011 |    32 | 1.000 | 0.750 | +0.250 |         8 |        14 |    +6 | 1.000000 | 0.765639 | +0.234361
+
+=== AGGREGATE APPLICATION RESULTS ===
+Mean Precision@8 REAL: 1.000000
+Mean Precision@8 NULL: 0.822917
+Mean ΔPrecision@8: +0.177083
+95% bootstrap CI ΔPrecision@8: [+0.125000, +0.229167]
+Precision sign test positive: 11/11; one-sided p=0.00048828
+Precision Wilcoxon W+: 66.000000; one-sided p=0.00097609
+
+Mean target evaluations REAL: 8.000000
+Mean target evaluations NULL: 10.916667
+Mean evaluations saved (NULL-REAL): +2.916667
+95% bootstrap CI evaluations saved: [+1.916667, +4.000000]
+
+Mean NDCG@8 REAL: 0.999940
+Mean NDCG@8 NULL: 0.897977
+Mean ΔNDCG@8: +0.101963
+95% bootstrap CI ΔNDCG@8: [+0.048437, +0.162268]
+NDCG sign test positive: 12/12; one-sided p=0.00024414
+NDCG Wilcoxon W+: 78.000000; one-sided p=0.00048816
+
+=== PREDECLARED APPLICATION GATE ===
+C1 mean ΔPrecision@8 > 0: PASS
+C2 95% bootstrap CI lower bound > 0: PASS
+C3 one-sided exact sign-test p < 0.05: PASS
+C4 one-sided Wilcoxon p < 0.05: PASS
+
+FINAL v40.0 APPLICATION DECISION: PASS
+
+Interpretation:
+  PASS means the frozen REAL structure gives a reproducible ranked-search
+  advantage over the matched NULL control on the independent seed ensemble.
+
+  FAIL means this application should not be promoted as a REAL-specific
+  Soft-Spaces application, even if either model individually beats random search.
+
+Scope:
+  v40.0 is classical application screening on the frozen 8Q physical model.
+  It is not a Qiskit circuit simulation, hardware experiment, or claim of
+  quantum computational advantage.

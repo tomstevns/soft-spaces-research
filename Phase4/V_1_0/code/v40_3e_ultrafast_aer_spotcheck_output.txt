@@ -1,0 +1,19 @@
+=== Soft Spaces Phase 4 v40.3e ULTRAFAST EXPLICIT AER SPOT-CHECK ===
+Seeds: [25043000, 25043001]
+Repetitions per seed/model/CX: 10
+Shots per candidate circuit: 512
+CX levels: (800, 1200)
+p2q=0.00117, p1q=0.000117, readout=0.01
+
+Exploratory spot-check only — no confirmatory PASS/FAIL inference.
+
+CX | REAL P@8 | NULL P@8 | deltaP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | deltaNDCG
+ 800 | 0.818750 | 0.731250 | +0.087500 | 10.150 | 12.350 | +2.200 | 0.957201 | 0.764674 | +0.192527
+1200 | 0.768750 | 0.762500 | +0.006250 | 13.950 | 12.250 | -1.700 | 0.941435 | 0.711080 | +0.230355
+
+Qualitative expectation from v40.3c-fast:
+  CX=800  -> positive but weakened REAL advantage
+  CX=1200 -> near-breakdown / much smaller advantage
+
+If this pattern is reproduced, stop here for the current phase.
+Increase resolution only if the result is contradictory or ambiguous.

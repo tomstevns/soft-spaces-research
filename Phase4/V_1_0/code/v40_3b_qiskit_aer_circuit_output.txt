@@ -1,0 +1,82 @@
+=== Soft Spaces Phase 4 v40.3b QISKIT/AER CIRCUIT-LEVEL TEST ===
+Qiskit version: 2.5.2
+Qiskit Aer version: 0.17.2
+Python version: 3.12.7
+Frozen Phase-3 kernel: v30.7 / namespace v30.2
+Qubits per candidate circuit: 8
+Hamiltonian terms in frozen classical kernel: 11
+Independent seeds: 25043000 ... 25043011
+Application: -E prominence -> circuit readout -> ranked search on +E
+K: 8
+Circuit repetitions per seed/model/CX level: 200
+Shots per candidate circuit: 4096
+Bootstrap replicates: 200000
+
+Aer noise model:
+  one-qubit depolarizing p1q = 0.000117
+  two-qubit depolarizing p2q = 0.00117
+  symmetric readout error = 0.01
+  transpiler optimization level = 0
+
+Circuit encoding:
+  source prominence -> p in [0.05,0.95] -> RY(theta) on q0
+  deliberate paired CX blocks are logically identity in the noiseless circuit
+  q0 is measured with finite shots through the Aer noise model
+
+Scientific scope:
+  Explicit noisy Qiskit/Aer circuit channel: YES
+  Full Hamiltonian/projector quantum implementation: NO
+  Real IBM hardware execution: NO
+
+=== CX-SWEEP SUMMARY ===
+CX | REAL P@K | NULL P@K | deltaP | 95% CI deltaP | sign p | Wilcoxon p | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | decision
+  0 | 0.978021 | 0.825729 | +0.152292 | [+0.101823,+0.207448] | 0.00048828 | 0.00097609 | 8.240417 | 10.937500 | +2.697083 | 0.997178 | 0.893808 | PASS
+ 10 | 0.979427 | 0.825833 | +0.153594 | [+0.104427,+0.208333] | 0.00048828 | 0.00097609 | 8.227083 | 10.956250 | +2.729167 | 0.996880 | 0.893855 | PASS
+ 20 | 0.978333 | 0.825052 | +0.153281 | [+0.102448,+0.208281] | 0.00048828 | 0.00097609 | 8.240000 | 10.965000 | +2.725000 | 0.996834 | 0.893362 | PASS
+ 50 | 0.977031 | 0.825625 | +0.151406 | [+0.101562,+0.206198] | 0.00048828 | 0.00097609 | 8.263333 | 10.952500 | +2.689167 | 0.995909 | 0.893461 | PASS
+100 | 0.975990 | 0.826302 | +0.149688 | [+0.100312,+0.204479] | 0.00048828 | 0.00097609 | 8.266667 | 10.961667 | +2.695000 | 0.995400 | 0.892443 | PASS
+200 | 0.974844 | 0.825990 | +0.148854 | [+0.100208,+0.202500] | 0.00048828 | 0.00097609 | 8.290000 | 10.973333 | +2.683333 | 0.993427 | 0.893593 | PASS
+400 | 0.967292 | 0.825990 | +0.141302 | [+0.093385,+0.195729] | 0.00048828 | 0.00097609 | 8.395833 | 10.977083 | +2.581250 | 0.989044 | 0.893793 | PASS
+
+=== PRIMARY PREDECLARED CHECKPOINT ===
+Total CX gates per candidate circuit = 20
+Mean Precision@8 REAL: 0.978333
+Mean Precision@8 NULL: 0.825052
+Mean delta Precision@8: +0.153281
+95% bootstrap CI: [+0.102448, +0.208281]
+One-sided sign-test p: 0.00048828
+One-sided Wilcoxon p: 0.00097609
+
+C1 mean delta Precision@8 > 0: PASS
+C2 95% bootstrap CI lower bound > 0: PASS
+C3 exact sign-test p < 0.05: PASS
+C4 Wilcoxon p < 0.05: PASS
+
+FINAL v40.3b PRIMARY CHECKPOINT DECISION: PASS
+
+=== QISKIT/AER CIRCUIT ROBUSTNESS ENVELOPE ===
+Largest tested CX count satisfying all four Precision@8 gates: 400
+
+Interpretation:
+  PASS means the REAL-specific ranked-search advantage survives the
+  explicit noisy Qiskit/Aer measurement-channel circuit at this checkpoint.
+
+  It does NOT mean the full Soft-Spaces Hamiltonian/projector model has
+  been executed natively as a quantum algorithm.
+
+  It does NOT mean the result has been demonstrated on IBM hardware.
+
+=== SEED-LEVEL RESULTS AT CX=20 ===
+seed | REAL P@K | NULL P@K | deltaP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | deltaNDCG
+25043000 | 0.984375 | 0.768750 | +0.215625 | 8.135000 | 11.995000 | +3.860000 | 0.983011 | 0.957218 | +0.025793
+25043001 | 0.935625 | 0.756250 | +0.179375 | 8.745000 | 12.165000 | +3.420000 | 0.998618 | 0.677146 | +0.321472
+25043002 | 1.000000 | 1.000000 | +0.000000 | 8.000000 | 8.000000 | +0.000000 | 0.999996 | 0.988702 | +0.011294
+25043003 | 0.966875 | 0.875000 | +0.091875 | 8.265000 | 9.000000 | +0.735000 | 0.998466 | 0.961071 | +0.037396
+25043004 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 10.005000 | +2.005000 | 0.994517 | 0.980801 | +0.013716
+25043005 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 9.015000 | +1.015000 | 0.999209 | 0.867609 | +0.131600
+25043006 | 0.996875 | 0.625000 | +0.371875 | 8.025000 | 13.155000 | +5.130000 | 0.991354 | 0.761480 | +0.229874
+25043007 | 1.000000 | 0.875000 | +0.125000 | 8.000000 | 10.985000 | +2.985000 | 1.000000 | 0.948720 | +0.051280
+25043008 | 0.971250 | 0.750625 | +0.220625 | 8.230000 | 12.950000 | +4.720000 | 0.998508 | 0.966161 | +0.032347
+25043009 | 0.998125 | 0.875000 | +0.123125 | 8.015000 | 10.975000 | +2.960000 | 0.999728 | 0.975754 | +0.023974
+25043010 | 0.912500 | 0.875000 | +0.037500 | 9.260000 | 9.595000 | +0.335000 | 0.999391 | 0.855975 | +0.143416
+25043011 | 0.974375 | 0.750000 | +0.224375 | 8.205000 | 13.740000 | +5.535000 | 0.999206 | 0.779710 | +0.219495

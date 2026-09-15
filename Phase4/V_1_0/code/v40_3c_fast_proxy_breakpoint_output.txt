@@ -1,0 +1,18 @@
+=== Soft Spaces Phase 4 v40.3c-fast BREAKPOINT LOCATOR ===
+Seeds: 25043000 ... 25043003 (4 total)
+Reps: 200
+Shots: 1024
+p2q=0.00117, p1q=0.000117, readout=0.01
+
+SCREENING ONLY — hardware proxy, not explicit Aer confirmation.
+
+CX | contrast lambda | REAL P@8 | NULL P@8 | deltaP | REAL eval | NULL eval | saved | class
+ 800 | 0.325056 | 0.899687 | 0.854531 | +0.045156 | 9.285 | 10.329 | +1.044 | WEAK
+1200 | 0.185326 | 0.858125 | 0.846562 | +0.011563 | 10.574 | 10.727 | +0.154 | NEAR-BREAKDOWN
+2000 | 0.060241 | 0.717656 | 0.728594 | -0.010938 | 15.768 | 14.965 | -0.803 | NEAR-BREAKDOWN
+3000 | 0.014786 | 0.562813 | 0.568281 | -0.005469 | 19.433 | 19.252 | -0.180 | NEAR-BREAKDOWN
+4000 | 0.003629 | 0.516094 | 0.520156 | -0.004062 | 20.356 | 20.139 | -0.218 | NEAR-BREAKDOWN
+6000 | 0.000219 | 0.501719 | 0.502656 | -0.000938 | 20.369 | 20.260 | -0.109 | NEAR-BREAKDOWN
+
+Use the first WEAK/NEAR-BREAKDOWN interval only to choose
+2-3 expensive v40.3b-style Aer confirmation points.

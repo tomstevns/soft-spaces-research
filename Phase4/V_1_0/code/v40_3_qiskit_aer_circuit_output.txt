@@ -1,0 +1,65 @@
+=== Soft Spaces Phase 4 v40.3 QISKIT/AER CIRCUIT-LEVEL TEST ===
+Qiskit version: 2.5.2
+Qiskit Aer version: 0.17.2
+Python version: 3.12.7
+Frozen Phase-3 kernel: v30.7 / namespace v30.2
+Qubits per candidate circuit: 8
+Hamiltonian terms in frozen classical kernel: 11
+Independent seeds: 25043000 ... 25043000
+Application: -E prominence -> circuit readout -> ranked search on +E
+K: 8
+Circuit repetitions per seed/model/CX level: 5
+Shots per candidate circuit: 4096
+Bootstrap replicates: 5000
+
+Aer noise model:
+  one-qubit depolarizing p1q = 0.000117
+  two-qubit depolarizing p2q = 0.00117
+  symmetric readout error = 0.01
+  transpiler optimization level = 0
+
+Circuit encoding:
+  source prominence -> p in [0.05,0.95] -> RY(theta) on q0
+  deliberate paired CX blocks are logically identity in the noiseless circuit
+  q0 is measured with finite shots through the Aer noise model
+
+Scientific scope:
+  Explicit noisy Qiskit/Aer circuit channel: YES
+  Full Hamiltonian/projector quantum implementation: NO
+  Real IBM hardware execution: NO
+
+=== CX-SWEEP SUMMARY ===
+CX | REAL P@K | NULL P@K | deltaP | 95% CI deltaP | sign p | Wilcoxon p | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | decision
+ 20 | 0.975000 | 0.750000 | +0.225000 | [+0.225000,+0.225000] | 0.50000000 | 0.66666667 | 8.200000 | 12.000000 | +3.800000 | 0.950178 | 0.955815 | FAIL
+
+=== PRIMARY PREDECLARED CHECKPOINT ===
+Total CX gates per candidate circuit = 20
+Mean Precision@8 REAL: 0.975000
+Mean Precision@8 NULL: 0.750000
+Mean delta Precision@8: +0.225000
+95% bootstrap CI: [+0.225000, +0.225000]
+One-sided sign-test p: 0.50000000
+One-sided Wilcoxon p: 0.66666667
+
+C1 mean delta Precision@8 > 0: PASS
+C2 95% bootstrap CI lower bound > 0: PASS
+C3 exact sign-test p < 0.05: FAIL
+C4 Wilcoxon p < 0.05: FAIL
+
+FINAL v40.3 PRIMARY CHECKPOINT DECISION: FAIL
+
+=== QISKIT/AER CIRCUIT ROBUSTNESS ENVELOPE ===
+No tested CX count satisfied all four Precision@8 gates.
+
+Interpretation:
+  PASS means the REAL-specific ranked-search advantage survives the
+  explicit noisy Qiskit/Aer measurement-channel circuit at this checkpoint.
+
+  It does NOT mean the full Soft-Spaces Hamiltonian/projector model has
+  been executed natively as a quantum algorithm.
+
+  It does NOT mean the result has been demonstrated on IBM hardware.
+
+=== SEED-LEVEL RESULTS AT CX=20 ===
+seed | REAL P@K | NULL P@K | deltaP | REAL eval | NULL eval | saved | REAL NDCG | NULL NDCG | deltaNDCG
+25043000 | 0.975000 | 0.750000 | +0.225000 | 8.200000 | 12.000000 | +3.800000 | 0.950178 | 0.955815 | -0.005637
