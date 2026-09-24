@@ -1,0 +1,24 @@
+{
+  "version": "v42.0",
+  "status": "PRE-DATA PROTOCOL",
+  "application": "CML",
+  "new_biological_track": true,
+  "inherits_DLBCL_genes_or_thresholds": false,
+  "primary_hypothesis": "Soft-Spaces-derived REAL CML subspace shows greater reproducibility and external transfer than matched NULL.",
+  "external_confirmatory_rule": {
+    "one_primary_endpoint": true,
+    "real_outperforms_null": true,
+    "one_sided_p_lte": 0.05
+  },
+  "planned_versions": [
+    "v42.1 dataset discovery and eligibility audit",
+    "v42.2 preprocessing and classical baselines",
+    "v42.3 Soft-Spaces mapping",
+    "v42.4 internal REAL-vs-NULL",
+    "v42.5 stability",
+    "v42.6 external preparation",
+    "v42.7 preregistered external replication",
+    "v42.8 closure"
+  ],
+  "protocol_sha256": "c77e9efed865c6f89f6e9ae65b7e1ae02beaa5ce8a5a75188f640f7b799ef840"
+}

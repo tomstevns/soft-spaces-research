@@ -1,0 +1,25 @@
+{
+  "version": "v46.1",
+  "status": "FROZEN_BEFORE_GSE14671_SCORING",
+  "dataset": "GSE14671",
+  "max_lost_projector_mass_fraction": 0.01,
+  "max_lost_classifier_weight_fraction": 0.01,
+  "missing_coordinate_rule": "z=0 after cohort standardization",
+  "frozen_top_k": 256,
+  "frozen_rank": 16,
+  "missing_genes": [
+    "PTPN20"
+  ],
+  "lost_projector_mass_fraction": 0.002204177507739407,
+  "lost_classifier_weight_fraction": 0.0012671150214078359,
+  "technical_gate_pass": true,
+  "external_refit": false,
+  "outcome_tuning": false,
+  "protocol_sha256": "9536c2e1e69389eb7c1dedaef7028174647e5ed4925d459576494e5da7e59d4f",
+  "source_sha256": {
+    "v44_5a_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "v45_closure": "2fe8940d7cdce28f08f51fc31bdd23336142f4a80a6191bb5fc2b159f4619a89",
+    "v46_0_manifest": "3a3df421a4d8eb449f7977a35f97d84db2a679e757441d5d37f54ce2620e5588",
+    "gse14671_family_soft": "11fe1a5df5889ff507048ea081c41411f00762c04c719b52a97efaaff854dbd9"
+  }
+}

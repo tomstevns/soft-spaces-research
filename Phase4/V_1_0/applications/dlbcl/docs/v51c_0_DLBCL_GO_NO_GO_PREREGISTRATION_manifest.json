@@ -1,0 +1,29 @@
+{
+  "version": "v51c.0",
+  "status": "FROZEN_BEFORE_EXTERNAL_SCORING",
+  "frozen_panel_genes": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "MMP20",
+    "CKAP2",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "frozen_panel_n": 12,
+  "external_cohorts": [
+    "GSE87371",
+    "GSE159472"
+  ],
+  "cv_splits": 5,
+  "cv_repeats": 20,
+  "null_n": 500,
+  "control_rank_start": 17,
+  "control_rank_end": 2048,
+  "protocol_sha256": "d0854ce575636259a36696c109c12dac9a543c7cc83692c8f7199c4f12fbbde6"
+}

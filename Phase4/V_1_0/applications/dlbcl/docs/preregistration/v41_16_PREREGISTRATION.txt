@@ -1,0 +1,222 @@
+Soft Spaces / DLBCL Phase 4
+v41.16 — PREREGISTERED PLATFORM-COMPATIBLE EXTERNAL REPLICATION
+Frozen before inspecting GSE159472 expression values
+
+DATE
+----
+2026-09-20
+
+BACKGROUND
+----------
+v41.15 was preregistered as a 16-gene external replication on GSE117556.
+The test became TECHNICALLY NON-EVALUABLE because 4/16 frozen coordinates
+were not measurable on GPL14951.
+
+A clearly separate exploratory analysis, v41.15x, used the 12 reproducibly
+measurable coordinates and found strong top-4 gene-eigensubspace transfer:
+
+    REAL S4 = 0.865863
+    NULL mean = 0.632864
+    empirical p = 0.00749925
+
+v41.16 is a NEW confirmatory replication designed prospectively from that
+exploratory result.
+
+PRIMARY REPLICATION COHORT
+--------------------------
+GSE159472
+Organism: Homo sapiens
+Disease context: Diffuse large B-cell lymphoma (DLBCL)
+Reported sample count: 180
+Platform: GPL570 [HG-U133_Plus_2] Affymetrix Human Genome U133 Plus 2.0 Array
+
+Reason for selection BEFORE expression-value inspection:
+1. independent DLBCL study;
+2. 180 samples;
+3. same GPL570 platform family as GSE10846;
+4. therefore technically better matched to the frozen 12-gene panel;
+5. suitable for a label-free geometry replication;
+6. no GSE159472 expression values are to be inspected before this protocol
+   is frozen.
+
+FROZEN DEVELOPMENT REFERENCE
+----------------------------
+Development cohort: GSE10846
+Reference platform: GPL570
+Frozen panel source: v41.15x reduced measurable panel
+Panel size: 12
+
+Frozen 12-gene panel, in fixed order:
+1. DNER
+2. SPIC
+3. TCL1B
+4. MMP20
+5. CKAP2
+6. RNF183
+7. MYOCD
+8. UMODL1
+9. CTAG2
+10. HRK
+11. RGS13
+12. TCL1A
+
+No gene may be added, removed, replaced, or reordered after GSE159472
+expression values are inspected.
+
+MAPPING ELIGIBILITY GATE
+------------------------
+Before calculating any geometry:
+
+- use GPL570 platform annotation only;
+- map probes to gene symbols deterministically;
+- arithmetic mean across multiple probes mapping to the same frozen gene;
+- all 12 frozen genes must be reproducibly measurable in GSE159472.
+
+If fewer than 12 frozen genes are reproducibly measurable:
+    v41.16 = TECHNICALLY NON-EVALUABLE
+
+No reduced-panel rescue is allowed within v41.16.
+Any such analysis would require a separately versioned exploratory protocol.
+
+PREPROCESSING
+-------------
+For GSE10846 and GSE159472 separately:
+
+1. processed expression values as supplied by GEO / existing frozen pipeline;
+2. samples x genes representation;
+3. deterministic probe-to-gene aggregation by arithmetic mean if multiple
+   probes map to the same gene;
+4. cohort-wise z-standardization gene by gene;
+5. no ABC/GCB, outcome, treatment, survival, response, or other disease labels
+   are used in the geometry calculation.
+
+PRIMARY ENDPOINT
+----------------
+Top-4 gene-eigensubspace overlap:
+
+    S4 = || U_ref^T U_ext ||_F^2 / 4
+
+where U_ref and U_ext are the top four eigenvectors of the 12x12 gene
+correlation matrices for GSE10846 and GSE159472.
+
+This is the ONLY confirmatory primary endpoint.
+
+PRIMARY NULL
+------------
+N_NULL = 10,000.
+
+NULL universe:
+- genes measurable in BOTH GSE10846 and GSE159472;
+- rank genes by raw variance in GSE10846 ONLY;
+- retain Top-256;
+- sample 12 genes without replacement for each NULL replicate.
+
+GSE159472 expression magnitude, labels, and outcomes must not influence the
+NULL universe.
+
+PRIMARY DECISION RULE
+---------------------
+v41.16 confirmatory PASS if and only if:
+
+1. REAL S4 > NULL mean; AND
+2. empirical one-sided p <= 0.05
+
+where:
+
+    p = (1 + #{NULL S4 >= REAL S4}) / (1 + N_NULL)
+
+Otherwise:
+- if the mapping gate passed but this rule fails: CONFIRMATORY FAIL;
+- if the mapping gate fails: TECHNICALLY NON-EVALUABLE.
+
+No endpoint substitution, tuning of r, gene removal, normalization change, or
+NULL redefinition is allowed after expression results are viewed.
+
+SECONDARY ENDPOINT
+------------------
+Pairwise gene-correlation structure similarity:
+
+Pearson correlation between the upper triangles of the GSE10846 and GSE159472
+12x12 gene correlation matrices.
+
+Secondary support:
+    REAL > NULL mean AND empirical one-sided p <= 0.05
+
+Secondary outcome does not change the primary PASS/FAIL decision.
+
+EXPLORATORY ENDPOINTS
+---------------------
+Reported but not allowed to determine confirmatory status:
+
+- Top-8 gene-eigensubspace overlap;
+- eigenvalue-profile cosine similarity;
+- individual conserved gene-gene correlations;
+- leave-one-gene-out diagnostics.
+
+LABEL FIREWALL
+--------------
+Until the confirmatory result and SHA records are written:
+
+DO NOT READ OR USE:
+- ABC/GCB/COO labels;
+- treatment labels;
+- response labels;
+- survival or progression data;
+- any phenotype information to tune mapping, normalization, panel, rank, or NULL.
+
+Only sample identifiers and platform metadata required for deterministic matrix
+construction may be read.
+
+INTEGRITY REQUIREMENTS
+----------------------
+Before GSE159472 expression analysis:
+
+1. save this preregistration;
+2. calculate its SHA256;
+3. save the preregistration manifest;
+4. run the integrity lock;
+5. commit the preregistration files to Git.
+
+At execution record SHA256 for:
+- this preregistration;
+- GSE159472 series matrix / processed expression input;
+- GPL570 platform annotation;
+- GSE10846 reference expression;
+- mapping audit;
+- execution script.
+
+MANDATORY OUTPUT
+----------------
+v41_16_mapping_audit.csv
+v41_16_real_metrics.csv
+v41_16_null_metrics.csv
+v41_16_external_replication_summary.txt
+v41_16_external_replication_manifest.json
+
+INTERPRETATION
+--------------
+PASS:
+Independent confirmatory evidence that the prospectively frozen 12-gene
+Soft-Spaces-derived module preserves its top-4 gene-space geometry in
+GSE159472 relative to the prospectively defined matched NULL.
+
+FAIL:
+The frozen top-4 transfer signal did not replicate under the preregistered
+decision rule. The negative result must be retained and must not be repaired
+post hoc.
+
+TECHNICALLY NON-EVALUABLE:
+The frozen 12-gene representation could not be constructed reproducibly on
+GSE159472/GPL570. This is not a biological PASS or FAIL.
+
+SCIENTIFIC LIMITS
+-----------------
+Even a PASS does NOT establish:
+- causal biology;
+- clinical utility;
+- diagnostic approval;
+- superiority to established DLBCL biomarkers;
+- quantum advantage.
+
+It would support only the preregistered external gene-space geometry-transfer
+claim.

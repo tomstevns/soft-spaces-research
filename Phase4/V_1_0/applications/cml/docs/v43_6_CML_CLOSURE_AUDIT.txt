@@ -1,0 +1,58 @@
+Soft Spaces / CML
+v43.6 — CLOSURE AUDIT
+
+STATUS
+------
+CLOSED
+
+INTERNAL RESULTS
+----------------
+v43.2 direct-subspace REAL vs matched random-subspace NULL:
+REAL mean PR-AUC = 0.455122
+NULL mean PR-AUC = 0.387771
+Delta = +0.067352
+Empirical one-sided p = 0.000999001
+STATUS = PASS
+
+REAL mean ROC-AUC = 0.725895
+NULL mean ROC-AUC = 0.684225
+Empirical one-sided p = 0.002997
+
+v43.3 internal subspace stability:
+REAL mean normalized projector overlap = 0.687344
+NULL mean = 0.056782
+Delta = +0.630562
+Empirical one-sided p = 0.000999001
+
+EXTERNAL TRANSPORT
+------------------
+GSE44589 / GPL570:
+after stable Entrez harmonization = 214 / 256 coordinates
+retained projector mass fraction = 0.798870
+STATUS = TECHNICALLY NON-EVALUABLE
+
+GSE236233 / RNA-seq pseudobulk:
+9 CML patients, Lin-CD34+ primary population
+13,616 cells aggregated patient-wise
+193 / 256 coordinates present in all 9 patients
+retained projector mass fraction = 0.715551
+STATUS = TECHNICALLY NON-EVALUABLE
+
+External response performance was NOT evaluated.
+
+CONCLUSION
+----------
+v43 supports an internal direct-subspace signal and strong internal
+resampling stability, but the frozen Top-256 coordinate system was not
+sufficiently cross-platform transportable for a faithful external test.
+
+The external stage is therefore TECHNICALLY NON-EVALUABLE, not a negative
+external predictive result.
+
+v43 does not establish external generalization, clinical utility, causal
+biology, superiority to established biomarkers, or quantum advantage.
+
+NEXT
+----
+v44 starts from an outcome-blind cross-platform transport-aware gene universe
+defined BEFORE supervised subspace construction.

@@ -1,0 +1,61 @@
+{
+  "version": "v47.6",
+  "track": "CML State-Landscape",
+  "status": "CLOSED",
+  "final_conclusion": {
+    "internal_geometric_signal": "SUPPORTED",
+    "internal_resampling_stability": "SUPPORTED",
+    "external_cross_endpoint_replication": "NOT_CONFIRMED"
+  },
+  "v47_3": {
+    "status": "PRIMARY LANDSCAPE SEPARATION PASS",
+    "observed_centroid_distance": 7.877400620660012,
+    "null_mean": 4.2799490287338715,
+    "empirical_one_sided_p": 0.016198380161983803,
+    "primary_pass": true
+  },
+  "v47_4": {
+    "status": "STABILITY PASS",
+    "median_z_null": 2.101031854313865,
+    "positive_z_fraction": 1.0,
+    "fraction_empirical_p_le_0_05": 0.6166666666666667,
+    "median_top256_overlap": 237.0,
+    "median_top256_jaccard": 0.8618181818181818
+  },
+  "v47_5": {
+    "status": "PARSER_ABORT_BEFORE_SCORING",
+    "scientific_result": null,
+    "geometry_constructed": false,
+    "scoring_performed": false
+  },
+  "v47_5b": {
+    "status": "EXTERNAL LANDSCAPE REPLICATION FAIL",
+    "parser_correction_only": true,
+    "scientific_protocol_changed": false,
+    "scientific_protocol_sha256": "18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265",
+    "baseline_n": 135,
+    "post_6w_n": 63,
+    "evaluable_n": 128,
+    "observed_centroid_distance": 3.4317988791528964,
+    "null_mean": 2.526454521209403,
+    "null_z": 1.0403226927223577,
+    "empirical_one_sided_p": 0.142985701429857,
+    "primary_pass": false,
+    "top256_overlap_with_gse130404": 96,
+    "top256_jaccard_with_gse130404": 0.23076923076923078
+  },
+  "no_rescue": true,
+  "future_work_requires_new_hypothesis": true,
+  "closure_sha256": "8480f341bdf207783566b9fdd8246b46a9a05e64b36834383c822816af9f8e0b",
+  "sha256": {
+    "v47_0_protocol": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25",
+    "v47_2_manifest": "338cc3a7cd25a13f5489457837839a02881c2b377d9be9a2534d40399de5ebb0",
+    "v47_3_manifest": "f1b9052fd833b74589d1bdbea27831adc07ee2c85a3b54491d81b9b17281108b",
+    "v47_4_manifest": "558778ffbcb1f759c990af94180afea1a06ada4e46f2ef4811b3cd0ae862d3bc",
+    "v47_5_protocol": "18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265",
+    "v47_5_protocol_manifest": "25a719a982c799dd51be06995ad5ead821186f5b541726751ad433c286fce7c5",
+    "v47_5b_manifest": "6d9e2eff02124a3107d4576c4c84c209fee7e1c3bd4d67c46b0b81b32f0b53ff",
+    "closure": "8480f341bdf207783566b9fdd8246b46a9a05e64b36834383c822816af9f8e0b",
+    "execution_script": "0ba06813b8acf98f454cd77e3898140cdcb2d2cd5181c3485cfcde16e96ffb4f"
+  }
+}

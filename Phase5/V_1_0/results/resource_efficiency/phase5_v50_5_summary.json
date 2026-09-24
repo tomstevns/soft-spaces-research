@@ -1,0 +1,1344 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-23T11:10:47.852130+00:00",
+    "script_version": "v50_5",
+    "python_version": "3.9.7"
+  },
+  "project": "Molecular Quantum Soft Spaces",
+  "phase": "Phase 5",
+  "frozen_methodology": {
+    "candidate_dimension": 36,
+    "geometries": [
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "k_values": [
+      2,
+      4,
+      8,
+      12,
+      16
+    ],
+    "real_score": "|H_ir| / (|H_ii - H_rr| + eps)",
+    "en2_score": "|H_ir|^2 / (|H_ii - H_rr| + eps)",
+    "chemical_accuracy_hartree": 0.001593601437,
+    "ranking_formulas_changed": false
+  },
+  "resource_profiles": [
+    {
+      "method": "REAL",
+      "candidate_dimension": 36,
+      "diagonal_elements_required": 36,
+      "reference_couplings_required": 35,
+      "total_hamiltonian_elements_required": 71,
+      "score_multiplications_per_candidate": 0,
+      "score_divisions_per_candidate": 1,
+      "score_absolute_values_per_candidate": 3,
+      "score_power_operations_per_candidate": 0,
+      "total_candidate_score_evaluations": 36
+    },
+    {
+      "method": "EN2",
+      "candidate_dimension": 36,
+      "diagonal_elements_required": 36,
+      "reference_couplings_required": 35,
+      "total_hamiltonian_elements_required": 71,
+      "score_multiplications_per_candidate": 1,
+      "score_divisions_per_candidate": 1,
+      "score_absolute_values_per_candidate": 3,
+      "score_power_operations_per_candidate": 1,
+      "total_candidate_score_evaluations": 36
+    }
+  ],
+  "ranking_cost_comparison": {
+    "same_hamiltonian_access_count": true,
+    "REAL_hamiltonian_elements": 71,
+    "EN2_hamiltonian_elements": 71,
+    "REAL_candidate_evaluations": 36,
+    "EN2_candidate_evaluations": 36,
+    "interpretation": "As currently defined, REAL and EN2 require the same Hamiltonian access pattern and the same number of candidate score evaluations. REAL uses slightly simpler arithmetic, but v50_5 does not treat that as a meaningful asymptotic resource advantage."
+  },
+  "chemical_accuracy_summary": {
+    "REAL": {
+      "geometries_reaching_threshold": 2,
+      "minimum_k_by_geometry": {
+        "0.75": 12,
+        "1.0": 12,
+        "1.25": null,
+        "1.5": null,
+        "1.75": null,
+        "2.0": null,
+        "2.5": null,
+        "3.0": null
+      },
+      "median_minimum_k_where_reached": 12.0
+    },
+    "EN2": {
+      "geometries_reaching_threshold": 2,
+      "minimum_k_by_geometry": {
+        "0.75": 12,
+        "1.0": 12,
+        "1.25": null,
+        "1.5": null,
+        "1.75": null,
+        "2.0": null,
+        "2.5": null,
+        "3.0": null
+      },
+      "median_minimum_k_where_reached": 12.0
+    }
+  },
+  "geometry_details": {
+    "0.75": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 0.75,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.9895233201344825,
+            "absolute_energy_error_hartree": 0.02474182587142426,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 0.75,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.9895233201344825,
+            "absolute_energy_error_hartree": 0.02474182587142426,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 0.75,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.9940097475542863,
+            "absolute_energy_error_hartree": 0.015001254255438745,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 0.75,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.9940097475542863,
+            "absolute_energy_error_hartree": 0.015001254255438745,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 0.75,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.9982024960051014,
+            "absolute_energy_error_hartree": 0.003779402945477628,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 0.75,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.9982024960051014,
+            "absolute_energy_error_hartree": 0.003779402945477628,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 0.75,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.9998744602061069,
+            "absolute_energy_error_hartree": 0.0003652172858057412,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 0.75,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.9998744602061069,
+            "absolute_energy_error_hartree": 0.0003652172858057412,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 0.75,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.9999308187322746,
+            "absolute_energy_error_hartree": 0.0003057392919032509,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 0.75,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.9999308187322746,
+            "absolute_energy_error_hartree": 0.0003057392919032509,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "1.0": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 1.0,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.971690582215656,
+            "absolute_energy_error_hartree": 0.04388758201131715,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 1.0,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.971690582215656,
+            "absolute_energy_error_hartree": 0.04388758201131715,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 1.0,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.9821448717296386,
+            "absolute_energy_error_hartree": 0.02802556135290324,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 1.0,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.9821448717296386,
+            "absolute_energy_error_hartree": 0.02802556135290324,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 1.0,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.9951834751437886,
+            "absolute_energy_error_hartree": 0.006291003741577761,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 1.0,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.9951834751437886,
+            "absolute_energy_error_hartree": 0.006291003741577761,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 1.0,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.9994173195768107,
+            "absolute_energy_error_hartree": 0.0014134786915480646,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 1.0,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.9994173195768107,
+            "absolute_energy_error_hartree": 0.0014134786915480646,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 1.0,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.9994893852756559,
+            "absolute_energy_error_hartree": 0.001355607391240632,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 1.0,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.9994893852756559,
+            "absolute_energy_error_hartree": 0.001355607391240632,
+            "reaches_chemical_accuracy": true,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "1.25": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 1.25,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.9317380856548569,
+            "absolute_energy_error_hartree": 0.07529603286493014,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 1.25,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.9317380856548569,
+            "absolute_energy_error_hartree": 0.07529603286493014,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 1.25,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.9535040195876149,
+            "absolute_energy_error_hartree": 0.04990342411489701,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 1.25,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.9535040195876149,
+            "absolute_energy_error_hartree": 0.04990342411489701,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 1.25,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.9869880396010996,
+            "absolute_energy_error_hartree": 0.011916099195190544,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 1.25,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.9869880396010996,
+            "absolute_energy_error_hartree": 0.011916099195190544,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 1.25,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.997115917001076,
+            "absolute_energy_error_hartree": 0.0049802593803889295,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 1.25,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.997115917001076,
+            "absolute_energy_error_hartree": 0.0049802593803889295,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 1.25,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.997143082386706,
+            "absolute_energy_error_hartree": 0.0049473096951726525,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 1.25,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.997143082386706,
+            "absolute_energy_error_hartree": 0.0049473096951726525,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "1.5": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 1.5,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.8559369023872634,
+            "absolute_energy_error_hartree": 0.12262947796577883,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 1.5,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.8559369023872634,
+            "absolute_energy_error_hartree": 0.12262947796577883,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 1.5,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.9174323213141788,
+            "absolute_energy_error_hartree": 0.05469293726740476,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 1.5,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.9174323213141788,
+            "absolute_energy_error_hartree": 0.05469293726740476,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 1.5,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.9628448693570406,
+            "absolute_energy_error_hartree": 0.03377238149073758,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 1.5,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.9674685612075882,
+            "absolute_energy_error_hartree": 0.022205022391609486,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 1.5,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.9880826545055476,
+            "absolute_energy_error_hartree": 0.01435751158996501,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 1.5,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.9880826545055474,
+            "absolute_energy_error_hartree": 0.01435751158996501,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 1.5,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.9881070889272136,
+            "absolute_energy_error_hartree": 0.014326408973013738,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 1.5,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.9881070889272136,
+            "absolute_energy_error_hartree": 0.014326408973013738,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "1.75": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 1.75,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.7472168228437248,
+            "absolute_energy_error_hartree": 0.18371661109460602,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 1.75,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.7472168228437248,
+            "absolute_energy_error_hartree": 0.18371661109460602,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 1.75,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.8466304658643315,
+            "absolute_energy_error_hartree": 0.07976468191926855,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 1.75,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.8466304658643315,
+            "absolute_energy_error_hartree": 0.07976468191926855,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 1.75,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.9168087207086189,
+            "absolute_energy_error_hartree": 0.06069520475175816,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 1.75,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.9315310445464681,
+            "absolute_energy_error_hartree": 0.03688601528325863,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 1.75,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.9650654191122027,
+            "absolute_energy_error_hartree": 0.031327587564439874,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 1.75,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.9650654191122028,
+            "absolute_energy_error_hartree": 0.031327587564439874,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 1.75,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.9653481786716743,
+            "absolute_energy_error_hartree": 0.030977959101448516,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 1.75,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.9653481786716743,
+            "absolute_energy_error_hartree": 0.03097795910144585,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "2.0": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 2.0,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.633036891736981,
+            "absolute_energy_error_hartree": 0.25013979860609314,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 2.0,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.633036891736981,
+            "absolute_energy_error_hartree": 0.25013979860609314,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 2.0,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.7632938655664414,
+            "absolute_energy_error_hartree": 0.10905993876387043,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 2.0,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.7632938655664414,
+            "absolute_energy_error_hartree": 0.10905993876387043,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 2.0,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.8534769584472047,
+            "absolute_energy_error_hartree": 0.09367268556880637,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 2.0,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.8838155307056043,
+            "absolute_energy_error_hartree": 0.0518017208346615,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 2.0,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.9279201413719362,
+            "absolute_energy_error_hartree": 0.050291765466877525,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 2.0,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.9279201413719362,
+            "absolute_energy_error_hartree": 0.05029176546687797,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 2.0,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.9286249446047075,
+            "absolute_energy_error_hartree": 0.04314366751365695,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 2.0,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.9286249446047075,
+            "absolute_energy_error_hartree": 0.04314366751365695,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "2.5": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 2.5,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.47369528110172077,
+            "absolute_energy_error_hartree": 0.3654619101993659,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 2.5,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.47369528110172077,
+            "absolute_energy_error_hartree": 0.3654619101993659,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 2.5,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.6288443373787778,
+            "absolute_energy_error_hartree": 0.16520146490922105,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 2.5,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.6288443373787778,
+            "absolute_energy_error_hartree": 0.16520146490922105,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 2.5,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.7381961395082449,
+            "absolute_energy_error_hartree": 0.09865234374870546,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 2.5,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.7381961395082449,
+            "absolute_energy_error_hartree": 0.0986523437487059,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 2.5,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.8498072622812315,
+            "absolute_energy_error_hartree": 0.01047563151326747,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 2.5,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.8498072622812315,
+            "absolute_energy_error_hartree": 0.010475631513266581,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 2.5,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.8507432077220859,
+            "absolute_energy_error_hartree": 0.010475631513264805,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 2.5,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.8507432077220859,
+            "absolute_energy_error_hartree": 0.010475631513265693,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    },
+    "3.0": {
+      "reference_local_index": 0,
+      "per_k": {
+        "2": {
+          "REAL": {
+            "geometry_angstrom": 3.0,
+            "method": "REAL",
+            "k": 2,
+            "captured_probability_mass": 0.4023023518644965,
+            "absolute_energy_error_hartree": 0.43990254629570247,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          },
+          "EN2": {
+            "geometry_angstrom": 3.0,
+            "method": "EN2",
+            "k": 2,
+            "captured_probability_mass": 0.4023023518644965,
+            "absolute_energy_error_hartree": 0.43990254629570247,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.05555555555555555,
+            "determinant_reduction_fraction": 0.9444444444444444,
+            "dense_subspace_dimension": 2,
+            "dense_subspace_elements": 4,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9969135802469136
+          }
+        },
+        "4": {
+          "REAL": {
+            "geometry_angstrom": 3.0,
+            "method": "REAL",
+            "k": 4,
+            "captured_probability_mass": 0.4850840022919847,
+            "absolute_energy_error_hartree": 0.3238843077524569,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          },
+          "EN2": {
+            "geometry_angstrom": 3.0,
+            "method": "EN2",
+            "k": 4,
+            "captured_probability_mass": 0.5595156808221267,
+            "absolute_energy_error_hartree": 0.20407835057894452,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.1111111111111111,
+            "determinant_reduction_fraction": 0.8888888888888888,
+            "dense_subspace_dimension": 4,
+            "dense_subspace_elements": 16,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9876543209876543
+          }
+        },
+        "8": {
+          "REAL": {
+            "geometry_angstrom": 3.0,
+            "method": "REAL",
+            "k": 8,
+            "captured_probability_mass": 0.773464745292027,
+            "absolute_energy_error_hartree": 0.07228520692419016,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          },
+          "EN2": {
+            "geometry_angstrom": 3.0,
+            "method": "EN2",
+            "k": 8,
+            "captured_probability_mass": 0.6743484642193478,
+            "absolute_energy_error_hartree": 0.07975739748714483,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.2222222222222222,
+            "determinant_reduction_fraction": 0.7777777777777778,
+            "dense_subspace_dimension": 8,
+            "dense_subspace_elements": 64,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.9506172839506173
+          }
+        },
+        "12": {
+          "REAL": {
+            "geometry_angstrom": 3.0,
+            "method": "REAL",
+            "k": 12,
+            "captured_probability_mass": 0.801517805918929,
+            "absolute_energy_error_hartree": 0.0016458836291022294,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          },
+          "EN2": {
+            "geometry_angstrom": 3.0,
+            "method": "EN2",
+            "k": 12,
+            "captured_probability_mass": 0.8015178059189291,
+            "absolute_energy_error_hartree": 0.0016458836291035617,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.3333333333333333,
+            "determinant_reduction_fraction": 0.6666666666666667,
+            "dense_subspace_dimension": 12,
+            "dense_subspace_elements": 144,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8888888888888888
+          }
+        },
+        "16": {
+          "REAL": {
+            "geometry_angstrom": 3.0,
+            "method": "REAL",
+            "k": 16,
+            "captured_probability_mass": 0.8020452804701079,
+            "absolute_energy_error_hartree": 0.0016458836291022294,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          },
+          "EN2": {
+            "geometry_angstrom": 3.0,
+            "method": "EN2",
+            "k": 16,
+            "captured_probability_mass": 0.8020452804701079,
+            "absolute_energy_error_hartree": 0.0016458836291026735,
+            "reaches_chemical_accuracy": false,
+            "selected_fraction_of_sector": 0.4444444444444444,
+            "determinant_reduction_fraction": 0.5555555555555556,
+            "dense_subspace_dimension": 16,
+            "dense_subspace_elements": 256,
+            "full_sector_dense_elements": 1296,
+            "dense_element_reduction_fraction": 0.8024691358024691
+          }
+        }
+      }
+    }
+  },
+  "interpretation_boundary": {
+    "claim": "v50_5 tests whether REAL has a practical resource advantage over EN2 under the current implementation.",
+    "important_limit": "Both current scores require the same diagonal and reference-coupling Hamiltonian data. Any future resource advantage would require a different sparse/local estimator or search strategy, which is not introduced here.",
+    "industrial_utility_claim": false
+  }
+}

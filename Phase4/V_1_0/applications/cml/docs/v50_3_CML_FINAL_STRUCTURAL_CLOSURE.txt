@@ -1,0 +1,107 @@
+Soft Spaces / CML
+v50.3 — FINAL STRUCTURAL CLOSURE
+
+STATUS
+------
+CML STRUCTURAL EXPLORATION CLOSED
+
+Protocol SHA: 9bc94fb9c3bd929dfe52faa5211205ca6a421d9de76a96db9de48fccd35c5d97
+
+FINAL TEST QUESTION
+-------------------
+Do the frozen Top-256 panels show unusually concentrated and
+locally coherent change directions compared with structured
+high-variance real-gene controls?
+
+Clinical labels used: NO
+
+PRIMARY RESULTS
+---------------
+GSE130404:
+  observed median concentration: 0.348183061
+  concentration NULL q95:       0.386759378
+  concentration p:              1.000000000
+  concentration gate:           FAIL
+  observed median coherence:    0.416938771
+  coherence NULL q95:           0.439392898
+  coherence p:                  0.257485030
+  coherence gate:               FAIL
+
+GSE44589:
+  observed median concentration: 0.367511286
+  concentration NULL q95:       0.357484281
+  concentration p:              0.001996008
+  concentration gate:           PASS
+  observed median coherence:    0.435513684
+  coherence NULL q95:           0.412282622
+  coherence p:                  0.009980040
+  coherence gate:               PASS
+
+GSE14671:
+  observed median concentration: 0.384547422
+  concentration NULL q95:       0.422850589
+  concentration p:              0.912175649
+  concentration gate:           FAIL
+  observed median coherence:    0.560996436
+  coherence NULL q95:           0.543423253
+  coherence p:                  0.017964072
+  coherence gate:               PASS
+
+v50.1 PRIMARY OVERALL:
+    FAIL
+
+ROBUSTNESS RESULTS
+------------------
+GSE130404:
+  concentration median z:       -1.674558633
+  concentration positive frac:  0.020000000
+  concentration robustness:     FAIL
+  coherence median z:           0.280051497
+  coherence positive frac:      0.590000000
+  coherence robustness:         FAIL
+
+GSE44589:
+  concentration median z:       3.336833373
+  concentration positive frac:  1.000000000
+  concentration robustness:     PASS
+  coherence median z:           1.967201631
+  coherence positive frac:      0.980000000
+  coherence robustness:         PASS
+
+GSE14671:
+  concentration median z:       -0.704557313
+  concentration positive frac:  0.270000000
+  concentration robustness:     FAIL
+  coherence median z:           2.367848490
+  coherence positive frac:      0.910000000
+  coherence robustness:         PASS
+
+v50.2 ROBUSTNESS OVERALL:
+    FAIL
+
+FINAL STRUCTURAL RESULT
+-----------------------
+SPECIAL LOCAL CHANGE-DIRECTION STRUCTURE NOT SUPPORTED
+
+FINAL CML INTERPRETATION
+------------------------
+The CML work has found reproducible statistical structure in
+several analyses, but broad geometric similarity alone was not
+shown to be specific to the frozen Soft-Spaces panels under the
+structured real-gene controls of v49.
+
+The final v50 test did not establish that the frozen panels
+contain special local change-direction structure beyond
+ordinary high-variance real-gene controls.
+
+Accordingly, no distinctive CML Soft-Spaces structural claim
+is established by the present series of tests.
+
+No clinical, causal, dormancy, quantum-biological or quantum-
+advantage claim follows from this work.
+
+NO RESCUE / NO FURTHER CML TUNING
+---------------------------------
+This was prospectively designated the final planned structural
+CML test. The CML structural exploration is closed regardless
+of PASS or FAIL.

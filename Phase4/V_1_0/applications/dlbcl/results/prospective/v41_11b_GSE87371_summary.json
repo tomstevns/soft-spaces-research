@@ -1,0 +1,78 @@
+{
+  "version": "v41.11b-dlbcl-gse87371-metadata-recovery-1",
+  "created_utc": "2026-09-17T14:06:56.720804+00:00",
+  "prospective_audit_preserved": true,
+  "blind_prediction_sha256_expected": "ded619e0f640f4d783e4267f7c75b570298375f8a5708db88d4137b26cfd0289",
+  "blind_prediction_sha256_observed": "ded619e0f640f4d783e4267f7c75b570298375f8a5708db88d4137b26cfd0289",
+  "blind_sha256_match": true,
+  "metadata_fix": {
+    "incorrect_v41_11_source": "!Sample_description#12 descriptive definition row",
+    "corrected_rule": "select only !Sample_characteristics_ch1 row containing actual coo: values",
+    "corrected_source": "!Sample_characteristics_ch1#13",
+    "coo_prefixed_values": 223,
+    "candidate_characteristics_rows": [
+      {
+        "source": "!Sample_characteristics_ch1#13",
+        "coo_prefixed_values": 223
+      }
+    ],
+    "label_counts": {
+      "GCB": 85,
+      "PMBL": 20,
+      "Other": 35,
+      "ABC": 83
+    }
+  },
+  "binary_evaluation": {
+    "n": 168,
+    "GCB": 85,
+    "ABC": 83
+  },
+  "real_external_metrics": {
+    "roc_auc": 0.9562012756909993,
+    "balanced_accuracy": 0.8866761162296244,
+    "accuracy": 0.8869047619047619,
+    "f1": 0.8834355828220859,
+    "tn": 77,
+    "fp": 8,
+    "fn": 11,
+    "tp": 72,
+    "predicted_ABC": 80,
+    "predicted_GCB": 88
+  },
+  "real_training_spectral_topP_abs_fraction": 0.3525639045673531,
+  "null_external_auc": {
+    "mean": 0.7933961729270022,
+    "sd": 0.07262101113428705,
+    "min": 0.5367824238128986,
+    "max": 0.9539333805811481
+  },
+  "null_external_balanced_accuracy": {
+    "mean": 0.7183961729270021,
+    "sd": 0.06474986796946942,
+    "min": 0.5357902197023388,
+    "max": 0.8982990786676116
+  },
+  "null_training_spectral": {
+    "mean": 0.31378324810254965,
+    "sd": 0.005557106557374859,
+    "min": 0.299808120646726,
+    "max": 0.3298697393561333
+  },
+  "real_minus_null_mean": {
+    "roc_auc": 0.16280510276399718,
+    "balanced_accuracy": 0.1682799433026223,
+    "spectral": 0.03878065646480344
+  },
+  "empirical_one_sided_p": {
+    "external_auc": 0.004975124378109453,
+    "external_balanced_accuracy": 0.009950248756218905,
+    "training_spectral": 0.004975124378109453
+  },
+  "interpretation": "Blind predictions were not regenerated after label parsing failure; their preserved SHA256 was verified before scoring.",
+  "outputs": {
+    "resolved_labels": "data\\external\\GSE87371\\metadata\\GSE87371_COO_resolved_v41_11b.csv",
+    "scored_predictions": "results\\prospective\\v41_11b_GSE87371_scored_predictions.csv",
+    "null_metrics": "results\\prospective\\v41_11b_GSE87371_null_metrics.csv"
+  }
+}

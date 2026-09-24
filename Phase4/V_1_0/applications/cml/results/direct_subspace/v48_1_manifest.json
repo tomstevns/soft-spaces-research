@@ -1,0 +1,36 @@
+{
+  "version": "v48.1",
+  "status": "GEOMETRIC INVARIANCE PASS",
+  "clinical_labels_used": false,
+  "classifier_fitted": false,
+  "v47_rescue": false,
+  "top256_overlap": 96,
+  "top256_jaccard": 0.23076923076923078,
+  "observed": {
+    "spectrum_cosine": 0.9941194160924803,
+    "distance_wasserstein": 0.038547990813151134,
+    "anisotropy_wasserstein": 0.01654565900994819,
+    "dev_pca16_cumulative_variance": 0.87139689200314,
+    "ext_pca16_cumulative_variance": 0.8700447567373895,
+    "dev_effective_dimension": 4.304903220990018,
+    "ext_effective_dimension": 3.5019338992465845
+  },
+  "null": {
+    "n": 1000,
+    "seed": 48010001,
+    "spectrum_cosine_q95": 0.5913175932659894,
+    "distance_wasserstein_q05": 0.17261949835453017
+  },
+  "primary": {
+    "p_spectrum": 0.000999000999000999,
+    "p_distance": 0.000999000999000999,
+    "spectrum_gate": true,
+    "distance_gate": true,
+    "primary_pass": true
+  },
+  "protocol_sha256": "540a69b8b6aed42b1d629f8d301f0ebcbed7ade7b82f3b4ba6eee0c3444ead9f",
+  "sha256": {
+    "null_results": "7ddab5c832a34feea5cbbf9e64564300397ea05df98f3578b1c8435c46298be4",
+    "execution_script": "4f5dda7d495e21fd6a84e5dfdc3cd7f9aad53d9760fd711037743263aac07e6e"
+  }
+}

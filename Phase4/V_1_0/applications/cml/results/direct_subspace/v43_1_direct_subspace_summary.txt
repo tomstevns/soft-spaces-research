@@ -1,0 +1,30 @@
+=== Soft Spaces / CML v43.1 DIRECT SUBSPACE RANK SELECTION ===
+
+DESIGN
+------
+Development cohort: GSE130404
+Frozen v42.2 splits reused: YES
+Frozen fold-specific Top-256 pools reused: YES
+Direct projection used: YES
+Feature selection used: NO
+Matched NULL test: NOT YET
+External cohort used: NO
+
+RANK RESULTS
+------------
+r= 4 | PR-AUC 0.438433 [0.127864, 0.792361] | ROC-AUC 0.714363 | BA 0.668713 | Sens 0.645000 | Spec 0.692426
+r= 8 | PR-AUC 0.422072 [0.116125, 0.833333] | ROC-AUC 0.671409 | BA 0.635974 | Sens 0.510000 | Spec 0.761949
+r=16 | PR-AUC 0.455122 [0.118500, 0.892917] | ROC-AUC 0.725895 | BA 0.611924 | Sens 0.353333 | Spec 0.870515
+
+DEVELOPMENT-ONLY SELECTION
+--------------------------
+Selected r: 16
+Selected mean PR-AUC: 0.455122
+Selected mean ROC-AUC: 0.725895
+Selected balanced accuracy: 0.611924
+
+IMPORTANT
+---------
+This is NOT a success claim.
+The selected rank must now be frozen and tested against matched
+random orthonormal subspaces in v43.2.

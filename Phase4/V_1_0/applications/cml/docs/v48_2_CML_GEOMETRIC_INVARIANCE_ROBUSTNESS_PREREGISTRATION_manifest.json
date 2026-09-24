@@ -1,0 +1,23 @@
+{
+  "version": "v48.2",
+  "status": "FROZEN_BEFORE_RESAMPLING",
+  "clinical_labels_used": false,
+  "classifier_fitted": false,
+  "feature_identity_reselected": false,
+  "n_resamples": 200,
+  "dev_subsample_n": 76,
+  "ext_subsample_n": 108,
+  "n_null_per_resample": 50,
+  "master_seed": 48020001,
+  "median_z_threshold": 1.6448536269514722,
+  "positive_fraction_threshold": 0.75,
+  "protocol_sha256": "68ee354d36ac94012c1afb864a55550ec3c9a7de0fcc7e8277b1c3a374301e16",
+  "source_sha256": {
+    "v48_1_manifest": "013df4a6499f85f8cc78850b4f1b2b3faeae314cbd682bde6aab60b02aec05ce",
+    "dev_raw_top256": "7c252008a100430bfb0bfbab11e39337c0c666570db1fb67cb60e70dad82ab1f",
+    "dev_features": "86b8463bda591640b866065aa7eb00b6d6e99dfea337d5642c56fae75d594395",
+    "ext_geometry": "dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943",
+    "ext_features": "496ab41d5df4427ace6fd3ae9bf6e452d95fbdd0136c4e1955ceb7852a10f449",
+    "gse44589_soft": "91e23f84b159c6f8eaf59285de15c6c29b84f8696dc4887b4da9ba559f720c1f"
+  }
+}

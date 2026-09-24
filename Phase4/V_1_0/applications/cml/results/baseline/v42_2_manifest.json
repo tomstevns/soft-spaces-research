@@ -1,0 +1,72 @@
+{
+  "version": "v42.2",
+  "development_cohort": "GSE130404",
+  "samples": 96,
+  "negative_n": 83,
+  "positive_n": 13,
+  "positive_prevalence": 0.13541666666666666,
+  "primary_metric": "PR-AUC",
+  "master_seed": 4202001,
+  "cv": {
+    "n_splits": 5,
+    "n_repeats": 20,
+    "outer_evaluations": 100
+  },
+  "variance_pool": 256,
+  "univariate_k_grid": [
+    8,
+    16,
+    32
+  ],
+  "softspaces_used": false,
+  "entry_condition_satisfied": true,
+  "best_mean_pr_auc": 0.5866766931898512,
+  "best_mean_roc_auc": 0.8479901960784312,
+  "mapping": {
+    "platform": "GPL10558",
+    "mapped_genes": 31426,
+    "annotation_columns": {
+      "id_column": "ID",
+      "symbol_column": "Symbol",
+      "all_columns": [
+        "ID",
+        "Species",
+        "Source",
+        "Search_Key",
+        "Transcript",
+        "ILMN_Gene",
+        "Source_Reference_ID",
+        "RefSeq_ID",
+        "Unigene_ID",
+        "Entrez_Gene_ID",
+        "GI",
+        "Accession",
+        "Symbol",
+        "Protein_Product",
+        "Probe_Id",
+        "Array_Address_Id",
+        "Probe_Type",
+        "Probe_Start",
+        "SEQUENCE",
+        "Chromosome",
+        "Probe_Chr_Orientation",
+        "Probe_Coordinates",
+        "Cytoband",
+        "Definition",
+        "Ontology_Component",
+        "Ontology_Process",
+        "Ontology_Function",
+        "Synonyms",
+        "Obsolete_Probe_Id",
+        "GB_ACC"
+      ]
+    }
+  },
+  "sha256": {
+    "frozen_design": "3d397a9a5edec39c4809abf95daf031960d6f4caf14314492c17f3606b480fe2",
+    "series_matrix": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+    "platform_table": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "execution_script": "5542764abe10ac867e7dda9e8ab617d8ad36960be9376ec5e74248158db61a59"
+  }
+}

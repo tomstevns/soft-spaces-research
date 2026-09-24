@@ -1,0 +1,52 @@
+=== Soft Spaces / CML v47.4 STATE-LANDSCAPE RESAMPLING STABILITY ===
+
+PROTOCOL
+--------
+v47.4 protocol SHA:              a9bf1d80cf872a0ea5f2e8a3a8dded2d9181b59bdc09dfd64bc50df5cb25049c
+Resamples:                       300
+Patients per resample:           76
+GOOD per resample:               66
+POOR per resample:               10
+Permutations per resample:       500
+
+LABEL-BLIND REBUILD
+-------------------
+Top-256 reselected each time:    YES, without labels
+Standardization refit each time: YES, without labels
+PCA-16 refit each time:          YES, without labels
+Classifier fitted:               NO
+
+PRIMARY STABILITY
+-----------------
+Median NULL-z:                    2.101032
+Required median NULL-z:           > 1.644854
+Fraction NULL-z > 0:              1.000000
+Required positive fraction:       >= 0.750000
+
+z q2.5%:                          1.144653
+z q25%:                           1.718549
+z median:                         2.101032
+z q75%:                           2.540755
+z q97.5%:                         3.371466
+
+SECONDARY
+---------
+Median observed distance:         8.097145
+Median NULL mean distance:        4.908488
+Median empirical p:               0.039920
+Fraction empirical p <= 0.05:     0.616667
+Median Top256 overlap / 256:      237.0
+Mean Top256 overlap / 256:        236.863
+Median Top256 Jaccard:            0.861818
+Median PCA16 cumulative variance: 0.881848
+
+v47.4 STATUS: STABILITY PASS
+
+INTERPRETATION LIMIT
+--------------------
+This tests internal resampling robustness of the label-blind
+state-landscape separation within GSE130404.
+
+It is not independent external replication and does not establish
+prediction, prognosis, clinical utility, causality, dormancy
+mechanism, or quantum advantage.

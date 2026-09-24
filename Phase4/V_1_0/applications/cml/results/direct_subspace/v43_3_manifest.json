@@ -1,0 +1,28 @@
+{
+  "version": "v43.3",
+  "development_cohort": "GSE130404",
+  "frozen_r": 16,
+  "n_folds": 100,
+  "n_fold_pairs": 4950,
+  "union_gene_dimension": 360,
+  "stability_metric": "tr(P_i P_j)/r = ||U_i^T U_j||_F^2/r",
+  "real_mean_overlap": 0.687343796177649,
+  "real_median_overlap": 0.687018110555412,
+  "real_q025": 0.5997977670298872,
+  "real_q975": 0.7781729355682658,
+  "same_repeat_mean": 0.6480972041936898,
+  "different_repeat_mean": 0.6889962842611842,
+  "n_null": 1000,
+  "null_mean_overlap": 0.05678152683122618,
+  "delta_real_minus_null": 0.6305622693464228,
+  "empirical_one_sided_p": 0.000999000999000999,
+  "external_used": false,
+  "sha256": {
+    "v43_0_protocol": "f32741ca64d2bc6c015374b0e5e0b25cf5820141d57bd3e5ba8a53a94a097059",
+    "v43_2_manifest": "a5e7cf1c243cf5d9a3789dac5770288212b110ee9bd0588faa40c96641cfb60f",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "series_matrix": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+    "platform_table": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "execution_script": "76978211a05a32148c1bf201b4d18465aaf16619707b35ee39830e3e528d38c4"
+  }
+}

@@ -1,0 +1,208 @@
+Soft Spaces / CML
+v42.1 — DATASET DISCOVERY + ELIGIBILITY AUDIT
+
+STATUS
+------
+PRE-MODELING DATASET AUDIT
+
+No CML expression matrix is modeled in this step.
+
+PURPOSE
+-------
+Identify a biologically meaningful primary CML phenotype and a development /
+external-replication cohort pair suitable for the v42 Soft-Spaces protocol.
+
+PRIMARY TARGET PREFERENCE
+-------------------------
+The preferred v42 target remains treatment response / molecular response rather
+than trivial CML-vs-normal classification.
+
+CANDIDATE DATASETS
+------------------
+
+1. GSE130404
+   Title:
+   Gene expression signature that predicts early molecular response failure
+   in chronic phase CML patients on frontline imatinib.
+
+   Human: YES
+   Disease: chronic-phase CML
+   Reported cohort: 96 patients at diagnosis
+   Primary phenotype candidate:
+       early molecular response (EMR) failure,
+       BCR-ABL1 >10% IS at 3 months
+   Strengths:
+       - clinically meaningful endpoint
+       - diagnosis-time expression
+       - larger modern response-prediction cohort
+       - direct fit with v42.0 phenotype preference
+   Risks / audit items:
+       - verify exact platform and processed matrix
+       - verify class counts
+       - verify independent validation samples / whether they are deposited
+       - ensure outcome labels can be frozen before modeling
+
+2. GSE44589
+   Title:
+   Gene expression-based imatinib response prediction in chronic phase CML.
+
+   Human: YES
+   Disease: CML
+   Reported design:
+       135 patient samples before imatinib
+       63 samples at 6 weeks after starting imatinib
+   Primary phenotype candidate:
+       imatinib response
+   Strengths:
+       - substantial patient count
+       - direct treatment-response framing
+       - pretreatment expression available
+   Risks / audit items:
+       - distinguish unique patients from repeated time points
+       - freeze pretreatment-only analysis if used for prediction
+       - resolve response labels unambiguously
+       - check overlap with any other published cohorts
+
+3. GSE2535
+   Title:
+   Expression data in patients with chronic myelogenous leukemia for response
+   to imatinib.
+
+   Human: YES
+   Disease: CML
+   Explicit design:
+       training set: Leipzig, 8 responders + 5 non-responders
+       validation set: Mannheim, 8 responders + 7 non-responders
+   Platform:
+       Affymetrix HG-U95Av2
+   Strengths:
+       - explicit independent training/validation split
+       - clean response phenotype
+       - historically useful replication dataset
+   Risks:
+       - very small sample size
+       - unsuitable as main development cohort
+   Proposed role:
+       possible external/secondary replication only.
+
+4. GSE14671
+   Title:
+   Expression signature to predict major cytogenetic response in chronic phase
+   CML patients treated with imatinib.
+
+   Human: YES
+   Disease: chronic-phase CML
+   Reported training set:
+       N=36 CD34+ samples
+   Phenotype:
+       major cytogenetic response / cytogenetic resistance after 12 months
+   Strengths:
+       - clinically meaningful response endpoint
+       - purified CD34+ population
+   Risks:
+       - modest sample size
+       - cellular composition differs from bulk blood cohorts
+       - must verify external validation availability
+
+5. GSE236233
+   Title:
+   Single cell multi-omics analysis of chronic myeloid leukemia links cellular
+   heterogeneity to therapy response.
+
+   Human: YES
+   Data type:
+       CITE-seq / single-cell multi-omics
+   Phenotype:
+       molecular response after 12 months of TKI
+   Strengths:
+       - biologically highly relevant
+       - directly addresses persistence / stem-progenitor heterogeneity
+   Risks:
+       - single-cell data require a distinct preprocessing and statistical
+         protocol
+       - pseudoreplication risk
+       - should not be mixed casually with bulk-array v42 development
+   Proposed role:
+       future v43/single-cell branch, not initial v42 bulk-expression track.
+
+EXCLUDED AS PRIMARY HUMAN RESPONSE COHORTS
+------------------------------------------
+GSE120932:
+    K562 / K562-IR cell lines, not patient cohort.
+
+GSE24493:
+    CML cell lines treated with imatinib, not patient cohort.
+
+GSE43754:
+    5 CML + 5 healthy donors, stem/progenitor biology rather than TKI-response;
+    too small for primary response modeling.
+
+GSE33075 / GSE12211:
+    valuable paired treatment-effect studies, but designed primarily around
+    within-patient expression change rather than baseline response prediction.
+
+PROVISIONAL RANKING FOR v42.1 AUDIT
+-----------------------------------
+This ranking is a DATA-SUITABILITY ranking, not a biological result.
+
+Preferred development candidate:
+    GSE130404
+
+Strong alternative development candidate:
+    GSE44589
+
+Potential external / secondary replication:
+    GSE2535
+    GSE14671
+
+Future single-cell branch:
+    GSE236233
+
+IMPORTANT
+---------
+This shortlist does NOT authorize modeling yet.
+
+Before v42.2, we must verify for the preferred pair:
+
+- exact platform(s)
+- actual downloadable sample count
+- response-label definition
+- class balance
+- unique-patient status
+- pre-treatment vs post-treatment samples
+- probe/gene mapping quality
+- whether external cohort is genuinely independent
+- whether all preprocessing can be frozen without inspecting external outcomes
+
+PROVISIONAL PRIMARY BIOLOGICAL QUESTION
+---------------------------------------
+Can a Soft-Spaces-derived baseline expression subspace identify chronic-phase
+CML patients at increased risk of inadequate molecular response to frontline
+TKI treatment, and does that subspace transfer to an independent response
+cohort better than matched NULL?
+
+This question remains provisional until the dataset eligibility audit is
+completed.
+
+STOP RULES
+----------
+Do not proceed to v42.2 if:
+
+- response labels are ambiguous;
+- classes are too small for defensible resampling;
+- development and replication cohorts overlap materially;
+- only post-treatment expression is available for a prediction claim;
+- no independent external cohort can support the frozen representation.
+
+NEXT STEP
+---------
+v42.1a:
+Verify GSE130404 and GSE44589 directly from GEO metadata and downloaded matrix
+headers, WITHOUT fitting a model.
+
+Then freeze:
+- development cohort
+- external cohort
+- primary response endpoint
+- allowed sample subset
+- platform/mapping rules.

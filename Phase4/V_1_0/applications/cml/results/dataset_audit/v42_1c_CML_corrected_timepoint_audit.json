@@ -1,0 +1,2434 @@
+{
+  "version": "v42.1c",
+  "expression_values_used": false,
+  "modeling_performed": false,
+  "correction_of": "v42.1b timepoint classification",
+  "audits": [
+    {
+      "accession": "GSE130404",
+      "n_samples": 96,
+      "response_key": "bcr-abl1 at 3 month",
+      "timepoint_counts": {
+        "BASELINE_DIAGNOSIS": 96
+      },
+      "response_counts": {
+        "<10%": 83,
+        ">10%": 13
+      },
+      "timepoint_by_response": [
+        {
+          "timepoint": "BASELINE_DIAGNOSIS",
+          "response": "<10%",
+          "count": 83
+        },
+        {
+          "timepoint": "BASELINE_DIAGNOSIS",
+          "response": ">10%",
+          "count": 13
+        }
+      ],
+      "rows": [
+        {
+          "geo_accession": "GSM3737693",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737694",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737695",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737696",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737697",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737698",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737699",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737700",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737701",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737702",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737703",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737704",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737705",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737706",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737707",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737708",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737709",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737710",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737711",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737712",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737713",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737714",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737715",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737716",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737717",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737718",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737719",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737720",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737721",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737722",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737723",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737724",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737725",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737726",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737727",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737728",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737729",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737730",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737731",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737732",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737733",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737734",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737735",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737736",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737737",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737738",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737739",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737740",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737741",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737742",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737743",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737744",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737745",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737746",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737747",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737748",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737749",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737750",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737751",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737752",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737753",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737754",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737755",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737756",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737757",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737758",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737759",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737760",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737761",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737762",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737763",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737764",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737765",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737766",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737767",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737768",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737769",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737770",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737771",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737772",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737773",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737774",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737775",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737776",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%"
+        },
+        {
+          "geo_accession": "GSM3737777",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737778",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737779",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737780",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737781",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737782",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737783",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737784",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737785",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737786",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737787",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        },
+        {
+          "geo_accession": "GSM3737788",
+          "source_name": "PB_MNC",
+          "treatment": "",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%"
+        }
+      ]
+    },
+    {
+      "accession": "GSE44589",
+      "n_samples": 198,
+      "response_key": "molecular response",
+      "timepoint_counts": {
+        "BASELINE_PRETREATMENT": 135,
+        "POST_6W": 63
+      },
+      "response_counts": {
+        "none": 89,
+        "MMR": 98,
+        "not available": 11
+      },
+      "timepoint_by_response": [
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "MMR",
+          "count": 69
+        },
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "none",
+          "count": 59
+        },
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "not available",
+          "count": 7
+        },
+        {
+          "timepoint": "POST_6W",
+          "response": "MMR",
+          "count": 29
+        },
+        {
+          "timepoint": "POST_6W",
+          "response": "none",
+          "count": 30
+        },
+        {
+          "timepoint": "POST_6W",
+          "response": "not available",
+          "count": 4
+        }
+      ],
+      "rows": [
+        {
+          "geo_accession": "GSM1087288",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087289",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087290",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087291",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087292",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087293",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087294",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087295",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087296",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087297",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087298",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087299",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087300",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087301",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087302",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087303",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087304",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087305",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087306",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087307",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087308",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087309",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087310",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087311",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087312",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087313",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087314",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087315",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087316",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087317",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087318",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087319",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087320",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087321",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087322",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087323",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087324",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087325",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087326",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087327",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087328",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087329",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087330",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087331",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087332",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087333",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087334",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087335",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087336",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087337",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087338",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087339",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087340",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087341",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087342",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087343",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087344",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087345",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087346",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087347",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087348",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087349",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087350",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087351",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087352",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087353",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087354",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087355",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087356",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087357",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087358",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087359",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087360",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087361",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087362",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087363",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087364",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087365",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087366",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087367",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087368",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087369",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087370",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087371",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087372",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087373",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087374",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087375",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087376",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087377",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087378",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087379",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087380",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087381",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087382",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087383",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087384",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087385",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087386",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087387",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087388",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087389",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087390",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087391",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087392",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087393",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087394",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087395",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087396",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087397",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087398",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087399",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087400",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087401",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087402",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087403",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087404",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087405",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087406",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087407",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087408",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087409",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087410",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087411",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087412",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087413",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087414",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087415",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087416",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087417",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087418",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087419",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087420",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087421",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087422",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087423",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087424",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087425",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087426",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087427",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087428",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087429",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087430",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087431",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087432",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087433",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087434",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087435",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087436",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087437",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087438",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087439",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087440",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087441",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087442",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087443",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087444",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087445",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087446",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087447",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087448",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087449",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087450",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087451",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087452",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087453",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087454",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087455",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087456",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087457",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087458",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087459",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087460",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087461",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        },
+        {
+          "geo_accession": "GSM1087462",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087463",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087464",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087465",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087466",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087467",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087468",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087469",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087470",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087471",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087472",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087473",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087474",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087475",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087476",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087477",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087478",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087479",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087480",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087481",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087482",
+          "source_name": "peripheral whole blood sample after 6 weeks of treatment",
+          "treatment": "imatinib",
+          "timepoint_class": "POST_6W",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087483",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none"
+        },
+        {
+          "geo_accession": "GSM1087484",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR"
+        },
+        {
+          "geo_accession": "GSM1087485",
+          "source_name": "peripheral whole blood sample prior to treatment",
+          "treatment": "prior to treatment",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available"
+        }
+      ]
+    }
+  ]
+}

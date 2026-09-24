@@ -1,0 +1,119 @@
+Soft Spaces / CML
+v47.0 — STATE-LANDSCAPE HYPOTHESIS PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE STATE-LANDSCAPE CONSTRUCTION
+
+PRIMARY HYPOTHESIS
+------------------
+CML molecular states may occupy structured, reproducible low-dimensional
+regions in expression space.
+
+The geometry must be constructed WITHOUT using outcome labels.
+
+ANALYSIS ORDER
+--------------
+1. define the expression coordinate system without outcome labels;
+2. construct a low-dimensional state representation without outcome labels;
+3. quantify local geometry without outcome labels;
+4. freeze the geometry;
+5. only then overlay known clinical labels;
+6. test whether clinical states occupy the geometry non-randomly.
+
+INITIAL COHORT
+--------------
+GSE130404
+
+COORDINATE UNIVERSE
+-------------------
+Use the already-defined v44 transport-aware eligible universe:
+15,890 genes.
+
+FEATURE REDUCTION
+-----------------
+Top 256 genes by raw variance across the full GSE130404 cohort.
+Outcome labels must not be used.
+
+STANDARDIZATION
+---------------
+Per gene:
+z = (x - cohort_mean) / cohort_sd
+with ddof=0.
+
+STATE SPACE
+-----------
+Primary representation:
+PCA, 16 dimensions.
+
+No response labels may be used to fit PCA.
+
+LOCAL GEOMETRY
+--------------
+For each patient in PCA-16 state space compute:
+
+- mean k-nearest-neighbor distance
+- local density proxy = 1 / (mean kNN distance + epsilon)
+- local covariance
+- local anisotropy
+- distance to cohort centroid
+
+Frozen neighborhood size:
+k = 10
+
+LOCAL ANISOTROPY
+----------------
+Within the k-neighbor set:
+anisotropy = lambda_1 / (sum(lambda_i) + epsilon)
+
+LABEL OVERLAY
+-------------
+Clinical labels may be attached only AFTER the geometry matrix has been
+written and SHA-hashed.
+
+PRIMARY LABEL-OVERLAY TEST
+--------------------------
+Observed distance between clinical-group centroids in PCA-16.
+
+Null:
+10,000 random label permutations.
+
+Empirical p:
+(1 + #NULL >= observed) / (1 + 10000)
+
+SECONDARY DESCRIPTIVE TESTS
+---------------------------
+Compare groups on:
+- local density proxy
+- local anisotropy
+- distance to cohort centroid
+
+CLAIM LIMIT
+-----------
+A positive result would support only that independently defined clinical
+groups occupy different regions of a label-blind molecular state geometry.
+
+It would NOT establish:
+- clinical utility
+- diagnosis
+- prognosis
+- causality
+- cancer dormancy mechanism
+- quantum biology
+- quantum advantage
+
+FALSIFICATION
+-------------
+The hypothesis is weakened if:
+- the label-blind geometry is unstable under resampling;
+- group separation is indistinguishable from permutation;
+- local geometry is not reproducible;
+- similar geometry cannot later be reproduced externally.
+
+SEQUENCE
+--------
+v47.0 preregistration
+v47.1 technical input audit, no labels
+v47.2 label-blind PCA-16 landscape
+v47.3 label overlay + permutation test
+v47.4+ stability / external replication only if warranted

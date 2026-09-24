@@ -1,0 +1,19 @@
+{
+  "version": "v42.1",
+  "status": "PRE-MODELING DATASET AUDIT",
+  "preferred_development_candidate": "GSE130404",
+  "alternative_development_candidate": "GSE44589",
+  "external_candidates": [
+    "GSE2535",
+    "GSE14671"
+  ],
+  "future_single_cell_candidate": "GSE236233",
+  "excluded_as_primary_patient_response": [
+    "GSE120932",
+    "GSE24493",
+    "GSE43754"
+  ],
+  "provisional_primary_question": "Can a Soft-Spaces-derived baseline CML expression subspace identify patients at risk of inadequate TKI molecular response and transfer to an independent cohort better than matched NULL?",
+  "modeling_performed": false,
+  "audit_sha256": "14c969ec758f8651668bec3c51b4863f73d5689d5c6f36d8db1d69be00c8273c"
+}

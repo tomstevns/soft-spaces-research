@@ -1,0 +1,26 @@
+[
+  {
+    "method": "REAL",
+    "candidate_dimension": 36,
+    "diagonal_elements_required": 36,
+    "reference_couplings_required": 35,
+    "total_hamiltonian_elements_required": 71,
+    "score_multiplications_per_candidate": 0,
+    "score_divisions_per_candidate": 1,
+    "score_absolute_values_per_candidate": 3,
+    "score_power_operations_per_candidate": 0,
+    "total_candidate_score_evaluations": 36
+  },
+  {
+    "method": "EN2",
+    "candidate_dimension": 36,
+    "diagonal_elements_required": 36,
+    "reference_couplings_required": 35,
+    "total_hamiltonian_elements_required": 71,
+    "score_multiplications_per_candidate": 1,
+    "score_divisions_per_candidate": 1,
+    "score_absolute_values_per_candidate": 3,
+    "score_power_operations_per_candidate": 1,
+    "total_candidate_score_evaluations": 36
+  }
+]

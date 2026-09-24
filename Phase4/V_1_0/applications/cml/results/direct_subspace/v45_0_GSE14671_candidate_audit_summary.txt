@@ -1,0 +1,52 @@
+=== Soft Spaces / CML v45.0 GSE14671 CANDIDATE AUDIT ===
+
+AUDIT TYPE
+----------
+Metadata / candidate audit only
+Frozen v44 model loaded: NO
+Predictive scoring performed: NO
+External outcome tuning performed: NO
+
+DATASET
+-------
+GEO accession: GSE14671
+GEO SAMPLE records: 59
+
+PLATFORM
+--------
+GPL570: 59
+
+SOURCE NAME
+-----------
+CML patient with a complete cytogenetic response (CCyR)  after 12 months of imatinib therapy: 41
+CML patient with >65% Ph-positive metaphases after 12 months of imatinib therapy: 18
+
+SAMPLE TIMING AUDIT
+-------------------
+PRETREATMENT: 0
+POST_TREATMENT: 0
+UNKNOWN: 59
+
+RESPONSE LABEL AUDIT
+--------------------
+RESPONDER: 0
+NON_RESPONDER: 0
+UNKNOWN: 59
+
+Label status: RESPONSE LABEL FOLLOW-UP REQUIRED
+
+TECHNICAL CANDIDACY
+-------------------
+Single-platform >=30-sample candidate: YES
+
+IMPORTANT
+---------
+No assumption is made here about the final v45 response definition.
+The exact GEO sample-specific characteristics must determine the
+outcome mapping before a predictive protocol is frozen.
+
+NEXT
+----
+If metadata confirms a usable pretreatment responder/non-responder
+cohort, freeze v45.1 cross-endpoint external protocol BEFORE
+applying the already-frozen v44 model.

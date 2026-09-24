@@ -1,0 +1,43 @@
+=== Soft Spaces / CML v47.2 LABEL-BLIND STATE LANDSCAPE ===
+
+PROTOCOL
+--------
+v47.0 SHA verified:              3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25
+
+LABEL INTEGRITY
+---------------
+Outcome labels parsed:           NO
+Outcome labels used:             NO
+Predictive classifier fitted:    NO
+
+INPUT
+-----
+Cohort:                          GSE130404
+Platform:                        GPL10558
+Samples:                         96
+Transport-aware universe:        15890
+Measurable eligible genes:       15890
+Label-blind variance Top-K:      256
+
+STATE SPACE
+-----------
+PCA dimensions:                  16
+PCA-16 cumulative variance:      0.871397
+kNN neighborhood k:              10
+
+LOCAL GEOMETRY
+--------------
+Mean kNN distance, cohort mean:  11.440657
+Density proxy, cohort mean:      0.093798
+Local anisotropy, cohort mean:   0.359210
+Centroid distance, cohort mean:  13.980305
+
+GEOMETRY FREEZE
+---------------
+Geometry SHA256:                 44f0eb8670a03540f4ea829387d980135471e7c679754575e8a4e868904677f4
+
+v47.2 STATUS: LABEL-BLIND GEOMETRY FROZEN
+
+NEXT:
+v47.3 may now attach clinical labels and perform the preregistered
+10,000-permutation centroid-separation test.

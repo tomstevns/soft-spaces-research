@@ -1,0 +1,30 @@
+{
+  "protocol_sha256": "7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a",
+  "clinical_labels_used": false,
+  "integrity": {
+    "A": {
+      "gse": "GSE130404",
+      "measurable_n": 15890,
+      "exact_top256_set_match": true,
+      "exact_top256_order_match": true
+    },
+    "B": {
+      "gse": "GSE44589",
+      "measurable_n": 15884,
+      "exact_top256_set_match": true,
+      "exact_top256_order_match": true
+    },
+    "C": {
+      "gse": "GSE14671",
+      "measurable_n": 15884,
+      "exact_top256_set_match": true,
+      "exact_top256_order_match": true
+    }
+  },
+  "control_pool": {
+    "rank_start": 257,
+    "rank_end": 2048,
+    "size": 1792
+  },
+  "status": "PASS"
+}

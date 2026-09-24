@@ -1,0 +1,13 @@
+frozen_rank,frozen_gene,status,probe_ids,n_probes,confirmatory_usable,note
+1,DNER,EXACT,226281_at,1,True,Frozen gene directly measurable on GPL570.
+2,SPIC,EXACT,1553851_at,1,True,Frozen gene directly measurable on GPL570.
+3,TCL1B,EXACT,206413_s_at,1,True,Frozen gene directly measurable on GPL570.
+4,MMP20,EXACT,207599_at,1,True,Frozen gene directly measurable on GPL570.
+5,CKAP2,EXACT,1554264_at|216365_x_at|216412_x_at|216984_x_at|218252_at|230128_at|234366_x_at|234764_x_at|234884_x_at,9,True,Frozen gene directly measurable on GPL570.
+6,RNF183,EXACT,235153_at,1,True,Frozen gene directly measurable on GPL570.
+7,MYOCD,EXACT,229339_at|237206_at,2,True,Frozen gene directly measurable on GPL570.
+8,UMODL1,EXACT,1553183_at,1,True,Frozen gene directly measurable on GPL570.
+9,CTAG2,EXACT,207337_at|215733_x_at,2,True,Frozen gene directly measurable on GPL570.
+10,HRK,EXACT,206864_s_at|206865_at|229552_at|237187_at,4,True,Frozen gene directly measurable on GPL570.
+11,RGS13,EXACT,1568751_at|1568752_s_at|210258_at,3,True,Frozen gene directly measurable on GPL570.
+12,TCL1A,EXACT,209995_s_at|39318_at,2,True,Frozen gene directly measurable on GPL570.

@@ -1,0 +1,99 @@
+{
+  "version": "v50.3",
+  "status": "CML_STRUCTURAL_EXPLORATION_CLOSED",
+  "final_planned_test": true,
+  "clinical_labels_used": false,
+  "primary_pass": false,
+  "robustness_pass": false,
+  "full_support": false,
+  "final_structural_claim": "SPECIAL LOCAL CHANGE-DIRECTION STRUCTURE NOT SUPPORTED",
+  "primary_gates": {
+    "A": {
+      "concentration_pass": false,
+      "coherence_pass": false
+    },
+    "B": {
+      "concentration_pass": true,
+      "coherence_pass": true
+    },
+    "C": {
+      "concentration_pass": false,
+      "coherence_pass": true
+    }
+  },
+  "robustness_gates": {
+    "A": {
+      "median_z_concentration": -1.6745586328398834,
+      "positive_fraction_concentration": 0.02,
+      "concentration_pass": false,
+      "median_z_coherence": 0.28005149737465035,
+      "positive_fraction_coherence": 0.59,
+      "coherence_pass": false
+    },
+    "B": {
+      "median_z_concentration": 3.336833372799094,
+      "positive_fraction_concentration": 1.0,
+      "concentration_pass": true,
+      "median_z_coherence": 1.967201631011637,
+      "positive_fraction_coherence": 0.98,
+      "coherence_pass": true
+    },
+    "C": {
+      "median_z_concentration": -0.7045573134187935,
+      "positive_fraction_concentration": 0.27,
+      "concentration_pass": false,
+      "median_z_coherence": 2.3678484900321966,
+      "positive_fraction_coherence": 0.91,
+      "coherence_pass": true
+    }
+  },
+  "observed": {
+    "A": {
+      "median_concentration": 0.348183061441823,
+      "median_coherence": 0.4169387707006061,
+      "mean_concentration": 0.35920951854062366,
+      "mean_coherence": 0.430649625428855,
+      "pca16_cumulative_variance": 0.8713968920031399,
+      "concentration_null_mean": 0.3733473596930139,
+      "concentration_q95": 0.386759378343293,
+      "concentration_p": 1.0,
+      "coherence_null_mean": 0.40294968480927323,
+      "coherence_q95": 0.439392898186624,
+      "coherence_p": 0.25748502994011974
+    },
+    "B": {
+      "median_concentration": 0.3675112857123393,
+      "median_coherence": 0.43551368444094185,
+      "mean_concentration": 0.3710664646825658,
+      "mean_coherence": 0.44235414174820764,
+      "pca16_cumulative_variance": 0.8700447567373895,
+      "concentration_null_mean": 0.3472117121770588,
+      "concentration_q95": 0.35748428082560835,
+      "concentration_p": 0.001996007984031936,
+      "coherence_null_mean": 0.38205367819684194,
+      "coherence_q95": 0.4122826222396877,
+      "coherence_p": 0.00998003992015968
+    },
+    "C": {
+      "median_concentration": 0.3845474217522614,
+      "median_coherence": 0.5609964359707527,
+      "mean_concentration": 0.39203399651429677,
+      "mean_coherence": 0.5260935045944547,
+      "pca16_cumulative_variance": 0.8608551408961337,
+      "concentration_null_mean": 0.4024124754139187,
+      "concentration_q95": 0.4228505885690428,
+      "concentration_p": 0.9121756487025948,
+      "coherence_null_mean": 0.4788631290005964,
+      "coherence_q95": 0.5434232532424514,
+      "coherence_p": 0.017964071856287425
+    }
+  },
+  "protocol_sha256": "9bc94fb9c3bd929dfe52faa5211205ca6a421d9de76a96db9de48fccd35c5d97",
+  "closure_sha256": "3053f00091db5d4545f34988bd3a988703e9d1717949596c6c009e35a8eef368",
+  "sha256": {
+    "execution_script": "a0b6840f8dd0a6175d3e4561a4f0399c977a984b0a1db35918c3e83a57821d60",
+    "primary_null": "107ae0b85632a1b906aceeab0d1f0c4f403f9f0b24b690e5a5fe627f6ff658e6",
+    "robustness_results": "49617bf5aa9321dcde9145be348158e9bfcb7abe9f4b3fa7eb40940ed5af8e8d",
+    "closure": "3053f00091db5d4545f34988bd3a988703e9d1717949596c6c009e35a8eef368"
+  }
+}

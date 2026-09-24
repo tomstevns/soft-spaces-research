@@ -1,0 +1,24 @@
+=== Soft Spaces / CML v44.1b FULL TRANSPORT-AWARE GENE UNIVERSE ===
+
+OUTCOME BLIND
+-------------
+External response outcomes used: NO
+
+UNIVERSE COUNTS
+---------------
+Development GPL10558 symbols:              31432
+Resolvable on GPL570:                     20225
+Present in all 9 GSE236233 feature sets:  16769
+Final cross-platform eligible universe:   15890
+
+Minimum required for v44 Top-256 design:  256
+
+v44.1b STATUS: PASS TO v44.2
+
+RULE
+----
+Eligible means BOTH:
+1. resolvable on GPL570 by exact symbol or one stable Entrez ID;
+2. present in all 9 GSE236233 Lin-CD34+ feature tables.
+
+No external response outcome was used.

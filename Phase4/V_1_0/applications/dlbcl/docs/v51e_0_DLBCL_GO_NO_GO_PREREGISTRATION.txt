@@ -1,0 +1,120 @@
+Soft Spaces / DLBCL
+v51e.0 — HARD GO/NO-GO DISCRIMINATOR PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE EXTERNAL SCORING
+
+PARSER-ONLY REVISION
+--------------------
+v51b, v51c and v51d all stopped before scientific scoring.
+
+The v51d audit showed that GSE87371 stores the germinal-center category as:
+    coo: GC
+rather than:
+    coo: GCB
+
+v51e changes ONLY this metadata mapping:
+
+    coo: ABC -> ABC
+    coo: GC  -> GCB class
+    coo: GCB -> GCB class
+
+PMBL and Other remain excluded.
+
+The frozen 12-gene panel, cohorts, CV, classifier, NULL construction,
+NULL count and PASS thresholds are unchanged.
+
+PURPOSE
+-------
+Determine whether DLBCL behaves materially differently from the CML result.
+
+FROZEN DLBCL PANEL
+------------------
+Panel size:
+    12
+
+Genes:
+    DNER, SPIC, TCL1B, MMP20, CKAP2, RNF183, MYOCD, UMODL1, CTAG2, HRK, RGS13, TCL1A
+
+Panel source artifacts:
+    v41_16_PREREGISTRATION_manifest.json :: /frozen_panel
+    v41_16_external_replication_manifest.json :: /frozen_panel
+    v41_16_mapping_audit.csv :: frozen_gene
+
+EXTERNAL COHORTS
+----------------
+1. GSE87371
+2. GSE159472
+
+BIOLOGICAL LABEL
+----------------
+ABC vs GCB only.
+
+No treatment-response endpoint is used.
+
+PRIMARY TEST
+------------
+Within EACH external cohort:
+
+1. Use the already-frozen DLBCL panel with no gene substitution.
+2. Keep only samples with unambiguous ABC or GCB label.
+3. Use RepeatedStratifiedKFold:
+       5 folds x 20 repeats
+4. Train-fold StandardScaler only.
+5. Balanced L2 logistic regression.
+6. Primary metric:
+       mean ROC-AUC across all frozen CV folds.
+
+STRUCTURED REAL-GENE NULL
+-------------------------
+Within each cohort:
+
+1. reconstruct all fully measurable genes
+2. rank genes by raw variance WITHOUT labels
+3. exclude the frozen panel genes
+4. control pool = variance ranks
+       17..2048
+   after exclusion
+5. draw panels of exactly 12 REAL genes
+6. use same patients, same CV folds, same scaler/classifier
+7. preserve real gene covariance
+
+NULL panels per cohort:
+    500
+
+PER-COHORT PASS
+---------------
+Frozen-panel mean ROC-AUC:
+    > structured NULL q95
+AND
+    empirical p <= 0.05
+
+OVERALL GO/NO-GO RULE
+---------------------
+DLBCL DISTINCTIVE SIGNAL SUPPORTED
+
+ONLY IF BOTH external cohorts PASS.
+
+Otherwise:
+    DLBCL DISTINCTIVE SIGNAL NOT SUPPORTED
+
+NO RESCUE
+---------
+No post-hoc:
+- panel substitution
+- gene deletion
+- feature-count change
+- endpoint change
+- classifier change
+- CV change
+- control-pool change
+- threshold change
+
+CLAIM LIMIT
+-----------
+A PASS would mean only that the already-frozen DLBCL panel separates ABC/GCB
+more strongly than matched high-variance real-gene controls in both external
+cohorts under this frozen test.
+
+It would not establish clinical utility or causal biology.

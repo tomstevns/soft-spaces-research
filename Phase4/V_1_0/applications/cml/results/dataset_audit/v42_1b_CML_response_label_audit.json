@@ -1,0 +1,2423 @@
+{
+  "version": "v42.1b",
+  "expression_values_used": false,
+  "modeling_performed": false,
+  "audits": [
+    {
+      "accession": "GSE130404",
+      "n_samples": 96,
+      "response_key": "bcr-abl1 at 3 month",
+      "stage_key": "disease stage",
+      "response_counts": {
+        "<10%": 83,
+        ">10%": 13
+      },
+      "stage_counts": {
+        "diagnostic chronic phase": 96
+      },
+      "timepoint_counts": {
+        "BASELINE_DIAGNOSIS": 96
+      },
+      "timepoint_by_response": [
+        {
+          "timepoint": "BASELINE_DIAGNOSIS",
+          "response": "<10%",
+          "count": 83
+        },
+        {
+          "timepoint": "BASELINE_DIAGNOSIS",
+          "response": ">10%",
+          "count": 13
+        }
+      ],
+      "sample_rows": [
+        {
+          "geo_accession": "GSM3737693",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737694",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737695",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737696",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737697",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737698",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737699",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737700",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737701",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737702",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737703",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737704",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737705",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737706",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737707",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737708",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737709",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737710",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737711",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737712",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737713",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737714",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737715",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737716",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737717",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737718",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737719",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737720",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737721",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737722",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737723",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737724",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737725",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737726",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737727",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737728",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737729",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737730",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737731",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737732",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737733",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737734",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737735",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737736",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737737",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737738",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737739",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737740",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737741",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737742",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737743",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737744",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737745",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737746",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737747",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737748",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737749",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737750",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737751",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737752",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737753",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737754",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737755",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737756",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737757",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737758",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737759",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737760",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737761",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737762",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737763",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737764",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737765",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737766",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737767",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737768",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737769",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737770",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737771",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737772",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737773",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737774",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737775",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737776",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": "<10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737777",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737778",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737779",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737780",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737781",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737782",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737783",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737784",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737785",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737786",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737787",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        },
+        {
+          "geo_accession": "GSM3737788",
+          "timepoint_class": "BASELINE_DIAGNOSIS",
+          "response_key": "bcr-abl1 at 3 month",
+          "response_value": ">10%",
+          "stage_key": "disease stage",
+          "stage_value": "diagnostic chronic phase"
+        }
+      ]
+    },
+    {
+      "accession": "GSE44589",
+      "n_samples": 198,
+      "response_key": "molecular response",
+      "stage_key": null,
+      "response_counts": {
+        "none": 89,
+        "MMR": 98,
+        "not available": 11
+      },
+      "stage_counts": {},
+      "timepoint_counts": {
+        "BASELINE_PRETREATMENT": 198
+      },
+      "timepoint_by_response": [
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "MMR",
+          "count": 98
+        },
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "none",
+          "count": 89
+        },
+        {
+          "timepoint": "BASELINE_PRETREATMENT",
+          "response": "not available",
+          "count": 11
+        }
+      ],
+      "sample_rows": [
+        {
+          "geo_accession": "GSM1087288",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087289",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087290",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087291",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087292",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087293",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087294",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087295",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087296",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087297",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087298",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087299",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087300",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087301",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087302",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087303",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087304",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087305",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087306",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087307",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087308",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087309",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087310",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087311",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087312",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087313",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087314",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087315",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087316",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087317",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087318",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087319",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087320",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087321",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087322",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087323",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087324",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087325",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087326",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087327",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087328",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087329",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087330",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087331",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087332",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087333",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087334",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087335",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087336",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087337",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087338",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087339",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087340",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087341",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087342",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087343",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087344",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087345",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087346",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087347",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087348",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087349",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087350",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087351",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087352",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087353",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087354",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087355",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087356",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087357",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087358",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087359",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087360",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087361",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087362",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087363",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087364",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087365",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087366",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087367",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087368",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087369",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087370",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087371",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087372",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087373",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087374",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087375",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087376",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087377",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087378",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087379",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087380",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087381",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087382",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087383",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087384",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087385",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087386",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087387",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087388",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087389",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087390",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087391",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087392",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087393",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087394",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087395",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087396",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087397",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087398",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087399",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087400",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087401",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087402",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087403",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087404",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087405",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087406",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087407",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087408",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087409",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087410",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087411",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087412",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087413",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087414",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087415",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087416",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087417",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087418",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087419",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087420",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087421",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087422",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087423",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087424",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087425",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087426",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087427",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087428",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087429",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087430",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087431",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087432",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087433",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087434",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087435",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087436",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087437",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087438",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087439",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087440",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087441",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087442",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087443",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087444",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087445",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087446",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087447",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087448",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087449",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087450",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087451",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087452",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087453",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087454",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087455",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087456",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087457",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087458",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087459",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087460",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087461",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087462",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087463",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087464",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087465",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087466",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087467",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087468",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087469",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087470",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087471",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087472",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087473",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087474",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087475",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087476",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087477",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087478",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087479",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087480",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087481",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087482",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087483",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "none",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087484",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "MMR",
+          "stage_key": "",
+          "stage_value": ""
+        },
+        {
+          "geo_accession": "GSM1087485",
+          "timepoint_class": "BASELINE_PRETREATMENT",
+          "response_key": "molecular response",
+          "response_value": "not available",
+          "stage_key": "",
+          "stage_value": ""
+        }
+      ]
+    }
+  ]
+}

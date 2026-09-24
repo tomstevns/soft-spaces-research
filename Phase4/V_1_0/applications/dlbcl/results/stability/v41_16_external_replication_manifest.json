@@ -1,0 +1,99 @@
+{
+  "version": "v41.16",
+  "status": "FAIL",
+  "primary_pass": false,
+  "secondary_support": false,
+  "development_cohort": "GSE10846",
+  "external_cohort": "GSE159472",
+  "platform": "GPL570",
+  "panel_size": 12,
+  "frozen_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "MMP20",
+    "CKAP2",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "primary_endpoint": "top4_gene_eigensubspace_overlap",
+  "n_null": 10000,
+  "seed": 4116001,
+  "primary_decision_rule": {
+    "real_gt_null_mean": true,
+    "empirical_one_sided_p_lte": 0.05
+  },
+  "external_labels_used": false,
+  "metrics": {
+    "top4_eigensubspace_overlap": {
+      "real": 0.6897587133533098,
+      "null": {
+        "mean": 0.5612963962466588,
+        "sd": 0.09199635646602687,
+        "median": 0.5595149989929549,
+        "q025": 0.3823201831402594,
+        "q975": 0.7434634953750018,
+        "min": 0.249931002599201,
+        "max": 0.9252396600789543
+      },
+      "real_minus_null_mean": 0.12846231710665101,
+      "empirical_one_sided_p": 0.07849215078492151
+    },
+    "corr_structure_similarity": {
+      "real": 0.6191144365625277,
+      "null": {
+        "mean": 0.42582038155414476,
+        "sd": 0.1862307683316625,
+        "median": 0.4429007531954674,
+        "q025": 0.02101594755542427,
+        "q975": 0.7397642241352247,
+        "min": -0.24559902429291106,
+        "max": 0.9232323754995196
+      },
+      "real_minus_null_mean": 0.19329405500838298,
+      "empirical_one_sided_p": 0.1506849315068493
+    },
+    "top8_eigensubspace_overlap": {
+      "real": 0.8235170364194729,
+      "null": {
+        "mean": 0.7689391733430134,
+        "sd": 0.04735461224659224,
+        "median": 0.7678219725780359,
+        "q025": 0.677555257666684,
+        "q975": 0.8639154239423009,
+        "min": 0.594618467326353,
+        "max": 0.9406305002998678
+      },
+      "real_minus_null_mean": 0.05457786307645951,
+      "empirical_one_sided_p": 0.12428757124287572
+    },
+    "eigenvalue_profile_cosine": {
+      "real": 0.9968450833862595,
+      "null": {
+        "mean": 0.9926918966031771,
+        "sd": 0.0063998058952746545,
+        "median": 0.9945703782523054,
+        "q025": 0.9755557664222556,
+        "q975": 0.9987981897305389,
+        "min": 0.930275316624458,
+        "max": 0.9998058063173966
+      },
+      "real_minus_null_mean": 0.004153186783082408,
+      "empirical_one_sided_p": 0.24627537246275372
+    }
+  },
+  "sha256": {
+    "preregistration": "00f27acd8c4b3bc8fcdd58368235f1bb8538588aa8e9c40720eb885d9b555505",
+    "mapping_audit": "ac3f0e73266c9dc208026d5c76edffd61b12edf9a9d882bb781099026d52522c",
+    "prepare_manifest": "2f10f0e88596e573b644ee93d084889e2700742e934333db72787a49a091583b",
+    "GSE10846_expression": "35f89121b2d39f1d3ca05338650359f99f15024e3f2f20232089325fa6f9c264",
+    "GSE159472_series_matrix": "4bc5753ad3168179f77aa6437e34bff72ae2bc64418b084c647772398cd8bd84",
+    "GPL570_platform_table": "62c986ce39e7292ed92bbf3e932523c037ae2d62d94afe260c28a914749ecd87",
+    "execution_script": "c829f5616aef69766c99c52386dae60b21de1e53d8a38dd31338b1651374ad0a"
+  }
+}

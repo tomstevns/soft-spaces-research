@@ -1,0 +1,2579 @@
+{
+  "version": "v42.1a",
+  "modeling_performed": false,
+  "softspaces_scoring_performed": false,
+  "classifier_training_performed": false,
+  "datasets": [
+    {
+      "accession": "GSE130404",
+      "role": "preferred_development_candidate",
+      "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE130404\\raw\\GSE130404_series_matrix.txt.gz",
+      "matrix_sha256": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+      "expected_sample_count": 96,
+      "observed_sample_count": 96,
+      "sample_count_matches_expectation": true,
+      "expected_platform": "GPL10558",
+      "observed_platform_ids": [
+        "GPL10558"
+      ],
+      "platform_matches_expectation": true,
+      "n_expression_rows": 47323,
+      "n_values_first_expression_row": 96,
+      "matrix_shape_consistent": true,
+      "metadata_relevant_hits": [
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 3,
+          "matched_terms": [
+            "chronic phase"
+          ],
+          "example_values": [
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase",
+            "disease stage: diagnostic chronic phase"
+          ],
+          "n_unique": 1
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 4,
+          "matched_terms": [
+            "BCR-ABL",
+            "month"
+          ],
+          "example_values": [
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%",
+            "bcr-abl1 at 3 month: <10%"
+          ],
+          "n_unique": 2
+        }
+      ],
+      "metadata_summary": {
+        "!Sample_title": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 96,
+            "value_counts": [
+              {
+                "value": "100",
+                "count": 1
+              },
+              {
+                "value": "105",
+                "count": 1
+              },
+              {
+                "value": "107",
+                "count": 1
+              },
+              {
+                "value": "11",
+                "count": 1
+              },
+              {
+                "value": "113",
+                "count": 1
+              },
+              {
+                "value": "116",
+                "count": 1
+              },
+              {
+                "value": "117",
+                "count": 1
+              },
+              {
+                "value": "118",
+                "count": 1
+              },
+              {
+                "value": "119",
+                "count": 1
+              },
+              {
+                "value": "120",
+                "count": 1
+              },
+              {
+                "value": "121",
+                "count": 1
+              },
+              {
+                "value": "122",
+                "count": 1
+              },
+              {
+                "value": "123",
+                "count": 1
+              },
+              {
+                "value": "125",
+                "count": 1
+              },
+              {
+                "value": "127",
+                "count": 1
+              },
+              {
+                "value": "129",
+                "count": 1
+              },
+              {
+                "value": "130",
+                "count": 1
+              },
+              {
+                "value": "131",
+                "count": 1
+              },
+              {
+                "value": "132",
+                "count": 1
+              },
+              {
+                "value": "133",
+                "count": 1
+              },
+              {
+                "value": "134",
+                "count": 1
+              },
+              {
+                "value": "136",
+                "count": 1
+              },
+              {
+                "value": "139",
+                "count": 1
+              },
+              {
+                "value": "140",
+                "count": 1
+              },
+              {
+                "value": "142",
+                "count": 1
+              },
+              {
+                "value": "146",
+                "count": 1
+              },
+              {
+                "value": "147",
+                "count": 1
+              },
+              {
+                "value": "148",
+                "count": 1
+              },
+              {
+                "value": "149",
+                "count": 1
+              },
+              {
+                "value": "150",
+                "count": 1
+              },
+              {
+                "value": "152",
+                "count": 1
+              },
+              {
+                "value": "153",
+                "count": 1
+              },
+              {
+                "value": "154",
+                "count": 1
+              },
+              {
+                "value": "156",
+                "count": 1
+              },
+              {
+                "value": "158",
+                "count": 1
+              },
+              {
+                "value": "16",
+                "count": 1
+              },
+              {
+                "value": "161",
+                "count": 1
+              },
+              {
+                "value": "165",
+                "count": 1
+              },
+              {
+                "value": "166",
+                "count": 1
+              },
+              {
+                "value": "167",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_geo_accession": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 96,
+            "value_counts": [
+              {
+                "value": "GSM3737693",
+                "count": 1
+              },
+              {
+                "value": "GSM3737694",
+                "count": 1
+              },
+              {
+                "value": "GSM3737695",
+                "count": 1
+              },
+              {
+                "value": "GSM3737696",
+                "count": 1
+              },
+              {
+                "value": "GSM3737697",
+                "count": 1
+              },
+              {
+                "value": "GSM3737698",
+                "count": 1
+              },
+              {
+                "value": "GSM3737699",
+                "count": 1
+              },
+              {
+                "value": "GSM3737700",
+                "count": 1
+              },
+              {
+                "value": "GSM3737701",
+                "count": 1
+              },
+              {
+                "value": "GSM3737702",
+                "count": 1
+              },
+              {
+                "value": "GSM3737703",
+                "count": 1
+              },
+              {
+                "value": "GSM3737704",
+                "count": 1
+              },
+              {
+                "value": "GSM3737705",
+                "count": 1
+              },
+              {
+                "value": "GSM3737706",
+                "count": 1
+              },
+              {
+                "value": "GSM3737707",
+                "count": 1
+              },
+              {
+                "value": "GSM3737708",
+                "count": 1
+              },
+              {
+                "value": "GSM3737709",
+                "count": 1
+              },
+              {
+                "value": "GSM3737710",
+                "count": 1
+              },
+              {
+                "value": "GSM3737711",
+                "count": 1
+              },
+              {
+                "value": "GSM3737712",
+                "count": 1
+              },
+              {
+                "value": "GSM3737713",
+                "count": 1
+              },
+              {
+                "value": "GSM3737714",
+                "count": 1
+              },
+              {
+                "value": "GSM3737715",
+                "count": 1
+              },
+              {
+                "value": "GSM3737716",
+                "count": 1
+              },
+              {
+                "value": "GSM3737717",
+                "count": 1
+              },
+              {
+                "value": "GSM3737718",
+                "count": 1
+              },
+              {
+                "value": "GSM3737719",
+                "count": 1
+              },
+              {
+                "value": "GSM3737720",
+                "count": 1
+              },
+              {
+                "value": "GSM3737721",
+                "count": 1
+              },
+              {
+                "value": "GSM3737722",
+                "count": 1
+              },
+              {
+                "value": "GSM3737723",
+                "count": 1
+              },
+              {
+                "value": "GSM3737724",
+                "count": 1
+              },
+              {
+                "value": "GSM3737725",
+                "count": 1
+              },
+              {
+                "value": "GSM3737726",
+                "count": 1
+              },
+              {
+                "value": "GSM3737727",
+                "count": 1
+              },
+              {
+                "value": "GSM3737728",
+                "count": 1
+              },
+              {
+                "value": "GSM3737729",
+                "count": 1
+              },
+              {
+                "value": "GSM3737730",
+                "count": 1
+              },
+              {
+                "value": "GSM3737731",
+                "count": 1
+              },
+              {
+                "value": "GSM3737732",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_status": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Public on May 29 2019",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_submission_date": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Apr 27 2019",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_last_update_date": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "May 29 2019",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_type": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "RNA",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_channel_count": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "1",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_source_name_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "PB_MNC",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_organism_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Homo sapiens",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_characteristics_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "gender: Male",
+                "count": 58
+              },
+              {
+                "value": "gender: Female",
+                "count": 38
+              }
+            ]
+          },
+          {
+            "occurrence": 2,
+            "n_values": 96,
+            "unique_values": 51,
+            "value_counts": [
+              {
+                "value": "age: 47",
+                "count": 6
+              },
+              {
+                "value": "age: 32",
+                "count": 5
+              },
+              {
+                "value": "age: 50",
+                "count": 4
+              },
+              {
+                "value": "age: 51",
+                "count": 4
+              },
+              {
+                "value": "age: 63",
+                "count": 4
+              },
+              {
+                "value": "age: 34",
+                "count": 3
+              },
+              {
+                "value": "age: 39",
+                "count": 3
+              },
+              {
+                "value": "age: 40",
+                "count": 3
+              },
+              {
+                "value": "age: 58",
+                "count": 3
+              },
+              {
+                "value": "age: 61",
+                "count": 3
+              },
+              {
+                "value": "age: 66",
+                "count": 3
+              },
+              {
+                "value": "age: 67",
+                "count": 3
+              },
+              {
+                "value": "age: 18",
+                "count": 2
+              },
+              {
+                "value": "age: 23",
+                "count": 2
+              },
+              {
+                "value": "age: 24",
+                "count": 2
+              },
+              {
+                "value": "age: 31",
+                "count": 2
+              },
+              {
+                "value": "age: 36",
+                "count": 2
+              },
+              {
+                "value": "age: 38",
+                "count": 2
+              },
+              {
+                "value": "age: 42",
+                "count": 2
+              },
+              {
+                "value": "age: 46",
+                "count": 2
+              },
+              {
+                "value": "age: 49",
+                "count": 2
+              },
+              {
+                "value": "age: 52",
+                "count": 2
+              },
+              {
+                "value": "age: 56",
+                "count": 2
+              },
+              {
+                "value": "age: 57",
+                "count": 2
+              },
+              {
+                "value": "age: 69",
+                "count": 2
+              },
+              {
+                "value": "age: 17",
+                "count": 1
+              },
+              {
+                "value": "age: 19",
+                "count": 1
+              },
+              {
+                "value": "age: 20",
+                "count": 1
+              },
+              {
+                "value": "age: 26",
+                "count": 1
+              },
+              {
+                "value": "age: 27",
+                "count": 1
+              },
+              {
+                "value": "age: 29",
+                "count": 1
+              },
+              {
+                "value": "age: 37",
+                "count": 1
+              },
+              {
+                "value": "age: 43",
+                "count": 1
+              },
+              {
+                "value": "age: 44",
+                "count": 1
+              },
+              {
+                "value": "age: 45",
+                "count": 1
+              },
+              {
+                "value": "age: 48",
+                "count": 1
+              },
+              {
+                "value": "age: 55",
+                "count": 1
+              },
+              {
+                "value": "age: 59",
+                "count": 1
+              },
+              {
+                "value": "age: 60",
+                "count": 1
+              },
+              {
+                "value": "age: 62",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "occurrence": 3,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "disease stage: diagnostic chronic phase",
+                "count": 96
+              }
+            ]
+          },
+          {
+            "occurrence": 4,
+            "n_values": 96,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "bcr-abl1 at 3 month: <10%",
+                "count": 83
+              },
+              {
+                "value": "bcr-abl1 at 3 month: >10%",
+                "count": 13
+              }
+            ]
+          }
+        ],
+        "!Sample_molecule_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "total RNA",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_extract_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "RNA was extracted with Trizol reagent, followed by  QIAGEN miRNeasy midi kit in accordance with the prescribed protocol provided with the kit. The quality and quantity of human total RNA was ascertained on the Agilent Bioanalyser 2100 using the NanoChip protocol.",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_label_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "biotin",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_label_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "A total of 500ng of total RNA was then prepared for hybridisation to the Ilumina humanHT 12 Expression Beadchip by preparing a probe cocktail (cRNA @ 0.05ug/ul) that includes GEX-HYB Hybridisation Buffer (supplied with the beadchip). A total hybridisation volume of 15ul was prepared for each sample and 15ul loaded into a single array on the Ilumina humanHT 12 Expression Beadchip.",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_taxid_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "9606",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_hyb_protocol": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "A total of 12 different labelled samples can be loaded into 12 individual arrays per beadchip.  The chip was then hybridised at 58C for 16 hours in an oven with a rocking platform.  After hybridisation, the chip was washed using the appropriate protocols as outlined in the Illumina manual.  Upon completion of the washing, the chips were then coupled with Cy3.",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_scan_protocol": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "scanned in the Illumina iScan Reader. The scanner operating software, GenomeStudio version 1.9.0, converts the signal on the array into a TXT file for analysis.",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_description": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "CP-CML",
+                "count": 96
+              }
+            ]
+          },
+          {
+            "occurrence": 2,
+            "n_values": 96,
+            "unique_values": 96,
+            "value_counts": [
+              {
+                "value": "sample_1",
+                "count": 1
+              },
+              {
+                "value": "sample_101",
+                "count": 1
+              },
+              {
+                "value": "sample_102",
+                "count": 1
+              },
+              {
+                "value": "sample_103",
+                "count": 1
+              },
+              {
+                "value": "sample_104",
+                "count": 1
+              },
+              {
+                "value": "sample_106",
+                "count": 1
+              },
+              {
+                "value": "sample_107",
+                "count": 1
+              },
+              {
+                "value": "sample_109",
+                "count": 1
+              },
+              {
+                "value": "sample_11",
+                "count": 1
+              },
+              {
+                "value": "sample_110",
+                "count": 1
+              },
+              {
+                "value": "sample_111",
+                "count": 1
+              },
+              {
+                "value": "sample_112",
+                "count": 1
+              },
+              {
+                "value": "sample_113",
+                "count": 1
+              },
+              {
+                "value": "sample_114",
+                "count": 1
+              },
+              {
+                "value": "sample_115",
+                "count": 1
+              },
+              {
+                "value": "sample_116",
+                "count": 1
+              },
+              {
+                "value": "sample_117",
+                "count": 1
+              },
+              {
+                "value": "sample_118",
+                "count": 1
+              },
+              {
+                "value": "sample_119",
+                "count": 1
+              },
+              {
+                "value": "sample_120",
+                "count": 1
+              },
+              {
+                "value": "sample_14",
+                "count": 1
+              },
+              {
+                "value": "sample_16",
+                "count": 1
+              },
+              {
+                "value": "sample_17",
+                "count": 1
+              },
+              {
+                "value": "sample_18",
+                "count": 1
+              },
+              {
+                "value": "sample_19",
+                "count": 1
+              },
+              {
+                "value": "sample_2",
+                "count": 1
+              },
+              {
+                "value": "sample_20",
+                "count": 1
+              },
+              {
+                "value": "sample_21",
+                "count": 1
+              },
+              {
+                "value": "sample_22",
+                "count": 1
+              },
+              {
+                "value": "sample_23",
+                "count": 1
+              },
+              {
+                "value": "sample_24",
+                "count": 1
+              },
+              {
+                "value": "sample_25",
+                "count": 1
+              },
+              {
+                "value": "sample_26",
+                "count": 1
+              },
+              {
+                "value": "sample_27",
+                "count": 1
+              },
+              {
+                "value": "sample_29",
+                "count": 1
+              },
+              {
+                "value": "sample_3",
+                "count": 1
+              },
+              {
+                "value": "sample_30",
+                "count": 1
+              },
+              {
+                "value": "sample_31",
+                "count": 1
+              },
+              {
+                "value": "sample_33",
+                "count": 1
+              },
+              {
+                "value": "sample_34",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_data_processing": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Normalisation was performed using neqc function implemented in limma (Bioconductor) package.",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_platform_id": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "GPL10558",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_name": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Chung,H,Kok",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_email": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "chung.kok@sahmri.com",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_institute": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "South Australia Health and Medical Research Institute",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_address": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "North Terrace",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_city": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Adelaide",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_state": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "South Australia",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_zip/postal_code": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "5000",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_country": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Australia",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_supplementary_file": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "NONE",
+                "count": 96
+              }
+            ]
+          }
+        ],
+        "!Sample_data_row_count": [
+          {
+            "occurrence": 1,
+            "n_values": 96,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "47323",
+                "count": 96
+              }
+            ]
+          }
+        ]
+      },
+      "technical_matrix_eligibility": true
+    },
+    {
+      "accession": "GSE44589",
+      "role": "alternative_development_candidate",
+      "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE44589\\raw\\GSE44589_series_matrix.txt.gz",
+      "matrix_sha256": "e0c25a8d1e17b2a76f87b972597e7c90ac8bf65a0b7976a2abd7ecee49f60260",
+      "expected_sample_count": 198,
+      "observed_sample_count": 198,
+      "sample_count_matches_expectation": true,
+      "expected_platform": "GPL570",
+      "observed_platform_ids": [
+        "GPL570"
+      ],
+      "platform_matches_expectation": true,
+      "n_expression_rows": 54675,
+      "n_values_first_expression_row": 198,
+      "matrix_shape_consistent": true,
+      "metadata_relevant_hits": [
+        {
+          "key": "!Sample_source_name_ch1",
+          "occurrence": 1,
+          "matched_terms": [
+            "treatment",
+            "week"
+          ],
+          "example_values": [
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample after 6 weeks of treatment",
+            "peripheral whole blood sample after 6 weeks of treatment",
+            "peripheral whole blood sample after 6 weeks of treatment",
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample prior to treatment",
+            "peripheral whole blood sample prior to treatment"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 1,
+          "matched_terms": [
+            "response",
+            "molecular response"
+          ],
+          "example_values": [
+            "molecular response: none",
+            "molecular response: MMR",
+            "molecular response: MMR",
+            "molecular response: MMR",
+            "molecular response: MMR",
+            "molecular response: not available",
+            "molecular response: none",
+            "molecular response: none",
+            "molecular response: none",
+            "molecular response: none"
+          ],
+          "n_unique": 3
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 3,
+          "matched_terms": [
+            "treatment"
+          ],
+          "example_values": [
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes",
+            "pretreatment hydroxyurea: yes"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 4,
+          "matched_terms": [
+            "treatment"
+          ],
+          "example_values": [
+            "pretreatment interferon: yes",
+            "pretreatment interferon: no",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: yes",
+            "pretreatment interferon: no",
+            "pretreatment interferon: yes"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 5,
+          "matched_terms": [
+            "treatment"
+          ],
+          "example_values": [
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: yes",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no",
+            "pretreatment busulfan: no"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 6,
+          "matched_terms": [
+            "treatment"
+          ],
+          "example_values": [
+            "pretreatment others: yes",
+            "pretreatment others: no",
+            "pretreatment others: no",
+            "pretreatment others: yes",
+            "pretreatment others: no",
+            "pretreatment others: no",
+            "pretreatment others: no",
+            "pretreatment others: no",
+            "pretreatment others: no",
+            "pretreatment others: no"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 7,
+          "matched_terms": [
+            "imatinib"
+          ],
+          "example_values": [
+            "dose: Imatinib 400 mg/day",
+            "dose: Imatinib 800 mg/day",
+            "dose: Imatinib 400 mg/day",
+            "dose: Imatinib 800 mg/day",
+            "dose: Imatinib 800 mg/day",
+            "dose: Imatinib 800 mg/day",
+            "dose: Imatinib 400 mg/day",
+            "dose: Imatinib 800 mg/day",
+            "dose: Imatinib 400 mg/day",
+            "dose: Imatinib 400 mg/day"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_characteristics_ch1",
+          "occurrence": 12,
+          "matched_terms": [
+            "imatinib",
+            "treatment"
+          ],
+          "example_values": [
+            "treatment: prior to treatment",
+            "treatment: imatinib",
+            "treatment: imatinib",
+            "treatment: imatinib",
+            "treatment: prior to treatment",
+            "treatment: prior to treatment",
+            "treatment: prior to treatment",
+            "treatment: prior to treatment",
+            "treatment: prior to treatment",
+            "treatment: prior to treatment"
+          ],
+          "n_unique": 2
+        },
+        {
+          "key": "!Sample_treatment_protocol_ch1",
+          "occurrence": 1,
+          "matched_terms": [
+            "imatinib",
+            "treatment",
+            "week"
+          ],
+          "example_values": [
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+            "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily"
+          ],
+          "n_unique": 1
+        },
+        {
+          "key": "!Sample_extract_protocol_ch1",
+          "occurrence": 1,
+          "matched_terms": [
+            "treatment"
+          ],
+          "example_values": [
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+            "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland)."
+          ],
+          "n_unique": 1
+        },
+        {
+          "key": "!Sample_data_processing",
+          "occurrence": 1,
+          "matched_terms": [
+            "response",
+            "imatinib"
+          ],
+          "example_values": [
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+            "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%."
+          ],
+          "n_unique": 1
+        }
+      ],
+      "metadata_summary": {
+        "!Sample_title": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 198,
+            "value_counts": [
+              {
+                "value": "Chip No: 194pB from patient 3348",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 195pB from patient 3348",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 196pB from patient 3349",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 197pB from patient 3349",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 198pB from patient 3350",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 199pB from patient 3350",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 200pB from patient 3346",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 201pB from patient 3346",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 213pB from patient 3343",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 214pB from patient 3343",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 215pB from patient 3344",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 216pB from patient 3351",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 217pB from patient 3351",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 218pB from patient 3329",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 219pB from patient 3329",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 228pB from patient 3332",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 229pB from patient 3332",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 230pB from patient 3333",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 231pB from patient 3333",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 232pB from patient 3353",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 233pB from patient 3353",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 234pB from patient 3330",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 235pB from patient 3330",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 236pB from patient 3354",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 237pB from patient 3354",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 238pB from patient 3357",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 239pB from patient 3357",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 240pB from patient 3356",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 241pB from patient 3356",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 242pB from patient 3335",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 243pB from patient 3335",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 245pB from patient 3344",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 254pB from patient 3361",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 255pB from patient 3345",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 256pB from patient 3345",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 257pB from patient 3336",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 258pB from patient 3336",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 259pB from patient 3337",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 260pB from patient 3337",
+                "count": 1
+              },
+              {
+                "value": "Chip No: 261pB from patient 3361",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_geo_accession": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 198,
+            "value_counts": [
+              {
+                "value": "GSM1087288",
+                "count": 1
+              },
+              {
+                "value": "GSM1087289",
+                "count": 1
+              },
+              {
+                "value": "GSM1087290",
+                "count": 1
+              },
+              {
+                "value": "GSM1087291",
+                "count": 1
+              },
+              {
+                "value": "GSM1087292",
+                "count": 1
+              },
+              {
+                "value": "GSM1087293",
+                "count": 1
+              },
+              {
+                "value": "GSM1087294",
+                "count": 1
+              },
+              {
+                "value": "GSM1087295",
+                "count": 1
+              },
+              {
+                "value": "GSM1087296",
+                "count": 1
+              },
+              {
+                "value": "GSM1087297",
+                "count": 1
+              },
+              {
+                "value": "GSM1087298",
+                "count": 1
+              },
+              {
+                "value": "GSM1087299",
+                "count": 1
+              },
+              {
+                "value": "GSM1087300",
+                "count": 1
+              },
+              {
+                "value": "GSM1087301",
+                "count": 1
+              },
+              {
+                "value": "GSM1087302",
+                "count": 1
+              },
+              {
+                "value": "GSM1087303",
+                "count": 1
+              },
+              {
+                "value": "GSM1087304",
+                "count": 1
+              },
+              {
+                "value": "GSM1087305",
+                "count": 1
+              },
+              {
+                "value": "GSM1087306",
+                "count": 1
+              },
+              {
+                "value": "GSM1087307",
+                "count": 1
+              },
+              {
+                "value": "GSM1087308",
+                "count": 1
+              },
+              {
+                "value": "GSM1087309",
+                "count": 1
+              },
+              {
+                "value": "GSM1087310",
+                "count": 1
+              },
+              {
+                "value": "GSM1087311",
+                "count": 1
+              },
+              {
+                "value": "GSM1087312",
+                "count": 1
+              },
+              {
+                "value": "GSM1087313",
+                "count": 1
+              },
+              {
+                "value": "GSM1087314",
+                "count": 1
+              },
+              {
+                "value": "GSM1087315",
+                "count": 1
+              },
+              {
+                "value": "GSM1087316",
+                "count": 1
+              },
+              {
+                "value": "GSM1087317",
+                "count": 1
+              },
+              {
+                "value": "GSM1087318",
+                "count": 1
+              },
+              {
+                "value": "GSM1087319",
+                "count": 1
+              },
+              {
+                "value": "GSM1087320",
+                "count": 1
+              },
+              {
+                "value": "GSM1087321",
+                "count": 1
+              },
+              {
+                "value": "GSM1087322",
+                "count": 1
+              },
+              {
+                "value": "GSM1087323",
+                "count": 1
+              },
+              {
+                "value": "GSM1087324",
+                "count": 1
+              },
+              {
+                "value": "GSM1087325",
+                "count": 1
+              },
+              {
+                "value": "GSM1087326",
+                "count": 1
+              },
+              {
+                "value": "GSM1087327",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_status": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Public on Dec 31 2021",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_submission_date": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Feb 22 2013",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_last_update_date": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Dec 31 2021",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_type": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "RNA",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_channel_count": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "1",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_source_name_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "peripheral whole blood sample prior to treatment",
+                "count": 135
+              },
+              {
+                "value": "peripheral whole blood sample after 6 weeks of treatment",
+                "count": 63
+              }
+            ]
+          }
+        ],
+        "!Sample_organism_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Homo sapiens",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_characteristics_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 3,
+            "value_counts": [
+              {
+                "value": "molecular response: MMR",
+                "count": 98
+              },
+              {
+                "value": "molecular response: none",
+                "count": 89
+              },
+              {
+                "value": "molecular response: not available",
+                "count": 11
+              }
+            ]
+          },
+          {
+            "occurrence": 2,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "gender: female",
+                "count": 108
+              },
+              {
+                "value": "gender: male",
+                "count": 90
+              }
+            ]
+          },
+          {
+            "occurrence": 3,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "pretreatment hydroxyurea: yes",
+                "count": 189
+              },
+              {
+                "value": "pretreatment hydroxyurea: no",
+                "count": 9
+              }
+            ]
+          },
+          {
+            "occurrence": 4,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "pretreatment interferon: yes",
+                "count": 156
+              },
+              {
+                "value": "pretreatment interferon: no",
+                "count": 42
+              }
+            ]
+          },
+          {
+            "occurrence": 5,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "pretreatment busulfan: no",
+                "count": 163
+              },
+              {
+                "value": "pretreatment busulfan: yes",
+                "count": 35
+              }
+            ]
+          },
+          {
+            "occurrence": 6,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "pretreatment others: no",
+                "count": 139
+              },
+              {
+                "value": "pretreatment others: yes",
+                "count": 59
+              }
+            ]
+          },
+          {
+            "occurrence": 7,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "dose: Imatinib 400 mg/day",
+                "count": 99
+              },
+              {
+                "value": "dose: Imatinib 800 mg/day",
+                "count": 99
+              }
+            ]
+          },
+          {
+            "occurrence": 8,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "time point: 1",
+                "count": 135
+              },
+              {
+                "value": "time point: 2",
+                "count": 63
+              }
+            ]
+          },
+          {
+            "occurrence": 9,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "time: baseline",
+                "count": 135
+              },
+              {
+                "value": "time: 6 wk",
+                "count": 63
+              }
+            ]
+          },
+          {
+            "occurrence": 10,
+            "n_values": 198,
+            "unique_values": 135,
+            "value_counts": [
+              {
+                "value": "subject: patient 3325",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3326",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3327",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3328",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3329",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3330",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3331",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3332",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3333",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3335",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3336",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3337",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3339",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3342",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3343",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3344",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3345",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3346",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3348",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3349",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3350",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3351",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3353",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3354",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3355",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3356",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3357",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3358",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3359",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3360",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3361",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3364",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3365",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3366",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3367",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3368",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3369",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3370",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3371",
+                "count": 2
+              },
+              {
+                "value": "subject: patient 3372",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "occurrence": 11,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "tissue: peripheral blood",
+                "count": 198
+              }
+            ]
+          },
+          {
+            "occurrence": 12,
+            "n_values": 198,
+            "unique_values": 2,
+            "value_counts": [
+              {
+                "value": "treatment: prior to treatment",
+                "count": 135
+              },
+              {
+                "value": "treatment: imatinib",
+                "count": 63
+              }
+            ]
+          },
+          {
+            "occurrence": 13,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "disease state: chronic myeloid leukemia",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_treatment_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_growth_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "not applicable,no cell culture involved",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_molecule_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "total RNA",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_extract_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20\u00b0C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer\u2019s protocol (Preanalytix, Switzerland).",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_label_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "biotin",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_label_protocol_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Using One Cycle cDNA Synthesis- and One Cycle Target Labelling-Kit from Affymetrix biotinylated hybridization targets were generated from 1.5 \u00b5g total RNA.  Purified oligo-dT-T7-primed double-stranded cDNA was amplified by T7 polymerase in single round cRNA amplification step. Incorporation of a modified nucleotide during the latter step allowed subsequent biotinylation. Purified cRNA was fragmented and 20 \u00b5g were used for GeneChip hybridization following the manufacturer\u2019s protocols.",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_taxid_ch1": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "9606",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_hyb_protocol": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Purified cRNA was fragmented and 20 \u00b5g were used for GeneChip hybridization following the manafacturer\u2019s protocols (Affymetrix GeneChip Expression Analysis Technical Manual Revison #4; Eukaryotic Target Preparation, Revison #3). After staining and washing of the hybridized arrays in an Affymetrix fluidic station 450 following the EukGE-ws2v4 protocol.",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_scan_protocol": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Fluorescence intensity signals were read by an Affymetrix 3000 scanner",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_data_processing": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language \u201cR\u201d (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_platform_id": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "GPL570",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_name": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Stefan,,Schmidt",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_email": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "stefan.schmidt@i-med.ac.at",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_institute": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Medical University Innsbruck",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_address": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Anichstr. 35",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_city": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Innsbruck",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_zip/postal_code": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "6020",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_contact_country": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "Austria",
+                "count": 198
+              }
+            ]
+          }
+        ],
+        "!Sample_supplementary_file": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 198,
+            "value_counts": [
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087288/suppl/GSM1087288_0381_009_0706NK-1_h01_SJ_021205.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087289/suppl/GSM1087289_0311_009_1003CI-2_h01_SJ_121005.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087290/suppl/GSM1087290_0199_009_0304RS-2_h01_SJ_220605.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087291/suppl/GSM1087291_0358_009_0705JS-2_h01_SJ_171105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087292/suppl/GSM1087292_0511_009_0401DA-1_h01_SJ_130706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087293/suppl/GSM1087293_0324_009_1402DS-1_h01_SJ_141005.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087294/suppl/GSM1087294_0538_009_0416VS-1_h01_SJ_210706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087295/suppl/GSM1087295_0561_009_0423MB-1_h01_SJ_020806.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087296/suppl/GSM1087296_0551_009_0714LJ-1_h01_SJ_270706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087297/suppl/GSM1087297_0570_009_0422HZ-1_h01_SJ_140906.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087298/suppl/GSM1087298_0374_009_0712LO-1_h01_SJ_011205.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087299/suppl/GSM1087299_0359_009_0713AK-1_h01_SJ_171105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087300/suppl/GSM1087300_0258_009_1405SK-2_h01_SJ_220705.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087301/suppl/GSM1087301_0398_009_0404RJ-1_h01_SJ_230206.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087302/suppl/GSM1087302_0425_009_1302SR-1_h01_SJ_210406.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087303/suppl/GSM1087303_0377_009_0605JJ-1_h01_SJ_021205.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087304/suppl/GSM1087304_0288_009_1401RZ-2_h01_SJ_090905.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087305/suppl/GSM1087305_0195_009_0302BK-2_h01_SJ_220605.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087306/suppl/GSM1087306_0265_009_1501TP-2_h01_SJ_010905.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087307/suppl/GSM1087307_0367_009_1305MD-1_h01_SJ_181105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087308/suppl/GSM1087308_0362_009_0711IK-2_h01_SJ_171105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087309/suppl/GSM1087309_0553_009_0718NC-1_h01_SJ_270706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087310/suppl/GSM1087310_0452_009_0712LO-2_h01_SJ_120506.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087311/suppl/GSM1087311_0557_009_1707NH-1_h01_SJ_270706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087312/suppl/GSM1087312_0499_009_0614KV-1_h01_SJ_120706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087313/suppl/GSM1087313_0507_009_0819MJ-1_h01_SJ_130706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087314/suppl/GSM1087314_0274_009_1201TT-2_h01_SJ_080905.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087315/suppl/GSM1087315_0285_009_0306AP-1_h01_SJ_090905.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087316/suppl/GSM1087316_0229_009_0804TM-2_h01_SJ_070705.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087317/suppl/GSM1087317_0357_009_0705JS-1_h01_SJ_171105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087318/suppl/GSM1087318_0215_009_0812VB-1_h01_SJ_290605.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087319/suppl/GSM1087319_0455_009_0605JJ-2_h01_SJ_120506.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087320/suppl/GSM1087320_0363_009_0704HO-1_h01_SJ_181105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087321/suppl/GSM1087321_0361_009_0711IK-1_h01_SJ_171105.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087322/suppl/GSM1087322_0213_009_0811IM-1_h01_SJ_290605.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087323/suppl/GSM1087323_0506_009_0818GM-1_h01_SJ_130706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087324/suppl/GSM1087324_0235_009_0802NJ-2_h01_SJ_070705.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087325/suppl/GSM1087325_0550_009_0615KV-1_h01_SJ_260706.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087326/suppl/GSM1087326_0238_009_1307LI-1_h01_SJ_130705.CEL.gz",
+                "count": 1
+              },
+              {
+                "value": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM1087nnn/GSM1087327/suppl/GSM1087327_0228_009_0804TM-1_h01_SJ_070705.CEL.gz",
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "!Sample_data_row_count": [
+          {
+            "occurrence": 1,
+            "n_values": 198,
+            "unique_values": 1,
+            "value_counts": [
+              {
+                "value": "54675",
+                "count": 198
+              }
+            ]
+          }
+        ]
+      },
+      "technical_matrix_eligibility": true
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": "v49.4",
+  "status": "CLOSED",
+  "clinical_labels_used": false,
+  "v48_status_changed": false,
+  "technical_integrity_pass": true,
+  "primary_structured_null_pass": false,
+  "robustness_pass": false,
+  "full_support": false,
+  "final_claim": "STRUCTURED BIOLOGICAL-CONTROL GEOMETRIC INVARIANCE NOT SUPPORTED",
+  "observed": {
+    "AB_cosine": 0.9941194160924803,
+    "AC_cosine": 0.9797320305144458,
+    "BC_cosine": 0.980944403042611,
+    "AB_w1": 0.03854799081315117,
+    "AC_w1": 0.08567624687093708,
+    "BC_w1": 0.05158735816633059,
+    "minimum_pairwise_cosine": 0.9797320305144458,
+    "maximum_pairwise_w1": 0.08567624687093708
+  },
+  "primary": {
+    "control_rank_start": 257,
+    "control_rank_end": 2048,
+    "n_null": 1000,
+    "spectrum_q95": 0.9862279443735562,
+    "spectrum_p": 0.24575424575424576,
+    "spectrum_gate": false,
+    "distance_q05": 0.06756042167864781,
+    "distance_p": 0.7262737262737263,
+    "distance_gate": false
+  },
+  "robustness": {
+    "n_resamples": 100,
+    "null_per_resample": 20,
+    "median_z_spectrum": 0.7134821567483413,
+    "positive_fraction_spectrum": 0.71,
+    "spectrum_gate": false,
+    "median_z_distance": -0.7693558725736973,
+    "positive_fraction_distance": 0.23,
+    "distance_gate": false
+  },
+  "protocol_sha256": "7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a",
+  "closure_sha256": "f6bb54dab0782f2e1d207fa3e4bc5fd5678ee4bef8ae4fdb21f536c81c4bfe3e",
+  "sha256": {
+    "execution_script": "547b2a685d3d99bc5d1053a8f469150759a68ade5f570c028168f75d445123ac",
+    "integrity_audit": "5df975702117865fc1a93929b3752d7a8bc09f9abc4b9ac31e5b89f9e5e27aa9",
+    "primary_null_results": "ed585ae7a38e969204b9cbfd04b0eedc482fadf46ab87921d616f87b64f9e225",
+    "primary_summary": "647f9181daa73dc77d4c160a12ec5eb4005d76720f291ca479d74b9b8be3c571",
+    "robustness_results": "4027ec4859dba9fee16dbf1700fbf12b9260d1ba6bf153065e5430c5712aeb43",
+    "robustness_summary": "9ddf209ca3ab36cdf2c7efc752d8e9ae0daebb087f73a202676661572c155b56",
+    "closure": "f6bb54dab0782f2e1d207fa3e4bc5fd5678ee4bef8ae4fdb21f536c81c4bfe3e"
+  }
+}

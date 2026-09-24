@@ -1,0 +1,27 @@
+{
+  "version": "v48.3",
+  "status": "FROZEN_BEFORE_GSE14671_GEOMETRIC_ANALYSIS",
+  "clinical_labels_used": false,
+  "third_cohort": "GSE14671",
+  "third_platform": "GPL570",
+  "third_expected_n": 59,
+  "top_k": 256,
+  "pca_r": 16,
+  "knn_k": 10,
+  "pairwise_null_n": 1000,
+  "pairwise_seed": 48310001,
+  "robust_n_resamples": 100,
+  "robust_null_per_resample": 20,
+  "joint_null_n": 500,
+  "joint_seed": 48330001,
+  "protocol_sha256": "69ea5767440405b0710cbdbdfcf71b946ce964b58a2142e40a0690b69c9f7cfd",
+  "source_sha256": {
+    "v48_2_manifest": "330c44ff300c199e6fe037ae0e89fad76a3f068ee4afa7b1b45797415e81e958",
+    "eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "gse130404_raw_top256": "7c252008a100430bfb0bfbab11e39337c0c666570db1fb67cb60e70dad82ab1f",
+    "gse130404_features": "86b8463bda591640b866065aa7eb00b6d6e99dfea337d5642c56fae75d594395",
+    "gse44589_frozen_geometry": "dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943",
+    "gse44589_features": "496ab41d5df4427ace6fd3ae9bf6e452d95fbdd0136c4e1955ceb7852a10f449",
+    "gse44589_soft": "91e23f84b159c6f8eaf59285de15c6c29b84f8696dc4887b4da9ba559f720c1f"
+  }
+}

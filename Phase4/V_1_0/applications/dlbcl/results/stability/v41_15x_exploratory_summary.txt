@@ -1,0 +1,69 @@
+=== v41.15x EXPLORATORY REDUCED-PANEL REPLICATION ===
+
+STATUS
+------
+The preregistered v41.15 confirmatory test was technically
+non-evaluable because 4/16 frozen coordinates were not measurable
+on GPL14951.
+
+This analysis is EXPLORATORY ONLY and must not be reported as
+the preregistered v41.15 confirmatory result.
+
+Reduced measurable panel size: 12
+NULL panels: 10000
+External labels used: NO
+
+REDUCED PANEL
+-------------
+ 1. DNER
+ 2. SPIC
+ 3. TCL1B
+ 4. MMP20
+ 5. CKAP2
+ 6. RNF183
+ 7. MYOCD
+ 8. UMODL1
+ 9. CTAG2
+10. HRK
+11. RGS13
+12. TCL1A
+
+PRIMARY EXPLORATORY: Top-4 gene-eigensubspace overlap
+-----------------------------------------------------
+REAL:           0.865863
+NULL mean:      0.632864
+NULL 95% range: [0.450992, 0.824430]
+REAL-NULL mean: +0.232999
+empirical p:    0.00749925
+
+SECONDARY EXPLORATORY: Correlation-structure similarity
+-------------------------------------------------------
+REAL:           0.803414
+NULL mean:      0.587680
+NULL 95% range: [0.181421, 0.847936]
+REAL-NULL mean: +0.215734
+empirical p:    0.0758924
+
+Exploratory: Top-8 gene-eigensubspace overlap
+---------------------------------------------
+REAL:           0.836310
+NULL mean:      0.805865
+NULL 95% range: [0.711261, 0.903425]
+REAL-NULL mean: +0.030446
+empirical p:    0.257974
+
+Exploratory: Eigenvalue-profile cosine similarity
+-------------------------------------------------
+REAL:           0.995860
+NULL mean:      0.994233
+NULL 95% range: [0.979111, 0.999158]
+REAL-NULL mean: +0.001627
+empirical p:    0.514749
+
+INTERPRETATION LIMIT
+--------------------
+A strong result here may motivate a future newly preregistered
+platform-compatible replication, but it cannot retroactively turn
+v41.15 into a confirmatory PASS.
+
+No causal biology, clinical utility, or quantum advantage is claimed.

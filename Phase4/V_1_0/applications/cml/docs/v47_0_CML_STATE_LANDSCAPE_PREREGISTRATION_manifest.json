@@ -1,0 +1,13 @@
+{
+  "version": "v47.0",
+  "status": "FROZEN_BEFORE_STATE_LANDSCAPE_CONSTRUCTION",
+  "development_cohort": "GSE130404",
+  "eligible_universe_n": 15890,
+  "feature_selection": "Top256 raw variance, label-blind",
+  "state_space": "PCA-16, label-blind",
+  "knn_k": 10,
+  "primary_overlay_test": "PCA16 group-centroid distance",
+  "permutations": 10000,
+  "labels_used_for_geometry": false,
+  "protocol_sha256": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25"
+}

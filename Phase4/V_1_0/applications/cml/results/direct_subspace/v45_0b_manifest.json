@@ -1,0 +1,27 @@
+{
+  "version": "v45.0b",
+  "dataset": "GSE14671",
+  "sample_n": 59,
+  "platform_counts": {
+    "GPL570": 59
+  },
+  "response_definition": {
+    "responder": "complete cytogenetic response (CCyR) after 12 months of imatinib",
+    "non_responder": ">65% Ph-positive metaphases after 12 months of imatinib"
+  },
+  "responder_n": 41,
+  "non_responder_n": 18,
+  "unknown_n": 0,
+  "exact_41_18_split": true,
+  "pretreatment_evidence_in_series_text": true,
+  "status": "CANDIDATE ELIGIBLE FOR v45.1 PREREGISTRATION",
+  "frozen_v44_model_loaded": false,
+  "predictive_scoring_performed": false,
+  "external_outcome_tuning_performed": false,
+  "sha256": {
+    "family_soft": "11fe1a5df5889ff507048ea081c41411f00762c04c719b52a97efaaff854dbd9",
+    "samples_tsv": "fec75f1e20d482562405112770db2a8d48092323baec3ff6dd02b8e20b86e7f1",
+    "series_design_audit": "e264adb0690ed7128656b82a26e9d00497d7244ae0182620196b403782c9ca80",
+    "execution_script": "a0e39a59b69ef0b1a496d96b30199747f10f40876a52c3663147acde3b0a9792"
+  }
+}

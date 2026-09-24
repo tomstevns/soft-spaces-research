@@ -1,0 +1,24 @@
+{
+  "version": "v43.1",
+  "development_cohort": "GSE130404",
+  "candidate_ranks": [
+    4,
+    8,
+    16
+  ],
+  "selection_rule": "max mean held-out PR-AUC; tie smaller r",
+  "selected_r": 16,
+  "selected_mean_pr_auc": 0.4551221659747202,
+  "selected_mean_roc_auc": 0.7258946078431373,
+  "selected_balanced_accuracy": 0.6119240196078432,
+  "feature_selection_used": false,
+  "matched_null_tested": false,
+  "external_used": false,
+  "sha256": {
+    "v43_0_protocol": "f32741ca64d2bc6c015374b0e5e0b25cf5820141d57bd3e5ba8a53a94a097059",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "series_matrix": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+    "platform_table": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "execution_script": "45baea08eac2bd6bd96afc3d8adeefc8987058f1b1aa3d14bb72db75cee24e67"
+  }
+}

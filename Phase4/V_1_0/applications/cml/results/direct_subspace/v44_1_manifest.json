@@ -1,0 +1,13 @@
+{
+  "version": "v44.1",
+  "status": "FULL-UNIVERSE REBUILD REQUIRED",
+  "prior256_gpl570_transportable": 214,
+  "prior256_gse236233_all9_present": 193,
+  "prior256_crossplatform_intersection": 188,
+  "external_outcomes_used": false,
+  "sha256": {
+    "v44_0_protocol": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+    "v43_4b": "2ff2bfe118e55fd321e210416aaafd5a03673dbba870045c507cdf36a0b9047a",
+    "v43_4d": "3f560fc7729bd37bd575943cbd14bc3bc4edfa6459fdb6884c8a6b5f12bca454"
+  }
+}

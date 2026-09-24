@@ -1,0 +1,150 @@
+Soft Spaces / CML
+v49.0 — STRUCTURED BIOLOGICAL-CONTROL GEOMETRY PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE v49 ANALYSIS
+
+RELATION TO v48
+---------------
+v48.3 remains:
+    JOINT THREE-COHORT INVARIANCE NOT SUPPORTED
+
+v48.4 showed that the covariance-destroyed joint NULL produced
+near-isotropic geometries that were mutually more similar than the
+real biological cohorts.
+
+v49 is a NEW hypothesis and NEW NULL model.
+v49 does NOT change, rescue or re-score the formal v48.3 FAIL.
+
+HYPOTHESIS
+----------
+The frozen cohort-specific Top-256 label-blind geometries show stronger
+three-cohort similarity than alternative high-variance REAL-GENE geometries
+drawn from the same cohorts.
+
+NO CLINICAL LABELS
+------------------
+Clinical outcome labels must not be parsed or used anywhere in v49.
+
+COHORTS
+-------
+A = GSE130404, 96 frozen samples
+B = GSE44589, 135 frozen pretreatment samples
+C = GSE14671, 59 frozen samples
+
+GENE UNIVERSE
+-------------
+Existing v44 transport-aware eligible universe:
+    15,890 genes
+
+For each cohort independently:
+- reconstruct all measurable eligible genes
+- rank by raw cohort variance
+- verify reconstructed ranks 1..256 exactly match the already-frozen
+  observed Top-256 feature SET for that cohort
+
+If exact frozen-feature integrity fails:
+    TECHNICAL STOP before primary scoring.
+
+OBSERVED GEOMETRY
+-----------------
+Frozen Top-256 -> cohort z-standardization -> PCA-16
+
+Observed joint spectrum statistic:
+    minimum pairwise normalized-spectrum cosine across AB, AC, BC
+    HIGHER = better
+
+Observed joint distance statistic:
+    maximum pairwise normalized-distance W1 across AB, AC, BC
+    LOWER = better
+
+PRIMARY STRUCTURED NULL
+-----------------------
+For EACH cohort independently:
+
+1. rank measurable eligible genes by raw variance
+2. exclude ranks 1..256
+3. define fixed high-variance control pool:
+       ranks 257..2048
+4. each NULL replicate draws 256 genes without replacement
+5. use untouched REAL expression values
+6. z-standardize
+7. PCA-16
+8. compute joint triad metrics
+
+NULL triads:
+    1000
+
+Seed:
+    49020001
+
+The NULL preserves:
+- real patients
+- real genes
+- real covariance
+- non-Gaussian expression
+- cohort/platform structure
+- high-variance feature context
+- sample sizes
+
+It does NOT preserve the exact observed Top-256 identities.
+
+PRIMARY PASS RULE
+-----------------
+BOTH:
+1. observed minimum cosine > NULL q95 AND empirical p <= 0.05
+2. observed maximum W1 < NULL q05 AND empirical p <= 0.05
+
+v49.3 ROBUSTNESS
+----------------
+Frozen observed feature identities and frozen control pools.
+
+Paired patient resamples:
+    100
+
+Patients/resample:
+    A: 76/96
+    B: 108/135
+    C: 47/59
+
+Structured NULL triads/resample:
+    20
+
+Signed z:
+    z_spectrum =
+      (observed min cosine - NULL mean min cosine) / NULL SD
+
+    z_distance =
+      (NULL mean max W1 - observed max W1) / NULL SD
+
+Robustness PASS requires BOTH metrics:
+    median signed z > 1.644853626951
+    fraction signed z > 0 >= 0.75
+
+FINAL SUPPORT RULE
+------------------
+STRUCTURED BIOLOGICAL-CONTROL GEOMETRIC INVARIANCE SUPPORTED
+
+ONLY IF:
+    technical integrity PASS
+    AND primary structured-NULL PASS
+    AND robustness PASS
+
+Otherwise:
+    NOT SUPPORTED
+
+CLAIM LIMIT
+-----------
+A full PASS supports only:
+the frozen higher-level label-blind geometries are more mutually similar
+across these three CML cohorts than alternative high-variance real-gene
+geometries under this frozen v49 test.
+
+It does NOT establish prediction, response replication, clinical utility,
+causal genes, causal mechanism, dormancy, quantum biology or quantum advantage.
+
+NO RESCUE
+---------
+No post-hoc feature-count, control-pool rank, PCA-rank, sample-subset,
+NULL-definition or threshold tuning.

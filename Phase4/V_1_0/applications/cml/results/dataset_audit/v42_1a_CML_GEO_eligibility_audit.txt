@@ -1,0 +1,127 @@
+=== Soft Spaces / CML v42.1a GEO ELIGIBILITY AUDIT ===
+
+NO MODELING WAS PERFORMED.
+
+GSE130404
+---------
+Provisional role: preferred_development_candidate
+Expected samples: 96
+Observed samples: 96
+Sample count match: True
+Expected platform: GPL10558
+Observed platform IDs: GPL10558
+Platform match: True
+Expression rows: 47323
+Matrix shape consistent: True
+Technical matrix eligibility: True
+
+Relevant metadata hits:
+  !Sample_characteristics_ch1 occurrence 3 | unique=1 | terms=chronic phase
+      disease stage: diagnostic chronic phase
+      disease stage: diagnostic chronic phase
+      disease stage: diagnostic chronic phase
+      disease stage: diagnostic chronic phase
+      disease stage: diagnostic chronic phase
+  !Sample_characteristics_ch1 occurrence 4 | unique=2 | terms=BCR-ABL,month
+      bcr-abl1 at 3 month: <10%
+      bcr-abl1 at 3 month: <10%
+      bcr-abl1 at 3 month: <10%
+      bcr-abl1 at 3 month: <10%
+      bcr-abl1 at 3 month: <10%
+
+GSE44589
+--------
+Provisional role: alternative_development_candidate
+Expected samples: 198
+Observed samples: 198
+Sample count match: True
+Expected platform: GPL570
+Observed platform IDs: GPL570
+Platform match: True
+Expression rows: 54675
+Matrix shape consistent: True
+Technical matrix eligibility: True
+
+Relevant metadata hits:
+  !Sample_source_name_ch1 occurrence 1 | unique=2 | terms=treatment,week
+      peripheral whole blood sample prior to treatment
+      peripheral whole blood sample after 6 weeks of treatment
+      peripheral whole blood sample after 6 weeks of treatment
+      peripheral whole blood sample after 6 weeks of treatment
+      peripheral whole blood sample prior to treatment
+  !Sample_characteristics_ch1 occurrence 1 | unique=3 | terms=response,molecular response
+      molecular response: none
+      molecular response: MMR
+      molecular response: MMR
+      molecular response: MMR
+      molecular response: MMR
+  !Sample_characteristics_ch1 occurrence 3 | unique=2 | terms=treatment
+      pretreatment hydroxyurea: yes
+      pretreatment hydroxyurea: yes
+      pretreatment hydroxyurea: yes
+      pretreatment hydroxyurea: yes
+      pretreatment hydroxyurea: yes
+  !Sample_characteristics_ch1 occurrence 4 | unique=2 | terms=treatment
+      pretreatment interferon: yes
+      pretreatment interferon: no
+      pretreatment interferon: yes
+      pretreatment interferon: yes
+      pretreatment interferon: yes
+  !Sample_characteristics_ch1 occurrence 5 | unique=2 | terms=treatment
+      pretreatment busulfan: no
+      pretreatment busulfan: no
+      pretreatment busulfan: no
+      pretreatment busulfan: yes
+      pretreatment busulfan: no
+  !Sample_characteristics_ch1 occurrence 6 | unique=2 | terms=treatment
+      pretreatment others: yes
+      pretreatment others: no
+      pretreatment others: no
+      pretreatment others: yes
+      pretreatment others: no
+  !Sample_characteristics_ch1 occurrence 7 | unique=2 | terms=imatinib
+      dose: Imatinib 400 mg/day
+      dose: Imatinib 800 mg/day
+      dose: Imatinib 400 mg/day
+      dose: Imatinib 800 mg/day
+      dose: Imatinib 800 mg/day
+  !Sample_characteristics_ch1 occurrence 12 | unique=2 | terms=imatinib,treatment
+      treatment: prior to treatment
+      treatment: imatinib
+      treatment: imatinib
+      treatment: imatinib
+      treatment: prior to treatment
+  !Sample_treatment_protocol_ch1 occurrence 1 | unique=1 | terms=imatinib,treatment,week
+      primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily
+      primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily
+      primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily
+      primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily
+      primary peripheral whole blood samples prior treatment (n=135), subset  after 6 weeks of treatment (n=65) either after 400mg imatinib once daily or 800mg imatinib once daily
+  !Sample_extract_protocol_ch1 occurrence 1 | unique=1 | terms=treatment
+      Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20°C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer’s protocol (Preanalytix, Switzerland).
+      Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20°C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer’s protocol (Preanalytix, Switzerland).
+      Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20°C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer’s protocol (Preanalytix, Switzerland).
+      Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20°C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer’s protocol (Preanalytix, Switzerland).
+      Peripheral whole blood samples, preserved in PAXgene tubes containing an RNA stabilizing agent,  stored at or below -20°C , processing was performed using the Affymetrix Blood RNA concentration kit according to the manufacturers' instructions. In brief, blood cells were lyzed sedimented and pelleted, Following homogenization by centrifugation through shredder columns the supernatant was transferred, centrifuged and RNA bound to column membranesDNA was digested by DNAse I treatment prior to concentration using the Affymetrix Blood RNA concentration kit.   Total RNA was consecutively depleted of haemoglobin mRNA applying the Globin Reduction kit following the manufacturer’s protocol (Preanalytix, Switzerland).
+  !Sample_data_processing occurrence 1 | unique=1 | terms=response,imatinib
+      Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language “R” (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.
+      Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language “R” (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.
+      Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language “R” (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.
+      Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language “R” (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.
+      Image analysis was performed with the GCOS software (version 1.2) and for subsequent bioinformatics analysis the statistical programming language “R” (V2.3) and additional software package from the BioConductor library (Release 2.6) were used. Briefly, for identifying genes predicting imatinib response in this group of pre-treated CML patients   we followed a main workflow consisting of filtering genes by variance of expression, consecutive identification of differentially expressed genes and eventually applying linear discriminatory analysis for response prediction. This approach was run in a nested-cross validation manner, in which the full data set was at random divided into test and training set and this division was repeated 40 times. The resulting training sets were again split into 40 randomly chosen training and test-subsets. Within each of these training subsets feature selection and all pre-processing steps (filtering, differential expression) were performed. Features were selected for testing in the prediction algorithm based on their differential expression calculated by t-test and adjusted for multiple testing using Benjamini-Hochberg correction, if they showed a at least 1.5-fold difference in expression levels and had a adjusted significance <0.01%.
+
+DECISION RULE FOR v42.1b
+------------------------
+Do NOT choose the development/external pair merely because the matrix
+downloads successfully.
+
+Before v42.2, manually confirm:
+- primary phenotype definition;
+- response class counts;
+- baseline/pre-treatment sample subset;
+- unique-patient status;
+- independence of external cohort;
+- compatible gene mapping;
+- no outcome leakage.
+
+No Soft-Spaces or classifier result may be generated in v42.1a.

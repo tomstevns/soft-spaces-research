@@ -1,0 +1,13 @@
+=== Soft Spaces / CML v44.5a FINAL DEVELOPMENT MODEL + GSE44589 TECHNICAL TRANSPORT ===
+
+External response outcomes used: NO
+Eligible universe: 15890
+Final Top-256: 256
+Frozen rank: 16
+Transportable coordinates: 256 / 256
+Retained projector mass: 16.000000 / 16.000000
+Retained projector fraction: 1.000000
+
+v44.5a STATUS: TECHNICALLY EVALUABLE
+
+No external response score has been calculated.

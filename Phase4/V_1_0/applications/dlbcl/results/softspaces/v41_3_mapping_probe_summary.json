@@ -1,0 +1,280 @@
+{
+  "version": "v41.3-dlbcl-softspaces-mapping-probe-1",
+  "created_utc": "2026-09-17T06:13:48.440234+00:00",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1"
+  },
+  "benchmark": {
+    "task": "GSE10846 ABC vs GCB",
+    "n_samples": 350,
+    "n_genes": 22154,
+    "cv_folds": 15,
+    "cv_source": "results\\baseline\\v41_2_cv_splits.json"
+  },
+  "mapping": {
+    "status": "exploratory biological mapping probe",
+    "variance_pool": 256,
+    "variance_pool_supervised": false,
+    "operator": "H = mean(xx^T|ABC) - mean(xx^T|GCB)",
+    "p_definition": "top 16 eigenvectors ranked by |E|",
+    "q_definition": "I - P",
+    "coordinate_perturbation": "V_g = |g><g|",
+    "coupling_score": "C_g = ||P V_g Q||_F^2 = p_g(1-p_g)",
+    "null": "deterministic permutation of training labels preserving counts",
+    "plus_minus_E_claimed": false
+  },
+  "readout": {
+    "purpose": "evaluate feature ranking only",
+    "model": "L2 LogisticRegression(C=1, liblinear)",
+    "feature_budgets": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "important": "The logistic classifier is not claimed to be Soft Spaces; the Soft Spaces object is the H -> P/Q -> coupling ranking."
+  },
+  "structural_summary": {
+    "delta_topP_abs_fraction": {
+      "mean": 0.017062425613845616,
+      "sd": 0.0072253554454180125,
+      "min": 0.0025270516011814403,
+      "max": 0.02915690684009692
+    },
+    "real_topP_abs_fraction": {
+      "mean": 0.32960722188870406,
+      "sd": 0.00870713169016357,
+      "min": 0.30937896968208567,
+      "max": 0.34421880816646466
+    },
+    "null_topP_abs_fraction": {
+      "mean": 0.3125447962748584,
+      "sd": 0.0088851874869364,
+      "min": 0.29517830354823266,
+      "max": 0.3278527170091812
+    },
+    "top32_jaccard_real_null": {
+      "mean": 0.16666294918238536,
+      "sd": 0.04486347076254562,
+      "min": 0.0847457627118644,
+      "max": 0.2549019607843137
+    },
+    "real_coupling_mean": {
+      "mean": 0.058046529139227816,
+      "sd": 4.914358585283772e-05,
+      "min": 0.05793745704432625,
+      "max": 0.05811484567195836
+    },
+    "null_coupling_mean": {
+      "mean": 0.05811184459322486,
+      "sd": 5.886923932510545e-05,
+      "min": 0.05800172690977899,
+      "max": 0.058237096096498096
+    }
+  },
+  "budget_summary": {
+    "8": {
+      "real_roc_auc": {
+        "mean": 0.8192173456879339,
+        "sd": 0.06542392760373274,
+        "min": 0.6945126945126945,
+        "max": 0.9131859131859132
+      },
+      "null_roc_auc": {
+        "mean": 0.7543875426228368,
+        "sd": 0.09438160485602023,
+        "min": 0.5915032679738562,
+        "max": 0.9041769041769042
+      },
+      "delta_roc_auc": {
+        "mean": 0.06482980306509716,
+        "sd": 0.11362739359621164,
+        "min": -0.15397215397215402,
+        "max": 0.2834967320261438
+      },
+      "real_balanced_accuracy": {
+        "mean": 0.7534601446366154,
+        "sd": 0.06177138176025522,
+        "min": 0.6273546273546273,
+        "max": 0.8464373464373465
+      },
+      "null_balanced_accuracy": {
+        "mean": 0.6857203460144635,
+        "sd": 0.09275141469321001,
+        "min": 0.5,
+        "max": 0.8734643734643734
+      },
+      "delta_balanced_accuracy": {
+        "mean": 0.06773979862215158,
+        "sd": 0.10337060012286568,
+        "min": -0.11629811629811626,
+        "max": 0.26879084967320266
+      },
+      "topk_jaccard_real_null": {
+        "mean": 0.035555555555555556,
+        "sd": 0.03442651863295482,
+        "min": 0.0,
+        "max": 0.06666666666666667
+      },
+      "positive_delta_auc_folds": 11,
+      "tie_delta_auc_folds": 0,
+      "negative_delta_auc_folds": 4
+    },
+    "16": {
+      "real_roc_auc": {
+        "mean": 0.8840191796074149,
+        "sd": 0.05657043529350197,
+        "min": 0.7633087633087633,
+        "max": 0.9533169533169533
+      },
+      "null_roc_auc": {
+        "mean": 0.7900916959740488,
+        "sd": 0.09774809949139605,
+        "min": 0.638001638001638,
+        "max": 0.9395424836601307
+      },
+      "delta_roc_auc": {
+        "mean": 0.09392748363336596,
+        "sd": 0.08706076597890619,
+        "min": -0.01552287581699352,
+        "max": 0.2598039215686274
+      },
+      "real_balanced_accuracy": {
+        "mean": 0.8051987816693699,
+        "sd": 0.06969047932647356,
+        "min": 0.6441441441441441,
+        "max": 0.8988533988533989
+      },
+      "null_balanced_accuracy": {
+        "mean": 0.7212628403804874,
+        "sd": 0.08947604571770847,
+        "min": 0.6127450980392157,
+        "max": 0.9027777777777778
+      },
+      "delta_balanced_accuracy": {
+        "mean": 0.08393594128888247,
+        "sd": 0.08426521815132397,
+        "min": -0.059640522875817004,
+        "max": 0.21405228758169936
+      },
+      "topk_jaccard_real_null": {
+        "mean": 0.09441926655719758,
+        "sd": 0.06612828938025428,
+        "min": 0.0,
+        "max": 0.28
+      },
+      "positive_delta_auc_folds": 13,
+      "tie_delta_auc_folds": 0,
+      "negative_delta_auc_folds": 2
+    },
+    "32": {
+      "real_roc_auc": {
+        "mean": 0.9161562632150867,
+        "sd": 0.04939267954389969,
+        "min": 0.8058968058968059,
+        "max": 0.9787059787059786
+      },
+      "null_roc_auc": {
+        "mean": 0.9110346977994036,
+        "sd": 0.049090673429607795,
+        "min": 0.796068796068796,
+        "max": 0.9721539721539721
+      },
+      "delta_roc_auc": {
+        "mean": 0.005121565415683035,
+        "sd": 0.05616083961986262,
+        "min": -0.12121212121212133,
+        "max": 0.11846405228758161
+      },
+      "real_balanced_accuracy": {
+        "mean": 0.836349183408007,
+        "sd": 0.059051669625623936,
+        "min": 0.7133497133497133,
+        "max": 0.9142156862745098
+      },
+      "null_balanced_accuracy": {
+        "mean": 0.8169000551353494,
+        "sd": 0.053378360132425876,
+        "min": 0.7116013071895425,
+        "max": 0.9258804258804259
+      },
+      "delta_balanced_accuracy": {
+        "mean": 0.01944912827265767,
+        "sd": 0.07043842135639085,
+        "min": -0.1314496314496315,
+        "max": 0.17565359477124176
+      },
+      "topk_jaccard_real_null": {
+        "mean": 0.16666294918238536,
+        "sd": 0.04486347076254562,
+        "min": 0.0847457627118644,
+        "max": 0.2549019607843137
+      },
+      "positive_delta_auc_folds": 7,
+      "tie_delta_auc_folds": 0,
+      "negative_delta_auc_folds": 8
+    },
+    "64": {
+      "real_roc_auc": {
+        "mean": 0.9410273910273909,
+        "sd": 0.02342592729034458,
+        "min": 0.9156429156429157,
+        "max": 0.9828009828009828
+      },
+      "null_roc_auc": {
+        "mean": 0.9256467697644167,
+        "sd": 0.043967514335411705,
+        "min": 0.8353808353808355,
+        "max": 0.972972972972973
+      },
+      "delta_roc_auc": {
+        "mean": 0.015380621262974192,
+        "sd": 0.04247561170302736,
+        "min": -0.04176904176904184,
+        "max": 0.08026208026208015
+      },
+      "real_balanced_accuracy": {
+        "mean": 0.8680599048246106,
+        "sd": 0.04129544931141484,
+        "min": 0.8128583128583129,
+        "max": 0.9436274509803921
+      },
+      "null_balanced_accuracy": {
+        "mean": 0.8400213047271871,
+        "sd": 0.060869220821525814,
+        "min": 0.7436527436527436,
+        "max": 0.928921568627451
+      },
+      "delta_balanced_accuracy": {
+        "mean": 0.02803860009742363,
+        "sd": 0.06813120686912728,
+        "min": -0.10114660114660112,
+        "max": 0.12663398692810457
+      },
+      "topk_jaccard_real_null": {
+        "mean": 0.2576045653368233,
+        "sd": 0.03772943040563047,
+        "min": 0.19626168224299065,
+        "max": 0.31958762886597936
+      },
+      "positive_delta_auc_folds": 8,
+      "tie_delta_auc_folds": 0,
+      "negative_delta_auc_folds": 7
+    }
+  },
+  "total_runtime_seconds": 3.7345100000384264,
+  "outputs": {
+    "fold_metrics": "results\\softspaces\\v41_3_mapping_probe_fold_metrics.csv",
+    "top_genes": "results\\softspaces\\v41_3_mapping_probe_top_genes.csv"
+  },
+  "scientific_limits": [
+    "The biological H is a proposed operator, not the original physical Hamiltonian.",
+    "No exact +/-E symmetry is assumed or claimed.",
+    "Positive results establish usefulness of this mapping only.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ]
+}

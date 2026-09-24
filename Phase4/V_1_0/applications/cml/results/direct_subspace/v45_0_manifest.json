@@ -1,0 +1,28 @@
+{
+  "version": "v45.0",
+  "dataset": "GSE14671",
+  "sample_n": 59,
+  "platform_counts": {
+    "GPL570": 59
+  },
+  "source_counts": {
+    "CML patient with >65% Ph-positive metaphases after 12 months of imatinib therapy": 18,
+    "CML patient with a complete cytogenetic response (CCyR)  after 12 months of imatinib therapy": 41
+  },
+  "timing_counts": {
+    "UNKNOWN": 59
+  },
+  "response_candidate_counts": {
+    "UNKNOWN": 59
+  },
+  "technical_candidate": true,
+  "label_status": "RESPONSE LABEL FOLLOW-UP REQUIRED",
+  "predictive_scoring_performed": false,
+  "external_outcome_tuning_performed": false,
+  "sha256": {
+    "family_soft": "11fe1a5df5889ff507048ea081c41411f00762c04c719b52a97efaaff854dbd9",
+    "sample_tsv": "e864fdbb2d5924886084c7e9936f897c06654288c02ad150605a12791ad84bea",
+    "characteristic_inventory": "63e891a76f3d05444eb76fdcfb6fbd0c4fc85f1a14f1b5267724b16f475648e1",
+    "execution_script": "3ab5e0b61d0364aae4561a4284b9c37493efa4e5127fe9b776b4ba725dfcda3d"
+  }
+}

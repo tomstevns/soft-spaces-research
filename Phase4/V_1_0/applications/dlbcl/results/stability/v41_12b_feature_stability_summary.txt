@@ -1,0 +1,71 @@
+=== v41.12b FEATURE STABILITY ===
+
+Samples: 350
+Genes: 22154
+Resamples: 500
+Sample fraction: 0.8
+Panel size: 16
+VARIANCE_POOL: 256
+P_DIM: 16
+
+Full-development 16-gene panel:
+ 1. DNER                 score=0.09995057
+ 2. SPIC                 score=0.09714880
+ 3. TCL1B                score=0.09671941
+ 4. NPIPA5///NPIPB6///NPIPB8///NPIPB3 score=0.09540916
+ 5. EML6                 score=0.09508855
+ 6. MMP20                score=0.09229761
+ 7. KCCAT333             score=0.09194115
+ 8. IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1 score=0.09047990
+ 9. RNF183               score=0.08960516
+10. MYOCD                score=0.08751486
+11. UMODL1               score=0.08720892
+12. CTAG2                score=0.08526241
+13. IGK///IGKC           score=0.08357773
+14. LOC283454///HRK      score=0.08330719
+15. RGS13                score=0.08292810
+16. TCL1A                score=0.08216459
+
+PANEL STABILITY
+---------------
+REAL mean per-panel Jaccard: 0.070690
+REAL 95% bootstrap CI: [0.069239, 0.072143]
+NULL mean per-panel Jaccard: 0.027492
+NULL 95% bootstrap CI: [0.027267, 0.027710]
+
+OVERLAP WITH FROZEN 16
+----------------------
+Mean overlap fraction: 0.230000
+95% bootstrap CI: [0.220872, 0.239003]
+
+Stable core >=80% (0): (none)
+Stable core >=60% (0): (none)
+Stable core >=50% (0): (none)
+
+Frozen 16 selection frequencies:
+UMODL1               selection=0.426 pool=1.000
+TCL1A                selection=0.396 pool=1.000
+DNER                 selection=0.382 pool=1.000
+LOC283454///HRK      selection=0.322 pool=1.000
+RGS13                selection=0.282 pool=1.000
+MMP20                selection=0.268 pool=1.000
+KCCAT333             selection=0.242 pool=1.000
+MYOCD                selection=0.240 pool=0.998
+EML6                 selection=0.220 pool=0.744
+SPIC                 selection=0.208 pool=0.612
+TCL1B                selection=0.204 pool=1.000
+IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1 selection=0.170 pool=0.986
+RNF183               selection=0.108 pool=0.814
+IGK///IGKC           selection=0.086 pool=0.918
+CTAG2                selection=0.070 pool=0.828
+NPIPA5///NPIPB6///NPIPB8///NPIPB3 selection=0.056 pool=0.504
+
+NOTE
+----
+v41.12b uses the same resampling experiment as v41.12.
+Only the confidence-interval implementation was changed to avoid
+the RAM explosion caused by bootstrapping all pairwise Jaccards.
+
+This measures feature-selection stability only.
+It does not establish causal biology, external performance,
+clinical utility, or quantum advantage.

@@ -1,0 +1,182 @@
+[
+  {
+    "patient_id": "CML1",
+    "gsm": "GSM7520162",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML1_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520162/suppl/GSM7520162_CML1_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520162_CML1_34p.tar.gz",
+    "archive_sha256": "f633365402e31e93a50645dee86b5620f75e0320e482f4e305c02b91d6c3e97d",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520162\\GEO\\CML1_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520162\\GEO\\CML1_34p_genes.txt",
+    "matrix_shape_original": [
+      648,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      648
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 24401121.0
+  },
+  {
+    "patient_id": "CML2",
+    "gsm": "GSM7520163",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML2_34p2]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520163/suppl/GSM7520163_CML2_34p2.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520163_CML2_34p2.tar.gz",
+    "archive_sha256": "06207fe35b5dde9ed4bc0dd4cb84484171ad6e6792d17ffde99a6977bae31b5c",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520163\\GEO\\CML2_34p2_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520163\\GEO\\CML2_34p2_genes.txt",
+    "matrix_shape_original": [
+      4124,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      4124
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 78858868.0
+  },
+  {
+    "patient_id": "CML3",
+    "gsm": "GSM7520165",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML3_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520165/suppl/GSM7520165_CML3_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520165_CML3_34p.tar.gz",
+    "archive_sha256": "ca15566649c70a4da95a6fdc3a7d394d4536779fb3d4526c83f9cf84782bc311",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520165\\GEO\\CML3_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520165\\GEO\\CML3_34p_genes.txt",
+    "matrix_shape_original": [
+      897,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      897
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 42355112.0
+  },
+  {
+    "patient_id": "CML4",
+    "gsm": "GSM7520167",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML4_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520167/suppl/GSM7520167_CML4_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520167_CML4_34p.tar.gz",
+    "archive_sha256": "ccd96fa71044d7dd6c81d9e5688fea98f4f42441bbea5a8bff92452dd87757da",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520167\\GEO\\CML4_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520167\\GEO\\CML4_34p_genes.txt",
+    "matrix_shape_original": [
+      1361,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      1361
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 36659800.0
+  },
+  {
+    "patient_id": "CML5",
+    "gsm": "GSM7520169",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML5_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520169/suppl/GSM7520169_CML5_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520169_CML5_34p.tar.gz",
+    "archive_sha256": "6a3193fa0e1ddf43f303671e88777b898334471dd291a639ee032f3854925284",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520169\\GEO\\CML5_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520169\\GEO\\CML5_34p_genes.txt",
+    "matrix_shape_original": [
+      1237,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      1237
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 46683824.0
+  },
+  {
+    "patient_id": "CML6",
+    "gsm": "GSM7520171",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML6_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520171/suppl/GSM7520171_CML6_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520171_CML6_34p.tar.gz",
+    "archive_sha256": "3105998131c2930d28e18aba463aae59d2cbffb6eb17a49ffb3a6338b999914f",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520171\\GEO\\CML6_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520171\\GEO\\CML6_34p_genes.txt",
+    "matrix_shape_original": [
+      1145,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      1145
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 60781610.0
+  },
+  {
+    "patient_id": "CML7",
+    "gsm": "GSM7520173",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML7_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520173/suppl/GSM7520173_CML7_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520173_CML7_34p.tar.gz",
+    "archive_sha256": "0654f121d634fc15b59033dc1deca2b80af16da99b29066c1f006dbbd2c0be42",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520173\\GEO\\CML7_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520173\\GEO\\CML7_34p_genes.txt",
+    "matrix_shape_original": [
+      2861,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      2861
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 45628360.0
+  },
+  {
+    "patient_id": "CML8",
+    "gsm": "GSM7520175",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML8_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520175/suppl/GSM7520175_CML8_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520175_CML8_34p.tar.gz",
+    "archive_sha256": "12216b7c9240e0022bea69a0785243765d88e153c53c44626b9a4eadb96761eb",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520175\\GEO\\CML8_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520175\\GEO\\CML8_34p_genes.txt",
+    "matrix_shape_original": [
+      346,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      346
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 9254867.0
+  },
+  {
+    "patient_id": "CML9",
+    "gsm": "GSM7520177",
+    "title": "CML Chronic Phase, Diagnosis,  Lin-CD34+, CITEseq [CML9_34p]",
+    "url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7520nnn/GSM7520177/suppl/GSM7520177_CML9_34p.tar.gz",
+    "archive": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\processed\\GSM7520177_CML9_34p.tar.gz",
+    "archive_sha256": "e3c4f3fdaaf97ebf89d18e55a39233e6788e403899111433b5c4b44724473ff1",
+    "matrix_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520177\\GEO\\CML9_34p_counts.mtx",
+    "feature_path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\data\\external\\GSE236233\\extracted\\GSM7520177\\GEO\\CML9_34p_genes.txt",
+    "matrix_shape_original": [
+      997,
+      33538
+    ],
+    "gene_by_cell_shape": [
+      33538,
+      997
+    ],
+    "n_detected_gene_symbols": 33514,
+    "total_counts": 23714155.0
+  }
+]

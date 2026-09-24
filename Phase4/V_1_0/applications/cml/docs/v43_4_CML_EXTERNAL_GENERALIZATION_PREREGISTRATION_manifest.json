@@ -1,0 +1,31 @@
+{
+  "version": "v43.4",
+  "status": "FROZEN_BEFORE_EXTERNAL_OUTCOME_EVALUATION",
+  "development_cohort": "GSE130404",
+  "external_cohort": "GSE44589",
+  "external_test_type": "cross-endpoint TKI-response generalization",
+  "frozen_rank": 16,
+  "external_primary_population": "pretreatment baseline only",
+  "external_total_arrays": 198,
+  "external_baseline_n": 135,
+  "external_post6week_n_excluded": 63,
+  "external_baseline_response_counts": {
+    "MMR": 69,
+    "none": 59,
+    "unavailable": 7
+  },
+  "external_evaluable_baseline_n_expected": 128,
+  "positive_class": "none",
+  "negative_class": "MMR",
+  "primary_metric": "PR-AUC",
+  "secondary_metrics": [
+    "ROC-AUC",
+    "balanced accuracy",
+    "sensitivity",
+    "specificity"
+  ],
+  "technical_transport_audit_required_before_outcome_test": true,
+  "external_retuning_allowed": false,
+  "post6week_samples_primary_allowed": false,
+  "protocol_sha256": "361f3c57ccc5687bedc829080f86412fdc7f297a61fd814120502f5bc2b836b9"
+}

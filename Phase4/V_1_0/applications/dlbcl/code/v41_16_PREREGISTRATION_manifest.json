@@ -1,0 +1,49 @@
+{
+  "version": "v41.16-preregistration",
+  "date": "2026-09-20",
+  "status": "FROZEN_BEFORE_GSE159472_EXPRESSION_INSPECTION",
+  "primary_cohort": {
+    "accession": "GSE159472",
+    "reported_samples": 180,
+    "platform": "GPL570",
+    "technology": "Affymetrix Human Genome U133 Plus 2.0 Array"
+  },
+  "development_reference": {
+    "accession": "GSE10846",
+    "platform": "GPL570"
+  },
+  "panel_source": "v41.15x exploratory reduced measurable panel",
+  "panel_size": 12,
+  "frozen_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "MMP20",
+    "CKAP2",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "primary_endpoint": "top4_gene_eigensubspace_overlap",
+  "primary_null_n": 10000,
+  "primary_decision_rule": {
+    "real_gt_null_mean": true,
+    "empirical_one_sided_p_lte": 0.05
+  },
+  "secondary_endpoint": "pairwise_gene_correlation_structure_similarity",
+  "exploratory_endpoints": [
+    "top8_gene_eigensubspace_overlap",
+    "eigenvalue_profile_cosine_similarity",
+    "individual_gene_pair_conservation",
+    "leave_one_gene_out_diagnostics"
+  ],
+  "mapping_gate": "all_12_frozen_genes_reproducibly_measurable",
+  "reduced_panel_rescue_allowed": false,
+  "external_labels_used_for_confirmatory_test": false,
+  "preregistration_file": "v41_16_PREREGISTRATION.txt",
+  "preregistration_sha256": "00f27acd8c4b3bc8fcdd58368235f1bb8538588aa8e9c40720eb885d9b555505"
+}

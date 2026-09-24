@@ -1,0 +1,42 @@
+=== Soft Spaces / CML v44.3 TRANSPORT-AWARE REAL vs MATCHED NULL ===
+
+FROZEN DESIGN
+-------------
+Development cohort: GSE130404
+Frozen rank r: 16
+Transport-aware fold-specific Top-256 pools reused: YES
+Frozen v42.2 100 folds reused: YES
+Matched random orthonormal subspaces: 1000
+External outcome data used: NO
+
+PRIMARY: MEAN HELD-OUT PR-AUC
+-----------------------------
+REAL:       0.477031
+NULL mean:  0.392061
+Delta:      +0.084970
+NULL 2.5%:  0.359031
+NULL 97.5%: 0.429174
+Empirical one-sided p: 0.000999001
+
+SECONDARY: MEAN HELD-OUT ROC-AUC
+---------------------------------
+REAL:       0.785870
+NULL mean:  0.691650
+Delta:      +0.094220
+Empirical one-sided p: 0.000999001
+
+DECISION
+--------
+PASS iff REAL mean PR-AUC > NULL mean PR-AUC
+and empirical one-sided p <= 0.05.
+
+v44.3 STATUS: PASS
+
+INTERPRETATION LIMIT
+--------------------
+PASS supports only an INTERNAL transport-aware Soft-Spaces
+direct-subspace effect relative to matched random subspaces.
+
+It does not establish external replication, clinical utility,
+causal biology, superiority to established biomarkers,
+or quantum advantage.

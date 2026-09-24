@@ -1,0 +1,31 @@
+{
+  "version": "v44.5b1",
+  "status": "PASS",
+  "primary_external_cohort": "GSE44589",
+  "baseline_n": 135,
+  "evaluable_n": 128,
+  "positive_n": 59,
+  "negative_n": 69,
+  "unavailable_n": 7,
+  "prevalence": 0.4609375,
+  "pr_auc": 0.5295717378399711,
+  "pr_auc_minus_prevalence": 0.06863423783997114,
+  "roc_auc": 0.5772537460083518,
+  "balanced_accuracy": 0.5267747482191107,
+  "sensitivity": 0.1694915254237288,
+  "specificity": 0.8840579710144928,
+  "mean_positive_score": 0.22636408965639548,
+  "mean_negative_score": 0.16514454213973714,
+  "direction_preserved": true,
+  "external_refit": false,
+  "external_tuning": false,
+  "sample_classification_source": "GEO_SAMPLE_CHARACTERISTICS",
+  "sha256": {
+    "v44_5_protocol": "4a1131926769a8cfb1bf2007628da21299e5c9fc0021e9bc1184eec25af93114",
+    "v44_5a_manifest": "38aab8a3f45b6d86c67a3da708626f7a53b991f4914674df021bd5de0429b6c1",
+    "frozen_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "transport_audit": "9d1cfadf24a7ae878dceaed35eb6932b9d33f9e24344aa779bef552522147067",
+    "series_matrix": "e0c25a8d1e17b2a76f87b972597e7c90ac8bf65a0b7976a2abd7ecee49f60260",
+    "execution_script": "e2b853b3d97ba26cddba417a35863c703a3727de2b619d3f119cd81fecbeb73d"
+  }
+}

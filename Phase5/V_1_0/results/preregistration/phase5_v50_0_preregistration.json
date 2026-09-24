@@ -1,0 +1,251 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-23T09:34:42.613265+00:00",
+    "python_version": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "canonical_sha256": "3b3c48dc76229649bc5a27b0a921aa437af1b7d5d49e85df61af573488d49f78",
+    "hash_scope": "SHA-256 is computed over canonical JSON of the scientific manifest only; runtime metadata is excluded from the hash."
+  },
+  "manifest": {
+    "schema_version": "1.0",
+    "project": "Molecular Quantum Soft Spaces",
+    "phase": "Phase 5",
+    "script_version": "v50_0",
+    "status": "PREREGISTERED_BEFORE_OUTCOME_GENERATION",
+    "scientific_scope": {
+      "core_question": "Can previously established Soft Spaces structure provide predictive or computational value in a molecular quantum benchmark?",
+      "phase5_non_goal": "Phase 5 is not designed merely to demonstrate that Soft Spaces exist."
+    },
+    "benchmark": {
+      "molecule": "H4",
+      "geometry_family": "linear equally spaced hydrogen chain",
+      "basis": "STO-3G",
+      "number_of_atoms": 4,
+      "spatial_orbitals_expected": 4,
+      "spin_orbitals_expected": 8,
+      "electron_count": 4,
+      "charge": 0,
+      "spin_multiplicity": 1,
+      "geometry_parameter": "nearest-neighbour H-H distance",
+      "geometry_scan_angstrom": [
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.5,
+        3.0
+      ],
+      "primary_geometry_angstrom": 1.5,
+      "rationale": [
+        "Small enough for exact/reference calculations in the initial Phase 5 study.",
+        "Less trivial than H2 because electron correlation changes materially with geometry.",
+        "Eight spin orbitals provide a natural first molecular bridge to the earlier 8-qubit Soft Spaces work.",
+        "The geometry scan allows testing whether any Soft Spaces advantage survives from relatively weak to stronger correlation regimes."
+      ]
+    },
+    "hypothesis": {
+      "primary_hypothesis": "A preregistered Soft Spaces score/ranking will prioritise determinants or candidate subspaces that carry more molecular wavefunction/energy relevance than matched NULL controls and mandatory baselines at the same selection budget.",
+      "null_hypothesis": "At matched selection budget, Soft Spaces provides no reproducible advantage over matched NULL controls and preregistered baselines.",
+      "prediction_target": "Rank candidate computational-basis determinants/subspaces before using the target molecular outcome to choose among them.",
+      "real_definition": "REAL uses the frozen Soft Spaces construction inherited from the validated earlier-phase method, applied without outcome-dependent retuning.",
+      "null_definition": "NULL uses matched controls that preserve the relevant problem size and selection budget while destroying the specific Soft Spaces structure being tested.",
+      "leakage_rule": "No ranking hyperparameter, threshold, geometry choice, K value, seed subset, or metric definition may be changed after inspecting target benchmark outcomes. Any post-hoc analysis must be labelled exploratory."
+    },
+    "candidate_selection": {
+      "selection_object": "computational-basis determinants / selected determinant subspace",
+      "k_values": [
+        2,
+        4,
+        8,
+        12,
+        16
+      ],
+      "budget_matching_required": true,
+      "electron_number_sector_must_be_preserved": true
+    },
+    "baselines": [
+      {
+        "name": "Random-K",
+        "description": "Uniform random selection of K candidate determinants/subspaces from the same eligible candidate set. Report distribution across preregistered seeds.",
+        "mandatory": true
+      },
+      {
+        "name": "Reference-amplitude upper bound",
+        "description": "Outcome-aware ranking by exact/reference wavefunction importance. This is NOT a deployable competitor; it is an oracle ceiling used to quantify headroom.",
+        "mandatory": true
+      },
+      {
+        "name": "Simple chemistry-informed baseline",
+        "description": "A preregistered low-cost ranking using only conventional molecular information available before the target comparison. Exact implementation is frozen in the first executable benchmark script and may not use target labels.",
+        "mandatory": true
+      },
+      {
+        "name": "Matched NULL Soft-Spaces control",
+        "description": "A control that preserves candidate count, K, geometry, and evaluation protocol while removing the specific REAL Soft Spaces structure.",
+        "mandatory": true
+      }
+    ],
+    "metrics": [
+      {
+        "name": "Captured probability mass",
+        "direction": "higher_is_better",
+        "description": "Sum of reference-state probability mass contained in the selected K determinants/subspace.",
+        "primary": true
+      },
+      {
+        "name": "Energy error after selected-subspace diagonalisation",
+        "direction": "lower_is_better",
+        "description": "Absolute ground-state energy error relative to the exact/reference value when diagonalising in the selected subspace.",
+        "primary": true
+      },
+      {
+        "name": "Precision@K",
+        "direction": "higher_is_better",
+        "description": "Fraction of selected candidates belonging to a preregistered set of reference-important determinants.",
+        "primary": false
+      },
+      {
+        "name": "Recall@K",
+        "direction": "higher_is_better",
+        "description": "Fraction of preregistered reference-important determinants recovered within the selected K.",
+        "primary": false
+      },
+      {
+        "name": "NDCG@K",
+        "direction": "higher_is_better",
+        "description": "Rank-sensitive agreement with reference importance ranking.",
+        "primary": false
+      },
+      {
+        "name": "Selection efficiency",
+        "direction": "higher_is_better",
+        "description": "Reference quality achieved per selected determinant / evaluated candidate.",
+        "primary": false
+      }
+    ],
+    "decision_gates": [
+      {
+        "gate_id": "G1",
+        "name": "Validity",
+        "rule": "Reference molecular calculation, candidate indexing, electron-number sector, and all bookkeeping checks must pass. Any indexing or sector mismatch is FAIL.",
+        "mandatory": true
+      },
+      {
+        "gate_id": "G2",
+        "name": "REAL beats matched NULL on primary metrics",
+        "rule": "Across the preregistered geometry scan, REAL must show positive median advantage over matched NULL for BOTH primary metrics: captured probability mass and absolute energy error.",
+        "mandatory": true
+      },
+      {
+        "gate_id": "G3",
+        "name": "Advantage is not single-geometry",
+        "rule": "REAL must outperform the matched NULL median on both primary metrics in at least 6 of the 8 preregistered geometries for at least one preregistered K.",
+        "mandatory": true
+      },
+      {
+        "gate_id": "G4",
+        "name": "Random baseline separation",
+        "rule": "For the same qualifying K from G3, REAL must exceed the Random-K median captured probability mass and improve median absolute energy error.",
+        "mandatory": true
+      },
+      {
+        "gate_id": "G5",
+        "name": "Practical reduction",
+        "rule": "A qualifying REAL configuration must reach a preregistered reference-quality target using no more than 50% of the eligible determinant set. The exact reference-quality threshold is frozen before outcome inspection in v50_1.",
+        "mandatory": true
+      },
+      {
+        "gate_id": "G6",
+        "name": "Reproducibility",
+        "rule": "The primary conclusion must remain unchanged under the full preregistered seed set. A result depending on selective seed removal is FAIL.",
+        "mandatory": true
+      }
+    ],
+    "seed_policy": {
+      "master_seed": 25043000,
+      "evaluation_seeds": [
+        25043000,
+        25043001,
+        25043002,
+        25043003,
+        25043004,
+        25043005,
+        25043006,
+        25043007,
+        25043008,
+        25043009,
+        25043010,
+        25043011
+      ],
+      "notes": [
+        "Reuse the established 12-seed family for continuity with earlier Soft Spaces work.",
+        "Seeds are frozen before Phase 5 outcome generation.",
+        "No failed-looking seed may be removed without an independently documented technical reason."
+      ]
+    },
+    "industrial_value": {
+      "definition": "Industrial/practical value means measurable reduction of computational search or evaluation cost at matched scientific quality, not merely statistically significant REAL-vs-NULL separation.",
+      "acceptable_signals": [
+        "Fewer selected determinants for the same energy accuracy.",
+        "Higher captured reference mass at the same K.",
+        "Fewer expensive downstream evaluations at matched quality.",
+        "Stable prioritisation across molecular geometries.",
+        "A ranking rule that can be computed more cheaply than the brute-force work it replaces."
+      ],
+      "non_claims": [
+        "Phase 5 v50_0 does not claim quantum advantage.",
+        "Phase 5 v50_0 does not claim industrial deployment readiness.",
+        "Phase 5 v50_0 does not claim transfer to chemically large molecules.",
+        "A REAL-vs-NULL difference alone is insufficient for an industrial-value claim."
+      ]
+    },
+    "planned_sequence": [
+      {
+        "version": "v50_0",
+        "purpose": "Preregistration and manifest freeze"
+      },
+      {
+        "version": "v50_1",
+        "purpose": "Reference H4/STO-3G molecular problem construction; exact/reference spectrum and determinant-sector validation; freeze any remaining purely operational thresholds"
+      },
+      {
+        "version": "v50_2",
+        "purpose": "Implement frozen REAL and matched NULL molecular ranking"
+      },
+      {
+        "version": "v50_3",
+        "purpose": "Run mandatory baselines and K-budget sweep"
+      },
+      {
+        "version": "v50_4",
+        "purpose": "Geometry robustness and correlation-regime analysis"
+      },
+      {
+        "version": "v50_5",
+        "purpose": "Resource/efficiency analysis and practical-value gate"
+      },
+      {
+        "version": "v50_6",
+        "purpose": "Independent confirmation / secondary molecule candidate such as LiH"
+      }
+    ],
+    "analysis_policy": {
+      "primary_analysis": "preregistered only",
+      "exploratory_analysis_allowed": true,
+      "exploratory_labelling_required": true,
+      "post_hoc_threshold_changes_prohibited_for_primary_claims": true,
+      "report_all_preregistered_geometries": true,
+      "report_all_preregistered_k_values": true,
+      "report_all_preregistered_seeds": true
+    },
+    "software_policy": {
+      "python": "3.12 preferred",
+      "reproducible_outputs": true,
+      "machine_readable_results": true,
+      "no_silent_exception_suppression": true,
+      "future_scripts_must_verify_preregistration_hash": true
+    }
+  }
+}

@@ -1,0 +1,716 @@
+SOFT SPACES / DLBCL
+v41 RESEARCH HISTORY
+Frozen research record through v41.11b
+
+Purpose
+-------
+This file preserves the methodological and scientific history of the DLBCL
+application track in Soft Spaces Phase 4.
+
+It records:
+- why each version was created,
+- what methodological problem it addressed,
+- what failed,
+- what was corrected,
+- what evidence was obtained,
+- what decisions followed,
+- which stages were exploratory,
+- which stages were external validation,
+- which stages were blind/prospective.
+
+===============================================================================
+0. OVERALL RESEARCH QUESTION
+===============================================================================
+
+Can the Soft-Spaces formalism, originally developed in a quantum/Hilbert-space
+context, be repurposed as a feature-ranking / subspace-discovery method for
+high-dimensional biological data?
+
+Initial biological test case:
+Diffuse Large B-Cell Lymphoma (DLBCL), especially ABC versus GCB.
+
+The key question was not whether ABC and GCB can be classified at all.
+Classical bioinformatics already does that well.
+
+The relevant question was:
+
+Can Soft Spaces identify a compact, transferable and non-random feature
+subspace that preserves strong biological classification information?
+
+===============================================================================
+1. v41.0 — DLBCL APPLICATION TRACK INITIALIZATION
+===============================================================================
+
+Main role
+---------
+Establish the DLBCL application track and prepare the first biological dataset.
+
+Primary development cohort
+--------------------------
+GSE10846.
+
+Scientific role
+---------------
+EXPLORATORY / DEVELOPMENT.
+
+Main objective
+--------------
+Construct a usable expression matrix and test whether Soft-Spaces structure
+discovery can be mapped onto transcriptomic feature selection.
+
+Decision
+--------
+Proceed with metadata resolution, preprocessing and baseline construction.
+
+===============================================================================
+2. v41.0b / v41.0c — COO METADATA RESOLUTION
+===============================================================================
+
+Main role
+---------
+Resolve and clean ABC/GCB cell-of-origin labels.
+
+Required distinction
+---------------------
+- ABC
+- GCB
+- ambiguous / other labels
+
+Scientific reason
+-----------------
+All downstream binary classification metrics had to use patients with
+unambiguous labels.
+
+Scientific role
+---------------
+DATA CURATION / DEVELOPMENT.
+
+===============================================================================
+3. v41.1 / v41.1a — INITIAL PREPROCESSING
+===============================================================================
+
+Main role
+---------
+Construct the patient-by-feature matrix and implement the first preprocessing
+pipeline.
+
+Approximate dimensionality
+--------------------------
+~22,000 measured transcriptomic features per patient before reduction.
+
+Operations included
+-------------------
+- expression matrix construction
+- filtering
+- scaling / normalization
+- initial feature reduction
+- preparation for Soft-Spaces ranking
+
+Scientific role
+---------------
+EXPLORATORY / DEVELOPMENT.
+
+Important later finding
+-----------------------
+This preprocessing chain contained a real methodological error:
+feature variance/ranking had been performed after scaling.
+
+Because standardization changes the variance structure, the original raw
+variance information had effectively been destroyed before variance-based
+selection.
+
+This flaw became the motivation for v41.7.
+
+===============================================================================
+4. v41.2 — CLASSICAL BASELINES
+===============================================================================
+
+Main role
+---------
+Establish conventional reference performance on GSE10846.
+
+Purpose
+-------
+Verify that:
+- ABC/GCB signal is present,
+- the task is learnable,
+- Soft Spaces is evaluated in a meaningful baseline context.
+
+Scientific interpretation
+-------------------------
+Classical methods already performed strongly on the development cohort.
+
+Important consequence
+---------------------
+The Soft-Spaces claim should not be:
+"Soft Spaces uniquely solves ABC/GCB classification."
+
+The stronger question became:
+Can Soft Spaces identify a much smaller structured feature set while retaining
+strong predictive information?
+
+Scientific role
+---------------
+REFERENCE / DEVELOPMENT.
+
+===============================================================================
+5. v41.3 — FIRST SOFT-SPACES BIOLOGICAL MAPPING PROBE
+===============================================================================
+
+Main role
+---------
+Translate Soft-Spaces structure discovery into biological feature ranking.
+
+Conceptual mapping
+------------------
+high-dimensional expression space
+    ->
+Soft-Spaces feature/subspace score
+    ->
+ranked biological features
+    ->
+small candidate feature panel
+
+Emerging result
+---------------
+A compact feature set began to emerge.
+
+The 16-gene panel later central to the study developed through this track.
+
+Scientific role
+---------------
+EXPLORATORY FEATURE DISCOVERY.
+
+===============================================================================
+6. v41.4 — INTERNAL ROBUSTNESS / REAL VS NULL
+===============================================================================
+
+Main role
+---------
+Test whether the Soft-Spaces feature-ranking effect was stronger than matched
+or randomized NULL controls.
+
+Core comparison
+---------------
+REAL vs NULL.
+
+Emerging result
+---------------
+REAL performance was consistently better than NULL inside the development
+framework.
+
+Scientific role
+---------------
+INTERNAL ROBUSTNESS / EXPLORATORY CONFIRMATION.
+
+Decision
+--------
+Proceed to external datasets.
+
+===============================================================================
+7. v41.5 — EXTERNAL VALIDATION PREPARATION
+===============================================================================
+
+Main role
+---------
+Prepare an external DLBCL cohort for transfer testing.
+
+External dataset
+----------------
+GSE31312.
+
+Scientific role
+---------------
+EXTERNAL VALIDATION PREPARATION.
+
+===============================================================================
+8. v41.5b — GSE31312 GEP / COO RESOLUTION
+===============================================================================
+
+Main role
+---------
+Resolve expression / GEP / COO information required for GSE31312.
+
+Scientific role
+---------------
+DATA HARMONIZATION / EXTERNAL PREPARATION.
+
+Decision
+--------
+Proceed to genuine external transfer testing.
+
+===============================================================================
+9. v41.6 — FIRST EXTERNAL TEST: IMPORTANT FAILURE
+===============================================================================
+
+Main role
+---------
+Run the existing Soft-Spaces pipeline on the external cohort.
+
+Result
+------
+Approximate AUC:
+0.6689
+
+Approximate REAL-vs-NULL difference:
+Delta REAL-NULL ~ -0.0185
+
+Interpretation
+--------------
+This was not a successful external validation.
+
+The result triggered an audit instead of being hidden or reframed.
+
+Audit finding
+-------------
+A real preprocessing error was identified:
+feature variance/ranking had been performed after scaling.
+
+Scientific role
+---------------
+NEGATIVE EXTERNAL VALIDATION RESULT.
+
+Decision
+--------
+Correct preprocessing and repeat the analysis.
+
+===============================================================================
+10. v41.7 — CORRECTED PREPROCESSING AUDIT
+===============================================================================
+
+Main role
+---------
+Correct the preprocessing error identified after v41.6.
+
+Corrected order
+---------------
+raw feature variance
+    ->
+Top-256 feature selection
+    ->
+scaling
+    ->
+Soft-Spaces ranking / modelling
+
+Key internal result after correction
+------------------------------------
+Approximate mean AUC:
+0.9082
+
+Approximate REAL-vs-NULL improvement:
+Delta AUC = +0.1156
+
+Approximate 95% confidence interval:
+[+0.0953, +0.1344]
+
+Positive REAL-vs-NULL comparisons:
+15 / 15
+
+Interpretation
+--------------
+After correction, the internal effect became strong and stable again.
+
+Scientific role
+---------------
+CORRECTED INTERNAL VALIDATION.
+
+Decision
+--------
+Repeat external testing using the corrected pipeline.
+
+===============================================================================
+11. v41.8 — REVISED EXTERNAL TEST
+===============================================================================
+
+Main role
+---------
+Re-run external validation with corrected preprocessing.
+
+Key finding
+-----------
+The REAL-vs-NULL advantage returned.
+
+Interpretation
+--------------
+The earlier v41.6 failure was consistent with a preprocessing problem rather
+than a failure of the Soft-Spaces feature-ranking idea itself.
+
+Scientific role
+---------------
+CORRECTED EXTERNAL VALIDATION.
+
+Remaining issue
+---------------
+Absolute prediction probabilities remained shifted across cohorts.
+
+Decision
+--------
+Audit threshold calibration and cohort alignment.
+
+===============================================================================
+12. v41.9 — THRESHOLD CALIBRATION AUDIT
+===============================================================================
+
+Main role
+---------
+Test whether an incorrect classification threshold explained the remaining
+external-transfer problem.
+
+Finding
+-------
+Threshold adjustment alone did not solve the transfer problem.
+
+Scientific role
+---------------
+TRANSFER-DIAGNOSTIC AUDIT.
+
+Decision
+--------
+Investigate cross-cohort numerical scale differences.
+
+===============================================================================
+13. v41.10 — CROSS-COHORT ALIGNMENT AUDIT
+===============================================================================
+
+Main role
+---------
+Investigate development-versus-external expression scale differences.
+
+Key finding
+-----------
+A cohort-scale shift was identified.
+
+Interpretation
+--------------
+Relative ranking information could remain useful even when absolute prediction
+scores shifted across cohorts.
+
+Solution
+--------
+Introduce a label-free cohort standardization.
+
+Representative external performance after label-free alignment
+---------------------------------------------------------------
+Approximate AUC:
+0.8279
+
+Approximate balanced accuracy:
+0.7510
+
+Scientific role
+---------------
+EXTERNAL ALIGNMENT / TRANSFER CORRECTION.
+
+Important methodological point
+------------------------------
+External disease labels were not used to optimize the alignment.
+
+Decision
+--------
+Freeze the corrected/aligned pipeline and test prospectively on a new cohort.
+
+===============================================================================
+14. v41.11 — PROSPECTIVE / LABEL-BLIND GSE87371 TEST
+===============================================================================
+
+Main role
+---------
+Perform a stronger external validation on a new independent cohort.
+
+Dataset
+-------
+GSE87371.
+
+Critical design
+---------------
+The pipeline was frozen before disease labels were used for evaluation.
+
+Frozen components included:
+- preprocessing
+- feature selection
+- Soft-Spaces panel
+- scaling/alignment
+- classifier
+- scoring procedure
+
+Predictions were generated first.
+ABC/GCB labels were opened afterwards.
+
+Scientific role
+---------------
+PROSPECTIVE-LIKE / LABEL-BLIND EXTERNAL VALIDATION.
+
+Decision
+--------
+Preserve predictions and recover labels separately for final scoring.
+
+===============================================================================
+15. v41.11b — RECOVERY AND FINAL GSE87371 SCORING
+===============================================================================
+
+Script
+------
+v41_11b_recover_GSE87371_scoring.py
+
+Main role
+---------
+Recover true ABC/GCB labels and score the already generated blind predictions.
+
+Integrity control
+-----------------
+SHA256 verification matched.
+
+Interpretation
+--------------
+Blind predictions were preserved and were not regenerated after labels became
+known.
+
+Binary evaluation cohort
+------------------------
+168 patients with unambiguous ABC/GCB status.
+
+Approximate class counts
+------------------------
+- 85 GCB
+- 83 ABC
+
+REAL result
+-----------
+AUC:
+0.9562
+
+NULL result
+-----------
+AUC:
+0.7934
+
+Difference
+----------
+Delta AUC:
++0.1628
+
+REAL balanced accuracy
+----------------------
+0.8867
+
+NULL balanced accuracy
+----------------------
+0.7184
+
+Difference
+----------
+Delta balanced accuracy:
++0.1683
+
+Reported statistical results
+----------------------------
+Approximate p-value for Delta AUC:
+0.00498
+
+Approximate p-value for Delta balanced accuracy:
+0.00995
+
+NULL comparison
+---------------
+200 randomized/control NULL models.
+
+Scientific role
+---------------
+BLIND EXTERNAL VALIDATION / CURRENT STRONGEST DLBCL RESULT.
+
+===============================================================================
+16. CURRENT 16-GENE INTERPRETATION
+===============================================================================
+
+Practical result
+----------------
+~22,000 measured transcriptomic features
+    ->
+Soft-Spaces ranking / feature discovery
+    ->
+16-gene feature panel
+    ->
+strong ABC/GCB discrimination
+    ->
+successful independent blind external validation
+
+Supported claim
+---------------
+A Soft-Spaces-derived feature-ranking procedure identified a compact 16-gene
+structure in a development cohort that retained strong ABC/GCB information and
+transferred successfully to an independent external cohort under a frozen,
+label-blind evaluation procedure.
+
+Not supported
+-------------
+- The 16 genes are not proven causal DLBCL drivers.
+- Soft Spaces is not proven superior to all classical bioinformatics methods.
+- No clinical diagnostic validation has been established.
+- No quantum computational advantage has been demonstrated.
+
+===============================================================================
+17. EVIDENCE CHAIN
+===============================================================================
+
+GSE10846
+    |
+    v
+initial Soft-Spaces biological mapping
+    |
+    v
+compact 16-gene structure
+    |
+    v
+REAL > NULL internally
+    |
+    v
+v41.6 FIRST EXTERNAL TEST FAILS
+    |
+    v
+preprocessing error discovered
+    |
+    v
+v41.7 preprocessing corrected
+    |
+    v
+strong internal effect restored
+    |
+    v
+v41.8 corrected external transfer
+    |
+    v
+v41.9 threshold issue investigated
+    |
+    v
+v41.10 cohort-scale shift identified
+    |
+    v
+label-free cohort alignment
+    |
+    v
+pipeline frozen
+    |
+    v
+v41.11 GSE87371 predictions generated without evaluation labels
+    |
+    v
+labels recovered afterwards
+    |
+    v
+v41.11b SHA256 integrity verified
+    |
+    v
+168 ABC/GCB patients scored
+    |
+    v
+REAL AUC ~0.9562
+NULL AUC ~0.7934
+Delta AUC ~+0.1628
+
+===============================================================================
+18. WHAT HAS BEEN ESTABLISHED
+===============================================================================
+
+1. Soft-Spaces-derived feature ranking can reduce a high-dimensional DLBCL
+   transcriptomic problem to a compact feature panel.
+
+2. The 16-gene structure carries strong ABC/GCB classification information.
+
+3. REAL outperforms matched/randomized NULL controls in the corrected pipeline.
+
+4. The structure transfers to independent patient cohorts.
+
+5. Cross-cohort scale differences materially affect transfer and must be handled.
+
+6. Label-free cohort alignment can restore useful transfer without tuning on
+   external disease labels.
+
+7. The strongest test used a frozen pipeline and label-blind GSE87371
+   prediction procedure.
+
+8. On 168 unambiguous ABC/GCB patients, REAL achieved approximately
+   AUC 0.9562 and balanced accuracy 0.8867.
+
+===============================================================================
+19. WHAT HAS NOT BEEN ESTABLISHED
+===============================================================================
+
+The present work does not establish:
+
+1. superiority over the best classical bioinformatics methods;
+2. causal biological roles for the 16 genes;
+3. clinical diagnostic validity;
+4. generalization to every DLBCL cohort or assay platform;
+5. universal applicability to all biological datasets;
+6. quantum computational advantage;
+7. any requirement for quantum hardware in the biological application.
+
+===============================================================================
+20. CURRENT SCIENTIFIC STATUS
+===============================================================================
+
+The DLBCL application has progressed beyond a toy demonstration.
+
+The strongest current interpretation is:
+
+Soft Spaces appears to function as a compact feature-discovery / feature-ranking
+method in high-dimensional DLBCL transcriptomic data.
+
+The strongest evidence is not merely the high GSE87371 AUC.
+
+The methodological history matters:
+
+- an external failure occurred,
+- the failure was not hidden,
+- a real preprocessing error was identified,
+- the pipeline was corrected,
+- a second transfer problem was diagnosed,
+- cohort alignment was introduced without test-label tuning,
+- the pipeline was frozen,
+- predictions were generated before labels were opened,
+- prediction integrity was verified,
+- strong external performance was then observed.
+
+===============================================================================
+21. RECOMMENDED NEXT SCIENTIFIC STEP
+===============================================================================
+
+Recommended next version:
+v41.12 — feature stability / stability selection.
+
+Primary question:
+Are the 16 selected genes stable under patient resampling and reasonable
+perturbations of the development data?
+
+Suggested tests:
+- bootstrap / repeated subsampling
+- selection frequency per gene
+- rank stability
+- overlap/Jaccard of selected panels
+- stable core-panel identification
+- REAL vs NULL stability comparison
+
+===============================================================================
+22. REPOSITORY / REPRODUCIBILITY RECOMMENDATION
+===============================================================================
+
+Commit this history together with:
+
+- all v41 Python scripts,
+- frozen configuration files,
+- relevant outputs,
+- blind GSE87371 prediction file,
+- SHA256 integrity record,
+- final GSE87371 scoring output,
+- 16-gene panel definition,
+- README describing reproduction steps.
+
+Suggested filename:
+DLBCL_v41_RESEARCH_HISTORY.txt
+
+Suggested commit message:
+Freeze DLBCL v41 research history through blind GSE87371 validation
+
+===============================================================================
+END OF FROZEN v41 RESEARCH HISTORY
+===============================================================================

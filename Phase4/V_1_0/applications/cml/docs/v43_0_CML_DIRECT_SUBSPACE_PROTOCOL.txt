@@ -1,0 +1,136 @@
+Soft Spaces / CML
+v43.0 — DIRECT SUBSPACE PROJECTION PROTOCOL
+
+STATUS
+------
+FROZEN BEFORE v43 MODELING
+
+NEW HYPOTHESIS
+--------------
+v42 tested Soft Spaces as a feature selector:
+
+    X -> H -> P_r -> coordinate coupling -> top-K genes -> classifier
+
+v43 tests the subspace itself:
+
+    X -> H -> P_r -> direct patient projection -> classifier
+
+This is a new hypothesis. The v42.4 FAIL remains unchanged.
+
+PRIMARY HYPOTHESIS
+------------------
+A Soft-Spaces-derived low-dimensional subspace learned from baseline CML
+expression preserves more held-out EMR-response information than a matched
+random subspace of the same dimension.
+
+DEVELOPMENT COHORT
+------------------
+GSE130404
+96 baseline diagnostic chronic-phase CML patients
+
+Outcome:
+- y=1: BCR-ABL1 >10% IS at 3 months, n=13
+- y=0: BCR-ABL1 <10% IS at 3 months, n=83
+
+PRIMARY METRIC
+--------------
+PR-AUC
+
+Secondary:
+ROC-AUC, balanced accuracy, sensitivity, specificity
+
+FROZEN CV AND PREPROCESSING
+---------------------------
+Reuse exactly the v42.2:
+- 5-fold x 20-repeat split manifest
+- 100 held-out evaluations
+- fold-specific Top-256 raw-variance gene pools
+- training-only StandardScaler
+
+SOFT-SPACES OPERATOR
+--------------------
+Within each outer training fold:
+
+    H = mean(xx^T | y=1) - mean(xx^T | y=0)
+    H <- 0.5(H + H^T)
+
+Diagonalize H and order eigenvectors by descending absolute eigenvalue.
+
+CANDIDATE RANKS
+---------------
+r in {4, 8, 16}
+
+v43.1 selection rule:
+choose r with highest mean held-out PR-AUC.
+Tie-break: smaller r.
+
+DIRECT REPRESENTATION
+---------------------
+For frozen rank r:
+
+    Z_train = X_train U_r
+    Z_test  = X_test U_r
+
+No p_g(1-p_g) feature ranking.
+No top-K genes.
+
+CLASSIFIER
+----------
+LogisticRegression:
+- L2 penalty
+- C=1.0
+- class_weight="balanced"
+- solver="liblinear"
+
+No classifier family search.
+
+MATCHED NULL
+------------
+v43.2 will compare REAL against random orthonormal subspaces of identical
+dimension r.
+
+For each fold and each NULL realization:
+1. generate random Gaussian matrix of shape 256 x r;
+2. orthonormalize via QR;
+3. project the same standardized train/test matrices;
+4. fit the identical classifier;
+5. evaluate on the identical held-out samples.
+
+Recommended NULL count:
+1000.
+
+PRIMARY PASS RULE
+-----------------
+PASS iff:
+1. REAL mean held-out PR-AUC > NULL mean held-out PR-AUC; AND
+2. empirical one-sided p <= 0.05.
+
+Otherwise FAIL.
+
+Secondary metrics cannot override a failed primary result.
+
+EXTERNAL TESTING
+----------------
+No external testing before an internal v43.2 PASS.
+
+GSE44589 remains only a candidate. Any later use requires a separately frozen
+external-generalization protocol.
+
+INTERPRETATION
+--------------
+A PASS would support only:
+the learned Soft-Spaces spectral subspace preserves more CML-response
+information than matched random subspaces of the same dimension.
+
+It would not establish clinical utility, causal biology, superiority to
+classical baselines, direct external replication, or quantum advantage.
+
+VERSION PLAN
+------------
+v43.0 protocol
+v43.1 development-only rank selection
+v43.2 frozen REAL vs matched random-subspace NULL
+v43.3 stability only after PASS
+v43.4 external preregistration only after PASS
+v43.5 external test
+v43.6 closure

@@ -1,0 +1,6 @@
+=== GSE14671 SAMPLE-SPECIFIC CHARACTERISTIC INVENTORY ===
+
+[_unkeyed] present in 59/59 samples
+   36  CD34+ cells were sorted from cryopreserved MNC by a BD FACSAria™ (BD Biosciences).
+   23  CD34+ cells were separated from freshly isolated MNC using MiniMACS columns (Miltenyi Biotec, Bergisch-Gladbach, Germany), following the instructions of the manufacturer.
+

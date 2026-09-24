@@ -1,0 +1,16 @@
+{
+  "version": "v45.2b",
+  "target_gene": "PTPN20",
+  "status": "UNRESOLVED",
+  "resolved_probe": null,
+  "unique_supported_probes": [],
+  "outcome_labels_used": false,
+  "predictive_scores_used": false,
+  "model_refit": false,
+  "sha256": {
+    "gse14671_family_soft": "11fe1a5df5889ff507048ea081c41411f00762c04c719b52a97efaaff854dbd9",
+    "v45_1_protocol": "c620936dc5832ac26fca09155b7b89d241120d7e3399e9c2c50e38585ad63b0d",
+    "annotation_hits_tsv": "51687d70341aff7b761e4da159ceaa606cdee71705998d0805a26feef1d86363",
+    "execution_script": "b03fdb17daf52c0b699843cb4711b4065ae14948ba01b5cb1e63e1d1b193216a"
+  }
+}

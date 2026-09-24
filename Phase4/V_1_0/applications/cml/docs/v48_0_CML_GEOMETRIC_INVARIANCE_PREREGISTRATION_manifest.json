@@ -1,0 +1,18 @@
+{
+  "version": "v48.0",
+  "status": "FROZEN_BEFORE_V48_1_EXECUTION",
+  "clinical_labels_used": false,
+  "n_null": 1000,
+  "seed": 48010001,
+  "pca_r": 16,
+  "knn_k": 10,
+  "protocol_sha256": "540a69b8b6aed42b1d629f8d301f0ebcbed7ade7b82f3b4ba6eee0c3444ead9f",
+  "source_sha256": {
+    "v47_6_closure_manifest": "5e028b61a73294c30144a85827a58a75200e501ce19be81c6122cb3f545f21c7",
+    "dev_raw_top256": "7c252008a100430bfb0bfbab11e39337c0c666570db1fb67cb60e70dad82ab1f",
+    "dev_features": "86b8463bda591640b866065aa7eb00b6d6e99dfea337d5642c56fae75d594395",
+    "ext_geometry": "dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943",
+    "ext_features": "496ab41d5df4427ace6fd3ae9bf6e452d95fbdd0136c4e1955ceb7852a10f449",
+    "gse44589_soft": "91e23f84b159c6f8eaf59285de15c6c29b84f8696dc4887b4da9ba559f720c1f"
+  }
+}

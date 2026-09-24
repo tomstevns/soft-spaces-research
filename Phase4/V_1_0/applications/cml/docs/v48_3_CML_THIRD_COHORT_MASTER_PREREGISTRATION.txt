@@ -1,0 +1,236 @@
+Soft Spaces / CML
+v48.3 — THIRD-COHORT GEOMETRIC REPLICATION MASTER PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE GSE14671 GEOMETRIC ANALYSIS
+
+RELATION TO PRIOR WORK
+----------------------
+v48.1:
+    GEOMETRIC INVARIANCE PASS
+
+v48.2:
+    GEOMETRIC INVARIANCE ROBUSTNESS PASS
+
+v48.3 is a prospective third-cohort extension.
+
+It is not a rescue of v47 and does not use clinical outcome labels.
+
+THIRD COHORT
+------------
+GSE14671 / GPL570
+
+Frozen intended use:
+    all 59 GEO samples
+
+No clinical-response label is read or used.
+
+The samples are treated only as an independent CML expression cohort.
+
+SHARED TECHNICAL UNIVERSE
+-------------------------
+Use the existing v44 transport-aware eligible universe:
+    15,890 genes
+
+Each cohort retains its OWN label-blind Top-256 high-variance features.
+
+Therefore exact gene identity is not required to match across cohorts.
+
+GEOMETRIC REPRESENTATION
+------------------------
+For every cohort:
+
+1. Top-256 raw-variance genes frozen for that cohort
+2. per-gene cohort z-standardization, ddof=0
+3. PCA-16
+4. normalized eigen-spectrum
+5. pairwise PCA-16 distances normalized by cohort median distance
+6. local anisotropy, k=10
+
+No clinical labels.
+
+------------------------------------------------------------
+v48.3a — TECHNICAL AUDIT
+------------------------------------------------------------
+Requirements:
+- GSE14671 family SOFT available
+- exactly 59 sample expression tables
+- GPL570 annotation usable
+- at least 256 genes from the 15,890-gene eligible universe measurable
+- complete finite expression values for selected genes
+
+If any requirement fails:
+    TECHNICALLY NON-EVALUABLE
+    STOP MASTER PIPELINE BEFORE GEOMETRIC TESTING
+
+------------------------------------------------------------
+v48.3b — THIRD-COHORT LABEL-BLIND GEOMETRY
+------------------------------------------------------------
+Across all 59 samples:
+
+1. restrict to measurable genes in frozen 15,890-gene universe
+2. select Top-256 by raw variance
+3. construct PCA-16
+4. freeze Top-256 and geometry by SHA
+
+No outcome labels are parsed.
+
+------------------------------------------------------------
+v48.3c — PAIRWISE THIRD-COHORT REPLICATION
+------------------------------------------------------------
+Pairs:
+    GSE14671 vs GSE130404
+    GSE14671 vs GSE44589
+
+Primary A:
+    cosine similarity of normalized PCA-16 eigen-spectra
+    HIGHER = more similar
+
+Primary B:
+    Wasserstein-1 distance between normalized pairwise-distance distributions
+    LOWER = more similar
+
+NULL:
+    1000 covariance-destroyed GSE14671 geometries
+
+For each NULL:
+    independently permute patients within every frozen GSE14671 Top-256 gene
+
+This preserves:
+- third-cohort feature identity
+- every gene's marginal values
+- mean
+- variance
+- sample count
+
+It destroys:
+- cross-gene covariance
+- patient-level multivariate organization
+
+For EACH of the two cohort pairs, PASS requires BOTH:
+    observed spectrum cosine > NULL q95
+    observed distance W1 < NULL q05
+    empirical p_spectrum <= 0.05
+    empirical p_distance <= 0.05
+
+v48.3c overall PASS requires BOTH cohort pairs to PASS.
+
+If v48.3c FAILS:
+    record FAIL
+    do not tune
+    continue only to predeclared robustness/joint characterization,
+    which cannot convert the pairwise FAIL into a PASS.
+
+------------------------------------------------------------
+v48.3d — PATIENT-RESAMPLING ROBUSTNESS
+------------------------------------------------------------
+Paired three-cohort resamples:
+    100
+
+Patients per resample:
+    GSE130404: 76/96
+    GSE44589:  108/135
+    GSE14671:  47/59
+
+Frozen feature identities are retained.
+
+Within every resample:
+- re-standardize each cohort
+- refit PCA-16
+- compare GSE14671 with BOTH existing cohorts
+- create 20 covariance-destroyed third-cohort NULLs
+
+Signed NULL-z:
+    z_spectrum = (observed - null_mean) / null_sd
+    z_distance = (null_mean - observed) / null_sd
+
+For EACH pair and EACH primary metric, robustness requires:
+    median signed z > 1.644853626951
+    fraction signed z > 0 >= 0.75
+
+Overall robustness PASS:
+    all four gates PASS
+
+------------------------------------------------------------
+v48.3e — JOINT THREE-COHORT INVARIANCE
+------------------------------------------------------------
+Observed worst-pair statistics across:
+    GSE130404 vs GSE44589
+    GSE130404 vs GSE14671
+    GSE44589  vs GSE14671
+
+Joint spectral statistic:
+    MINIMUM pairwise spectrum cosine
+    higher = better
+
+Joint distance statistic:
+    MAXIMUM pairwise normalized-distance W1
+    lower = better
+
+NULL:
+    500 replicates
+
+In EACH NULL replicate:
+    independently destroy covariance in ALL THREE cohorts
+    by within-gene patient permutation.
+
+PASS requires BOTH:
+    observed minimum cosine > NULL q95
+    observed maximum W1 < NULL q05
+    both empirical one-sided p <= 0.05
+
+------------------------------------------------------------
+v48.3f — AUTOMATIC CLOSURE
+------------------------------------------------------------
+The master script writes a final closure with:
+
+- technical evaluability
+- third-cohort feature composition
+- pairwise replication PASS/FAIL
+- resampling robustness PASS/FAIL
+- joint three-cohort invariance PASS/FAIL
+- all SHA hashes
+- no-rescue statement
+
+FINAL CLAIM RULE
+----------------
+"THREE-COHORT GEOMETRIC INVARIANCE SUPPORTED"
+is allowed ONLY if:
+
+    v48.3a technical PASS
+    AND v48.3c pairwise overall PASS
+    AND v48.3d robustness overall PASS
+    AND v48.3e joint overall PASS
+
+Otherwise the final claim is NOT SUPPORTED.
+
+CLAIM LIMIT
+-----------
+Even a full PASS would support only:
+
+    reproducible higher-level label-blind geometric similarity across
+    these three CML transcriptomic cohorts under the frozen v48 tests.
+
+It would NOT establish:
+- prediction
+- treatment-response replication
+- clinical utility
+- causal biology
+- cancer dormancy
+- disease-transition mechanism
+- quantum biology
+- quantum advantage
+
+NO RESCUE
+---------
+No post-hoc:
+- feature-count tuning
+- PCA-rank tuning
+- neighborhood tuning
+- cohort subset tuning
+- label selection
+- NULL redefinition
+- threshold adjustment
+
+Any later change requires a NEW version and NEW hypothesis.

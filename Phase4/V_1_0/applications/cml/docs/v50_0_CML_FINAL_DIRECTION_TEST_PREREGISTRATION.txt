@@ -1,0 +1,159 @@
+Soft Spaces / CML
+v50.0 — FINAL SPECIAL CHANGE-DIRECTION TEST PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE v50 ANALYSIS
+
+PURPOSE
+-------
+This is the final planned CML structural test.
+
+Plain-language question:
+
+    Do the frozen Top-256 Soft-Spaces gene panels contain unusually clear
+    and locally coherent "change directions" compared with ordinary
+    high-variance real-gene panels?
+
+NO CLINICAL LABELS
+------------------
+No response, prognosis or treatment label may be parsed or used.
+
+COHORTS
+-------
+A = GSE130404
+B = GSE44589
+C = GSE14671
+
+OBSERVED PANEL
+--------------
+Already-frozen Top-256 gene set for each cohort.
+
+REPRESENTATION
+--------------
+Within each cohort:
+
+1. z-standardize frozen Top-256
+2. PCA-16
+3. for each patient find k=10 nearest neighbors
+4. compute local covariance among those neighbors
+5. first eigenvector = dominant local change direction
+
+PRIMARY METRIC 1
+----------------
+LOCAL DIRECTIONAL CONCENTRATION
+
+    lambda1 / sum(lambda)
+
+Use cohort median.
+
+Higher means local variation is concentrated into one dominant direction.
+
+PRIMARY METRIC 2
+----------------
+LOCAL DIRECTIONAL COHERENCE
+
+For neighboring patients compare their dominant local directions:
+
+    |v_i dot v_j|
+
+Use median across unique neighboring patient pairs.
+
+Higher means nearby patients tend to point in the same local direction.
+
+STRUCTURED REAL-GENE NULL
+-------------------------
+For each cohort independently:
+
+- rank all measurable eligible genes by raw variance
+- observed ranks 1..256 remain frozen
+- control pool = ranks 257..2048
+- each NULL replicate draws 256 real genes without replacement
+- real patient expression and gene-gene covariance remain intact
+
+Primary NULL panels per cohort:
+    500
+
+PRIMARY PASS RULE
+-----------------
+For EACH cohort and EACH metric:
+
+    observed metric > NULL q95
+    AND empirical one-sided p <= 0.05
+
+There are 6 gates:
+    A concentration
+    A coherence
+    B concentration
+    B coherence
+    C concentration
+    C coherence
+
+Overall primary PASS requires all 6 gates.
+
+PATIENT-RESAMPLING ROBUSTNESS
+-----------------------------
+Resamples:
+    100
+
+Patient counts:
+    A = 76
+    B = 108
+    C = 47
+
+Structured NULL panels per cohort per resample:
+    10
+
+For each cohort and each metric:
+
+    signed z =
+        (observed - NULL mean) / NULL SD
+
+Robustness gate requires:
+    median signed z > 1.644853626951
+    AND fraction z > 0 >= 0.75
+
+Overall robustness PASS requires all 6 gates.
+
+FINAL SUPPORT RULE
+------------------
+SPECIAL LOCAL CHANGE-DIRECTION STRUCTURE SUPPORTED
+
+ONLY IF:
+    primary all-six-gates PASS
+    AND robustness all-six-gates PASS
+
+Otherwise:
+    NOT SUPPORTED
+
+NO RESCUE
+---------
+No post-hoc:
+- Top-K changes
+- PCA-rank changes
+- kNN changes
+- control-pool changes
+- metric changes
+- threshold changes
+- cohort subsets
+
+FINALITY
+--------
+Regardless of PASS or FAIL, v50 writes a final CML closure.
+
+CLAIM LIMIT
+-----------
+A PASS would support only:
+
+    unusually concentrated and locally coherent directions of transcriptomic
+    variation in the frozen Top-256 panels compared with structured
+    high-variance real-gene controls.
+
+It would not establish:
+- clinical prediction
+- treatment response
+- prognosis
+- causal disease mechanism
+- dormancy
+- quantum biology
+- quantum advantage

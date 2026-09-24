@@ -1,0 +1,22 @@
+{
+  "version": "v47.4",
+  "status": "FROZEN_BEFORE_RESAMPLING",
+  "n_resamples": 300,
+  "subsample_fraction": 0.8,
+  "good_per_resample": 66,
+  "poor_per_resample": 10,
+  "top_k": 256,
+  "pca_r": 16,
+  "n_permutations_per_resample": 500,
+  "master_seed": 47040001,
+  "median_z_pass_threshold": 1.6448536269514722,
+  "positive_fraction_threshold": 0.75,
+  "protocol_sha256": "a9bf1d80cf872a0ea5f2e8a3a8dded2d9181b59bdc09dfd64bc50df5cb25049c",
+  "source_sha256": {
+    "v47_0_protocol": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25",
+    "v47_2_manifest": "338cc3a7cd25a13f5489457837839a02881c2b377d9be9a2534d40399de5ebb0",
+    "v47_3_manifest": "f1b9052fd833b74589d1bdbea27831adc07ee2c85a3b54491d81b9b17281108b",
+    "eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "gse130404_family_soft": "e64d3983cfd0e5495d5416e9e968afc0b8e0f384d6a0d3dcf786f938a97a2d80"
+  }
+}

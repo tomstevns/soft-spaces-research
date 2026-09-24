@@ -1,0 +1,63 @@
+=== Soft Spaces / CML v48.1 GEOMETRIC INVARIANCE ===
+
+v48.0 protocol SHA:              540a69b8b6aed42b1d629f8d301f0ebcbed7ade7b82f3b4ba6eee0c3444ead9f
+
+RELATION TO v47
+---------------
+v47 closed:                      YES
+v48 new hypothesis:              YES
+v48 rescue of v47.5b:            NO
+
+LABEL USE
+---------
+Clinical labels used:            NO
+Classifier fitted:               NO
+
+FEATURE IDENTITY
+----------------
+Top256 overlap:                  96/256
+Jaccard:                         0.230769
+
+LABEL-BLIND GEOMETRY
+--------------------
+GSE130404 PCA16 cumulative var:  0.871397
+GSE44589  PCA16 cumulative var:  0.870045
+GSE130404 effective dimension:   4.304903
+GSE44589  effective dimension:   3.501934
+
+PRIMARY A — SPECTRAL SHAPE
+--------------------------
+Observed cosine:                 0.994119416
+NULL mean:                       0.581130774
+NULL q95:                        0.591317593
+Empirical p:                     0.000999001
+Gate observed > q95:             YES
+
+PRIMARY B — DISTANCE GEOMETRY
+-----------------------------
+Observed normalized W1:          0.038547991
+NULL mean:                       0.179672301
+NULL q05:                        0.172619498
+Empirical p:                     0.000999001
+Gate observed < q05:             YES
+
+SECONDARY — LOCAL ANISOTROPY
+----------------------------
+Observed anisotropy W1:          0.016545659
+NULL mean:                       0.087769161
+NULL median:                     0.088153790
+
+v48.1 STATUS: GEOMETRIC INVARIANCE PASS
+
+INTERPRETATION LIMIT
+--------------------
+This test asks whether two independently constructed label-blind CML
+expression geometries share higher-level shape beyond what is expected when
+the external gene-gene covariance structure is destroyed while preserving
+each external frozen gene's marginal values.
+
+A PASS supports geometric similarity under this preregistered test only.
+A FAIL is retained without rescue tuning.
+
+Neither outcome establishes prediction, treatment-response replication,
+causal biology, dormancy mechanism, quantum biology or quantum advantage.

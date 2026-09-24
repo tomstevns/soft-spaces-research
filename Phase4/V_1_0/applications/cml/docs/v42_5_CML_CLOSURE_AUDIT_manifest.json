@@ -1,0 +1,17 @@
+{
+  "version": "v42.5",
+  "status": "CLOSED",
+  "classical_signal_present": true,
+  "feature_selection_status": "FAIL",
+  "external_test_performed": false,
+  "v42_4": {
+    "real_pr_auc": 0.424381,
+    "null_mean_pr_auc": 0.441973,
+    "delta_pr_auc": -0.017592,
+    "p_pr_auc": 0.826174,
+    "real_roc_auc": 0.697708,
+    "null_mean_roc_auc": 0.723776,
+    "p_roc_auc": 0.974026
+  },
+  "closure_sha256": "848967cf1a93ab9598e2d7110e52b0ae9bb92f5d8ace59c8c7663d6808deeb54"
+}

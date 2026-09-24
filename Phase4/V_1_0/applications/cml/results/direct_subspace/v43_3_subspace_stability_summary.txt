@@ -1,0 +1,45 @@
+=== Soft Spaces / CML v43.3 SUBSPACE STABILITY ===
+
+DESIGN
+------
+Development cohort: GSE130404
+Frozen rank r: 16
+Frozen v42.2 folds reused: YES
+Frozen fold-specific Top-256 supports reused: YES
+External cohort used: NO
+Matched random-subspace stability realizations: 1000
+
+PRIMARY STABILITY STATISTIC
+---------------------------
+S_ij = tr(P_i P_j)/r = ||U_i^T U_j||_F^2/r
+Equivalent to mean squared cosine of principal angles.
+
+Number of REAL fold pairs: 4950
+REAL mean overlap:          0.687344
+REAL median overlap:        0.687018
+REAL pairwise 2.5%:         0.599798
+REAL pairwise 97.5%:        0.778173
+
+REAL same-repeat mean:      0.648097
+REAL different-repeat mean: 0.688996
+
+MATCHED NULL
+------------
+NULL mean overlap:          0.056782
+Delta REAL - NULL:          +0.630562
+NULL 2.5%:                  0.056627
+NULL 97.5%:                 0.056937
+Empirical one-sided p:      0.000999001
+
+INTERPRETATION
+--------------
+This is an INTERNAL resampling-stability analysis.
+Higher REAL-than-NULL overlap means the learned r=16 subspaces
+are more mutually aligned than matched random subspaces on the
+same fold-specific gene supports.
+
+Because repeated-CV training sets overlap substantially, this
+must not be interpreted as independent external replication.
+
+No claim of clinical utility, causal biology, superiority to
+classical baselines, or quantum advantage is made.

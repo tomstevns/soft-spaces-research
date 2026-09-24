@@ -1,0 +1,61 @@
+Soft Spaces / DLBCL
+v51f.1 — HARD GO/NO-GO DISCRIMINATOR CLOSURE
+
+STATUS
+------
+CLOSED
+
+Protocol SHA: df308bad3a14f4ada9182c6d280bad10f44376ff0cc3d909bbb422cbc91bdce0
+
+FROZEN PANEL
+------------
+N = 12
+DNER, SPIC, TCL1B, MMP20, CKAP2, RNF183, MYOCD, UMODL1, CTAG2, HRK, RGS13, TCL1A
+
+STRUCTURED CONTROL
+------------------
+Real high-variance genes with real patient-level covariance.
+
+GSE87371
+--------
+Evaluable n:            168
+ABC:                    83
+GCB:                    85
+Frozen-panel ROC-AUC:   0.944085208
+NULL mean ROC-AUC:      0.866401531
+NULL q95 ROC-AUC:       0.956118945
+Empirical p:            0.099800399
+STATUS:                 FAIL
+
+GSE159472
+---------
+Evaluable n:            31
+ABC:                    13
+GCB:                    18
+Frozen-panel ROC-AUC:   0.729861111
+NULL mean ROC-AUC:      0.676015833
+NULL q95 ROC-AUC:       0.887805556
+Empirical p:            0.371257485
+STATUS:                 FAIL
+
+FINAL GO/NO-GO RESULT
+---------------------
+DLBCL DISTINCTIVE SIGNAL NOT SUPPORTED
+
+INTERPRETATION
+--------------
+The already-frozen DLBCL panel did not beat structured
+high-variance real-gene controls in BOTH external cohorts.
+
+Therefore this test does not establish that DLBCL behaves
+materially differently from the negative CML result.
+
+CLAIM LIMIT
+-----------
+This is a statistical discriminator test only.
+It does not establish clinical utility or causal biology.
+
+NO RESCUE / NO TUNING
+---------------------
+No post-hoc panel, classifier, endpoint, control-pool or threshold
+change was used.

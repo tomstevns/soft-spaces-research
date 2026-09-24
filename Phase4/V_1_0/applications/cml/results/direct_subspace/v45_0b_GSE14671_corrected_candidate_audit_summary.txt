@@ -1,0 +1,56 @@
+=== Soft Spaces / CML v45.0b GSE14671 CORRECTED CANDIDATE AUDIT ===
+
+CORRECTION
+----------
+v45.0 did not recognize the response labels because GSE14671
+encodes them directly in Sample_source_name_ch1.
+
+This correction changes metadata parsing only.
+Frozen v44 model loaded: NO
+Predictive scoring performed: NO
+External outcome tuning performed: NO
+
+DATASET
+-------
+GEO accession: GSE14671
+GEO sample records: 59
+
+PLATFORM
+--------
+GPL570: 59
+
+FROZEN-CANDIDATE RESPONSE DEFINITION
+------------------------------------
+Responder candidate:
+    complete cytogenetic response (CCyR) after 12 months
+
+Non-responder candidate:
+    >65% Ph-positive metaphases after 12 months of imatinib
+
+RESPONSE COUNTS
+---------------
+Responder / CCyR:                 41
+Non-responder / >65% Ph+:        18
+Unknown:                          0
+
+SERIES-DESIGN TIMING AUDIT
+--------------------------
+Pretreatment evidence in series-level text: YES
+
+The response labels describe outcome after 12 months;
+they are not being interpreted as the time at which expression
+was measured.
+
+TECHNICAL CANDIDACY
+-------------------
+59/59 on GPL570:                  YES
+Exact 41/18 response split:       YES
+
+v45.0b STATUS: CANDIDATE ELIGIBLE FOR v45.1 PREREGISTRATION
+
+NEXT
+----
+If this audit is accepted, v45.1 should freeze the exact
+cross-endpoint test BEFORE the frozen v44 model is scored.
+
+No predictive result has yet been observed for GSE14671.

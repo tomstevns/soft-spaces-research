@@ -1,0 +1,18 @@
+{
+  "version": "v44.1b",
+  "status": "PASS TO v44.2",
+  "development_symbol_n": 31432,
+  "gpl570_resolvable_n": 20225,
+  "gse236233_all9_n": 16769,
+  "eligible_universe_n": 15890,
+  "minimum_required": 256,
+  "external_outcomes_used": false,
+  "sha256": {
+    "v44_0_protocol": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+    "development_platform": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "gpl570_platform": "62c986ce39e7292ed92bbf3e932523c037ae2d62d94afe260c28a914749ecd87",
+    "gse236233_technical_manifest": "0e3958be007fddbe4ce0554a59d4f487402d251378800b6f43263039df8a26b1",
+    "eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "execution_script": "42b28b0f8adf7984d8f680e24f590e171f887a6c8e74bfbf9d031fab2ccfe6e9"
+  }
+}

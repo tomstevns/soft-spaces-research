@@ -1,0 +1,14 @@
+=== Soft Spaces / CML v45.2 GSE14671 TECHNICAL TRANSPORT AUDIT ===
+
+Frozen Top-K:                    256
+Mapped to GPL570:                255
+Missing frozen genes:            1
+
+STATUS: TECHNICALLY NON-EVALUABLE
+
+Missing:
+  PTPN20
+
+No response labels were used.
+No predictive score was calculated.
+No gene substitution is permitted.

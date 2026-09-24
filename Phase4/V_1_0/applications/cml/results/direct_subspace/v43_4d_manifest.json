@@ -1,0 +1,36 @@
+{
+  "version": "v43.4d",
+  "candidate": "GSE236233",
+  "primary_population": "Lin-CD34+",
+  "statistical_unit": "patient",
+  "patient_n": 9,
+  "patient_ids": [
+    "CML1",
+    "CML2",
+    "CML3",
+    "CML4",
+    "CML5",
+    "CML6",
+    "CML7",
+    "CML8",
+    "CML9"
+  ],
+  "aggregation": "sum raw RNA counts across cells within patient sample",
+  "frozen_coordinates": 256,
+  "present_all_9": 193,
+  "missing_from_at_least_one_patient": 63,
+  "coordinate_coverage": 0.75390625,
+  "total_projector_mass": 16.0,
+  "retained_projector_mass": 11.448808856572873,
+  "retained_projector_mass_fraction": 0.7155505535358045,
+  "strict_status": "TECHNICALLY NON-EVALUABLE",
+  "external_response_labels_used": false,
+  "external_predictive_performance_evaluated": false,
+  "sha256": {
+    "family_soft": "9cfb94795ebe2b4fc40a24288e1390526b1c968f824a39da3440c939f27945e4",
+    "frozen_development_basis": "86f38bc08ca02234a3a85dd9dbafb480d42ba0b281d4520fa920f6dd74ffa377",
+    "pseudobulk_csv": "9078a3ab850cc0e6057a0700dc0d7fc9c381d08348fd03fc8ae434072c5d39e5",
+    "coverage_csv": "3f560fc7729bd37bd575943cbd14bc3bc4edfa6459fdb6884c8a6b5f12bca454",
+    "execution_script": "35e749f1a59c9d345e13f208f486cd9915e1ab186058d1a68e7b31d46b44cf84"
+  }
+}

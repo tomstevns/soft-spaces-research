@@ -1,0 +1,44 @@
+=== v49.3 STRUCTURED-NULL PATIENT-RESAMPLING ROBUSTNESS ===
+
+Resamples:
+    100
+
+Structured NULL triads per resample:
+    20
+
+SPECTRUM
+--------
+Median signed z:
+    0.713482157
+
+Required:
+    > 1.644853627
+
+Fraction z > 0:
+    0.710000000
+
+Required:
+    >= 0.750000000
+
+Gate:
+    FAIL
+
+DISTANCE
+--------
+Median signed z:
+    -0.769355873
+
+Required:
+    > 1.644853627
+
+Fraction z > 0:
+    0.230000000
+
+Required:
+    >= 0.750000000
+
+Gate:
+    FAIL
+
+v49.3 STATUS:
+    STRUCTURED-NULL ROBUSTNESS FAIL

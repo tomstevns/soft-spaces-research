@@ -1,0 +1,33 @@
+{
+  "version": "v44.6",
+  "status": "FROZEN_BEFORE_GSE236233_MODEL_SCORING",
+  "role": "secondary cross-modality stress test",
+  "external_cohort": "GSE236233",
+  "population": "Lin-CD34+ patient pseudobulk",
+  "patient_n": 9,
+  "optimal": [
+    "CML1",
+    "CML2",
+    "CML3",
+    "CML4"
+  ],
+  "warning": [
+    "CML5",
+    "CML6",
+    "CML7"
+  ],
+  "failure": [
+    "CML8",
+    "CML9"
+  ],
+  "primary_comparison": "Failure vs Optimal",
+  "frozen_rank": 16,
+  "top_k": 256,
+  "rna_transform": "Top256 CPM -> log1p -> per-gene z across 9 patients",
+  "primary_metric": "PR-AUC",
+  "outcome_tuning_allowed": false,
+  "protocol_sha256": "7ee56ef21295b120f06712bc51c4f69450fe701d249601ce773ebef9ca827ef6",
+  "v44_5b1_manifest_sha256": "70b46ab8f6573fef1b34884eea8cd2312c88b3a789744514da7b8c3ac119d4d7",
+  "frozen_model_sha256": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+  "pseudobulk_sha256": "9078a3ab850cc0e6057a0700dc0d7fc9c381d08348fd03fc8ae434072c5d39e5"
+}

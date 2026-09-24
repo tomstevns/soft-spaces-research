@@ -1,0 +1,74 @@
+=== v41.16 PREREGISTERED EXTERNAL REPLICATION ===
+
+DESIGN
+------
+Development reference: GSE10846
+External replication: GSE159472
+Platform: GPL570
+Frozen panel size: 12
+NULL panels: 10000
+External disease/outcome labels used: NO
+
+FROZEN PANEL
+------------
+ 1. DNER
+ 2. SPIC
+ 3. TCL1B
+ 4. MMP20
+ 5. CKAP2
+ 6. RNF183
+ 7. MYOCD
+ 8. UMODL1
+ 9. CTAG2
+10. HRK
+11. RGS13
+12. TCL1A
+
+PRIMARY CONFIRMATORY: Top-4 gene-eigensubspace overlap
+------------------------------------------------------
+REAL:           0.689759
+NULL mean:      0.561296
+NULL 95% range: [0.382320, 0.743463]
+REAL-NULL mean: +0.128462
+empirical p:    0.0784922
+
+SECONDARY: Correlation-structure similarity
+-------------------------------------------
+REAL:           0.619114
+NULL mean:      0.425820
+NULL 95% range: [0.021016, 0.739764]
+REAL-NULL mean: +0.193294
+empirical p:    0.150685
+
+EXPLORATORY: Top-8 gene-eigensubspace overlap
+---------------------------------------------
+REAL:           0.823517
+NULL mean:      0.768939
+NULL 95% range: [0.677555, 0.863915]
+REAL-NULL mean: +0.054578
+empirical p:    0.124288
+
+EXPLORATORY: Eigenvalue-profile cosine similarity
+-------------------------------------------------
+REAL:           0.996845
+NULL mean:      0.992692
+NULL 95% range: [0.975556, 0.998798]
+REAL-NULL mean: +0.004153
+empirical p:    0.246275
+
+CONFIRMATORY DECISION
+---------------------
+PRIMARY PASS RULE SATISFIED: False
+v41.16 CONFIRMATORY STATUS: FAIL
+
+SECONDARY SUPPORT
+-----------------
+Secondary support criterion satisfied: False
+
+INTERPRETATION LIMIT
+--------------------
+A PASS supports only the preregistered external top-4
+gene-space geometry-transfer claim.
+
+It does not establish causal biology, clinical utility,
+diagnostic approval, biomarker superiority, or quantum advantage.

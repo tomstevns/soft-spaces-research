@@ -1,0 +1,19 @@
+=== Soft Spaces / DLBCL v51f GO/NO-GO SUMMARY ===
+
+Frozen panel size:
+    12
+
+GSE87371:
+    FAIL
+
+GSE159472:
+    FAIL
+
+FINAL:
+    DLBCL DISTINCTIVE SIGNAL NOT SUPPORTED
+
+Protocol SHA:
+    df308bad3a14f4ada9182c6d280bad10f44376ff0cc3d909bbb422cbc91bdce0
+
+Closure SHA:
+    006a129ad4f7323ff36c55cea962d5630de5c54985dc6f290e857685d7356db4

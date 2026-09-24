@@ -1,0 +1,49 @@
+=== Soft Spaces / CML v44.4 TRANSPORT-AWARE SUBSPACE STABILITY ===
+
+FROZEN DESIGN
+-------------
+Development cohort: GSE130404
+Frozen rank r: 16
+Transport-aware fold-specific Top-256 pools reused: YES
+Frozen v42.2 100 folds reused: YES
+Union support size: 357
+REAL fold pairs: 4950
+Matched random stability realizations: 1000
+External outcome data used: NO
+
+REAL STABILITY
+--------------
+Mean normalized projector overlap:   0.662641
+Median:                              0.661346
+2.5% quantile:                       0.569712
+97.5% quantile:                      0.758121
+SD:                                  0.047601
+Same-repeat mean:                    0.622472
+Different-repeat mean:               0.664332
+
+MATCHED RANDOM NULL
+-------------------
+NULL mean:                           0.056197
+NULL 2.5%:                           0.056037
+NULL 97.5%:                          0.056342
+REAL - NULL mean:                    +0.606444
+Empirical one-sided p:               0.000999001
+
+DECISION
+--------
+PASS iff REAL mean overlap > NULL mean overlap
+and empirical one-sided p <= 0.05.
+
+v44.4 STATUS: PASS
+
+INTERPRETATION LIMIT
+--------------------
+This measures INTERNAL resampling stability.
+The repeated-CV training sets overlap substantially and therefore
+do not constitute independent external replication.
+
+Same-repeat versus different-repeat values are descriptive only.
+No biological interpretation is assigned to that difference.
+
+A PASS authorizes preparation of a separately frozen external
+generalization protocol before any external outcome scoring.

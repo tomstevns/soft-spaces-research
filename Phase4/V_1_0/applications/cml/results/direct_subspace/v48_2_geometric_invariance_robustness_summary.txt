@@ -1,0 +1,74 @@
+=== Soft Spaces / CML v48.2 GEOMETRIC INVARIANCE ROBUSTNESS ===
+
+PROTOCOL
+--------
+v48.2 protocol SHA:              68ee354d36ac94012c1afb864a55550ec3c9a7de0fcc7e8277b1c3a374301e16
+Paired resamples:                200
+GSE130404 patients/resample:     76
+GSE44589 patients/resample:      108
+NULL geometries/resample:        50
+
+LABEL / MODEL USE
+-----------------
+Clinical labels used:            NO
+Classifier fitted:               NO
+Feature identities reselected:   NO
+
+PRIMARY A — SPECTRAL SHAPE ROBUSTNESS
+-------------------------------------
+Median signed NULL-z:            68.346081
+Required median z:               > 1.644854
+Fraction z > 0:                  1.000000
+Required positive fraction:      >= 0.750000
+
+z q2.5%:                         55.420475
+z q25%:                          63.586505
+z median:                        68.346081
+z q75%:                          72.266038
+z q97.5%:                        81.974927
+
+Fraction empirical p <= 0.05:    1.000000
+Spectrum robustness gate:        PASS
+
+PRIMARY B — DISTANCE GEOMETRY ROBUSTNESS
+----------------------------------------
+Median signed NULL-z:            30.471939
+Required median z:               > 1.644854
+Fraction z > 0:                  1.000000
+Required positive fraction:      >= 0.750000
+
+z q2.5%:                         25.437017
+z q25%:                          28.902465
+z median:                        30.471939
+z q75%:                          33.029343
+z q97.5%:                        37.515949
+
+Fraction empirical p <= 0.05:    1.000000
+Distance robustness gate:        PASS
+
+SECONDARY DESCRIPTIVES
+----------------------
+Median observed anisotropy W1:   0.013582
+Median effective-dim abs diff:   0.784344
+
+Median dev PCA16 cumulative var: 0.880570
+Median ext PCA16 cumulative var: 0.875716
+
+Median dev effective dimension:  4.336427
+Median ext effective dimension:  3.526380
+
+v48.2 STATUS: GEOMETRIC INVARIANCE ROBUSTNESS PASS
+
+INTERPRETATION LIMIT
+--------------------
+This tests robustness of the v48.1 label-blind cross-cohort geometric
+similarity to repeated patient subsampling in both cohorts.
+
+A PASS supports patient-sampling robustness of the geometric-invariance
+signal under the frozen v48 framework.
+
+It is not a third independent cohort replication and does not establish
+prediction, treatment-response replication, clinical utility, causal
+biology, dormancy mechanism, quantum biology, or quantum advantage.
+
+A FAIL is retained without rescue tuning.

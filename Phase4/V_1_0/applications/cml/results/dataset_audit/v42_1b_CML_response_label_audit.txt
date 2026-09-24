@@ -1,0 +1,51 @@
+=== Soft Spaces / CML v42.1b RESPONSE-LABEL AUDIT ===
+
+NO EXPRESSION MODELING WAS PERFORMED.
+
+GSE130404
+---------
+Samples: 96
+Detected response key: bcr-abl1 at 3 month
+Detected stage key: disease stage
+
+Response counts:
+  <10%: 83
+  >10%: 13
+
+Timepoint counts:
+  BASELINE_DIAGNOSIS: 96
+
+Timepoint x response:
+  BASELINE_DIAGNOSIS | <10% | n=83
+  BASELINE_DIAGNOSIS | >10% | n=13
+
+Stage counts:
+  diagnostic chronic phase: 96
+
+GSE44589
+--------
+Samples: 198
+Detected response key: molecular response
+Detected stage key: None
+
+Response counts:
+  MMR: 98
+  none: 89
+  not available: 11
+
+Timepoint counts:
+  BASELINE_PRETREATMENT: 198
+
+Timepoint x response:
+  BASELINE_PRETREATMENT | MMR | n=98
+  BASELINE_PRETREATMENT | none | n=89
+  BASELINE_PRETREATMENT | not available | n=11
+
+DECISION CHECKLIST
+------------------
+- baseline subset unambiguous
+- response endpoint unambiguous
+- class counts adequate
+- response measured after baseline expression
+- post-treatment repeats excluded from baseline prediction
+- no external outcome information used for feature tuning

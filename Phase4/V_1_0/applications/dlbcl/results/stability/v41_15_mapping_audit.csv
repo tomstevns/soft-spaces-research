@@ -1,0 +1,17 @@
+frozen_rank,frozen_coordinate,status,resolved_symbols,n_resolved_symbols,probe_ids,n_probes,confirmatory_usable,note
+1,DNER,EXACT,DNER,1,ILMN_1791679,1,True,Frozen symbol directly measurable.
+2,SPIC,EXACT,SPIC,1,ILMN_1755124|ILMN_2191940,2,True,Frozen symbol directly measurable.
+3,TCL1B,EXACT,TCL1B,1,ILMN_1792144|ILMN_2382309,2,True,Frozen symbol directly measurable.
+4,NPIPA5///NPIPB6///NPIPB8///NPIPB3,MISSING,,0,,0,False,No frozen component measurable on GPL14951.
+5,EML6,MISSING,,0,,0,False,No frozen component measurable on GPL14951.
+6,MMP20,EXACT,MMP20,1,ILMN_1803714|ILMN_2178116,2,True,Frozen symbol directly measurable.
+7,KCCAT333,MISSING,,0,,0,False,No frozen component measurable on GPL14951.
+8,IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1,RESOLVED-COMPOUND,CKAP2,1,ILMN_1674411|ILMN_2181060,2,True,Exactly one frozen compound component measurable.
+9,RNF183,EXACT,RNF183,1,ILMN_1692591,1,True,Frozen symbol directly measurable.
+10,MYOCD,EXACT,MYOCD,1,ILMN_1680273,1,True,Frozen symbol directly measurable.
+11,UMODL1,EXACT,UMODL1,1,ILMN_1665246|ILMN_1769316|ILMN_2376529,3,True,Frozen symbol directly measurable.
+12,CTAG2,EXACT,CTAG2,1,ILMN_1787578|ILMN_2336585,2,True,Frozen symbol directly measurable.
+13,IGK///IGKC,MISSING,,0,,0,False,No frozen component measurable on GPL14951.
+14,LOC283454///HRK,RESOLVED-COMPOUND,HRK,1,ILMN_2193706,1,True,Exactly one frozen compound component measurable.
+15,RGS13,EXACT,RGS13,1,ILMN_2407775|ILMN_2407780,2,True,Frozen symbol directly measurable.
+16,TCL1A,EXACT,TCL1A,1,ILMN_1788841,1,True,Frozen symbol directly measurable.

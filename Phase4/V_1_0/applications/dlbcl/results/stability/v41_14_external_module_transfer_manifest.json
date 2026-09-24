@@ -1,0 +1,222 @@
+{
+  "version": "v41.14",
+  "source_panel_version": "v41.12b",
+  "frozen_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+    "EML6",
+    "MMP20",
+    "KCCAT333",
+    "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "IGK///IGKC",
+    "LOC283454///HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "panel_size": 16,
+  "primary_external_cohort": "GSE87371",
+  "secondary_external_cohort": "GSE31312",
+  "external_labels_used": false,
+  "cohort_alignment": "cohort-wise gene standardization for correlation geometry",
+  "geometry_space": "gene coordinate space; not sample space",
+  "null": {
+    "n": 1000,
+    "seed": 4114001,
+    "definition": "random 16 from GSE10846 raw-variance Top-256 among genes measurable in GSE10846, GSE87371, and GSE31312"
+  },
+  "common_gene_count": 22154,
+  "null_pool_size": 256,
+  "metrics": {
+    "GSE10846_to_GSE87371": {
+      "corr_structure_similarity": {
+        "real": 0.79029767216017,
+        "null": {
+          "mean": 0.6509722039033372,
+          "sd": 0.11716196229357749,
+          "median": 0.6640435911313624,
+          "q025": 0.38991666085497617,
+          "q975": 0.8417636631916302,
+          "min": 0.21222414918833515,
+          "max": 0.8999529612074038
+        },
+        "real_minus_null_mean": 0.13932546825683279,
+        "empirical_one_sided_p": 0.1038961038961039
+      },
+      "top4_eigensubspace_overlap": {
+        "real": 0.7386957410102502,
+        "null": {
+          "mean": 0.627022485416991,
+          "sd": 0.0879860209777316,
+          "median": 0.6269805269402224,
+          "q025": 0.45716134118634055,
+          "q975": 0.7992382844871065,
+          "min": 0.30555396904326004,
+          "max": 0.8965672062113799
+        },
+        "real_minus_null_mean": 0.11167325559325914,
+        "empirical_one_sided_p": 0.0979020979020979
+      },
+      "top8_eigensubspace_overlap": {
+        "real": 0.757740776626108,
+        "null": {
+          "mean": 0.7219466905783634,
+          "sd": 0.05283940960101699,
+          "median": 0.7233345054958557,
+          "q025": 0.6136844298954407,
+          "q975": 0.8228851124614949,
+          "min": 0.5689892465916996,
+          "max": 0.9025364187981422
+        },
+        "real_minus_null_mean": 0.03579408604774459,
+        "empirical_one_sided_p": 0.24175824175824176
+      },
+      "eigenvalue_profile_cosine": {
+        "real": 0.9923447102642822,
+        "null": {
+          "mean": 0.9944052144679624,
+          "sd": 0.0065027108798722194,
+          "median": 0.99610062916037,
+          "q025": 0.9802053883042401,
+          "q975": 0.9990568794166904,
+          "min": 0.8949549770072016,
+          "max": 0.9994704145946317
+        },
+        "real_minus_null_mean": -0.0020605042036802024,
+        "empirical_one_sided_p": 0.8081918081918081
+      }
+    },
+    "GSE10846_to_GSE31312": {
+      "corr_structure_similarity": {
+        "real": 0.7426166262739119,
+        "null": {
+          "mean": 0.527240073243626,
+          "sd": 0.14528337983591097,
+          "median": 0.5463792627909885,
+          "q025": 0.21409280992584062,
+          "q975": 0.7675276556464186,
+          "min": 0.056368165637792234,
+          "max": 0.8670474794937494
+        },
+        "real_minus_null_mean": 0.2153765530302859,
+        "empirical_one_sided_p": 0.04395604395604396
+      },
+      "top4_eigensubspace_overlap": {
+        "real": 0.6969383227564309,
+        "null": {
+          "mean": 0.567279537494174,
+          "sd": 0.08925001972447671,
+          "median": 0.5641397340409432,
+          "q025": 0.3952653949574727,
+          "q975": 0.7398298754646578,
+          "min": 0.2991019785110801,
+          "max": 0.8816530830746898
+        },
+        "real_minus_null_mean": 0.12965878526225683,
+        "empirical_one_sided_p": 0.07092907092907093
+      },
+      "top8_eigensubspace_overlap": {
+        "real": 0.7845565396904148,
+        "null": {
+          "mean": 0.6787333477577109,
+          "sd": 0.05431322275247215,
+          "median": 0.6785902520620695,
+          "q025": 0.5746535793112353,
+          "q975": 0.7820460848095878,
+          "min": 0.5053718884051975,
+          "max": 0.8392582399450162
+        },
+        "real_minus_null_mean": 0.10582319193270395,
+        "empirical_one_sided_p": 0.023976023976023976
+      },
+      "eigenvalue_profile_cosine": {
+        "real": 0.9966654843647407,
+        "null": {
+          "mean": 0.9832479070468164,
+          "sd": 0.012324988638208806,
+          "median": 0.9862982271138043,
+          "q025": 0.952934599762765,
+          "q975": 0.997132927448734,
+          "min": 0.8699719532901461,
+          "max": 0.9991786109818314
+        },
+        "real_minus_null_mean": 0.013417577317924256,
+        "empirical_one_sided_p": 0.03896103896103896
+      }
+    },
+    "GSE87371_to_GSE31312": {
+      "corr_structure_similarity": {
+        "real": 0.7817236428594441,
+        "null": {
+          "mean": 0.5929059123149338,
+          "sd": 0.12308880882882436,
+          "median": 0.6026403974235215,
+          "q025": 0.3254254845008817,
+          "q975": 0.8016255298345727,
+          "min": 0.13689722179504932,
+          "max": 0.8682324704662435
+        },
+        "real_minus_null_mean": 0.18881773054451023,
+        "empirical_one_sided_p": 0.04195804195804196
+      },
+      "top4_eigensubspace_overlap": {
+        "real": 0.8366741901900403,
+        "null": {
+          "mean": 0.5935527220462407,
+          "sd": 0.09167409653377442,
+          "median": 0.5925634744816226,
+          "q025": 0.42307526972205106,
+          "q975": 0.7799389075847515,
+          "min": 0.31644828008165493,
+          "max": 0.8678721487937282
+        },
+        "real_minus_null_mean": 0.24312146814379965,
+        "empirical_one_sided_p": 0.008991008991008992
+      },
+      "top8_eigensubspace_overlap": {
+        "real": 0.7191382835222793,
+        "null": {
+          "mean": 0.6845794280630086,
+          "sd": 0.05391670885864974,
+          "median": 0.6842577202589153,
+          "q025": 0.5827766654705001,
+          "q975": 0.7835217485075499,
+          "min": 0.48808215270041766,
+          "max": 0.8583916281148483
+        },
+        "real_minus_null_mean": 0.03455885545927062,
+        "empirical_one_sided_p": 0.25774225774225773
+      },
+      "eigenvalue_profile_cosine": {
+        "real": 0.9908681220543549,
+        "null": {
+          "mean": 0.9844411183178265,
+          "sd": 0.00850689500007497,
+          "median": 0.9860693077104166,
+          "q025": 0.9646444910315088,
+          "q975": 0.9964704212915528,
+          "min": 0.9475161808293697,
+          "max": 0.9986453741091861
+        },
+        "real_minus_null_mean": 0.0064270037365283805,
+        "empirical_one_sided_p": 0.23676323676323677
+      }
+    }
+  },
+  "input_sha256": {
+    "v41_12b_manifest": "19ddf750579347f8127e6b7df9c677031db018f83d35ef614067823188374f44",
+    "GSE10846_expression": "35f89121b2d39f1d3ca05338650359f99f15024e3f2f20232089325fa6f9c264",
+    "probe_to_gene_mapping": "f1d3ba671cd61fa0af489ff49e1907c46cd8e725f5ebd614baf6a1d11b7f736d",
+    "GSE87371_series_matrix": "12330652010ed90c56abaa0c27853a8da6fd34a6986f70a194a7813082e929d8",
+    "GSE31312_series_matrix": "9f5cfa8aa789a28319407713438c41aab0d13a2eb00aabc793e4db96c2ed316b"
+  },
+  "historical_status": {
+    "GSE87371": "primary independent external cohort; labels not used here",
+    "GSE31312": "secondary/post-hoc cohort; previously observed in v41.6"
+  }
+}

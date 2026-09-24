@@ -1,0 +1,45 @@
+{
+  "version": "v41.12b",
+  "development_dataset": "GSE10846",
+  "locked_input_shape": [
+    350,
+    22154
+  ],
+  "class_counts": {
+    "GCB": 183,
+    "ABC": 167
+  },
+  "n_resamples": 500,
+  "sample_fraction": 0.8,
+  "panel_size": 16,
+  "random_seed": 4112001,
+  "bootstrap_reps": 20000,
+  "variance_pool": 256,
+  "softspaces_P_DIM": 16,
+  "frozen_full_development_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+    "EML6",
+    "MMP20",
+    "KCCAT333",
+    "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "IGK///IGKC",
+    "LOC283454///HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "locked_cv_splits": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\baseline\\v41_2_cv_splits.json",
+  "locked_cv_splits_sha256": "5b7b796e8b60c93be19bbc2fcd8aed99ce2948fbc9c086cd212cad1422a20e5e",
+  "preprocessing_source": "v41_7_corrected_preprocessing_audit.py",
+  "ranking_source": "v41_3_softspaces_mapping_probe.py",
+  "null_definition": "random 16 from same resample-specific variance pool",
+  "stability_ci_method": "bootstrap of per-panel mean Jaccard vectors",
+  "external_labels_used": false,
+  "GSE87371_used": false
+}

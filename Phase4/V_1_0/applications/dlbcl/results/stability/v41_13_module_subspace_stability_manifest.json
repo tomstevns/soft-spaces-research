@@ -1,0 +1,86 @@
+{
+  "version": "v41.13",
+  "source_version": "v41.12b",
+  "development_dataset": "GSE10846",
+  "n_resamples": 500,
+  "panel_size": 16,
+  "frozen_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+    "EML6",
+    "MMP20",
+    "KCCAT333",
+    "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "IGK///IGKC",
+    "LOC283454///HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "candidate_gene_union_size": 506,
+  "frozen_expression_subspace_rank": 16,
+  "metrics": {
+    "subspace_capture": "||Q_frozen^T Q_panel||_F^2 / rank(Q_frozen)",
+    "correlation_neighborhood": "mean frozen-gene max absolute Pearson correlation to candidate panel",
+    "exact_overlap": "fraction of frozen 16 genes exactly present"
+  },
+  "real_null_pairing": "matched by v41.12b resample row",
+  "bootstrap_reps": 20000,
+  "random_seed": 4113001,
+  "input_files": {
+    "panels": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_12b_resample_panels.csv",
+    "panels_sha256": "999269afe32c42c93714f99d909e883b99d83bd5223f41190c4a16162fa755c8",
+    "v41_12b_manifest": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_12b_feature_stability_manifest.json",
+    "v41_12b_manifest_sha256": "19ddf750579347f8127e6b7df9c677031db018f83d35ef614067823188374f44",
+    "expression": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\data\\processed\\GSE10846_ABC_GCB_gene_expression.csv.gz",
+    "expression_sha256": "35f89121b2d39f1d3ca05338650359f99f15024e3f2f20232089325fa6f9c264"
+  },
+  "external_labels_used": false,
+  "GSE87371_used": false,
+  "summary": {
+    "subspace_capture": {
+      "real_mean": 0.31726492893728186,
+      "real_ci_low": 0.30991045235125547,
+      "real_ci_high": 0.32469154921131227,
+      "null_mean": 0.19427399470040627,
+      "null_ci_low": 0.1903612939610649,
+      "null_ci_high": 0.1981762744185545,
+      "delta_mean": 0.12299093423687561,
+      "delta_ci_low": 0.11494718520919284,
+      "delta_ci_high": 0.13128961951625043,
+      "positive_delta_fraction": 0.908,
+      "tie_fraction": 0.0
+    },
+    "correlation_neighborhood": {
+      "real_mean": 0.44206165230072086,
+      "real_ci_low": 0.4348161626483203,
+      "real_ci_high": 0.4492177034697021,
+      "null_mean": 0.33688984368124214,
+      "null_ci_low": 0.3325158670095216,
+      "null_ci_high": 0.3414477541357591,
+      "delta_mean": 0.1051718086194787,
+      "delta_ci_low": 0.09686141398088197,
+      "delta_ci_high": 0.1135648065004538,
+      "positive_delta_fraction": 0.87,
+      "tie_fraction": 0.0
+    },
+    "exact_overlap": {
+      "real_mean": 0.23,
+      "real_ci_low": 0.22075,
+      "real_ci_high": 0.23925,
+      "null_mean": 0.05825,
+      "null_ci_low": 0.0535,
+      "null_ci_high": 0.063,
+      "delta_mean": 0.17175,
+      "delta_ci_low": 0.16125,
+      "delta_ci_high": 0.181875,
+      "positive_delta_fraction": 0.884,
+      "tie_fraction": 0.086
+    }
+  }
+}

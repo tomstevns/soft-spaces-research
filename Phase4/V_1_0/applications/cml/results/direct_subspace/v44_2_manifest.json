@@ -1,0 +1,24 @@
+{
+  "version": "v44.2",
+  "development_cohort": "GSE130404",
+  "eligible_universe_n": 15890,
+  "top_k": 256,
+  "candidate_ranks": [
+    4,
+    8,
+    16
+  ],
+  "selected_r": 16,
+  "selected_mean_pr_auc": 0.477031250612133,
+  "selected_mean_roc_auc": 0.7858700980392156,
+  "selected_balanced_accuracy": 0.6699448529411763,
+  "external_outcomes_used": false,
+  "matched_null_tested": false,
+  "sha256": {
+    "v44_0_protocol": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+    "v44_1b_eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "fold_top256_manifest": "35249df9eb38673d3d19609f8a74e15bb7025439eb1f26bd8b78575fed287b45",
+    "execution_script": "f342904a51a6ed1088ff9d8d2dbd6c51cfb213ec550855940cb004a80059498a"
+  }
+}

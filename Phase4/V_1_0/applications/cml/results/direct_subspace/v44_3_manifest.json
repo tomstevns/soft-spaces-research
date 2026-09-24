@@ -1,0 +1,22 @@
+{
+  "version": "v44.3",
+  "frozen_r": 16,
+  "n_null": 1000,
+  "real_mean_pr_auc": 0.477031250612133,
+  "null_mean_pr_auc": 0.392061350819853,
+  "delta_pr_auc": 0.08496989979227998,
+  "empirical_p_pr_auc": 0.000999000999000999,
+  "real_mean_roc_auc": 0.7858700980392156,
+  "null_mean_roc_auc": 0.6916496323529411,
+  "delta_roc_auc": 0.09422046568627451,
+  "empirical_p_roc_auc": 0.000999000999000999,
+  "status": "PASS",
+  "external_outcomes_used": false,
+  "sha256": {
+    "v44_0_protocol": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+    "v44_2_manifest": "70426abd84bccc82120b7cf747cb379fb2ed1f0aed6c61f80c426264ab120035",
+    "v44_2_fold_top256_manifest": "35249df9eb38673d3d19609f8a74e15bb7025439eb1f26bd8b78575fed287b45",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "execution_script": "0635b2fa447668f3b880b0aa5b8345773a6bf3a43a1c4e64e90cc3371699b6f9"
+  }
+}

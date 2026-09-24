@@ -1,0 +1,29 @@
+{
+  "version": "v47.2",
+  "status": "LABEL_BLIND_GEOMETRY_FROZEN",
+  "cohort": "GSE130404",
+  "platform": "GPL10558",
+  "sample_n": 96,
+  "eligible_universe_n": 15890,
+  "measurable_eligible_gene_n": 15890,
+  "top_k": 256,
+  "pca_r": 16,
+  "knn_k": 10,
+  "labels_parsed": false,
+  "labels_used": false,
+  "predictive_classifier_fitted": false,
+  "pca_cumulative_explained_variance_ratio": 0.8713968920031399,
+  "geometry_sha256": "44f0eb8670a03540f4ea829387d980135471e7c679754575e8a4e868904677f4",
+  "sha256": {
+    "v47_0_protocol": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25",
+    "gse130404_family_soft": "e64d3983cfd0e5495d5416e9e968afc0b8e0f384d6a0d3dcf786f938a97a2d80",
+    "eligible_gene_file": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "top256_matrix": "7c252008a100430bfb0bfbab11e39337c0c666570db1fb67cb60e70dad82ab1f",
+    "top256_z": "18b65032b598c8706ee9997500c85e52bcf582f92a31c8842a3f401fc0d91299",
+    "features": "86b8463bda591640b866065aa7eb00b6d6e99dfea337d5642c56fae75d594395",
+    "geometry": "44f0eb8670a03540f4ea829387d980135471e7c679754575e8a4e868904677f4",
+    "pca_loadings": "803a896bdd5daf06ef1cf781252285740648682e8b7f8eedede165727432c6f7",
+    "pca_explained_variance": "2ac24257a2fa0302a1dce3e3f191c075457d655634f2621987a6672b7e432b65",
+    "execution_script": "6ff022f94a3b92fdb668f9a17b1f1fe16d47349ba878edfb6c4f9d4197c852f0"
+  }
+}

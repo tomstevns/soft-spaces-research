@@ -1,0 +1,57 @@
+=== v41.12 FEATURE STABILITY ===
+
+Samples: 350
+Genes: 22154
+Resamples: 50
+Sample fraction: 0.8
+Panel size: 16
+VARIANCE_POOL: 256
+P_DIM: 16
+
+Full-development 16-gene panel:
+ 1. DNER                 score=0.09995057
+ 2. SPIC                 score=0.09714880
+ 3. TCL1B                score=0.09671941
+ 4. NPIPA5///NPIPB6///NPIPB8///NPIPB3 score=0.09540916
+ 5. EML6                 score=0.09508855
+ 6. MMP20                score=0.09229761
+ 7. KCCAT333             score=0.09194115
+ 8. IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1 score=0.09047990
+ 9. RNF183               score=0.08960516
+10. MYOCD                score=0.08751486
+11. UMODL1               score=0.08720892
+12. CTAG2                score=0.08526241
+13. IGK///IGKC           score=0.08357773
+14. LOC283454///HRK      score=0.08330719
+15. RGS13                score=0.08292810
+16. TCL1A                score=0.08216459
+
+REAL mean pairwise Jaccard: 0.077824
+REAL 95% CI: [0.074988, 0.080701]
+NULL mean pairwise Jaccard: 0.029382
+NULL 95% CI: [0.027687, 0.031094]
+
+Mean overlap with frozen16: 0.246250
+95% CI: [0.221250, 0.271250]
+
+Stable core >=80% (0): (none)
+Stable core >=60% (0): (none)
+Stable core >=50% (1): UMODL1
+
+Frozen 16 selection frequencies:
+UMODL1               selection=0.500 pool=1.000
+TCL1A                selection=0.440 pool=1.000
+DNER                 selection=0.380 pool=1.000
+MMP20                selection=0.380 pool=1.000
+KCCAT333             selection=0.340 pool=1.000
+RGS13                selection=0.320 pool=1.000
+MYOCD                selection=0.280 pool=1.000
+LOC283454///HRK      selection=0.240 pool=1.000
+EML6                 selection=0.240 pool=0.720
+SPIC                 selection=0.200 pool=0.540
+IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1 selection=0.180 pool=1.000
+TCL1B                selection=0.180 pool=1.000
+NPIPA5///NPIPB6///NPIPB8///NPIPB3 selection=0.120 pool=0.580
+IGK///IGKC           selection=0.080 pool=0.900
+RNF183               selection=0.060 pool=0.880
+CTAG2                selection=0.000 pool=0.780

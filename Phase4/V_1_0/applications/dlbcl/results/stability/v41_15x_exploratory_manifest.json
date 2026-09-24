@@ -1,0 +1,94 @@
+{
+  "version": "v41.15x",
+  "status": "EXPLORATORY_ONLY",
+  "confirmatory_v41_15_status": "TECHNICALLY_NON_EVALUABLE",
+  "source_mapping_audit": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_15_mapping_audit.csv",
+  "source_mapping_audit_sha256": "c67a3950b4b497ed887d0ddee369c522b76869653dbb9cc24f93c7956dfeb37d",
+  "source_prepare_manifest": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_15a3_prepare_manifest.json",
+  "source_prepare_manifest_sha256": "d78c403bc1e9e915974b71b8be27ecdb13f1cd89174b28c8eed808e0239937ca",
+  "development_cohort": "GSE10846",
+  "external_cohort": "GSE117556",
+  "external_platform": "GPL14951",
+  "panel_size": 12,
+  "reduced_panel_genes": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "MMP20",
+    "CKAP2",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "n_null": 10000,
+  "seed": 4115001,
+  "null_definition": "random panels of same reduced size drawn from GSE10846 raw-variance Top-256 among genes measurable in both cohorts",
+  "external_labels_used": false,
+  "metrics": {
+    "corr_structure_similarity": {
+      "real": 0.8034144692899943,
+      "null": {
+        "mean": 0.5876804065195471,
+        "sd": 0.17270555394750356,
+        "median": 0.6132587564046714,
+        "q025": 0.18142087840215054,
+        "q975": 0.847936108503944,
+        "min": -0.3489402977920818,
+        "max": 0.9345234717685996
+      },
+      "real_minus_null_mean": 0.21573406277044715,
+      "empirical_one_sided_p": 0.07589241075892411
+    },
+    "top4_eigensubspace_overlap": {
+      "real": 0.8658634258960133,
+      "null": {
+        "mean": 0.6328641001324942,
+        "sd": 0.09355631289288767,
+        "median": 0.6334272941984109,
+        "q025": 0.45099194734670406,
+        "q975": 0.8244298725767049,
+        "min": 0.3143136432760445,
+        "max": 0.9463462582369478
+      },
+      "real_minus_null_mean": 0.23299932576351912,
+      "empirical_one_sided_p": 0.007499250074992501
+    },
+    "top8_eigensubspace_overlap": {
+      "real": 0.8363103896885542,
+      "null": {
+        "mean": 0.8058648711578037,
+        "sd": 0.04843038121475243,
+        "median": 0.8064150684139963,
+        "q025": 0.7112605493302433,
+        "q975": 0.9034248804435755,
+        "min": 0.6392303563230984,
+        "max": 0.9681967532959725
+      },
+      "real_minus_null_mean": 0.030445518530750504,
+      "empirical_one_sided_p": 0.257974202579742
+    },
+    "eigenvalue_profile_cosine": {
+      "real": 0.9958597081730685,
+      "null": {
+        "mean": 0.994232725520532,
+        "sd": 0.005822772401271536,
+        "median": 0.9959650339723755,
+        "q025": 0.9791110018737594,
+        "q975": 0.9991584040587803,
+        "min": 0.9003171728060994,
+        "max": 0.9998323408099612
+      },
+      "real_minus_null_mean": 0.0016269826525364683,
+      "empirical_one_sided_p": 0.5147485251474853
+    }
+  },
+  "input_sha256": {
+    "GSE10846_expression": "35f89121b2d39f1d3ca05338650359f99f15024e3f2f20232089325fa6f9c264",
+    "GSE117556_series_matrix": "117236cc19cebf8c5244cd6e6014a34b00e276929e0f2fc9d62b2774634d39c5",
+    "GPL14951_platform_table": "372432a38c376c0d3dd8965c640f8758fcc9e715bd4999bf1636cc25464af5a5"
+  }
+}

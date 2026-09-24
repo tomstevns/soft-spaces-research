@@ -1,0 +1,98 @@
+=== Soft Spaces / CML v43.4a TECHNICAL PLATFORM/SUBSPACE TRANSPORT AUDIT ===
+
+DESIGN
+------
+Development cohort: GSE130404
+External platform: GPL570 / GSE44589
+Frozen rank r: 16
+Final development support: Top-256 raw-variance genes
+Development samples used for final representation: 96
+External response labels used: NO
+
+PLATFORM TRANSPORT
+------------------
+Frozen development coordinates: 256
+Measurable on GPL570:            200
+Missing on GPL570:               56
+Coordinate coverage:             0.781250
+
+FROZEN PROJECTOR MASS
+---------------------
+Total projector diagonal mass:   16.000000
+Measurable-coordinate mass:      11.922964
+Missing-coordinate mass:         4.077036
+Retained projector-mass fraction:0.745185
+
+v43.4a STATUS: TECHNICALLY NON-EVALUABLE
+
+STRICT PREREGISTERED RULE
+-------------------------
+All frozen coordinates must be measurable for faithful transport.
+No missing coordinate may be replaced by an outcome-selected gene.
+
+MISSING GENES
+-------------
+HLA-A29.1
+LOC100133662
+LOC729645
+CYorf15A
+JARID1D
+LOC728835
+CCL4L1
+RNU1G2
+RNU1-5
+RNU1-3
+LOC100134379
+IFIT1L
+LOC727908
+LOC654055
+MIR1974
+C21orf7
+LOC644936
+LOC642073
+RNU12
+RPS4Y2
+SPRYD5
+KIAA0367
+LOC652493
+LOC647506
+LOC100133875
+RNU1A3
+LOC100133678
+RNU4-1
+MGC13057
+RNU1F1
+LOC647450
+ABP1
+LOC642113
+LOC731682
+LOC653610
+PRSSL1
+IL8RB
+SIGLEC14
+EBI2
+GAPDHL6
+LOC643332
+HIST2H2BF
+RNU11
+C1orf150
+PTPN20
+LOC100132394
+FAM113B
+LOC642103
+PRAGMIN
+HIST2H3A
+LOC100008588
+LOC653061
+RNU5A
+CYorf15B
+HIST2H2AB
+MGC42367
+
+INTERPRETATION
+--------------
+This audit evaluates technical platform transport only.
+It does not use or evaluate GSE44589 response outcomes.
+
+If TECHNICALLY NON-EVALUABLE, v43.5 must not silently modify the
+frozen representation to rescue the external test.

@@ -1,0 +1,123 @@
+Soft Spaces / CML
+v44.0 — CROSS-PLATFORM DIRECT-SUBSPACE PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE v44 SUPERVISED MODELING
+
+NEW HYPOTHESIS
+--------------
+v43 internally supported direct subspace projection but failed technical
+external transport.
+
+v44 defines a transport-aware gene universe BEFORE any supervised modeling.
+
+DEVELOPMENT
+-----------
+GSE130404
+96 baseline chronic-phase CML patients
+y=1: BCR-ABL1 >10% IS at 3 months, n=13
+y=0: BCR-ABL1 <10% IS at 3 months, n=83
+
+OUTCOME-BLIND TECHNICAL REFERENCES
+----------------------------------
+GSE44589 / GPL570
+GSE236233 / RNA-seq feature universe
+
+External response outcomes MUST NOT be used to define the gene universe.
+
+TRANSPORT-AWARE ELIGIBILITY
+---------------------------
+A development gene is eligible only if:
+1. it has a usable development gene identity;
+2. it is resolvable on GPL570 by exact symbol or stable Entrez ID;
+3. it is represented in the GSE236233 RNA feature universe for all
+   9 primary Lin-CD34+ patient samples.
+
+No outcome-guided substitution is allowed.
+
+If fewer than 256 genes satisfy the rule:
+    STOP as technically insufficient.
+
+If at least 256 genes satisfy it:
+    use raw training-fold variance within this eligible universe to select
+    Top-256 independently inside each outer training fold.
+
+INTERNAL CV
+-----------
+Reuse exactly the frozen v42.2 100 held-out folds:
+5-fold stratified CV x 20 repeats.
+
+Within each training fold:
+1. restrict to the transport-aware universe;
+2. rank by raw training-fold variance;
+3. select Top-256;
+4. StandardScaler fit on training fold only;
+5. H = mean(xx^T | y=1) - mean(xx^T | y=0);
+6. symmetrize H;
+7. diagonalize;
+8. direct projection into candidate subspace.
+
+CANDIDATE RANKS
+---------------
+r in {4, 8, 16}
+
+Selection:
+highest mean held-out PR-AUC;
+tie -> smaller r.
+
+CLASSIFIER
+----------
+Balanced L2 LogisticRegression
+C=1.0
+solver=liblinear
+
+PRIMARY METRIC
+--------------
+PR-AUC
+
+MATCHED NULL
+------------
+After rank selection is frozen:
+compare REAL against random orthonormal subspaces of identical dimension,
+using the same folds, transport-aware Top-256 pools, preprocessing,
+classifier, and held-out samples.
+
+Internal PASS iff:
+REAL mean PR-AUC > NULL mean PR-AUC
+AND empirical one-sided p <= 0.05.
+
+STABILITY
+---------
+Only after internal PASS:
+test projector-overlap stability against matched random subspaces.
+
+EXTERNAL STAGE
+--------------
+Only after internal PASS and stability:
+freeze a separate external protocol before response scoring.
+
+The patient remains the statistical unit.
+Single-cell data may be used only through preregistered patient-level
+pseudobulk aggregation.
+
+NO RESCUE
+---------
+If internal REAL-vs-NULL fails:
+record FAIL and stop.
+
+If later external transport fails:
+record TECHNICALLY NON-EVALUABLE.
+
+If later external predictive performance fails:
+record FAIL.
+
+No external outcome retuning.
+
+CLAIM LIMIT
+-----------
+A positive v44 result would support a cross-platform transportable
+CML-response subspace only.
+
+It would not establish clinical utility, treatment recommendation,
+causal genes, superiority to established biomarkers, or quantum advantage.

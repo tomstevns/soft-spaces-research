@@ -1,0 +1,78 @@
+=== Soft Spaces / CML v47.5b CORRECTED EXTERNAL STATE-LANDSCAPE REPLICATION ===
+
+PARSER CORRECTION
+-----------------
+v47.5 scientific protocol changed: NO
+Timepoint parser corrected:       YES
+Previous v47.5 geometry/scoring:  NOT PERFORMED
+v47.5 protocol SHA verified:      18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265
+
+CORRECTED SAMPLE AUDIT
+----------------------
+Total samples:                    198
+Baseline pretreatment:            135
+Post 6 weeks:                     63
+Baseline MMR:                     69
+Baseline none / no MMR:           59
+Baseline unavailable:             7
+
+EXTERNAL LABEL-BLIND LANDSCAPE
+------------------------------
+Transport-aware universe:        15890
+Measurable eligible genes:       15884
+Top-K variance genes:            256
+PCA dimensions:                  16
+PCA16 cumulative variance:       0.870045
+kNN k:                           10
+Outcome labels used in geometry: NO
+External geometry SHA256:        dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943
+
+CLINICAL OVERLAY
+----------------
+MMR:                             69
+None / no MMR:                   59
+Evaluable:                       128
+Unavailable:                     7
+
+PRIMARY EXTERNAL TEST
+---------------------
+Observed centroid distance:      3.431798879
+NULL mean:                       2.526454521
+NULL SD:                         0.870253398
+NULL q2.5%:                      1.283333074
+NULL median:                     2.368631901
+NULL q97.5%:                     4.665537343
+Observed - NULL mean:            +0.905344358
+Observed NULL-z:                 +1.040323
+NULL >= observed:                1429
+Empirical one-sided p:           0.142985701
+
+FEATURE OVERLAP — DESCRIPTIVE ONLY
+----------------------------------
+GSE130404 Top256 intersection:   96/256
+Top256 Jaccard:                  0.230769
+
+SECONDARY GROUP GEOMETRY
+------------------------
+MMR:
+  n:                              69
+  mean density proxy:             0.100568530
+  mean local anisotropy:          0.362535795
+  mean distance to centroid:      13.915556044
+NONE_NO_MMR:
+  n:                              59
+  mean density proxy:             0.099626940
+  mean local anisotropy:          0.380733600
+  mean distance to centroid:      14.996492063
+
+v47.5b STATUS: EXTERNAL LANDSCAPE REPLICATION FAIL
+
+INTERPRETATION LIMIT
+--------------------
+This is an independent-cohort, cross-endpoint replication test of
+clinical-group organization in an independently constructed
+label-blind CML expression landscape.
+
+It is not exact endpoint replication and does not establish
+prediction, prognosis, clinical utility, causal biology, dormancy
+mechanism, quantum biology, or quantum advantage.

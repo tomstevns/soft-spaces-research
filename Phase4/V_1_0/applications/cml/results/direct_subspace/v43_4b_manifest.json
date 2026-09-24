@@ -1,0 +1,25 @@
+{
+  "version": "v43.4b",
+  "status": "TECHNICALLY NON-EVALUABLE",
+  "development_platform": "GPL10558",
+  "external_platform": "GPL570",
+  "frozen_r": 16,
+  "frozen_coordinates": 256,
+  "exact_symbol_n": 200,
+  "entrez_recovered_n": 14,
+  "ambiguous_entrez_n": 0,
+  "unresolved_n": 42,
+  "accepted_n": 214,
+  "nontransportable_n": 42,
+  "coordinate_coverage": 0.8359375,
+  "retained_projector_mass_fraction": 0.7988701716453697,
+  "external_response_labels_used": false,
+  "sha256": {
+    "v43_4_preregistration": "361f3c57ccc5687bedc829080f86412fdc7f297a61fd814120502f5bc2b836b9",
+    "v43_4a_manifest": "a34775f8fccf0774077e74aa7c451ec12db56a0eb9c1a101e8ef02eacab67480",
+    "frozen_basis": "86f38bc08ca02234a3a85dd9dbafb480d42ba0b281d4520fa920f6dd74ffa377",
+    "development_platform": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "external_platform": "62c986ce39e7292ed92bbf3e932523c037ae2d62d94afe260c28a914749ecd87",
+    "execution_script": "71db3051357b2f84f41f0b67e30019e0da3b7be6188c1d505ff0a6d3b96f29cf"
+  }
+}

@@ -1,0 +1,85 @@
+Soft Spaces / CML
+v45.3 — GSE14671 CLOSURE AUDIT
+
+STATUS
+------
+CLOSED — TECHNICALLY NON-EVALUABLE
+
+SUMMARY
+-------
+GSE14671 was accepted as a second independent GPL570 CML candidate cohort:
+59 pretreatment samples, 41 CCyR responders and 18 poor responders
+(>65% Ph-positive metaphases after 12 months).
+
+v45.1 preregistered the external cross-endpoint test before model scoring:
+frozen v44.5a Top-256, frozen U16, frozen logistic model, no refit and no
+outcome-driven tuning.
+
+v45.2 performed technical transport only. Outcome labels were not used and
+no predictive score was calculated.
+
+Frozen Top-256 coordinates: 256
+Mapped to GPL570: 255
+Missing coordinate: PTPN20
+
+The preregistered technical rule required all 256 frozen coordinates.
+Therefore v45.2 was TECHNICALLY NON-EVALUABLE.
+
+v45.2b then performed a targeted outcome-blind GPL570 annotation audit for
+PTPN20.
+
+GPL570 annotation rows: 54,675
+Rows containing exact PTPN20 token: 0
+Unique annotation-supported PTPN20 probes: 0
+PTPN20 status: UNRESOLVED
+
+No technical rescue was available under the frozen rules.
+
+NO RESCUE
+---------
+Not performed:
+- dropping PTPN20
+- scoring a 255-gene model
+- substituting another gene or proxy
+- choosing a probe by outcome or predictive performance
+- changing Top-256, U16 or rank
+- refitting the classifier
+- changing normalization or response definition after scoring
+
+FINAL EVIDENCE STATE
+--------------------
+v45.0b candidate audit: PASS
+v45.1 preregistration: FROZEN
+v45.2 transport: 255/256; technical gate not satisfied
+v45.2b PTPN20 resolution: UNRESOLVED
+Predictive scoring: NOT PERFORMED
+
+FINAL INTERPRETATION:
+TECHNICALLY NON-EVALUABLE
+
+This is neither an external predictive PASS nor an external predictive FAIL.
+
+PROSPECTIVE REQUIREMENT LEARNED
+-------------------------------
+A future external cohort should be checked before predictive scoring for:
+- independent CML population
+- pretreatment material
+- clearly defined response endpoint
+- adequate patient count
+- all 256 frozen coordinates measurable
+- PTPN20 explicitly representable
+- non-zero variation for every frozen coordinate
+- no outcome-driven preprocessing or gene substitution
+
+CLOSURE DECISION
+----------------
+CML v45 is CLOSED.
+Any further external test begins as a new preregistered version.
+
+FINAL STATUS
+------------
+GSE14671 CANDIDATE QUALITY: ACCEPTABLE
+FROZEN COORDINATE TRANSPORT: 255/256
+PTPN20 RESOLUTION: UNRESOLVED
+PREDICTIVE SCORING: NOT PERFORMED
+v45: TECHNICALLY NON-EVALUABLE

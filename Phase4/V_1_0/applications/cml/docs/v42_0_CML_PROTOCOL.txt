@@ -1,0 +1,404 @@
+Soft Spaces / Phase 4
+v42.0 — CML APPLICATION PROTOCOL
+
+STATUS
+------
+PRE-DATA PROTOCOL
+
+This protocol is frozen before selection, download, inspection, or modeling of
+a CML expression cohort.
+
+PURPOSE
+-------
+Test whether the Soft-Spaces method can discover a compact, low-dimensional,
+non-random expression subspace in chronic myeloid leukemia (CML) that is
+robust internally and transferable to an independent cohort.
+
+This is a NEW biological application track.
+
+The DLBCL v41 results are not treated as evidence for CML.
+Only the Soft-Spaces methodological principle is transferred.
+
+SCIENTIFIC MOTIVATION
+---------------------
+The CML application should test structure, not merely trivial disease-vs-normal
+classification.
+
+The preferred biological question is:
+
+    Can Soft Spaces identify a reproducible low-dimensional expression
+    subspace associated with clinically or biologically meaningful CML cell
+    state, treatment response, persistence, resistance, or related disease
+    heterogeneity, and can that subspace generalize to independent patients?
+
+A simple CML-vs-healthy classifier may be used only as a baseline or technical
+sanity check. It must not become the main scientific claim unless no stronger,
+well-supported CML phenotype is available.
+
+PRIMARY SCIENTIFIC HYPOTHESIS
+-----------------------------
+H1:
+
+A Soft-Spaces-derived REAL feature/subspace representation contains more
+reproducible and externally transferable structure than a matched NULL
+representation constructed under the same preprocessing and dimensionality
+constraints.
+
+NULL HYPOTHESIS
+---------------
+H0:
+
+Any observed compact CML expression structure is no more reproducible or
+transferable than matched NULL feature/subspace selections generated under the
+same data restrictions.
+
+METHOD TRANSFER RULE
+--------------------
+The following concepts are inherited from the Soft-Spaces framework:
+
+- high-dimensional expression state;
+- deterministic feature pool;
+- symmetric class/contrast or state operator H;
+- spectral decomposition;
+- low-dimensional projector/subspace P;
+- coordinate coupling / Soft-Spaces ranking;
+- REAL vs matched NULL;
+- internal stability;
+- external transfer;
+- frozen confirmatory endpoint.
+
+The following are NOT inherited from DLBCL:
+
+- DLBCL genes;
+- 16-gene or 12-gene panel size;
+- top-4 rank;
+- DLBCL thresholds;
+- DLBCL cohort-specific preprocessing;
+- DLBCL biological interpretation.
+
+All CML-specific dimensions and endpoints must be determined prospectively
+from CML development data under the rules below.
+
+BIOLOGICAL TARGET SELECTION
+---------------------------
+Before modeling, one and only one primary CML phenotype must be designated.
+
+Preference order:
+
+1. treatment response / non-response;
+2. persistence / residual leukemic state under TKI;
+3. resistance state;
+4. clinically meaningful molecular response category;
+5. disease-state heterogeneity with a biologically defensible label;
+6. only if none of the above are feasible: CML vs control as a technical
+   fallback.
+
+The chosen primary target must satisfy:
+
+- unambiguous label definition;
+- sufficient sample size in both groups/states;
+- no outcome leakage;
+- reproducible metadata;
+- at least one independent external cohort or held-out study suitable for
+  replication.
+
+DATASET DISCOVERY RULES
+-----------------------
+Dataset discovery is v42.1, not part of this protocol execution.
+
+Candidate datasets must be assessed for:
+
+- CML relevance;
+- sample count;
+- phenotype quality;
+- platform;
+- expression data availability;
+- independent replication suitability;
+- probe/gene annotation quality;
+- duplicate/overlapping patients;
+- prior use in development vs replication.
+
+No modeling result may influence which external cohort is ultimately chosen for
+confirmation.
+
+DEVELOPMENT / EXTERNAL SEPARATION
+---------------------------------
+At minimum:
+
+DEVELOPMENT COHORT:
+- used for preprocessing design;
+- Soft-Spaces feature/subspace discovery;
+- classical baselines;
+- internal REAL-vs-NULL testing;
+- stability analysis.
+
+EXTERNAL COHORT:
+- not used to choose genes;
+- not used to choose subspace rank;
+- not used to tune normalization;
+- not used to tune NULL construction;
+- not used to choose thresholds.
+
+If multiple external cohorts exist, one must be designated primary before
+confirmatory analysis.
+
+PREPROCESSING PRINCIPLES
+------------------------
+All preprocessing must be train-fitted and deterministic.
+
+Required order:
+
+1. load raw/processed expression matrix;
+2. resolve samples and frozen phenotype labels;
+3. remove technical duplicates only by documented rule;
+4. map probes to genes deterministically;
+5. select any variance/filter pool using DEVELOPMENT data only;
+6. fit scaling on DEVELOPMENT data only;
+7. apply frozen transformation to held-out/internal test data;
+8. for external transfer, use a predeclared label-free cohort-alignment rule
+   if platform scale requires it.
+
+The DLBCL preprocessing error discovered in v41.6/v41.7 must not recur:
+variance-based feature filtering must be performed BEFORE variance-destroying
+standardization.
+
+CLASSICAL BASELINES
+-------------------
+Before Soft-Spaces interpretation, v42 must include classical references.
+
+At minimum:
+
+- logistic regression or linear model;
+- L1-regularized logistic regression if classification is used;
+- linear SVM;
+- simple differential-expression / univariate ranking baseline;
+- random feature-panel control.
+
+Optional:
+- random forest;
+- elastic net;
+- PCA-based classifier.
+
+Soft Spaces must not be claimed superior unless tested directly under matched
+cross-validation and external conditions.
+
+SOFT-SPACES CONSTRUCTION
+------------------------
+A CML-specific state/contrast operator H must be defined prospectively after
+the primary phenotype is frozen.
+
+Default candidate if binary phenotype is selected:
+
+    H = mean(xx^T | state 1) - mean(xx^T | state 0)
+
+where x is the development-cohort standardized expression vector in the frozen
+feature pool.
+
+H must be symmetrized numerically:
+
+    H <- 0.5 * (H + H^T)
+
+Spectral decomposition:
+
+    H = U Lambda U^T
+
+Candidate low-dimensional subspace P is defined from the largest-|eigenvalue|
+directions.
+
+Coordinate Soft-Spaces coupling score:
+
+    C_g = p_g (1 - p_g)
+
+where p_g is the diagonal coordinate weight of projector P.
+
+Any deviation from this construction must be versioned separately and justified
+before testing.
+
+DIMENSION / PANEL-SIZE RULE
+---------------------------
+The CML subspace rank and reported feature-panel size are NOT inherited from
+DLBCL.
+
+They must be frozen using DEVELOPMENT data only.
+
+Permitted selection approach:
+
+- evaluate a small predeclared grid, e.g. subspace rank r in {4, 8, 16};
+- feature panel K in {8, 16, 32};
+- select using internal development-only criterion;
+- freeze r and K before external evaluation.
+
+The number of candidate combinations must remain small to limit optimization
+bias.
+
+REAL VS NULL
+------------
+Every primary Soft-Spaces result must have a matched NULL.
+
+NULL must match REAL on:
+
+- feature-pool eligibility;
+- panel size;
+- subspace dimensionality where applicable;
+- number of evaluations;
+- preprocessing;
+- resampling structure.
+
+NULL construction must be frozen before external testing.
+
+INTERNAL VALIDATION
+-------------------
+Internal validation must use repeated or nested stratified resampling.
+
+Minimum requirements:
+
+- fixed random seeds;
+- no leakage between train/test folds;
+- REAL and NULL evaluated on identical splits;
+- report mean effect;
+- report confidence interval;
+- report paired direction/count;
+- retain negative folds/results.
+
+Potential metrics depend on phenotype:
+
+Classification:
+- ROC AUC;
+- balanced accuracy;
+- PR AUC if class imbalance is substantial.
+
+Ranking/subspace:
+- NDCG;
+- exact overlap;
+- Jaccard;
+- subspace capture;
+- correlation-neighborhood capture.
+
+FEATURE / SUBSPACE STABILITY
+----------------------------
+Before external confirmation, test whether:
+
+- exact feature recurrence exceeds NULL;
+- subspace geometry exceeds NULL;
+- correlated replacement structure exceeds NULL.
+
+A fixed gene list is NOT required if a stable distributed subspace is supported.
+
+However, low exact stability must not be relabeled as "subspace stability"
+unless geometry-aware metrics actually exceed matched NULL.
+
+EXTERNAL CONFIRMATION
+---------------------
+The confirmatory external protocol must be written and SHA-frozen BEFORE
+external outcome evaluation.
+
+The external confirmatory claim must have:
+
+- one primary endpoint;
+- one frozen REAL representation;
+- one frozen NULL definition;
+- one prespecified p/effect decision rule;
+- one primary external cohort.
+
+No endpoint switching is permitted after results are seen.
+
+DEFAULT CONFIRMATORY DECISION FRAMEWORK
+---------------------------------------
+A future v42 confirmatory PASS should require BOTH:
+
+1. REAL outperforms NULL in the prespecified direction; AND
+2. empirical or resampling-based one-sided p <= 0.05.
+
+If mapping/platform limitations prevent the frozen representation from being
+constructed:
+    TECHNICALLY NON-EVALUABLE
+
+If the frozen representation is constructible but the decision rule fails:
+    CONFIRMATORY FAIL
+
+Exploratory rescue analyses must be separately versioned.
+
+NEGATIVE-RESULT POLICY
+----------------------
+Negative results are retained permanently.
+
+Do NOT:
+
+- delete failed scripts;
+- silently replace failed endpoints;
+- remove inconvenient cohorts;
+- change the panel after external inspection;
+- reclassify a confirmatory FAIL as exploratory success.
+
+Every failure must remain in the research history.
+
+PRIMARY SUCCESS CLAIM
+---------------------
+The strongest claim v42 is allowed to establish is:
+
+    A prospectively defined Soft-Spaces-derived CML expression subspace
+    demonstrates reproducible structure beyond matched NULL and transfers to
+    an independent CML cohort under a frozen confirmatory protocol.
+
+This claim is allowed only after a confirmatory PASS.
+
+CLAIMS NOT ALLOWED FROM v42 ALONE
+---------------------------------
+v42 must NOT claim:
+
+- causal gene mechanisms;
+- cure or treatment recommendation;
+- clinical diagnostic approval;
+- prognostic utility without dedicated validation;
+- superiority to established CML biomarkers without direct comparison;
+- quantum advantage;
+- biological universality across leukemias.
+
+WORK PLAN
+---------
+v42.0
+    This protocol.
+
+v42.1
+    Dataset discovery + metadata / eligibility audit.
+
+v42.2
+    Frozen preprocessing + classical baselines.
+
+v42.3
+    First Soft-Spaces CML mapping.
+
+v42.4
+    Internal REAL-vs-NULL validation.
+
+v42.5
+    Feature/subspace stability.
+
+v42.6
+    External-cohort preparation.
+
+v42.7
+    Preregistered external replication.
+
+v42.8
+    Closure / evidence audit.
+
+STOP RULE
+---------
+The CML track should be stopped or redesigned if:
+
+- no biologically meaningful primary phenotype with adequate metadata exists;
+- no independent external cohort exists;
+- preprocessing cannot be made reproducible;
+- REAL does not outperform matched NULL internally;
+- external confirmatory replication fails.
+
+A failure at any stage is a valid scientific result.
+
+FINAL PRINCIPLE
+---------------
+The objective of v42 is not to make CML "work."
+
+The objective is to determine, under frozen and auditable conditions, whether
+the Soft-Spaces principle generalizes from the quantum/structural framework to
+a second biologically distinct disease system.

@@ -1,0 +1,45 @@
+{
+  "version": "v45.1",
+  "status": "FROZEN_BEFORE_GSE14671_MODEL_SCORING",
+  "external_cohort": "GSE14671",
+  "platform": "GPL570",
+  "sample_n": 59,
+  "positive_class": {
+    "definition": ">65% Ph-positive metaphases after 12 months of imatinib",
+    "n": 18
+  },
+  "negative_class": {
+    "definition": "complete cytogenetic response (CCyR) after 12 months",
+    "n": 41
+  },
+  "positive_prevalence": 0.3050847457627119,
+  "endpoint_type": "cross-endpoint external generalization",
+  "development_endpoint": "3-month BCR-ABL1 response threshold",
+  "external_endpoint": "12-month cytogenetic response",
+  "frozen_top_k": 256,
+  "frozen_rank": 16,
+  "external_representation": "per-gene cohort z-standardization, ddof=0",
+  "external_refit": false,
+  "outcome_tuning": false,
+  "primary_metric": "PR-AUC",
+  "secondary_metrics": [
+    "ROC-AUC",
+    "balanced_accuracy@0.5",
+    "sensitivity@0.5",
+    "specificity@0.5"
+  ],
+  "pass_rule": {
+    "technical_transport": "PASS",
+    "pr_auc": "> prevalence",
+    "roc_auc": "> 0.5",
+    "direction": "mean poor-response score > mean CCyR score",
+    "refit": "NO",
+    "outcome_tuning": "NO"
+  },
+  "protocol_sha256": "c620936dc5832ac26fca09155b7b89d241120d7e3399e9c2c50e38585ad63b0d",
+  "source_sha256": {
+    "v45_0b_manifest": "a05a2eb1c066547e3309217d13738093929158378ae1c509e2817b20d7511e6b",
+    "v44_5a_frozen_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "v44_7_closure_manifest": "ae8e63a786d90f34683793dc6a0c9fa242219e8cf9b5b09f93d7aa6df0598c8a"
+  }
+}

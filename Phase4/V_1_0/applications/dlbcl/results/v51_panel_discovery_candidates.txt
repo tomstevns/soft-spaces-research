@@ -1,0 +1,75 @@
+v51 frozen-panel discovery could not identify exactly one safe panel.
+
+Relevant v41 files found:
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16_PREREGISTRATION_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16a_prepare_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_16_PREREGISTRATION_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_external_replication_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16_PREREGISTRATION.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16a_prepare_GSE159472.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16_external_replication.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16_preregistration_lock.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_null_metrics.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_real_metrics.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_mapping_audit.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_16_PREREGISTRATION.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_16_preregistration_lock.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_external_replication_summary.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15x_exploratory_reduced_panel.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15a3_prepare_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15x_exploratory_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_15_PREREGISTRATION_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15a_prepare_GSE117556.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15a2_prepare_GSE117556.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15a3_prepare_GSE117556.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15_preregistration_lock.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15x_null_metrics.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15x_real_metrics.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15_mapping_audit.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_15_PREREGISTRATION.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15x_exploratory_summary.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_15_preregistration_lock.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_13_module_subspace_stability.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_13_gene_replacement_map.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_13_module_subspace_stability_summary.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_13_module_subspace_stability_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\Downloads\v41_13_module_subspace_stability.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_13_per_resample_metrics.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_12_feature_stability.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_12b_feature_stability.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_12_feature_stability_final.py
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_1_preprocessing_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\data\metadata\v41_0_download_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\comparison\v41_6_selected_genes.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_12_resample_panels.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_12b_resample_panels.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\data\processed\v41_1_preprocessing_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\comparison\v41_9_final_selected_genes.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\softspaces\v41_3_mapping_probe_top_genes.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\closure\DLBCL_v41_17_CLOSURE_AUDIT_manifest.json
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\prospective\v41_11_GSE87371_selected_genes.csv
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_12_feature_stability_summary.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_12b_feature_stability_summary.txt
+C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_12_gene_selection_frequencies.csv
+
+Explicit list candidates:
+GENES (12): DNER, SPIC, TCL1B, MMP20, CKAP2, RNF183, MYOCD, UMODL1, CTAG2, HRK, RGS13, TCL1A
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_16_PREREGISTRATION_manifest.json :: /frozen_panel
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\v41_16_PREREGISTRATION_manifest.json :: /frozen_panel
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_external_replication_manifest.json :: /frozen_panel
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15x_exploratory_manifest.json :: /reduced_panel_genes
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_mapping_audit.csv :: column:frozen_gene
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_15_mapping_audit.csv :: column:resolved_symbols
+GENES (12): EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT, EXACT
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\results\stability\v41_16_mapping_audit.csv :: column:status
+
+Repeated text candidates:
+GENES (4): VERSION, EXPLORATORY, REDUCED-PANEL, REPLICATION
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15x_exploratory_reduced_panel.py
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_15x_exploratory_reduced_panel.py
+GENES (4): VERSION, MODULE, SUBSPACE, STABILITY
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_13_module_subspace_stability.py
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\Downloads\v41_13_module_subspace_stability.py
+GENES (5): VERSION, MODULE, EXPRESSION-, SUBSPACE, STABILITY
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\code\v41_13_module_subspace_stability.py
+  C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\dlbcl\docs\preregistration\Downloads\v41_13_module_subspace_stability.py

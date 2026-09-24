@@ -1,0 +1,379 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-23T17:47:32.582596+00:00",
+    "script_version": "v50_11",
+    "python_version": "3.9.7"
+  },
+  "benchmark": {
+    "molecule": "LiH",
+    "basis": "STO-3G",
+    "geometries": [
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      2.0,
+      2.5,
+      3.0,
+      4.0
+    ],
+    "fixed_sector": "(N_alpha,N_beta)=(2,2)"
+  },
+  "frozen_rules": {
+    "prominence_threshold": 0.75,
+    "robust_threshold": 0.75,
+    "clear_ss_auc": 0.65,
+    "clear_delta_auc": 0.1,
+    "positive_geometry_min": 5,
+    "perturbation_strength": 0.01,
+    "geometry_delta": 0.025,
+    "confirm_seeds": [
+      25043000,
+      25043001,
+      25043002,
+      25043003,
+      25043004,
+      25043005,
+      25043006,
+      25043007,
+      25043008,
+      25043009,
+      25043010,
+      25043011
+    ],
+    "heldout_seeds": [
+      35043000,
+      35043001,
+      35043002,
+      35043003,
+      35043004,
+      35043005,
+      35043006,
+      35043007,
+      35043008,
+      35043009,
+      35043010,
+      35043011,
+      35043012,
+      35043013,
+      35043014,
+      35043015,
+      35043016,
+      35043017,
+      35043018,
+      35043019,
+      35043020,
+      35043021,
+      35043022,
+      35043023
+    ]
+  },
+  "candidate_summary": {
+    "1.0": {
+      "eligible_candidates": 203,
+      "dual_pass_candidates": 46
+    },
+    "1.2": {
+      "eligible_candidates": 204,
+      "dual_pass_candidates": 51
+    },
+    "1.4": {
+      "eligible_candidates": 206,
+      "dual_pass_candidates": 50
+    },
+    "1.6": {
+      "eligible_candidates": 209,
+      "dual_pass_candidates": 41
+    },
+    "2.0": {
+      "eligible_candidates": 213,
+      "dual_pass_candidates": 33
+    },
+    "2.5": {
+      "eligible_candidates": 215,
+      "dual_pass_candidates": 38
+    },
+    "3.0": {
+      "eligible_candidates": 215,
+      "dual_pass_candidates": 35
+    },
+    "4.0": {
+      "eligible_candidates": 211,
+      "dual_pass_candidates": 39
+    }
+  },
+  "results": [
+    {
+      "name": "T1 held-out dephasing projector sensitivity",
+      "pooled_softspaces_auc": 0.491715609575425,
+      "pooled_en2_auc": 0.5004006137705315,
+      "pooled_delta_auc": -0.008685004195106483,
+      "median_geometry_delta_auc": -0.0017384617956304749,
+      "positive_delta_geometries": 4,
+      "clear_pass": false,
+      "per_geometry": [
+        {
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.48310113519091846,
+          "en2_auc": 0.4580753353973168,
+          "delta_auc": 0.025025799793601644
+        },
+        {
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.4870562604126618,
+          "en2_auc": 0.46879405356914006,
+          "delta_auc": 0.018262206843521755
+        },
+        {
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5194805194805194,
+          "en2_auc": 0.45879120879120877,
+          "delta_auc": 0.06068931068931066
+        },
+        {
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.5198959845186261,
+          "en2_auc": 0.4333575229801645,
+          "delta_auc": 0.08653846153846156
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.47845329606335896,
+          "en2_auc": 0.5533426508269276,
+          "delta_auc": -0.07488935476356862
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.526282493673798,
+          "en2_auc": 0.5480216241085807,
+          "delta_auc": -0.021739130434782705
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.4718771566597654,
+          "en2_auc": 0.5477915804002761,
+          "delta_auc": -0.07591442374051072
+        },
+        {
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.44124671602579413,
+          "en2_auc": 0.5331979937903033,
+          "delta_auc": -0.09195127776450918
+        }
+      ]
+    },
+    {
+      "name": "T2 held-out transverse projector sensitivity",
+      "pooled_softspaces_auc": 0.4960675601109625,
+      "pooled_en2_auc": 0.5007823306650945,
+      "pooled_delta_auc": -0.004714770554131997,
+      "median_geometry_delta_auc": 0.01780948520078951,
+      "positive_delta_geometries": 4,
+      "clear_pass": false,
+      "per_geometry": [
+        {
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.46226780185758515,
+          "en2_auc": 0.5396026831785345,
+          "delta_auc": -0.0773348813209494
+        },
+        {
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.5274894271434064,
+          "en2_auc": 0.49147763680635653,
+          "delta_auc": 0.036011790337049876
+        },
+        {
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5339660339660339,
+          "en2_auc": 0.498001998001998,
+          "delta_auc": 0.03596403596403591
+        },
+        {
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.4638364779874214,
+          "en2_auc": 0.5085873246250605,
+          "delta_auc": -0.04475084663763912
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.5096668996040066,
+          "en2_auc": 0.4442697414395528,
+          "delta_auc": 0.0653971581644538
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.49585921325051757,
+          "en2_auc": 0.49620427881297446,
+          "delta_auc": -0.00034506556245689213
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.5300207039337475,
+          "en2_auc": 0.48786519438693354,
+          "delta_auc": 0.04215550954681391
+        },
+        {
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.4450083592070695,
+          "en2_auc": 0.5533795080009554,
+          "delta_auc": -0.10837114879388587
+        }
+      ]
+    },
+    {
+      "name": "T3 held-out mixed projector sensitivity",
+      "pooled_softspaces_auc": 0.46756162271253315,
+      "pooled_en2_auc": 0.5099000733198787,
+      "pooled_delta_auc": -0.04233845060734559,
+      "median_geometry_delta_auc": -0.029285442021291103,
+      "positive_delta_geometries": 2,
+      "clear_pass": false,
+      "per_geometry": [
+        {
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.44020897832817335,
+          "en2_auc": 0.4907120743034056,
+          "delta_auc": -0.050503095975232226
+        },
+        {
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.49032423426887095,
+          "en2_auc": 0.4749455337690632,
+          "delta_auc": 0.015378700499807774
+        },
+        {
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.47895854145854144,
+          "en2_auc": 0.5081793206793207,
+          "delta_auc": -0.02922077922077926
+        },
+        {
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.46855345911949686,
+          "en2_auc": 0.4617803580067731,
+          "delta_auc": 0.006773101112723778
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.4835196832052178,
+          "en2_auc": 0.5128697880270208,
+          "delta_auc": -0.029350104821802947
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.5170807453416149,
+          "en2_auc": 0.5365769496204279,
+          "delta_auc": -0.019496204278813045
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.4350701633310329,
+          "en2_auc": 0.5524499654934437,
+          "delta_auc": -0.11737980216241084
+        },
+        {
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.42834965368999284,
+          "en2_auc": 0.5507523286362551,
+          "delta_auc": -0.12240267494626228
+        }
+      ]
+    },
+    {
+      "name": "T4 geometry-displacement gap sensitivity",
+      "pooled_softspaces_auc": 0.5385250610369093,
+      "pooled_en2_auc": 0.6320494795800359,
+      "pooled_delta_auc": -0.09352441854312654,
+      "median_geometry_delta_auc": -0.0780326739969534,
+      "positive_delta_geometries": 1,
+      "clear_pass": false,
+      "per_geometry": [
+        {
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.47981166150670795,
+          "en2_auc": 0.5444401444788441,
+          "delta_auc": -0.06462848297213619
+        },
+        {
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.5797770088427527,
+          "en2_auc": 0.5756119441240548,
+          "delta_auc": 0.004165064718697931
+        },
+        {
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5605644355644356,
+          "en2_auc": 0.6083916083916084,
+          "delta_auc": -0.04782717282717286
+        },
+        {
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.5274552491533624,
+          "en2_auc": 0.618892114175133,
+          "delta_auc": -0.09143686502177062
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.5163638481248544,
+          "en2_auc": 0.6675401816911251,
+          "delta_auc": -0.1511763335662707
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.5426155969634231,
+          "en2_auc": 0.6779963193006672,
+          "delta_auc": -0.13538072233724407
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.49557165861513686,
+          "en2_auc": 0.7016333103289625,
+          "delta_auc": -0.20606165171382562
+        },
+        {
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.5993551468832099,
+          "en2_auc": 0.649749223787915,
+          "delta_auc": -0.0503940769047051
+        }
+      ]
+    }
+  ],
+  "clear_pass_stages": [],
+  "all_stages_failed": true,
+  "interpretation_if_all_fail": "H4 predictive tendency did not independently replicate on LiH under unchanged rules. Do not retune thresholds post hoc.",
+  "interpretation_if_any_pass": "At least one preregistered predictive Soft-Spaces advantage over EN2 independently replicated on LiH under unchanged criteria."
+}

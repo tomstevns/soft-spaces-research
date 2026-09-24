@@ -1,0 +1,212 @@
+Soft Spaces / DLBCL Phase 4
+v41.15 — PREREGISTERED EXTERNAL REPLICATION
+Frozen before inspecting GSE117556 expression values
+
+DATE
+----
+2026-09-18
+
+PURPOSE
+-------
+Test whether the frozen Soft-Spaces-derived 16-gene DLBCL module transfers to a
+third independent expression cohort without changing the panel, geometry,
+metrics, NULL construction, or decision rule after seeing the new cohort's
+expression results.
+
+PRIMARY REPLICATION COHORT
+--------------------------
+GSE117556
+Study: REMoDLB DLBCL cohort
+Reported GEO sample count: 928 DLBCL patients
+Platform: Illumina Whole-Genome DASL HT v4 (GPL14951)
+
+Reason for selection BEFORE outcome inspection:
+1. large cohort;
+2. independent study context;
+3. different expression platform, making successful transfer more demanding;
+4. suitable for a label-free module-geometry test;
+5. no GSE117556 expression values are to be inspected before this protocol is frozen.
+
+FROZEN DEVELOPMENT REFERENCE
+----------------------------
+Development cohort: GSE10846
+Frozen panel source: v41.12b full-development Soft-Spaces panel
+Panel size: 16
+
+Frozen genes, in frozen order:
+1. DNER
+2. SPIC
+3. TCL1B
+4. NPIPA5///NPIPB6///NPIPB8///NPIPB3
+5. EML6
+6. MMP20
+7. KCCAT333
+8. IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1
+9. RNF183
+10. MYOCD
+11. UMODL1
+12. CTAG2
+13. IGK///IGKC
+14. LOC283454///HRK
+15. RGS13
+16. TCL1A
+
+IMPORTANT PLATFORM-MAPPING RULE
+-------------------------------
+The panel MUST NOT be altered simply because GSE117556 uses another platform.
+
+Before calculating any biological/geometric result:
+- map GPL14951 probe identifiers to gene symbols using platform annotation;
+- use deterministic probe-to-gene aggregation;
+- document every frozen gene as EXACT, RESOLVED-ALIAS, AMBIGUOUS, or MISSING;
+- do not substitute a biologically "similar" gene for a missing gene;
+- do not inspect DLBCL labels/outcomes to resolve mapping.
+
+If one of the frozen compound annotations maps to multiple symbols, resolution
+must be based only on platform annotation and the pre-existing frozen annotation,
+not on expression behavior or disease labels.
+
+ELIGIBILITY GATE
+----------------
+The confirmatory 16-gene test proceeds only if all 16 frozen coordinates can be
+resolved reproducibly on GSE117556.
+
+If fewer than 16 are reproducibly measurable:
+- the 16-gene confirmatory test is declared technically non-evaluable;
+- no reduced-panel confirmatory claim is permitted;
+- any reduced-panel analysis must be explicitly labeled exploratory v41.15x.
+
+No gene may be replaced after seeing expression geometry.
+
+PREPROCESSING
+-------------
+For each cohort separately:
+- use processed expression values supplied for the cohort;
+- samples x genes representation;
+- aggregate multiple probes mapping to the same frozen gene deterministically
+  using arithmetic mean unless the GEO processed dataset already provides a
+  unique gene-level value;
+- cohort-wise z-standardize each gene, label-free;
+- no ABC/GCB, survival, treatment, or response labels are used.
+
+The GSE10846 reference geometry is recomputed from the same frozen 16 genes.
+
+PRIMARY ENDPOINT
+----------------
+Top-4 gene-eigensubspace overlap:
+
+    S4 = || U_ref^T U_ext ||_F^2 / 4
+
+where U_ref and U_ext are the top four eigenvectors of the 16x16 gene correlation
+matrices from GSE10846 and GSE117556 respectively.
+
+This endpoint was selected prospectively for v41.15 based on the prior v41.14
+pattern, before GSE117556 expression values were inspected.
+
+PRIMARY NULL
+------------
+10,000 NULL panels.
+
+NULL universe:
+- genes measurable in BOTH GSE10846 and GSE117556;
+- Top-256 genes ranked by raw variance in GSE10846 only;
+- no GSE117556 expression magnitude, labels, or outcomes may influence the NULL
+  universe.
+
+For each NULL replicate:
+- sample 16 genes without replacement;
+- calculate the same S4 transfer metric.
+
+PRIMARY DECISION RULE
+---------------------
+Confirmatory replication PASS if and only if:
+
+1. REAL S4 > NULL mean; AND
+2. empirical one-sided p <= 0.05, where
+
+       p = (1 + #{NULL >= REAL}) / (1 + N_NULL)
+
+No endpoint substitution is allowed after data inspection.
+
+SECONDARY ENDPOINT
+------------------
+Pairwise gene-correlation structure similarity:
+Pearson correlation between upper triangles of the 16x16 gene-correlation
+matrices.
+
+Secondary support is present if:
+- REAL > NULL mean; and
+- empirical one-sided p <= 0.05.
+
+SECONDARY failure does NOT override a primary PASS, but must be reported.
+
+EXPLORATORY ENDPOINTS
+---------------------
+These are reported but are not allowed to determine confirmatory PASS/FAIL:
+- Top-8 gene-eigensubspace overlap;
+- eigenvalue-profile cosine similarity;
+- individual pairwise gene-correlation conservation;
+- gene-level contribution / leave-one-gene-out diagnostics.
+
+LABEL FIREWALL
+--------------
+During confirmatory geometry calculation:
+- do not read ABC/GCB labels;
+- do not read survival;
+- do not read response;
+- do not tune preprocessing from outcome labels;
+- do not tune panel membership;
+- do not tune rank r after seeing results.
+
+Only after the confirmatory v41.15 result and SHA hashes are written may labels
+be opened in a separately versioned follow-up analysis.
+
+INTEGRITY REQUIREMENTS
+----------------------
+Before analysis:
+- save this preregistration;
+- calculate SHA256 of the preregistration;
+- commit it to Git.
+
+At execution:
+- record SHA256 for raw/processed GSE117556 input;
+- record platform annotation SHA256;
+- record frozen panel manifest SHA256;
+- record script SHA256;
+- save all NULL metrics, not only summaries.
+
+MANDATORY OUTPUT
+----------------
+v41_15_external_replication_summary.txt
+v41_15_external_replication_manifest.json
+v41_15_real_metrics.csv
+v41_15_null_metrics.csv
+v41_15_mapping_audit.csv
+
+INTERPRETATION
+--------------
+PASS:
+Independent evidence that the frozen 16-gene Soft-Spaces module preserves its
+top-4 gene-space geometry in a third cohort and across a new measurement
+platform, relative to a prospectively frozen matched NULL.
+
+FAIL:
+The third-cohort confirmatory replication did not establish transfer under the
+frozen primary endpoint. A failure must be retained as part of the research
+history and must not be repaired by changing genes, r, normalization, or NULL
+after outcome inspection.
+
+TECHNICALLY NON-EVALUABLE:
+One or more frozen coordinates cannot be reproducibly represented on GPL14951.
+This is a platform-mapping limitation, not a biological PASS or FAIL.
+
+SCIENTIFIC LIMITS
+-----------------
+Even a PASS does not establish:
+- causal biology;
+- clinical utility;
+- diagnostic approval;
+- superiority to established biomarker methods;
+- quantum advantage.
+
+A PASS would establish only the prespecified external geometry-transfer claim.

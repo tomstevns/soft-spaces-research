@@ -1,0 +1,20 @@
+{
+  "version": "v49.0",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "clinical_labels_used": false,
+  "top_k": 256,
+  "control_rank_start": 257,
+  "control_rank_end": 2048,
+  "pca_r": 16,
+  "primary_null_n": 1000,
+  "primary_seed": 49020001,
+  "robust_n_resamples": 100,
+  "robust_null_per_resample": 20,
+  "robust_seed": 49030001,
+  "protocol_sha256": "7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a",
+  "source_sha256": {
+    "v48_4_manifest": "e2f6ae418ce85ac4eb9a9bc8d5f3352b2e1bdf265c8ee5024eb8bd67ad165a72",
+    "v48_3_closure_manifest": "dfb6150a8396dee60f86f783f65db5c0bbe72184deb1dd30c1f065bda061c074",
+    "eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068"
+  }
+}

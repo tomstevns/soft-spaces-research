@@ -1,0 +1,135 @@
+Soft Spaces / CML
+v48.2 — GEOMETRIC INVARIANCE RESAMPLING ROBUSTNESS PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE RESAMPLING EXECUTION
+
+RELATION TO v48.1
+-----------------
+v48.1 produced a label-blind GEOMETRIC INVARIANCE PASS.
+
+v48.2 tests patient-sampling robustness of that same higher-level
+geometric-invariance hypothesis.
+
+NO CLINICAL LABELS are used.
+
+FEATURE IDENTITIES
+------------------
+Frozen throughout v48.2:
+
+GSE130404:
+    frozen v47.2 Top-256
+
+GSE44589:
+    frozen v47.5b Top-256
+
+Feature identities are NOT reselected in v48.2.
+
+Therefore v48.2 tests:
+    patient-sampling robustness of geometry
+
+It does NOT test:
+    feature-selection robustness
+
+RESAMPLING
+----------
+Paired independent subsampling without replacement.
+
+Number of paired resamples:
+    200
+
+GSE130404:
+    76 / 96 patients
+
+GSE44589:
+    108 / 135 patients
+
+For each resample:
+1. re-standardize each cohort within the selected patients;
+2. refit PCA-16 independently in each cohort;
+3. compute observed primary metrics;
+4. create 50 external covariance-destroyed NULL geometries.
+
+PRIMARY METRIC A
+----------------
+Normalized PCA-16 eigen-spectrum cosine similarity.
+
+Higher means more similar.
+
+Within each resample:
+
+    z_spectrum =
+        (observed_cosine - mean(NULL_cosine))
+        / sd(NULL_cosine)
+
+PRIMARY METRIC B
+----------------
+Wasserstein-1 distance between normalized PCA-16 pairwise-distance
+distributions.
+
+Lower means more similar.
+
+Within each resample:
+
+    z_distance =
+        (mean(NULL_W1) - observed_W1)
+        / sd(NULL_W1)
+
+Thus for BOTH primary metrics:
+    positive z = stronger similarity than covariance-destroyed NULL
+
+NULL CONSTRUCTION
+-----------------
+For each NULL replicate:
+
+Within the selected GSE44589 patient subset, independently permute patient
+values inside every frozen external Top-256 gene.
+
+This preserves:
+- selected external patient count
+- every selected gene's exact marginal values
+- mean
+- variance
+- frozen feature identity
+
+It destroys:
+- gene-gene covariance
+- patient-level multivariate structure
+
+PRIMARY ROBUSTNESS PASS RULE
+----------------------------
+BOTH primary metrics must satisfy BOTH:
+
+1. median signed NULL-z > 1.644853626951
+
+AND
+
+2. fraction of resamples with signed NULL-z > 0
+   >= 0.75
+
+SECONDARY DESCRIPTIVES
+----------------------
+Report:
+- fraction empirical one-sided p <= 0.05 for spectrum
+- fraction empirical one-sided p <= 0.05 for distance geometry
+- local-anisotropy Wasserstein distance
+- effective-dimension absolute difference
+- PCA-16 cumulative variance in each cohort
+
+CLAIM LIMIT
+-----------
+A PASS supports robustness of the v48 cross-cohort geometric-invariance
+signal to patient subsampling.
+
+It is NOT:
+- a third independent cohort replication
+- treatment-response replication
+- prediction
+- prognosis
+- causal biology
+- dormancy mechanism
+- quantum biology
+- quantum advantage
+
+No rescue tuning after FAIL.

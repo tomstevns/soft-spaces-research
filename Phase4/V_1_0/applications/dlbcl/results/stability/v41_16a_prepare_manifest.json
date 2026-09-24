@@ -1,0 +1,42 @@
+{
+  "version": "v41.16a",
+  "gse": "GSE159472",
+  "platform": "GPL570",
+  "preregistration_sha256": "00f27acd8c4b3bc8fcdd58368235f1bb8538588aa8e9c40720eb885d9b555505",
+  "series_matrix": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\data\\external\\GSE159472\\raw\\GSE159472_series_matrix.txt.gz",
+  "series_matrix_sha256": "4bc5753ad3168179f77aa6437e34bff72ae2bc64418b084c647772398cd8bd84",
+  "platform_table": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\data\\external\\GSE159472\\platform\\GPL570_full_geo_table.txt",
+  "platform_table_sha256": "62c986ce39e7292ed92bbf3e932523c037ae2d62d94afe260c28a914749ecd87",
+  "mapping_info": {
+    "probe_id_column": "ID",
+    "gene_symbol_column": "Gene Symbol",
+    "all_columns": [
+      "ID",
+      "GB_ACC",
+      "SPOT_ID",
+      "Species Scientific Name",
+      "Annotation Date",
+      "Sequence Type",
+      "Sequence Source",
+      "Target Description",
+      "Representative Public ID",
+      "Gene Title",
+      "Gene Symbol",
+      "ENTREZ_GENE_ID",
+      "RefSeq Transcript ID",
+      "Gene Ontology Biological Process",
+      "Gene Ontology Cellular Component",
+      "Gene Ontology Molecular Function"
+    ]
+  },
+  "n_measured_probes": 54630,
+  "n_annotated_probes": 45782,
+  "n_measured_annotated_probe_overlap": 45782,
+  "n_measurable_symbols": 24440,
+  "panel_size": 12,
+  "eligibility_gate": "PASS",
+  "expression_values_analyzed": false,
+  "external_labels_used": false,
+  "mapping_audit": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_16_mapping_audit.csv",
+  "mapping_audit_sha256": "ac3f0e73266c9dc208026d5c76edffd61b12edf9a9d882bb781099026d52522c"
+}

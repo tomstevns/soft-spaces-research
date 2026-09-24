@@ -1,0 +1,115 @@
+Soft Spaces / CML
+v49.4 — STRUCTURED BIOLOGICAL-CONTROL GEOMETRY CLOSURE
+
+STATUS
+------
+CLOSED
+
+Protocol SHA:
+    7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a
+
+RELATION TO v48
+---------------
+v48.3 formal joint FAIL remains unchanged.
+
+v49 used a prospectively frozen NEW structured biological-control NULL
+consisting of real high-variance genes with untouched covariance.
+
+Clinical labels used:
+    NO
+
+TECHNICAL / INTEGRITY
+---------------------
+GSE130404 measurable eligible genes:
+    15890
+
+GSE44589 measurable eligible genes:
+    15884
+
+GSE14671 measurable eligible genes:
+    15884
+
+Frozen Top256 set integrity:
+    GSE130404: PASS
+    GSE44589:  PASS
+    GSE14671:  PASS
+
+PRIMARY STRUCTURED-NULL TEST
+----------------------------
+Observed minimum pairwise cosine:
+    0.979732031
+
+Structured NULL q95:
+    0.986227944
+
+Empirical spectral p:
+    0.245754246
+
+Spectral gate:
+    FAIL
+
+Observed maximum pairwise W1:
+    0.085676247
+
+Structured NULL q05:
+    0.067560422
+
+Empirical distance p:
+    0.726273726
+
+Distance gate:
+    FAIL
+
+v49.2:
+    FAIL
+
+PATIENT-RESAMPLING ROBUSTNESS
+-----------------------------
+Spectrum median signed z:
+    0.713482157
+
+Spectrum positive fraction:
+    0.710000000
+
+Spectrum robustness:
+    FAIL
+
+Distance median signed z:
+    -0.769355873
+
+Distance positive fraction:
+    0.230000000
+
+Distance robustness:
+    FAIL
+
+v49.3:
+    FAIL
+
+FINAL
+-----
+STRUCTURED BIOLOGICAL-CONTROL GEOMETRIC INVARIANCE NOT SUPPORTED
+
+NO RESCUE / NO TUNING
+---------------------
+Control-pool ranks, Top-K, PCA rank, NULL size, resampling design and PASS
+rules were frozen before the v49 result.
+
+No post-hoc change was used.
+
+CLAIM LIMIT
+-----------
+If supported, the result means only:
+
+    the frozen higher-level label-blind transcriptomic geometries are more
+    mutually similar across these three CML cohorts than alternative
+    high-variance real-gene geometries under the frozen v49 structured
+    biological-control test.
+
+It does NOT establish prediction, response replication, clinical utility,
+causal biology, dormancy, disease mechanism, quantum biology or quantum
+advantage.
+
+TRACK
+-----
+v49 CLOSED

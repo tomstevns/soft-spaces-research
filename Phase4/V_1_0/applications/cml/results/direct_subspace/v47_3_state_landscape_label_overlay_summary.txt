@@ -1,0 +1,57 @@
+=== Soft Spaces / CML v47.3 CLINICAL-LABEL OVERLAY ===
+
+FROZEN GEOMETRY
+---------------
+v47.2 geometry SHA:              44f0eb8670a03540f4ea829387d980135471e7c679754575e8a4e868904677f4
+Geometry rebuilt:                NO
+PCA refit:                       NO
+Feature selection rerun:         NO
+
+CLINICAL LABELS
+---------------
+3-month BCR-ABL1 <10%:           83
+3-month BCR-ABL1 >10%:           13
+Total:                           96
+
+PRIMARY TEST
+------------
+Metric: PCA-16 group-centroid Euclidean distance
+Observed centroid distance:      7.877400621
+
+Permutations:                    10000
+Random seed:                     47030001
+NULL mean:                       4.279949029
+NULL SD:                         1.313822638
+NULL q2.5%:                      2.362247976
+NULL median:                     4.043607372
+NULL q97.5%:                     7.482592335
+Observed - NULL mean:            +3.597451592
+Observed NULL-z:                 +2.738156
+NULL >= observed:                161
+Empirical one-sided p:           0.016198380
+
+v47.3 STATUS: PRIMARY LANDSCAPE SEPARATION PASS
+
+SECONDARY DESCRIPTIVE GEOMETRY
+------------------------------
+GOOD_EMR_LT10:
+  n:                              83
+  mean density proxy:             0.092666411
+  mean local anisotropy:          0.359888180
+  mean distance to centroid:      14.135454763
+POOR_GT10:
+  n:                              13
+  mean density proxy:             0.101022577
+  mean local anisotropy:          0.354876524
+  mean distance to centroid:      12.989731115
+
+INTERPRETATION
+--------------
+The primary test asks whether independently defined clinical groups
+occupy more separated regions of the already-frozen label-blind
+PCA-16 state geometry than expected under random label assignment.
+
+No predictive classifier was fitted in this test.
+
+A PASS does not establish diagnosis, prognosis, causal biology,
+dormancy mechanism, clinical utility, or quantum advantage.

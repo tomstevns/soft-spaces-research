@@ -1,0 +1,222 @@
+{
+  "version": "v41.7-dlbcl-corrected-preprocessing-audit-1",
+  "created_utc": "2026-09-17T09:05:47.203756+00:00",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1"
+  },
+  "design": {
+    "dataset": "GSE10846 ABC vs GCB",
+    "n_samples": 350,
+    "n_genes": 22154,
+    "cv_folds": 15,
+    "cv_source": "results\\baseline\\v41_2_cv_splits.json",
+    "corrected_preprocessing": "raw training variance -> top 256 -> StandardScaler",
+    "variance_pool": 256,
+    "p_dim": 16,
+    "feature_k": 16,
+    "null_permutations_per_fold": 200,
+    "external_dataset_read": false
+  },
+  "real_auc": {
+    "mean": 0.908242333242333,
+    "sd": 0.04054152387629322,
+    "min": 0.8124488124488125,
+    "max": 0.9696969696969697
+  },
+  "real_balanced_accuracy": {
+    "mean": 0.8349330614036496,
+    "sd": 0.05208178888279075,
+    "min": 0.7571662571662572,
+    "max": 0.9275184275184275
+  },
+  "real_spectral": {
+    "mean": 0.3531550049557656,
+    "sd": 0.003842331517202077,
+    "min": 0.344229160885792,
+    "max": 0.3593740522544512
+  },
+  "delta_real_minus_fold_null_mean": {
+    "auc": {
+      "mean": 0.11556076932547524,
+      "sd": 0.03997183607751149,
+      "min": 0.019746109746109908,
+      "max": 0.19095996732026144,
+      "bootstrap95": {
+        "mean": 0.11556076932547524,
+        "ci95_low": 0.09525628375701913,
+        "ci95_high": 0.13442938489960554
+      }
+    },
+    "balanced_accuracy": {
+      "mean": 0.11433927778045423,
+      "sd": 0.051697252265068744,
+      "min": 0.025755528255528293,
+      "max": 0.20916666666666672,
+      "bootstrap95": {
+        "mean": 0.11433927778045423,
+        "ci95_low": 0.0889316223810709,
+        "ci95_high": 0.13959704072387893
+      }
+    },
+    "spectral": {
+      "mean": 0.02998034526536359,
+      "sd": 0.002303627014573272,
+      "min": 0.0268805288562472,
+      "max": 0.035826958586129165,
+      "bootstrap95": {
+        "mean": 0.02998034526536359,
+        "ci95_low": 0.028936666856263473,
+        "ci95_high": 0.031180406591346535
+      }
+    }
+  },
+  "paired_diagnostics_auc": {
+    "positive_folds": 15,
+    "zero_folds": 0,
+    "negative_folds": 0,
+    "sign_test_one_sided_p": 3.0517578125e-05,
+    "wilcoxon_one_sided_p": 3.0517578125e-05,
+    "conditional_global_permutation_p": 0.004975124378109453
+  },
+  "spectral_global_permutation_p": 0.004975124378109453,
+  "top_recurrent_selected_genes": [
+    {
+      "gene": "DNER",
+      "selected_in_folds": 15
+    },
+    {
+      "gene": "UMODL1",
+      "selected_in_folds": 12
+    },
+    {
+      "gene": "SPIC",
+      "selected_in_folds": 11
+    },
+    {
+      "gene": "RGS13",
+      "selected_in_folds": 10
+    },
+    {
+      "gene": "MYOCD",
+      "selected_in_folds": 10
+    },
+    {
+      "gene": "KCCAT333",
+      "selected_in_folds": 10
+    },
+    {
+      "gene": "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+      "selected_in_folds": 8
+    },
+    {
+      "gene": "HEPACAM2",
+      "selected_in_folds": 7
+    },
+    {
+      "gene": "EML6",
+      "selected_in_folds": 7
+    },
+    {
+      "gene": "TCL1B",
+      "selected_in_folds": 7
+    },
+    {
+      "gene": "HTR3A",
+      "selected_in_folds": 6
+    },
+    {
+      "gene": "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+      "selected_in_folds": 6
+    },
+    {
+      "gene": "LOC283454///HRK",
+      "selected_in_folds": 6
+    },
+    {
+      "gene": "TCL1A",
+      "selected_in_folds": 5
+    },
+    {
+      "gene": "LOC105375172",
+      "selected_in_folds": 5
+    },
+    {
+      "gene": "DNAH8",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "EPHB1",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "BIK",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "HLF",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "ASZ1",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "RNF183",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "MMP20",
+      "selected_in_folds": 4
+    },
+    {
+      "gene": "C17orf99",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "LOC105372840",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "IL12B",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "EYA2",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "GPM6A",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "KRT5",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "RASSF6",
+      "selected_in_folds": 3
+    },
+    {
+      "gene": "NLRP7",
+      "selected_in_folds": 3
+    }
+  ],
+  "interpretation_limits": [
+    "Internal GSE10846 methods audit only; not external validation.",
+    "P=16 and K=16 retained from earlier pipeline rather than re-optimized.",
+    "The GSE31312 v41.6 result has already been observed historically.",
+    "Any later GSE31312 re-test is post-hoc revised-pipeline testing, not a pristine first external validation.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ],
+  "runtime_seconds": 45.35991709999507,
+  "outputs": {
+    "fold_summary": "results\\softspaces\\v41_7_corrected_preprocessing_fold_summary.csv",
+    "null_metrics": "results\\softspaces\\v41_7_corrected_preprocessing_null_metrics.csv.gz",
+    "selected_genes": "results\\softspaces\\v41_7_corrected_preprocessing_selected_genes.csv"
+  }
+}

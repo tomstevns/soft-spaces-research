@@ -1,0 +1,116 @@
+Soft Spaces / CML
+v44.5 — EXTERNAL GENERALIZATION PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE EXTERNAL RESPONSE SCORING
+
+AUTHORIZATION
+-------------
+v44.3 internal REAL-vs-matched-random-subspace test: PASS
+v44.4 internal subspace stability test: PASS
+
+PRIMARY EXTERNAL COHORT
+-----------------------
+GSE44589
+
+Primary population:
+Pretreatment/baseline samples only.
+
+Previously audited counts:
+135 baseline samples.
+69 MMR, 59 none, 7 unavailable.
+Expected evaluable response-labeled baseline samples: 128.
+
+Positive class:
+poor response / no MMR.
+
+Negative class:
+MMR.
+
+This is a cross-endpoint generalization test, not exact replication.
+
+SECONDARY EXTERNAL COHORT
+-------------------------
+GSE236233, reserved as secondary cross-modality stress test only.
+Primary representation there is one Lin-CD34+ pseudobulk profile per patient.
+The patient is the statistical unit.
+
+FROZEN FINAL DEVELOPMENT MODEL
+------------------------------
+Train on all eligible GSE130404 development samples.
+
+Within the v44.1b transport-aware eligible universe:
+select final Top-256 by raw variance across all 96 development samples.
+
+Fit StandardScaler on development only.
+
+Construct:
+H = mean(xx^T | y=1) - mean(xx^T | y=0)
+
+Symmetrize H.
+Eigendecompose H.
+Freeze r=16 top-|eigenvalue| eigenvectors.
+
+Classifier:
+balanced L2 LogisticRegression,
+C=1.0,
+solver=liblinear.
+
+TECHNICAL TRANSPORT GATE
+------------------------
+Before any external response scoring:
+all final 256 coordinates must be representable on GPL570 by the frozen
+transport-aware exact-symbol/stable-Entrez rule.
+
+If not:
+TECHNICALLY NON-EVALUABLE and stop.
+
+No outcome-guided gene substitution is permitted.
+
+CROSS-PLATFORM NORMALIZATION
+----------------------------
+Primary external representation:
+per-cohort, per-gene z-standardization on GSE44589 baseline samples,
+performed without response labels.
+
+Then apply the frozen development U16 coordinate loadings in the same ordered
+Top-256 coordinate system.
+
+No external outcome may influence gene selection, mapping, scaling, rank,
+subspace, classifier, score orientation, or threshold.
+
+PRIMARY METRIC
+--------------
+PR-AUC.
+
+Secondary:
+ROC-AUC, balanced accuracy, sensitivity, specificity.
+
+Threshold for classification metrics:
+0.5 on frozen logistic-regression probability.
+
+PASS INTERPRETATION
+-------------------
+A cross-endpoint external PASS requires:
+1. technical transport PASS;
+2. PR-AUC greater than external prevalence baseline;
+3. ROC-AUC > 0.5;
+4. frozen score direction preserved;
+5. no outcome-driven tuning.
+
+No p-value threshold is required for this single primary external cohort.
+
+FAILURE RULE
+------------
+Technical transport failure -> TECHNICALLY NON-EVALUABLE.
+Transport PASS but predictive failure -> EXTERNAL FAIL.
+No post-hoc rescue or retuning.
+
+CLAIM LIMIT
+-----------
+Even an external PASS would support only cross-cohort predictive
+generalization of the transport-aware subspace.
+
+It would not establish clinical utility, treatment recommendation,
+causal biology, superiority to established biomarkers, or quantum advantage.

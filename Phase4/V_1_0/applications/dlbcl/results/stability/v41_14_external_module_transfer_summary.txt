@@ -1,0 +1,125 @@
+=== v41.14 EXTERNAL GENE-SPACE / MODULE TRANSFER ===
+
+DESIGN
+------
+Frozen reference panel: v41.12b full-development 16 genes
+Primary external cohort: GSE87371
+Secondary external cohort: GSE31312
+External disease labels used: NO
+NULL panels: 1000
+NULL universe: GSE10846 raw-variance Top-256 restricted to
+genes measurable in both external cohorts.
+
+IMPORTANT
+---------
+Across cohorts, patient/sample spaces differ. Therefore this test
+compares geometry in 16-dimensional GENE COORDINATE SPACE, not
+the within-cohort sample-space basis used in v41.13.
+
+PRIMARY: GSE10846 -> GSE87371
+-----------------------------
+Pairwise correlation-structure similarity
+  REAL:            0.790298
+  NULL mean:       0.650972
+  NULL 95% range:  [0.389917, 0.841764]
+  REAL-NULL mean:  +0.139325
+  empirical p:     0.103896
+
+Top-4 gene-eigensubspace overlap
+  REAL:            0.738696
+  NULL mean:       0.627022
+  NULL 95% range:  [0.457161, 0.799238]
+  REAL-NULL mean:  +0.111673
+  empirical p:     0.0979021
+
+Top-8 gene-eigensubspace overlap
+  REAL:            0.757741
+  NULL mean:       0.721947
+  NULL 95% range:  [0.613684, 0.822885]
+  REAL-NULL mean:  +0.035794
+  empirical p:     0.241758
+
+Eigenvalue-profile cosine similarity
+  REAL:            0.992345
+  NULL mean:       0.994405
+  NULL 95% range:  [0.980205, 0.999057]
+  REAL-NULL mean:  -0.002061
+  empirical p:     0.808192
+
+SECONDARY: GSE10846 -> GSE31312
+-------------------------------
+Pairwise correlation-structure similarity
+  REAL:            0.742617
+  NULL mean:       0.527240
+  NULL 95% range:  [0.214093, 0.767528]
+  REAL-NULL mean:  +0.215377
+  empirical p:     0.043956
+
+Top-4 gene-eigensubspace overlap
+  REAL:            0.696938
+  NULL mean:       0.567280
+  NULL 95% range:  [0.395265, 0.739830]
+  REAL-NULL mean:  +0.129659
+  empirical p:     0.0709291
+
+Top-8 gene-eigensubspace overlap
+  REAL:            0.784557
+  NULL mean:       0.678733
+  NULL 95% range:  [0.574654, 0.782046]
+  REAL-NULL mean:  +0.105823
+  empirical p:     0.023976
+
+Eigenvalue-profile cosine similarity
+  REAL:            0.996665
+  NULL mean:       0.983248
+  NULL 95% range:  [0.952935, 0.997133]
+  REAL-NULL mean:  +0.013418
+  empirical p:     0.038961
+
+EXTERNAL <-> EXTERNAL: GSE87371 -> GSE31312
+-------------------------------------------
+Pairwise correlation-structure similarity
+  REAL:            0.781724
+  NULL mean:       0.592906
+  NULL 95% range:  [0.325425, 0.801626]
+  REAL-NULL mean:  +0.188818
+  empirical p:     0.041958
+
+Top-4 gene-eigensubspace overlap
+  REAL:            0.836674
+  NULL mean:       0.593553
+  NULL 95% range:  [0.423075, 0.779939]
+  REAL-NULL mean:  +0.243121
+  empirical p:     0.00899101
+
+Top-8 gene-eigensubspace overlap
+  REAL:            0.719138
+  NULL mean:       0.684579
+  NULL 95% range:  [0.582777, 0.783522]
+  REAL-NULL mean:  +0.034559
+  empirical p:     0.257742
+
+Eigenvalue-profile cosine similarity
+  REAL:            0.990868
+  NULL mean:       0.984441
+  NULL 95% range:  [0.964644, 0.996470]
+  REAL-NULL mean:  +0.006427
+  empirical p:     0.236763
+
+READING RULE
+------------
+Strongest support for external module transfer would be obtained
+if the frozen REAL panel exceeds the label-free NULL distribution
+on multiple geometry metrics in GSE87371, with qualitatively
+consistent behavior also in GSE31312.
+
+Failure on these metrics would argue against claiming that the
+v41.13 internal module/subspace geometry transfers externally.
+
+LIMITS
+------
+This test is label-free and geometric.
+It does not test causal biology or clinical utility.
+GSE31312 is secondary/post-hoc because it had been seen earlier.
+GSE87371 remains the more important independent external cohort.
+No quantum advantage is claimed.

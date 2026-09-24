@@ -1,0 +1,669 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-24T09:03:16.727510+00:00",
+    "script_version": "v60_1",
+    "python_version": "3.9.7"
+  },
+  "purpose": "Test Soft-Spaces predictive utility for quantum-sensing-like local spectral susceptibility against EN2 on H4 and LiH.",
+  "frozen_design": {
+    "molecules": {
+      "H4": {
+        "geometries": [
+          0.75,
+          1.0,
+          1.25,
+          1.5,
+          1.75,
+          2.0,
+          2.5,
+          3.0
+        ]
+      },
+      "LiH": {
+        "geometries": [
+          1.0,
+          1.2,
+          1.4,
+          1.6,
+          2.0,
+          2.5,
+          3.0,
+          4.0
+        ]
+      }
+    },
+    "confirm_seeds": [
+      25043000,
+      25043001,
+      25043002,
+      25043003,
+      25043004,
+      25043005,
+      25043006,
+      25043007,
+      25043008,
+      25043009,
+      25043010,
+      25043011
+    ],
+    "heldout_seeds": [
+      45043000,
+      45043001,
+      45043002,
+      45043003,
+      45043004,
+      45043005,
+      45043006,
+      45043007,
+      45043008,
+      45043009,
+      45043010,
+      45043011,
+      45043012,
+      45043013,
+      45043014,
+      45043015,
+      45043016,
+      45043017,
+      45043018,
+      45043019,
+      45043020,
+      45043021,
+      45043022,
+      45043023,
+      45043024,
+      45043025,
+      45043026,
+      45043027,
+      45043028,
+      45043029,
+      45043030,
+      45043031
+    ],
+    "local_radius": 10,
+    "local_step": 2,
+    "eps_neighbor": 0.05,
+    "energy_reg": 0.001,
+    "sensing_reg": 0.001,
+    "prominence_threshold": 0.75,
+    "robust_threshold": 0.75,
+    "clear_ss_auc": 0.65,
+    "clear_delta_auc": 0.1,
+    "clear_positive_geometries": 10,
+    "overall_required_clear_tests": 2
+  },
+  "sensing_metrics": {
+    "S1_leakage": "regularized perturbative coupling from adjacent eigenpair subspace to its complement",
+    "S2_first_order_gap": "absolute first-order perturbative change in adjacent-state gap",
+    "S3_second_order_gap": "absolute difference of regularized second-order energy corrections for the adjacent states"
+  },
+  "build_summary": {
+    "H4": {
+      "0.75": {
+        "sector_dimension": 36,
+        "eligible_candidates": 10,
+        "dual_pass_candidates": 1,
+        "zero_projected_transverse_terms": 9
+      },
+      "1.0": {
+        "sector_dimension": 36,
+        "eligible_candidates": 14,
+        "dual_pass_candidates": 2,
+        "zero_projected_transverse_terms": 9
+      },
+      "1.25": {
+        "sector_dimension": 36,
+        "eligible_candidates": 20,
+        "dual_pass_candidates": 2,
+        "zero_projected_transverse_terms": 9
+      },
+      "1.5": {
+        "sector_dimension": 36,
+        "eligible_candidates": 22,
+        "dual_pass_candidates": 5,
+        "zero_projected_transverse_terms": 9
+      },
+      "1.75": {
+        "sector_dimension": 36,
+        "eligible_candidates": 28,
+        "dual_pass_candidates": 4,
+        "zero_projected_transverse_terms": 9
+      },
+      "2.0": {
+        "sector_dimension": 36,
+        "eligible_candidates": 29,
+        "dual_pass_candidates": 3,
+        "zero_projected_transverse_terms": 9
+      },
+      "2.5": {
+        "sector_dimension": 36,
+        "eligible_candidates": 29,
+        "dual_pass_candidates": 3,
+        "zero_projected_transverse_terms": 9
+      },
+      "3.0": {
+        "sector_dimension": 36,
+        "eligible_candidates": 30,
+        "dual_pass_candidates": 2,
+        "zero_projected_transverse_terms": 9
+      }
+    },
+    "LiH": {
+      "1.0": {
+        "sector_dimension": 225,
+        "eligible_candidates": 203,
+        "dual_pass_candidates": 48,
+        "zero_projected_transverse_terms": 13
+      },
+      "1.2": {
+        "sector_dimension": 225,
+        "eligible_candidates": 204,
+        "dual_pass_candidates": 47,
+        "zero_projected_transverse_terms": 13
+      },
+      "1.4": {
+        "sector_dimension": 225,
+        "eligible_candidates": 206,
+        "dual_pass_candidates": 50,
+        "zero_projected_transverse_terms": 13
+      },
+      "1.6": {
+        "sector_dimension": 225,
+        "eligible_candidates": 209,
+        "dual_pass_candidates": 44,
+        "zero_projected_transverse_terms": 13
+      },
+      "2.0": {
+        "sector_dimension": 225,
+        "eligible_candidates": 213,
+        "dual_pass_candidates": 37,
+        "zero_projected_transverse_terms": 13
+      },
+      "2.5": {
+        "sector_dimension": 225,
+        "eligible_candidates": 215,
+        "dual_pass_candidates": 45,
+        "zero_projected_transverse_terms": 13
+      },
+      "3.0": {
+        "sector_dimension": 225,
+        "eligible_candidates": 215,
+        "dual_pass_candidates": 38,
+        "zero_projected_transverse_terms": 13
+      },
+      "4.0": {
+        "sector_dimension": 225,
+        "eligible_candidates": 211,
+        "dual_pass_candidates": 43,
+        "zero_projected_transverse_terms": 13
+      }
+    }
+  },
+  "results": [
+    {
+      "metric": "S1_leakage",
+      "pooled_softspaces_auc": 0.5223741230748978,
+      "pooled_en2_auc": 0.5378499472658612,
+      "pooled_delta_auc": -0.015475824190963383,
+      "molecule_results": {
+        "H4": {
+          "softspaces_auc": 0.5880006137793463,
+          "en2_auc": 0.48319779039435323,
+          "delta_auc": 0.10480282338499308
+        },
+        "LiH": {
+          "softspaces_auc": 0.5172226127576589,
+          "en2_auc": 0.5524501689380712,
+          "delta_auc": -0.03522755618041229
+        }
+      },
+      "median_geometry_delta_auc": 0.04458238302577924,
+      "positive_geometry_count": 10,
+      "total_geometry_count": 16,
+      "geometry_results": [
+        {
+          "molecule": "H4",
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "softspaces_auc": 0.42857142857142855,
+          "en2_auc": 0.38095238095238093,
+          "delta_auc": 0.047619047619047616
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "softspaces_auc": 0.6375,
+          "en2_auc": 0.2375,
+          "delta_auc": 0.39999999999999997
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "softspaces_auc": 0.5666666666666667,
+          "en2_auc": 0.41333333333333333,
+          "delta_auc": 0.15333333333333332
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "softspaces_auc": 0.6197916666666666,
+          "en2_auc": 0.4427083333333333,
+          "delta_auc": 0.17708333333333331
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "softspaces_auc": 0.6020408163265306,
+          "en2_auc": 0.4965986394557823,
+          "delta_auc": 0.1054421768707483
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "softspaces_auc": 0.5773809523809523,
+          "en2_auc": 0.49404761904761907,
+          "delta_auc": 0.08333333333333326
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "softspaces_auc": 0.5297619047619048,
+          "en2_auc": 0.8392857142857143,
+          "delta_auc": -0.30952380952380953
+        },
+        {
+          "molecule": "H4",
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "softspaces_auc": 0.6534090909090909,
+          "en2_auc": 0.375,
+          "delta_auc": 0.27840909090909094
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.5465041279669762,
+          "en2_auc": 0.5782378740970072,
+          "delta_auc": -0.03173374613003099
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.5398564654620018,
+          "en2_auc": 0.5676662821991542,
+          "delta_auc": -0.027809816737152326
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5434565434565435,
+          "en2_auc": 0.5313436563436563,
+          "delta_auc": 0.01211288711288716
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.5560595065312046,
+          "en2_auc": 0.5145137880986937,
+          "delta_auc": 0.04154571843251087
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.5892732354996506,
+          "en2_auc": 0.5358723503377592,
+          "delta_auc": 0.053400885161891454
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.4833218311479181,
+          "en2_auc": 0.5688980906372211,
+          "delta_auc": -0.08557625948930297
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.4659535311709225,
+          "en2_auc": 0.6264090177133655,
+          "delta_auc": -0.16045548654244307
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.4257224743252926,
+          "en2_auc": 0.4979699068545498,
+          "delta_auc": -0.0722474325292572
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "metric": "S2_first_order_gap",
+      "pooled_softspaces_auc": 0.5053055595099781,
+      "pooled_en2_auc": 0.5298502779066154,
+      "pooled_delta_auc": -0.0245447183966373,
+      "molecule_results": {
+        "H4": {
+          "softspaces_auc": 0.5671321160042965,
+          "en2_auc": 0.37755102040816324,
+          "delta_auc": 0.18958109559613323
+        },
+        "LiH": {
+          "softspaces_auc": 0.4996069449798559,
+          "en2_auc": 0.5327152165204049,
+          "delta_auc": -0.03310827154054896
+        }
+      },
+      "median_geometry_delta_auc": 0.021108930548004057,
+      "positive_geometry_count": 9,
+      "total_geometry_count": 16,
+      "geometry_results": [
+        {
+          "molecule": "H4",
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "softspaces_auc": 0.7857142857142857,
+          "en2_auc": 0.5714285714285714,
+          "delta_auc": 0.2142857142857143
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "softspaces_auc": 0.575,
+          "en2_auc": 0.6125,
+          "delta_auc": -0.03750000000000009
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "softspaces_auc": 0.6466666666666666,
+          "en2_auc": 0.4666666666666667,
+          "delta_auc": 0.17999999999999994
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "softspaces_auc": 0.5729166666666666,
+          "en2_auc": 0.6041666666666666,
+          "delta_auc": -0.03125
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "softspaces_auc": 0.6156462585034014,
+          "en2_auc": 0.3469387755102041,
+          "delta_auc": 0.2687074829931973
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "softspaces_auc": 0.5238095238095238,
+          "en2_auc": 0.3273809523809524,
+          "delta_auc": 0.19642857142857145
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "softspaces_auc": 0.43154761904761907,
+          "en2_auc": 0.23809523809523808,
+          "delta_auc": 0.193452380952381
+        },
+        {
+          "molecule": "H4",
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "softspaces_auc": 0.6164772727272727,
+          "en2_auc": 0.2840909090909091,
+          "delta_auc": 0.3323863636363636
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.5231553147574819,
+          "en2_auc": 0.5114164086687306,
+          "delta_auc": 0.011738906088751278
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.509675765731129,
+          "en2_auc": 0.5597206202742535,
+          "delta_auc": -0.05004485454312446
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5401473526473527,
+          "en2_auc": 0.41901848151848153,
+          "delta_auc": 0.12112887112887116
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.5327769714562167,
+          "en2_auc": 0.5022980164489599,
+          "delta_auc": 0.030478955007256836
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.41259026321919406,
+          "en2_auc": 0.5444910319124155,
+          "delta_auc": -0.13190076869322148
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.475327812284334,
+          "en2_auc": 0.511962272831838,
+          "delta_auc": -0.03663446054750402
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.469346675868415,
+          "en2_auc": 0.5548654244306418,
+          "delta_auc": -0.0855187485622268
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.5245402436111775,
+          "en2_auc": 0.6716025794124671,
+          "delta_auc": -0.1470623358012897
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "metric": "S3_second_order_gap",
+      "pooled_softspaces_auc": 0.5515317392162896,
+      "pooled_en2_auc": 0.5387217061062918,
+      "pooled_delta_auc": 0.012810033109997843,
+      "molecule_results": {
+        "H4": {
+          "softspaces_auc": 0.5438852232622372,
+          "en2_auc": 0.42220346785330676,
+          "delta_auc": 0.12168175540893045
+        },
+        "LiH": {
+          "softspaces_auc": 0.554139549649652,
+          "en2_auc": 0.5505548122784342,
+          "delta_auc": 0.0035847373712177832
+        }
+      },
+      "median_geometry_delta_auc": 0.00472743014091237,
+      "positive_geometry_count": 8,
+      "total_geometry_count": 16,
+      "geometry_results": [
+        {
+          "molecule": "H4",
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "softspaces_auc": 0.23809523809523808,
+          "en2_auc": 0.38095238095238093,
+          "delta_auc": -0.14285714285714285
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "softspaces_auc": 0.5125,
+          "en2_auc": 0.5,
+          "delta_auc": 0.012499999999999956
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "softspaces_auc": 0.36,
+          "en2_auc": 0.48,
+          "delta_auc": -0.12
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "softspaces_auc": 0.4947916666666667,
+          "en2_auc": 0.3489583333333333,
+          "delta_auc": 0.14583333333333337
+        },
+        {
+          "molecule": "H4",
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "softspaces_auc": 0.6428571428571429,
+          "en2_auc": 0.2653061224489796,
+          "delta_auc": 0.3775510204081633
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "softspaces_auc": 0.45535714285714285,
+          "en2_auc": 0.375,
+          "delta_auc": 0.08035714285714285
+        },
+        {
+          "molecule": "H4",
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "softspaces_auc": 0.5982142857142857,
+          "en2_auc": 0.6428571428571429,
+          "delta_auc": -0.044642857142857206
+        },
+        {
+          "molecule": "H4",
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "softspaces_auc": 0.6875,
+          "en2_auc": 0.2840909090909091,
+          "delta_auc": 0.4034090909090909
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.0,
+          "n_candidates": 203,
+          "softspaces_auc": 0.5265092879256966,
+          "en2_auc": 0.5372807017543859,
+          "delta_auc": -0.010771413828689291
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.2,
+          "n_candidates": 204,
+          "softspaces_auc": 0.5557477893118031,
+          "en2_auc": 0.5840702293989491,
+          "delta_auc": -0.028322440087146017
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.4,
+          "n_candidates": 206,
+          "softspaces_auc": 0.5254745254745254,
+          "en2_auc": 0.5678071928071928,
+          "delta_auc": -0.042332667332667384
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 1.6,
+          "n_candidates": 209,
+          "softspaces_auc": 0.5922835026608612,
+          "en2_auc": 0.5343492985002419,
+          "delta_auc": 0.05793420416061923
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.0,
+          "n_candidates": 213,
+          "softspaces_auc": 0.603482413230841,
+          "en2_auc": 0.5513044491031912,
+          "delta_auc": 0.052177964127649745
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 2.5,
+          "n_candidates": 215,
+          "softspaces_auc": 0.5299631930066713,
+          "en2_auc": 0.5619967793880838,
+          "delta_auc": -0.032033586381412515
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 3.0,
+          "n_candidates": 215,
+          "softspaces_auc": 0.5870715435932827,
+          "en2_auc": 0.5485392224522659,
+          "delta_auc": 0.03853232114101679
+        },
+        {
+          "molecule": "LiH",
+          "geometry": 4.0,
+          "n_candidates": 211,
+          "softspaces_auc": 0.5308693575352281,
+          "en2_auc": 0.5339144972534033,
+          "delta_auc": -0.003045139718175216
+        }
+      ],
+      "clear_pass": false
+    }
+  ],
+  "clear_tests": [],
+  "overall_point1_success": false,
+  "interpretation": "POINT 1 NOT DEMONSTRATED under the preregistered Phase-6 rule. Do not retune these thresholds post hoc.",
+  "claim_boundary": {
+    "tests_predictive_information": true,
+    "tests_computational_speedup": false,
+    "tests_hardware_sensing_advantage": false,
+    "reason": "The benchmark uses exact molecular Hamiltonians/eigensystems and perturbation-theory response metrics."
+  }
+}

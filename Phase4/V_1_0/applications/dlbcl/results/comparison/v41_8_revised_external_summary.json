@@ -1,0 +1,198 @@
+{
+  "version": "v41.8-dlbcl-revised-pipeline-external-test-1",
+  "created_utc": "2026-09-17T10:43:50.266412+00:00",
+  "historical_status": "post-hoc revised-pipeline external test; GSE31312 was already observed in v41.6",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1"
+  },
+  "design": {
+    "training_cohort": "GSE10846",
+    "external_cohort": "GSE31312",
+    "external_label_source": "gene expression profiling subgroup",
+    "training_counts": {
+      "GCB": 183,
+      "ABC": 167
+    },
+    "external_counts": {
+      "GCB": 237,
+      "ABC": 214
+    },
+    "corrected_preprocessing": "raw GSE10846 variance -> top 256 -> StandardScaler",
+    "variance_pool": 256,
+    "p_dim": 16,
+    "feature_k": 16,
+    "null_replicates": 200,
+    "parameter_tuning_on_external": false
+  },
+  "gene_alignment": {
+    "common_gene_count": 22154,
+    "pool_gene_count": 256
+  },
+  "real_external_metrics": {
+    "roc_auc": 0.8289364722583697,
+    "balanced_accuracy": 0.5,
+    "accuracy": 0.5254988913525499,
+    "f1": 0.0
+  },
+  "real_training_spectral_topP_abs_fraction": 0.3525639045673531,
+  "null_external_auc": {
+    "mean": 0.7006155605504949,
+    "sd": 0.06161738984092625,
+    "min": 0.5240940100161678,
+    "max": 0.8325840924326668
+  },
+  "null_external_balanced_accuracy": {
+    "mean": 0.5002732264679206,
+    "sd": 0.0030770541362244923,
+    "min": 0.5,
+    "max": 0.5425095626799163
+  },
+  "null_training_spectral": {
+    "mean": 0.3143617939245131,
+    "sd": 0.005631268150903224,
+    "min": 0.2992995420068572,
+    "max": 0.32890328339458946
+  },
+  "real_minus_null_mean": {
+    "roc_auc": 0.12832091170787485,
+    "balanced_accuracy": -0.00027322646792060645,
+    "spectral_topP_abs_fraction": 0.038202110642840015
+  },
+  "empirical_one_sided_p": {
+    "external_auc": 0.009950248756218905,
+    "external_balanced_accuracy": 1.0,
+    "training_spectral": 0.004975124378109453
+  },
+  "selected_genes": [
+    {
+      "rank": 1,
+      "gene": "DNER",
+      "coupling_score": 0.09995057247042168,
+      "raw_training_variance": 6.807823482808023,
+      "pool_index": 45
+    },
+    {
+      "rank": 2,
+      "gene": "SPIC",
+      "coupling_score": 0.09714880070910735,
+      "raw_training_variance": 4.060448050994679,
+      "pool_index": 217
+    },
+    {
+      "rank": 3,
+      "gene": "TCL1B",
+      "coupling_score": 0.09671941349876069,
+      "raw_training_variance": 7.326512798821122,
+      "pool_index": 30
+    },
+    {
+      "rank": 4,
+      "gene": "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+      "coupling_score": 0.09540916446991345,
+      "raw_training_variance": 3.970016141539091,
+      "pool_index": 238
+    },
+    {
+      "rank": 5,
+      "gene": "EML6",
+      "coupling_score": 0.09508854730321063,
+      "raw_training_variance": 4.147698573789803,
+      "pool_index": 202
+    },
+    {
+      "rank": 6,
+      "gene": "MMP20",
+      "coupling_score": 0.09229761473405254,
+      "raw_training_variance": 6.4748200773557105,
+      "pool_index": 51
+    },
+    {
+      "rank": 7,
+      "gene": "KCCAT333",
+      "coupling_score": 0.091941154166749,
+      "raw_training_variance": 6.0511750196970935,
+      "pool_index": 57
+    },
+    {
+      "rank": 8,
+      "gene": "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+      "coupling_score": 0.090479898752526,
+      "raw_training_variance": 4.756213683130785,
+      "pool_index": 125
+    },
+    {
+      "rank": 9,
+      "gene": "RNF183",
+      "coupling_score": 0.0896051608041985,
+      "raw_training_variance": 4.207413137421203,
+      "pool_index": 190
+    },
+    {
+      "rank": 10,
+      "gene": "MYOCD",
+      "coupling_score": 0.08751485506855444,
+      "raw_training_variance": 5.411304131984931,
+      "pool_index": 80
+    },
+    {
+      "rank": 11,
+      "gene": "UMODL1",
+      "coupling_score": 0.08720891672724802,
+      "raw_training_variance": 5.581202485927139,
+      "pool_index": 71
+    },
+    {
+      "rank": 12,
+      "gene": "CTAG2",
+      "coupling_score": 0.08526240651100614,
+      "raw_training_variance": 4.489856250382246,
+      "pool_index": 149
+    },
+    {
+      "rank": 13,
+      "gene": "IGK///IGKC",
+      "coupling_score": 0.08357773286999604,
+      "raw_training_variance": 4.2931173739173145,
+      "pool_index": 178
+    },
+    {
+      "rank": 14,
+      "gene": "LOC283454///HRK",
+      "coupling_score": 0.08330718520592241,
+      "raw_training_variance": 5.533829989103562,
+      "pool_index": 73
+    },
+    {
+      "rank": 15,
+      "gene": "RGS13",
+      "coupling_score": 0.08292809651469855,
+      "raw_training_variance": 7.23917590766271,
+      "pool_index": 34
+    },
+    {
+      "rank": 16,
+      "gene": "TCL1A",
+      "coupling_score": 0.08216458893171785,
+      "raw_training_variance": 6.829515134426973,
+      "pool_index": 44
+    }
+  ],
+  "interpretation_limits": [
+    "Not a pristine first external validation because GSE31312 was already observed in v41.6.",
+    "Only the preprocessing order was revised from v41.6, as established in v41.7.",
+    "P=16 and K=16 remain inherited rather than re-optimized.",
+    "No parameter was tuned on GSE31312 in this run.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ],
+  "runtime_seconds": 32.50318659999175,
+  "outputs": {
+    "external_predictions": "results\\comparison\\v41_8_revised_external_predictions.csv",
+    "selected_genes": "results\\comparison\\v41_8_revised_external_selected_genes.csv",
+    "variance_pool": "results\\comparison\\v41_8_revised_external_variance_pool.csv",
+    "null_metrics": "results\\comparison\\v41_8_revised_external_null_metrics.csv"
+  }
+}

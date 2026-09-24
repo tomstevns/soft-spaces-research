@@ -1,0 +1,68 @@
+=== v41.13 MODULE / EXPRESSION-SUBSPACE STABILITY ===
+
+INPUT
+-----
+Development cohort: GSE10846
+Resamples reused from v41.12b: 500
+Frozen panel size: 16
+Candidate gene union size: 506
+Frozen expression-subspace rank: 16
+
+INTERPRETATION
+--------------
+Subspace capture tests whether a resampled panel spans the same
+sample-expression geometry as the frozen 16-gene panel.
+
+Correlation-neighborhood capture tests whether exact genes are
+replaced by strongly correlated alternatives.
+
+FROZEN-SUBSPACE CAPTURE
+-----------------------
+REAL mean: 0.317265
+REAL 95% CI: [0.309910, 0.324692]
+NULL mean: 0.194274
+NULL 95% CI: [0.190361, 0.198176]
+Delta REAL-NULL: +0.122991
+Delta 95% CI: [+0.114947, +0.131290]
+Positive paired delta fraction: 0.908000
+Tie fraction: 0.000000
+
+CORRELATION-NEIGHBORHOOD CAPTURE
+--------------------------------
+REAL mean: 0.442062
+REAL 95% CI: [0.434816, 0.449218]
+NULL mean: 0.336890
+NULL 95% CI: [0.332516, 0.341448]
+Delta REAL-NULL: +0.105172
+Delta 95% CI: [+0.096861, +0.113565]
+Positive paired delta fraction: 0.870000
+Tie fraction: 0.000000
+
+EXACT 16-GENE OVERLAP
+---------------------
+REAL mean: 0.230000
+REAL 95% CI: [0.220750, 0.239250]
+NULL mean: 0.058250
+NULL 95% CI: [0.053500, 0.063000]
+Delta REAL-NULL: +0.171750
+Delta 95% CI: [+0.161250, +0.181875]
+Positive paired delta fraction: 0.884000
+Tie fraction: 0.086000
+
+READING RULE
+------------
+If REAL exceeds NULL for subspace/correlation capture much more
+clearly than for exact overlap, that supports the hypothesis that
+Soft Spaces is recovering a stable distributed module/subspace
+with interchangeable correlated genes rather than a unique fixed
+16-gene biomarker list.
+
+If REAL does not exceed NULL on these geometry-aware metrics, then
+the low exact-gene stability should not be rescued by a module
+interpretation.
+
+CAUTION
+-------
+This analysis is descriptive/stability-oriented within GSE10846.
+It does not prove causal gene modules, clinical utility, external
+generalization, or quantum advantage.

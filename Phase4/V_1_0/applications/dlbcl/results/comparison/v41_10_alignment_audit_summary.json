@@ -1,0 +1,162 @@
+{
+  "version": "v41.10-dlbcl-cross-cohort-alignment-audit-1",
+  "created_utc": "2026-09-17T11:02:17.092474+00:00",
+  "historical_status": "post-hoc cross-cohort distribution alignment audit",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1"
+  },
+  "design": {
+    "training_cohort": "GSE10846",
+    "external_cohort": "GSE31312",
+    "external_alignment_uses_labels": false,
+    "variance_pool": 256,
+    "p_dim": 16,
+    "feature_k": 16,
+    "softspaces_ranking_source": "corrected GSE10846 pipeline from v41.7/v41.8",
+    "strategies": [
+      "TRAIN_SCALER",
+      "COHORT_Z",
+      "COHORT_ROBUST"
+    ]
+  },
+  "selected_genes": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+    "EML6",
+    "MMP20",
+    "KCCAT333",
+    "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "IGK///IGKC",
+    "LOC283454///HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "raw_distribution": {
+    "training_selected_features": {
+      "mean": 6.99478419525,
+      "sd": 3.1651413903385817,
+      "median": 6.468500000000001,
+      "q05": 2.433,
+      "q95": 12.988
+    },
+    "external_selected_features": {
+      "mean": 0.28692148872006323,
+      "sd": 0.2171585161111928,
+      "median": 0.2196645885705948,
+      "q05": 0.034546177834272385,
+      "q95": 0.7293683141469955
+    }
+  },
+  "results": {
+    "TRAIN_SCALER": {
+      "description": "v41.8 baseline; GSE10846 scaler transported unchanged",
+      "metrics": {
+        "roc_auc": 0.8289364722583697,
+        "balanced_accuracy": 0.5,
+        "accuracy": 0.5254988913525499,
+        "f1": 0.0,
+        "tn": 237,
+        "fp": 0,
+        "fn": 214,
+        "tp": 0,
+        "predicted_ABC": 0,
+        "predicted_GCB": 451
+      },
+      "probability_by_class": {
+        "GCB": {
+          "mean": 0.0727881552306021,
+          "median": 0.07294950154164682,
+          "min": 0.045041020085531534,
+          "max": 0.11482778213605718
+        },
+        "ABC": {
+          "mean": 0.0856776308990324,
+          "median": 0.08467024619090144,
+          "min": 0.060049503771695475,
+          "max": 0.12037893306485022
+        }
+      }
+    },
+    "COHORT_Z": {
+      "description": "gene-wise mean/std estimated separately in each cohort; no external labels",
+      "metrics": {
+        "roc_auc": 0.8279111952364051,
+        "balanced_accuracy": 0.7510154185890611,
+        "accuracy": 0.7516629711751663,
+        "f1": 0.7383177570093458,
+        "tn": 181,
+        "fp": 56,
+        "fn": 56,
+        "tp": 158,
+        "predicted_ABC": 214,
+        "predicted_GCB": 237
+      },
+      "probability_by_class": {
+        "GCB": {
+          "mean": 0.3024590981212597,
+          "median": 0.20407869060367698,
+          "min": 7.838437436754545e-05,
+          "max": 0.9976626316830765
+        },
+        "ABC": {
+          "mean": 0.6874670361006047,
+          "median": 0.7562976193991551,
+          "min": 0.017560577153168947,
+          "max": 0.9997459553546999
+        }
+      }
+    },
+    "COHORT_ROBUST": {
+      "description": "gene-wise median/IQR estimated separately in each cohort; no external labels",
+      "metrics": {
+        "roc_auc": 0.8281280807602823,
+        "balanced_accuracy": 0.7537363460704286,
+        "accuracy": 0.7516629711751663,
+        "f1": 0.7522123893805309,
+        "tn": 169,
+        "fp": 68,
+        "fn": 44,
+        "tp": 170,
+        "predicted_ABC": 238,
+        "predicted_GCB": 213
+      },
+      "probability_by_class": {
+        "GCB": {
+          "mean": 0.32330630908852576,
+          "median": 0.22827525846973487,
+          "min": 8.458317915225081e-05,
+          "max": 0.9955821761466441
+        },
+        "ABC": {
+          "mean": 0.7094749496439646,
+          "median": 0.7853473402119506,
+          "min": 0.032014888174906775,
+          "max": 0.9997796293969456
+        }
+      }
+    }
+  },
+  "interpretation_limits": [
+    "GSE31312 has already been observed, so this is a post-hoc methods audit.",
+    "No external labels are used to calculate alignment transforms.",
+    "Three predefined strategies are reported side-by-side; this script does not declare or freeze a winner.",
+    "COHORT_ROBUST changes the logistic readout scaling but keeps the Soft Spaces gene ranking frozen.",
+    "Any strategy chosen for future prospective work must be frozen before testing a new independent cohort.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ],
+  "runtime_seconds": 27.756716299976688,
+  "outputs": {
+    "selected_gene_distribution_shift": "results\\comparison\\v41_10_selected_gene_distribution_shift.csv",
+    "external_predictions": "results\\comparison\\v41_10_alignment_predictions.csv"
+  }
+}

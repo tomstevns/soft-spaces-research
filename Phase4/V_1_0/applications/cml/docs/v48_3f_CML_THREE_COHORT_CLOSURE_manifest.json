@@ -1,0 +1,93 @@
+{
+  "version": "v48.3f",
+  "status": "CLOSED",
+  "clinical_labels_used": false,
+  "classifier_fitted": false,
+  "third_cohort": "GSE14671",
+  "technical_pass": true,
+  "pairwise_overall_pass": true,
+  "robustness_overall_pass": true,
+  "joint_overall_pass": false,
+  "three_cohort_geometric_invariance_supported": false,
+  "final_claim": "THREE-COHORT GEOMETRIC INVARIANCE NOT SUPPORTED",
+  "protocol_sha256": "69ea5767440405b0710cbdbdfcf71b946ce964b58a2142e40a0690b69c9f7cfd",
+  "closure_sha256": "f71b22ee291c7fe7d5d82f381cd8cee14132426ec3b7f53a936d552dc75df5c5",
+  "third_geometry_sha256": "5f010fdda0b6e5758f4f10d07204102e44d0ade61e0a7989d0f8eebbcbf07dae",
+  "pairwise": {
+    "AB": {
+      "spectrum_cosine": 0.9941194160924803,
+      "distance_w1": 0.038547990813151134,
+      "anisotropy_w1": 0.01654565900994819,
+      "effdim_abs_diff": 0.8029693217434333
+    },
+    "AC": {
+      "spectrum_cosine": 0.9797320305144459,
+      "distance_w1": 0.0856762468709371,
+      "anisotropy_w1": 0.0348104855576473,
+      "effdim_abs_diff": 0.9898773900907862,
+      "q95_cos": 0.6132445569267123,
+      "q05_w1": 0.17734921881495502,
+      "p_cos": 0.000999000999000999,
+      "p_w1": 0.000999000999000999,
+      "gate_cos": true,
+      "gate_w1": true,
+      "pass": true
+    },
+    "BC": {
+      "spectrum_cosine": 0.9809444030426108,
+      "distance_w1": 0.05158735816633059,
+      "anisotropy_w1": 0.021804649605737785,
+      "effdim_abs_diff": 1.7928467118342195,
+      "q95_cos": 0.564284445329203,
+      "q05_w1": 0.1438313511716087,
+      "p_cos": 0.000999000999000999,
+      "p_w1": 0.000999000999000999,
+      "gate_cos": true,
+      "gate_w1": true,
+      "pass": true
+    }
+  },
+  "robustness_gates": {
+    "AC_z_spectrum": {
+      "median_z": 48.60464990065189,
+      "positive_fraction": 1.0,
+      "pass": true
+    },
+    "AC_z_distance": {
+      "median_z": 15.300907572755936,
+      "positive_fraction": 1.0,
+      "pass": true
+    },
+    "BC_z_spectrum": {
+      "median_z": 51.43922036909238,
+      "positive_fraction": 1.0,
+      "pass": true
+    },
+    "BC_z_distance": {
+      "median_z": 15.658545639694193,
+      "positive_fraction": 1.0,
+      "pass": true
+    }
+  },
+  "joint": {
+    "observed_min_pairwise_spectrum_cosine": 0.9797320305144459,
+    "null_q95_min_cosine": 0.9996647019087764,
+    "p_spectrum": 1.0,
+    "spectrum_gate": false,
+    "observed_max_pairwise_distance_w1": 0.0856762468709371,
+    "null_q05_max_w1": 0.007643269182322895,
+    "p_distance": 1.0,
+    "distance_gate": false
+  },
+  "sha256": {
+    "master_script": "c6cf885cb14be47ff4cdd7254dcff811bc44ee1b04ac6ddeb30ffaccc903b640",
+    "third_soft": "11fe1a5df5889ff507048ea081c41411f00762c04c719b52a97efaaff854dbd9",
+    "third_features": "c39d5b9fb16bb7ec2017c43dca487bcab65be89eb854fb684a198333e41f16f0",
+    "third_raw_top256": "791f98e7247f7a9b64495e20bc45f1148426a707725ac94554de695810fa1a7f",
+    "third_geometry": "5f010fdda0b6e5758f4f10d07204102e44d0ade61e0a7989d0f8eebbcbf07dae",
+    "pairwise_null": "2ff2d450855de9941d81fe8ae98356dcbd6790474a2ac36a9ce41a31fc5bf9e7",
+    "robustness_results": "4fe4caf5f235ff62688aae18fce16ad0e4feb71f15a6ea76b7564a271182c59e",
+    "joint_null": "8a916f4f3d6af52b9e663db9a87510db0b4c8da91f1c790566d8adebdfda9185",
+    "closure": "f71b22ee291c7fe7d5d82f381cd8cee14132426ec3b7f53a936d552dc75df5c5"
+  }
+}

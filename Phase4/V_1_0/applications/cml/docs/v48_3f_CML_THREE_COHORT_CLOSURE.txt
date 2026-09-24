@@ -1,0 +1,131 @@
+Soft Spaces / CML
+v48.3f — THIRD-COHORT GEOMETRIC REPLICATION CLOSURE
+
+STATUS
+------
+CLOSED
+
+MASTER PROTOCOL SHA
+-------------------
+69ea5767440405b0710cbdbdfcf71b946ce964b58a2142e40a0690b69c9f7cfd
+
+LABEL INTEGRITY
+---------------
+Clinical labels parsed: NO
+Clinical labels used:   NO
+Classifier fitted:      NO
+
+THIRD COHORT
+------------
+GSE14671 / GPL570
+Samples:                         59
+Measurable eligible genes:       15884
+Top-256 selected label-blind:    YES
+PCA16 cumulative variance:       0.860855141
+Effective dimension:             5.294780611
+Geometry SHA256:                 5f010fdda0b6e5758f4f10d07204102e44d0ade61e0a7989d0f8eebbcbf07dae
+
+FEATURE IDENTITY — DESCRIPTIVE
+------------------------------
+GSE14671 vs GSE130404 Top256 overlap:
+    71/256
+
+GSE14671 vs GSE44589 Top256 overlap:
+    69/256
+
+PAIRWISE OBSERVED GEOMETRY
+--------------------------
+GSE130404 vs GSE44589:
+    spectrum cosine:             0.994119416
+    distance W1:                 0.038547991
+
+GSE130404 vs GSE14671:
+    spectrum cosine:             0.979732031
+    distance W1:                 0.085676247
+    p spectrum:                  0.000999001
+    p distance:                  0.000999001
+    STATUS:                      PASS
+
+GSE44589 vs GSE14671:
+    spectrum cosine:             0.980944403
+    distance W1:                 0.051587358
+    p spectrum:                  0.000999001
+    p distance:                  0.000999001
+    STATUS:                      PASS
+
+v48.3c PAIRWISE OVERALL:
+    PASS
+
+RESAMPLING ROBUSTNESS
+---------------------
+AC spectrum median z:
+    48.604649901
+
+AC distance median z:
+    15.300907573
+
+BC spectrum median z:
+    51.439220369
+
+BC distance median z:
+    15.658545640
+
+v48.3d ROBUSTNESS OVERALL:
+    PASS
+
+JOINT THREE-COHORT TEST
+-----------------------
+Observed minimum pairwise spectrum cosine:
+    0.979732031
+
+NULL q95:
+    0.999664702
+
+Empirical p:
+    1.000000000
+
+Spectral joint gate:
+    FAIL
+
+Observed maximum pairwise normalized-distance W1:
+    0.085676247
+
+NULL q05:
+    0.007643269
+
+Empirical p:
+    1.000000000
+
+Distance joint gate:
+    FAIL
+
+v48.3e JOINT OVERALL:
+    FAIL
+
+FINAL CONCLUSION
+----------------
+THREE-COHORT GEOMETRIC INVARIANCE NOT SUPPORTED
+
+The stronger claim is permitted only because it was prospectively defined
+to require ALL technical, pairwise, robustness and joint gates.
+
+NO RESCUE / NO TUNING
+---------------------
+No post-hoc feature-count, PCA-rank, neighborhood, subgroup, NULL or
+threshold tuning was used.
+
+CLAIM LIMIT
+-----------
+Even if supported, this means only:
+
+    higher-level label-blind transcriptomic geometry is reproducibly similar
+    across these three CML cohorts under the frozen v48 tests.
+
+It does NOT establish prediction, treatment-response replication, clinical
+utility, causal biology, dormancy, disease-transition mechanism, quantum
+biology or quantum advantage.
+
+TRACK
+-----
+v48.3 MASTER PIPELINE:
+    CLOSED

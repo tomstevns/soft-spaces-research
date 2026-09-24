@@ -1,0 +1,19 @@
+=== Soft Spaces / CML v49 MASTER SUMMARY ===
+
+Technical + frozen-feature integrity:
+    PASS
+
+Primary structured biological-control test:
+    FAIL
+
+Patient-resampling robustness:
+    FAIL
+
+FINAL:
+    STRUCTURED BIOLOGICAL-CONTROL GEOMETRIC INVARIANCE NOT SUPPORTED
+
+Protocol SHA:
+    7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a
+
+Closure SHA:
+    f6bb54dab0782f2e1d207fa3e4bc5fd5678ee4bef8ae4fdb21f536c81c4bfe3e

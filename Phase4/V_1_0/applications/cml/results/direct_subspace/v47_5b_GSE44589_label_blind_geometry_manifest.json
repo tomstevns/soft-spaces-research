@@ -1,0 +1,16 @@
+{
+  "version": "v47.5b",
+  "status": "EXTERNAL_LABEL_BLIND_GEOMETRY_FROZEN",
+  "scientific_protocol_version": "v47.5",
+  "scientific_protocol_sha256": "18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265",
+  "parser_correction_only": true,
+  "baseline_n": 135,
+  "eligible_universe_n": 15890,
+  "measurable_eligible_n": 15884,
+  "top_k": 256,
+  "pca_r": 16,
+  "knn_k": 10,
+  "labels_used_for_geometry": false,
+  "pca16_cumulative_variance": 0.8700447567373895,
+  "geometry_sha256": "dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943"
+}

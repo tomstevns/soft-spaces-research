@@ -1,0 +1,25 @@
+{
+  "version": "v47.5",
+  "status": "FROZEN_BEFORE_EXTERNAL_LANDSCAPE",
+  "external_cohort": "GSE44589",
+  "platform": "GPL570",
+  "baseline_n": 135,
+  "mmr_n": 69,
+  "no_mmr_n": 59,
+  "unavailable_n": 7,
+  "evaluable_n": 128,
+  "eligible_universe_n": 15890,
+  "top_k": 256,
+  "pca_r": 16,
+  "knn_k": 10,
+  "permutations": 10000,
+  "random_seed": 47050001,
+  "primary_pass_p": 0.05,
+  "endpoint_relation": "cross-endpoint",
+  "protocol_sha256": "18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265",
+  "source_sha256": {
+    "v47_0_protocol": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25",
+    "v47_4_manifest": "558778ffbcb1f759c990af94180afea1a06ada4e46f2ef4811b3cd0ae862d3bc",
+    "eligible_genes": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068"
+  }
+}

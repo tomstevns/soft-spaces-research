@@ -1,0 +1,92 @@
+Soft Spaces / CML
+v44.6 — GSE236233 SECONDARY CROSS-MODALITY STRESS PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE GSE236233 MODEL SCORING
+
+ROLE
+----
+Secondary cross-modality stress test only.
+The primary external test remains GSE44589 v44.5b1.
+
+COHORT / UNIT
+-------------
+GSE236233, Lin-CD34+ patient-level pseudobulk.
+Statistical unit: PATIENT.
+
+PUBLISHED 12-MONTH RESPONSE STRATA
+----------------------------------
+Optimal: CML1, CML2, CML3, CML4
+Warning: CML5, CML6, CML7
+Failure: CML8, CML9
+
+PRIMARY SECONDARY-STRESS COMPARISON
+-----------------------------------
+Failure = positive class
+Optimal = negative class
+Warning excluded from the binary decision metric and retained descriptively.
+
+FROZEN MODEL
+------------
+Reuse v44.5a without modification:
+- final Top-256
+- U16
+- frozen balanced L2 logistic regression
+
+No refit, no rank change, no gene substitution.
+
+FROZEN RNA TRANSFORM
+--------------------
+Starting from raw Lin-CD34+ patient pseudobulk counts:
+1. restrict to frozen Top-256
+2. patient CPM normalization over those 256 genes
+3. log1p(CPM)
+4. per-gene z-standardization across all 9 patients
+
+No response labels enter this transformation.
+
+TECHNICAL GATE
+--------------
+All 256 frozen coordinates must exist.
+Any zero cross-patient SD after transform => TECHNICALLY NON-EVALUABLE.
+
+PRIMARY METRIC
+--------------
+PR-AUC on Failure vs Optimal.
+Reference prevalence = 2/6.
+
+Secondary:
+ROC-AUC, balanced accuracy @0.5, sensitivity, specificity.
+
+FROZEN DIRECTION CHECK
+----------------------
+Mean score Failure > mean score Optimal.
+
+DESCRIPTIVE ONLY
+----------------
+Report mean Optimal, Warning and Failure scores and whether
+Optimal < Warning < Failure.
+
+SECONDARY STRESS PASS RULE
+--------------------------
+PASS iff:
+1. 256/256 technically transportable
+2. PR-AUC > prevalence
+3. ROC-AUC > 0.5
+4. mean Failure score > mean Optimal score
+5. no outcome-driven tuning
+
+No p-value threshold is required because the extreme-group test has only
+6 patients (4 Optimal, 2 Failure).
+
+NO RESCUE
+---------
+No post-score normalization change, threshold tuning, gene substitution,
+rank change, model refit, or outcome-driven exclusion.
+
+CLAIM LIMIT
+-----------
+A PASS supports only directional cross-modality consistency of the frozen
+transport-aware CML subspace. It does not establish clinical utility,
+causal biology, superiority to established biomarkers, or quantum advantage.

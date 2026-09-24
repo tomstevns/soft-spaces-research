@@ -1,0 +1,16 @@
+=== v48.3a GSE14671 TECHNICAL AUDIT ===
+
+Protocol SHA:                    69ea5767440405b0710cbdbdfcf71b946ce964b58a2142e40a0690b69c9f7cfd
+Clinical labels parsed:          NO
+Clinical labels used:            NO
+
+Cohort:                          GSE14671
+Platform:                        GPL570
+Expression sample tables:        59
+Expected sample count:           59
+
+Transport-aware universe:        15890
+Measurable eligible genes:       15884
+Required minimum:                256
+
+v48.3a STATUS: TECHNICAL PASS

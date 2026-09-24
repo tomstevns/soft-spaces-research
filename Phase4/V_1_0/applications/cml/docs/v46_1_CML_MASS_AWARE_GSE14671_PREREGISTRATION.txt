@@ -1,0 +1,157 @@
+Soft Spaces / CML
+v46.1 — MASS-AWARE EXTERNAL TRANSPORT PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE GSE14671 PREDICTIVE SCORING
+
+RATIONALE
+---------
+v45 used an exact 256/256 coordinate rule and was correctly closed as
+TECHNICALLY NON-EVALUABLE when PTPN20 could not be represented on GPL570.
+
+v46.0 subsequently quantified PTPN20 using only the already-frozen v44.5a
+model and no GSE14671 outcome scores.
+
+The v46 transport rule therefore replaces the binary all-or-nothing
+coordinate criterion with a prospective model-mass criterion.
+
+This does not reopen or reinterpret v45.
+
+FROZEN TRANSPORT RULE
+---------------------
+Missing frozen coordinates are technically acceptable only if BOTH:
+
+1. total lost projector-mass fraction <= 1.0%
+
+and
+
+2. total lost classifier-weight fraction <= 1.0%
+
+Definitions:
+
+For frozen U16:
+    leverage_i = sum_k U[i,k]^2
+
+Total projector mass:
+    trace(U U^T) = r = 16
+
+Lost projector-mass fraction:
+    sum_missing leverage_i / 16
+
+For frozen subspace classifier coefficient beta_sub:
+
+    beta_gene = U16 @ beta_sub
+
+Classifier-weight mass:
+    beta_gene_i^2
+
+Lost classifier-weight fraction:
+    sum_missing beta_gene_i^2 / sum_all beta_gene_i^2
+
+FROZEN MISSING-COORDINATE REPRESENTATION
+----------------------------------------
+For an accepted technically absent coordinate:
+
+    z_i = 0
+
+after external cohort per-gene z-standardization of measurable coordinates.
+
+This is equivalent to imputing the external cohort mean in standardized
+coordinate space.
+
+No biological proxy gene is substituted.
+
+No coefficient is altered.
+
+No rank is changed.
+
+No model is refit.
+
+GSE14671 TECHNICAL STATE KNOWN BEFORE SCORING
+---------------------------------------------
+Frozen Top-K:
+    256
+
+Missing coordinates:
+    1
+
+Missing genes:
+    PTPN20
+
+Lost projector-mass fraction:
+    0.00220417750774
+
+Lost projector-mass percent:
+    0.220417751%
+
+Lost classifier-weight fraction:
+    0.00126711502141
+
+Lost classifier-weight percent:
+    0.126711502%
+
+Technical mass gate:
+    PASS
+
+EXTERNAL REPRESENTATION
+-----------------------
+For measurable frozen genes:
+
+1. GPL570 probes are mapped by Gene Symbol;
+2. multiple probes mapping to one frozen gene are averaged arithmetically
+   within each sample;
+3. each measurable gene is standardized across all 59 GSE14671 samples
+   using cohort mean and population SD (ddof=0);
+4. accepted missing coordinates are set to z=0;
+5. the 256-vector is projected through the frozen U16;
+6. the frozen v44.5a logistic classifier is applied.
+
+No response label enters steps 1-4.
+
+EXTERNAL RESPONSE
+-----------------
+Positive:
+    poor response / >65% Ph-positive metaphases after 12 months
+    n = 18
+
+Negative:
+    CCyR after 12 months
+    n = 41
+
+Positive prevalence:
+    18/59 = 0.305084745763
+
+PRIMARY METRIC
+--------------
+PR-AUC
+
+SECONDARY
+---------
+ROC-AUC
+Balanced accuracy @0.5
+Sensitivity @0.5
+Specificity @0.5
+
+FROZEN DIRECTION
+----------------
+Mean score poor-response > mean score CCyR
+
+PASS RULE
+---------
+PASS requires:
+
+1. mass-aware technical gate PASS;
+2. PR-AUC > prevalence;
+3. ROC-AUC > 0.5;
+4. mean score poor-response > mean score CCyR;
+5. no external refit;
+6. no outcome-driven tuning or rescue.
+
+CLAIM LIMIT
+-----------
+A PASS supports cross-endpoint predictive generalization under the
+mass-aware v46 transport rule.
+
+It does not establish clinical utility, causal biology, superiority to
+established CML biomarkers, or quantum advantage.

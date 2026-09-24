@@ -1,0 +1,32 @@
+Soft Spaces Phase 5 / V_1_0
+
+code/
+    Executable Python programs.
+
+config/
+    Frozen configuration files and parameter manifests.
+
+docs/
+    whitepapers/       Phase 5 design and scientific rationale.
+    preregistration/   Frozen hypotheses, gates and test protocols.
+    methods/           Method descriptions and derivations.
+    closure/           Formal phase/subphase closure documents.
+
+data/
+    raw/               Original local input data.
+    external/          Downloaded public benchmark/reference data.
+    processed/         Derived matrices and prepared benchmark data.
+
+results/
+    benchmarks/        Main benchmark outputs.
+    ground_truth/      High-accuracy/reference quantum-chemistry outputs.
+    baselines/         Conventional low-cost comparator results.
+    nulls/             REAL-vs-NULL and matched-control results.
+    cost_recall/       Search-space reduction / cost-versus-recall analyses.
+    audits/            Technical and reproducibility audits.
+
+figures/
+    Publication and diagnostic figures.
+
+logs/
+    Execution logs.

@@ -1,0 +1,85 @@
+{
+  "version": "v48.4",
+  "status": "DIAGNOSTIC_COMPLETE",
+  "changes_v48_3_status": false,
+  "new_hypothesis": false,
+  "new_thresholds": false,
+  "retuning": false,
+  "rescue": false,
+  "failure_mode": "BOTH JOINT GATES FAILED",
+  "worst_spectrum_pair": "AC_GSE130404_vs_GSE14671",
+  "worst_distance_pair": "AC_GSE130404_vs_GSE14671",
+  "best_spectrum_pair": "AB_GSE130404_vs_GSE44589",
+  "best_distance_pair": "AB_GSE130404_vs_GSE44589",
+  "joint_spectrum": {
+    "observed": 0.9797320305144459,
+    "null_q95": 0.9996647019087764,
+    "absolute_margin": -0.019932671394330526,
+    "relative_margin": -0.019939357022680456,
+    "empirical_p": 1.0,
+    "null_mean": 0.9991366462723034,
+    "signed_null_z": -47.042294728968045,
+    "observed_percentile": 0.0,
+    "gate_pass": false
+  },
+  "joint_distance": {
+    "observed": 0.0856762468709371,
+    "null_q05": 0.007643269182322895,
+    "pass_direction_margin": -0.0780329776886142,
+    "relative_margin": -10.209371909743325,
+    "empirical_p": 1.0,
+    "null_mean": 0.019599573807125594,
+    "signed_null_z": -8.638964084321872,
+    "percent_null_ge_observed": 0.0,
+    "gate_pass": false
+  },
+  "pairwise_observed": {
+    "AB_GSE130404_vs_GSE44589": {
+      "spectrum_cosine": 0.9941194160924803,
+      "distance_w1": 0.038547990813151134
+    },
+    "AC_GSE130404_vs_GSE14671": {
+      "spectrum_cosine": 0.9797320305144459,
+      "distance_w1": 0.0856762468709371
+    },
+    "BC_GSE44589_vs_GSE14671": {
+      "spectrum_cosine": 0.9809444030426108,
+      "distance_w1": 0.05158735816633059
+    }
+  },
+  "robustness_context": {
+    "AC_z_spectrum": {
+      "median": 48.6046499006519,
+      "q025": 37.09143842775065,
+      "q975": 74.94388414107304,
+      "positive_fraction": 1.0
+    },
+    "AC_z_distance": {
+      "median": 15.300907572755936,
+      "q025": 11.243899246616222,
+      "q975": 20.764091510963006,
+      "positive_fraction": 1.0
+    },
+    "BC_z_spectrum": {
+      "median": 51.43922036909238,
+      "q025": 40.14496707873265,
+      "q975": 80.19989705020024,
+      "positive_fraction": 1.0
+    },
+    "BC_z_distance": {
+      "median": 15.658545639694193,
+      "q025": 11.517081126842893,
+      "q975": 21.153509700805767,
+      "positive_fraction": 1.0
+    }
+  },
+  "source_sha256": {
+    "v48_3_closure_manifest": "dfb6150a8396dee60f86f783f65db5c0bbe72184deb1dd30c1f065bda061c074",
+    "v48_3_closure": "f71b22ee291c7fe7d5d82f381cd8cee14132426ec3b7f53a936d552dc75df5c5",
+    "v48_3_summary": "bc1a075f903fde70c1bc7a80520605660718be9ed1a2076bd72fe02592837578",
+    "v48_3_joint_null": "8a916f4f3d6af52b9e663db9a87510db0b4c8da91f1c790566d8adebdfda9185",
+    "v48_3_pairwise_null": "2ff2d450855de9941d81fe8ae98356dcbd6790474a2ac36a9ce41a31fc5bf9e7",
+    "v48_3_robustness_results": "4fe4caf5f235ff62688aae18fce16ad0e4feb71f15a6ea76b7564a271182c59e",
+    "execution_script": "c37569e95247cd14dd820a288c3efdecf0b1e655a0b1f1956ad828ab0a3b0f9f"
+  }
+}

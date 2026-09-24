@@ -1,0 +1,26 @@
+{
+  "version": "v44.4",
+  "frozen_r": 16,
+  "top_k": 256,
+  "union_support_n": 357,
+  "real_pair_n": 4950,
+  "real_mean_overlap": 0.6626406659632149,
+  "real_median_overlap": 0.6613458417166027,
+  "real_q025": 0.5697116500738766,
+  "real_q975": 0.7581205032784616,
+  "same_repeat_mean": 0.6224721749448212,
+  "different_repeat_mean": 0.6643319708481998,
+  "n_null": 1000,
+  "null_mean_overlap": 0.056196762567326565,
+  "delta_mean_overlap": 0.6064439033958884,
+  "empirical_p": 0.000999000999000999,
+  "status": "PASS",
+  "external_outcomes_used": false,
+  "sha256": {
+    "v44_0_protocol": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+    "v44_3_manifest": "a8e2dc712c7b57eca8d088f1e0ba3ac8a6b51149b48d2ee50cddf2aa2a7917f0",
+    "v44_2_fold_top256_manifest": "35249df9eb38673d3d19609f8a74e15bb7025439eb1f26bd8b78575fed287b45",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "execution_script": "17c33f0ebd251774746e6cb95686109eed845bd866930c98f819a152e8cd2bde"
+  }
+}

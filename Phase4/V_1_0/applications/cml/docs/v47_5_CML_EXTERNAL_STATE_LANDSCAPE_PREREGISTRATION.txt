@@ -1,0 +1,127 @@
+Soft Spaces / CML
+v47.5 — EXTERNAL STATE-LANDSCAPE REPLICATION PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE EXTERNAL LANDSCAPE CONSTRUCTION
+
+EXTERNAL COHORT
+---------------
+GSE44589 / GPL570
+
+FROZEN SAMPLE INTERPRETATION
+----------------------------
+Baseline samples:
+    135
+
+Evaluable clinical labels:
+    MMR: 69
+    no MMR: 59
+
+Outcome unavailable:
+    7
+
+Total evaluable:
+    128
+
+ENDPOINT LIMIT
+--------------
+This endpoint differs from the GSE130404 3-month BCR-ABL1 endpoint.
+
+Therefore this is:
+    CROSS-ENDPOINT EXTERNAL STATE-LANDSCAPE REPLICATION
+
+It is NOT exact endpoint replication.
+
+LANDSCAPE CONSTRUCTION
+----------------------
+Use all 135 baseline samples to construct the landscape.
+
+Outcome labels MUST NOT influence:
+- gene selection
+- normalization
+- PCA fitting
+- kNN geometry
+
+Frozen construction:
+
+1. restrict to the existing v44 transport-aware eligible universe:
+       15,890 genes
+
+2. select:
+       Top-256 genes by raw variance across all baseline samples
+
+3. standardize each selected gene:
+       z = (x - external_baseline_mean) / external_baseline_sd
+       ddof=0
+
+4. construct:
+       PCA-16
+
+5. local geometry:
+       kNN k=10
+       density proxy
+       local anisotropy
+       distance to external-cohort centroid
+
+6. write and SHA-freeze the complete external geometry
+
+7. ONLY THEN attach MMR / no-MMR labels to the 128 evaluable patients
+
+PRIMARY EXTERNAL TEST
+---------------------
+Euclidean distance between MMR and no-MMR group centroids in the
+external label-blind PCA-16 geometry.
+
+NULL
+----
+10000 random permutations of the 128 evaluable labels.
+
+Empirical one-sided p:
+
+    (1 + # NULL >= observed) / (1 + 10000)
+
+PRIMARY EXTERNAL PASS RULE
+--------------------------
+PASS if:
+
+    empirical p <= 0.05
+
+No additional performance condition is introduced.
+
+SECONDARY DESCRIPTIVES
+----------------------
+For MMR and no-MMR report:
+- local density proxy
+- local anisotropy
+- distance to cohort centroid
+
+Also report:
+- cumulative variance explained by PCA-16
+- overlap of external Top-256 with GSE130404 v47.2 Top-256
+
+The Top-256 overlap is descriptive only and is NOT part of the PASS rule.
+
+NO RESCUE
+---------
+If the primary external test fails:
+- no feature tuning
+- no PCA-rank tuning
+- no alternative k
+- no label-driven subset selection
+- no gene substitution
+
+CLAIM LIMIT
+-----------
+A PASS would support cross-endpoint external replication of non-random
+clinical-group organization in an independently constructed label-blind
+CML expression landscape.
+
+It would NOT establish:
+- exact endpoint replication
+- prediction
+- clinical utility
+- causal biology
+- dormancy mechanism
+- quantum biology
+- quantum advantage

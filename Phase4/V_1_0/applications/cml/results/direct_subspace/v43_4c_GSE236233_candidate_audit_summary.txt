@@ -1,0 +1,77 @@
+=== Soft Spaces / CML v43.4c GSE236233 CANDIDATE AUDIT ===
+
+PURPOSE
+-------
+Outcome-blind audit of a replacement external cohort after GSE44589
+was technically non-evaluable for the frozen v43 representation.
+
+DATASET
+-------
+GEO accession: GSE236233
+GEO sample records: 17
+Unique patient IDs detected: 0
+Patient IDs: NONE
+
+SAMPLE STRUCTURE
+----------------
+Lin-CD34+: 9
+Lin-CD34+CD38-: 8
+
+PLATFORM
+--------
+GPL24676: 17
+
+LIBRARY STRATEGY
+----------------
+RNA-Seq: 17
+
+INSTRUMENT
+----------
+Illumina NovaSeq 6000: 17
+
+PROCESSED DATA
+--------------
+Supplementary processed-file references: 17
+
+CRITICAL STATISTICAL RULE
+-------------------------
+The patient is the statistical unit.
+Single cells must NEVER be counted as independent response samples.
+Any later external expression representation must first aggregate
+cells within patient and a preregistered cell population.
+
+OUTCOME STATUS
+--------------
+No external predictive performance was calculated.
+No classifier was fitted to GSE236233.
+
+v43.4c STATUS: CANDIDATE NOT YET ELIGIBLE
+
+NEXT REQUIRED AUDIT
+-------------------
+Before any v43.5-style external test:
+1. freeze which cell population is used;
+2. freeze patient-level pseudobulk aggregation;
+3. verify the 256 frozen development coordinates in GSE236233;
+4. verify patient-level 12-month response mapping;
+5. preregister the exact external analysis before scoring outcomes.
+
+SAMPLES WITHOUT PARSABLE PATIENT ID
+-----------------------------------
+GSM7520162
+GSM7520163
+GSM7520164
+GSM7520165
+GSM7520166
+GSM7520167
+GSM7520168
+GSM7520169
+GSM7520170
+GSM7520171
+GSM7520172
+GSM7520173
+GSM7520174
+GSM7520175
+GSM7520176
+GSM7520177
+GSM7520178

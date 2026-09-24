@@ -1,0 +1,62 @@
+=== Soft Spaces / CML v46.0 PTPN20 FROZEN-MODEL IMPORTANCE AUDIT ===
+
+SCOPE
+-----
+Frozen model: v44.5a
+External outcome data used: NO
+GSE14671 scores used: NO
+Model refit: NO
+Model modification: NO
+v45 reopened: NO
+
+MODEL CHECKS
+------------
+Top-K:                           256
+Subspace rank:                   16
+sum(diag(U U^T)):                16.000000000000
+expected projector trace:        16.000000000000
+||U^T U - I||_F:                 4.261624445023e-15
+
+PTPN20 SUBSPACE IMPORTANCE
+---------------------------
+subspace leverage P_ii:          0.0352668401238
+mean leverage across 256:        0.0625
+median leverage across 256:      0.0589974468575
+projector-mass fraction:         0.00220417750774
+projector-mass percent:          0.220417751%
+leverage rank / 256:             215
+leverage percentile:             16.406%
+
+PTPN20 CLASSIFIER IMPORTANCE
+-----------------------------
+effective gene beta:             +0.075919571955
+absolute effective beta:         0.075919571955
+mean |beta_gene| across 256:     0.102626845451
+median |beta_gene| across 256:   0.0842630333145
+|beta| rank / 256:               140
+|beta| percentile:               45.703%
+classifier weight share:         0.00126711502141
+classifier weight percent:       0.126711502%
+weight-share rank / 256:         140
+
+EXACT LOCAL SENSITIVITY
+-----------------------
+Holding all other standardized genes fixed:
+logit change for PTPN20 +1 SD:   +0.075919571955
+logit change for PTPN20 -1 SD:   -0.075919571955
+odds multiplier for +1 SD:       1.0788757988
+
+INTERPRETATION
+--------------
+The leverage measures how strongly PTPN20 participates in the frozen
+16-dimensional subspace.
+
+The effective beta measures its exact first-order contribution to the
+frozen logistic logit per one standardized-expression unit.
+
+These are model-structural quantities. They do NOT establish that
+PTPN20 is a biological, diagnostic, prognostic, or causal CML marker.
+
+v45 remains closed and TECHNICALLY NON-EVALUABLE regardless of the
+importance found here. This audit is intended only to inform the
+prospective technical design of a future v46 external test.

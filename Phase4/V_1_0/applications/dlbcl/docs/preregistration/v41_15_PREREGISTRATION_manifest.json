@@ -1,0 +1,50 @@
+{
+  "version": "v41.15-preregistration",
+  "date": "2026-09-18",
+  "status": "FROZEN_BEFORE_GSE117556_EXPRESSION_INSPECTION",
+  "primary_cohort": {
+    "accession": "GSE117556",
+    "study": "REMoDLB",
+    "reported_samples": 928,
+    "platform": "GPL14951",
+    "technology": "Illumina Whole-Genome DASL HT v4"
+  },
+  "development_reference": "GSE10846",
+  "panel_size": 16,
+  "frozen_panel": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+    "EML6",
+    "MMP20",
+    "KCCAT333",
+    "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "IGK///IGKC",
+    "LOC283454///HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "primary_endpoint": "top4_gene_eigensubspace_overlap",
+  "primary_null_n": 10000,
+  "primary_decision_rule": {
+    "real_gt_null_mean": true,
+    "empirical_one_sided_p_lte": 0.05
+  },
+  "secondary_endpoint": "pairwise_gene_correlation_structure_similarity",
+  "exploratory_endpoints": [
+    "top8_gene_eigensubspace_overlap",
+    "eigenvalue_profile_cosine_similarity",
+    "individual_pairwise_gene_correlation_conservation",
+    "leave_one_gene_out_diagnostics"
+  ],
+  "external_labels_used_for_confirmatory_test": false,
+  "mapping_gate": "all_16_frozen_coordinates_reproducibly_resolved",
+  "reduced_panel_confirmatory_analysis_allowed": false,
+  "preregistration_file": "v41_15_PREREGISTRATION.txt",
+  "preregistration_sha256": "979f7f4880fa3936edcdcd1055641bf5922abcc00caa3917e0fed8c8e464b56b"
+}

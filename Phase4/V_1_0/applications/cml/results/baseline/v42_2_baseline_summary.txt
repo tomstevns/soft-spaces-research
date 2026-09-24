@@ -1,0 +1,63 @@
+=== Soft Spaces / CML v42.2 CLASSICAL BASELINES ===
+
+DESIGN
+------
+Cohort: GSE130404
+Samples: 96 baseline CP-CML
+Positive: BCR-ABL1 >10% at 3 months, n=13
+Negative: BCR-ABL1 <10% at 3 months, n=83
+Positive prevalence / random PR-AUC reference: 0.135417
+CV: RepeatedStratifiedKFold 5 x 20 = 100 folds
+Variance pool: Top-256 raw training-fold variance
+Primary metric: PR-AUC
+Soft Spaces used: NO
+
+RESULTS
+-------
+
+logistic_l2
+  valid folds: 100
+  PR-AUC: 0.563477 [0.170729, 0.916667]
+  ROC-AUC: 0.830748 [0.484559, 0.980392]
+  Balanced accuracy: 0.681287
+  Sensitivity: 0.470000
+  Specificity: 0.892574
+
+logistic_l1
+  valid folds: 100
+  PR-AUC: 0.515385 [0.154762, 1.000000]
+  ROC-AUC: 0.792623 [0.503033, 1.000000]
+  Balanced accuracy: 0.673799
+  Sensitivity: 0.468333
+  Specificity: 0.879265
+
+linear_svm
+  valid folds: 100
+  PR-AUC: 0.586677 [0.195625, 1.000000]
+  ROC-AUC: 0.847990 [0.513971, 1.000000]
+  Balanced accuracy: 0.666207
+  Sensitivity: 0.393333
+  Specificity: 0.939081
+
+univariate_logistic
+  valid folds: 100
+  PR-AUC: 0.452517 [0.164132, 0.960417]
+  ROC-AUC: 0.762990 [0.529412, 0.990686]
+  Balanced accuracy: 0.678615
+  Sensitivity: 0.603333
+  Specificity: 0.753897
+
+UNIVARIATE K SELECTION
+----------------------
+K=8: 46 folds
+K=16: 24 folds
+K=32: 30 folds
+
+SOFT-SPACES ENTRY CONDITION
+---------------------------
+Best mean PR-AUC: 0.586677
+Random PR-AUC reference: 0.135417
+Best mean ROC-AUC: 0.847990
+ENTRY CONDITION SATISFIED: True
+
+Interpret conservatively because only 13 positive patients are available.

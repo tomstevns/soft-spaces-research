@@ -1,0 +1,22 @@
+{
+  "version": "v43.0",
+  "status": "FROZEN_BEFORE_V43_MODELING",
+  "development_cohort": "GSE130404",
+  "primary_metric": "PR-AUC",
+  "candidate_ranks": [
+    4,
+    8,
+    16
+  ],
+  "direct_projection": true,
+  "feature_selection_used": false,
+  "reuse_v42_2_splits": true,
+  "reuse_v42_2_top256_pools": true,
+  "null_type": "random_orthonormal_subspace",
+  "null_recommended_n": 1000,
+  "pass_rule": {
+    "real_gt_null_mean": true,
+    "empirical_one_sided_p_lte": 0.05
+  },
+  "protocol_sha256": "f32741ca64d2bc6c015374b0e5e0b25cf5820141d57bd3e5ba8a53a94a097059"
+}

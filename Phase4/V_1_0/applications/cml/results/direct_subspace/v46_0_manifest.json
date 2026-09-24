@@ -1,0 +1,37 @@
+{
+  "version": "v46.0",
+  "status": "MODEL_IMPORTANCE_AUDIT_COMPLETE",
+  "target_gene": "PTPN20",
+  "external_outcomes_used": false,
+  "model_refit": false,
+  "model_modified": false,
+  "v45_reopened": false,
+  "top_k": 256,
+  "rank": 16,
+  "ptpn20": {
+    "subspace_leverage": 0.03526684012383051,
+    "projector_mass_fraction": 0.002204177507739407,
+    "projector_mass_percent": 0.22041775077394068,
+    "leverage_rank_desc": 215,
+    "leverage_percentile": 16.40625,
+    "effective_gene_beta": 0.07591957195497956,
+    "abs_effective_gene_beta": 0.07591957195497956,
+    "abs_beta_rank_desc": 140,
+    "abs_beta_percentile": 45.703125,
+    "classifier_weight_share": 0.0012671150214078359,
+    "classifier_weight_percent": 0.12671150214078358,
+    "classifier_weight_rank_desc": 140,
+    "logit_delta_plus_1sd": 0.07591957195497956,
+    "odds_multiplier_plus_1sd": 1.0788757987964273
+  },
+  "model_checks": {
+    "projector_trace": 16.0,
+    "orthonormality_fro_error": 4.26162444502293e-15
+  },
+  "sha256": {
+    "frozen_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "v45_closure": "2fe8940d7cdce28f08f51fc31bdd23336142f4a80a6191bb5fc2b159f4619a89",
+    "ranking_tsv": "93a62308cfcd65397cdc5aa97e79f2411c1dc49643e944bd66e1bb5cdc0a3c21",
+    "execution_script": "40793ecca9bc0741acf92570bab644b4492fc033f101ba7824719687a272b993"
+  }
+}

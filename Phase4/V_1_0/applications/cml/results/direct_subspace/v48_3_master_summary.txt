@@ -1,0 +1,22 @@
+=== Soft Spaces / CML v48.3 MASTER SUMMARY ===
+
+Third cohort technical audit:
+    PASS
+
+Pairwise third-cohort replication:
+    PASS
+
+Patient-resampling robustness:
+    PASS
+
+Joint three-cohort invariance:
+    FAIL
+
+FINAL:
+    THREE-COHORT GEOMETRIC INVARIANCE NOT SUPPORTED
+
+Master protocol SHA:
+    69ea5767440405b0710cbdbdfcf71b946ce964b58a2142e40a0690b69c9f7cfd
+
+Closure SHA:
+    f71b22ee291c7fe7d5d82f381cd8cee14132426ec3b7f53a936d552dc75df5c5

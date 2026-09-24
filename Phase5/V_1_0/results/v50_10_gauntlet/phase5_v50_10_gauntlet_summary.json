@@ -1,0 +1,623 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-23T15:49:23.842799+00:00",
+    "script_version": "v50_10",
+    "python_version": "3.9.7"
+  },
+  "preregistered_rules": {
+    "t1_t4": {
+      "ss_auc_min": 0.65,
+      "delta_auc_min": 0.1,
+      "median_geometry_delta_auc_must_be_positive": true,
+      "positive_delta_geometries_min": 5
+    },
+    "t5": {
+      "softspaces_wins_min": 24,
+      "total_comparisons": 40,
+      "median_delta_error_must_be_negative": true
+    },
+    "early_stop_enabled": true
+  },
+  "results": [
+    {
+      "name": "T1 held-out dephasing projector sensitivity",
+      "pooled_ss_auc": 0.6360288476292772,
+      "pooled_en2_auc": 0.38813871413226947,
+      "pooled_delta_auc": 0.24789013349700778,
+      "median_geometry_delta_auc": 0.22852891156462588,
+      "positive_delta_geometries": 8,
+      "per_geometry": [
+        {
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "ss_auc": 0.5,
+          "en2_auc": 0.38095238095238093,
+          "delta_auc": 0.11904761904761907
+        },
+        {
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "ss_auc": 0.6875,
+          "en2_auc": 0.225,
+          "delta_auc": 0.4625
+        },
+        {
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "ss_auc": 0.7,
+          "en2_auc": 0.6133333333333333,
+          "delta_auc": 0.08666666666666667
+        },
+        {
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "ss_auc": 0.59375,
+          "en2_auc": 0.17708333333333334,
+          "delta_auc": 0.41666666666666663
+        },
+        {
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "ss_auc": 0.5306122448979592,
+          "en2_auc": 0.23129251700680273,
+          "delta_auc": 0.29931972789115646
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "ss_auc": 0.5505952380952381,
+          "en2_auc": 0.39285714285714285,
+          "delta_auc": 0.1577380952380953
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "ss_auc": 0.6904761904761905,
+          "en2_auc": 0.6190476190476191,
+          "delta_auc": 0.0714285714285714
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "ss_auc": 0.78125,
+          "en2_auc": 0.3664772727272727,
+          "delta_auc": 0.4147727272727273
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "name": "T2 held-out transverse projector sensitivity",
+      "pooled_ss_auc": 0.6009667024704619,
+      "pooled_en2_auc": 0.50122755869265,
+      "pooled_delta_auc": 0.0997391437778119,
+      "median_geometry_delta_auc": 0.052380952380952334,
+      "positive_delta_geometries": 5,
+      "per_geometry": [
+        {
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "ss_auc": 0.6904761904761905,
+          "en2_auc": 0.6190476190476191,
+          "delta_auc": 0.0714285714285714
+        },
+        {
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "ss_auc": 0.775,
+          "en2_auc": 0.075,
+          "delta_auc": 0.7000000000000001
+        },
+        {
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "ss_auc": 0.5266666666666666,
+          "en2_auc": 0.49333333333333335,
+          "delta_auc": 0.03333333333333327
+        },
+        {
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "ss_auc": 0.4322916666666667,
+          "en2_auc": 0.7083333333333334,
+          "delta_auc": -0.2760416666666667
+        },
+        {
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "ss_auc": 0.7142857142857143,
+          "en2_auc": 0.6258503401360545,
+          "delta_auc": 0.08843537414965985
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "ss_auc": 0.5029761904761905,
+          "en2_auc": 0.5535714285714286,
+          "delta_auc": -0.05059523809523814
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "ss_auc": 0.6488095238095238,
+          "en2_auc": 0.7738095238095238,
+          "delta_auc": -0.125
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "ss_auc": 0.6448863636363636,
+          "en2_auc": 0.3153409090909091,
+          "delta_auc": 0.32954545454545453
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "name": "T3 held-out mixed projector sensitivity",
+      "pooled_ss_auc": 0.6176154672395274,
+      "pooled_en2_auc": 0.44713825379775973,
+      "pooled_delta_auc": 0.1704772134417677,
+      "median_geometry_delta_auc": 0.13355654761904762,
+      "positive_delta_geometries": 6,
+      "per_geometry": [
+        {
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "ss_auc": 0.5,
+          "en2_auc": 0.5714285714285714,
+          "delta_auc": -0.0714285714285714
+        },
+        {
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "ss_auc": 0.6875,
+          "en2_auc": 0.225,
+          "delta_auc": 0.4625
+        },
+        {
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "ss_auc": 0.5666666666666667,
+          "en2_auc": 0.4,
+          "delta_auc": 0.16666666666666663
+        },
+        {
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "ss_auc": 0.6197916666666666,
+          "en2_auc": 0.46875,
+          "delta_auc": 0.15104166666666663
+        },
+        {
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "ss_auc": 0.6020408163265306,
+          "en2_auc": 0.5034013605442177,
+          "delta_auc": 0.09863945578231292
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "ss_auc": 0.6160714285714286,
+          "en2_auc": 0.5,
+          "delta_auc": 0.1160714285714286
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "ss_auc": 0.5922619047619048,
+          "en2_auc": 0.6904761904761905,
+          "delta_auc": -0.0982142857142857
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "ss_auc": 0.7130681818181818,
+          "en2_auc": 0.32386363636363635,
+          "delta_auc": 0.3892045454545454
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "name": "T4 geometry-displacement gap sensitivity",
+      "pooled_ss_auc": 0.60810188737149,
+      "pooled_en2_auc": 0.48611324228939695,
+      "pooled_delta_auc": 0.121988645082093,
+      "median_geometry_delta_auc": 0.1000744047619048,
+      "positive_delta_geometries": 6,
+      "per_geometry": [
+        {
+          "geometry": 0.75,
+          "n_candidates": 10,
+          "ss_auc": 0.5,
+          "en2_auc": 0.23809523809523808,
+          "delta_auc": 0.2619047619047619
+        },
+        {
+          "geometry": 1.0,
+          "n_candidates": 14,
+          "ss_auc": 0.5,
+          "en2_auc": 0.65,
+          "delta_auc": -0.15000000000000002
+        },
+        {
+          "geometry": 1.25,
+          "n_candidates": 20,
+          "ss_auc": 0.5266666666666666,
+          "en2_auc": 0.36,
+          "delta_auc": 0.16666666666666663
+        },
+        {
+          "geometry": 1.5,
+          "n_candidates": 22,
+          "ss_auc": 0.7864583333333334,
+          "en2_auc": 0.7291666666666666,
+          "delta_auc": 0.05729166666666674
+        },
+        {
+          "geometry": 1.75,
+          "n_candidates": 28,
+          "ss_auc": 0.5544217687074829,
+          "en2_auc": 0.5374149659863946,
+          "delta_auc": 0.017006802721088343
+        },
+        {
+          "geometry": 2.0,
+          "n_candidates": 29,
+          "ss_auc": 0.44047619047619047,
+          "en2_auc": 0.47619047619047616,
+          "delta_auc": -0.0357142857142857
+        },
+        {
+          "geometry": 2.5,
+          "n_candidates": 29,
+          "ss_auc": 0.5386904761904762,
+          "en2_auc": 0.3958333333333333,
+          "delta_auc": 0.14285714285714285
+        },
+        {
+          "geometry": 3.0,
+          "n_candidates": 30,
+          "ss_auc": 0.8607954545454546,
+          "en2_auc": 0.4119318181818182,
+          "delta_auc": 0.4488636363636364
+        }
+      ],
+      "clear_pass": false
+    },
+    {
+      "name": "T5 matched-budget ground-state subspace",
+      "softspaces_wins": 0,
+      "total_comparisons": 40,
+      "median_delta_error_ss_minus_en2": 0.08629302971047603,
+      "clear_pass": false,
+      "rows": [
+        {
+          "geometry": 0.75,
+          "k": 2,
+          "ss_error": 0.04181982418634789,
+          "en2_error": 0.024741825871426038,
+          "delta_error": 0.01707799831492185,
+          "ss_win": false
+        },
+        {
+          "geometry": 0.75,
+          "k": 4,
+          "ss_error": 0.041819824186347,
+          "en2_error": 0.015001254255440521,
+          "delta_error": 0.026818569930906477,
+          "ss_win": false
+        },
+        {
+          "geometry": 0.75,
+          "k": 8,
+          "ss_error": 0.02277796301169488,
+          "en2_error": 0.0037794029454802924,
+          "delta_error": 0.018998560066214587,
+          "ss_win": false
+        },
+        {
+          "geometry": 0.75,
+          "k": 12,
+          "ss_error": 0.02156808965996504,
+          "en2_error": 0.00036521728580751756,
+          "delta_error": 0.021202872374157522,
+          "ss_win": false
+        },
+        {
+          "geometry": 0.75,
+          "k": 16,
+          "ss_error": 0.012521076817245458,
+          "en2_error": 0.0003057392919068036,
+          "delta_error": 0.012215337525338654,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.0,
+          "k": 2,
+          "ss_error": 0.06784151163704433,
+          "en2_error": 0.04388758201131626,
+          "delta_error": 0.023953929625728065,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.0,
+          "k": 4,
+          "ss_error": 0.06784151163704433,
+          "en2_error": 0.028025561352900574,
+          "delta_error": 0.03981595028414375,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.0,
+          "k": 8,
+          "ss_error": 0.06784151163704433,
+          "en2_error": 0.006291003741575096,
+          "delta_error": 0.06155050789546923,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.0,
+          "k": 12,
+          "ss_error": 0.06784151163704433,
+          "en2_error": 0.0014134786915471764,
+          "delta_error": 0.06642803294549715,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.0,
+          "k": 16,
+          "ss_error": 0.06784151163704433,
+          "en2_error": 0.0013556073912432964,
+          "delta_error": 0.06648590424580103,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.25,
+          "k": 2,
+          "ss_error": 0.10649727136271236,
+          "en2_error": 0.07529603286492881,
+          "delta_error": 0.031201238497783557,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.25,
+          "k": 4,
+          "ss_error": 0.10476648082675277,
+          "en2_error": 0.049903424114895234,
+          "delta_error": 0.05486305671185754,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.25,
+          "k": 8,
+          "ss_error": 0.0847678856092724,
+          "en2_error": 0.011916099195188323,
+          "delta_error": 0.07285178641408407,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.25,
+          "k": 12,
+          "ss_error": 0.08476788560927284,
+          "en2_error": 0.004980259380386709,
+          "delta_error": 0.07978762622888613,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.25,
+          "k": 16,
+          "ss_error": 0.08322736785125429,
+          "en2_error": 0.004947309695173097,
+          "delta_error": 0.07828005815608119,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.5,
+          "k": 2,
+          "ss_error": 0.16508750409784323,
+          "en2_error": 0.12262947796578061,
+          "delta_error": 0.04245802613206262,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.5,
+          "k": 4,
+          "ss_error": 0.14749137045947336,
+          "en2_error": 0.05469293726740743,
+          "delta_error": 0.09279843319206593,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.5,
+          "k": 8,
+          "ss_error": 0.1333214645526688,
+          "en2_error": 0.022205022391611262,
+          "delta_error": 0.11111644216105754,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.5,
+          "k": 12,
+          "ss_error": 0.1333214645526688,
+          "en2_error": 0.014357511589969008,
+          "delta_error": 0.11896395296269979,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.5,
+          "k": 16,
+          "ss_error": 0.08257909269965547,
+          "en2_error": 0.014326408973015514,
+          "delta_error": 0.06825268372663995,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.75,
+          "k": 2,
+          "ss_error": 0.2394208045991033,
+          "en2_error": 0.1837166110946069,
+          "delta_error": 0.0557041935044964,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.75,
+          "k": 4,
+          "ss_error": 0.2372970614439307,
+          "en2_error": 0.079764681919269,
+          "delta_error": 0.1575323795246617,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.75,
+          "k": 8,
+          "ss_error": 0.23729696647633158,
+          "en2_error": 0.03688601528325952,
+          "delta_error": 0.20041095119307206,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.75,
+          "k": 12,
+          "ss_error": 0.23729695707373955,
+          "en2_error": 0.03132758756444032,
+          "delta_error": 0.20596936950929923,
+          "ss_win": false
+        },
+        {
+          "geometry": 1.75,
+          "k": 16,
+          "ss_error": 0.16880561208530764,
+          "en2_error": 0.030977959101447183,
+          "delta_error": 0.13782765298386046,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.0,
+          "k": 2,
+          "ss_error": 0.3198061441882696,
+          "en2_error": 0.2501397986060989,
+          "delta_error": 0.06966634558217066,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.0,
+          "k": 4,
+          "ss_error": 0.3174489361527164,
+          "en2_error": 0.10905993876387221,
+          "delta_error": 0.2083889973888442,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.0,
+          "k": 8,
+          "ss_error": 0.31744891943908415,
+          "en2_error": 0.05180172083466239,
+          "delta_error": 0.26564719860442176,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.0,
+          "k": 12,
+          "ss_error": 0.31744873475286184,
+          "en2_error": 0.05029176546687841,
+          "delta_error": 0.2671569692859834,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.0,
+          "k": 16,
+          "ss_error": 0.26374463980799456,
+          "en2_error": 0.04314366751365384,
+          "delta_error": 0.22060097229434072,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.5,
+          "k": 2,
+          "ss_error": 0.4624629977219943,
+          "en2_error": 0.36546191019937346,
+          "delta_error": 0.09700108752262082,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.5,
+          "k": 4,
+          "ss_error": 0.4475425690377577,
+          "en2_error": 0.16520146490922105,
+          "delta_error": 0.28234110412853664,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.5,
+          "k": 8,
+          "ss_error": 0.32753866197328163,
+          "en2_error": 0.09865234374868015,
+          "delta_error": 0.22888631822460148,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.5,
+          "k": 12,
+          "ss_error": 0.18619613605321783,
+          "en2_error": 0.01047563151326436,
+          "delta_error": 0.17572050453995347,
+          "ss_win": false
+        },
+        {
+          "geometry": 2.5,
+          "k": 16,
+          "ss_error": 0.17710558205053184,
+          "en2_error": 0.010475631513266581,
+          "delta_error": 0.16662995053726526,
+          "ss_win": false
+        },
+        {
+          "geometry": 3.0,
+          "k": 2,
+          "ss_error": 0.5539795861798908,
+          "en2_error": 0.439902546295706,
+          "delta_error": 0.11407703988418483,
+          "ss_win": false
+        },
+        {
+          "geometry": 3.0,
+          "k": 4,
+          "ss_error": 0.5450170139128732,
+          "en2_error": 0.20407835057894586,
+          "delta_error": 0.3409386633339273,
+          "ss_win": false
+        },
+        {
+          "geometry": 3.0,
+          "k": 8,
+          "ss_error": 0.33436414232915457,
+          "en2_error": 0.0797573974871355,
+          "delta_error": 0.25460674484201906,
+          "ss_win": false
+        },
+        {
+          "geometry": 3.0,
+          "k": 12,
+          "ss_error": 0.09515753333806298,
+          "en2_error": 0.0016458836291035617,
+          "delta_error": 0.09351164970895942,
+          "ss_win": false
+        },
+        {
+          "geometry": 3.0,
+          "k": 16,
+          "ss_error": 0.015012605914062505,
+          "en2_error": 0.0016458836291044499,
+          "delta_error": 0.013366722284958055,
+          "ss_win": false
+        }
+      ]
+    }
+  ],
+  "clear_pass_stage": null,
+  "all_stages_failed": true,
+  "closure_interpretation_if_all_fail": "Reproducible molecular Soft-Spaces structure was observed previously, but this preregistered H4 gauntlet found no demonstrated incremental utility over EN2 on held-out perturbative sensitivity, geometry sensitivity, or matched-budget ground-state subspace selection. Do not continue with indefinite post-hoc rescue tests; close this application branch or formulate a genuinely new hypothesis."
+}

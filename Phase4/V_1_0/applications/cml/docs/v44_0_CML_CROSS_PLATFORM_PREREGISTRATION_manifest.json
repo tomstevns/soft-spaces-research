@@ -1,0 +1,19 @@
+{
+  "version": "v44.0",
+  "status": "FROZEN_BEFORE_V44_SUPERVISED_MODELING",
+  "development_cohort": "GSE130404",
+  "candidate_ranks": [
+    4,
+    8,
+    16
+  ],
+  "primary_metric": "PR-AUC",
+  "minimum_transport_universe_size": 256,
+  "external_outcomes_allowed_for_universe": false,
+  "technical_references": [
+    "GSE44589/GPL570",
+    "GSE236233/RNA-seq"
+  ],
+  "protocol_sha256": "856f7a161d8d76c114a32d98ca812f36b52b018ef8108c4065a924f68b265e7c",
+  "v43_closure_sha256": "a965bb709d6ec51d6d8c694be08f48a531a7351f577b12e42e9d27144d3b96f9"
+}

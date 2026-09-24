@@ -1,0 +1,56 @@
+=== Soft Spaces / CML v44.5b1 PRIMARY EXTERNAL GENERALIZATION: GSE44589 ===
+
+FROZEN DESIGN
+-------------
+Primary external cohort: GSE44589
+Population: pretreatment/baseline only
+Positive class: no MMR / poor response
+Negative class: MMR
+Frozen Top-K: 256
+Frozen rank: 16
+External normalization: per-cohort per-gene z-standardization
+External model refitting: NO
+External tuning: NO
+
+SAMPLE COUNTS
+-------------
+Baseline samples:       135
+Evaluable samples:      128
+Poor response / none:   59
+MMR:                    69
+Unavailable outcome:    7
+
+PRIMARY METRIC
+--------------
+Positive-class prevalence: 0.460938
+PR-AUC:                    0.529572
+PR-AUC - prevalence:       +0.068634
+
+SECONDARY METRICS
+-----------------
+ROC-AUC:                   0.577254
+Balanced accuracy @0.5:    0.526775
+Sensitivity @0.5:          0.169492
+Specificity @0.5:          0.884058
+
+FROZEN DIRECTION CHECK
+----------------------
+Mean score poor response:  0.226364
+Mean score MMR:            0.165145
+Direction preserved:       YES
+
+DECISION
+--------
+PASS requires:
+PR-AUC > prevalence, ROC-AUC > 0.5, and frozen direction preserved.
+
+v44.5b1 STATUS: PASS
+
+INTERPRETATION
+--------------
+This is the preregistered primary cross-endpoint external test.
+No external outcome-driven model tuning or rescue was performed.
+
+A PASS supports cross-cohort predictive generalization only.
+It does not establish clinical utility, causal biology,
+superiority to established CML biomarkers, or quantum advantage.

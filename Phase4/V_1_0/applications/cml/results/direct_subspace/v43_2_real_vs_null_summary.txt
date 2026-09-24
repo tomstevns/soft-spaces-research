@@ -1,0 +1,44 @@
+=== Soft Spaces / CML v43.2 DIRECT SUBSPACE REAL vs MATCHED NULL ===
+
+FROZEN DESIGN
+-------------
+Development cohort: GSE130404
+Frozen direct-subspace rank r: 16
+Frozen v42.2 splits reused: YES
+Frozen Top-256 pools reused: YES
+Feature selection used: NO
+Matched random orthonormal subspaces: 1000
+External cohort used: NO
+
+PRIMARY: MEAN HELD-OUT PR-AUC
+-----------------------------
+REAL:       0.455122
+NULL mean:  0.387771
+Delta:      +0.067352
+NULL 2.5%:  0.357212
+NULL 97.5%: 0.420022
+Empirical one-sided p: 0.000999001
+
+SECONDARY: MEAN HELD-OUT ROC-AUC
+---------------------------------
+REAL:       0.725895
+NULL mean:  0.684225
+Delta:      +0.041670
+Empirical one-sided p: 0.002997
+
+DECISION
+--------
+PASS iff REAL mean PR-AUC > NULL mean PR-AUC
+and empirical one-sided p <= 0.05.
+
+v43.2 STATUS: PASS
+
+INTERPRETATION LIMIT
+--------------------
+PASS would support only that the learned Soft-Spaces subspace
+preserves more response information than matched random subspaces
+of the same dimension.
+
+It would not establish clinical utility, causal biology,
+external replication, superiority to classical baselines,
+or quantum advantage.

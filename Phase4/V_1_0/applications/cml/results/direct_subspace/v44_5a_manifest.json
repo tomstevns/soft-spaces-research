@@ -1,0 +1,17 @@
+{
+  "version": "v44.5a",
+  "status": "TECHNICALLY EVALUABLE",
+  "top_k": 256,
+  "frozen_r": 16,
+  "transportable_coordinates": 256,
+  "retained_projector_mass": 16.0,
+  "retained_projector_fraction": 1.0,
+  "external_outcomes_used": false,
+  "sha256": {
+    "v44_5_protocol": "4a1131926769a8cfb1bf2007628da21299e5c9fc0021e9bc1184eec25af93114",
+    "eligible_universe": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "frozen_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "transport_audit": "9d1cfadf24a7ae878dceaed35eb6932b9d33f9e24344aa779bef552522147067",
+    "execution_script": "084890e4646a7e1e73888fd3512208e636d6b03f622626361f8c0f8a6d1b6745"
+  }
+}

@@ -1,0 +1,96 @@
+Soft Spaces / CML
+v47.4 — STATE-LANDSCAPE RESAMPLING STABILITY PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE RESAMPLING EXECUTION
+
+PURPOSE
+-------
+Test whether the v47.3 clinical-group separation remains present when the
+label-blind state landscape is repeatedly rebuilt on different subsets of
+GSE130404 patients.
+
+RESAMPLING
+----------
+Repeated stratified subsampling without replacement.
+
+Number of resamples:
+    300
+
+Fraction:
+    0.80
+
+Per resample:
+    GOOD / 3-month BCR-ABL1 <10%: 66
+    POOR / 3-month BCR-ABL1 >10%: 10
+    total: 76
+
+The labels are used only to preserve group counts during resampling and for
+the later overlay test.
+
+They are NOT used for feature selection, standardization or PCA.
+
+LANDSCAPE REBUILD IN EACH RESAMPLE
+----------------------------------
+1. restrict to the frozen v44 transport-aware 15,890-gene universe;
+2. select Top-256 by raw variance in the resampled patients, label-blind;
+3. cohort z-standardize each selected gene, ddof=0;
+4. fit PCA-16, label-blind;
+5. only then overlay the frozen 3-month clinical labels.
+
+PRIMARY RESAMPLE EFFECT
+-----------------------
+Observed Euclidean distance between the GOOD and POOR centroids in PCA-16.
+
+WITHIN-RESAMPLE NULL
+--------------------
+Randomly permute the labels 500 times while preserving
+the same class counts.
+
+For each resample:
+
+    z_null =
+        (observed_distance - mean(null_distance))
+        / sd(null_distance)
+
+PRIMARY STABILITY RULE
+----------------------
+PASS requires BOTH:
+
+1. median z_null > 1.644853626951
+
+AND
+
+2. fraction of resamples with z_null > 0 >= 0.75
+
+The first criterion corresponds to a typical one-sided 5% normal-reference
+separation at the median resample.
+
+The second requires the direction of excess separation to persist in at
+least 75% of resamples.
+
+SECONDARY DESCRIPTIVES
+----------------------
+Report:
+- median observed centroid distance
+- median null distance
+- median empirical within-resample p
+- fraction with empirical p <= 0.05
+- z_null quantiles
+- Top-256 feature-overlap statistics relative to the original v47.2 Top-256
+
+CLAIM LIMIT
+-----------
+A PASS supports resampling robustness of the label-blind state-geometry
+separation inside GSE130404.
+
+It does NOT establish:
+- independent external replication
+- prediction
+- prognosis
+- clinical utility
+- causal biology
+- dormancy mechanism
+- quantum biology
+- quantum advantage

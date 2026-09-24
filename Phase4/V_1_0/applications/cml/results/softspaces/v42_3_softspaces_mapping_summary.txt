@@ -1,0 +1,38 @@
+=== Soft Spaces / CML v42.3 DEVELOPMENT MAPPING ===
+
+DESIGN
+------
+Development cohort: GSE130404
+External cohort used: NO
+Frozen v42.2 splits reused: YES
+Top-256 raw training-fold variance pool reused: YES
+Soft-Spaces r grid: 4, 8, 16
+Panel K grid: 8, 16, 32
+Primary selection metric: mean held-out PR-AUC
+Matched NULL test: NOT YET
+
+GRID RESULTS
+------------
+r= 4 K= 8 | PR-AUC 0.374114 | ROC-AUC 0.669203 | BA 0.608548 | Sens 0.535000 | Spec 0.682096
+r= 4 K=16 | PR-AUC 0.395943 | ROC-AUC 0.690686 | BA 0.638235 | Sens 0.540000 | Spec 0.736471
+r= 4 K=32 | PR-AUC 0.424381 | ROC-AUC 0.697708 | BA 0.629957 | Sens 0.478333 | Spec 0.781581
+r= 8 K= 8 | PR-AUC 0.315418 | ROC-AUC 0.563603 | BA 0.528376 | Sens 0.408333 | Spec 0.648419
+r= 8 K=16 | PR-AUC 0.307809 | ROC-AUC 0.578664 | BA 0.527678 | Sens 0.348333 | Spec 0.707022
+r= 8 K=32 | PR-AUC 0.375004 | ROC-AUC 0.654081 | BA 0.612831 | Sens 0.425000 | Spec 0.800662
+r=16 K= 8 | PR-AUC 0.175536 | ROC-AUC 0.374841 | BA 0.407426 | Sens 0.230000 | Spec 0.584853
+r=16 K=16 | PR-AUC 0.242002 | ROC-AUC 0.534424 | BA 0.489369 | Sens 0.273333 | Spec 0.705404
+r=16 K=32 | PR-AUC 0.288200 | ROC-AUC 0.618444 | BA 0.506391 | Sens 0.223333 | Spec 0.789449
+
+DEVELOPMENT-ONLY SELECTION
+--------------------------
+Selected r: 4
+Selected K: 32
+Selected mean PR-AUC: 0.424381
+Selected mean ROC-AUC: 0.697708
+Selected balanced accuracy: 0.629957
+
+IMPORTANT
+---------
+This is NOT yet a Soft-Spaces success claim.
+The selected r,K must now be frozen and tested against matched NULL
+in v42.4 on the same frozen folds.

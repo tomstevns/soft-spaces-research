@@ -1,0 +1,22 @@
+=== Soft Spaces / CML v50 FINAL SUMMARY ===
+
+Final planned structural test:
+    COMPLETED
+
+Primary special-direction test:
+    FAIL
+
+Patient-resampling robustness:
+    FAIL
+
+FINAL STRUCTURAL RESULT:
+    SPECIAL LOCAL CHANGE-DIRECTION STRUCTURE NOT SUPPORTED
+
+CML STRUCTURAL EXPLORATION:
+    CLOSED
+
+Protocol SHA:
+    9bc94fb9c3bd929dfe52faa5211205ca6a421d9de76a96db9de48fccd35c5d97
+
+Closure SHA:
+    3053f00091db5d4545f34988bd3a988703e9d1717949596c6c009e35a8eef368

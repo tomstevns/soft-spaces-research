@@ -1,0 +1,26 @@
+{
+  "version": "v47.4",
+  "status": "STABILITY PASS",
+  "n_resamples": 300,
+  "patients_per_resample": 76,
+  "good_per_resample": 66,
+  "poor_per_resample": 10,
+  "n_permutations_per_resample": 500,
+  "median_z_null": 2.101031854313865,
+  "median_z_pass_threshold": 1.6448536269514722,
+  "positive_z_fraction": 1.0,
+  "positive_fraction_threshold": 0.75,
+  "fraction_empirical_p_le_0_05": 0.6166666666666667,
+  "median_empirical_p": 0.03992015968063872,
+  "median_top256_overlap": 237.0,
+  "mean_top256_overlap": 236.86333333333334,
+  "median_top256_jaccard": 0.8618181818181818,
+  "median_pca16_cumulative_variance": 0.881848459585199,
+  "classifier_fitted": false,
+  "external_replication": false,
+  "protocol_sha256": "a9bf1d80cf872a0ea5f2e8a3a8dded2d9181b59bdc09dfd64bc50df5cb25049c",
+  "sha256": {
+    "resampling_results": "22d180673b9db522254cbfa066cff1a1558f7028db3ec48237ed54d616f72257",
+    "execution_script": "ee78c56f6f791a59da61bb94482fc30295808177bdf9fa463f9c704e455a8829"
+  }
+}

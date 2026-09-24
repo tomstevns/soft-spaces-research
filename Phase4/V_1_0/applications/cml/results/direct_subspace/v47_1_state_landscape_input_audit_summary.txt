@@ -1,0 +1,22 @@
+=== Soft Spaces / CML v47.1 STATE-LANDSCAPE INPUT AUDIT ===
+
+v47.0 protocol SHA verified: 3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25
+
+LABEL USE
+---------
+Outcome labels used: NO
+PCA fitted: NO
+Predictive model fitted: NO
+
+TRANSPORT-AWARE UNIVERSE
+------------------------
+Eligible gene file: C:\Users\tomst\PycharmProjects\SoftSpaces_Phase2\Phase4\V_1_0\applications\cml\results\direct_subspace\v44_1b_eligible_genes.txt
+Eligible genes: 15890
+
+GSE130404 MATRIX CANDIDATES
+--------------------------
+No sufficiently large existing GSE130404 matrix located.
+
+STATUS: INPUT MATRIX RESOLUTION REQUIRED
+
+Do not construct the landscape yet.

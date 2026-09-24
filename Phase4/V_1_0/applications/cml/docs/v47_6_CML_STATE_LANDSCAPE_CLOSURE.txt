@@ -1,0 +1,346 @@
+Soft Spaces / CML
+v47.6 — STATE-LANDSCAPE TRACK CLOSURE
+
+STATUS
+------
+CLOSED
+
+FINAL CONCLUSION
+----------------
+INTERNAL GEOMETRIC SIGNAL SUPPORTED
+INTERNAL RESAMPLING STABILITY SUPPORTED
+EXTERNAL CROSS-ENDPOINT REPLICATION NOT CONFIRMED
+
+The v47 CML State-Landscape track is closed without rescue tuning.
+
+SCIENTIFIC QUESTION
+-------------------
+v47 tested whether clinically meaningful CML states occupy non-random
+regions of a molecular expression geometry that is constructed WITHOUT
+using the clinical outcome labels.
+
+This differs from the earlier predictor track.
+
+The central object in v47 is:
+    label-blind state geometry
+
+not:
+    a transported or fitted outcome classifier
+
+v47.0 — PREREGISTRATION
+-----------------------
+The state-landscape hypothesis was frozen before construction.
+
+Frozen principle:
+1. define the molecular coordinate system without outcome labels;
+2. construct low-dimensional state geometry without outcome labels;
+3. freeze that geometry;
+4. only then attach clinical labels;
+5. test whether the labels occupy the geometry non-randomly.
+
+v47.2 — LABEL-BLIND DEVELOPMENT GEOMETRY
+----------------------------------------
+Cohort:
+    GSE130404
+
+Samples:
+    96
+
+Transport-aware eligible universe:
+    15,890 genes
+
+Feature selection:
+    Top-256 raw variance
+    outcome labels not used
+
+State space:
+    PCA-16
+    outcome labels not used
+
+PCA-16 cumulative explained variance:
+    0.871397
+
+Geometry status:
+    FROZEN
+
+Geometry SHA256:
+    44f0eb8670a03540f4ea829387d980135471e7c679754575e8a4e868904677f4
+
+Interpretation:
+A high-variance, low-dimensional label-blind molecular state representation
+could be constructed before clinical labels were introduced.
+
+No biological basin, attractor, dormancy mechanism or causal transition
+was established by this construction alone.
+
+v47.3 — INTERNAL CLINICAL-LABEL OVERLAY
+---------------------------------------
+Clinical split:
+    3-month BCR-ABL1 <10%: 83
+    3-month BCR-ABL1 >10%: 13
+
+Primary metric:
+    Euclidean distance between group centroids in frozen PCA-16 geometry
+
+Observed centroid distance:
+    7.877400621
+
+Permutation NULL mean:
+    4.279949029
+
+Permutations:
+    10,000
+
+Empirical one-sided p:
+    0.016198380
+
+STATUS:
+    PRIMARY LANDSCAPE SEPARATION PASS
+
+Interpretation:
+The independently defined clinical groups occupied more separated regions
+of the already-frozen label-blind development geometry than expected under
+random label assignment.
+
+This was an internal geometric association, not prediction.
+
+v47.4 — INTERNAL RESAMPLING STABILITY
+-------------------------------------
+Resamples:
+    300
+
+Patients per resample:
+    76
+    66 GOOD
+    10 POOR
+
+Within every resample:
+- Top-256 reselected label-blind
+- standardization refit label-blind
+- PCA-16 refit label-blind
+- 500 label permutations
+- no classifier fitted
+
+Median NULL-z:
+    2.101032
+
+Frozen threshold:
+    > 1.644854
+
+Fraction with NULL-z > 0:
+    1.000000
+
+Frozen threshold:
+    >= 0.750000
+
+Fraction with empirical p <= 0.05:
+    0.616667
+
+Median Top-256 overlap with original:
+    237.0 / 256
+
+Median Top-256 Jaccard:
+    0.861818
+
+STATUS:
+    STABILITY PASS
+
+Interpretation:
+The internal label-blind state-landscape separation was robust to repeated
+patient subsampling and complete label-blind reconstruction of the
+development landscape.
+
+This remains internal resampling evidence, not independent replication.
+
+v47.5 — FIRST EXTERNAL EXECUTION ATTEMPT
+----------------------------------------
+External cohort:
+    GSE44589 / GPL570
+
+The first v47.5 execution reproduced a known historical parser failure mode:
+all 198 samples were incorrectly interpreted as baseline.
+
+Observed erroneous parser counts:
+    baseline: 198
+    MMR: 98
+    no-MMR: 0
+    unavailable: 11
+    unresolved: 89
+
+The script stopped at the frozen sample-count gate.
+
+IMPORTANT:
+No external landscape was constructed.
+No clinical geometry score was calculated.
+No external primary outcome was observed.
+
+This run is preserved as:
+    PARSER ABORT BEFORE SCORING
+
+It is neither a scientific PASS nor a scientific FAIL.
+
+v47.5b — CORRECTED EXTERNAL EXECUTION
+-------------------------------------
+The scientific v47.5 protocol was NOT changed.
+
+Only the sample-specific parser was corrected.
+
+v47.5 protocol SHA256:
+    18a7d08ec83b8d25d750d946a88d494128f08bc05eb5361b52168a9f0803f265
+
+Corrected sample counts:
+    total: 198
+    baseline pretreatment: 135
+    post 6 weeks: 63
+
+Baseline:
+    MMR: 69
+    none / no-MMR: 59
+    unavailable: 7
+
+Evaluable clinical overlay:
+    128
+
+External transport-aware eligible universe:
+    15,890 genes
+
+Measurable eligible genes:
+    15,884
+
+External label-blind Top-K:
+    256
+
+External state space:
+    PCA-16
+
+PCA-16 cumulative explained variance:
+    0.870045
+
+Outcome labels used in external geometry:
+    NO
+
+External geometry SHA256:
+    dc094bb0a0f6b80a89fdedc6c307d2752184ae8281aa515f15a2d96ed61c9943
+
+PRIMARY EXTERNAL TEST
+---------------------
+Observed centroid distance:
+    3.431798879
+
+Permutation NULL mean:
+    2.526454521
+
+Observed NULL-z:
+    +1.040323
+
+Permutations:
+    10,000
+
+Empirical one-sided p:
+    0.142985701
+
+Frozen PASS rule:
+    p <= 0.05
+
+STATUS:
+    EXTERNAL LANDSCAPE REPLICATION FAIL
+
+The observed centroid distance remained above the NULL mean, but the
+preregistered external test was not statistically significant.
+
+Therefore the external state-landscape replication claim is NOT supported.
+
+CROSS-COHORT FEATURE COMPOSITION
+--------------------------------
+GSE130404 Top-256 vs GSE44589 Top-256 overlap:
+    96 / 256
+
+Jaccard:
+    0.230769
+
+This is descriptive only.
+
+The relatively limited exact Top-256 overlap may motivate a future,
+separately preregistered hypothesis about higher-level geometric invariance,
+but it does NOT rescue the failed v47.5b external test.
+
+WHAT v47 SUPPORTS
+-----------------
+1. GSE130404 contains a label-blind low-dimensional state geometry in which
+   the frozen 3-month BCR-ABL1 groups are more separated than expected by
+   random label assignment.
+
+2. That internal group-separation signal is robust under repeated
+   subsampling and complete label-blind landscape reconstruction.
+
+3. The signal is therefore not explained solely by one fixed PCA fit or one
+   fixed Top-256 feature list inside GSE130404.
+
+WHAT v47 DOES NOT SUPPORT
+-------------------------
+1. Independent external confirmation of the clinical-group separation.
+
+2. Exact endpoint replication.
+
+3. A universal CML response landscape.
+
+4. Clinical prediction or prognostic utility.
+
+5. A causal biological state-transition mechanism.
+
+6. Cancer dormancy or reactivation as an identified mechanism.
+
+7. Quantum biology.
+
+8. Quantum computational advantage.
+
+FINAL INTERPRETATION
+--------------------
+The v47 evidence is internally coherent but externally incomplete.
+
+The strongest defensible statement is:
+
+    A reproducible label-blind molecular state geometry is associated with
+    3-month response groups inside GSE130404, and this association is stable
+    under internal resampling. However, the preregistered independent
+    cross-endpoint replication in GSE44589 failed, so external
+    generalizability of the clinical state separation is not confirmed.
+
+Accordingly:
+
+    INTERNAL GEOMETRIC SIGNAL SUPPORTED
+    INTERNAL RESAMPLING STABILITY SUPPORTED
+    EXTERNAL CROSS-ENDPOINT REPLICATION NOT CONFIRMED
+
+NO-RESCUE DECISION
+------------------
+v47 is closed without:
+- alternative PCA rank
+- alternative kNN neighborhood size
+- outcome-driven feature selection
+- alternative external subgroup selection
+- repeated external dataset shopping
+- post-hoc threshold adjustment
+
+Any future work must begin as a NEW hypothesis and NEW version.
+
+POTENTIAL NEXT HYPOTHESIS
+-------------------------
+A scientifically distinct future track may ask whether the invariant object
+is higher-level geometry rather than exact gene identity or binary outcome
+separation.
+
+Examples of quantities that could be prospectively tested include:
+- subspace-angle structure
+- local spectral structure
+- neighborhood topology
+- covariance geometry
+- transition-direction structure
+- geometry conserved despite changing feature identities
+
+Such work must not be described as a rescue of v47.5b.
+
+TRACK STATUS
+------------
+Soft Spaces / CML v47 State-Landscape:
+    CLOSED

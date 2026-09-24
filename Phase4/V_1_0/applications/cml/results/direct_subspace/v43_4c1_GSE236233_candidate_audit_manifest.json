@@ -1,0 +1,79 @@
+{
+  "version": "v43.4c1",
+  "candidate": "GSE236233",
+  "status": "CANDIDATE ELIGIBLE FOR TECHNICAL FOLLOW-UP",
+  "geo_sample_records": 17,
+  "detected_patient_n": 9,
+  "patient_ids": [
+    "CML1",
+    "CML2",
+    "CML3",
+    "CML4",
+    "CML5",
+    "CML6",
+    "CML7",
+    "CML8",
+    "CML9"
+  ],
+  "patient_population_table": {
+    "CML1": [
+      "Lin-CD34+"
+    ],
+    "CML2": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML3": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML4": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML5": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML6": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML7": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML8": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ],
+    "CML9": [
+      "Lin-CD34+",
+      "Lin-CD34+CD38-"
+    ]
+  },
+  "population_counts": {
+    "Lin-CD34+": 9,
+    "Lin-CD34+CD38-": 8
+  },
+  "platform_counts": {
+    "GPL24676": 17
+  },
+  "organism_counts": {
+    "Homo sapiens": 17
+  },
+  "library_strategy_counts": {
+    "RNA-Seq": 17
+  },
+  "instrument_counts": {
+    "Illumina NovaSeq 6000": 17
+  },
+  "supplementary_file_references": 17,
+  "external_predictive_performance_evaluated": false,
+  "statistical_unit": "patient",
+  "correction_from_v43_4c": "patient regex changed from \\b(CML\\d+)\\b to (CML\\d+)",
+  "sha256": {
+    "geo_family_soft": "9cfb94795ebe2b4fc40a24288e1390526b1c968f824a39da3440c939f27945e4",
+    "execution_script": "8b4e25b04ab609bae7a05be89c22f36a01fa51fc7749425bbbf503074c4a4b7e"
+  }
+}

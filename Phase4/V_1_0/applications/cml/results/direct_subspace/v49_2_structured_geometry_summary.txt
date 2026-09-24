@@ -1,0 +1,73 @@
+=== v49.2 STRUCTURED BIOLOGICAL-CONTROL GEOMETRY TEST ===
+
+Protocol SHA:
+    7324504908a8f71d70a07c3f9e4a02554792325bf94b2a85eda5f9ebe39bc12a
+
+Clinical labels used:
+    NO
+
+Control genes:
+    REAL genes with untouched patient-level covariance
+
+Control rank pool:
+    257..2048
+
+NULL triads:
+    1000
+
+OBSERVED
+--------
+AB spectrum cosine:
+    0.994119416
+
+AC spectrum cosine:
+    0.979732031
+
+BC spectrum cosine:
+    0.980944403
+
+Observed minimum pairwise cosine:
+    0.979732031
+
+AB distance W1:
+    0.038547991
+
+AC distance W1:
+    0.085676247
+
+BC distance W1:
+    0.051587358
+
+Observed maximum pairwise W1:
+    0.085676247
+
+SPECTRAL PRIMARY GATE
+---------------------
+NULL mean minimum cosine:
+    0.972286366
+
+NULL q95:
+    0.986227944
+
+Empirical p:
+    0.245754246
+
+Gate:
+    FAIL
+
+DISTANCE PRIMARY GATE
+---------------------
+NULL mean maximum W1:
+    0.080804622
+
+NULL q05:
+    0.067560422
+
+Empirical p:
+    0.726273726
+
+Gate:
+    FAIL
+
+v49.2 STATUS:
+    STRUCTURED-NULL PRIMARY FAIL

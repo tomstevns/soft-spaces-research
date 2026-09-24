@@ -1,0 +1,21 @@
+=== Soft Spaces / CML v44.1 TRANSPORT-AWARE UNIVERSE PRECHECK ===
+
+External response outcomes used: NO
+
+PRIOR v43 TOP-256 DIAGNOSTIC
+---------------------------
+GPL570 transportable: 214
+GSE236233 all-9 present: 193
+Cross-platform intersection: 188
+
+STATUS
+------
+FULL-UNIVERSE REBUILD REQUIRED
+
+The old audit tables contain only the prior v43 Top-256.
+They are not sufficient to define the full v44 eligible universe.
+
+NEXT
+----
+Use v44.1b to rebuild the full development universe outcome-blind
+from GPL10558, GPL570 and the downloaded GSE236233 feature tables.

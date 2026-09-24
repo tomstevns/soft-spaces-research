@@ -1,0 +1,40 @@
+{
+  "version": "v46.2",
+  "status": "FAIL",
+  "dataset": "GSE14671",
+  "sample_n": 59,
+  "positive_n": 18,
+  "negative_n": 41,
+  "positive_prevalence": 0.3050847457627119,
+  "frozen_top_k": 256,
+  "observed_coordinate_n": 255,
+  "missing_coordinate_n": 1,
+  "missing_genes": [
+    "PTPN20"
+  ],
+  "lost_projector_mass_fraction": 0.002204177507739407,
+  "lost_classifier_weight_fraction": 0.0012671150214078359,
+  "max_lost_projector_mass_fraction": 0.01,
+  "max_lost_classifier_weight_fraction": 0.01,
+  "missing_coordinate_representation": "z=0",
+  "pr_auc": 0.32659055009060367,
+  "pr_auc_minus_prevalence": 0.021505804327891787,
+  "roc_auc": 0.5338753387533876,
+  "balanced_accuracy": 0.5013550135501355,
+  "sensitivity": 0.2222222222222222,
+  "specificity": 0.7804878048780488,
+  "mean_positive_score": 0.2264463231235071,
+  "mean_negative_score": 0.22648396010889124,
+  "direction_preserved": false,
+  "external_refit": false,
+  "outcome_driven_preprocessing": false,
+  "gene_substitution": false,
+  "threshold_tuning": false,
+  "sha256": {
+    "v46_1_protocol": "9536c2e1e69389eb7c1dedaef7028174647e5ed4925d459576494e5da7e59d4f",
+    "v44_5a_model": "8af02f20f4a13f83a75585fe87559d45d1ecc04c9229473e5e5bddd4bf5799d9",
+    "standardized_matrix": "76889ccd1faf19ea24c5b4a104d6dc7bdcc7c29584f0aeb75210a85b05156bb6",
+    "patient_scores": "7f206e957fa2155737ffab9ab30061e44761d6e7935d7cf5021e4aea6951d686",
+    "execution_script": "e5c81753c7ed204b8b0cc180ab834b190c4948de937e3e344ba2d6f0cf50dd8f"
+  }
+}

@@ -1,0 +1,19 @@
+=== Soft Spaces / CML v45.2b PTPN20 RESOLUTION AUDIT ===
+
+SCOPE
+-----
+Outcome labels used: NO
+Predictive scores used: NO
+Model refit: NO
+
+Target gene:                     PTPN20
+GPL570 annotation rows:          54675
+Annotation rows containing PTPN20 token: 0
+Unique supported probe hits:     0
+
+v45.2b STATUS: UNRESOLVED
+
+No annotation-supported GPL570 probe for PTPN20 was found.
+
+v45 remains TECHNICALLY NON-EVALUABLE.
+Do not delete or replace PTPN20.

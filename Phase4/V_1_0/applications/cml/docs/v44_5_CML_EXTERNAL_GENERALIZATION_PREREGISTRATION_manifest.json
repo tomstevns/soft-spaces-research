@@ -1,0 +1,16 @@
+{
+  "version": "v44.5",
+  "status": "FROZEN_BEFORE_EXTERNAL_RESPONSE_SCORING",
+  "primary_external_cohort": "GSE44589",
+  "primary_external_population": "pretreatment/baseline",
+  "expected_evaluable_n": 128,
+  "positive_class": "no MMR / poor response",
+  "negative_class": "MMR",
+  "secondary_external_cohort": "GSE236233",
+  "frozen_rank": 16,
+  "top_k": 256,
+  "primary_metric": "PR-AUC",
+  "external_outcome_tuning_allowed": false,
+  "protocol_sha256": "4a1131926769a8cfb1bf2007628da21299e5c9fc0021e9bc1184eec25af93114",
+  "authorization_v44_4_manifest_sha256": "c451b09140a2bc638158d04f8cc9ac617a342876d7b7ebaccf1d3ffe9a6be766"
+}

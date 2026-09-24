@@ -1,0 +1,46 @@
+{
+  "version": "v51f.1",
+  "status": "CLOSED",
+  "frozen_panel_genes": [
+    "DNER",
+    "SPIC",
+    "TCL1B",
+    "MMP20",
+    "CKAP2",
+    "RNF183",
+    "MYOCD",
+    "UMODL1",
+    "CTAG2",
+    "HRK",
+    "RGS13",
+    "TCL1A"
+  ],
+  "frozen_panel_n": 12,
+  "cohort_results": {
+    "GSE87371": {
+      "n": 168,
+      "n_abc": 83,
+      "n_gcb": 85,
+      "real_auc": 0.9440852076124568,
+      "null_mean_auc": 0.8664015311418685,
+      "null_q95_auc": 0.956118944636678,
+      "empirical_p": 0.0998003992015968,
+      "pass": false
+    },
+    "GSE159472": {
+      "n": 31,
+      "n_abc": 13,
+      "n_gcb": 18,
+      "real_auc": 0.7298611111111112,
+      "null_mean_auc": 0.6760158333333334,
+      "null_q95_auc": 0.8878055555555557,
+      "empirical_p": 0.3712574850299401,
+      "pass": false
+    }
+  },
+  "overall_pass": false,
+  "final_claim": "DLBCL DISTINCTIVE SIGNAL NOT SUPPORTED",
+  "protocol_sha256": "df308bad3a14f4ada9182c6d280bad10f44376ff0cc3d909bbb422cbc91bdce0",
+  "closure_sha256": "006a129ad4f7323ff36c55cea962d5630de5c54985dc6f290e857685d7356db4",
+  "execution_script_sha256": "200c053292e534d3f71d939c619918797ec367b1b45385a93455ab3a7a885fb4"
+}

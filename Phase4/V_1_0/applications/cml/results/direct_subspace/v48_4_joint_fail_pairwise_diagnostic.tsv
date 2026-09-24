@@ -1,0 +1,4 @@
+pair	spectrum_cosine	distance_w1	is_worst_spectrum_pair	is_worst_distance_pair	is_best_spectrum_pair	is_best_distance_pair
+AB_GSE130404_vs_GSE44589	0.9941194160924803	0.038547990813151134	False	False	True	True
+AC_GSE130404_vs_GSE14671	0.9797320305144459	0.0856762468709371	True	True	False	False
+BC_GSE44589_vs_GSE14671	0.9809444030426108	0.05158735816633059	False	False	False	False

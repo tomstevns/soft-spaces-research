@@ -1,0 +1,15 @@
+{
+  "version": "v47.1",
+  "status": "INPUT_MATRIX_RESOLUTION_REQUIRED",
+  "outcome_labels_used": false,
+  "pca_fitted": false,
+  "predictive_model_fitted": false,
+  "eligible_gene_n": 15890,
+  "eligible_gene_file": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\cml\\results\\direct_subspace\\v44_1b_eligible_genes.txt",
+  "matrix_candidates": [],
+  "sha256": {
+    "v47_0_protocol": "3874a36af23a9f11363270319dd09e5dcff16a12957814ddf48bbf4f8916bd25",
+    "eligible_gene_file": "40303a3c8af7fe5d9498692e7ca55240c2b5ff419552164669d8e56d27fcd068",
+    "execution_script": "6b7342a752a13336b1554381a362b82263123d2d08db51674e36ff49df09f4c2"
+  }
+}

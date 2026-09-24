@@ -1,0 +1,154 @@
+=== Soft Spaces / CML v48.4 JOINT-FAIL DIAGNOSTIC ===
+
+PURPOSE
+-------
+Diagnostic decomposition of the already-frozen v48.3 joint FAIL.
+
+NO new hypothesis.
+NO new thresholds.
+NO tuning.
+NO rescue.
+
+v48.3 FINAL STATUS
+------------------
+Pairwise third-cohort replication:      PASS
+Patient-resampling robustness:          PASS
+Joint three-cohort invariance:           FAIL
+Overall three-cohort invariance claim:  NOT SUPPORTED
+
+FAILURE MODE
+------------
+BOTH JOINT GATES FAILED
+
+PAIRWISE OBSERVED GEOMETRY
+--------------------------
+AB = GSE130404 vs GSE44589
+    spectrum cosine:   0.994119416
+    distance W1:       0.038547991
+
+AC = GSE130404 vs GSE14671
+    spectrum cosine:   0.979732031
+    distance W1:       0.085676247
+
+BC = GSE44589 vs GSE14671
+    spectrum cosine:   0.980944403
+    distance W1:       0.051587358
+
+WORST / BEST PAIRS
+------------------
+Worst spectrum pair:
+    AC_GSE130404_vs_GSE14671
+
+Best spectrum pair:
+    AB_GSE130404_vs_GSE44589
+
+Worst distance pair:
+    AC_GSE130404_vs_GSE14671
+
+Best distance pair:
+    AB_GSE130404_vs_GSE44589
+
+JOINT SPECTRAL GATE
+-------------------
+Observed minimum pairwise cosine:
+    0.979732031
+
+NULL q95:
+    0.999664702
+
+Absolute margin (observed - threshold):
+    -0.019932671
+
+Relative margin:
+    -1.994%
+
+Empirical p:
+    1.000000000
+
+Descriptive NULL mean:
+    0.999136646
+
+Descriptive signed NULL-z:
+    -47.042295
+
+Observed percentile within joint NULL:
+    0.000%
+
+Spectral joint gate:
+    FAIL
+
+JOINT DISTANCE-GEOMETRY GATE
+----------------------------
+Observed maximum pairwise W1:
+    0.085676247
+
+NULL q05:
+    0.007643269
+
+Margin in PASS direction (threshold - observed):
+    -0.078032978
+
+Relative margin:
+    -1020.937%
+
+Empirical p:
+    1.000000000
+
+Descriptive NULL mean:
+    0.019599574
+
+Descriptive signed NULL-z:
+    -8.638964
+
+Percent of NULL max-W1 >= observed:
+    0.000%
+
+Distance joint gate:
+    FAIL
+
+EXISTING RESAMPLING CONTEXT
+---------------------------
+AC spectrum:
+    median z = 48.604650
+    q2.5 = 37.091438
+    q97.5 = 74.943884
+    positive fraction = 1.000000
+
+AC distance:
+    median z = 15.300908
+    q2.5 = 11.243899
+    q97.5 = 20.764092
+    positive fraction = 1.000000
+
+BC spectrum:
+    median z = 51.439220
+    q2.5 = 40.144967
+    q97.5 = 80.199897
+    positive fraction = 1.000000
+
+BC distance:
+    median z = 15.658546
+    q2.5 = 11.517081
+    q97.5 = 21.153510
+    positive fraction = 1.000000
+
+DIAGNOSTIC INTERPRETATION
+-------------------------
+The v48.3 pairwise and resampling results remain unchanged.
+
+The joint claim failed because the preregistered worst-pair aggregate
+criterion was not satisfied.
+
+This diagnostic identifies exactly which pair controlled each worst-case
+joint statistic and how far that statistic lay from its preregistered
+NULL boundary.
+
+It does NOT convert the v48.3 joint FAIL into a PASS.
+
+The correct scientific status remains:
+
+    PAIRWISE THIRD-COHORT REPLICATION: SUPPORTED
+    PATIENT-RESAMPLING ROBUSTNESS: SUPPORTED
+    JOINT THREE-COHORT INVARIANCE: NOT SUPPORTED
+
+No rescue inference is made.

@@ -1,0 +1,27 @@
+{
+  "version": "v42.4",
+  "development_cohort": "GSE130404",
+  "selected_r": 4,
+  "selected_k": 32,
+  "n_null": 1000,
+  "master_seed": 4204001,
+  "primary_metric": "mean held-out PR-AUC",
+  "real_mean_pr_auc": 0.42438117708028705,
+  "null_mean_pr_auc": 0.44197347361783523,
+  "delta_pr_auc": -0.01759229653754818,
+  "empirical_p_pr_auc": 0.8261738261738262,
+  "real_mean_roc_auc": 0.6977083333333333,
+  "null_mean_roc_auc": 0.723776225490196,
+  "delta_roc_auc": -0.026067892156862782,
+  "empirical_p_roc_auc": 0.974025974025974,
+  "status": "FAIL",
+  "external_used": false,
+  "sha256": {
+    "frozen_design": "3d397a9a5edec39c4809abf95daf031960d6f4caf14314492c17f3606b480fe2",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "v42_3_manifest": "4478480306ed9f2fb92c52deee7849b62eb4865ff1a9f58d64cc82d63c41785b",
+    "series_matrix": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+    "platform_table": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "execution_script": "f3485be09929ed51d6cdb5a61856fddd3d2a2aaecd814ea1369d54a3f82b1435"
+  }
+}

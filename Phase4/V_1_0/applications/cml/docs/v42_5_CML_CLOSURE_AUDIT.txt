@@ -1,0 +1,62 @@
+Soft Spaces / CML
+v42.5 — FEATURE-SELECTION TRACK CLOSURE AUDIT
+
+STATUS
+------
+CLOSED
+
+PURPOSE
+-------
+Freeze the scientific status of the CML feature-selection branch after v42.4.
+No new modeling or hypothesis testing is performed.
+
+RESULT CHAIN
+------------
+v42.2 classical baselines:
+- best mean PR-AUC = 0.586677 (linear SVM)
+- best mean ROC-AUC = 0.847990
+- random PR-AUC reference = 0.135417
+
+v42.3 Soft-Spaces feature-selection development:
+- selected r = 4
+- selected K = 32
+- mean PR-AUC = 0.424381
+- mean ROC-AUC = 0.697708
+
+v42.4 matched-NULL validation:
+- REAL PR-AUC = 0.424381
+- NULL mean PR-AUC = 0.441973
+- delta = -0.017592
+- empirical one-sided p = 0.826174
+- REAL ROC-AUC = 0.697708
+- NULL mean ROC-AUC = 0.723776
+- empirical one-sided p = 0.974026
+- STATUS = FAIL
+
+SCIENTIFIC CONCLUSION
+---------------------
+The GSE130404 development cohort contains predictive signal, but the tested
+Soft-Spaces feature-selection pipeline did not outperform matched random
+K=32 panels drawn from the same frozen Top-256 training-fold pool.
+
+The failed hypothesis is specifically:
+
+    H -> P_r -> p_g(1-p_g) -> top-K genes -> classifier
+
+This does NOT test whether direct use of P_r as a low-dimensional patient
+representation is informative.
+
+EXTERNAL STATUS
+---------------
+GSE44589 was not tested because the internal REAL-vs-NULL gate failed.
+
+CLOSURE STATUS
+--------------
+CML FEATURE-SELECTION TRACK: INTERNAL VALIDATION FAIL
+CLASSICAL CML SIGNAL: PRESENT
+EXTERNAL TEST: NOT PERFORMED
+
+NEXT
+----
+A new, separately versioned hypothesis may test direct projection into P_r.
+That is v43 and is not a reinterpretation or rescue of v42.4.

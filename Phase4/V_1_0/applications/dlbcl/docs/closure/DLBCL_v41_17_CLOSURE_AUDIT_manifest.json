@@ -1,0 +1,61 @@
+{
+  "version": "v41.17",
+  "purpose": "DLBCL closure/evidence audit",
+  "new_hypothesis_testing": false,
+  "closure_status": "PROMISING STRUCTURAL SIGNAL; NO CONFIRMED EXTERNAL MODULE-TRANSFER CLAIM",
+  "parsed_key_results": {
+    "v41_12b_real_jaccard": 0.07069,
+    "v41_12b_null_jaccard": 0.027492,
+    "v41_12b_mean_frozen_overlap": 0.23,
+    "v41_13_subspace_real": 0.317265,
+    "v41_13_subspace_null": 0.194274,
+    "v41_13_corr_real": 0.442062,
+    "v41_13_corr_null": 0.33689,
+    "v41_14_GSE87371_corr_p": 0.103896,
+    "v41_14_GSE87371_top4_p": 0.0979021,
+    "v41_15x_top4_real": 0.865863,
+    "v41_15x_top4_null": 0.632864,
+    "v41_15x_top4_p": 0.00749925,
+    "v41_16_top4_real": 0.689759,
+    "v41_16_top4_null": 0.561296,
+    "v41_16_top4_p": 0.0784922,
+    "v41_16_status": "FAIL"
+  },
+  "artifacts": {
+    "v41_12b": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_12b_feature_stability_summary.txt",
+      "sha256": "2305218f2ba8fe0d8363407a20b4ae3d8a12e97c12d96fae264ce2dc3182e6c2",
+      "bytes": 2536
+    },
+    "v41_13": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_13_module_subspace_stability_summary.txt",
+      "sha256": "5e082c0c2825d0b28602fcdc08695655a1852a8f6f5d6265aaae6bed39a49868",
+      "bytes": 2060
+    },
+    "v41_14": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_14_external_module_transfer_summary.txt",
+      "sha256": "6ec9feccdd079edb9657e20370bce1d9cd7c8440910ddbfbe0a1c14c4a578852",
+      "bytes": 3830
+    },
+    "v41_15_mapping": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_15_mapping_audit.csv",
+      "sha256": "c67a3950b4b497ed887d0ddee369c522b76869653dbb9cc24f93c7956dfeb37d",
+      "bytes": 1589
+    },
+    "v41_15x": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_15x_exploratory_summary.txt",
+      "sha256": "dcd50e73549d1bf57e29257af19e9f6aaa1882cdd8e740dc4a7b43576de1c7ef",
+      "bytes": 1858
+    },
+    "v41_16_mapping": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_16_mapping_audit.csv",
+      "sha256": "ac3f0e73266c9dc208026d5c76edffd61b12edf9a9d882bb781099026d52522c",
+      "bytes": 1163
+    },
+    "v41_16": {
+      "path": "C:\\Users\\tomst\\PycharmProjects\\SoftSpaces_Phase2\\Phase4\\V_1_0\\applications\\dlbcl\\results\\stability\\v41_16_external_replication_summary.txt",
+      "sha256": "67af161330572e70818afb734fafaff7d77bff5c6e5de3f81d368301d0a883af",
+      "bytes": 1845
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "v43.2",
+  "development_cohort": "GSE130404",
+  "frozen_r": 16,
+  "n_null": 1000,
+  "primary_metric": "mean held-out PR-AUC",
+  "real_mean_pr_auc": 0.4551221659747202,
+  "null_mean_pr_auc": 0.38777057639922713,
+  "delta_pr_auc": 0.06735158957549309,
+  "empirical_p_pr_auc": 0.000999000999000999,
+  "real_mean_roc_auc": 0.7258946078431373,
+  "null_mean_roc_auc": 0.684224987745098,
+  "delta_roc_auc": 0.04166962009803932,
+  "empirical_p_roc_auc": 0.002997002997002997,
+  "status": "PASS",
+  "external_used": false,
+  "sha256": {
+    "v43_0_protocol": "f32741ca64d2bc6c015374b0e5e0b25cf5820141d57bd3e5ba8a53a94a097059",
+    "v43_1_manifest": "19a54c3de315b11c464c7ae1058fdd2c168e1f423314da3c88daaa7a13338d42",
+    "v42_2_cv_splits": "eb015c1a08e4401f69dbccb1dd77b92c82f7f8ac8bf2d0759974349825eff709",
+    "series_matrix": "15e94adf97085aacc97b41626986b697403e8c9a01e7979224284527ec4624dc",
+    "platform_table": "3c7bcae20276e8bf564d9644d6e9a6cb1092c273190284c1e87c92ef023c99a1",
+    "execution_script": "53d051fa4e4e497fbf578744748768aa36c9e70e419a034a234a12ee60a4bd92"
+  }
+}

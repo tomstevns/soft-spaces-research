@@ -1,0 +1,60 @@
+=== Soft Spaces / CML v46.2 GSE14671 MASS-AWARE EXTERNAL TEST ===
+
+PROTOCOL
+--------
+v46.1 SHA:                       9536c2e1e69389eb7c1dedaef7028174647e5ed4925d459576494e5da7e59d4f
+
+TECHNICAL TRANSPORT
+-------------------
+Frozen Top-K:                    256
+Observed coordinates:            255
+Accepted missing coordinates:    1
+Missing genes:                   PTPN20
+Lost projector mass percent:     0.220417751%
+Allowed maximum:                 1.000000%
+Lost classifier weight percent:  0.126711502%
+Allowed maximum:                 1.000000%
+Missing-coordinate representation: z=0
+Technical mass-aware gate:       PASS
+
+EXTERNAL TEST
+-------------
+Samples:                         59
+Poor response positive:          18
+CCyR negative:                   41
+Positive prevalence:             0.305085
+
+PRIMARY
+-------
+PR-AUC:                          0.326591
+PR-AUC - prevalence:             +0.021506
+
+SECONDARY
+---------
+ROC-AUC:                         0.533875
+Balanced accuracy @0.5:          0.501355
+Sensitivity @0.5:                0.222222
+Specificity @0.5:                0.780488
+
+FROZEN DIRECTION
+----------------
+Mean score poor response:        0.226446
+Mean score CCyR:                 0.226484
+Poor response > CCyR:            NO
+
+MODEL INTEGRITY
+---------------
+External refit:                  NO
+Outcome-driven preprocessing:   NO
+Gene substitution:              NO
+Threshold tuning:               NO
+
+v46.2 STATUS: FAIL
+
+INTERPRETATION LIMIT
+--------------------
+This is a cross-endpoint external test under the prospectively frozen
+v46.1 mass-aware transport rule.
+
+It does not establish clinical utility, causal biology, superiority
+to established CML biomarkers, or quantum advantage.

@@ -1,0 +1,116 @@
+=== Soft Spaces / CML v43.4d GSE236233 PSEUDOBULK + GENE COVERAGE AUDIT ===
+
+FROZEN DESIGN
+-------------
+External candidate: GSE236233
+Primary population: Lin-CD34+
+Statistical unit: patient
+Patients: 9
+Patient IDs: CML1, CML2, CML3, CML4, CML5, CML6, CML7, CML8, CML9
+External response labels used: NO
+External predictive performance evaluated: NO
+
+AUTOMATED DATA INGESTION
+------------------------
+Processed GEO archives downloaded automatically: 9
+Total cells across primary samples: 13616
+Smallest patient sample (cells):    346
+Largest patient sample (cells):     4124
+
+PSEUDOBULK
+----------
+Aggregation: raw RNA counts summed across all cells within each
+Lin-CD34+ patient sample.
+Rows in patient-level gene universe: 33514
+
+FROZEN v43 COORDINATE COVERAGE
+------------------------------
+Frozen coordinates:              256
+Present in all 9 patients:       193
+Missing from >=1 patient:        63
+Strict coordinate coverage:      0.753906
+
+FROZEN PROJECTOR MASS
+---------------------
+Total projector mass:            16.000000
+Retained all-patient mass:       11.448809
+Retained projector fraction:     0.715551
+
+v43.4d STRICT STATUS: TECHNICALLY NON-EVALUABLE
+
+MISSING / NON-UNIVERSAL FROZEN GENES
+------------------------------------
+HLA-A29.1
+LOC100133662
+LOC729645
+SDPR
+CYorf15A
+JARID1D
+LOC728835
+CCL4L1
+RNU1G2
+RNU1-5
+RNU1-3
+LOC100134379
+SNORD3C
+IFIT1L
+LOC727908
+LOC654055
+MIR1974
+C21orf7
+SNORD3D
+LOC644936
+LOC642073
+IGJ
+RNU12
+SPRYD5
+KIAA0367
+LOC652493
+LOC647506
+SNORD3A
+LOC100133875
+RNU1A3
+FAIM3
+LOC100133678
+RNU4-1
+MGC13057
+RNU1F1
+HLA-DRB4
+LOC647450
+ABP1
+CCL3L3
+LOC642113
+LOC731682
+LOC653610
+PRSSL1
+IL8RB
+EBI2
+GAPDHL6
+NAT8B
+LOC643332
+RNU11
+C1orf150
+LILRA3
+PRKY
+LOC100132394
+FAM113B
+LOC642103
+HLA-DRB6
+PRAGMIN
+LOC100008588
+LOC653061
+RNU5A
+NAPSB
+CYorf15B
+MGC42367
+
+INTERPRETATION
+--------------
+This is an outcome-blind technical transport audit.
+No response labels were used and no external classifier was scored.
+
+The raw pseudobulk matrix is preserved for the later preregistered
+external analysis if and only if a scientifically valid transport
+rule is frozen before outcome evaluation.
+
+Cells are never treated as independent patients.

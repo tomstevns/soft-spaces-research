@@ -1,0 +1,22 @@
+{
+  "version": "v44.7",
+  "status": "CLOSED",
+  "branch": "CML cross-platform transport-aware direct subspace",
+  "final_status": {
+    "internal_direct_subspace_signal": "SUPPORTED",
+    "internal_stability": "SUPPORTED",
+    "primary_external_cross_endpoint_generalization": "SUPPORTED_MODEST",
+    "secondary_rnaseq_cross_modality": "TECHNICALLY_NON_EVALUABLE",
+    "clinical_claim": "NOT_ESTABLISHED",
+    "quantum_advantage_claim": "NOT_ESTABLISHED"
+  },
+  "closure_sha256": "c2b60ce46f7be903d9efa3b3c5dbe4f3d45e87609c7dd27816d88ee716695230",
+  "source_sha256": {
+    "v44_1b": "d4547ee563909a55ed621209c9e8c7399a2ca260df8e9bfebc064580313d6920",
+    "v44_2": "70426abd84bccc82120b7cf747cb379fb2ed1f0aed6c61f80c426264ab120035",
+    "v44_3": "a8e2dc712c7b57eca8d088f1e0ba3ac8a6b51149b48d2ee50cddf2aa2a7917f0",
+    "v44_4": "c451b09140a2bc638158d04f8cc9ac617a342876d7b7ebaccf1d3ffe9a6be766",
+    "v44_5a": "38aab8a3f45b6d86c67a3da708626f7a53b991f4914674df021bd5de0429b6c1",
+    "v44_5b1": "70b46ab8f6573fef1b34884eea8cd2312c88b3a789744514da7b8c3ac119d4d7"
+  }
+}

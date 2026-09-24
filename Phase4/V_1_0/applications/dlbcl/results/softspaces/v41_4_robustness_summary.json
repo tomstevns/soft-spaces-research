@@ -1,0 +1,125 @@
+{
+  "version": "v41.4-dlbcl-softspaces-robustness-1",
+  "created_utc": "2026-09-17T06:21:52.287426+00:00",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1"
+  },
+  "frozen_design": {
+    "dataset": "GSE10846 ABC vs GCB",
+    "n_samples": 350,
+    "n_genes": 22154,
+    "cv_folds": 15,
+    "cv_source": "results\\baseline\\v41_2_cv_splits.json",
+    "variance_pool": 256,
+    "p_dim": 16,
+    "primary_feature_budget_k": 16,
+    "null_permutations_per_fold": 200,
+    "bootstrap_reps": 100000
+  },
+  "primary_auc": {
+    "real_auc_across_folds": {
+      "mean": 0.8840191796074149,
+      "sd": 0.05657043529350197,
+      "min": 0.7633087633087633,
+      "max": 0.9533169533169533
+    },
+    "null_auc_all_permutations": {
+      "mean": 0.8180283271239153,
+      "sd": 0.08165066829614584,
+      "min": 0.4176904176904177,
+      "max": 0.9893790849673202
+    },
+    "delta_real_minus_fold_null_mean": {
+      "mean": 0.06599085248349956,
+      "sd": 0.048750885965973774,
+      "min": -0.03869369369369369,
+      "max": 0.14488970588235306,
+      "bootstrap95": {
+        "mean": 0.06599085248349956,
+        "ci95_low": 0.04145363306153748,
+        "ci95_high": 0.08910667994197409
+      }
+    },
+    "positive_delta_folds": 14,
+    "negative_delta_folds": 1,
+    "zero_delta_folds": 0,
+    "sign_test_one_sided_p_diagnostic": 0.00048828125,
+    "wilcoxon_one_sided_p_diagnostic": 0.000213623046875,
+    "conditional_global_permutation": {
+      "observed_mean_real_auc": 0.8840191796074149,
+      "null_mean_auc_distribution": {
+        "mean": 0.8180283271239154,
+        "sd": 0.020190195017088238,
+        "min": 0.7675326395914631,
+        "max": 0.8652700829171418
+      },
+      "empirical_one_sided_p": 0.004975124378109453
+    }
+  },
+  "balanced_accuracy": {
+    "real": {
+      "mean": 0.8051987816693699,
+      "sd": 0.06969047932647356,
+      "min": 0.6441441441441441,
+      "max": 0.8988533988533989
+    },
+    "delta_real_minus_fold_null_mean": {
+      "mean": 0.06180300019270608,
+      "sd": 0.06321156668276667,
+      "min": -0.08321867321867327,
+      "max": 0.13240196078431365,
+      "bootstrap95": {
+        "mean": 0.06180300019270608,
+        "ci95_low": 0.02933531666693432,
+        "ci95_high": 0.09101095540727891
+      }
+    }
+  },
+  "spectral_concentration": {
+    "real_topP_abs_fraction": {
+      "mean": 0.32960722188870406,
+      "sd": 0.00870713169016357,
+      "min": 0.30937896968208567,
+      "max": 0.34421880816646466
+    },
+    "delta_real_minus_fold_null_mean": {
+      "mean": 0.01799836754713741,
+      "sd": 0.005040594724042383,
+      "min": 0.0055604183154582265,
+      "max": 0.025260990041244324,
+      "bootstrap95": {
+        "mean": 0.01799836754713741,
+        "ci95_low": 0.015406821022924039,
+        "ci95_high": 0.020320782937675422
+      }
+    },
+    "conditional_global_permutation": {
+      "observed_mean_real": 0.32960722188870406,
+      "null_mean_distribution": {
+        "mean": 0.3116088543415666,
+        "sd": 0.001483295819192471,
+        "min": 0.3075836877324438,
+        "max": 0.31526449307376353
+      },
+      "empirical_one_sided_p": 0.004975124378109453
+    }
+  },
+  "interpretation_limits": [
+    "K=16 was selected after v41.3 on this same dataset.",
+    "Repeated CV folds overlap and are not independent observations.",
+    "Sign/Wilcoxon/bootstrap values are paired robustness diagnostics, not definitive inferential proof.",
+    "External validation on a second cohort is required for independent confirmation.",
+    "The biological H is a proposed operator, not the original physical Hamiltonian.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ],
+  "total_runtime_seconds": 45.09230620000744,
+  "outputs": {
+    "fold_summary": "results\\softspaces\\v41_4_robustness_fold_summary.csv",
+    "null_permutations": "results\\softspaces\\v41_4_null_permutation_metrics.csv.gz"
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "_metadata": {
+    "generated_utc": "2026-09-23T12:03:23.779953+00:00",
+    "script_version": "v50_8",
+    "python_version": "3.9.7"
+  },
+  "input_softspaces_json": "/mnt/c/Users/tomst/PycharmProjects/SoftSpaces_Phase2/Phase5/V_1_0/results/phase23_method_bridge/phase5_v50_7c_summary.json",
+  "benchmark": {
+    "molecule": "H4",
+    "basis": "STO-3G",
+    "geometries": [
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "fixed_sector": "(N_alpha,N_beta)=(2,2)"
+  },
+  "en2_definition": {
+    "score": "|H_ir|^2 / (|H_ii-H_rr| + eps)",
+    "eps": 1e-12,
+    "reference": "minimum diagonal H_ii determinant",
+    "top_k": [
+      2,
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "bridge_definition": {
+    "en2_topk_support": "mean determinant probability of eigenstates (k,k+1) contained in EN2 top-K determinant set",
+    "en2_weighted_score": "pair determinant probability weighted mean EN2 score",
+    "canonical_en2_eigenstate_hotspot_claim": false
+  },
+  "geometry_summary": {
+    "0.75": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 0,
+      "nonpass_pairs": 35,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.0006519302194632401,
+          "median_difference_pass_minus_fail": null
+        },
+        "en2_top2_support": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.001035114126473344,
+          "median_difference_pass_minus_fail": null
+        },
+        "en2_top4_support": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.012402189460835003,
+          "median_difference_pass_minus_fail": null
+        },
+        "en2_top8_support": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.21637620303714808,
+          "median_difference_pass_minus_fail": null
+        },
+        "en2_top12_support": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.31257013895750324,
+          "median_difference_pass_minus_fail": null
+        },
+        "en2_top16_support": {
+          "auc": null,
+          "median_pass": null,
+          "median_fail": 0.4970539890856041,
+          "median_difference_pass_minus_fail": null
+        }
+      }
+    },
+    "1.0": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 2,
+      "nonpass_pairs": 33,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.030303030303030304,
+          "median_pass": 8.712778095471986e-32,
+          "median_fail": 0.0017953714432273344,
+          "median_difference_pass_minus_fail": -0.0017953714432273344
+        },
+        "en2_top2_support": {
+          "auc": 0.13636363636363635,
+          "median_pass": 1.235444053781906e-31,
+          "median_fail": 0.004036792209511516,
+          "median_difference_pass_minus_fail": -0.004036792209511516
+        },
+        "en2_top4_support": {
+          "auc": 0.06060606060606061,
+          "median_pass": 2.7546338608332488e-30,
+          "median_fail": 0.03642829597798036,
+          "median_difference_pass_minus_fail": -0.03642829597798036
+        },
+        "en2_top8_support": {
+          "auc": 0.045454545454545456,
+          "median_pass": 1.1338666117364624e-29,
+          "median_fail": 0.21032265964559016,
+          "median_difference_pass_minus_fail": -0.21032265964559016
+        },
+        "en2_top12_support": {
+          "auc": 0.030303030303030304,
+          "median_pass": 2.3063210781639535e-29,
+          "median_fail": 0.36301579203931944,
+          "median_difference_pass_minus_fail": -0.36301579203931944
+        },
+        "en2_top16_support": {
+          "auc": 0.06060606060606061,
+          "median_pass": 0.0053851257450011295,
+          "median_fail": 0.48797865635976534,
+          "median_difference_pass_minus_fail": -0.48259353061476423
+        }
+      }
+    },
+    "1.25": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 2,
+      "nonpass_pairs": 33,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.5,
+          "median_pass": 0.0025975514064210175,
+          "median_fail": 0.0021464185035262426,
+          "median_difference_pass_minus_fail": 0.0004511329028947749
+        },
+        "en2_top2_support": {
+          "auc": 0.30303030303030304,
+          "median_pass": 5.558896180294513e-31,
+          "median_fail": 0.001645966939124228,
+          "median_difference_pass_minus_fail": -0.001645966939124228
+        },
+        "en2_top4_support": {
+          "auc": 0.45454545454545453,
+          "median_pass": 0.0876753298637358,
+          "median_fail": 0.057238564056580184,
+          "median_difference_pass_minus_fail": 0.030436765807155618
+        },
+        "en2_top8_support": {
+          "auc": 0.5303030303030303,
+          "median_pass": 0.19363175508199656,
+          "median_fail": 0.20406149439307578,
+          "median_difference_pass_minus_fail": -0.010429739311079211
+        },
+        "en2_top12_support": {
+          "auc": 0.5454545454545454,
+          "median_pass": 0.4261564488406268,
+          "median_fail": 0.32264683311585146,
+          "median_difference_pass_minus_fail": 0.10350961572477535
+        },
+        "en2_top16_support": {
+          "auc": 0.4393939393939394,
+          "median_pass": 0.4517138212833431,
+          "median_fail": 0.3984689340659492,
+          "median_difference_pass_minus_fail": 0.0532448872173939
+        }
+      }
+    },
+    "1.5": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 5,
+      "nonpass_pairs": 30,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.63,
+          "median_pass": 0.006586913690350957,
+          "median_fail": 0.0037027938268985455,
+          "median_difference_pass_minus_fail": 0.0028841198634524112
+        },
+        "en2_top2_support": {
+          "auc": 0.49,
+          "median_pass": 0.0009921557522691471,
+          "median_fail": 0.0015140786489308516,
+          "median_difference_pass_minus_fail": -0.0005219228966617045
+        },
+        "en2_top4_support": {
+          "auc": 0.4166666666666667,
+          "median_pass": 0.06040132961038158,
+          "median_fail": 0.06577403197361714,
+          "median_difference_pass_minus_fail": -0.00537270236323556
+        },
+        "en2_top8_support": {
+          "auc": 0.6033333333333334,
+          "median_pass": 0.28890126804919997,
+          "median_fail": 0.19854338079225137,
+          "median_difference_pass_minus_fail": 0.0903578872569486
+        },
+        "en2_top12_support": {
+          "auc": 0.6366666666666667,
+          "median_pass": 0.42291698355728985,
+          "median_fail": 0.2830956860013627,
+          "median_difference_pass_minus_fail": 0.13982129755592715
+        },
+        "en2_top16_support": {
+          "auc": 0.6333333333333333,
+          "median_pass": 0.44801479118380216,
+          "median_fail": 0.3830268174634921,
+          "median_difference_pass_minus_fail": 0.06498797372031007
+        }
+      }
+    },
+    "1.75": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 4,
+      "nonpass_pairs": 31,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.47580645161290325,
+          "median_pass": 0.0068396670697993414,
+          "median_fail": 0.005252047161156001,
+          "median_difference_pass_minus_fail": 0.0015876199086433404
+        },
+        "en2_top2_support": {
+          "auc": 0.45161290322580644,
+          "median_pass": 0.008152219319978303,
+          "median_fail": 0.002316422447712001,
+          "median_difference_pass_minus_fail": 0.005835796872266302
+        },
+        "en2_top4_support": {
+          "auc": 0.532258064516129,
+          "median_pass": 0.11578612884542284,
+          "median_fail": 0.07365523633214983,
+          "median_difference_pass_minus_fail": 0.04213089251327301
+        },
+        "en2_top8_support": {
+          "auc": 0.45161290322580644,
+          "median_pass": 0.21592022015752274,
+          "median_fail": 0.18325034729761913,
+          "median_difference_pass_minus_fail": 0.03266987285990361
+        },
+        "en2_top12_support": {
+          "auc": 0.5967741935483871,
+          "median_pass": 0.48370012795137896,
+          "median_fail": 0.2887192161677886,
+          "median_difference_pass_minus_fail": 0.19498091178359034
+        },
+        "en2_top16_support": {
+          "auc": 0.5564516129032258,
+          "median_pass": 0.5825858313358065,
+          "median_fail": 0.43117753378479434,
+          "median_difference_pass_minus_fail": 0.1514082975510122
+        }
+      }
+    },
+    "2.0": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 5,
+      "nonpass_pairs": 30,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.37333333333333335,
+          "median_pass": 0.008740350307457017,
+          "median_fail": 0.00871363714035326,
+          "median_difference_pass_minus_fail": 2.6713167103757304e-05
+        },
+        "en2_top2_support": {
+          "auc": 0.38,
+          "median_pass": 1.8042303087782093e-29,
+          "median_fail": 0.013649975953565652,
+          "median_difference_pass_minus_fail": -0.013649975953565652
+        },
+        "en2_top4_support": {
+          "auc": 0.43333333333333335,
+          "median_pass": 0.10477893351657042,
+          "median_fail": 0.0712247502906212,
+          "median_difference_pass_minus_fail": 0.03355418322594922
+        },
+        "en2_top8_support": {
+          "auc": 0.34,
+          "median_pass": 0.1457106361053687,
+          "median_fail": 0.18010364392272368,
+          "median_difference_pass_minus_fail": -0.03439300781735499
+        },
+        "en2_top12_support": {
+          "auc": 0.5133333333333333,
+          "median_pass": 0.38575100459969464,
+          "median_fail": 0.3559831555593577,
+          "median_difference_pass_minus_fail": 0.029767849040336913
+        },
+        "en2_top16_support": {
+          "auc": 0.5333333333333333,
+          "median_pass": 0.5010558433631177,
+          "median_fail": 0.43345464264282363,
+          "median_difference_pass_minus_fail": 0.06760120072029407
+        }
+      }
+    },
+    "2.5": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 3,
+      "nonpass_pairs": 32,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.4166666666666667,
+          "median_pass": 0.023836639097903303,
+          "median_fail": 0.01922293983311423,
+          "median_difference_pass_minus_fail": 0.004613699264789075
+        },
+        "en2_top2_support": {
+          "auc": 0.46875,
+          "median_pass": 0.04244759282108353,
+          "median_fail": 0.021223796410541736,
+          "median_difference_pass_minus_fail": 0.02122379641054179
+        },
+        "en2_top4_support": {
+          "auc": 0.4166666666666667,
+          "median_pass": 0.07543408465700455,
+          "median_fail": 0.08018774145997146,
+          "median_difference_pass_minus_fail": -0.00475365680296691
+        },
+        "en2_top8_support": {
+          "auc": 0.3958333333333333,
+          "median_pass": 0.1993900010823968,
+          "median_fail": 0.20202474267000078,
+          "median_difference_pass_minus_fail": -0.0026347415876039892
+        },
+        "en2_top12_support": {
+          "auc": 0.4583333333333333,
+          "median_pass": 0.40955644368292515,
+          "median_fail": 0.3186261402290766,
+          "median_difference_pass_minus_fail": 0.09093030345384856
+        },
+        "en2_top16_support": {
+          "auc": 0.4375,
+          "median_pass": 0.4504232727431564,
+          "median_fail": 0.45410044191158255,
+          "median_difference_pass_minus_fail": -0.003677169168426142
+        }
+      }
+    },
+    "3.0": {
+      "sector_dimension": 36,
+      "reference_determinant_local_index": 0,
+      "softspaces_dual_pass_pairs": 2,
+      "nonpass_pairs": 33,
+      "metrics": {
+        "en2_weighted_score": {
+          "auc": 0.6212121212121212,
+          "median_pass": 0.04805534705109418,
+          "median_fail": 0.03357443927064066,
+          "median_difference_pass_minus_fail": 0.014480907780453522
+        },
+        "en2_top2_support": {
+          "auc": 0.7575757575757576,
+          "median_pass": 0.07976409617871277,
+          "median_fail": 0.026228612790586817,
+          "median_difference_pass_minus_fail": 0.05353548338812596
+        },
+        "en2_top4_support": {
+          "auc": 0.7575757575757576,
+          "median_pass": 0.13979090829837879,
+          "median_fail": 0.07976983397480765,
+          "median_difference_pass_minus_fail": 0.060021074323571136
+        },
+        "en2_top8_support": {
+          "auc": 0.6515151515151515,
+          "median_pass": 0.2716438547621216,
+          "median_fail": 0.18296462816342474,
+          "median_difference_pass_minus_fail": 0.08867922659869687
+        },
+        "en2_top12_support": {
+          "auc": 0.7424242424242424,
+          "median_pass": 0.45763596032063153,
+          "median_fail": 0.30981528204353703,
+          "median_difference_pass_minus_fail": 0.1478206782770945
+        },
+        "en2_top16_support": {
+          "auc": 0.7878787878787878,
+          "median_pass": 0.5718828412488144,
+          "median_fail": 0.44313718843544037,
+          "median_difference_pass_minus_fail": 0.12874565281337402
+        }
+      }
+    }
+  },
+  "global_summary": {
+    "total_pairs": 280,
+    "softspaces_dual_pass_pairs": 23,
+    "nonpass_pairs": 257,
+    "metrics": {
+      "en2_weighted_score": {
+        "auc": 0.5,
+        "median_pass": 0.006586913690350957,
+        "median_fail": 0.004127286366464706,
+        "median_difference_pass_minus_fail": 0.002459627323886251
+      },
+      "en2_top2_support": {
+        "auc": 0.44231094569446794,
+        "median_pass": 1.4323701479056064e-28,
+        "median_fail": 0.0020494807521944706,
+        "median_difference_pass_minus_fail": -0.0020494807521944706
+      },
+      "en2_top4_support": {
+        "auc": 0.4468787007274573,
+        "median_pass": 0.07543408465700455,
+        "median_fail": 0.06126556372137079,
+        "median_difference_pass_minus_fail": 0.014168520935633755
+      },
+      "en2_top8_support": {
+        "auc": 0.4411267129081374,
+        "median_pass": 0.2218451686877675,
+        "median_fail": 0.19514326772546275,
+        "median_difference_pass_minus_fail": 0.026701900962304737
+      },
+      "en2_top12_support": {
+        "auc": 0.5228387751649467,
+        "median_pass": 0.40955644368292515,
+        "median_fail": 0.3420245435672947,
+        "median_difference_pass_minus_fail": 0.06753190011563043
+      },
+      "en2_top16_support": {
+        "auc": 0.4997462358315006,
+        "median_pass": 0.4504232727431564,
+        "median_fail": 0.44313718843544037,
+        "median_difference_pass_minus_fail": 0.007286084307716045
+      }
+    }
+  },
+  "interpretation_guide": {
+    "auc_0_5": "no rank discrimination",
+    "auc_above_0_5": "higher EN2 bridge metric tends to occur on SS PASS pairs",
+    "auc_near_1": "EN2 bridge strongly predicts SS PASS pairs",
+    "important_limit": "EN2 is determinant-based while Soft Spaces v50_7c is eigenstate-pair based; this script tests an explicit bridge, not identity of the two methods."
+  }
+}

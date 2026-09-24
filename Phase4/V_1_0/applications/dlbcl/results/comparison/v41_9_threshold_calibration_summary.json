@@ -1,0 +1,222 @@
+{
+  "version": "v41.9-dlbcl-training-only-threshold-calibration-1",
+  "created_utc": "2026-09-17T10:49:58.968875+00:00",
+  "historical_status": "post-hoc threshold calibration audit; GSE31312 was previously observed in v41.6 and v41.8",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1"
+  },
+  "design": {
+    "threshold_source": "GSE10846 averaged out-of-fold predictions only",
+    "threshold_criterion": "maximize balanced accuracy",
+    "external_threshold_tuning": false,
+    "variance_pool": 256,
+    "p_dim": 16,
+    "feature_k": 16,
+    "corrected_preprocessing": "raw training variance -> top 256 -> StandardScaler",
+    "oof_cv_source": "results\\baseline\\v41_2_cv_splits.json",
+    "oof_prediction_counts_per_sample": {
+      "3": 350
+    }
+  },
+  "selected_threshold": 0.5333360592218426,
+  "gse10846_oof": {
+    "default_threshold_0_5": {
+      "threshold": 0.5,
+      "roc_auc": 0.9546808023297667,
+      "balanced_accuracy": 0.8775400019632865,
+      "accuracy": 0.8771428571428571,
+      "f1": 0.8731563421828908,
+      "tn": 159,
+      "fp": 24,
+      "fn": 19,
+      "tp": 148,
+      "predicted_ABC": 172,
+      "predicted_GCB": 178
+    },
+    "training_only_calibrated_threshold": {
+      "threshold": 0.5333360592218426,
+      "roc_auc": 0.9546808023297667,
+      "balanced_accuracy": 0.8852131801969831,
+      "accuracy": 0.8857142857142857,
+      "f1": 0.8795180722891566,
+      "tn": 164,
+      "fp": 19,
+      "fn": 21,
+      "tp": 146,
+      "predicted_ABC": 165,
+      "predicted_GCB": 185
+    },
+    "probability_distribution_by_class": {
+      "GCB": {
+        "mean": 0.22312467200165423,
+        "median": 0.16993779598696848,
+        "min": 0.0006599882928814486,
+        "max": 0.7822054905040029
+      },
+      "ABC": {
+        "mean": 0.7583773801469246,
+        "median": 0.8027620449084244,
+        "min": 0.16659804529260172,
+        "max": 0.998703004377488
+      }
+    }
+  },
+  "gse31312_external": {
+    "default_threshold_0_5": {
+      "threshold": 0.5,
+      "roc_auc": 0.8289364722583697,
+      "balanced_accuracy": 0.5,
+      "accuracy": 0.5254988913525499,
+      "f1": 0.0,
+      "tn": 237,
+      "fp": 0,
+      "fn": 214,
+      "tp": 0,
+      "predicted_ABC": 0,
+      "predicted_GCB": 451
+    },
+    "training_only_calibrated_threshold": {
+      "threshold": 0.5333360592218426,
+      "roc_auc": 0.8289364722583697,
+      "balanced_accuracy": 0.5,
+      "accuracy": 0.5254988913525499,
+      "f1": 0.0,
+      "tn": 237,
+      "fp": 0,
+      "fn": 214,
+      "tp": 0,
+      "predicted_ABC": 0,
+      "predicted_GCB": 451
+    },
+    "probability_distribution_by_class": {
+      "GCB": {
+        "mean": 0.0727881552306021,
+        "median": 0.07294950154164682,
+        "min": 0.045041020085531534,
+        "max": 0.11482778213605718
+      },
+      "ABC": {
+        "mean": 0.0856776308990324,
+        "median": 0.08467024619090144,
+        "min": 0.060049503771695475,
+        "max": 0.12037893306485022
+      }
+    }
+  },
+  "selected_genes": [
+    {
+      "rank": 1,
+      "gene": "DNER",
+      "coupling_score": 0.09995057247042168,
+      "raw_training_variance": 6.807823482808023
+    },
+    {
+      "rank": 2,
+      "gene": "SPIC",
+      "coupling_score": 0.09714880070910735,
+      "raw_training_variance": 4.060448050994679
+    },
+    {
+      "rank": 3,
+      "gene": "TCL1B",
+      "coupling_score": 0.09671941349876069,
+      "raw_training_variance": 7.326512798821122
+    },
+    {
+      "rank": 4,
+      "gene": "NPIPA5///NPIPB6///NPIPB8///NPIPB3",
+      "coupling_score": 0.09540916446991345,
+      "raw_training_variance": 3.970016141539091
+    },
+    {
+      "rank": 5,
+      "gene": "EML6",
+      "coupling_score": 0.09508854730321063,
+      "raw_training_variance": 4.147698573789803
+    },
+    {
+      "rank": 6,
+      "gene": "MMP20",
+      "coupling_score": 0.09229761473405254,
+      "raw_training_variance": 6.4748200773557105
+    },
+    {
+      "rank": 7,
+      "gene": "KCCAT333",
+      "coupling_score": 0.091941154166749,
+      "raw_training_variance": 6.0511750196970935
+    },
+    {
+      "rank": 8,
+      "gene": "IGLJ3///IGLV1-44///CKAP2///IGLV@///IGLC1",
+      "coupling_score": 0.090479898752526,
+      "raw_training_variance": 4.756213683130785
+    },
+    {
+      "rank": 9,
+      "gene": "RNF183",
+      "coupling_score": 0.0896051608041985,
+      "raw_training_variance": 4.207413137421203
+    },
+    {
+      "rank": 10,
+      "gene": "MYOCD",
+      "coupling_score": 0.08751485506855444,
+      "raw_training_variance": 5.411304131984931
+    },
+    {
+      "rank": 11,
+      "gene": "UMODL1",
+      "coupling_score": 0.08720891672724802,
+      "raw_training_variance": 5.581202485927139
+    },
+    {
+      "rank": 12,
+      "gene": "CTAG2",
+      "coupling_score": 0.08526240651100614,
+      "raw_training_variance": 4.489856250382246
+    },
+    {
+      "rank": 13,
+      "gene": "IGK///IGKC",
+      "coupling_score": 0.08357773286999604,
+      "raw_training_variance": 4.2931173739173145
+    },
+    {
+      "rank": 14,
+      "gene": "LOC283454///HRK",
+      "coupling_score": 0.08330718520592241,
+      "raw_training_variance": 5.533829989103562
+    },
+    {
+      "rank": 15,
+      "gene": "RGS13",
+      "coupling_score": 0.08292809651469855,
+      "raw_training_variance": 7.23917590766271
+    },
+    {
+      "rank": 16,
+      "gene": "TCL1A",
+      "coupling_score": 0.08216458893171785,
+      "raw_training_variance": 6.829515134426973
+    }
+  ],
+  "interpretation_limits": [
+    "GSE31312 was already observed before this calibration audit.",
+    "The threshold is derived only from GSE10846 OOF predictions.",
+    "No threshold or parameter is optimized on GSE31312 in this run.",
+    "Improved balanced accuracy would support a threshold-shift explanation, not prove biological transportability by itself.",
+    "AUC is unchanged by threshold calibration.",
+    "No quantum advantage is claimed.",
+    "No Aer or QPU execution was performed."
+  ],
+  "runtime_seconds": 33.10196390002966,
+  "outputs": {
+    "training_oof_predictions": "results\\comparison\\v41_9_training_oof_predictions.csv",
+    "external_predictions": "results\\comparison\\v41_9_external_calibrated_predictions.csv",
+    "selected_genes": "results\\comparison\\v41_9_final_selected_genes.csv"
+  }
+}

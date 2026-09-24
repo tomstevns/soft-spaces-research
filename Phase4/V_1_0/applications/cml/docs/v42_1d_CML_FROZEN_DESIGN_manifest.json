@@ -1,0 +1,57 @@
+{
+  "version": "v42.1d",
+  "status": "FROZEN_BEFORE_MODELING",
+  "development_cohort": "GSE130404",
+  "development_samples": 96,
+  "endpoint": "BCR-ABL1 at 3 months",
+  "positive_class": {
+    "definition": ">10% IS",
+    "n": 13
+  },
+  "negative_class": {
+    "definition": "<10% IS",
+    "n": 83
+  },
+  "primary_metric": "PR-AUC",
+  "secondary_metrics": [
+    "ROC-AUC",
+    "balanced_accuracy",
+    "sensitivity",
+    "specificity"
+  ],
+  "cv": {
+    "type": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 20
+  },
+  "class_weighting_allowed": true,
+  "synthetic_oversampling_primary": false,
+  "variance_pool": 256,
+  "baseline_models": [
+    "logistic_regression",
+    "l1_logistic_regression",
+    "linear_svm",
+    "univariate_feature_ranking"
+  ],
+  "softspaces_candidate_ranks": [
+    4,
+    8,
+    16
+  ],
+  "softspaces_candidate_panel_sizes": [
+    8,
+    16,
+    32
+  ],
+  "external_candidate": {
+    "accession": "GSE44589",
+    "status": "EXTERNAL_GENERALIZATION_CANDIDATE",
+    "baseline_samples": 135,
+    "baseline_mmr": 69,
+    "baseline_none": 59,
+    "baseline_response_unavailable": 7,
+    "post_6_week_samples_excluded": 63,
+    "endpoint_identical_to_development": false
+  },
+  "protocol_sha256": "3d397a9a5edec39c4809abf95daf031960d6f4caf14314492c17f3606b480fe2"
+}

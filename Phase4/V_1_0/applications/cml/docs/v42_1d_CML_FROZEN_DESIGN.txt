@@ -1,0 +1,388 @@
+Soft Spaces / CML
+v42.1d — FROZEN DEVELOPMENT DESIGN
+
+STATUS
+------
+FROZEN BEFORE MODELING
+
+PURPOSE
+-------
+Freeze the CML development design before any predictive model, baseline model,
+Soft-Spaces score, or feature/subspace optimization is evaluated.
+
+DEVELOPMENT COHORT
+------------------
+Accession:
+    GSE130404
+
+Population:
+    Human chronic-phase CML
+
+Samples:
+    96 baseline / diagnostic chronic-phase samples
+
+Primary biological endpoint:
+    Early molecular response (EMR) at 3 months
+
+Outcome variable:
+    BCR-ABL1 International Scale at 3 months
+
+Class definition:
+    NEGATIVE / adequate EMR:
+        BCR-ABL1 <10% IS
+        n = 83
+
+    POSITIVE / EMR failure:
+        BCR-ABL1 >10% IS
+        n = 13
+
+All 96 samples are measured at baseline / diagnosis.
+The outcome is measured later at 3 months.
+
+PRIMARY SCIENTIFIC QUESTION
+---------------------------
+Can a Soft-Spaces-derived baseline expression representation identify patients
+at risk of EMR failure at 3 months better than matched NULL representations,
+and does any resulting structure remain stable under development-only
+resampling?
+
+IMPORTANT LIMITATION
+--------------------
+The positive class contains only 13 patients.
+
+Therefore:
+- raw accuracy is NOT a valid primary metric;
+- confidence intervals and resampling stability are mandatory;
+- performance estimates must be interpreted conservatively;
+- the minority class must never be synthetically enlarged for the primary
+  analysis unless a future protocol explicitly preregisters that intervention.
+
+NO SMOTE or other synthetic oversampling is permitted in the primary pipeline.
+
+PRIMARY DEVELOPMENT METRICS
+---------------------------
+The following metrics are frozen for v42.2-v42.4:
+
+1. PR-AUC
+   Primary predictive metric because of the 13 / 83 class imbalance.
+
+2. ROC-AUC
+   Secondary discrimination metric.
+
+3. Balanced accuracy
+   Secondary thresholded metric.
+
+4. Sensitivity for EMR failure
+   Reported explicitly.
+
+5. Specificity
+   Reported explicitly.
+
+Plain accuracy may be reported descriptively but must not drive conclusions.
+
+CROSS-VALIDATION DESIGN
+-----------------------
+Use repeated stratified cross-validation.
+
+Default frozen design:
+    5 folds
+    20 repeats
+    total = 100 held-out fold evaluations
+
+Rationale:
+    With 13 positive cases, 5-fold stratification retains approximately
+    2-3 positive samples per held-out fold while preserving more training data
+    than larger-k CV.
+
+Rules:
+- fixed master seed;
+- deterministic split generation;
+- identical splits for all compared methods;
+- preprocessing fitted on training fold only;
+- feature selection fitted on training fold only;
+- scaling fitted on training fold only;
+- no held-out labels may influence feature selection;
+- all fold-level results must be retained.
+
+If any generated fold lacks one class, that split is invalid and must be
+regenerated deterministically under the same seed policy.
+
+CLASS IMBALANCE HANDLING
+------------------------
+Primary classifiers may use class weighting.
+
+Permitted:
+    class_weight = "balanced"
+
+Not permitted in the primary frozen analysis:
+    SMOTE
+    ADASYN
+    random minority oversampling
+    outcome-informed sample deletion
+    manual threshold tuning using test folds
+
+Any future resampling intervention must be separately versioned.
+
+PREPROCESSING ORDER
+-------------------
+The following order is frozen:
+
+1. Load GSE130404 expression matrix and sample metadata.
+2. Restrict to the 96 baseline chronic-phase samples.
+3. Freeze y:
+       1 = BCR-ABL1 >10% at 3 months
+       0 = BCR-ABL1 <10% at 3 months
+4. Map probes to gene symbols deterministically.
+5. Within each training fold:
+       a. calculate raw gene variance;
+       b. rank by raw variance;
+       c. retain the frozen variance-pool size;
+       d. fit standardization on training data only;
+       e. transform train and held-out fold.
+6. No variance filtering after standardization.
+
+This explicitly preserves the preprocessing lesson from DLBCL v41.7.
+
+VARIANCE POOL
+-------------
+Frozen initial pool size:
+    Top 256 genes by raw training-fold variance
+
+The pool size is inherited only as a computational design choice, not as a
+biological claim.
+
+A later sensitivity analysis may compare 128 / 256 / 512, but 256 remains the
+primary frozen development pool unless separately versioned before testing.
+
+CLASSICAL BASELINES — v42.2
+----------------------------
+The following baselines must be evaluated BEFORE Soft Spaces:
+
+A. Logistic regression
+   - linear
+   - class_weight="balanced"
+   - regularized
+
+B. L1 logistic regression
+   - class_weight="balanced"
+
+C. Linear SVM
+   - class_weight="balanced"
+
+D. Univariate feature-ranking baseline
+   - training-fold-only ranking
+   - fixed panel sizes
+
+Optional descriptive baseline:
+   PCA + logistic regression
+
+No tree ensemble is required for the primary baseline stage.
+
+BASELINE FEATURE PANEL SIZES
+----------------------------
+For methods requiring an explicit feature count:
+
+    K in {8, 16, 32}
+
+These K values are development-only hyperparameter candidates.
+
+Hyperparameter selection must occur strictly inside training data or nested
+cross-validation.
+
+No test-fold performance may determine K.
+
+PRIMARY BASELINE REPORT
+-----------------------
+For each method report:
+
+- mean PR-AUC;
+- 95% interval across repeated held-out predictions / bootstrap over
+  out-of-fold predictions as implemented;
+- mean ROC-AUC;
+- mean balanced accuracy;
+- sensitivity;
+- specificity;
+- number of valid folds;
+- fold-level distribution;
+- exact split seed / split manifest.
+
+The baseline stage establishes the difficulty of the prediction problem.
+
+It does NOT establish Soft-Spaces performance.
+
+SOFT-SPACES ENTRY CONDITION
+---------------------------
+Proceed to v42.3 only if:
+
+1. preprocessing is technically reproducible;
+2. all 96 samples map correctly;
+3. all 100 planned held-out evaluations are valid or any deviations are
+   explicitly documented;
+4. at least one classical baseline performs measurably above trivial/random
+   expectation on PR-AUC or ROC-AUC.
+
+If all classical baselines fail to show any usable signal, the CML track must
+pause before interpreting Soft-Spaces structure.
+
+SOFT-SPACES v42.3 DESIGN BOUNDARY
+---------------------------------
+v42.3 may use the same 256-gene training-fold pool.
+
+Candidate subspace ranks:
+    r in {4, 8, 16}
+
+Candidate output panel sizes:
+    K in {8, 16, 32}
+
+Selection of r and K must use development-only nested criteria.
+
+The selected r and K must be frozen before any external cohort is evaluated.
+
+REAL VS NULL — v42.4
+--------------------
+REAL Soft-Spaces performance must be compared against matched NULL.
+
+NULL must match:
+- same fold splits;
+- same preprocessing;
+- same 256-gene eligible pool;
+- same panel size K;
+- same classifier/evaluation machinery;
+- same number of evaluations.
+
+Recommended primary NULL count:
+    >= 1000 matched NULL realizations for development testing
+
+Final NULL count may be increased before execution but may not be decreased
+after results are inspected.
+
+PRIMARY REAL-vs-NULL DEVELOPMENT CLAIM
+--------------------------------------
+A development-stage Soft-Spaces signal is considered supported only if:
+
+1. REAL mean PR-AUC > matched NULL mean PR-AUC; AND
+2. paired / empirical one-sided p <= 0.05; AND
+3. the direction is not driven by one or two isolated repeats.
+
+ROC-AUC and balanced accuracy remain secondary corroborative metrics.
+
+No external claim follows from development success alone.
+
+EXTERNAL COHORT STATUS
+----------------------
+GSE44589 is frozen at this stage as:
+
+    EXTERNAL GENERALIZATION CANDIDATE
+
+It is NOT yet a confirmatory-equivalent cohort.
+
+Reason:
+    GSE44589 uses molecular response categories MMR / none rather than the
+    identical GSE130404 endpoint of BCR-ABL1 >10% at 3 months.
+
+Only the 135 baseline pretreatment GSE44589 samples may be considered for a
+baseline-response external analysis.
+
+Within those baseline samples:
+    MMR = 69
+    none = 59
+    response unavailable = 7
+
+The 63 post-6-week samples must not enter a baseline predictor.
+
+Before any GSE44589 expression outcome is analyzed:
+- an external-generalization protocol must be written;
+- the exact endpoint mapping must be frozen;
+- the representation from GSE130404 must already be frozen;
+- no GSE44589 outcome may tune the development model.
+
+EXTERNAL INTERPRETATION LIMIT
+-----------------------------
+Because EMR failure and MMR/none are not identical endpoints, a GSE44589 test
+would establish, at most:
+
+    cross-cohort / cross-endpoint TKI-response generalization
+
+It would NOT by itself constitute direct replication of the exact
+3-month EMR-failure endpoint.
+
+STOP RULES
+----------
+Stop or redesign before external testing if:
+
+- development preprocessing is unstable;
+- the 13 positive cases make estimates unusably unstable;
+- all baselines are effectively random;
+- Soft Spaces does not outperform matched NULL internally;
+- the selected representation is not stable enough to freeze;
+- external endpoint mapping cannot be defended prospectively.
+
+NEGATIVE RESULT POLICY
+----------------------
+All failures remain part of the research record.
+
+Do not:
+- retune after seeing held-out failures;
+- redefine EMR failure after modeling;
+- remove difficult patients post hoc;
+- switch primary metric after results are known;
+- present exploratory rescue analyses as confirmatory.
+
+VERSION PLAN
+------------
+v42.2
+    Frozen preprocessing + classical baselines.
+
+v42.3
+    First Soft-Spaces mapping.
+
+v42.4
+    Internal REAL-vs-NULL validation.
+
+v42.5
+    Feature/subspace stability.
+
+v42.6
+    External-generalization preregistration.
+
+v42.7
+    External generalization / replication test.
+
+v42.8
+    Closure / evidence audit.
+
+FROZEN DEVELOPMENT SUMMARY
+--------------------------
+Development cohort:
+    GSE130404
+
+Samples:
+    96 baseline CP-CML
+
+Outcome:
+    BCR-ABL1 at 3 months
+
+Positive:
+    >10% IS, n=13
+
+Negative:
+    <10% IS, n=83
+
+Primary predictive metric:
+    PR-AUC
+
+Cross-validation:
+    repeated stratified 5-fold x 20 repeats
+
+Primary feature pool:
+    Top-256 by raw training-fold variance
+
+External status:
+    GSE44589 = generalization candidate, not endpoint-identical replication
+
+FINAL PRINCIPLE
+---------------
+v42 must answer whether a reproducible Soft-Spaces CML signal exists under
+strictly frozen development conditions.
+
+The objective is not to obtain a positive result.

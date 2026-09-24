@@ -1,0 +1,182 @@
+{
+  "version": "v41.2-dlbcl-classical-baselines-1",
+  "created_utc": "2026-09-17T06:05:10.627332+00:00",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1"
+  },
+  "benchmark": {
+    "task": "GSE10846 ABC vs GCB",
+    "n_samples": 350,
+    "n_genes": 22154,
+    "class_encoding": {
+      "GCB": 0,
+      "ABC": 1
+    },
+    "class_counts": {
+      "GCB": 183,
+      "ABC": 167
+    }
+  },
+  "cross_validation": {
+    "type": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 3,
+    "total_folds": 15,
+    "random_state": 41200001,
+    "splits_file": "results\\baseline\\v41_2_cv_splits.json"
+  },
+  "frozen_models": {
+    "logistic_regression": "StandardScaler + L2 LogisticRegression(C=1)",
+    "linear_svm": "StandardScaler + LinearSVC(C=1)",
+    "random_forest": "500 trees, max_features=sqrt, class_weight=balanced",
+    "pca50_logistic": "StandardScaler + PCA(50) + L2 LogisticRegression",
+    "anova500_logistic": "SelectKBest(f_classif,k=500) + StandardScaler + L2 LogisticRegression"
+  },
+  "leakage_control": "Scaling, PCA and feature selection fitted inside each training fold only.",
+  "summary": {
+    "logistic_regression": {
+      "roc_auc": {
+        "mean": 0.9991815344756522,
+        "sd": 0.0010718865855346151,
+        "min": 0.9975429975429975,
+        "max": 1.0
+      },
+      "balanced_accuracy": {
+        "mean": 0.9798188562894444,
+        "sd": 0.01339919508487011,
+        "min": 0.9545454545454546,
+        "max": 1.0
+      },
+      "accuracy": {
+        "mean": 0.9800000000000001,
+        "sd": 0.013003699854754282,
+        "min": 0.9571428571428572,
+        "max": 1.0
+      },
+      "f1": {
+        "mean": 0.9789565255377182,
+        "sd": 0.013881777096343603,
+        "min": 0.9523809523809523,
+        "max": 1.0
+      },
+      "runtime_seconds": 24.14587509998819
+    },
+    "linear_svm": {
+      "roc_auc": {
+        "mean": 0.9992361345302522,
+        "sd": 0.0010009741899042227,
+        "min": 0.9975429975429975,
+        "max": 1.0
+      },
+      "balanced_accuracy": {
+        "mean": 0.9825966340672223,
+        "sd": 0.013904152347890613,
+        "min": 0.9545454545454546,
+        "max": 1.0
+      },
+      "accuracy": {
+        "mean": 0.9828571428571429,
+        "sd": 0.013444627830204578,
+        "min": 0.9571428571428572,
+        "max": 1.0
+      },
+      "f1": {
+        "mean": 0.9818266590983886,
+        "sd": 0.01449341644486837,
+        "min": 0.9523809523809523,
+        "max": 1.0
+      },
+      "runtime_seconds": 6.375751900020987
+    },
+    "random_forest": {
+      "roc_auc": {
+        "mean": 0.9992087675911205,
+        "sd": 0.0012803387652093954,
+        "min": 0.9967239967239967,
+        "max": 1.0
+      },
+      "balanced_accuracy": {
+        "mean": 0.9807447822153705,
+        "sd": 0.014053912974336604,
+        "min": 0.9566993464052287,
+        "max": 1.0
+      },
+      "accuracy": {
+        "mean": 0.980952380952381,
+        "sd": 0.013941429613550473,
+        "min": 0.9571428571428572,
+        "max": 1.0
+      },
+      "f1": {
+        "mean": 0.9799644814580685,
+        "sd": 0.014610680360182496,
+        "min": 0.9552238805970149,
+        "max": 1.0
+      },
+      "runtime_seconds": 20.105686099966988
+    },
+    "pca50_logistic": {
+      "roc_auc": {
+        "mean": 0.9989634019045784,
+        "sd": 0.0019926266933586504,
+        "min": 0.9926289926289926,
+        "max": 1.0
+      },
+      "balanced_accuracy": {
+        "mean": 0.9834975349681231,
+        "sd": 0.01235541784205788,
+        "min": 0.9545454545454546,
+        "max": 1.0
+      },
+      "accuracy": {
+        "mean": 0.9838095238095239,
+        "sd": 0.0119115626833256,
+        "min": 0.9571428571428572,
+        "max": 1.0
+      },
+      "f1": {
+        "mean": 0.9828261300110654,
+        "sd": 0.012951977573163805,
+        "min": 0.9523809523809523,
+        "max": 1.0
+      },
+      "runtime_seconds": 7.212493400031235
+    },
+    "anova500_logistic": {
+      "roc_auc": {
+        "mean": 0.9998909337144631,
+        "sd": 0.0002878254483705523,
+        "min": 0.9991809991809992,
+        "max": 1.0
+      },
+      "balanced_accuracy": {
+        "mean": 0.9895534572005159,
+        "sd": 0.01008856111637466,
+        "min": 0.9696969696969697,
+        "max": 1.0
+      },
+      "accuracy": {
+        "mean": 0.9895238095238096,
+        "sd": 0.010053307864985662,
+        "min": 0.9714285714285714,
+        "max": 1.0
+      },
+      "f1": {
+        "mean": 0.9890177746750541,
+        "sd": 0.010624461550353306,
+        "min": 0.96875,
+        "max": 1.0
+      },
+      "runtime_seconds": 2.5027768000145443
+    }
+  },
+  "total_runtime_seconds": 60.34383989998605,
+  "outputs": {
+    "fold_metrics": "results\\baseline\\v41_2_fold_metrics.csv",
+    "cv_splits": "results\\baseline\\v41_2_cv_splits.json"
+  },
+  "scope": "Classical baseline benchmark only. No Soft Spaces REAL/NULL, Aer simulation, or QPU execution."
+}

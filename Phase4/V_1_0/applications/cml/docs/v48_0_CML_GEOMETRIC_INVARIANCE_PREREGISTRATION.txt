@@ -1,0 +1,50 @@
+Soft Spaces / CML
+v48.0 — GEOMETRIC INVARIANCE PREREGISTRATION
+
+STATUS
+------
+FROZEN BEFORE v48.1 EXECUTION
+
+NEW HYPOTHESIS
+--------------
+v48 is scientifically distinct from v47 and is NOT a rescue of v47.5b.
+
+Hypothesis:
+Two independent CML cohorts may preserve shared higher-level label-blind
+geometry despite differing exact Top-256 gene identities.
+
+NO CLINICAL LABELS are used.
+
+Cohorts:
+- GSE130404 frozen v47.2 label-blind Top-256 expression matrix
+- GSE44589 frozen v47.5b label-blind Top-256 feature list and baseline samples
+
+Primary A:
+cosine similarity of normalized PCA-16 eigen-spectra.
+
+Primary B:
+Wasserstein-1 distance between PCA-16 pairwise-distance distributions,
+after dividing distances by each cohort's own median.
+
+NULL:
+1000 replicates.
+In each replicate independently permute patient values within every frozen
+GSE44589 gene. This preserves every external gene's marginal values,
+mean, variance, sample count and feature identity, while destroying
+patient-level multivariate covariance.
+
+PASS requires BOTH:
+- observed spectrum cosine > NULL 95th percentile
+- observed distance W1 < NULL 5th percentile
+
+Empirical p-values for both must be <= 0.05.
+
+Secondary:
+Wasserstein distance between local-anisotropy distributions, k=10.
+
+Claim limit:
+A PASS supports higher-level feature-identity-invariant geometric similarity
+under this specific label-blind test. It does not establish prediction,
+response replication, mechanism, dormancy, quantum biology or quantum advantage.
+
+No rescue tuning after FAIL.

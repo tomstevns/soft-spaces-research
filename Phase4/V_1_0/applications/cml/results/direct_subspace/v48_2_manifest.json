@@ -1,0 +1,36 @@
+{
+  "version": "v48.2",
+  "status": "GEOMETRIC INVARIANCE ROBUSTNESS PASS",
+  "clinical_labels_used": false,
+  "classifier_fitted": false,
+  "feature_identity_reselected": false,
+  "n_resamples": 200,
+  "dev_subsample_n": 76,
+  "ext_subsample_n": 108,
+  "n_null_per_resample": 50,
+  "master_seed": 48020001,
+  "spectrum": {
+    "median_signed_null_z": 68.3460805134896,
+    "positive_z_fraction": 1.0,
+    "fraction_empirical_p_le_0_05": 1.0,
+    "pass": true
+  },
+  "distance_geometry": {
+    "median_signed_null_z": 30.471939323666895,
+    "positive_z_fraction": 1.0,
+    "fraction_empirical_p_le_0_05": 1.0,
+    "pass": true
+  },
+  "secondary": {
+    "median_anisotropy_w1": 0.013581727997918,
+    "median_effective_dimension_abs_diff": 0.7843443755827824,
+    "median_dev_pca16_cumulative_variance": 0.880570228350301,
+    "median_ext_pca16_cumulative_variance": 0.875715683932109
+  },
+  "primary_pass": true,
+  "protocol_sha256": "68ee354d36ac94012c1afb864a55550ec3c9a7de0fcc7e8277b1c3a374301e16",
+  "sha256": {
+    "resampling_results": "9285711a4c376a38365d6d974a179c529a5dbc45a1797194804e7b532aefe6b2",
+    "execution_script": "4bde243503f8e96f2348bec8bf6a77bd5ed7f63871ea770d06f506f0262804ce"
+  }
+}

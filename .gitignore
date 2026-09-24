@@ -20,3 +20,21 @@ Desktop.ini
 Phase3/V_1_0/code/v32_16_1_q12_seed*.npy
 
 Phase4/V_1_0/.venv_qiskit/
+
+# Local Python environments
+**/.venv*/
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Large external/public datasets
+Phase4/V_1_0/applications/dlbcl/data/external/GSE117556/
+Phase4/V_1_0/applications/dlbcl/data/external/GSE159472/
+Phase4/V_1_0/applications/dlbcl/data/external/GSE87371/metadata/GSE87371_family.soft.gz
+Phase4/V_1_0/applications/dlbcl/docs/preregistration/Downloads/
+
+# Large external biomedical datasets
+Phase4/V_1_0/applications/cml/data/
+Phase4/V_1_0/applications/dlbcl/data/

@@ -1,0 +1,78 @@
+=== Soft Spaces / CML v43.4b OUTCOME-BLIND IDENTIFIER HARMONIZATION ===
+
+ALLOWED MATCHING
+----------------
+1. Exact gene symbol
+2. Same stable Entrez Gene ID across GPL10558 and GPL570
+
+RESULT
+------
+Exact-symbol coordinates:       200
+Recovered by Entrez ID:         14
+Ambiguous Entrez mappings:      0
+Unresolved coordinates:         42
+Total accepted coordinates:     214
+Still non-transportable:        42
+Coordinate coverage:            0.835938
+
+PROJECTOR MASS
+--------------
+Total projector mass:           16.000000
+Accepted-coordinate mass:       12.781923
+Retained projector fraction:    0.798870
+
+v43.4b STATUS: TECHNICALLY NON-EVALUABLE
+
+UNRESOLVED / AMBIGUOUS
+----------------------
+HLA-A29.1 | dev Entrez=649853 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.129893
+LOC100133662 | dev Entrez=100133662 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.091424
+LOC729645 | dev Entrez=729645 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.123113
+LOC728835 | dev Entrez=728835 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.073005
+CCL4L1 | dev Entrez=9560 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.072372
+RNU1G2 | dev Entrez=26864 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.052624
+RNU1-5 | dev Entrez=26863 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.053814
+RNU1-3 | dev Entrez=26869 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.051867
+LOC100134379 | dev Entrez=100134379 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.045572
+IFIT1L | dev Entrez=439996 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.081966
+LOC727908 | dev Entrez=727908 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.095001
+LOC654055 | dev Entrez=654055 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.111621
+MIR1974 | dev Entrez=100302207 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.092860
+LOC644936 | dev Entrez=644936 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.161601
+LOC642073 | dev Entrez=642073 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.066661
+RNU12 | dev Entrez=26823 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.043626
+RPS4Y2 | dev Entrez=140032 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.097849
+KIAA0367 | dev Entrez=23273 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.122044
+LOC652493 | dev Entrez=652493 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.068478
+LOC647506 | dev Entrez=647506 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.043573
+LOC100133875 | dev Entrez=100133875 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.155876
+RNU1A3 | dev Entrez=26871 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.060120
+LOC100133678 | dev Entrez=100133678 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.050997
+RNU4-1 | dev Entrez=26835 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.054877
+RNU1F1 | dev Entrez=26866 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.044592
+LOC647450 | dev Entrez=647450 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.055542
+LOC642113 | dev Entrez=642113 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.082935
+LOC731682 | dev Entrez=731682 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.091175
+LOC653610 | dev Entrez=653610 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.064273
+PRSSL1 | dev Entrez=400668 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.062079
+SIGLEC14 | dev Entrez=100049587 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.061612
+GAPDHL6 | dev Entrez=729403 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.112102
+HIST2H2BF | dev Entrez=440689 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.070326
+RNU11 | dev Entrez=26824 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.048677
+LOC100132394 | dev Entrez=100132394 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.113453
+LOC642103 | dev Entrez=642103 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.036595
+HIST2H3A | dev Entrez=333932 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.045901
+LOC100008588 | dev Entrez=100008588 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.063612
+LOC653061 | dev Entrez=653061 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.036309
+RNU5A | dev Entrez=26831 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.080161
+CYorf15B | dev Entrez=84663 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.091741
+HIST2H2AB | dev Entrez=317772 | status=UNRESOLVED | matched Entrez=- | external symbols=- | mass=0.056155
+
+INTERPRETATION
+--------------
+No GSE44589 response outcomes were used.
+Only exact symbol identity or stable Entrez identity is accepted.
+Ambiguous or unresolved coordinates are not rescued.
+
+Under the strict frozen rule, v43.5 may proceed only if every
+frozen coordinate is transportable without outcome-guided substitution.

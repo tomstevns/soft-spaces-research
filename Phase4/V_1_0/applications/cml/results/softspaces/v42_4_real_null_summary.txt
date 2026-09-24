@@ -1,0 +1,42 @@
+=== Soft Spaces / CML v42.4 REAL vs MATCHED NULL ===
+
+FROZEN DESIGN
+-------------
+Development cohort: GSE130404
+Frozen Soft-Spaces rank r: 4
+Frozen panel size K: 32
+Frozen v42.2 folds reused: YES
+Matched NULL realizations: 1000
+External cohort used: NO
+
+PRIMARY: MEAN HELD-OUT PR-AUC
+-----------------------------
+REAL:      0.424381
+NULL mean: 0.441973
+Delta:     -0.017592
+NULL 2.5%: 0.408807
+NULL 97.5%:0.475259
+Empirical one-sided p: 0.826174
+
+SECONDARY: MEAN HELD-OUT ROC-AUC
+---------------------------------
+REAL:      0.697708
+NULL mean: 0.723776
+Delta:     -0.026068
+Empirical one-sided p: 0.974026
+
+DEVELOPMENT DECISION
+--------------------
+PASS rule:
+REAL mean PR-AUC > NULL mean PR-AUC
+AND empirical one-sided p <= 0.05
+
+v42.4 STATUS: FAIL
+
+INTERPRETATION
+--------------
+PASS supports only an INTERNAL development-stage Soft-Spaces
+feature-selection effect relative to matched random panels.
+
+It does not establish external replication, clinical utility,
+causal biology, or superiority to the best classical baseline.

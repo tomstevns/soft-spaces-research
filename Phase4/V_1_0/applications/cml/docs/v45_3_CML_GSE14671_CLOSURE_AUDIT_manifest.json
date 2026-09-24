@@ -1,0 +1,24 @@
+{
+  "version": "v45.3",
+  "status": "CLOSED_TECHNICALLY_NON_EVALUABLE",
+  "dataset": "GSE14671",
+  "platform": "GPL570",
+  "sample_n": 59,
+  "responder_n": 41,
+  "non_responder_n": 18,
+  "frozen_top_k": 256,
+  "mapped_gene_n": 255,
+  "missing_gene": "PTPN20",
+  "ptpn20_resolution": "UNRESOLVED",
+  "predictive_scoring_performed": false,
+  "closure_sha256": "2fe8940d7cdce28f08f51fc31bdd23336142f4a80a6191bb5fc2b159f4619a89",
+  "source_sha256": {
+    "v45_0b_manifest": "a05a2eb1c066547e3309217d13738093929158378ae1c509e2817b20d7511e6b",
+    "v45_1_protocol": "c620936dc5832ac26fca09155b7b89d241120d7e3399e9c2c50e38585ad63b0d",
+    "v45_1_manifest": "4dbf0e27ef7ef25c9f33a91fd3ae59e8b0551f50a0dc1bc248b13a4c92d48dac",
+    "v45_2_transport_summary": "df6be48ab9b6a9eacc5864f07097a8d71c298ba52bc29beff7d05c4bbf065fc8",
+    "v45_2b_resolution_summary": "7f9024175e6526115f5712210fe451b6e0fa37d19b7592d905a8daa1906d3cb5",
+    "v45_2b_mapping_override": "6c211143296c00c35c80a57a3e09e9347986d85bf53ba97cc9513ccd674934aa",
+    "execution_script": "81474857452b33d929fd7c16075db2facecc758522e74d3ae1e986b9d36d9905"
+  }
+}

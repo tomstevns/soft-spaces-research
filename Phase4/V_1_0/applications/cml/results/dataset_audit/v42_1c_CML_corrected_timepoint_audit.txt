@@ -1,0 +1,56 @@
+=== Soft Spaces / CML v42.1c CORRECTED TIMEPOINT AUDIT ===
+
+NO EXPRESSION MODELING WAS PERFORMED.
+
+Correction:
+Timepoint classification uses only sample-specific source_name and
+sample-specific treatment characteristics. Global protocol strings
+are deliberately ignored.
+
+GSE130404
+---------
+Samples: 96
+Response key: bcr-abl1 at 3 month
+
+Timepoint counts:
+  BASELINE_DIAGNOSIS: 96
+
+Response counts:
+  <10%: 83
+  >10%: 13
+
+Timepoint x response:
+  BASELINE_DIAGNOSIS | <10% | n=83
+  BASELINE_DIAGNOSIS | >10% | n=13
+
+GSE44589
+--------
+Samples: 198
+Response key: molecular response
+
+Timepoint counts:
+  BASELINE_PRETREATMENT: 135
+  POST_6W: 63
+
+Response counts:
+  MMR: 98
+  none: 89
+  not available: 11
+
+Timepoint x response:
+  BASELINE_PRETREATMENT | MMR | n=69
+  BASELINE_PRETREATMENT | none | n=59
+  BASELINE_PRETREATMENT | not available | n=7
+  POST_6W | MMR | n=29
+  POST_6W | none | n=30
+  POST_6W | not available | n=4
+
+INTERPRETATION RULE
+-------------------
+For baseline-response prediction, ONLY BASELINE_DIAGNOSIS or
+BASELINE_PRETREATMENT samples may enter the development matrix.
+
+Post-treatment samples must not enter a baseline predictor.
+
+The response endpoint must be measured later than the baseline
+expression measurement.

@@ -1,0 +1,29 @@
+=== Soft Spaces / CML v44.2 TRANSPORT-AWARE DIRECT SUBSPACE RANK SELECTION ===
+
+DESIGN
+------
+Development cohort: GSE130404
+Transport-aware eligible universe: 15890 genes
+Fold-specific Top-256 by raw training variance: YES
+Frozen v42.2 100 folds reused: YES
+External response outcomes used: NO
+Matched NULL test: NOT YET
+
+RANK RESULTS
+------------
+r= 4 | PR-AUC 0.425112 [0.128646, 0.806944] | ROC-AUC 0.713640 | BA 0.661287 | Sens 0.665000 | Spec 0.657574
+r= 8 | PR-AUC 0.415784 [0.128504, 0.813542] | ROC-AUC 0.692390 | BA 0.640031 | Sens 0.533333 | Spec 0.746728
+r=16 | PR-AUC 0.477031 [0.169659, 0.892917] | ROC-AUC 0.785870 | BA 0.669945 | Sens 0.470000 | Spec 0.869890
+
+DEVELOPMENT-ONLY SELECTION
+--------------------------
+Selected r: 16
+Selected mean PR-AUC: 0.477031
+Selected mean ROC-AUC: 0.785870
+Selected balanced accuracy: 0.669945
+
+IMPORTANT
+---------
+This is NOT a success claim.
+The selected rank must now be frozen and tested against matched
+random orthonormal subspaces in v44.3.

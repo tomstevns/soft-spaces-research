@@ -1,0 +1,32 @@
+{
+  "version": "v43.4c",
+  "candidate": "GSE236233",
+  "status": "CANDIDATE NOT YET ELIGIBLE",
+  "geo_sample_records": 17,
+  "detected_patient_n": 0,
+  "patient_ids": [],
+  "population_counts": {
+    "Lin-CD34+": 9,
+    "Lin-CD34+CD38-": 8
+  },
+  "platform_counts": {
+    "GPL24676": 17
+  },
+  "organism_counts": {
+    "Homo sapiens": 17
+  },
+  "library_strategy_counts": {
+    "RNA-Seq": 17
+  },
+  "instrument_counts": {
+    "Illumina NovaSeq 6000": 17
+  },
+  "supplementary_file_references": 17,
+  "external_predictive_performance_evaluated": false,
+  "cell_level_independence_used": false,
+  "statistical_unit": "patient",
+  "sha256": {
+    "geo_family_soft": "9cfb94795ebe2b4fc40a24288e1390526b1c968f824a39da3440c939f27945e4",
+    "execution_script": "791d71f7880f2c0915e21638f5edc7a65965b42ce60b268a8de8fb916a3f5fce"
+  }
+}
